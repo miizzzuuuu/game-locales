@@ -4,10 +4,13 @@ Loading - 100%
 
 - load document - 20
 - load whole page - 20
-- load user data - 15
-- load game data - 15
-- load timer - 15
-- load history result - 15
+
+- load player data - 10
+- load player settings - 10
+- load player lastbets - 10
+- load game data - 10
+- load timer - 10
+- load history result - 10
 
 */
 
@@ -104,13 +107,12 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('updateloading', (event) => {
-    // console.log('handler updateloading', event.detail);
     updateProgress(event.detail.value, event.detail.text);
 });
 
 window.addEventListener('loadingfinish', () => {
-    console.log('handler loadingfinish');
     const loadingElement = document.querySelector('#loading');
+
     if (loadingElement) {
         loadingElement.classList.add('loading-hide');
         loadingElement.addEventListener('animationend', () => {
