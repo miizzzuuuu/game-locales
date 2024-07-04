@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTimeout } from './common/hooks/useTimeout';
 import { LoadingHelper } from './utils/LoadingHelper';
-import GameOverlay from './common/components/GameOverlay';
+import ResizeOverlay from './common/components/ResizeOverlay';
 import { useWindowResize } from './common/hooks/useWindowResize';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
@@ -41,7 +41,7 @@ function App() {
         <div className="app">
             <Game />
 
-            {showOverlayResize && <GameOverlay />}
+            {showOverlayResize && <ResizeOverlay />}
         </div>
     );
 }

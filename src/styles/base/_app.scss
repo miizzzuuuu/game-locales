@@ -1,0 +1,25 @@
+.app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    background-color: var(--base);
+
+    &.mobile-portrait {
+        --height-player-info: 4rem;
+    }
+
+    &.desktop,
+    &.mobile-landscape {
+        --height-player-info: 4rem;
+    }
+}
+
+body {
+    height: 110vh;
+
+    .app {
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
