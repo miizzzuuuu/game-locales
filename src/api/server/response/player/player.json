@@ -1,0 +1,17 @@
+{
+    "uid": 3006,
+    "device": "desktop",
+    "balance": 6288310,
+    "currency": "IDR",
+    "chipBase": [1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 25000000],
+    "nickname": "dwtkuserbeta1",
+    "maingame": "",
+    "table": "B",
+    "operatorId": "287495130",
+    "sessionToken": "SuzrwZnUdRIRcdSplsHnLysY1Tvu3OfWfuLQQuWc",
+    "currentBet": [],
+    "dateTime": "2024-07-02T08:05:58.580Z",
+    "operatorLogo": null,
+    "apiKey": "2w1SFvhYsU3yB9EHTiforqtgzkxWpbQl",
+    "token_sid": "553vXu2glfnw9dpGzqZ5cZe4NFcENcNi"
+}
