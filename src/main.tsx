@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { makeServer } from './api/server/server.ts';
 
+import './services/i18next/index.ts';
+
 const main = async () => {
     if (import.meta.env.DEV) {
         makeServer({ environment: 'development' });
