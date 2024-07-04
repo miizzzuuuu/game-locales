@@ -1,4 +1,4 @@
-import { DeviceType, GameSize, Orientation, Platform } from '../types';
+import { DeviceType, GameSize, Orientation, Platform } from '../../types';
 
 export class DisplayHelper {
     static size: Record<string, GameSize> = {

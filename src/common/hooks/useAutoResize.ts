@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { DeviceType, Orientation } from '../../types';
-import { DisplayHelper } from '../../utils/DisplayHelper';
+import { DisplayHelper } from '../utils/DisplayHelper';
 import { useWindowResize } from './useWindowResize';
 
 export function useAutoResize() {

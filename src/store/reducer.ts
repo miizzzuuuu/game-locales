@@ -7,9 +7,9 @@ import { combineReducers } from '@reduxjs/toolkit';
 // import gameStateReducer from './slice/gameStateSlice';
 // import lastBetReducer from './slice/lastBetSlice';
 // import menuReducer from './slice/menuSlice';
-// import playerReducer from './slice/playerSlice';
+import playerReducer from './slice/playerSlice';
 // import resultReducer from './slice/resultSlice';
-// import settingsReducer from './slice/settingsSlice';
+import settingsReducer from './slice/settingsSlice';
 // import timerReducer from './slice/timerSlice';
 import windowReducer from './slice/windowSlice';
 
@@ -21,9 +21,9 @@ export const rootReducer = combineReducers({
     // gameState: gameStateReducer,
     // lastBet: lastBetReducer,
     // menu: menuReducer,
-    // player: playerReducer,
+    player: playerReducer,
     // result: resultReducer,
-    // settings: settingsReducer,
+    settings: settingsReducer,
     // timer: timerReducer,
     window: windowReducer,
 });
