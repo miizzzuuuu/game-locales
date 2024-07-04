@@ -1,5 +1,5 @@
 import { createServer } from 'miragejs';
-import { ENDPOINTS } from '../../utils/APIManager';
+import { ENDPOINTS } from '../../common/utils/APIManager';
 
 import playerData from './response/player/player.json';
 import propertiesData from './response/player/properties.json';
