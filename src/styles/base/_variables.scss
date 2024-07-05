@@ -1,0 +1,14 @@
+:root {
+    --white: #fff;
+    --base: #0f101d;
+    --cyan: #00c3d8;
+    --gray: #85879d;
+
+    --streaming-color-1: linear-gradient(180deg, #854c07 0%, #533909 40.22%, #0e0901 100%);
+    --streaming-color-2: linear-gradient(
+        180deg,
+        rgba(133, 76, 7, 0) 0%,
+        rgba(133, 76, 7, 0.5) 100%
+    );
+    --streaming-color-3: linear-gradient(180deg, rgba(133, 76, 7, 0) 0%, #854c07 100%);
+}

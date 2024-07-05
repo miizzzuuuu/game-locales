@@ -2,10 +2,10 @@ import { combineReducers } from '@reduxjs/toolkit';
 
 // import betAddReducer from './slice/betAddSlice';
 // import betSendReducer from './slice/betSendSlice';
-// import chipReducer from './slice/chipSlice';
-// import gameReducer from './slice/gameSlice';
+import chipReducer from './slice/chipSlice';
+import gameReducer from './slice/gameSlice';
 // import gameStateReducer from './slice/gameStateSlice';
-// import lastBetReducer from './slice/lastBetSlice';
+import lastBetsReducer from './slice/lastBetsSlice';
 // import menuReducer from './slice/menuSlice';
 import playerReducer from './slice/playerSlice';
 // import resultReducer from './slice/resultSlice';
@@ -16,10 +16,10 @@ import windowReducer from './slice/windowSlice';
 export const rootReducer = combineReducers({
     // betAdd: betAddReducer,
     // betSend: betSendReducer,
-    // chip: chipReducer,
-    // game: gameReducer,
+    chip: chipReducer,
+    game: gameReducer,
     // gameState: gameStateReducer,
-    // lastBet: lastBetReducer,
+    lastBets: lastBetsReducer,
     // menu: menuReducer,
     player: playerReducer,
     // result: resultReducer,

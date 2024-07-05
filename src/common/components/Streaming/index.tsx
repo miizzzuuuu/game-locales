@@ -1,21 +1,23 @@
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import { DisplayHelper } from '../../utils/DisplayHelper';
-import GameUI from '../GameUI';
-import Streaming from '../Streaming';
+import Video from '../Video';
+
 import styles from './styles.module.scss';
 
-function Game() {
+const Streaming = () => {
     const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getClassNameDevice(styles, device);
 
     return (
-        <div className={`${styles['game-area']}${deviceClassName}`}>
-            <Streaming />
+        <div className={`${styles['streaming']}${deviceClassName}`}>
+            <div className={styles['video-container']}>
+                <Video />
+            </div>
 
-            <GameUI />
+            <div className={styles['video-background']}></div>
         </div>
     );
-}
+};
 
-export default Game;
+export default Streaming;

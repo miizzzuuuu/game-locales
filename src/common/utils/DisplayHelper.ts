@@ -68,6 +68,8 @@ export class DisplayHelper {
     static getDevice = (): { type: DeviceType; orientation: Orientation } => {
         const platform = this.getPlatform();
 
+        console.log('platform', platform);
+
         if (platform === 'desktop' || platform === 'tablet') {
             return {
                 type: 'desktop',
@@ -76,6 +78,8 @@ export class DisplayHelper {
         }
 
         const orientation = this.getOrientation();
+
+        console.log('orientation', orientation);
 
         if (orientation === 'portrait') {
             return {
@@ -96,8 +100,13 @@ export class DisplayHelper {
     }
 
     static getOrientation(): Orientation {
-        const type = screen.orientation.type;
-        return type.indexOf('landscape') !== -1 ? 'landscape' : 'portrait';
+        const { widthScreen, heightScreen } = this.getWindowSize();
+
+        if (widthScreen > heightScreen) {
+            return 'landscape';
+        }
+
+        return 'portrait';
     }
 
     static getWindowSize() {
@@ -166,5 +175,9 @@ export class DisplayHelper {
         if (rootElement) {
             rootElement.style.setProperty(name, value);
         }
+    }
+
+    static getClassNameDevice(styles: CSSModuleClasses, device: DeviceType) {
+        return styles[device] === undefined ? '' : ` ${styles[device]}`;
     }
 }

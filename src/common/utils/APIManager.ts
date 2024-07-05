@@ -117,6 +117,10 @@ class APIManager {
     };
 
     static getErrorMessage(error: unknown, defaultMessage = 'Error'): string {
+        if (typeof error === 'string') {
+            return error;
+        }
+
         if (error instanceof Error) {
             return error.message;
         }

@@ -3,15 +3,15 @@ import { DeviceType, Orientation } from '../../types';
 import { DisplayHelper } from '../utils/DisplayHelper';
 import { useWindowResize } from './useWindowResize';
 
-export function useAutoResize() {
+export const useAutoResize = () => {
     const [deviceType, setDeviceType] = useState<DeviceType>('desktop');
     const [orientation, setOrientation] = useState<Orientation>('landscape');
 
     const handler = useCallback(() => {
         if (typeof window !== 'undefined') {
-            console.log('useAutoResize');
-
             const device = DisplayHelper.getDevice();
+
+            console.log('useAutoResize', device);
 
             const { widthScreen, heightScreen } = DisplayHelper.getWindowSize();
 
@@ -27,4 +27,4 @@ export function useAutoResize() {
     useWindowResize(handler);
 
     return { deviceType, orientation };
-}
+};

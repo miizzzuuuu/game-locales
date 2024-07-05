@@ -8,7 +8,6 @@ import lastbetsAllData from './response/player/lastbets-all.json';
 import lastbetsGameData from './response/player/lastbets-game.json';
 
 import gamesData from './response/games/games.json';
-import gameData from './response/games/game.json';
 import payoutData from './response/games/payout.json';
 
 import timersData from './response/timers/timers.json';
@@ -20,14 +19,20 @@ import resultsP7EData from './response/results/p7e.json';
 
 import transactionsP7EData from './response/transactions/p7e.json';
 
+import { games } from './db/games';
+
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
         environment,
         routes() {
             // player
-            this.get(ENDPOINTS.player, async () => {
-                return playerData;
-            });
+            this.get(
+                ENDPOINTS.player,
+                async () => {
+                    return playerData;
+                },
+                { timing: 400 },
+            );
 
             // player properties
             this.get(ENDPOINTS.playerProperties, async () => {
@@ -60,8 +65,12 @@ export function makeServer({ environment = 'test' } = {}) {
                 return gamesData;
             });
 
-            this.get(ENDPOINTS.games + '/:pcode', async () => {
-                return gameData;
+            this.get(ENDPOINTS.games + '/:pcode', async (schema, request) => {
+                let pcode = request.params.pcode;
+
+                const game = schema.db.games.findBy({ pcode });
+
+                return game;
             });
 
             // payout
@@ -123,6 +132,10 @@ export function makeServer({ environment = 'test' } = {}) {
                 };
             });
         },
+    });
+
+    server.db.loadData({
+        games,
     });
 
     return server;

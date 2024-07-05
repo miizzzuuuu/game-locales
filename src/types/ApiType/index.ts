@@ -26,3 +26,49 @@ export interface Settings {
     volumeStreamingSound: number;
     volumeGameSound: number;
 }
+
+export interface Bet {
+    button: string;
+    group: string;
+}
+
+export interface BetSend extends Bet {
+    value: number;
+}
+
+export type LastBets = BetSend[];
+
+export interface LastBetsGameResponse {
+    periode: number;
+    data: LastBets;
+}
+
+export interface LastBetsResponse {
+    [key: string]: LastBetsGameResponse;
+}
+
+export interface Game {
+    name: string;
+    displayName: string;
+    periode: number;
+    pcode: string;
+    stream: string;
+    stream_hd: string;
+    stream_uhd: string;
+    stream_4k: string;
+    stream_8k: string;
+    bet: Record<string, unknown>;
+    betHistory: any[];
+    newgame: string;
+    maintenance: string;
+    maintenance_text: string;
+    min: number;
+    max: number;
+    min50: number;
+    max50: number;
+    category: string;
+    shoePeriode: string;
+    order: number | null;
+    newSet: boolean;
+    fast_table: boolean;
+}
