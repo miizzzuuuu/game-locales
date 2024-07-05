@@ -1,18 +1,16 @@
 import ButtonFavorite from '../../../components/ButtonFavorite';
 import ButtonHideChip from '../../../components/ButtonHideChip';
-import ButtonMenu from '../../../components/ButtonMenu';
 import ButtonSatatistic from '../../../components/ButtonSatatistic';
-import styles from './style.module.scss';
+import styles from './styles.module.scss';
 
-const PanelLeft = () => {
+const PanelTop = () => {
     return (
-        <div className={styles['panel-left']}>
+        <div className={styles['panel-top']}>
             <ButtonHideChip />
             <ButtonFavorite />
             <ButtonSatatistic />
-            <ButtonMenu />
         </div>
     );
 };
 
-export default PanelLeft;
+export default PanelTop;
