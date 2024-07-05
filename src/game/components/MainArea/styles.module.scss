@@ -1,5 +1,15 @@
 .main-area {
+    flex-shrink: 0;
+    flex-grow: 0;
     display: flex;
+
+    height: 100%;
+    width: 100%;
+}
+
+.panel-bet,
+.panel-history {
+    flex-shrink: 0;
 }
 
 .mobile-portrait {
@@ -19,15 +29,18 @@
 .desktop,
 .mobile-landscape {
     &.main-area {
-        height: calc(100% - 0.9rem);
+        padding-bottom: 0.9rem;
 
         flex-direction: column-reverse;
         gap: 2rem;
     }
+
+    .panel-bet {
+        padding: 0 5.7rem 0;
+    }
 }
 
 .panel-history {
-    flex-shrink: 0;
     height: 2rem;
 }
 

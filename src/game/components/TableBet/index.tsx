@@ -1,14 +1,18 @@
 import LabelTranslate from '../../../common/components/LabelTranslate';
+import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { TwentyFourDHelper } from '../../utils/TwentyFourDHelper';
 import ButtonBet from './ButtonBet';
 import BetColRow from './ButtonBet/BetColRow';
 import BetNumber from './ButtonBet/BetNumber';
 import BetText from './ButtonBet/BetText';
+
 import styles from './styles.module.scss';
 
 const TableBet = () => {
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+
     return (
-        <div className={styles['table-bet']}>
+        <div className={`${styles['table-bet']}${deviceClassName}`}>
             {TwentyFourDHelper.getBetKeys.map((key) => {
                 const bet = TwentyFourDHelper.bets[key];
 

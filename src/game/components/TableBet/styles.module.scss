@@ -1,10 +1,25 @@
 .table-bet {
     width: 100%;
-    height: 100%;
+    // height: 100%;
 
     display: grid;
     grid-template-columns: repeat(40, minmax(0, 1fr));
     grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
 
-    gap: 0.15rem;
+    gap: 0.1rem;
+}
+
+.mobile-portrait {
+    &.table-bet {
+        height: 100%;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    &.table-bet {
+        // margin-top: 3.8rem;
+        transform: translateY(2rem);
+        height: calc(100% - 2rem);
+    }
 }
