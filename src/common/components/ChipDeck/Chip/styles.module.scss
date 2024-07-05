@@ -8,6 +8,18 @@
 
     width: var(--width-chip);
     height: var(--height-chip);
+
+    &.active {
+        opacity: 0;
+    }
+
+    &.selected-chip {
+        opacity: 0;
+    }
+
+    &.unselected-chip {
+        opacity: 1;
+    }
 }
 
 .chip > svg,
@@ -55,17 +67,17 @@
         --height-chip: 2.8rem;
     }
 
-    // .chip {
-    //     &.selected-chip {
-    //         animation-name: selected-chip-animation;
-    //         animation-duration: 0.75s;
-    //     }
+    .chip {
+        &.selected-chip {
+            animation-name: selected-chip-animation-2;
+            animation-duration: 0.75s;
+        }
 
-    //     &.unselected-chip {
-    //         animation-name: unselected-chip-animation;
-    //         animation-duration: 0.75s;
-    //     }
-    // }
+        &.unselected-chip {
+            animation-name: unselected-chip-animation-2;
+            animation-duration: 0.75s;
+        }
+    }
 }
 
 .desktop,
@@ -75,57 +87,57 @@
         --height-chip: 2.8rem;
     }
 
-    // .chip {
-    //     &.selected-chip {
-    //         animation-name: selected-chip-animation-2;
-    //         animation-duration: 0.75s;
-    //     }
+    .chip {
+        &.selected-chip {
+            animation-name: selected-chip-animation;
+            animation-duration: 0.75s;
+        }
 
-    //     &.unselected-chip {
-    //         animation-name: unselected-chip-animation-2;
-    //         animation-duration: 0.75s;
-    //     }
-    // }
+        &.unselected-chip {
+            animation-name: unselected-chip-animation;
+            animation-duration: 0.75s;
+        }
+    }
 }
 
-// @keyframes selected-chip-animation {
-//     0% {
-//         transform: translateX(0) scale(1) rotateY(-180deg);
-//     }
-//     75% {
-//         transform: translateX(-0.75rem) scale(1.1) rotateY(0);
-//     }
-//     100% {
-//         transform: translateX(-0.5rem) scale(1.1) rotateY(0);
-//     }
-// }
+@keyframes selected-chip-animation {
+    0% {
+        transform: translateX(0) scale(1) rotateY(-180deg);
+    }
+    75% {
+        transform: translateX(-0.75rem) scale(1.1) rotateY(0);
+    }
+    100% {
+        transform: translateX(-0.5rem) scale(1.1) rotateY(0);
+    }
+}
 
-// @keyframes selected-chip-animation-2 {
-//     0% {
-//         transform: translateY(0) scale(1) rotateY(-180deg);
-//     }
-//     75% {
-//         transform: translateY(-0.75rem) scale(1.1) rotateY(0);
-//     }
-//     100% {
-//         transform: translateY(-0.5rem) scale(1.1) rotateY(0);
-//     }
-// }
+@keyframes selected-chip-animation-2 {
+    0% {
+        transform: translateY(0) scale(1) rotateY(-180deg);
+    }
+    75% {
+        transform: translateY(-0.75rem) scale(1.1) rotateY(0);
+    }
+    100% {
+        transform: translateY(-0.5rem) scale(1.1) rotateY(0);
+    }
+}
 
-// @keyframes unselected-chip-animation {
-//     0% {
-//         transform: translateX(-0.5rem) scale(1.1);
-//     }
-//     100% {
-//         transform: translateX(0) scale(1);
-//     }
-// }
+@keyframes unselected-chip-animation {
+    0% {
+        transform: translateX(-0.5rem) scale(1.1);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
 
-// @keyframes unselected-chip-animation-2 {
-//     0% {
-//         transform: translateY(-0.5rem) scale(1.1);
-//     }
-//     100% {
-//         transform: translateY(0) scale(1);
-//     }
-// }
+@keyframes unselected-chip-animation-2 {
+    0% {
+        transform: translateY(-0.5rem) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}

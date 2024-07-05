@@ -10,9 +10,7 @@ interface IProps {
 }
 
 const ButtonBet = ({ children, className, bet }: IProps) => {
-    const { chip, color } = useGetChipBet(bet);
-
-    console.log('chip', { chip, color });
+    const {} = useGetChipBet(bet);
 
     className = className
         ?.split(' ')

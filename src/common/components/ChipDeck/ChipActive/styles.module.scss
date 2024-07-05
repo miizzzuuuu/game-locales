@@ -8,6 +8,37 @@
 
     width: var(--width-chip);
     height: var(--height-chip);
+
+    opacity: 0;
+
+    &.active {
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: calc(100% + 0.5rem);
+            height: calc(100% + 0.5rem);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 195, 216, 0.5);
+
+            border: 0.15rem solid #00c3d8;
+            filter: drop-shadow(0px 0px 0.2rem rgba(0, 195, 216, 0.75));
+            backdrop-filter: blur(0.2rem);
+            border-radius: 9999px;
+        }
+    }
+
+    &.selected-chip,
+    &.unselected-chip {
+        opacity: 1;
+    }
+
+    &.selected-chip,
+    &.unselected-chip {
+        animation-fill-mode: forwards;
+    }
 }
 
 .chip > svg,
@@ -55,17 +86,17 @@
         --height-chip: 2.8rem;
     }
 
-    // .chip {
-    //     &.selected-chip {
-    //         animation-name: selected-chip-animation;
-    //         animation-duration: 0.75s;
-    //     }
+    .chip {
+        &.selected-chip {
+            animation-name: selected-chip-animation-2;
+            animation-duration: 0.75s;
+        }
 
-    //     &.unselected-chip {
-    //         animation-name: unselected-chip-animation;
-    //         animation-duration: 0.75s;
-    //     }
-    // }
+        &.unselected-chip {
+            animation-name: unselected-chip-animation-2;
+            animation-duration: 0.75s;
+        }
+    }
 }
 
 .desktop,
@@ -75,57 +106,57 @@
         --height-chip: 2.8rem;
     }
 
-    // .chip {
-    //     &.selected-chip {
-    //         animation-name: selected-chip-animation-2;
-    //         animation-duration: 0.75s;
-    //     }
+    .chip {
+        &.selected-chip {
+            animation-name: selected-chip-animation;
+            animation-duration: 0.75s;
+        }
 
-    //     &.unselected-chip {
-    //         animation-name: unselected-chip-animation-2;
-    //         animation-duration: 0.75s;
-    //     }
-    // }
+        &.unselected-chip {
+            animation-name: unselected-chip-animation;
+            animation-duration: 0.75s;
+        }
+    }
 }
 
-// @keyframes selected-chip-animation {
-//     0% {
-//         transform: translateX(0) scale(1) rotateY(-180deg);
-//     }
-//     75% {
-//         transform: translateX(-0.75rem) scale(1.1) rotateY(0);
-//     }
-//     100% {
-//         transform: translateX(-0.5rem) scale(1.1) rotateY(0);
-//     }
-// }
+@keyframes selected-chip-animation {
+    0% {
+        transform: translateX(0) scale(1) rotateY(-180deg);
+    }
+    75% {
+        transform: translateX(-0.75rem) scale(1.1) rotateY(0);
+    }
+    100% {
+        transform: translateX(-0.5rem) scale(1.1) rotateY(0);
+    }
+}
 
-// @keyframes selected-chip-animation-2 {
-//     0% {
-//         transform: translateY(0) scale(1) rotateY(-180deg);
-//     }
-//     75% {
-//         transform: translateY(-0.75rem) scale(1.1) rotateY(0);
-//     }
-//     100% {
-//         transform: translateY(-0.5rem) scale(1.1) rotateY(0);
-//     }
-// }
+@keyframes selected-chip-animation-2 {
+    0% {
+        transform: translateY(0) scale(1) rotateY(-180deg);
+    }
+    75% {
+        transform: translateY(-0.75rem) scale(1.1) rotateY(0);
+    }
+    100% {
+        transform: translateY(-0.5rem) scale(1.1) rotateY(0);
+    }
+}
 
-// @keyframes unselected-chip-animation {
-//     0% {
-//         transform: translateX(-0.5rem) scale(1.1);
-//     }
-//     100% {
-//         transform: translateX(0) scale(1);
-//     }
-// }
+@keyframes unselected-chip-animation {
+    0% {
+        transform: translateX(-0.5rem) scale(1.1);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+    }
+}
 
-// @keyframes unselected-chip-animation-2 {
-//     0% {
-//         transform: translateY(-0.5rem) scale(1.1);
-//     }
-//     100% {
-//         transform: translateY(0) scale(1);
-//     }
-// }
+@keyframes unselected-chip-animation-2 {
+    0% {
+        transform: translateY(-0.5rem) scale(1.1);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}

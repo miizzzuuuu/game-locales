@@ -7,7 +7,7 @@ const MainArea = () => {
 
     return (
         <div className={`${styles['main-area']}${deviceClassName}`}>
-            <div className={styles['panel-history']}>History</div>
+            <div className={styles['panel-history']}>History Result</div>
 
             <div className={styles['panel-bet']}>
                 <TableBet />

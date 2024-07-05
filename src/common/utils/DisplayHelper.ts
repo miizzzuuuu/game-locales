@@ -82,8 +82,6 @@ export class DisplayHelper {
     static getDevice = (): { type: DeviceType; orientation: Orientation } => {
         const platform = this.getPlatform();
 
-        console.log('platform', platform);
-
         if (platform === 'desktop' || platform === 'tablet') {
             return {
                 type: 'desktop',
@@ -92,8 +90,6 @@ export class DisplayHelper {
         }
 
         const orientation = this.getOrientation();
-
-        console.log('orientation', orientation);
 
         if (orientation === 'portrait') {
             return {

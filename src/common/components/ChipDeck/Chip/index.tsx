@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import SVGChip from '../../SVG/SVGChip';
 import { StringHelper } from '../../../utils/StringHelper';
 import styles from './styles.module.scss';
@@ -11,7 +11,7 @@ interface IProps {
     onClick?: () => void;
 }
 
-const Chip = ({ value, onClick, color }: IProps) => {
+const Chip = ({ value, onClick, color, isActive }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -24,9 +24,24 @@ const Chip = ({ value, onClick, color }: IProps) => {
         onClick?.();
     };
 
+    useEffect(() => {
+        if (chipRef.current) {
+            if (isActive) {
+                chipRef.current.classList.add(styles['selected-chip']);
+            } else {
+                chipRef.current.classList.add(styles['unselected-chip']);
+            }
+        }
+    }, [isActive]);
+
     return (
-        <div className={`chip-deck-item-wrapper${deviceClassName}`}>
-            <div className={styles.chip} data-value={value} ref={chipRef} onClick={handleClick}>
+        <div className={`chip-item${deviceClassName}`}>
+            <div
+                className={`${styles.chip}${isActive ? ` ${styles.active}` : ''}`}
+                data-value={value}
+                ref={chipRef}
+                onClick={handleClick}
+            >
                 <SVGChip color={color} />
 
                 <div className={styles.content}>
