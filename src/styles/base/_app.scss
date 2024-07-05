@@ -3,23 +3,22 @@
     top: 0;
     left: 0;
     width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
 
     background-color: var(--base);
 
     &.mobile-portrait {
-        --height-player-info: 4rem;
+        --height-footer: 4rem;
+        --width-total-bet: 12rem;
     }
 
     &.desktop,
     &.mobile-landscape {
-        --height-player-info: 4rem;
+        --height-footer: 4rem;
+        --width-total-bet: 13.5rem;
     }
 }
 
-body {
+.ios {
     height: 110vh;
-
-    .app {
-        height: calc(var(--vh, 1vh) * 100);
-    }
 }

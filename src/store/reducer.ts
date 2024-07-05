@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-// import betAddReducer from './slice/betAddSlice';
+import betAddReducer from './slice/betAddSlice';
 // import betSendReducer from './slice/betSendSlice';
 import chipReducer from './slice/chipSlice';
 import gameReducer from './slice/gameSlice';
@@ -14,7 +14,7 @@ import settingsReducer from './slice/settingsSlice';
 import windowReducer from './slice/windowSlice';
 
 export const rootReducer = combineReducers({
-    // betAdd: betAddReducer,
+    betAdd: betAddReducer,
     // betSend: betSendReducer,
     chip: chipReducer,
     game: gameReducer,

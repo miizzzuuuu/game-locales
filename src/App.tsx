@@ -78,7 +78,7 @@ function App() {
     useWindowResize(handleOverlayResize, false);
 
     return (
-        <div className="app">
+        <div className={`app ${deviceType}`}>
             {showGame && <Game />}
 
             {showOverlayResize && <ResizeOverlay />}

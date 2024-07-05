@@ -1,0 +1,8 @@
+.footer {
+    flex-shrink: 0;
+    height: var(--height-footer);
+    background: var(--bg-footer);
+
+    display: flex;
+    gap: var(--width-total-bet);
+}
