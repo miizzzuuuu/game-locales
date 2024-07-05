@@ -13,3 +13,11 @@
 .main {
     flex: 1;
 }
+
+.mobile-portrait {
+    &.game-ui {
+        &.offset-streaming {
+            padding-top: calc(var(--height-streaming) * 1px);
+        }
+    }
+}
