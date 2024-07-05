@@ -1,0 +1,25 @@
+.mobile-portrait {
+    &.v1 {
+        &.chip-deck {
+            // background-color: red;
+
+            .wrapper {
+                --gap: 0.6rem;
+                --offset: 0.4rem;
+
+                display: flex;
+                align-items: center;
+                gap: var(--gap);
+                padding: 0 var(--offset);
+                height: 3.4rem;
+                width: calc((2.8rem * 5) + (var(--gap) * 4) + (var(--offset) * 2) + 0.1rem);
+                overflow: auto;
+
+                border-radius: 3.4rem;
+                border: 0.1rem solid rgba(255, 255, 255, 0.16);
+                background: rgba(0, 0, 0, 0.32);
+                backdrop-filter: blur(0.6rem);
+            }
+        }
+    }
+}

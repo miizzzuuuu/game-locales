@@ -191,7 +191,9 @@ export class DisplayHelper {
         }
     }
 
-    static getDeviceClassName(styles: CSSModuleClasses, device: DeviceType) {
+    static getDeviceClassName(styles: CSSModuleClasses) {
+        const { type: device } = this.getDevice();
+
         return styles[device] === undefined ? '' : ` ${styles[device]}`;
     }
 }

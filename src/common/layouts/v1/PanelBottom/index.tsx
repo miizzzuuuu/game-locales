@@ -2,6 +2,7 @@ import ButtonCancelBet from '../../../components/ButtonCancelBet';
 import ButtonDoubleBet from '../../../components/ButtonDoubleBet';
 import ButtonMenu from '../../../components/ButtonMenu';
 import ButtonRebet from '../../../components/ButtonRebet';
+import ChipDeck from '../../../components/ChipDeck';
 import styles from './styles.module.scss';
 
 const PanelBottom = () => {
@@ -10,7 +11,7 @@ const PanelBottom = () => {
             <ButtonMenu />
             <ButtonCancelBet />
 
-            <div style={{ background: 'red', height: '3.4rem' }}>CHIP DECK</div>
+            <ChipDeck version={1} />
 
             <ButtonRebet />
             <ButtonDoubleBet />

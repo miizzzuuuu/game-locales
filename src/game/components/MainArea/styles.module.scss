@@ -1,0 +1,36 @@
+.main-area {
+    display: flex;
+}
+
+.mobile-portrait {
+    &.main-area {
+        width: 100%;
+        height: 100%;
+
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .panel-bet {
+        padding: 0 0.8rem;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    &.main-area {
+        height: calc(100% - 0.9rem);
+
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}
+
+.panel-history {
+    flex-shrink: 0;
+    height: 2rem;
+}
+
+.panel-bet {
+    flex: 1;
+}

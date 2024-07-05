@@ -11,7 +11,7 @@ import PanelTop from './PanelTop';
 
 const LayoutV1 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const [offsetStreaming] = useState(true);
 
@@ -33,20 +33,19 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
                 </>
             )}
 
-            {device === 'desktop' ||
-                (device === 'mobile-landscape' && (
-                    <div className={styles['main-wrapper']}>
-                        <div className={styles.left}>
-                            <PanelLeft />
-                        </div>
-
-                        <div className={styles.main}>{children}</div>
-
-                        <div className={styles.left}>
-                            <PanelRight />
-                        </div>
+            {(device === 'desktop' || device === 'mobile-landscape') && (
+                <div className={styles['main-wrapper']}>
+                    <div className={styles.left}>
+                        <PanelLeft />
                     </div>
-                ))}
+
+                    <div className={styles.main}>{children}</div>
+
+                    <div className={styles.left}>
+                        <PanelRight />
+                    </div>
+                </div>
+            )}
 
             <Footer />
         </div>

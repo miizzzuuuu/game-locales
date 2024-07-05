@@ -8,8 +8,6 @@ import {
 } from 'react';
 
 import styles from './styles.module.scss';
-import { useAppSelector } from '../../../store/hooks';
-import { selectDevice } from '../../../store/slice/windowSlice';
 import Button from '../Button';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 
@@ -40,8 +38,7 @@ const ButtonAction = ({
 }: IProps) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
-    const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const handleClick = () => {
         console.log('click action button');

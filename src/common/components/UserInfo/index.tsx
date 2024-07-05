@@ -1,5 +1,3 @@
-import { useAppSelector } from '../../../store/hooks';
-import { selectDevice } from '../../../store/slice/windowSlice';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import styles from './styles.module.scss';
 
@@ -11,8 +9,7 @@ interface IProps {
 }
 
 const UserInfo = ({ label, labelSecond, value, isRight }: IProps) => {
-    const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     return (
         <div

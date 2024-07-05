@@ -8,24 +8,31 @@ import thCommon from '../../locales/th/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
+import en24D from '../../locales/en/p6.json';
+import id24D from '../../locales/id/p6.json';
+import ko24D from '../../locales/ko/p6.json';
+import th24D from '../../locales/th/p6.json';
+import vn24D from '../../locales/vn/p6.json';
+import zh24D from '../../locales/zh/p6.json';
+
 const resources: Resource = {
     en: {
-        translation: { common: enCommon },
+        translation: { common: enCommon, g24d: en24D },
     },
     id: {
-        translation: { common: idCommon },
+        translation: { common: idCommon, g24d: id24D },
     },
     ko: {
-        translation: { common: koCommon },
+        translation: { common: koCommon, g24d: ko24D },
     },
     th: {
-        translation: { common: thCommon },
+        translation: { common: thCommon, g24d: th24D },
     },
     vn: {
-        translation: { common: vnCommon },
+        translation: { common: vnCommon, g24d: vn24D },
     },
     zh: {
-        translation: { common: zhCommon },
+        translation: { common: zhCommon, g24d: zh24D },
     },
 };
 

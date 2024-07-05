@@ -9,9 +9,9 @@ import styles from './styles.module.scss';
 
 const Streaming = () => {
     const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
-    const [scaleWidth] = useState(1.1);
+    const [scaleWidth] = useState(1.2);
     useGetStreamingSize(scaleWidth);
 
     return (
