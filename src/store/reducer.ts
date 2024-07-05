@@ -8,7 +8,7 @@ import gameStateReducer from './slice/gameStateSlice';
 import lastBetsReducer from './slice/lastBetsSlice';
 import menuReducer from './slice/menuSlice';
 import playerReducer from './slice/playerSlice';
-// import resultReducer from './slice/resultSlice';
+import resultReducer from './slice/resultSlice';
 import settingsReducer from './slice/settingsSlice';
 import timerReducer from './slice/timerSlice';
 import windowReducer from './slice/windowSlice';
@@ -22,7 +22,7 @@ export const rootReducer = combineReducers({
     lastBets: lastBetsReducer,
     menu: menuReducer,
     player: playerReducer,
-    // result: resultReducer,
+    result: resultReducer,
     settings: settingsReducer,
     timer: timerReducer,
     window: windowReducer,

@@ -1,0 +1,32 @@
+.result {
+    position: absolute;
+    left: 50%;
+    top: 9rem;
+    transform: translateX(-50%);
+
+    animation: result-fadein 0.4s forwards;
+
+    &.disapear {
+        animation: result-fadeout 0.4s linear forwards;
+    }
+}
+
+@keyframes result-fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes result-fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

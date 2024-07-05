@@ -1,6 +1,7 @@
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import { DisplayHelper } from '../../utils/DisplayHelper';
+import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
 import Streaming from '../Streaming';
 import styles from './styles.module.scss';
@@ -14,6 +15,8 @@ function Game() {
             <Streaming />
 
             <GameUI />
+
+            <AlertUI />
         </div>
     );
 }
