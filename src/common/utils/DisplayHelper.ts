@@ -32,11 +32,25 @@ export class DisplayHelper {
         );
     }
 
+    static checkLargeAndroid() {
+        if (!window) return !1;
+
+        const { innerWidth: width, innerHeight: height } = window;
+
+        return (
+            window.navigator.userAgent.includes('Android') &&
+            Math.max(width, height) >= 829 &&
+            Math.min(width, height) >= 690
+        );
+    }
+
     static getUserAgent() {
         return window
             ? this.checkLargeIphone()
                 ? window.navigator.userAgent.replace(/iPhone/g, 'iPad')
-                : window.navigator.userAgent
+                : this.checkLargeAndroid()
+                  ? window.navigator.userAgent.replace(/Android/g, 'Tablet')
+                  : window.navigator.userAgent
             : '';
     }
 
@@ -48,7 +62,7 @@ export class DisplayHelper {
     static isTablet() {
         const userAgent = this.getUserAgent();
 
-        return /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+        return /(tablet|ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
             userAgent.toLowerCase(),
         );
     }
@@ -177,7 +191,7 @@ export class DisplayHelper {
         }
     }
 
-    static getClassNameDevice(styles: CSSModuleClasses, device: DeviceType) {
+    static getDeviceClassName(styles: CSSModuleClasses, device: DeviceType) {
         return styles[device] === undefined ? '' : ` ${styles[device]}`;
     }
 }

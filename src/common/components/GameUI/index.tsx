@@ -6,10 +6,10 @@ import styles from './styles.module.scss';
 
 const GameUI = () => {
     const device = useAppSelector(selectDevice);
-    const classNameDevice = DisplayHelper.getClassNameDevice(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
 
     return (
-        <div className={`${styles['game-ui']}${classNameDevice}`}>
+        <div className={`${styles['game-ui']}${deviceClassName}`}>
             <div className={styles.main}>Main</div>
 
             <Footer />

@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 const Streaming = () => {
     const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getClassNameDevice(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
 
     return (
         <div className={`${styles['streaming']}${deviceClassName}`}>

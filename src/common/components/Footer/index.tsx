@@ -9,6 +9,7 @@ import {
 import { selectBalance, selectCurrency, selectNickname } from '../../../store/slice/playerSlice';
 import { selectLanguage } from '../../../store/slice/settingsSlice';
 import { StringHelper } from '../../utils/StringHelper';
+import TotalBet from '../TotalBet';
 import UserInfo from '../UserInfo';
 import styles from './styles.module.scss';
 
@@ -38,6 +39,8 @@ const Footer = () => {
                 value={`${StringHelper.formatMoneyWithCurrency(min, currency, lang)}-${StringHelper.formatMoneyOnlyNumber(max50, lang)}`}
                 isRight
             />
+
+            <TotalBet />
         </div>
     );
 };

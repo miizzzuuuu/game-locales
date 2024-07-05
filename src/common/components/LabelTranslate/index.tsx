@@ -1,14 +1,23 @@
+import { TOptions } from 'i18next';
 import { useAppTranslate } from '../../../services/i18next/hooks';
 
 interface IProps {
-    key: string;
+    value: string;
     keyLang?: string;
+    option?: TOptions;
+
+    className?: string;
+    style?: React.CSSProperties;
 }
 
-function LabelTranslate({ keyLang = 'common', key: value }: IProps) {
+function LabelTranslate({ keyLang = 'common', value, option, className, style }: IProps) {
     const { t } = useAppTranslate(keyLang);
 
-    return t(value);
+    return (
+        <p className={className} style={style}>
+            {t(value, option)}
+        </p>
+    );
 }
 
 export default LabelTranslate;

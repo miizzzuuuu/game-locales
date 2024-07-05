@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 function Game() {
     const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getClassNameDevice(styles, device);
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles, device);
 
     return (
         <div className={`${styles['game-area']}${deviceClassName}`}>
