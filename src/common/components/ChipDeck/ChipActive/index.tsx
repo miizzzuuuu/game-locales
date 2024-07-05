@@ -29,7 +29,10 @@ const ChipActive = ({ value, onClick, color, isActive }: IProps) => {
             if (isActive) {
                 chipRef.current.classList.add(styles['selected-chip']);
             } else {
-                chipRef.current.classList.add(styles['unselected-chip']);
+                if (chipRef.current.classList.contains(styles['selected-chip'])) {
+                    chipRef.current.classList.remove(styles['selected-chip']);
+                    chipRef.current.classList.add(styles['unselected-chip']);
+                }
             }
         }
     }, [isActive]);

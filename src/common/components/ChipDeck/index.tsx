@@ -79,7 +79,6 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
         function followScroll(scrollPos: { left: number; top: number }) {
             if (slider2.current) {
-                console.log(scrollPos);
                 if (orientation === 'portrait' && version === 1) {
                     slider2.current.scrollLeft = scrollPos.left;
                 } else if (orientation === 'landscape' && version === 1) {
