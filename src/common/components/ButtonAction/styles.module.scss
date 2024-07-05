@@ -70,12 +70,12 @@
     }
 }
 
-// .desktop,
-// .mobile-landscape {
-//     .text {
-//         width: calc(0.4rem + 3.4rem);
-//     }
-// }
+.desktop,
+.mobile-landscape {
+    .text {
+        width: calc(100% + 1.2rem);
+    }
+}
 
 @keyframes fadein {
     from {

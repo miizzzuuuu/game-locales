@@ -10,8 +10,25 @@
     z-index: 3;
 }
 
+.main-wrapper {
+    flex: 1;
+    display: grid;
+    grid-template-columns: calc(2.4rem + var(--size-button)) 1fr calc(2.4rem + var(--size-button));
+}
+
 .main {
     flex: 1;
+}
+
+.bottom,
+.left,
+.right {
+    flex-shrink: 0;
+}
+
+.left,
+.right {
+    padding-bottom: 1.2rem;
 }
 
 .mobile-portrait {

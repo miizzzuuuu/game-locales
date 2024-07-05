@@ -5,7 +5,7 @@ const SVGIconMenu = (props: SVGProps<SVGSVGElement>) => (
         <path
             d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5"
             stroke="white"
-            strokeWidth={1.875}
+            strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
         />

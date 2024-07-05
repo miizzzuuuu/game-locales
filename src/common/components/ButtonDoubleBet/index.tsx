@@ -59,7 +59,7 @@ const ButtonDoubleBet = ({ show, styles }: IProps) => {
         const errorMax = [];
 
         idsBetAdd.forEach((key) => {
-            const [button, group] = key.split('-');
+            const [button] = key.split('-');
 
             const isGroup50 = false;
 

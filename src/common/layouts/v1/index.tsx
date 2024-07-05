@@ -5,6 +5,8 @@ import { selectDevice } from '../../../store/slice/windowSlice';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import Footer from '../../components/Footer';
 import PanelBottom from './PanelBottom';
+import PanelLeft from './PanelLeft';
+import PanelRight from './PanelRight';
 
 const LayoutV1 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -16,13 +18,30 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
         <div
             className={`${styles['layout']}${deviceClassName}${offsetStreaming ? ` ${styles['offset-streaming']}` : ''}`}
         >
-            <div className={styles.main}>{children}</div>
-
             {device === 'mobile-portrait' && (
                 <>
-                    <PanelBottom />
+                    <div className={styles.main}>{children}</div>
+
+                    <div className={styles.bottom}>
+                        <PanelBottom />
+                    </div>
                 </>
             )}
+
+            {device === 'desktop' ||
+                (device === 'mobile-landscape' && (
+                    <div className={styles['main-wrapper']}>
+                        <div className={styles.left}>
+                            <PanelLeft />
+                        </div>
+
+                        <div className={styles.main}>{children}</div>
+
+                        <div className={styles.left}>
+                            <PanelRight />
+                        </div>
+                    </div>
+                ))}
 
             <Footer />
         </div>
