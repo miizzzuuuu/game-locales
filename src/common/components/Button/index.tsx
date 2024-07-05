@@ -13,8 +13,6 @@ interface IProps extends ButtonProps {
 export const Button = forwardRef<HTMLButtonElement, IProps>(
     ({ children, className, style, disabled, onAnimationEnd, onClick, custonSound }, buttonRef) => {
         const clickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
-            if (!disabled) return;
-
             if (custonSound) {
                 custonSound();
             }
@@ -30,7 +28,7 @@ export const Button = forwardRef<HTMLButtonElement, IProps>(
                 style={style}
                 disabled={disabled}
                 onAnimationEnd={onAnimationEnd}
-                onClick={clickHandler}
+                onClick={disabled ? undefined : clickHandler}
             >
                 {children}
             </button>

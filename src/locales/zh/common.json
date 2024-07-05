@@ -40,5 +40,6 @@
     "total-bet": "总投注",
     "you-win": "你赢了",
     "bet-confirmed": "投注已确认",
-    "bet-error": "投注错误"
+    "bet-error": "投注错误",
+    "insuffix-balance": "余额不足"
 }

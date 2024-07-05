@@ -10,7 +10,7 @@ interface IProps {
     style?: React.CSSProperties;
 }
 
-function LabelTranslate({ keyLang = 'common', value, option, className, style }: IProps) {
+function LabelTranslate({ keyLang, value, option, className, style }: IProps) {
     const { t } = useAppTranslate(keyLang);
 
     return (

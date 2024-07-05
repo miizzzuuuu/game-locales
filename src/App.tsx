@@ -41,32 +41,6 @@ function App() {
         dispatch(setOrientation(orientation));
     }, [orientation, dispatch]);
 
-    const [audioContext, setAudioContext] = useState<AudioContext | null>(null);
-
-    useEffect(() => {
-        const startAudioContext = () => {
-            if (audioContext === null) {
-                const context = new (window.AudioContext || (window as any).webkitAudioContext)();
-                setAudioContext(context);
-                console.log('AudioContext started');
-            } else {
-                if (audioContext.state === 'suspended') {
-                    audioContext.resume().then(() => {
-                        console.log('AudioContext resumed');
-                    });
-                }
-            }
-        };
-
-        document.addEventListener('mousedown', startAudioContext, {
-            once: true,
-        });
-
-        return () => {
-            document.removeEventListener('mousedown', startAudioContext);
-        };
-    }, []);
-
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
 

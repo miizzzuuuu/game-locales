@@ -40,5 +40,6 @@
     "total-bet": "tổng cược",
     "you-win": "bạn thắng",
     "bet-confirmed": "đặt cược đã xác nhận",
-    "bet-error": "lỗi đặt cược"
+    "bet-error": "lỗi đặt cược",
+    "insuffix-balance": "số dư không đủ"
 }

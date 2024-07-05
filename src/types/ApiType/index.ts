@@ -72,3 +72,8 @@ export interface Game {
     newSet: boolean;
     fast_table: boolean;
 }
+
+export interface Timer {
+    time: string | number;
+    timer: number;
+}

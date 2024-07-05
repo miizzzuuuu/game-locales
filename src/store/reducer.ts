@@ -6,11 +6,11 @@ import chipReducer from './slice/chipSlice';
 import gameReducer from './slice/gameSlice';
 // import gameStateReducer from './slice/gameStateSlice';
 import lastBetsReducer from './slice/lastBetsSlice';
-// import menuReducer from './slice/menuSlice';
+import menuReducer from './slice/menuSlice';
 import playerReducer from './slice/playerSlice';
 // import resultReducer from './slice/resultSlice';
 import settingsReducer from './slice/settingsSlice';
-// import timerReducer from './slice/timerSlice';
+import timerReducer from './slice/timerSlice';
 import windowReducer from './slice/windowSlice';
 
 export const rootReducer = combineReducers({
@@ -20,10 +20,10 @@ export const rootReducer = combineReducers({
     game: gameReducer,
     // gameState: gameStateReducer,
     lastBets: lastBetsReducer,
-    // menu: menuReducer,
+    menu: menuReducer,
     player: playerReducer,
     // result: resultReducer,
     settings: settingsReducer,
-    // timer: timerReducer,
+    timer: timerReducer,
     window: windowReducer,
 });

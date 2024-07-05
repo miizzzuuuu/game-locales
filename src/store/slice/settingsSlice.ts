@@ -87,6 +87,7 @@ export const {
     updateVolumeGameSound,
 } = playerSlice.actions;
 
+export const selectSettings = (state: RootState) => state.settings;
 export const selectLanguage = (state: RootState) => state.settings.language;
 export const selectAutoRebet = (state: RootState) => state.settings.autoRebet;
 export const selectEnableGameSound = (state: RootState) => state.settings.enableGameSound;

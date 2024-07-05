@@ -1,0 +1,131 @@
+import { createSlice } from '@reduxjs/toolkit';
+import { RootState } from '../store';
+
+export type NameMenu = 'main' | 'payout' | 'settings' | 'history' | 'htp' | 'statistic';
+
+export interface MenuState {
+    openStatistic: boolean;
+    openMenuMain: boolean;
+    openMenuPayout: boolean;
+    openMenuSettings: boolean;
+    openMenuHistory: boolean;
+    openMenuHTP: boolean;
+
+    menuOpened: NameMenu[];
+}
+
+const initialState: MenuState = {
+    openStatistic: false,
+    openMenuMain: false,
+    openMenuPayout: false,
+    openMenuSettings: false,
+    openMenuHistory: false,
+    openMenuHTP: false,
+    menuOpened: [],
+};
+
+const menuSlice = createSlice({
+    name: 'menu',
+    initialState,
+    reducers: {
+        toggleMenuStatistic: (state) => {
+            const prev = state.openStatistic;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'statistic');
+            } else {
+                state.menuOpened.push('statistic');
+            }
+
+            state.openStatistic = !prev;
+        },
+        toggleMenuMain: (state) => {
+            const prev = state.openMenuMain;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'main');
+            } else {
+                state.menuOpened.push('main');
+            }
+
+            state.openMenuMain = !prev;
+        },
+        toggleMenuPayout: (state) => {
+            const prev = state.openMenuPayout;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'payout');
+            } else {
+                state.menuOpened.push('payout');
+            }
+
+            state.openMenuPayout = !prev;
+        },
+        toggleMenuSettings: (state) => {
+            const prev = state.openMenuSettings;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'settings');
+            } else {
+                state.menuOpened.push('settings');
+            }
+
+            state.openMenuSettings = !prev;
+        },
+        toggleMenuHistory: (state) => {
+            const prev = state.openMenuHistory;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'history');
+            } else {
+                state.menuOpened.push('history');
+            }
+
+            state.openMenuHistory = !state.openMenuHistory;
+        },
+        toggleMenuHTP: (state) => {
+            const prev = state.openMenuHTP;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'htp');
+            } else {
+                state.menuOpened.push('htp');
+            }
+
+            state.openMenuHTP = !state.openMenuHTP;
+        },
+
+        closeAllMenu: (state) => {
+            state.menuOpened = [];
+
+            state.openStatistic = false;
+            state.openMenuMain = false;
+            state.openMenuPayout = false;
+            state.openMenuSettings = false;
+            state.openMenuHistory = false;
+            state.openMenuHTP = false;
+        },
+    },
+});
+
+export const {
+    toggleMenuStatistic,
+    toggleMenuMain,
+    toggleMenuPayout,
+    toggleMenuSettings,
+    toggleMenuHistory,
+    toggleMenuHTP,
+    closeAllMenu,
+} = menuSlice.actions;
+
+export const selectOpenStatistic = (state: RootState) => state.menu.openStatistic;
+
+export const selectOpenMenuMain = (state: RootState) => state.menu.openMenuMain;
+export const selectOpenMenuPayout = (state: RootState) => state.menu.openMenuPayout;
+export const selectOpenMenuSettings = (state: RootState) => state.menu.openMenuSettings;
+export const selectOpenMenuHistory = (state: RootState) => state.menu.openMenuHistory;
+export const selectOpenMenuHTP = (state: RootState) => state.menu.openMenuHTP;
+
+export const selectMenuOpened = (state: RootState) => state.menu.menuOpened;
+
+export default menuSlice.reducer;

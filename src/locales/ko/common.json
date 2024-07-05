@@ -40,5 +40,6 @@
     "total-bet": "총 베팅",
     "you-win": "당신이 이겼습니다",
     "bet-confirmed": "베팅 확인됨",
-    "bet-error": "베팅 오류"
+    "bet-error": "베팅 오류",
+    "insuffix-balance": "잔액 부족"
 }

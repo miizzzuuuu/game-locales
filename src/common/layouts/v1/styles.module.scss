@@ -1,0 +1,23 @@
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.main {
+    flex: 1;
+}
+
+.mobile-portrait {
+    &.layout {
+        &.offset-streaming {
+            padding-top: calc(var(--height-streaming) * 1px);
+        }
+    }
+}

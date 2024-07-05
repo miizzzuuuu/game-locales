@@ -6,7 +6,7 @@ export const useAppTranslate = (prefix?: string) => {
 
     const t = (key: string, option?: TOptions): string => {
         if (!prefix) {
-            return translate(key);
+            return translate(`common.${key}`);
         }
 
         return translate(`${prefix}.${key}`, option);

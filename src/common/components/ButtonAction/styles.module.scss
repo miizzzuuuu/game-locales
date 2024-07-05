@@ -1,0 +1,98 @@
+.button-action {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.2s linear;
+
+    align-items: center;
+
+    width: 3.4rem;
+
+    &.disapear {
+        animation: fadeout 0.45s forwards;
+    }
+
+    &.apear {
+        animation: fadein 0.45s forwards;
+    }
+}
+
+.icon {
+    display: flex;
+    width: 3.4rem;
+    height: 3.4rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.8rem;
+    border: 0.1rem solid rgba(133, 135, 157, 0.32);
+    background-color: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(0.2px);
+    transition: all 0.2s linear;
+
+    &.circle {
+        border-radius: 100%;
+    }
+
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.text {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+    white-space: nowrap;
+    text-transform: capitalize;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    & > P {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.mobile-portrait {
+    .text {
+        width: calc(100% + 0.8rem);
+    }
+}
+
+// .desktop,
+// .mobile-landscape {
+//     .text {
+//         width: calc(0.4rem + 3.4rem);
+//     }
+// }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: var(--opacity, 1);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: var(--opacity, 1);
+    }
+
+    to {
+        opacity: 0;
+    }
+}

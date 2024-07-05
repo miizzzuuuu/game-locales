@@ -39,5 +39,6 @@
     "total-bet": "total bet",
     "you-win": "you win",
     "bet-confirmed": "bet confirmed",
-    "bet-error": "bet error"
+    "bet-error": "bet error",
+    "insuffix-balance": "insuffix balance"
 }
