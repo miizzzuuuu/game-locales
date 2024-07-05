@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import { useChipBet } from '../../../../common/hooks/useChipBet';
+import { useGetChipBet } from '../../../../common/hooks/useGetChipBet';
 import { Bet } from '../../../../types';
 
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const ButtonBet = ({ children, className, bet }: IProps) => {
-    const { chip, color } = useChipBet(bet);
+    const { chip, color } = useGetChipBet(bet);
 
     console.log('chip', { chip, color });
 

@@ -5,7 +5,7 @@ import { selectChipBase } from '../../store/slice/chipSlice';
 import { Bet } from '../../types';
 import { ChipHelper } from '../utils/ChipHelper';
 
-export const useChipBet = (bet: Bet) => {
+export const useGetChipBet = (bet: Bet) => {
     const { button, group } = bet;
     const keyBet = `${button}-${group}`;
 

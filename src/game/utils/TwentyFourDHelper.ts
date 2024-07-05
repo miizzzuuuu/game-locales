@@ -1,3 +1,4 @@
+import { GameSpesificHelper } from '../../common/utils/BetHelper';
 import { Bet } from '../../types';
 
 export enum TypeGroup {
@@ -10,9 +11,20 @@ export enum TypeGroup {
     Number50 = 'n50',
 }
 
-export class TwentyFourDHelper {
-    static GroupBet50 = ['n50'];
+export class TwentyFourDBet implements GameSpesificHelper {
+    GroupBet50 = ['n50'];
 
+    oppositeBet50: Record<string, string> = {
+        red: `black-${TypeGroup.Number50}`,
+        black: `red-${TypeGroup.Number50}`,
+        odd: `even-${TypeGroup.Number50}`,
+        even: `odd-${TypeGroup.Number50}`,
+        small: `big-${TypeGroup.Number50}`,
+        big: `small-${TypeGroup.Number50}`,
+    };
+}
+
+export class TwentyFourDHelper {
     static bets: Record<string, Bet> = {
         'n-1': { button: '01', group: 'n' },
         'n-2': { button: '02', group: 'n' },

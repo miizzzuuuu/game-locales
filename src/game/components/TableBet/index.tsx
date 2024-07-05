@@ -5,7 +5,6 @@ import ButtonBet from './ButtonBet';
 import BetColRow from './ButtonBet/BetColRow';
 import BetNumber from './ButtonBet/BetNumber';
 import BetText from './ButtonBet/BetText';
-
 import styles from './styles.module.scss';
 
 const TableBet = () => {
