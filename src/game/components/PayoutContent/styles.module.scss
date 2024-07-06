@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.6rem;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}

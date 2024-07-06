@@ -14,31 +14,10 @@
         "items": []
     },
     {
-        "name": "three number",
-        "min": 1000,
-        "max": 1000000,
-        "payout": 11,
-        "items": []
-    },
-    {
         "name": "four number",
         "min": 1000,
         "max": 1000000,
         "payout": 8,
-        "items": []
-    },
-    {
-        "name": "six number",
-        "min": 1000,
-        "max": 1000000,
-        "payout": 8,
-        "items": []
-    },
-    {
-        "name": "three numbers with 0",
-        "min": 1000,
-        "max": 1000000,
-        "payout": 11,
         "items": []
     },
     {
@@ -49,7 +28,7 @@
         "items": []
     },
     {
-        "name": "bet dozen",
+        "name": "bet row",
         "min": 1000,
         "max": 1000000,
         "payout": 2,

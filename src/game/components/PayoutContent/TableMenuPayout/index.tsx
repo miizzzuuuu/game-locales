@@ -1,0 +1,73 @@
+import LabelTranslate from '../../../../common/components/LabelTranslate';
+import { StringHelper } from '../../../../common/utils/StringHelper';
+import { useAppSelector } from '../../../../store/hooks';
+import { selectCurrency } from '../../../../store/slice/playerSlice';
+import { selectLanguage } from '../../../../store/slice/settingsSlice';
+import { PayoutData } from '../../../../types';
+
+import styles from './styles.module.scss';
+
+interface IProps {
+    data: PayoutData[];
+}
+
+const TableMenuPayout = ({ data }: IProps) => {
+    const currency = useAppSelector(selectCurrency);
+    const lang = useAppSelector(selectLanguage);
+
+    return (
+        <div className={styles['"payout-table-container"']}>
+            <table className={styles['payout-table']}>
+                <thead>
+                    <tr>
+                        <th className="text-left">
+                            <LabelTranslate value="bet" />
+                        </th>
+                        <th>
+                            <LabelTranslate value="limit-bet" />
+                        </th>
+                        <th>
+                            <LabelTranslate value="payout" />
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data?.map((item, idx) => (
+                        <>
+                            <tr key={idx}>
+                                <td>
+                                    <LabelTranslate
+                                        value={item.name}
+                                        keyLang="g24d"
+                                        style={{ textTransform: 'capitalize' }}
+                                    />
+                                </td>
+                                <td className="text-center text-cyan">
+                                    {StringHelper.formatMoneyWithCurrency(item.min, currency, lang)}{' '}
+                                    - {StringHelper.formatMoneyOnlyNumber(item.max, lang)}
+                                </td>
+                                <td className="text-center">{item.payout}</td>
+                            </tr>
+                            {item.items.length > 0 &&
+                                item.items.map((child, idxChild) => (
+                                    <tr key={`${idx}-${idxChild}`}>
+                                        <td className={styles['bet-child']}>
+                                            <LabelTranslate
+                                                value={child.name}
+                                                keyLang="g24d"
+                                                style={{ textTransform: 'capitalize' }}
+                                            />
+                                        </td>
+                                        <td className="text-center text-cyan"></td>
+                                        <td className="text-center">{child.payout}</td>
+                                    </tr>
+                                ))}
+                        </>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export default TableMenuPayout;

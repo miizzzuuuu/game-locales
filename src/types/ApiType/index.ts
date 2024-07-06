@@ -89,3 +89,16 @@ export interface SendBetParam {
     game: string;
     transId: string;
 }
+
+export type PayoutItem = {
+    name: string;
+    payout: number | null;
+};
+
+export type PayoutData = {
+    name: string;
+    min: number;
+    max: number;
+    payout: number | null;
+    items: PayoutItem[];
+};

@@ -8,6 +8,7 @@ import styles from './styles.module.scss';
 import Statistic from '../Items/Statistic';
 import Settings from '../Items/Settings/indes';
 import HowToPlay from '../Items/HowToPlay/indes';
+import Payout from '../Items/Payout';
 
 export interface MenuPageProps {
     handleClose: () => void;
@@ -57,6 +58,7 @@ const Menu = () => {
             <Main handleClose={handleClose} />
             <Settings handleClose={handleClose} />
             <HowToPlay handleClose={handleClose} />
+            <Payout handleClose={handleClose} />
             {/* <MenuPayout handleClose={handleClose} />
             <MenuSettings handleClose={handleClose} />
             <MenuHistory handleClose={handleClose} />
