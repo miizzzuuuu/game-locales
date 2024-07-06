@@ -77,3 +77,15 @@ export interface Timer {
     time: string | number;
     timer: number;
 }
+
+export interface SendBetResponse {
+    status: boolean;
+    message: string;
+}
+
+export interface SendBetParam {
+    button_bet: BetSend[];
+    total_bet: number;
+    game: string;
+    transId: string;
+}

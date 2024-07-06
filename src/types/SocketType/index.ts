@@ -34,15 +34,6 @@ export type CameraSequence = {
     detail: string;
 };
 
-export type ThunderData = {
-    lucky_number: number[];
-    multipliers: number[];
-    // ball_position: number,
-    prize_data: number;
-    total_multipliers: number[];
-    golden_time: boolean;
-};
-
 export type TopWinnerData = {
     pcode: string;
     periode: number;
@@ -51,3 +42,44 @@ export type TopWinnerData = {
         totalWin: number;
     }>;
 };
+
+export type ThunderData = {
+    lucky_number: number[];
+    multipliers: number[];
+    prize_data: number;
+    total_multipliers: number[];
+    golden_time: boolean;
+};
+
+export type Thunder =
+    | {
+          pcode: 'p6b';
+          data: ThunderP6B;
+      }
+    | {
+          pcode: 'p7e';
+          data: ThunderP7E;
+      }
+    | {
+          pcode: 'p9b';
+          data: ThunderP9B;
+      };
+
+export type ThunderP6B = {
+    lucky_number: { data: string[]; prize: number };
+    jackpot_number: { data: number; prize: number };
+};
+
+export type ThunderP7E = {
+    lucky_number: number[];
+    multipliers: number[];
+    prize_data: number;
+    total_multipliers: number[];
+    golden_time: boolean;
+};
+
+export type ThunderP9B = {
+    number_board: string;
+    coordinate: string;
+    prize_thunder: number;
+}[];

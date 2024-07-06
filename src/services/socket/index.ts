@@ -6,7 +6,7 @@ import {
     LoadNewValueData,
     LobbyConnect,
     RecieveTotalWinData,
-    ThunderData,
+    Thunder,
     TopWinnerData,
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
@@ -170,16 +170,11 @@ export class SocketComponent {
         }
     }
 
-    listenThunder(callback: (data: ThunderData) => void): void {
+    listenThunder(callback: (data: Thunder) => void): void {
         if (this._socket) {
-            this._socket.on(
-                SocketComponent.SOCKET_EVENT.thunder,
-                (data: { pcode: string; data: ThunderData }) => {
-                    // console.log('socket thunder:', data);
-
-                    this.validationDataWithPcode(data, () => callback(data.data));
-                },
-            );
+            this._socket.on(SocketComponent.SOCKET_EVENT.thunder, (data: Thunder) => {
+                this.validationDataWithPcode(data, () => callback(data));
+            });
         }
     }
 
