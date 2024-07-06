@@ -1,12 +1,11 @@
-import LabelTranslate from '../../../../../components/LabelTranslate';
-import { ArrayHelper } from '../../../../../utils/ArrayHelper';
-import Card from '../../Card';
-
+import LabelTranslate from '../../../../../common/components/LabelTranslate';
+import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
+import { ArrayHelper } from '../../../../../common/utils/ArrayHelper';
 import stylesParent from '../styles.module.scss';
 
 const Rules = () => {
     return (
-        <Card title={<LabelTranslate value="title" keyLang="htp.rules" />}>
+        <HowToPlayCard title={<LabelTranslate value="title" keyLang="htp.rules" />}>
             <div className={stylesParent.container}>
                 <ul className={stylesParent['htp-list']}>
                     {ArrayHelper.range(4).map((_, idx) => (
@@ -20,7 +19,7 @@ const Rules = () => {
                     ))}
                 </ul>
             </div>
-        </Card>
+        </HowToPlayCard>
     );
 };
 

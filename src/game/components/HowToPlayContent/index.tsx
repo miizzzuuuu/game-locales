@@ -1,10 +1,10 @@
-import { MenuContentContainer } from '../../../MenuContentContainer';
-import Introduction from '../Items/Introduction';
-import Rules from '../Items/Rules';
+import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
+import Introduction from './Items/Introduction';
+import Rules from './Items/Rules';
 
 import styles from './styles.module.scss';
 
-const Content = () => {
+const HowToPlayContent = () => {
     return (
         <div className={styles.htp}>
             <MenuContentContainer>
@@ -15,4 +15,4 @@ const Content = () => {
     );
 };
 
-export default Content;
+export default HowToPlayContent;

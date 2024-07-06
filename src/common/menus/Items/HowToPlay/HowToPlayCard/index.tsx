@@ -7,7 +7,7 @@ interface IProps {
     children?: ReactNode | undefined;
 }
 
-const Card = ({ title, children }: IProps) => {
+const HowToPlayCard = ({ title, children }: IProps) => {
     const contentRef = useRef<HTMLDivElement>(null);
 
     const [isOpen, setOpen] = useState(false);
@@ -56,4 +56,4 @@ const Card = ({ title, children }: IProps) => {
     );
 };
 
-export default Card;
+export default HowToPlayCard;

@@ -1,11 +1,11 @@
-import LabelTranslate from '../../../../../components/LabelTranslate';
-import Card from '../../Card';
+import LabelTranslate from '../../../../../common/components/LabelTranslate';
+import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
 
 import stylesParent from '../styles.module.scss';
 
 const Introduction = () => {
     return (
-        <Card title={<LabelTranslate value="title" keyLang="htp.introduction" />}>
+        <HowToPlayCard title={<LabelTranslate value="title" keyLang="htp.introduction" />}>
             <div className={stylesParent.container}>
                 <LabelTranslate
                     value="content"
@@ -13,7 +13,7 @@ const Introduction = () => {
                     className={stylesParent['text-htp']}
                 />
             </div>
-        </Card>
+        </HowToPlayCard>
     );
 };
 

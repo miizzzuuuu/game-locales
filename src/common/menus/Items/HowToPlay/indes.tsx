@@ -1,10 +1,9 @@
+import HowToPlayContent from '../../../../game/components/HowToPlayContent';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectOpenMenuHTP, toggleMenuHTP } from '../../../../store/slice/menuSlice';
 import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
-
-import Content from './Content';
 
 const HowToPlay = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();
@@ -18,7 +17,7 @@ const HowToPlay = ({ handleClose }: MenuPageProps) => {
             handleBack={() => dispatch(toggleMenuHTP())}
             handleClose={handleClose}
         >
-            <Content />
+            <HowToPlayContent />
         </Panel>
     );
 };
