@@ -6,6 +6,7 @@ import { resetBetSend, selectAllBetSend } from '../slice/betSendSlice';
 import { setMessage } from '../slice/gameStateSlice';
 import { LastBetState, setLastBetData } from '../slice/lastBetsSlice';
 import { selectBalance } from '../slice/playerSlice';
+import { doneResult } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
@@ -69,6 +70,10 @@ export const gameResultListener = (startListening: AppStartListening) => {
                 action,
                 listenerApi,
             });
+
+            const dispatch = listenerApi.dispatch;
+
+            dispatch(doneResult());
         },
     });
 };

@@ -6,12 +6,13 @@ import Streaming from '../Streaming';
 import Timer from '../Timer';
 import styles from './styles.module.scss';
 import { useAppDispatch } from '../../../store/hooks';
-import { loadNewValueAction } from '../../../store/actions/socketAction';
+import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { setTime } from '../../../store/slice/timerSlice';
 import { dummyLoadNewValue } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
+import { FunctionHelper } from '../../utils/FunctionHelper';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -21,6 +22,9 @@ function Game() {
     const handleKeyboardTest = useCallback((e: KeyboardEvent) => {
         if (e.key === 'l') {
             dispatch(loadNewValueAction(dummyLoadNewValue));
+        }
+        if (e.key === 'r') {
+            dispatch(gameResultAction(FunctionHelper.getRandomInt(1, 25)));
         }
         if (e.key === 'w') {
             dispatch(setWinAmount(1000000));
