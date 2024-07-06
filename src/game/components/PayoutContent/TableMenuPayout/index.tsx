@@ -1,3 +1,4 @@
+import { Fragment } from 'react/jsx-runtime';
 import LabelTranslate from '../../../../common/components/LabelTranslate';
 import { StringHelper } from '../../../../common/utils/StringHelper';
 import { useAppSelector } from '../../../../store/hooks';
@@ -33,8 +34,8 @@ const TableMenuPayout = ({ data }: IProps) => {
                 </thead>
                 <tbody>
                     {data?.map((item, idx) => (
-                        <>
-                            <tr key={idx}>
+                        <Fragment key={idx}>
+                            <tr>
                                 <td>
                                     <LabelTranslate
                                         value={item.name}
@@ -62,7 +63,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                         <td className="text-center">{child.payout}</td>
                                     </tr>
                                 ))}
-                        </>
+                        </Fragment>
                     ))}
                 </tbody>
             </table>

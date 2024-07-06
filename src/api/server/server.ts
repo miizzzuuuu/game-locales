@@ -18,6 +18,7 @@ import sendBetData from './response/send-bet/success.json';
 import resultsP7EData from './response/results/p7e.json';
 
 import transactionsP7EData from './response/transactions/p7e.json';
+import transactionsP6BData from './response/transactions/p6b.json';
 
 import { games } from './db/games';
 
@@ -115,19 +116,25 @@ export function makeServer({ environment = 'test' } = {}) {
             // transaction
             this.get(ENDPOINTS.transaction + '/:pcode', async (_, request) => {
                 const page = Number(request.params.page);
-                const per_page = Number(request.params['per_page']);
+                const pcode = request.params.pcode;
+                // const per_page = Number(request.params['per_page']);
 
                 const total_datas = 100;
-                const total_page = Math.ceil(total_datas / per_page);
+                // const total_page = Math.ceil(total_datas / per_page);
 
-                const data = transactionsP7EData;
+                const data =
+                    pcode === 'p7e'
+                        ? transactionsP7EData
+                        : pcode === 'p6b'
+                          ? transactionsP6BData
+                          : { data: [] };
 
                 return {
                     ...data,
                     pagination: {
                         total_datas: total_datas,
                         current_page: page,
-                        total_pages: total_page,
+                        total_pages: 1,
                     },
                 };
             });

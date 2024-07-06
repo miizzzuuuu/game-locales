@@ -1,0 +1,35 @@
+.result {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    & > svg {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+}
+
+.multiplier {
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    padding: 0.3rem 0.3rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 11rem;
+    border: 0.05rem solid #4ebbff;
+    background: #0189de;
+
+    &-text {
+        text-shadow: 0px 0.0352rem 0.0938rem rgba(0, 0, 0, 0.32);
+        font-family: Manrope;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: -0.0352rem;
+    }
+}

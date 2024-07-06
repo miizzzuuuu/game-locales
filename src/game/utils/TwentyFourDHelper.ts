@@ -11,6 +11,19 @@ export enum TypeGroup {
 }
 
 export class TwentyFourDHelper {
+    static RED = [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20];
+    static BLACK = [5, 6, 7, 8, 13, 14, 15, 16, 21, 22, 23, 24];
+
+    static getColor(result: number) {
+        if (this.RED.includes(result)) {
+            return 'red';
+        } else if (this.BLACK.includes(result)) {
+            return 'black';
+        } else {
+            return '';
+        }
+    }
+
     static bets: Record<string, Bet> = {
         'n-1': { button: '01', group: 'n' },
         'n-2': { button: '02', group: 'n' },
