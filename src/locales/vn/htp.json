@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "title": "giới thiệu",
+        "content": "24D Jackpot là một trò chơi đoán số truyền thống đã được hiện đại hóa giống như hầu hết các trò chơi của chúng tôi đã nhận được giao diện mới và tất nhiên là với hệ thống tiền thưởng rất hấp dẫn để bạn chơi trò chơi này. Giành được tiền thưởng lên đến x500 thông qua hệ thống Jackpot trong trò chơi mới nhất của chúng tôi!!!"
+    },
+    "rules": {
+        "title": "quy tắc",
+        "steps": [
+            "Trò chơi này sử dụng 24 quả bóng bao gồm các số từ 1 đến 24 với các màu đỏ và đen được chứa trong một lồng sẽ quay mỗi vòng chơi.",
+            "Trò chơi bắt đầu khi người chia bài mở thời gian đặt cược.",
+            "Bây giờ bạn phải đặt cược trên bảng đặt cược mà chúng tôi cung cấp.",
+            "Tất cả các cược trên bảng đặt cược sẽ được tự động chấp nhận khi hết thời gian.",
+            "Sau khi thời gian đặt cược kết thúc, người chia bài sẽ quay lồng bóng để xác định kết quả trò chơi.",
+            "Chỉ các cược vào một số duy nhất mới đủ điều kiện cho hệ thống tiền thưởng Số may mắn & Số Jackpot. Tất cả các cược ngoài cược số duy nhất sẽ được thanh toán bình thường theo bảng thanh toán.",
+            "Kết quả cho một vòng chơi chỉ là một số từ 1 đến 24. Nếu bóng không được định vị rõ ràng, trạng thái \"không có trò chơi\" sẽ xảy ra và người chia bài sẽ quay lồng lại cho đến khi kết quả rõ ràng."
+        ]
+    }
+}

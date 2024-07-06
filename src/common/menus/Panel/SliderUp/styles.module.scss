@@ -1,0 +1,17 @@
+.slider-up {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    height: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+        width: 3.2rem;
+        height: 0.3rem;
+        border-radius: 0.2rem;
+        background: #47485a;
+    }
+}

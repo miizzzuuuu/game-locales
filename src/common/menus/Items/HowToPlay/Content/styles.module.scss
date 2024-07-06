@@ -1,0 +1,12 @@
+.htp {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #1e1f2e;
+    border-top: 0.1rem solid #2b2c3d;
+
+    padding: 1rem;
+
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+}

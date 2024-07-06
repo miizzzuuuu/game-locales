@@ -9,6 +9,7 @@ import { AppDispatch, RootState } from './store';
 import { gameResultListener, loadNewValueListener } from './listener/socketListener';
 import { closeTimeListener } from './listener/timerListener';
 import { confirmBetFullfiledListener } from './listener/betAddListener';
+import { updateSettingsListener } from './listener/settingsListener';
 
 export const listenerMiddleware = createListenerMiddleware();
 export type AppStartListening = TypedStartListening<RootState, AppDispatch>;
@@ -19,3 +20,4 @@ loadNewValueListener(startAppListening);
 gameResultListener(startAppListening);
 closeTimeListener(startAppListening);
 confirmBetFullfiledListener(startAppListening);
+updateSettingsListener(startAppListening);

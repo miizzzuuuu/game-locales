@@ -18,7 +18,7 @@ const playerSlice = createSlice({
     name: 'settings',
     initialState,
     reducers: {
-        updateSetings: (state, action: PayloadAction<Settings>) => {
+        setSetings: (state, action: PayloadAction<Settings>) => {
             const {
                 language,
                 autoRebet,
@@ -36,56 +36,57 @@ const playerSlice = createSlice({
             state.enableStreamingSound = enableStreamingSound;
             state.enableStreamingVideo = enableStreamingVideo;
             state.streamingQuality = streamingQuality;
-            state.volumeStreamingSound = volumeStreamingSound;
             state.volumeGameSound = volumeGameSound;
+            state.volumeStreamingSound = volumeStreamingSound;
         },
-        updateLangauge: (state, action: PayloadAction<Settings['language']>) => {
-            state.language = LangHelper.formatedLanguage(action.payload);
-        },
-        updateAutoRebet: (state, action: PayloadAction<Settings['autoRebet']>) => {
-            state.autoRebet = action.payload;
-        },
-        updateEnableGameSound: (state, action: PayloadAction<Settings['enableGameSound']>) => {
-            state.enableGameSound = action.payload;
-        },
-        updateEnableStreamingSound: (
-            state,
-            action: PayloadAction<Settings['enableStreamingSound']>,
-        ) => {
-            state.enableStreamingSound = action.payload;
-        },
-        updateEnableStreamingVideo: (
-            state,
-            action: PayloadAction<Settings['enableStreamingVideo']>,
-        ) => {
-            state.enableStreamingVideo = action.payload;
-        },
-        updateStreamingQuality: (state, action: PayloadAction<Settings['streamingQuality']>) => {
-            state.streamingQuality = action.payload;
-        },
-        updateVolumeStreamingSound: (
-            state,
-            action: PayloadAction<Settings['volumeStreamingSound']>,
-        ) => {
-            state.volumeStreamingSound = action.payload;
-        },
-        updateVolumeGameSound: (state, action: PayloadAction<Settings['volumeGameSound']>) => {
-            state.volumeGameSound = action.payload;
+        updateSetings: (state, action: PayloadAction<Partial<Settings>>) => {
+            const {
+                language,
+                autoRebet,
+                enableGameSound,
+                enableStreamingSound,
+                enableStreamingVideo,
+                streamingQuality,
+                volumeStreamingSound,
+                volumeGameSound,
+            } = action.payload;
+
+            if (language !== undefined) {
+                state.language = LangHelper.formatedLanguage(language);
+            }
+
+            if (autoRebet !== undefined) {
+                state.autoRebet = autoRebet;
+            }
+
+            if (enableGameSound !== undefined) {
+                state.enableGameSound = enableGameSound;
+            }
+
+            if (enableStreamingSound !== undefined) {
+                state.enableStreamingSound = enableStreamingSound;
+            }
+
+            if (enableStreamingVideo !== undefined) {
+                state.enableStreamingVideo = enableStreamingVideo;
+            }
+
+            if (streamingQuality !== undefined) {
+                state.streamingQuality = streamingQuality;
+            }
+
+            if (volumeGameSound !== undefined) {
+                state.volumeGameSound = volumeGameSound;
+            }
+
+            if (volumeStreamingSound !== undefined) {
+                state.volumeStreamingSound = volumeStreamingSound;
+            }
         },
     },
 });
 
-export const {
-    updateSetings,
-    updateLangauge,
-    updateAutoRebet,
-    updateEnableGameSound,
-    updateEnableStreamingSound,
-    updateEnableStreamingVideo,
-    updateStreamingQuality,
-    updateVolumeStreamingSound,
-    updateVolumeGameSound,
-} = playerSlice.actions;
+export const { setSetings, updateSetings } = playerSlice.actions;
 
 export const selectSettings = (state: RootState) => state.settings;
 export const selectLanguage = (state: RootState) => state.settings.language;

@@ -11,6 +11,7 @@ import { setWinAmount } from '../../../store/slice/resultSlice';
 import { setTime } from '../../../store/slice/timerSlice';
 import { dummyLoadNewValue } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
+import Menu from '../../menus/Menu';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -36,8 +37,9 @@ function Game() {
             <Streaming />
             <Timer />
             <GameUI />
-
             <AlertUI />
+
+            <Menu />
         </div>
     );
 }

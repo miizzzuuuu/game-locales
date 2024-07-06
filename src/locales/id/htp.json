@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "title": "pengenalan",
+        "content": "24D Jackpot merupakan permainan tradisional menebak angka yang dibuat menjadi modern sama seperti kebanyakan permainan kami yang sudah mendapatkan sentuhan tampilan yang lebih fresh dan juga tentunya dengan Bonus sistem yang sangat menggiurkan untuk anda memainkan permainan ini. Menangkan Bonus sampai x500 lipat melalui sistem Jackpot didalam game terbaru kami ini!!!"
+    },
+    "rules": {
+        "title": "peraturan",
+        "steps": [
+            "Permainan ini menggunakan 24 Bola yang terdiri dari angka 1 sampai 24 dengan warna merah dan hitam yang terdapat di dalam sebuah sangkar yang akan diputar setiap putaran permainan.",
+            "Permainan dimulai ketika dealer membuka waktu untuk bertaruh.",
+            "Sekarang Anda harus menempatkan taruhan Anda pada panel taruhan yang kami sediakan.",
+            "Semua taruhan di panel taruhan akan diterima secara otomatis ketika waktunya habis.",
+            "Setelah waktu taruhan berakhir, Dealer akan memutar Sangkar Bola untuk menentukan hasil permainan.",
+            "Hanya Taruhan 1 Angka saja yang berhak mengikuti sistem Bonus Lucky Number & Jackpot Number. Semua taruhan diluar taruhan 1 Angka akan dibayar normal sesuai dengan yang ada didalam tabel pembayaran.",
+            "Hasil untuk 1 putaran permainan hanyalah 1 angka yang terdiri dari angka 1 sampai 24 saja. dan jika bola tidak terposisikan dengan jelas maka \"no game\" status akan terjadi dan dealer akan memutar sangkar sekali lagi hingga hasilnya jelas."
+        ]
+    }
+}

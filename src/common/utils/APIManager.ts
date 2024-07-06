@@ -94,6 +94,14 @@ class APIManager {
         return this.request(endpoint, { ...customConfig, body });
     }
 
+    static put<T = object>(
+        endpoint: string,
+        body: Record<string, any>,
+        customConfig = {},
+    ): Promise<Client<T>> {
+        return this.request(endpoint, { ...customConfig, body, method: 'PUT' });
+    }
+
     static timeout = (time: number) => {
         const controller = new AbortController();
         setTimeout(() => controller.abort(), time * 1000);

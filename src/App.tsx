@@ -12,6 +12,9 @@ import { useFetchGame } from './common/hooks/useFetchGame';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import Game from './common/components/Game';
 import { useFetchTimer } from './common/hooks/useFetchTimer';
+import { useLanguage } from './common/hooks/useLanguage';
+import { useSettingSound } from './common/hooks/useSettingSound';
+import { useFocus } from './common/hooks/useFocus';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -49,6 +52,9 @@ function App() {
         dispatch(setOrientation(orientation));
     }, [orientation, dispatch]);
 
+    useFocus();
+    useSettingSound();
+
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
 
@@ -58,6 +64,8 @@ function App() {
     }, []);
 
     useWindowResize(handleOverlayResize, false);
+
+    useLanguage();
 
     return (
         <div className={`app ${deviceType}`}>

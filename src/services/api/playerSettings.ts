@@ -9,3 +9,12 @@ export const getPlayerSettings = async () => {
         throw error;
     }
 };
+
+export const updatePlayerSettings = async (params: Settings) => {
+    try {
+        const response = await APIManager.put<Settings>(ENDPOINTS.playerSettings, params);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};

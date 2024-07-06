@@ -1,4 +1,4 @@
-import { AnimationEventHandler, useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
 import { ChipHelper } from '../../utils/ChipHelper';
@@ -26,8 +26,6 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
     const activeChip = useAppSelector(selectActiveChip);
 
     const orientation = useAppSelector(selectOrientation);
-
-    const [renderUI, setRenderUI] = useState(true);
 
     const scrollToCenter = useCallback(
         (index: number) => {
@@ -108,20 +106,9 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
         };
     }, [orientation, version]);
 
-    const animationEndHanlder: AnimationEventHandler = (e) => {
-        if (e.animationName.indexOf('fadeout') >= 0) {
-            setRenderUI(false);
-        }
-    };
-
-    if (!show && !renderUI) {
-        return null;
-    }
-
     return (
         <div
-            className={`${styles['chip-deck']}${deviceClassName} ${styles[`v${version}`]}`}
-            onAnimationEnd={animationEndHanlder}
+            className={`${styles['chip-deck']}${deviceClassName} ${styles[`v${version}`]}${show ? ` ${styles.apear}` : ` ${styles.disapear}`}`}
         >
             <div className={`${styles.wrapper} no-scrollbar`} ref={slider}>
                 {chipBase.map((chip, idx) => (

@@ -28,7 +28,7 @@ export const Button = forwardRef<HTMLButtonElement, IProps>(
                 style={style}
                 disabled={disabled}
                 onAnimationEnd={onAnimationEnd}
-                onClick={disabled ? undefined : clickHandler}
+                onClick={clickHandler}
             >
                 {children}
             </button>

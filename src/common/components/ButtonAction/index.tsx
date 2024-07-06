@@ -1,11 +1,4 @@
-import {
-    AnimationEventHandler,
-    CSSProperties,
-    ReactNode,
-    useEffect,
-    useRef,
-    useState,
-} from 'react';
+import { CSSProperties, ReactNode, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import Button from '../Button';
@@ -46,23 +39,23 @@ const ButtonAction = ({
         onClick?.();
     };
 
-    const [renderUI, setRenderUI] = useState(true);
+    // const [renderUI, setRenderUI] = useState(true);
 
-    const handleAnimationEnd: AnimationEventHandler = (e) => {
-        if (e.animationName.indexOf('fadeout') >= 0) {
-            setRenderUI(false);
-        }
-    };
+    // const handleAnimationEnd: AnimationEventHandler = (e) => {
+    //     if (e.animationName.indexOf('fadeout') >= 0) {
+    //         setRenderUI(false);
+    //     }
+    // };
 
-    useEffect(() => {
-        if (show) {
-            setRenderUI(true);
-        }
-    }, [show]);
+    // useEffect(() => {
+    //     if (show) {
+    //         setRenderUI(true);
+    //     }
+    // }, [show]);
 
-    if (!show && !renderUI) {
-        return null;
-    }
+    // if (!show && !renderUI) {
+    //     return null;
+    // }
 
     return (
         <Button
@@ -70,7 +63,6 @@ const ButtonAction = ({
             style={style}
             onClick={handleClick}
             disabled={disabled}
-            onAnimationEnd={handleAnimationEnd}
             custonSound={custonSound}
             ref={buttonRef}
         >

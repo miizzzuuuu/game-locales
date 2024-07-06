@@ -3,7 +3,7 @@ import { useAppDispatch } from '../../store/hooks';
 import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../../utils/LoadingHelper';
 import { getPlayerSettings } from '../../services/api/playerSettings';
-import { updateSetings } from '../../store/slice/settingsSlice';
+import { setSetings } from '../../store/slice/settingsSlice';
 
 export function useFetchSettings() {
     const dispatch = useAppDispatch();
@@ -19,7 +19,7 @@ export function useFetchSettings() {
                 const data = await getPlayerSettings();
 
                 if (ignore) {
-                    dispatch(updateSetings(data));
+                    dispatch(setSetings(data));
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load settings completed');
