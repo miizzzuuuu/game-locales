@@ -18,8 +18,61 @@
 .desktop,
 .mobile-landscape {
     &.table-bet {
-        // margin-top: 3.8rem;
-        transform: translateY(2rem);
+        --translate-x: 0;
+        --translate-y: 2rem;
+        --scale: 1;
+        --opacity: 1;
+        --perspective: 100rem;
+        --rotate-x: 0;
+
+        --scale-close: 0.5;
+        --opacity-close: 0.5;
+        --translate-x-close: 0;
+        --translate-y-close: 7rem;
+        --rotate-x-close: 46deg;
+
         height: calc(100% - 2rem);
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+
+        transform-origin: bottom;
+
+        &.closed {
+            animation: table-bet-closed-animation-landscape 1s forwards;
+        }
+
+        &.opened {
+            animation: table-bet-opened-animation-landscape 1s forwards;
+        }
+    }
+}
+
+@keyframes table-bet-opened-animation-landscape {
+    from {
+        transform: translateX(var(--translate-x-close)) translateY(var(--translate-y-close))
+            scale(var(--scale-close)) perspective(var(--perspective)) rotateX(var(--rotate-x-close));
+        opacity: var(--opacity-close);
+    }
+
+    to {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+    }
+}
+
+@keyframes table-bet-closed-animation-landscape {
+    from {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+    }
+
+    to {
+        transform: translateX(var(--translate-x-close)) translateY(var(--translate-y-close))
+            scale(var(--scale-close)) perspective(var(--perspective)) rotateX(var(--rotate-x-close));
+        opacity: var(--opacity-close);
     }
 }

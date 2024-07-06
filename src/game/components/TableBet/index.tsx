@@ -1,5 +1,8 @@
+import { useEffect, useRef } from 'react';
 import LabelTranslate from '../../../common/components/LabelTranslate';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import { useAppSelector } from '../../../store/hooks';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { TwentyFourDHelper } from '../../utils/TwentyFourDHelper';
 import ButtonBet from './ButtonBet';
 import BetColRow from './ButtonBet/BetColRow';
@@ -8,10 +11,26 @@ import BetText from './ButtonBet/BetText';
 import styles from './styles.module.scss';
 
 const TableBet = () => {
+    const tableBetRef = useRef<HTMLDivElement>(null);
+
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
+    const betIsOpen = useAppSelector(selectBetIsOpen);
+
+    useEffect(() => {
+        if (!betIsOpen) {
+            tableBetRef.current?.classList.remove(styles.opened);
+            tableBetRef.current?.classList.add(styles.closed);
+        } else {
+            if (tableBetRef.current?.classList.contains(styles.closed)) {
+                tableBetRef.current?.classList.remove(styles.closed);
+                tableBetRef.current?.classList.add(styles.opened);
+            }
+        }
+    }, [betIsOpen]);
+
     return (
-        <div className={`${styles['table-bet']}${deviceClassName}`}>
+        <div className={`${styles['table-bet']}${deviceClassName}`} ref={tableBetRef}>
             {TwentyFourDHelper.getBetKeys.map((key) => {
                 const bet = TwentyFourDHelper.bets[key];
 

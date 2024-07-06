@@ -13,17 +13,15 @@ const Result24DTransaction = ({ data }: IProps) => {
         return null;
     }
 
-    const betWin = data.detail_betting.filter((data) => {
-        data.type === 'n' && data.win_amount > 0;
-    });
-
     return (
         <div className={styles.result}>
             <SVGResult24D value={Number(detail_result.angka)} />
 
-            {betWin.length > 0 && (
+            {detail_result.thunder?.data_thunder?.prize_thunder && (
                 <div className={styles.multiplier}>
-                    <span className={styles['multiplier-text']}>{betWin[0].prize}x</span>
+                    <span className={styles['multiplier-text']}>
+                        {detail_result.thunder.data_thunder.prize_thunder}x
+                    </span>
                 </div>
             )}
         </div>

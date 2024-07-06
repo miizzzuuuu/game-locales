@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.6rem;
+
+    overflow: auto;
+}
+
+.item {
+    position: relative;
+    flex-shrink: 0;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0.4rem);
+
+    &.thunder {
+        border: 0.1rem solid #0189de;
+        background: linear-gradient(180deg, #0189de 0%, #014a78 82.5%);
+    }
+
+    &.thunder .text,
+    &.thunder .text.black {
+        color: white;
+    }
+
+    .text.red {
+        color: #e40044;
+    }
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.024rem;
+}

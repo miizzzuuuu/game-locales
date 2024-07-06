@@ -49,7 +49,16 @@ export type DetailResultP7 = {
         | [];
 };
 
-export type DetailResultP6 = DetailResultP7;
+export type DetailResultP6 = {
+    detail_result: {
+        angka: number;
+        thunder: {
+            data_thunder: {
+                prize_thunder: number;
+            };
+        };
+    };
+};
 
 export type DetailResultM22 = {
     detail_result:
