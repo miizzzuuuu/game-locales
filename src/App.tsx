@@ -11,6 +11,7 @@ import { useFetchGame } from './common/hooks/useFetchGame';
 
 import ResizeOverlay from './common/components/ResizeOverlay';
 import Game from './common/components/Game';
+import { useFetchTimer } from './common/hooks/useFetchTimer';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -22,14 +23,21 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetLastbets } = useFetchLastbets();
     const { finish: finishGetGame } = useFetchGame();
+    const { finish: finishGetTimer } = useFetchTimer();
 
     useEffect(() => {
-        if (finishGetPlayer && finishGetSettings && finishGetLastbets && finishGetGame) {
+        if (
+            finishGetPlayer &&
+            finishGetSettings &&
+            finishGetLastbets &&
+            finishGetGame &&
+            finishGetTimer
+        ) {
             setShowGame(true);
 
             LoadingHelper.finish();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetLastbets, finishGetGame]);
+    }, [finishGetPlayer, finishGetSettings, finishGetLastbets, finishGetGame, finishGetTimer]);
 
     const { deviceType, orientation } = useAutoResize();
 
