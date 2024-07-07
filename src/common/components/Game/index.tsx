@@ -5,7 +5,7 @@ import GameUI from '../GameUI';
 import Streaming from '../Streaming';
 import Timer from '../Timer';
 import styles from './styles.module.scss';
-import { useAppDispatch } from '../../../store/hooks';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { setTime } from '../../../store/slice/timerSlice';
@@ -13,11 +13,16 @@ import { dummyLoadNewValue } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
+import { useSocket } from '../../../services/socket/hooks';
+import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const dispatch = useAppDispatch();
+
+    const nickname = useAppSelector(selectNickname);
+    const operatorId = useAppSelector(selectOperatorId);
 
     const handleKeyboardTest = useCallback((e: KeyboardEvent) => {
         if (e.key === 'l') {
@@ -35,6 +40,8 @@ function Game() {
     }, []);
 
     useKeyboard(handleKeyboardTest);
+
+    useSocket({ nickname, operatorId });
 
     return (
         <div className={`${styles['game-area']}${deviceClassName}`}>

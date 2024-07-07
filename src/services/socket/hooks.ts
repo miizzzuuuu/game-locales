@@ -34,6 +34,11 @@ export const useSocket = ({
         };
 
         SocketComponent.instance.onConnect(dataLobbyConnect);
+
+        return () => {
+            SocketComponent.instance.emitGameDisconnect(dataLobbyConnect);
+            SocketComponent.instance.close();
+        };
     }, [nickname, operatorId]);
 
     useEffect(() => {

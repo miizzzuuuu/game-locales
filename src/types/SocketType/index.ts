@@ -43,14 +43,6 @@ export type TopWinnerData = {
     }>;
 };
 
-export type ThunderData = {
-    lucky_number: number[];
-    multipliers: number[];
-    prize_data: number;
-    total_multipliers: number[];
-    golden_time: boolean;
-};
-
 export type Thunder =
     | {
           pcode: 'p6b';
