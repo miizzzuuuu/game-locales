@@ -52,7 +52,6 @@ const baseSlice = createSlice({
         },
         endWinAnimation: (state) => {
             state.winStatus = 'idle';
-            state.winAmount = 0;
         },
         clearWinAmount: (state) => {
             state.winAmount = 0;
