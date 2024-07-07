@@ -19,7 +19,7 @@ const TableBet = () => {
 
     useEffect(() => {
         if (!betIsOpen) {
-            tableBetRef.current?.classList.remove(styles.opened);
+            console.log('close');
             tableBetRef.current?.classList.add(styles.closed);
         } else {
             if (tableBetRef.current?.classList.contains(styles.closed)) {
@@ -30,7 +30,10 @@ const TableBet = () => {
     }, [betIsOpen]);
 
     return (
-        <div className={`${styles['table-bet']}${deviceClassName}`} ref={tableBetRef}>
+        <div
+            className={`${styles['table-bet']} ${deviceClassName} ${styles.closed}`}
+            ref={tableBetRef}
+        >
             {TwentyFourDHelper.getBetKeys.map((key) => {
                 const bet = TwentyFourDHelper.bets[key];
 
