@@ -3,7 +3,7 @@ import { DisplayHelper } from '../utils/DisplayHelper';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
 
-const isDev = import.meta.env.DEV;
+const isDev = import.meta.env.DEV && false;
 
 const useFullscreen = () => {
     const device = useAppSelector(selectDevice);
