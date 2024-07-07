@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useRef } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
+
 import { ChipHelper } from '../../utils/ChipHelper';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import Chip from './Chip';
 import ChipActive from './ChipActive';
 import styles from './styles.module.scss';
-import { Sound } from '../../../services/sound';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
 import { selectOrientation } from '../../../store/slice/windowSlice';
+import { Sound } from '../../../services/sound';
 
 interface IProps {
     version?: number;
@@ -39,9 +40,10 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
             const containerRect = slider.current.getBoundingClientRect();
             const circleClickedRect = circleClicked.getBoundingClientRect();
 
-            if (orientation === 'landscape' && version === 1) {
-                console.log('scroll landscape');
-
+            if (
+                (orientation === 'landscape' && version === 1) ||
+                (orientation === 'portrait' && version === 2)
+            ) {
                 const containerCenter = containerRect.top + containerRect.height / 2;
                 const circleCenter = circleClickedRect.top + circleClickedRect.height / 2;
                 const scrollOffset = circleCenter - containerCenter;
@@ -50,9 +52,10 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                     top: slider.current.scrollTop + scrollOffset,
                     behavior: 'smooth',
                 });
-            } else if (orientation === 'portrait' && version === 1) {
-                console.log('scroll portrait');
-
+            } else if (
+                (orientation === 'portrait' && version === 1) ||
+                (orientation === 'landscape' && version === 2)
+            ) {
                 const containerCenter = containerRect.left + containerRect.width / 2;
                 const circleCenter = circleClickedRect.left + circleClickedRect.width / 2;
                 const scrollOffset = circleCenter - containerCenter;
@@ -77,9 +80,15 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
         function followScroll(scrollPos: { left: number; top: number }) {
             if (slider2.current) {
-                if (orientation === 'portrait' && version === 1) {
+                if (
+                    (orientation === 'portrait' && version === 1) ||
+                    (orientation === 'landscape' && version === 2)
+                ) {
                     slider2.current.scrollLeft = scrollPos.left;
-                } else if (orientation === 'landscape' && version === 1) {
+                } else if (
+                    (orientation === 'landscape' && version === 1) ||
+                    (orientation === 'portrait' && version === 2)
+                ) {
                     slider2.current.scrollTop = scrollPos.top;
                 }
             }
@@ -114,6 +123,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                 {chipBase.map((chip, idx) => (
                     <Chip
                         key={idx}
+                        version={version}
                         value={chip}
                         color={ChipHelper.getChipColorByIndex(idx)}
                         isActive={activeChip === chip}
@@ -130,6 +140,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                     {chipBase.map((chip, idx) => (
                         <ChipActive
                             key={idx}
+                            version={version}
                             value={chip}
                             color={ChipHelper.getChipColorByIndex(idx)}
                             isActive={activeChip === chip}

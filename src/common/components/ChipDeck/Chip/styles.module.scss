@@ -1,6 +1,6 @@
 .chip {
-    --width-chip: 0;
-    --height-chip: 0;
+    --width-chip: 2.8rem;
+    --height-chip: 2.8rem;
 
     position: relative;
     flex-shrink: 0;
@@ -62,40 +62,62 @@
 }
 
 .mobile-portrait {
-    .chip {
-        --width-chip: 2.8rem;
-        --height-chip: 2.8rem;
+    &.v1 {
+        .chip {
+            &.selected-chip {
+                animation-name: selected-chip-animation-2;
+                animation-duration: 0.75s;
+            }
+
+            &.unselected-chip {
+                animation-name: unselected-chip-animation-2;
+                animation-duration: 0.75s;
+            }
+        }
     }
 
-    .chip {
-        &.selected-chip {
-            animation-name: selected-chip-animation-2;
-            animation-duration: 0.75s;
-        }
+    &.v2 {
+        .chip {
+            &.selected-chip {
+                animation-name: selected-chip-animation;
+                animation-duration: 0.75s;
+            }
 
-        &.unselected-chip {
-            animation-name: unselected-chip-animation-2;
-            animation-duration: 0.75s;
+            &.unselected-chip {
+                animation-name: unselected-chip-animation;
+                animation-duration: 0.75s;
+            }
         }
     }
 }
 
 .desktop,
 .mobile-landscape {
-    .chip {
-        --width-chip: 2.8rem;
-        --height-chip: 2.8rem;
+    &.v1 {
+        .chip {
+            &.selected-chip {
+                animation-name: selected-chip-animation;
+                animation-duration: 0.75s;
+            }
+
+            &.unselected-chip {
+                animation-name: unselected-chip-animation;
+                animation-duration: 0.75s;
+            }
+        }
     }
 
-    .chip {
-        &.selected-chip {
-            animation-name: selected-chip-animation;
-            animation-duration: 0.75s;
-        }
+    &.v2 {
+        .chip {
+            &.selected-chip {
+                animation-name: selected-chip-animation-2;
+                animation-duration: 0.75s;
+            }
 
-        &.unselected-chip {
-            animation-name: unselected-chip-animation;
-            animation-duration: 0.75s;
+            &.unselected-chip {
+                animation-name: unselected-chip-animation-2;
+                animation-duration: 0.75s;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
-import { LoadNewValue } from '../../types';
+import { LoadNewValueData } from '../../types';
 
-const loadNewValueAction = createAction<LoadNewValue>('socket/loadNewValue');
-const gameResultAction = createAction<number>('socket/gameResult');
+const loadNewValueAction = createAction<LoadNewValueData>('socket/loadNewValue');
+const gameResultAction = createAction<LoadNewValueData>('socket/gameResult');
 
 export { loadNewValueAction, gameResultAction };

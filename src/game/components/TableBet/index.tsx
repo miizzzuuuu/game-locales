@@ -81,6 +81,14 @@ const TableBet = () => {
                     </ButtonBet>
                 );
             })}
+
+            {TwentyFourDHelper.getBetMultiNumberKeys.map((key) => {
+                const bet = TwentyFourDHelper.betMultiNumber[key];
+
+                const className = `slot-${key}`;
+
+                return <ButtonBet key={key} bet={bet} className={className} />;
+            })}
         </div>
     );
 };

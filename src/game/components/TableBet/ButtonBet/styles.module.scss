@@ -1,3 +1,5 @@
+@import './position.scss';
+
 .button-bet {
     position: relative;
     width: 100%;
@@ -9,6 +11,13 @@
     transition: all 1s linear;
 
     border-radius: 0.1rem;
+
+    &.bet-number,
+    &.bet-col-row,
+    &.bet-red,
+    &.bet-yellow {
+        border-radius: 0.1rem;
+    }
 
     &.bet-number {
         border: 0.1rem solid #f3d8a4;
@@ -47,216 +56,64 @@
     }
 }
 
-// position
-.button-bet {
-    &.slot-n-1,
-    &.slot-n-5,
-    &.slot-n-9,
-    &.slot-n-13,
-    &.slot-n-17,
-    &.slot-n-21 {
-        grid-row: 2;
-    }
+.slot-chip {
+    $percentChip: 70;
 
-    &.slot-n-2,
-    &.slot-n-6,
-    &.slot-n-10,
-    &.slot-n-14,
-    &.slot-n-18,
-    &.slot-n-22 {
-        grid-row: 3;
-    }
+    pointer-events: none;
 
-    &.slot-n-3,
-    &.slot-n-7,
-    &.slot-n-11,
-    &.slot-n-15,
-    &.slot-n-19,
-    &.slot-n-23 {
-        grid-row: 4;
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-    &.slot-n-4,
-    &.slot-n-8,
-    &.slot-n-12,
-    &.slot-n-16,
-    &.slot-n-20,
-    &.slot-n-24 {
-        grid-row: 5;
-    }
+    // width: calc(var(--button-bet-width) * $percentChip / 100);
+    // height: calc(var(--button-bet-height) * $percentChip / 100);
+    // font-size: calc(var(--button-bet-width) * $percentChip / 100);
 
-    &.slot-n-1,
-    &.slot-n-2,
-    &.slot-n-3,
-    &.slot-n-4 {
-        grid-column: 6 / span 5;
-    }
+    transform: translate(-50%, -50%);
+}
 
-    &.slot-n-5,
-    &.slot-n-6,
-    &.slot-n-7,
-    &.slot-n-8 {
-        grid-column: 11 / span 5;
-    }
-
-    &.slot-n-9,
-    &.slot-n-10,
-    &.slot-n-11,
-    &.slot-n-12 {
-        grid-column: 16 / span 5;
-    }
-
-    &.slot-n-13,
-    &.slot-n-14,
-    &.slot-n-15,
-    &.slot-n-16 {
-        grid-column: 21 / span 5;
-    }
-
-    &.slot-n-17,
-    &.slot-n-18,
-    &.slot-n-19,
-    &.slot-n-20 {
-        grid-column: 26 / span 5;
-    }
-
-    &.slot-n-21,
-    &.slot-n-22,
-    &.slot-n-23,
-    &.slot-n-24 {
-        grid-column: 31 / span 5;
-    }
-
-    &.slot-c-1,
-    &.slot-c-2,
-    &.slot-c-3,
-    &.slot-c-4,
-    &.slot-c-5,
-    &.slot-c-6 {
-        grid-row: 1;
-    }
-
-    &.slot-c-1 {
-        grid-column: 6 / span 5;
-    }
-
-    &.slot-c-2 {
-        grid-column: 11 / span 5;
-    }
-
-    &.slot-c-3 {
-        grid-column: 16 / span 5;
-    }
-
-    &.slot-c-4 {
-        grid-column: 21 / span 5;
-    }
-
-    &.slot-c-5 {
-        grid-column: 26 / span 5;
-    }
-
-    &.slot-c-6 {
-        grid-column: 31 / span 5;
-    }
-
-    &.slot-r-1,
-    &.slot-r-2,
-    &.slot-r-3,
-    &.slot-r-4 {
-        grid-column: 1 / span 5;
-    }
-
-    &.slot-r-1 {
-        grid-row: 2;
-    }
-
-    &.slot-r-2 {
-        grid-row: 3;
-    }
-
-    &.slot-r-3 {
-        grid-row: 4;
-    }
-
-    &.slot-r-4 {
-        grid-row: 5;
-    }
-
-    &.slot-r-1-2,
-    &.slot-r-3-4 {
-        grid-column: 36 / span 5;
-    }
-
-    &.slot-r-1-2 {
-        grid-row: 2 / span 2;
-    }
-
-    &.slot-r-3-4 {
-        grid-row: 4 / span 2;
-    }
-
-    &.slot-c-1-2,
-    &.slot-c-2-3,
-    &.slot-c-3-4,
-    &.slot-c-4-5,
-    &.slot-c-5-6 {
-        grid-row: 6;
-    }
-
-    &.slot-c-1-2 {
-        grid-column: 1 / span 8;
-    }
-
-    &.slot-c-2-3 {
-        grid-column: 9 / span 8;
-    }
-
-    &.slot-c-3-4 {
-        grid-column: 17 / span 8;
-    }
-
-    &.slot-c-4-5 {
-        grid-column: 25 / span 8;
-    }
-
-    &.slot-c-5-6 {
-        grid-column: 33 / span 8;
-    }
-
-    &.slot-small,
-    &.slot-big {
-        grid-row: 1;
-    }
-
-    &.slot-small {
-        grid-column: 1 / span 5;
-    }
-
-    &.slot-big {
-        grid-column: 36 / span 5;
-    }
-
-    &.slot-odd,
-    &.slot-even,
-    &.slot-red,
-    &.slot-black {
-        grid-row: 7;
-    }
-
-    &.slot-odd {
-        grid-column: 1 / span 10;
-    }
-
-    &.slot-even {
-        grid-column: 11 / span 10;
-    }
-
-    &.slot-red {
-        grid-column: 21 / span 10;
-    }
-
-    &.slot-black {
-        grid-column: 31 / span 10;
+.mobile-portrait {
+    .slot-chip {
+        width: calc(100cqw / 8 * 65 / 100);
+        height: calc(100cqw / 8 * 65 / 100);
+        font-size: calc(100cqw / 8 * 65 / 100);
     }
 }
+
+.desktop,
+.mobile-landscape {
+    .slot-chip {
+        width: calc(100cqh / 7 * 65 / 100);
+        height: calc(100cqh / 7 * 65 / 100);
+        font-size: calc(100cqh / 7 * 65 / 100);
+    }
+}
+
+// position
+@include button-bet-position;
+
+// .button-bet {
+//     @for $row from 1 through 4 {
+//         @for $col from 1 through 5 {
+//             &.slot-h-#{$row}-#{$col} {
+//                 background-color: blue;
+//             }
+//         }
+//     }
+
+//     @for $row from 1 through 3 {
+//         @for $col from 1 through 6 {
+//             &.slot-v-#{$row}-#{$col} {
+//                 background-color: red;
+//             }
+//         }
+//     }
+
+//     @for $row from 1 through 3 {
+//         @for $col from 1 through 5 {
+//             &.slot-v-h-#{$row}-#{$col} {
+//                 background-color: green;
+//             }
+//         }
+//     }
+// }

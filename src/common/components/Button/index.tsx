@@ -1,5 +1,6 @@
 import { HTMLProps, MouseEventHandler, forwardRef } from 'react';
 import styles from './styles.module.scss';
+import { Sound } from '../../../services/sound';
 
 type ButtonProps = Pick<
     HTMLProps<HTMLButtonElement>,
@@ -15,6 +16,8 @@ export const Button = forwardRef<HTMLButtonElement, IProps>(
         const clickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
             if (custonSound) {
                 custonSound();
+            } else {
+                Sound.playClick();
             }
 
             onClick?.(e);

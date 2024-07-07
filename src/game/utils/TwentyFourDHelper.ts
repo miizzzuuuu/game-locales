@@ -74,6 +74,68 @@ export class TwentyFourDHelper {
         'r-3-4': { button: '3rd Row,4th Row', group: 'n' },
     };
 
+    static betMultiNumber: Record<string, Bet> = {
+        'h-1-1': { button: '01,05', group: 'n2' },
+        'h-1-2': { button: '05,09', group: 'n2' },
+        'h-1-3': { button: '09,13', group: 'n2' },
+        'h-1-4': { button: '13,17', group: 'n2' },
+        'h-1-5': { button: '17,21', group: 'n2' },
+        'h-2-1': { button: '02,06', group: 'n2' },
+        'h-2-2': { button: '06,10', group: 'n2' },
+        'h-2-3': { button: '10,14', group: 'n2' },
+        'h-2-4': { button: '14,18', group: 'n2' },
+        'h-2-5': { button: '18,22', group: 'n2' },
+        'h-3-1': { button: '03,07', group: 'n2' },
+        'h-3-2': { button: '07,11', group: 'n2' },
+        'h-3-3': { button: '11,15', group: 'n2' },
+        'h-3-4': { button: '15,19', group: 'n2' },
+        'h-3-5': { button: '19,23', group: 'n2' },
+        'h-4-1': { button: '04,08', group: 'n2' },
+        'h-4-2': { button: '08,12', group: 'n2' },
+        'h-4-3': { button: '12,16', group: 'n2' },
+        'h-4-4': { button: '16,20', group: 'n2' },
+        'h-4-5': { button: '20,24', group: 'n2' },
+
+        'v-1-1': { button: '01,02', group: 'n2' },
+        'v-1-2': { button: '05,06', group: 'n2' },
+        'v-1-3': { button: '09,10', group: 'n2' },
+        'v-1-4': { button: '13,14', group: 'n2' },
+        'v-1-5': { button: '17,18', group: 'n2' },
+        'v-1-6': { button: '21,22', group: 'n2' },
+
+        'v-2-1': { button: '02,03', group: 'n2' },
+        'v-2-2': { button: '06,07', group: 'n2' },
+        'v-2-3': { button: '10,11', group: 'n2' },
+        'v-2-4': { button: '14,15', group: 'n2' },
+        'v-2-5': { button: '18,19', group: 'n2' },
+        'v-2-6': { button: '22,23', group: 'n2' },
+
+        'v-3-1': { button: '03,04', group: 'n2' },
+        'v-3-2': { button: '07,08', group: 'n2' },
+        'v-3-3': { button: '11,12', group: 'n2' },
+        'v-3-4': { button: '15,16', group: 'n2' },
+        'v-3-5': { button: '19,20', group: 'n2' },
+        'v-3-6': { button: '23,24', group: 'n2' },
+
+        'v-h-1-1': { button: '01,02,05,06', group: 'n4' },
+        'v-h-1-2': { button: '05,06,09,10', group: 'n4' },
+        'v-h-1-3': { button: '09,10,13,14', group: 'n4' },
+        'v-h-1-4': { button: '13,14,17,18', group: 'n4' },
+        'v-h-1-5': { button: '17,18,21,22', group: 'n4' },
+
+        'v-h-2-1': { button: '02,03,06,07', group: 'n4' },
+        'v-h-2-2': { button: '06,07,10,11', group: 'n4' },
+        'v-h-2-3': { button: '10,11,14,15', group: 'n4' },
+        'v-h-2-4': { button: '14,15,18,19', group: 'n4' },
+        'v-h-2-5': { button: '18,19,22,23', group: 'n4' },
+
+        'v-h-3-1': { button: '03,04,07,08', group: 'n4' },
+        'v-h-3-2': { button: '07,08,11,12', group: 'n4' },
+        'v-h-3-3': { button: '11,12,15,16', group: 'n4' },
+        'v-h-3-4': { button: '15,16,19,20', group: 'n4' },
+        'v-h-3-5': { button: '19,20,23,24', group: 'n4' },
+    };
+
     static bets50: Record<string, Bet> = {
         small: { button: 'Small', group: 'n50' },
         big: { button: 'Big', group: 'n50' },
@@ -86,4 +148,5 @@ export class TwentyFourDHelper {
     static getBetKeys = Object.keys(this.bets);
     static getBetColRowKeys = Object.keys(this.betsColRow);
     static getBet50Keys = Object.keys(this.bets50);
+    static getBetMultiNumberKeys = Object.keys(this.betMultiNumber);
 }

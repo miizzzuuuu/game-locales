@@ -5,13 +5,14 @@ import styles from './styles.module.scss';
 import { DisplayHelper } from '../../../utils/DisplayHelper';
 
 interface IProps {
+    version?: number;
     value: number;
     color: string;
     isActive?: boolean;
     onClick?: () => void;
 }
 
-const Chip = ({ value, onClick, color, isActive }: IProps) => {
+const Chip = ({ version = 1, value, onClick, color, isActive }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -38,7 +39,7 @@ const Chip = ({ value, onClick, color, isActive }: IProps) => {
     }, [isActive]);
 
     return (
-        <div className={`chip-item${deviceClassName}`}>
+        <div className={`chip-item${deviceClassName} ${styles[`v${version}`]}`}>
             <div
                 className={`${styles.chip}${isActive ? ` ${styles.active}` : ''}`}
                 data-value={value}

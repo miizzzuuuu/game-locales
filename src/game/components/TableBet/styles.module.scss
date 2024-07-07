@@ -1,17 +1,23 @@
 .table-bet {
     width: 100%;
-    // height: 100%;
 
     display: grid;
+    justify-items: center;
+    align-items: center;
+
     grid-template-columns: repeat(40, minmax(0, 1fr));
-    grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
+    // grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
 
     gap: 0.1rem;
+
+    container: table-bet / size;
 }
 
 .mobile-portrait {
     &.table-bet {
         height: 100%;
+
+        grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
     }
 }
 
@@ -32,6 +38,8 @@
         --rotate-x-close: 46deg;
 
         height: calc(100% - 2rem);
+
+        grid-template-rows: repeat(7, 1fr);
 
         transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
             perspective(var(--perspective)) rotateX(var(--rotate-x));

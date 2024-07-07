@@ -73,7 +73,7 @@ export const gameResultListener = (startListening: AppStartListening) => {
 
             const dispatch = listenerApi.dispatch;
 
-            const resultNumber = Number(action.payload);
+            const resultNumber = Number(action.payload.win);
             dispatch(setResult(resultNumber));
         },
     });
