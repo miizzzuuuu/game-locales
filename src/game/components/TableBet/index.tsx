@@ -20,6 +20,7 @@ const TableBet = () => {
     useEffect(() => {
         if (!betIsOpen) {
             console.log('close');
+            tableBetRef.current?.classList.remove(styles.opened);
             tableBetRef.current?.classList.add(styles.closed);
         } else {
             if (tableBetRef.current?.classList.contains(styles.closed)) {

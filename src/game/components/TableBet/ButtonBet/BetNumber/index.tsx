@@ -7,7 +7,7 @@ interface IProps {
 const BetNumber = ({ button }: IProps) => {
     return (
         <div className={styles.container}>
-            <span className={styles.button}>{Number(button)}</span>
+            <span className={styles['button-name']}>{Number(button)}</span>
 
             <span className={styles.payout}>24:1</span>
         </div>

@@ -25,7 +25,7 @@ const WebStream = () => {
 
     const volume = !enableSoundStreaming ? 0 : volumeStreamingSound / 100;
 
-    const url = new URL(streamingQuality === 'high' ? video_1080 : video_720);
+    const url = new URL(streamingQuality === 'high' && video_1080 ? video_1080 : video_720);
     url.searchParams.append('volume', String(volume));
 
     const urlStreaming = !isFocus ? 'about:blank' : url.href;

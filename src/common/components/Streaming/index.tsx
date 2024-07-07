@@ -11,7 +11,7 @@ const Streaming = () => {
     const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
-    const [scaleWidth] = useState(1.2);
+    const [scaleWidth] = useState(1);
     useGetStreamingSize(scaleWidth);
 
     return (
