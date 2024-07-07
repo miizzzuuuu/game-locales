@@ -161,8 +161,10 @@ export class TwentyFourDHelper {
         wins.push(this.smallOrBig(result));
 
         // cols
+        wins.push(...this.getColWins(result));
 
         // rows
+        wins.push(...this.getRowWins(result));
 
         return wins;
     }
@@ -179,21 +181,59 @@ export class TwentyFourDHelper {
         return result <= 12 ? 'Small' : 'Big';
     }
 
-    static getRowsWin(result: number) {
-        const winRows = [];
+    static getRowWins(result: number) {
+        const ods = result % 4;
+
+        if (ods === 1) {
+            return ['1st Row', '1st Row,2nd Row'];
+        }
+        if (ods === 2) {
+            return ['2nd Row', '1st Row,2nd Row'];
+        }
+        if (ods === 2) {
+            return ['3rd Row', '3rd Row,4th Row'];
+        }
+
+        return ['4th Row', '3rd Row,4th Row'];
+    }
+
+    static getColWins(result: number) {
+        const winCols = [];
 
         if (result <= 4) {
-            winRows.push('1st Column');
+            winCols.push('1st Column');
         } else if (result > 4 && result <= 8) {
-            winRows.push('2nd Column');
+            winCols.push('2nd Column');
         } else if (result > 8 && result <= 12) {
-            winRows.push('2nd Column');
+            winCols.push('3rd Column');
         } else if (result > 12 && result <= 16) {
-            winRows.push('2nd Column');
+            winCols.push('4th Column');
         } else if (result > 16 && result <= 20) {
-            winRows.push('2nd Column');
+            winCols.push('5th Column');
         } else if (result > 20 && result <= 24) {
-            winRows.push('2nd Column');
+            winCols.push('6th Column');
         }
+
+        if (result <= 8) {
+            winCols.push('1st Column,2nd Column');
+        }
+
+        if (result > 4 && result <= 12) {
+            winCols.push('2nd Column,3rd Column');
+        }
+
+        if (result > 8 && result <= 16) {
+            winCols.push('3rd Column,4th Column');
+        }
+
+        if (result > 12 && result <= 20) {
+            winCols.push('4th Column,5th Column');
+        }
+
+        if (result > 16 && result <= 24) {
+            winCols.push('5th Column,6th Column');
+        }
+
+        return winCols;
     }
 }
