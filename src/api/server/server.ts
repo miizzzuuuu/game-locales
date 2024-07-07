@@ -143,6 +143,12 @@ export function makeServer({ environment = 'test' } = {}) {
                     },
                 };
             });
+
+            this.get('/auth/maingame/change', () => {
+                return {
+                    message: 'success',
+                };
+            });
         },
     });
 
