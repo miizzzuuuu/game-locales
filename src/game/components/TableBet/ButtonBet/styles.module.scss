@@ -10,7 +10,11 @@
     z-index: 1;
     transition: all 1s linear;
 
-    border-radius: 0.1rem;
+    &.win {
+        border: 0.2rem solid #83ff48 !important;
+        animation: win-glow 1s infinite ease-in-out;
+        z-index: 2;
+    }
 
     &.bet-number,
     &.bet-col-row,
@@ -65,10 +69,6 @@
     top: 50%;
     left: 50%;
 
-    // width: calc(var(--button-bet-width) * $percentChip / 100);
-    // height: calc(var(--button-bet-height) * $percentChip / 100);
-    // font-size: calc(var(--button-bet-width) * $percentChip / 100);
-
     transform: translate(-50%, -50%);
 }
 
@@ -91,6 +91,18 @@
 
 // position
 @include button-bet-position;
+
+@keyframes win-glow {
+    0% {
+        box-shadow: 0 0 0.1rem #83ff48;
+    }
+    50% {
+        box-shadow: 0 0 0.8rem #83ff48;
+    }
+    100% {
+        box-shadow: 0 0 0.1rem #83ff48;
+    }
+}
 
 // .button-bet {
 //     @for $row from 1 through 4 {

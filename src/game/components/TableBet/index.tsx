@@ -18,7 +18,7 @@ const TableBet = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const betIsOpen = useAppSelector(selectBetIsOpen);
-    const winBet = useAppSelector(selectWinBets);
+    const winBets = useAppSelector(selectWinBets);
 
     const { placeBetHanlder } = usePlaceBet();
 
@@ -44,7 +44,7 @@ const TableBet = () => {
                 const bet = TwentyFourDHelper.bets[key];
 
                 const className = `slot-${key} bet-number`;
-                const isWin = winBet?.includes(bet.button);
+                const isWin = winBets?.includes(bet.button);
 
                 return (
                     <ButtonBet
@@ -63,7 +63,7 @@ const TableBet = () => {
                 const bet = TwentyFourDHelper.betsColRow[key];
 
                 const className = `slot-${key} bet-col-row`;
-                const isWin = winBet?.includes(bet.button);
+                const isWin = winBets?.includes(bet.button);
 
                 return (
                     <ButtonBet
@@ -87,7 +87,7 @@ const TableBet = () => {
                 } else {
                     className += ' bet-yellow';
                 }
-                const isWin = winBet?.includes(bet.button);
+                const isWin = winBets?.includes(bet.button);
 
                 return (
                     <ButtonBet
