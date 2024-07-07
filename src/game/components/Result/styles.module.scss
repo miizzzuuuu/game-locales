@@ -8,7 +8,17 @@
 
     &.disapear {
         animation: result-fadeout 0.4s linear forwards;
+
+        .image {
+            animation: hide-ball 0.3s linear forwards;
+        }
     }
+}
+
+.image {
+    width: 7rem;
+
+    animation: show-ball 0.3s linear forwards;
 }
 
 @keyframes result-fadein {
@@ -28,5 +38,33 @@
 
     to {
         opacity: 0;
+    }
+}
+
+@keyframes show-ball {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hide-ball {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
     }
 }

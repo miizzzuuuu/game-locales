@@ -1,5 +1,6 @@
 import { Pcode24D, Transaction } from '../../../types';
-import SVGResult24D from './SVG/SVGResult24D';
+import SVGResult24D from '../SVG/SVG24DResult';
+
 import styles from './styles.module.scss';
 
 interface IProps {

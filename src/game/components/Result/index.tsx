@@ -1,26 +1,41 @@
 import { AnimationEventHandler, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
+import SVG24DResult from '../SVG/SVG24DResult';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import {
+    doneResult,
+    resetResult,
+    selectResultNumber,
+    selectResultStatus,
+} from '../../../store/slice/resultSlice';
 
 const Result = () => {
     const resultRef = useRef<HTMLDivElement>(null);
     const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
 
+    const dispatch = useAppDispatch();
+
+    const resultStatus = useAppSelector(selectResultStatus);
+    const resultNumber = useAppSelector(selectResultNumber);
+
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (e.animationName.indexOf('result-fadein') >= 0) {
-            console.log('done');
+            dispatch(doneResult());
         }
 
         if (e.animationName.indexOf('result-fadeout') >= 0) {
-            console.log('reset');
+            dispatch(resetResult());
         }
     };
 
     useEffect(() => {
-        currentTimeOut.current = setTimeout(() => {
-            if (resultRef.current) {
-                resultRef.current.classList.add(styles.disapear);
-            }
-        }, 4000);
+        if (resultStatus === 'done') {
+            currentTimeOut.current = setTimeout(() => {
+                if (resultRef.current) {
+                    resultRef.current.classList.add(styles.disapear);
+                }
+            }, 4000);
+        }
 
         return () => {
             if (currentTimeOut.current) {
@@ -28,11 +43,15 @@ const Result = () => {
                 currentTimeOut.current = undefined;
             }
         };
-    }, []);
+    }, [resultStatus]);
+
+    if (resultStatus === 'idle' || resultNumber === null) {
+        return null;
+    }
 
     return (
         <div className={styles.result} onAnimationEnd={handleAnimationEnd} ref={resultRef}>
-            Custom Result
+            <SVG24DResult value={resultNumber} className={styles['image']} />
         </div>
     );
 };
