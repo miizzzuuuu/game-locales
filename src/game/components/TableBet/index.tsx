@@ -10,6 +10,7 @@ import BetNumber from './ButtonBet/BetNumber';
 import BetText from './ButtonBet/BetText';
 import styles from './styles.module.scss';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
+import { selectWinBets } from '../../../store/slice/resultSlice';
 
 const TableBet = () => {
     const tableBetRef = useRef<HTMLDivElement>(null);
@@ -17,6 +18,7 @@ const TableBet = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const betIsOpen = useAppSelector(selectBetIsOpen);
+    const winBet = useAppSelector(selectWinBets);
 
     const { placeBetHanlder } = usePlaceBet();
 
@@ -42,12 +44,14 @@ const TableBet = () => {
                 const bet = TwentyFourDHelper.bets[key];
 
                 const className = `slot-${key} bet-number`;
+                const isWin = winBet?.includes(bet.button);
 
                 return (
                     <ButtonBet
                         key={key}
                         bet={bet}
                         className={className}
+                        isWin={isWin}
                         onClick={() => placeBetHanlder(bet)}
                     >
                         <BetNumber button={bet.button} />
@@ -59,12 +63,14 @@ const TableBet = () => {
                 const bet = TwentyFourDHelper.betsColRow[key];
 
                 const className = `slot-${key} bet-col-row`;
+                const isWin = winBet?.includes(bet.button);
 
                 return (
                     <ButtonBet
                         key={key}
                         bet={bet}
                         className={className}
+                        isWin={isWin}
                         onClick={() => placeBetHanlder(bet)}
                     >
                         <BetColRow label={<LabelTranslate value={bet.button} keyLang="p6.bet" />} />
@@ -81,12 +87,14 @@ const TableBet = () => {
                 } else {
                     className += ' bet-yellow';
                 }
+                const isWin = winBet?.includes(bet.button);
 
                 return (
                     <ButtonBet
                         key={key}
                         bet={bet}
                         className={className}
+                        isWin={isWin}
                         onClick={() => placeBetHanlder(bet)}
                     >
                         <BetText

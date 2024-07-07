@@ -1,10 +1,11 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
+import { TwentyFourDHelper } from '../../game/utils/TwentyFourDHelper';
 
 export interface ResultState {
     periode: number | null;
     resultNumber: number | null;
-    winBet: string[];
+    winBets: string[];
     status: 'idle' | 'spin' | 'done';
 
     winAmount: number;
@@ -14,7 +15,7 @@ export interface ResultState {
 const initialState: ResultState = {
     periode: null,
     resultNumber: null,
-    winBet: [],
+    winBets: [],
     status: 'idle',
     winAmount: 0,
     winStatus: 'idle',
@@ -26,10 +27,10 @@ const baseSlice = createSlice({
     reducers: {
         setResult: (state, action: PayloadAction<number>) => {
             const resultNumber = action.payload;
-            const winBet: string[] = [];
+            const winBet = TwentyFourDHelper.getWinResult(resultNumber);
 
             state.resultNumber = resultNumber;
-            state.winBet = winBet;
+            state.winBets = winBet;
 
             state.status = 'spin';
         },
@@ -38,7 +39,7 @@ const baseSlice = createSlice({
         },
         resetResult: (state) => {
             state.resultNumber = null;
-            state.winBet = [];
+            state.winBets = [];
             state.status = 'idle';
 
             if (state.winAmount <= 0) {
@@ -64,7 +65,7 @@ export const { setResult, doneResult, resetResult, setWinAmount, endWinAnimation
 
 export const selectResultNumber = (state: RootState) => state.result.resultNumber;
 export const selectResultStatus = (state: RootState) => state.result.status;
-export const selectWinBet = (state: RootState) => state.result.winBet;
+export const selectWinBets = (state: RootState) => state.result.winBets;
 
 export const selectWinAmount = (state: RootState) => state.result.winAmount;
 export const selectWinStatus = (state: RootState) => state.result.winStatus;

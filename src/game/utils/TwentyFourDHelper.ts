@@ -149,4 +149,51 @@ export class TwentyFourDHelper {
     static getBetColRowKeys = Object.keys(this.betsColRow);
     static getBet50Keys = Object.keys(this.bets50);
     static getBetMultiNumberKeys = Object.keys(this.betMultiNumber);
+
+    static getWinResult(result: number): string[] {
+        const wins: string[] = [];
+
+        // angka
+        wins.push(String(result).padStart(2, '0'));
+
+        wins.push(this.redOrBlack(result));
+        wins.push(this.evenOrOdd(result));
+        wins.push(this.smallOrBig(result));
+
+        // cols
+
+        // rows
+
+        return wins;
+    }
+
+    static redOrBlack(result: number) {
+        return this.RED.includes(result) ? 'Red' : 'Black';
+    }
+
+    static evenOrOdd(result: number) {
+        return result % 2 === 0 ? 'Even' : 'Odd';
+    }
+
+    static smallOrBig(result: number) {
+        return result <= 12 ? 'Small' : 'Big';
+    }
+
+    static getRowsWin(result: number) {
+        const winRows = [];
+
+        if (result <= 4) {
+            winRows.push('1st Column');
+        } else if (result > 4 && result <= 8) {
+            winRows.push('2nd Column');
+        } else if (result > 8 && result <= 12) {
+            winRows.push('2nd Column');
+        } else if (result > 12 && result <= 16) {
+            winRows.push('2nd Column');
+        } else if (result > 16 && result <= 20) {
+            winRows.push('2nd Column');
+        } else if (result > 20 && result <= 24) {
+            winRows.push('2nd Column');
+        }
+    }
 }
