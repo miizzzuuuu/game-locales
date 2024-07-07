@@ -49,6 +49,8 @@ export const usePlaceBet = () => {
     };
 
     const placeBetHanlder = (bet: Bet) => {
+        console.log('place bet');
+
         if (activeChip === 0 || !betIsOpen) return;
 
         const { group, button } = bet;

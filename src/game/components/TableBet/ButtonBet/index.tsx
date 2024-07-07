@@ -9,9 +9,12 @@ interface IProps {
     className?: string;
     children?: ReactNode;
     bet: Bet;
+
+    isWin?: boolean;
+    onClick?: () => void;
 }
 
-const ButtonBet = ({ children, className, bet }: IProps) => {
+const ButtonBet = ({ children, className, bet, onClick }: IProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip, color } = useGetChipBet(bet);
 
@@ -23,6 +26,7 @@ const ButtonBet = ({ children, className, bet }: IProps) => {
     return (
         <div
             className={`${styles['button-bet']}${deviceClassName}${className ? ` ${className}` : ''}`}
+            onClick={onClick}
         >
             {children && children}
 

@@ -77,7 +77,7 @@
             grid-column: 31 / span 10;
         }
 
-        $size-multi-bet: 0.5rem;
+        $size-multi-bet: 0.55rem;
 
         @for $row from 1 through 4 {
             @for $col from 1 through 5 {

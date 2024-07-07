@@ -9,6 +9,7 @@ import BetColRow from './ButtonBet/BetColRow';
 import BetNumber from './ButtonBet/BetNumber';
 import BetText from './ButtonBet/BetText';
 import styles from './styles.module.scss';
+import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 
 const TableBet = () => {
     const tableBetRef = useRef<HTMLDivElement>(null);
@@ -16,6 +17,8 @@ const TableBet = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const betIsOpen = useAppSelector(selectBetIsOpen);
+
+    const { placeBetHanlder } = usePlaceBet();
 
     useEffect(() => {
         if (!betIsOpen) {
@@ -41,7 +44,12 @@ const TableBet = () => {
                 const className = `slot-${key} bet-number`;
 
                 return (
-                    <ButtonBet key={key} bet={bet} className={className}>
+                    <ButtonBet
+                        key={key}
+                        bet={bet}
+                        className={className}
+                        onClick={() => placeBetHanlder(bet)}
+                    >
                         <BetNumber button={bet.button} />
                     </ButtonBet>
                 );
@@ -53,7 +61,12 @@ const TableBet = () => {
                 const className = `slot-${key} bet-col-row`;
 
                 return (
-                    <ButtonBet key={key} bet={bet} className={className}>
+                    <ButtonBet
+                        key={key}
+                        bet={bet}
+                        className={className}
+                        onClick={() => placeBetHanlder(bet)}
+                    >
                         <BetColRow
                             label={<LabelTranslate value={bet.button} keyLang="g24d.bet" />}
                         />
@@ -72,7 +85,12 @@ const TableBet = () => {
                 }
 
                 return (
-                    <ButtonBet key={key} bet={bet} className={className}>
+                    <ButtonBet
+                        key={key}
+                        bet={bet}
+                        className={className}
+                        onClick={() => placeBetHanlder(bet)}
+                    >
                         <BetText
                             label={
                                 <LabelTranslate value={bet.button.toLowerCase()} keyLang="g24d" />
@@ -87,7 +105,14 @@ const TableBet = () => {
 
                 const className = `slot-${key}`;
 
-                return <ButtonBet key={key} bet={bet} className={className} />;
+                return (
+                    <ButtonBet
+                        key={key}
+                        bet={bet}
+                        className={className}
+                        onClick={() => placeBetHanlder(bet)}
+                    />
+                );
             })}
         </div>
     );
