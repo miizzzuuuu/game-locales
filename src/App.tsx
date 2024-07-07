@@ -15,6 +15,7 @@ import { useFetchTimer } from './common/hooks/useFetchTimer';
 import { useLanguage } from './common/hooks/useLanguage';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
+import useFullscreen from './common/hooks/useFullscreen';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -54,6 +55,7 @@ function App() {
 
     useFocus();
     useSettingSound();
+    useFullscreen();
 
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
