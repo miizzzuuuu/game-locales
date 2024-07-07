@@ -157,7 +157,7 @@
     "p7d": {
         "pcode": "p7d",
         "time": "BET CLOSED",
-        "timer": 30
+        "timer": 20
     },
     "m39": {
         "pcode": "m39",
@@ -212,7 +212,7 @@
     "p6b": {
         "pcode": "p6b",
         "time": "BET CLOSED",
-        "timer": 27
+        "timer": 25
     },
     "m43": {
         "pcode": "m43",

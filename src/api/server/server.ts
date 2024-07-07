@@ -7,11 +7,7 @@ import settingsData from './response/player/settings.json';
 import lastbetsAllData from './response/player/lastbets-all.json';
 import lastbetsGameData from './response/player/lastbets-game.json';
 
-import gamesData from './response/games/games.json';
 import payoutData from './response/games/payout.json';
-
-import timersData from './response/timers/timers.json';
-import timerData from './response/timers/timer.json';
 
 import sendBetData from './response/send-bet/success.json';
 
@@ -21,6 +17,7 @@ import transactionsP7EData from './response/transactions/p7e.json';
 import transactionsP6BData from './response/transactions/p6b.json';
 
 import { games } from './db/games';
+import { timers } from './db/timer';
 
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
@@ -62,8 +59,10 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // games
-            this.get(ENDPOINTS.games, async () => {
-                return gamesData;
+            this.get(ENDPOINTS.games, async (schema) => {
+                const games = schema.db.games;
+
+                return games;
             });
 
             this.get(ENDPOINTS.games + '/:pcode', async (schema, request) => {
@@ -80,12 +79,18 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // timers
-            this.get(ENDPOINTS.timers, async () => {
-                return timersData;
+            this.get(ENDPOINTS.timers, async (schema) => {
+                const timers = schema.db.timers;
+
+                return timers;
             });
 
-            this.get(ENDPOINTS.timers + '/:pcode', async () => {
-                return timerData;
+            this.get(ENDPOINTS.timers + '/:pcode', async (schema, request) => {
+                let pcode = request.params.pcode;
+
+                const timer = schema.db.timers.findBy({ pcode });
+
+                return timer;
             });
 
             // send bet
@@ -143,6 +148,7 @@ export function makeServer({ environment = 'test' } = {}) {
 
     server.db.loadData({
         games,
+        timers,
     });
 
     return server;
