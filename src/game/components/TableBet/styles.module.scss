@@ -15,9 +15,29 @@
 
 .mobile-portrait {
     &.table-bet {
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 1;
+        --opacity: 1;
+
+        --scale-close: 0.85;
+        --opacity-close: 0.75;
+
         height: 100%;
 
         grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
+        opacity: var(--opacity);
+        transform-origin: bottom;
+
+        &.opened {
+            animation: table-bet-opened-animation-portrait 0.75s forwards;
+        }
+
+        &.closed {
+            animation: table-bet-closed-animation-portrait 0.75s forwards;
+        }
     }
 }
 
@@ -54,6 +74,32 @@
         &.opened {
             animation: table-bet-opened-animation-landscape 1s forwards;
         }
+    }
+}
+
+@keyframes table-bet-closed-animation-portrait {
+    from {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
+        opacity: var(--opacity);
+    }
+
+    to {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y))
+            scale(var(--scale-close));
+        opacity: var(--opacity-close);
+    }
+}
+
+@keyframes table-bet-opened-animation-portrait {
+    from {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y))
+            scale(var(--scale-close));
+        opacity: var(--opacity-close);
+    }
+
+    to {
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
+        opacity: var(--opacity);
     }
 }
 
