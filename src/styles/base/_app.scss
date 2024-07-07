@@ -4,6 +4,7 @@
     left: 0;
     width: 100vw;
     height: calc(var(--vh, 1vh) * 100);
+    // height: 100%;
 
     background-color: var(--base);
 
@@ -21,4 +22,10 @@
 
 .ios {
     height: 110vh;
+}
+
+@supports (height: 100dvh) {
+    .app {
+        height: 100dvh;
+    }
 }

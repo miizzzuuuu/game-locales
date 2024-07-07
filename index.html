@@ -41,6 +41,18 @@
         <div id="root"></div>
 
         <script src="/loading/scripts/loading.js"></script>
+        <script>
+            function isIOS() {
+                const ua = navigator.userAgent;
+                // return !!ua.match(/iPad/i) || !!ua.match(/iPhone/i) || !!ua.match(/iPod/i)
+                return /\b(iPad|iPhone|iPod)\b/.test(ua);
+            }
+
+            if (isIOS()) {
+                console.log('is ios');
+                document.body.classList.add('ios');
+            }
+        </script>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>
