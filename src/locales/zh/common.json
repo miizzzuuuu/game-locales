@@ -41,5 +41,10 @@
     "you-win": "你赢了",
     "bet-confirmed": "投注已确认",
     "bet-error": "投注错误",
-    "insuffix-balance": "余额不足"
+    "bet-error-n50": "已经下注 '{{button}}'",
+    "bet-error-max": "下注 '{{button}}' 最大 {{value}}",
+    "bet-error-min": "下注 '{{button}}' 最小 {{value}}",
+    "insuffix-balance": "余额不足",
+    "autobet-error-insufficient-balance": "自动下注失败，余额不足",
+    "doublebet-error-max-bet": "双倍下注错误，最大下注"
 }

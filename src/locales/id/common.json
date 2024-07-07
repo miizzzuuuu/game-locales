@@ -41,5 +41,10 @@
     "you-win": "kamu menang",
     "bet-confirmed": "taruhan dikonfirmasi",
     "bet-error": "kesalahan taruhan",
-    "insuffix-balance": "saldo tidak cukup"
+    "bet-error-n50": "Sudah pasang taruhan '{{button}}'",
+    "bet-error-max": "Taruhan '{{button}}' maksimal {{value}}",
+    "bet-error-min": "Taruhan '{{button}}' minimal {{value}}",
+    "insuffix-balance": "saldo tidak cukup",
+    "autobet-error-insufficient-balance": "autobet gagal, saldo tidak mencukupi",
+    "doublebet-error-max-bet": "kesalahan gandakan taruhan, taruhan maksimum"
 }

@@ -11,6 +11,7 @@ import SVGIconPause from './SVG/SVGIconPause';
 import SVGIconRebet from './SVG/SVGIconRebet';
 import { selectBalance } from '../../../store/slice/playerSlice';
 import { useAppTranslate } from '../../../services/i18next/hooks';
+import { setMessage } from '../../../store/slice/gameStateSlice';
 interface IProps {
     styles?: CSSProperties;
     show?: boolean;
@@ -54,12 +55,12 @@ const ButtonRebet = ({ show, styles }: IProps) => {
             const message = t('insuffix-balance');
 
             console.log('bet error', message);
-            // dispatch(
-            //     setMessage({
-            //         value: message,
-            //         type: 'danger',
-            //     }),
-            // );
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
 
             return;
         }

@@ -9,6 +9,8 @@ import { selectBalance } from '../slice/playerSlice';
 import { setResult } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
+import i18n from '../../services/i18next/index';
+
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: loadNewValueAction,
@@ -45,7 +47,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
                     if (totalLastBet > balance) {
                         dispatch(
                             setMessage({
-                                value: 'autoplay failed, insufficient_balance',
+                                value: i18n.t('common.autobet-error-insufficient-balance'),
                                 type: 'danger',
                             }),
                         );

@@ -67,9 +67,7 @@ const TableBet = () => {
                         className={className}
                         onClick={() => placeBetHanlder(bet)}
                     >
-                        <BetColRow
-                            label={<LabelTranslate value={bet.button} keyLang="g24d.bet" />}
-                        />
+                        <BetColRow label={<LabelTranslate value={bet.button} keyLang="p6.bet" />} />
                     </ButtonBet>
                 );
             })}
@@ -92,9 +90,7 @@ const TableBet = () => {
                         onClick={() => placeBetHanlder(bet)}
                     >
                         <BetText
-                            label={
-                                <LabelTranslate value={bet.button.toLowerCase()} keyLang="g24d" />
-                            }
+                            label={<LabelTranslate value={bet.button.toLowerCase()} keyLang="p6" />}
                         />
                     </ButtonBet>
                 );

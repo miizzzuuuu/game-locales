@@ -5,8 +5,12 @@ export const useAppTranslate = (prefix?: string) => {
     const { t: translate } = useTranslation();
 
     const t = (key: string, option?: TOptions): string => {
-        if (!prefix) {
-            return translate(`common.${key}`);
+        if (prefix === undefined) {
+            return translate(`common.${key}`, option);
+        }
+
+        if (prefix === '') {
+            return translate(`${key}`, option);
         }
 
         return translate(`${prefix}.${key}`, option);

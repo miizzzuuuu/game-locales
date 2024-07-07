@@ -8,12 +8,12 @@ import thCommon from '../../locales/th/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
-import en24D from '../../locales/en/p6.json';
-import id24D from '../../locales/id/p6.json';
-import ko24D from '../../locales/ko/p6.json';
-import th24D from '../../locales/th/p6.json';
-import vn24D from '../../locales/vn/p6.json';
-import zh24D from '../../locales/zh/p6.json';
+import enP6 from '../../locales/en/p6.json';
+import idP6 from '../../locales/id/p6.json';
+import koP6 from '../../locales/ko/p6.json';
+import thP6 from '../../locales/th/p6.json';
+import vnP6 from '../../locales/vn/p6.json';
+import zhP6 from '../../locales/zh/p6.json';
 
 import enHTP from '../../locales/en/htp.json';
 import idHTP from '../../locales/id/htp.json';
@@ -24,22 +24,22 @@ import zhHTP from '../../locales/zh/htp.json';
 
 const resources: Resource = {
     en: {
-        translation: { common: enCommon, g24d: en24D, htp: enHTP },
+        translation: { common: enCommon, p6: enP6, htp: enHTP },
     },
     id: {
-        translation: { common: idCommon, g24d: id24D, htp: idHTP },
+        translation: { common: idCommon, p6: idP6, htp: idHTP },
     },
     ko: {
-        translation: { common: koCommon, g24d: ko24D, htp: koHTP },
+        translation: { common: koCommon, p6: koP6, htp: koHTP },
     },
     th: {
-        translation: { common: thCommon, g24d: th24D, htp: thHTP },
+        translation: { common: thCommon, p6: thP6, htp: thHTP },
     },
     vn: {
-        translation: { common: vnCommon, g24d: vn24D, htp: vnHTP },
+        translation: { common: vnCommon, p6: vnP6, htp: vnHTP },
     },
     zh: {
-        translation: { common: zhCommon, g24d: zh24D, htp: zhHTP },
+        translation: { common: zhCommon, p6: zhP6, htp: zhHTP },
     },
 };
 

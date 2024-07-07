@@ -40,5 +40,10 @@
     "you-win": "you win",
     "bet-confirmed": "bet confirmed",
     "bet-error": "bet error",
-    "insuffix-balance": "insuffix balance"
+    "bet-error-n50": "Already placed a '{{button}}' bet",
+    "bet-error-max": "Bet '{{button}}' max {{value}}",
+    "bet-error-min": "Bet '{{button}}' min {{value}}",
+    "insuffix-balance": "insuffix balance",
+    "autobet-error-insufficient-balance": "autobet failed, insufficient balance",
+    "doublebet-error-max-bet": "double bet error, max bet"
 }

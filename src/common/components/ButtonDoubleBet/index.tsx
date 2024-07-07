@@ -8,6 +8,7 @@ import { selectBalance } from '../../../store/slice/playerSlice';
 import { selectMax, selectMax50 } from '../../../store/slice/gameSlice';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconDoubleBet from './SVG/SVGIconDoubleBet';
+import { setMessage } from '../../../store/slice/gameStateSlice';
 
 interface IProps {
     styles?: CSSProperties;
@@ -46,12 +47,12 @@ const ButtonDoubleBet = ({ show, styles }: IProps) => {
             const message = t('insuffix-balance');
 
             console.log('bet error', message);
-            // dispatch(
-            //     setMessage({
-            //         value: message,
-            //         type: 'danger',
-            //     }),
-            // );
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
 
             return;
         }
@@ -72,12 +73,12 @@ const ButtonDoubleBet = ({ show, styles }: IProps) => {
         });
 
         if (errorMax.length > 0) {
-            // dispatch(
-            //     setMessage({
-            //         value: 'double bet error, max bet',
-            //         type: 'danger',
-            //     }),
-            // );
+            dispatch(
+                setMessage({
+                    value: t('doublebet-error-max-bet'),
+                    type: 'danger',
+                }),
+            );
 
             return;
         }

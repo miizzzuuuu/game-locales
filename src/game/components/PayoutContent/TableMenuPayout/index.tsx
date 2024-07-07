@@ -39,7 +39,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                 <td>
                                     <LabelTranslate
                                         value={item.name}
-                                        keyLang="g24d"
+                                        keyLang="p6"
                                         style={{ textTransform: 'capitalize' }}
                                     />
                                 </td>
@@ -55,7 +55,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                         <td className={styles['bet-child']}>
                                             <LabelTranslate
                                                 value={child.name}
-                                                keyLang="g24d"
+                                                keyLang="p6"
                                                 style={{ textTransform: 'capitalize' }}
                                             />
                                         </td>

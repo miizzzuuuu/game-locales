@@ -41,5 +41,10 @@
     "you-win": "당신이 이겼습니다",
     "bet-confirmed": "베팅 확인됨",
     "bet-error": "베팅 오류",
-    "insuffix-balance": "잔액 부족"
+    "bet-error-n50": "'{{button}}' 베팅을 이미 배치했습니다",
+    "bet-error-max": "'{{button}}' 베팅 최대 {{value}}",
+    "bet-error-min": "'{{button}}' 베팅 최소 {{value}}",
+    "insuffix-balance": "잔액 부족",
+    "autobet-error-insufficient-balance": "자동 베팅 실패, 잔액 부족",
+    "doublebet-error-max-bet": "이중 베팅 오류, 최대 베팅"
 }

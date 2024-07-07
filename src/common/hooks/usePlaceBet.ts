@@ -16,12 +16,13 @@ import { selectLanguage } from '../../store/slice/settingsSlice';
 import { selectBetIsOpen } from '../../store/slice/timerSlice';
 import { Bet } from '../../types';
 import { BetHelper } from '../utils/BetHelper';
+import { GameHelper } from '../utils/GameHelper';
 import { StringHelper } from '../utils/StringHelper';
 
 export const usePlaceBet = () => {
     const dispatch = useAppDispatch();
 
-    const { t } = useAppTranslate();
+    const { t } = useAppTranslate('');
 
     const activeChip = useAppSelector(selectActiveChip);
 
@@ -38,6 +39,8 @@ export const usePlaceBet = () => {
     const maxBet = useAppSelector(selectMax);
     const min50Bet = useAppSelector(selectMin50);
     const max50Bet = useAppSelector(selectMax50);
+
+    const basePcode = GameHelper.getBasePcode(GameHelper.pcode);
 
     const getChip = (bet: Bet) => {
         const { button, group } = bet;
@@ -61,8 +64,8 @@ export const usePlaceBet = () => {
             const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
 
             if (oppositeBetKey && idsBetAdd.includes(oppositeBetKey)) {
-                const buttonName = t(`bet.${oppositeBetKey.split('-')[0]}`);
-                const message = t('bet-error-n50', { button: buttonName });
+                const buttonName = t(`${basePcode}.${oppositeBetKey.split('-')[0]}`);
+                const message = t('common.bet-error-n50', { button: buttonName });
 
                 console.log('bet error', message);
                 dispatch(
@@ -80,7 +83,7 @@ export const usePlaceBet = () => {
 
         // cek balance
         if (curBalance - activeChip < 0) {
-            const message = t('insuffix-balance');
+            const message = t('common.insuffix-balance');
 
             console.log('bet error', message);
             dispatch(
@@ -96,8 +99,8 @@ export const usePlaceBet = () => {
         const chipAfterBet = getChip(bet) + activeChip;
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
-            const buttonName = isGroup50 ? t(`bet.${button}`) : button;
-            const message = t('bet-error-min', {
+            const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
+            const message = t('common.bet-error-min', {
                 button: buttonName,
                 value: StringHelper.formatMoneyOnlyNumber(min, lang),
             });
@@ -115,8 +118,8 @@ export const usePlaceBet = () => {
 
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
-            const buttonName = isGroup50 ? t(`bet.${button}`) : button;
-            const message = t('bet-error-max', {
+            const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
+            const message = t('common.bet-error-max', {
                 button: buttonName,
                 value: StringHelper.formatMoneyOnlyNumber(max, lang),
             });
