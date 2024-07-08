@@ -12,8 +12,6 @@ const SVG24DResult = ({ className, style, value }: IProps) => {
 
     return (
         <svg
-            width={60}
-            height={50}
             viewBox="0 0 60 50"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
