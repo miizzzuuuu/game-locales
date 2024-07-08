@@ -12,9 +12,12 @@
 
 /* Prevent font size inflation */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    word-break: break-word;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
