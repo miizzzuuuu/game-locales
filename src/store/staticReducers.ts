@@ -1,5 +1,3 @@
-import { combineReducers } from '@reduxjs/toolkit';
-
 import betAddReducer from './slice/betAddSlice';
 import betSendReducer from './slice/betSendSlice';
 import chipReducer from './slice/chipSlice';
@@ -13,7 +11,7 @@ import settingsReducer from './slice/settingsSlice';
 import timerReducer from './slice/timerSlice';
 import windowReducer from './slice/windowSlice';
 
-export const rootReducer = combineReducers({
+export const staticReducers = {
     betAdd: betAddReducer,
     betSend: betSendReducer,
     chip: chipReducer,
@@ -26,4 +24,4 @@ export const rootReducer = combineReducers({
     settings: settingsReducer,
     timer: timerReducer,
     window: windowReducer,
-});
+};
