@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { LoadingHelper } from './utils/LoadingHelper';
+import { LoadingHelper } from './common/utils/LoadingHelper';
 import { useWindowResize } from './common/hooks/useWindowResize';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';

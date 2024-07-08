@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import APIManager from '../utils/APIManager';
 import { getPlayerData } from '../../services/api/playerData';
-import { LoadingHelper } from '../../utils/LoadingHelper';
+import { LoadingHelper } from '../utils/LoadingHelper';
 import { setPlayerData } from '../../store/slice/playerSlice';
 import { setChipBase } from '../../store/slice/chipSlice';
 

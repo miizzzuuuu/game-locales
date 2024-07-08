@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import APIManager from '../utils/APIManager';
-import { LoadingHelper } from '../../utils/LoadingHelper';
+import { LoadingHelper } from '../utils/LoadingHelper';
 import { getLastbets } from '../../services/api/lastbets';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
 
