@@ -2,7 +2,7 @@
     "language": "en",
     "autoRebet": true,
     "enableGameSound": true,
-    "enableStreamingVideo": false,
+    "enableStreamingVideo": true,
     "enableStreamingSound": true,
     "streamingQuality": "high",
     "volumeStreamingSound": 100,
