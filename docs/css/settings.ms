@@ -1,0 +1,62 @@
+# Settings Styles
+
+set css variables in `styles/base/_varaiable.scss`
+
+## Zoom streaming in portrait
+
+```css
+--streaming-scale-portrait: 1;
+```
+
+`value`: `number`
+
+1 = 100%
+
+
+## Color video streaming
+
+```css
+// portrait, streaming ke bawah
+--streaming-color-1: linear-gradient(180deg, #854c07 0%, #533909 40.22%, #0e0901 100%);
+// portrait, blur di bawah streaming 1
+--streaming-color-2: linear-gradient(
+    180deg,
+    rgba(133, 76, 7, 0) 0%,
+    rgba(133, 76, 7, 0.5) 100%
+);
+// portrait, blur di bawah streaming 2
+--streaming-color-3: linear-gradient(180deg, rgba(133, 76, 7, 0) 0%, #854c07 100%);
+
+// landscape, bawah
+--streaming-color-4: linear-gradient(to right, #1c1303 0%, #1c1303 28%, transparent 100%);
+// landscape, kiri
+--streaming-color-5: linear-gradient(to left, #1c1303 0%, #1c1303 28%, transparent 100%);
+// landscape, kanan
+--streaming-color-6: linear-gradient(
+        180deg,
+        rgba(28, 19, 3, 0) 0%,
+        rgba(28, 19, 3, 0.83) 47.34%,
+        #0d0800 100%
+    ),
+    linear-gradient(180deg, rgba(28, 19, 3, 0) 0%, rgba(28, 19, 3, 0.83) 47.34%, #0d0800 100%);
+```
+
+## Footer background
+
+```css
+--bg-footer: transparent; // rgba(2, 10, 20, 0.5);
+```
+
+## timer position
+
+```css
+--timer-portrait-top: calc(var(--height-streaming) * 1px);
+--timer-portrait-left: 50%;
+--timer-portrait-trans-x: -50%;
+--timer-portrait-trans-y: calc(-5.2rem - 1rem);
+
+--timer-landscape-top: 2rem;
+--timer-landscape-left: 1.2rem;
+--timer-landscape-trans-x: 0;
+--timer-landscape-trans-y: 0;
+```

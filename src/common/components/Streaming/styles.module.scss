@@ -23,6 +23,7 @@
         position: relative;
         background-color: black;
         flex-shrink: 0;
+        width: calc(100% * var(--streaming-scale-portrait));
 
         &::before {
             content: '';
