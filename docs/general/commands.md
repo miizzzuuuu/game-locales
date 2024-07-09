@@ -29,7 +29,7 @@ Build using production mode and development environment, output build in the `/d
 ### Production
 
 ```Shell
-pnpm dev-build
+pnpm build
 ```
 
 Build using production mode and production environment, output build in the `/dist` folder.
