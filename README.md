@@ -12,4 +12,4 @@
 -   [Overview](docs/general): A short overview of the included tools
 -   [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
 -   [Styling](docs/css): How to work with the CSS tooling
--   [App](dosc/js): Supercharging your app.
+-   [Game](dosc/game): Start a game project.
