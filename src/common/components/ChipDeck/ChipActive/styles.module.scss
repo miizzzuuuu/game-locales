@@ -59,6 +59,7 @@
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: -0.0644rem;
+        white-space: nowrap;
         position: relative;
         z-index: 1;
 
@@ -76,6 +77,7 @@
             -webkit-text-fill-color: transparent;
             font-weight: 800;
             font-size: 1.1rem;
+            white-space: nowrap;
         }
     }
 }
