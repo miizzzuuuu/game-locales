@@ -21,7 +21,9 @@ const SVGTimer = forwardRef<SVGSVGElement, IProps>(({ state = 'normal', value, l
         >
             <g>
                 <circle cx="30" cy="30" r="28" fill="black" fillOpacity={0.5} />
-                <circle cx="30" cy="30" r="26" stroke="black" strokeWidth={4} strokeOpacity={0.5} />
+
+                {/* outer timer */}
+                <circle cx="30" cy="30" r="26" stroke="black" strokeWidth={0} strokeOpacity={0.5} />
 
                 <circle
                     id="timer-cirlce"
@@ -29,7 +31,7 @@ const SVGTimer = forwardRef<SVGSVGElement, IProps>(({ state = 'normal', value, l
                     cy="30"
                     r="22"
                     stroke={state === 'danger' ? 'red' : '#54FC15'}
-                    strokeWidth={4}
+                    strokeWidth={5}
                     strokeDasharray={length}
                     strokeDashoffset={value}
                     style={{

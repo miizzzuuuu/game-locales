@@ -10,7 +10,7 @@ export const useAppTranslate = (prefix?: string) => {
         }
 
         if (prefix === '') {
-            return translate(`${key}`, option);
+            return translate(key, option);
         }
 
         return translate(`${prefix}.${key}`, option);

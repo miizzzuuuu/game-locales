@@ -2,9 +2,15 @@ import { useEffect } from 'react';
 
 type Handler = (event: KeyboardEvent) => void;
 
+const isDev = import.meta.env.DEV;
+
 export const useKeyboard = (handler: Handler) => {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
+            if (!isDev) {
+                return;
+            }
+
             handler(event);
         };
 

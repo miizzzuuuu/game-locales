@@ -8,6 +8,7 @@ import thCommon from '../../locales/th/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
+// spesific game
 import enP6 from '../../locales/en/p6.json';
 import idP6 from '../../locales/id/p6.json';
 import koP6 from '../../locales/ko/p6.json';
@@ -15,6 +16,7 @@ import thP6 from '../../locales/th/p6.json';
 import vnP6 from '../../locales/vn/p6.json';
 import zhP6 from '../../locales/zh/p6.json';
 
+// how to play
 import enHTP from '../../locales/en/htp.json';
 import idHTP from '../../locales/id/htp.json';
 import koHTP from '../../locales/ko/htp.json';

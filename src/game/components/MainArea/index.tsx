@@ -6,13 +6,9 @@ import TableBet from '../TableBet';
 import styles from './styles.module.scss';
 
 const MainArea = () => {
-    // const devices = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const betIsOpen = useAppSelector(selectBetIsOpen);
-    // const hideResult = devices === 'desktop' || devices === 'mobile-landscape';
-
-    // const showHistoryResult = betIsOpen
 
     return (
         <div className={`${styles['main-area']}${deviceClassName}`}>
