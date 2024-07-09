@@ -22,11 +22,6 @@ const TableBetChip = ({ value, color, style }: IProps) => {
     const showChip = useAppSelector(selectShowChip);
 
     useEffect(() => {
-        if (!lastValue.current) {
-            console.log('show chip');
-            chipRef.current?.classList.add(styles['place-chip']);
-        }
-
         if (value !== lastValue.current) {
             console.log('run animation');
 

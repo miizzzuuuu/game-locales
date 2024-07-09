@@ -12,10 +12,6 @@
 
         transition: opacity 0.4s linear;
     }
-
-    &.place-chip {
-        animation: place-chip-animation 0.2s;
-    }
 }
 
 .chip > svg,
