@@ -7,7 +7,7 @@ import ChipActive from './ChipActive';
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
-import { selectOrientation } from '../../../store/slice/windowSlice';
+import { selectDevice, selectOrientation } from '../../../store/slice/windowSlice';
 import { Sound } from '../../../services/sound';
 
 interface IProps {
@@ -21,6 +21,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     const dispatch = useAppDispatch();
 
+    const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const chipBase = useAppSelector(selectChipBase);
@@ -114,6 +115,49 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
             slider.current?.removeEventListener('scroll', handleScroll);
         };
     }, [orientation, version]);
+
+    useEffect(() => {
+        if (device !== 'desktop') {
+            return;
+        }
+
+        let mouseDown = false;
+        let startX: number, scrollLeft: number;
+
+        const startDragging = (e: MouseEvent) => {
+            mouseDown = true;
+            startX = e.pageX - (slider.current?.offsetLeft ?? 0);
+            scrollLeft = slider.current?.scrollLeft ?? 0;
+        };
+
+        const stopDragging = () => {
+            mouseDown = false;
+        };
+
+        const move = (e: MouseEvent) => {
+            e.preventDefault();
+            if (!mouseDown) {
+                return;
+            }
+            const x = e.pageX - (slider.current?.offsetLeft ?? 0);
+            const scroll = x - startX;
+            if (slider.current) {
+                slider.current.scrollLeft = scrollLeft - scroll;
+            }
+        };
+
+        slider.current?.addEventListener('mousemove', move, false);
+        slider.current?.addEventListener('mousedown', startDragging, false);
+        slider.current?.addEventListener('mouseup', stopDragging, false);
+        slider.current?.addEventListener('mouseleave', stopDragging, false);
+
+        return () => {
+            slider.current?.removeEventListener('mousemove', move);
+            slider.current?.removeEventListener('mousedown', startDragging);
+            slider.current?.removeEventListener('mouseup', stopDragging);
+            slider.current?.removeEventListener('mouseleave', stopDragging);
+        };
+    }, [device]);
 
     return (
         <div
