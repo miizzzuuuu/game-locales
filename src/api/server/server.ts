@@ -1,23 +1,28 @@
 import { createServer } from 'miragejs';
 import { ENDPOINTS } from '../../common/utils/APIManager';
 
-import playerData from './response/player/player.json';
-import propertiesData from './response/player/properties.json';
-import settingsData from './response/player/settings.json';
-import lastbetsAllData from './response/player/lastbets-all.json';
-import lastbetsGameData from './response/player/lastbets-game.json';
-
-import payoutData from './response/games/payout.json';
-
 import sendBetData from './response/send-bet/success.json';
 
-import resultsP7EData from './response/results/p7e.json';
+// result
+import resultsM6 from './response/results/m6.json';
+import resultsM7 from './response/results/m7.json';
+import resultM22 from './response/results/m22.json';
+import resultM23 from './response/results/m23.json';
+import resultP6 from './response/results/p6.json';
+import resultsP7E from './response/results/p7e.json';
 
 import transactionsP7EData from './response/transactions/p7e.json';
 import transactionsP6BData from './response/transactions/p6b.json';
 
+// database
 import { games } from './db/games';
 import { timers } from './db/timer';
+import { player } from './db/player';
+import { settings } from './db/settings';
+import { properties } from './db/properties';
+import { lastbets } from './db/lastbets';
+import { payouts } from './db/payouts';
+import { PayoutData } from '../../types';
 
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
@@ -26,20 +31,23 @@ export function makeServer({ environment = 'test' } = {}) {
             // player
             this.get(
                 ENDPOINTS.player,
-                async () => {
-                    return playerData;
+                async (schema) => {
+                    const player = schema.db.player;
+                    return player;
                 },
                 { timing: 400 },
             );
 
             // player properties
-            this.get(ENDPOINTS.playerProperties, async () => {
-                return propertiesData;
+            this.get(ENDPOINTS.playerProperties, async (scheme) => {
+                const properties = scheme.db.properties;
+                return properties;
             });
 
             // player settings
-            this.get(ENDPOINTS.playerSettings, async () => {
-                return settingsData;
+            this.get(ENDPOINTS.playerSettings, async (scheme) => {
+                const settings = scheme.db.settings;
+                return settings;
             });
 
             this.put(ENDPOINTS.playerSettings, async (_, request) => {
@@ -50,12 +58,24 @@ export function makeServer({ environment = 'test' } = {}) {
             // end player settings
 
             // lastbets
-            this.get(ENDPOINTS.playerLastbets, async () => {
-                return lastbetsAllData;
+            this.get(ENDPOINTS.playerLastbets, async (schema) => {
+                const lastbets = schema.db.lastbets;
+                return lastbets;
             });
 
-            this.get(ENDPOINTS.playerLastbets + '/:pcode', async () => {
-                return lastbetsGameData;
+            this.get(ENDPOINTS.playerLastbets + '/:pcode', async (_, request) => {
+                const pcode = request.params.pcode;
+
+                let lastbet: { periode: number; data: any[] } | { message: string } | undefined =
+                    lastbets[pcode];
+
+                if (!lastbet) {
+                    lastbet = {
+                        message: 'Empty Lastbet',
+                    };
+                }
+
+                return lastbet;
             });
 
             // games
@@ -66,7 +86,7 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             this.get(ENDPOINTS.games + '/:pcode', async (schema, request) => {
-                let pcode = request.params.pcode;
+                const pcode = request.params.pcode;
 
                 const game = schema.db.games.findBy({ pcode });
 
@@ -74,8 +94,16 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // payout
-            this.get(ENDPOINTS.games + '/:pcode/payout', async () => {
-                return payoutData;
+            this.get(ENDPOINTS.games + '/:pcode/payout', async (_, request) => {
+                const pcode = request.params.pcode;
+
+                let payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
+
+                if (!payout) {
+                    payout = { message: 'Payout Empty' };
+                }
+
+                return payout;
             });
 
             // timers
@@ -86,7 +114,7 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             this.get(ENDPOINTS.timers + '/:pcode', async (schema, request) => {
-                let pcode = request.params.pcode;
+                const pcode = request.params.pcode;
 
                 const timer = schema.db.timers.findBy({ pcode });
 
@@ -100,13 +128,38 @@ export function makeServer({ environment = 'test' } = {}) {
 
             // result
             this.get(ENDPOINTS.result + '/:pcode', async (_, request) => {
+                const pcode = request.params.pcode;
+
                 const page = Number(request.params.page);
                 const per_page = Number(request.params['per_page']);
 
                 const total_datas = 100;
                 const total_page = Math.ceil(total_datas / per_page);
 
-                const data = resultsP7EData;
+                let data: { data: any[] };
+                switch (pcode) {
+                    case 'm6':
+                        data = resultsM6;
+                        break;
+                    case 'm7':
+                        data = resultsM7;
+                        break;
+                    case 'm22':
+                        data = resultM22;
+                        break;
+                    case 'm23':
+                        data = resultM23;
+                        break;
+                    case 'p6':
+                    case 'p6b':
+                        data = resultP6;
+                        break;
+                    case 'p7e':
+                        data = resultsP7E;
+                        break;
+                    default:
+                        data = { data: [] };
+                }
 
                 return {
                     ...data,
@@ -144,6 +197,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 };
             });
 
+            // back to lobby
             this.get('/auth/maingame/change', () => {
                 return {
                     message: 'success',
@@ -155,6 +209,10 @@ export function makeServer({ environment = 'test' } = {}) {
     server.db.loadData({
         games,
         timers,
+        player,
+        settings,
+        properties,
+        lastbets,
     });
 
     return server;

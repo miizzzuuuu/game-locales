@@ -1,0 +1,40 @@
+{
+    "periode": 335854,
+    "data": [
+        {
+            "tebak": "05",
+            "type": "n",
+            "taruhan": 1000
+        },
+        {
+            "tebak": "10",
+            "type": "n",
+            "taruhan": 1000
+        },
+        {
+            "tebak": "2nd Row",
+            "type": "n6",
+            "taruhan": 5000
+        },
+        {
+            "tebak": "17,18",
+            "type": "n2",
+            "taruhan": 5000
+        },
+        {
+            "tebak": "03,04,07,08",
+            "type": "n4",
+            "taruhan": 5000
+        },
+        {
+            "tebak": "11,15",
+            "type": "n2",
+            "taruhan": 5000
+        },
+        {
+            "tebak": "14,15,18,19",
+            "type": "n4",
+            "taruhan": 5000
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+export const player = {
+    uid: 3018,
+    device: 'desktop',
+    balance: 30507433630,
+    currency: 'IDR',
+    chipBase: [1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 25000000],
+    nickname: 'DWTKUSERBETA1',
+    table: 'B',
+    operatorId: '287495130',
+    sessionToken: '701VtWafwajv3VXxI5jLbWKHgOjI7KfFdl7RcSIF',
+    dateTime: '2024-07-10T08:44:34.580Z',
+    operatorLogo: null,
+    apiKey: '2w1SFvhYsU3yB9EHTiforqtgzkxWpbQl',
+    token_sid: 'a2_PRncw0Xt_G80XqRNelPFu9wcjrjRy',
+};
