@@ -53,8 +53,6 @@ function Game() {
         if (time != 0) {
             console.log('close game');
             dispatch(setTime(0));
-        } else {
-            console.log('nothing');
         }
     }, [time]);
 
@@ -66,7 +64,6 @@ function Game() {
             <Timer />
             <GameUI />
             <AlertUI />
-
             <Menu />
         </div>
     );

@@ -3,14 +3,12 @@ import { DisplayHelper } from '../utils/DisplayHelper';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
 
-const isDev = import.meta.env.DEV && false;
-
 const useFullscreen = () => {
     const device = useAppSelector(selectDevice);
 
     useEffect(() => {
         const toggleFullScreen = () => {
-            if (isDev || device === 'desktop') {
+            if (device === 'desktop') {
                 return;
             }
 

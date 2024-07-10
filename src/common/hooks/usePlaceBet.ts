@@ -51,7 +51,7 @@ export const usePlaceBet = () => {
         return chipPlace;
     };
 
-    const placeBetHanlder = (bet: Bet) => {
+    const placeBetHandler = (bet: Bet) => {
         console.log('place bet');
 
         if (activeChip === 0 || !betIsOpen) return;
@@ -141,6 +141,6 @@ export const usePlaceBet = () => {
     };
 
     return {
-        placeBetHanlder,
+        placeBetHanlder: placeBetHandler,
     };
 };

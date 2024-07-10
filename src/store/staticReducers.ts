@@ -1,3 +1,4 @@
+import baseReducer from './slice/baseSlice';
 import betAddReducer from './slice/betAddSlice';
 import betSendReducer from './slice/betSendSlice';
 import chipReducer from './slice/chipSlice';
@@ -12,6 +13,8 @@ import timerReducer from './slice/timerSlice';
 import windowReducer from './slice/windowSlice';
 
 export const staticReducers = {
+    base: baseReducer,
+
     betAdd: betAddReducer,
     betSend: betSendReducer,
     chip: chipReducer,

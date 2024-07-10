@@ -5,10 +5,8 @@ import { useGetStreamingSize } from './hooks/useGetStreamingSize';
 import styles from './styles.module.scss';
 
 const Streaming = () => {
-    // const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
-    // const [scaleWidth] = useState(1);
     useGetStreamingSize();
 
     return (

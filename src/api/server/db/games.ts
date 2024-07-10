@@ -180,9 +180,8 @@ export const games = [
         displayName: 'Baccarat',
         periode: 2624602,
         pcode: 'm22',
-        stream: 'https://cam3.idnstreams.com/?app=SDI&name=BC_720P',
-        stream_hd:
-            'https://h5player.idnview.com/?muted=true&host=h5live-www1.idnview.com&stream=baccarat_1',
+        stream: 'https://eu.idnstreams.com/?app=HDMI&name=T2_1080P',
+        stream_hd: 'https://eu.idnstreams.com/?app=HDMI&name=T2_1080P',
         stream_uhd: '',
         stream_4k: '',
         stream_8k: '',
