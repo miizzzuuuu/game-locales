@@ -31,8 +31,7 @@ export function makeServer({ environment = 'test' } = {}) {
             // player
             this.get(
                 ENDPOINTS.player,
-                async (schema) => {
-                    const player = schema.db.player;
+                async () => {
                     return player;
                 },
                 { timing: 400 },
@@ -45,8 +44,7 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // player settings
-            this.get(ENDPOINTS.playerSettings, async (scheme) => {
-                const settings = scheme.db.settings;
+            this.get(ENDPOINTS.playerSettings, async () => {
                 return settings;
             });
 
@@ -209,8 +207,6 @@ export function makeServer({ environment = 'test' } = {}) {
     server.db.loadData({
         games,
         timers,
-        player,
-        settings,
         properties,
         lastbets,
     });
