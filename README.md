@@ -10,7 +10,7 @@ List pcode: [pcode](docs/game/pcode.md)
 
 ## Start project
 
-To start creating a game, follow [these steps](dosc/game): Start a game project.
+To start creating a game, follow [these steps](dosc/game).
 
 ## Documentation
 
