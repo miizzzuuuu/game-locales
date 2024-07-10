@@ -10,7 +10,7 @@ List pcode: [pcode](docs/game/pcode.md)
 
 ## Start project
 
-To start creating a game, follow [these steps](dosc/game).
+To start creating a game, follow [these steps](docs/game).
 
 ## Documentation
 
@@ -18,4 +18,4 @@ To start creating a game, follow [these steps](dosc/game).
 -   [Overview](docs/general): A short overview of the included tools
 -   [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
 -   [Styling](docs/css): How to work with the CSS tooling
--   [Game](dosc/game): Start a game project.
+-   [Game](docs/game): Start a game project.
