@@ -14,7 +14,7 @@ export const useFetchPayout = () => {
                 setLoading(true);
                 const respData = await getGamePayout();
 
-                if (ignore) {
+                if (!ignore) {
                     console.log('pyaout', respData);
 
                     setData(respData);

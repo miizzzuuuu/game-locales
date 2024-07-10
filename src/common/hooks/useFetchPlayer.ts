@@ -18,7 +18,7 @@ export function useFetchPlayer() {
                 LoadingHelper.update(0, 'Load player data');
                 const data = await getPlayerData();
 
-                if (ignore) {
+                if (!ignore) {
                     dispatch(setPlayerData(data));
                     dispatch(setChipBase(data.chipBase));
 

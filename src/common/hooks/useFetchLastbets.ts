@@ -18,7 +18,7 @@ export function useFetchLastbets() {
                 LoadingHelper.update(0, 'Load settings');
                 const data = await getLastbets();
 
-                if (ignore) {
+                if (!ignore) {
                     dispatch(setLastBetData(data));
 
                     setFinish(true);
