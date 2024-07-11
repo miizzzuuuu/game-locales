@@ -1,0 +1,57 @@
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.main-area {
+    position: relative;
+    flex: 1;
+
+    display: grid;
+}
+
+.main-area-left,
+.main-area-middle,
+.main-area-right,
+.main-area-top {
+    position: relative;
+}
+
+.main-area-right {
+    display: flex;
+    justify-content: center;
+}
+
+.main-area-bottom {
+    // background-color: red;
+    // padding: 0.5rem 1rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+}
+
+.mobile-portrait {
+    .main-area {
+        grid-template-columns: 5.8rem 1fr 5.8rem;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    .main-area {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 7rem;
+    }
+
+    .main-area-top {
+        width: calc(100% - 5.5rem);
+        left: 5.5rem;
+    }
+}

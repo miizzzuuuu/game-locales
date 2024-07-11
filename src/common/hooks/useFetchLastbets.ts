@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { getLastbets } from '../../services/api/lastbets';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
@@ -20,12 +19,12 @@ export function useFetchLastbets() {
 
                 if (!ignore) {
                     dispatch(setLastBetData(data));
-
-                    setFinish(true);
-                    LoadingHelper.update(10, 'Load settings completed');
                 }
             } catch (error) {
-                APIManager.handleErrorApi(error);
+                console.log('fetch last bet', error);
+            } finally {
+                setFinish(true);
+                LoadingHelper.update(10, 'Load settings completed');
             }
         };
 
