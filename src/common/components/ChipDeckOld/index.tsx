@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { ChipHelper } from '../../utils/ChipHelper';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import Chip from './Chip';
+import ChipActive from './ChipActive';
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
@@ -14,8 +15,9 @@ interface IProps {
     show?: boolean;
 }
 
-const ChipDeckV2 = ({ version = 1, show = true }: IProps) => {
+const ChipDeck = ({ version = 1, show = true }: IProps) => {
     const slider = useRef<HTMLDivElement>(null);
+    const slider2 = useRef<HTMLDivElement>(null);
 
     const dispatch = useAppDispatch();
 
@@ -72,6 +74,47 @@ const ChipDeckV2 = ({ version = 1, show = true }: IProps) => {
         const index = chipBase.indexOf(activeChip);
         scrollToCenter(index);
     }, [activeChip, chipBase, scrollToCenter]);
+
+    useEffect(() => {
+        const lastKnownScrollPosition = { left: 0, top: 0 };
+        let ticking = false;
+
+        function followScroll(scrollPos: { left: number; top: number }) {
+            if (slider2.current) {
+                if (
+                    (orientation === 'portrait' && version === 1) ||
+                    (orientation === 'landscape' && version === 2)
+                ) {
+                    slider2.current.scrollLeft = scrollPos.left;
+                } else if (
+                    (orientation === 'landscape' && version === 1) ||
+                    (orientation === 'portrait' && version === 2)
+                ) {
+                    slider2.current.scrollTop = scrollPos.top;
+                }
+            }
+        }
+
+        const handleScroll = () => {
+            lastKnownScrollPosition.left = slider.current?.scrollLeft ?? 0;
+            lastKnownScrollPosition.top = slider.current?.scrollTop ?? 0;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    followScroll(lastKnownScrollPosition);
+                    ticking = false;
+                });
+
+                ticking = true;
+            }
+        };
+
+        slider.current?.addEventListener('scroll', handleScroll);
+
+        return () => {
+            slider.current?.removeEventListener('scroll', handleScroll);
+        };
+    }, [orientation, version]);
 
     useEffect(() => {
         if (device !== 'desktop') {
@@ -160,8 +203,22 @@ const ChipDeckV2 = ({ version = 1, show = true }: IProps) => {
                     />
                 ))}
             </div>
+
+            <div className={styles.overflow} ref={slider2}>
+                <div className={styles.wrapperActive}>
+                    {chipBase.map((chip, idx) => (
+                        <ChipActive
+                            key={idx}
+                            version={version}
+                            value={chip}
+                            color={ChipHelper.getChipColorByIndex(idx)}
+                            isActive={activeChip === chip}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };
 
-export default ChipDeckV2;
+export default ChipDeck;

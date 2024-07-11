@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import SVGChip from '../../SVG/SVGChip';
 import { StringHelper } from '../../../utils/StringHelper';
 import styles from './styles.module.scss';
@@ -24,6 +24,19 @@ const Chip = ({ version = 1, value, onClick, color, isActive }: IProps) => {
 
         onClick?.();
     };
+
+    useEffect(() => {
+        if (chipRef.current) {
+            if (isActive) {
+                chipRef.current.classList.add(styles['selected-chip']);
+            } else {
+                if (chipRef.current.classList.contains(styles['selected-chip'])) {
+                    chipRef.current.classList.remove(styles['selected-chip']);
+                    chipRef.current.classList.add(styles['unselected-chip']);
+                }
+            }
+        }
+    }, [isActive]);
 
     return (
         <div className={`chip-item${deviceClassName} ${styles[`v${version}`]}`}>
