@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
 import { selectDevice, selectOrientation } from '../../../store/slice/windowSlice';
 import { Sound } from '../../../services/sound';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 
 interface IProps {
     version?: number;
@@ -21,6 +22,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+    const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const chipBase = useAppSelector(selectChipBase);
     const activeChip = useAppSelector(selectActiveChip);
@@ -143,7 +145,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     return (
         <div
-            className={`${styles['chip-deck']}${deviceClassName} ${styles[`v${version}`]}${show ? ` ${styles.apear}` : ` ${styles.disapear}`}`}
+            className={`${styles['chip-deck']}${deviceClassName} ${styles[`v${version}`]}${show ? '' : ` ${styles.disapear}`}`}
         >
             <div className={`${styles.wrapper} no-scrollbar`} ref={slider}>
                 {chipBase.map((chip, idx) => (
@@ -160,6 +162,8 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                     />
                 ))}
             </div>
+
+            {!betIsOpen && <div className={styles.overlay}></div>}
         </div>
     );
 };

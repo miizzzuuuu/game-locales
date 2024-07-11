@@ -1,32 +1,37 @@
 .chip-deck {
-    &.disapear {
-        animation: fadeout 0.45s forwards;
-    }
+    opacity: 1;
+    transition: opacity 0.3s linear;
 
-    &.apear {
-        animation: fadein 0.45s forwards;
+    &.disapear {
+        opacity: 0.2;
+        transition: opacity 0.3s linear;
     }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @import './v1';
 @import './v2';
 
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
+.mobile-portrait {
+    &.chip-deck {
+        &.disapear {
+            opacity: 0.2;
+        }
     }
 }
 
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
+.desktop,
+.mobile-landscape {
+    &.chip-deck {
+        &.disapear {
+            opacity: 0;
+        }
     }
 }
