@@ -11,8 +11,8 @@ import resultM23 from './response/results/m23.json';
 import resultP6 from './response/results/p6.json';
 import resultsP7E from './response/results/p7e.json';
 
-import transactionsP7EData from './response/transactions/p7e.json';
-import transactionsP6BData from './response/transactions/p6b.json';
+import transactionsP6B from './response/transactions/p6b.json';
+import transactionsP7E from './response/transactions/p7e.json';
 
 // database
 import { games } from './db/games';
@@ -142,6 +142,9 @@ export function makeServer({ environment = 'test' } = {}) {
                         data = resultsM7;
                         break;
                     case 'm22':
+                    case 'm22b':
+                    case 'm22c':
+                    case 'm22d':
                         data = resultM22;
                         break;
                     case 'm23':
@@ -177,12 +180,22 @@ export function makeServer({ environment = 'test' } = {}) {
                 const total_datas = 100;
                 // const total_page = Math.ceil(total_datas / per_page);
 
-                const data =
-                    pcode === 'p7e'
-                        ? transactionsP7EData
-                        : pcode === 'p6b'
-                          ? transactionsP6BData
-                          : { data: [] };
+                let data: object;
+                switch (pcode) {
+                    case 'p6':
+                    case 'p6b':
+                        data = transactionsP6B;
+                        break;
+                    case 'p7e':
+                    case 'p7b':
+                    case 'p7c':
+                    case 'p7d':
+                    case 'p7e':
+                        data = transactionsP7E;
+                        break;
+                    default:
+                        data = { data: [] };
+                }
 
                 return {
                     ...data,
