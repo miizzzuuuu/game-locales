@@ -2,9 +2,9 @@
 
 ## Branch Game
 
-Create a new branch named dev/<GAME-NAME>
+Create a new branch named `dev/<GAME-NAME>`
 
-example: dev/europe-roulette
+example: `dev/europe-roulette`
 
 then continue developing the game
 
