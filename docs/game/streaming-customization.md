@@ -1,28 +1,54 @@
-:root {
-    --white: #fff;
-    --base: #0f101d;
-    --cyan: #00c3d8;
-    --gray: #c8c9db;
+# Streaming Customization
 
-    // setting streaming scale in portrait
-    --streaming-scale-portrait: 1.1;
+## Changing Streaming Background Color
 
-    // portrait, streaming ke bawah
+Update the background color for streaming to match the design in Figma.
+
+### File Location
+
+`src/styles/base/variables.scss`
+
+### Portrait Mode
+
+-   **Streaming Background:**
+
+    ```css
     --streaming-color-1: linear-gradient(180deg, #854c07 0%, #533909 40.22%, #0e0901 100%);
-    // portrait, blur di bawah streaming 1
+    ```
+
+-   **Blur Below Streaming 1:**
+
+    ```css
     --streaming-color-2: linear-gradient(
         180deg,
         rgba(133, 76, 7, 0) 0%,
         rgba(133, 76, 7, 0.5) 100%
     );
-    // portrait, blur di bawah streaming 2
-    --streaming-color-3: linear-gradient(180deg, rgba(133, 76, 7, 0) 0%, #854c07 100%);
+    ```
 
-    // landscape, kiri
+-   **Blur Below Streaming 2:**
+
+    ```css
+    --streaming-color-3: linear-gradient(180deg, rgba(133, 76, 7, 0) 0%, #854c07 100%);
+    ```
+
+### Landscape Mode
+
+-   **Left Side:**
+
+    ```css
     --streaming-color-4: linear-gradient(to right, #1c1303 0%, #1c1303 28%, transparent 100%);
-    // landscape, kanan
+    ```
+
+-   **Right Side:**
+
+    ```css
     --streaming-color-5: linear-gradient(to left, #1c1303 0%, #1c1303 28%, transparent 100%);
-    // landscape, bawah
+    ```
+
+-   **Right Side with Additional Gradient:**
+
+    ```css
     --streaming-color-6: linear-gradient(
             180deg,
             rgba(28, 19, 3, 0) 0%,
@@ -30,18 +56,10 @@
             #0d0800 100%
         ),
         linear-gradient(180deg, rgba(28, 19, 3, 0) 0%, rgba(28, 19, 3, 0.83) 47.34%, #0d0800 100%);
+    ```
 
-    --bg-footer: transparent; // rgba(2, 10, 20, 0.5);
+### Set Streaming Scale in Portrait Mode
 
-    --size-button: 3.4rem;
-
-    --timer-portrait-top: calc(var(--height-streaming) * 1px);
-    --timer-portrait-left: 50%;
-    --timer-portrait-trans-x: -50%;
-    --timer-portrait-trans-y: calc(-5.2rem - 1rem);
-
-    --timer-landscape-top: 2rem;
-    --timer-landscape-left: 1.2rem;
-    --timer-landscape-trans-x: 0;
-    --timer-landscape-trans-y: 0;
-}
+```css
+--streaming-scale-portrait: 1.1;
+```
