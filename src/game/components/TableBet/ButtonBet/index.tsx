@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styles from './styles.module.scss';
 import { useGetChipBet } from '../../../../common/hooks/useGetChipBet';
 import { Bet } from '../../../../types';
-import TableBetChip from '../TableBetChip';
+import TableBetChip from '../../../../common/components/ChipBet';
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
 
 interface IProps {
