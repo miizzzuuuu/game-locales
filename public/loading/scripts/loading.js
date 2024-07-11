@@ -25,7 +25,7 @@ function addLoadingScreen() {
     // Create the loading logo image
     const loadingLogo = document.createElement('img');
     loadingLogo.className = 'loading-logo';
-    loadingLogo.src = 'loading/img/game-logo.webp';
+    loadingLogo.src = 'loading/img/game-logo.png';
     loadingLogo.alt = '';
 
     // Create the loading bottom container
