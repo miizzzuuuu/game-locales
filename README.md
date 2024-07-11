@@ -19,3 +19,7 @@ To start creating a game, follow [these steps](docs/game).
 -   [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
 -   [Styling](docs/css): How to work with the CSS tooling
 -   [Game](docs/game): Start a game project.
+
+## Create a Game
+
+To create a game, use [this guide.](docs/game)
