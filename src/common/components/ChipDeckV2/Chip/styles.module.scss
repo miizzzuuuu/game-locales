@@ -11,9 +11,12 @@
     height: var(--height-chip);
 
     transform: scale(1);
-    transition: transform 0.5s linear;
+    transition: transform 0.45s linear;
 
     &.active {
+        transform: scale(1.2);
+        transition: transform 0.45s linear;
+
         &::before {
             content: '';
             position: absolute;
@@ -30,16 +33,6 @@
             backdrop-filter: blur(0.2rem);
             border-radius: 9999px;
         }
-    }
-
-    &.selected-chip {
-        transform: scale(1.1);
-        transition: transform 0.5s linear;
-    }
-
-    &.unselected-chip {
-        transform: scale(1);
-        transition: transform 0.5s linear;
     }
 }
 
