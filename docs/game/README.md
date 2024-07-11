@@ -39,3 +39,20 @@ Place all components related to the game into the `src/game/` folder.
 ## Betting Panel
 
 To create a betting panel, use [this guide.](betting-panel.md)
+
+## Socket Game
+
+### Simulating Socket in Local Game
+
+-   `l`: Open game (`loadNewValue`)
+-   `r`: Game result (`gameResult`)
+-   `w`: Display win (`receive_totalwin`)
+-   `c`: Close timer (`closeTimer`)
+
+### Socket Configuration Location
+
+`src/services/socket/`
+
+### Usage Location
+
+`src/common/components/Game/index.tsx`
