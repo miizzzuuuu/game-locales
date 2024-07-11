@@ -12,4 +12,28 @@ pcode list can be seen in api documentation. or in [pcode](pcode.md)
 
 ## [Streaming Customization](streaming-customization.md)
 
-## [Main Area]()
+## Portrait and Landscape
+
+To differentiate styles with different orientations, use [this guide](docs/css/differentiating.md)
+
+## Main Area Game
+
+### Editing the Main Area Game
+
+To edit the main area of the game, go to `common/components/GameUI`.
+
+```tsx
+import LayoutV1 from '../../layouts/v1';
+
+const GameUI = () => {
+    return <LayoutV1>{/* Edit here */}</LayoutV1>;
+};
+
+export default GameUI;
+```
+
+### Organizing Game Components
+
+Place all components related to the game into the `src/game/` folder.
+
+## [Betting Panel](betting-panel.md)

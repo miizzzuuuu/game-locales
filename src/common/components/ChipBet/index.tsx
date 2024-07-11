@@ -12,7 +12,7 @@ interface IProps {
     style?: CSSProperties;
 }
 
-const TableBetChip = ({ value, color, style }: IProps) => {
+const ChipBet = ({ value, color, style }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);
@@ -75,4 +75,4 @@ const TableBetChip = ({ value, color, style }: IProps) => {
     );
 };
 
-export default TableBetChip;
+export default ChipBet;

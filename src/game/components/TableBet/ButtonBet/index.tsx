@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import styles from './styles.module.scss';
 import { useGetChipBet } from '../../../../common/hooks/useGetChipBet';
 import { Bet } from '../../../../types';
-import TableBetChip from '../../../../common/components/ChipBet';
+import ChipBet from '../../../../common/components/ChipBet';
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
 
 interface IProps {
@@ -32,11 +32,7 @@ const ButtonBet = ({ children, isWin, className, bet, onClick }: IProps) => {
 
             <div className={styles['slot-chip']}>
                 {chip > 0 && (
-                    <TableBetChip
-                        value={chip}
-                        color={color}
-                        style={{ width: '100%', height: '100%' }}
-                    />
+                    <ChipBet value={chip} color={color} style={{ width: '100%', height: '100%' }} />
                 )}
             </div>
         </div>
