@@ -6,8 +6,6 @@ Determine the game `pcode` first.
 
 pcode list can be seen in api documentation. or in [pcode](pcode.md)
 
-## Change the dummy API response.
+## [Update Dummy API Response for the Game You Are Developing](docs/api)
 
-For local development, you must change the dummy API response according to each game.
-
-The dummy API can be found in the `api/server` folder.
+##
