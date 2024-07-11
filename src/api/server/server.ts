@@ -1,4 +1,4 @@
-import { createServer } from 'miragejs';
+import { createServer, Response } from 'miragejs';
 import { ENDPOINTS } from '../../common/utils/APIManager';
 
 import sendBetData from './response/send-bet/success.json';
@@ -67,9 +67,13 @@ export function makeServer({ environment = 'test' } = {}) {
                     lastbets[pcode];
 
                 if (!lastbet) {
-                    lastbet = {
-                        message: 'Empty Lastbet',
-                    };
+                    return new Response(
+                        400,
+                        {},
+                        {
+                            message: 'Empty Lastbet',
+                        },
+                    );
                 }
 
                 return lastbet;
