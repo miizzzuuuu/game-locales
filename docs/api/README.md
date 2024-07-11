@@ -1,5 +1,9 @@
 # API Response Documentation
 
+## Update api endpoint
+
+`src/common/APIManager.ts`
+
 ## Changing API Response
 
 For local development, use `miragejs`.

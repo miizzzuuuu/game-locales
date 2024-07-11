@@ -38,7 +38,7 @@ Place all components related to the game into the `src/game/` folder.
 
 ## Betting Panel
 
-To create a betting panel, use [this guide.](betting-panel.md)
+To create a betting panel, use [this guide](betting-panel.md).
 
 ## Socket Game
 
@@ -56,3 +56,7 @@ To create a betting panel, use [this guide.](betting-panel.md)
 ### Usage Location
 
 `src/common/components/Game/index.tsx`
+
+## Menu
+
+To change the contents of the menu, use [this guide](menu.md).
