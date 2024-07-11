@@ -36,4 +36,6 @@ export default GameUI;
 
 Place all components related to the game into the `src/game/` folder.
 
-## [Betting Panel](betting-panel.md)
+## Betting Panel
+
+To create a betting panel, use [this guide.](betting-panel.md)
