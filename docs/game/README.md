@@ -1,6 +1,14 @@
 # Start Game
 
-Determine the game `pcode` first.
+## Branch Game
+
+Create a new branch named dev/<GAME-NAME>
+
+example: dev/europe-roulette
+
+then continue developing the game
+
+## Determine the game `pcode` first.
 
 `pcode` is a unique id for each game.
 
