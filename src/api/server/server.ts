@@ -101,7 +101,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 let payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
 
                 if (!payout) {
-                    payout = { message: 'Payout Empty' };
+                    return new Response(400, {}, { message: 'Payout Empty' });
                 }
 
                 return payout;
