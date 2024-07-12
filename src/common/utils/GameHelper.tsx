@@ -113,7 +113,9 @@ export class GameHelper {
         p12: 'Sicbo[Dice]',
     };
 
-    static getBasePcode(mixedPcode: string) {
+    static getBasePcode() {
+        const mixedPcode = this.pcode;
+
         if (!mixedPcode || !mixedPcode.trim()) throw new Error('mixedPcode is empty!');
 
         return mixedPcode.replace(/\D+$/, '');
@@ -122,7 +124,7 @@ export class GameHelper {
     static getGameCode(): string {
         const pcode = this.pcode;
 
-        const basePcode = this.getBasePcode(pcode);
+        const basePcode = this.getBasePcode();
         const lastLetter = !isNaN(+pcode[pcode.length - 1]) ? '' : pcode[pcode.length - 1];
 
         return basePcode in this.GAME_CODE

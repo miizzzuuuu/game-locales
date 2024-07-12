@@ -7,6 +7,7 @@ import { selectLanguage } from '../../../../store/slice/settingsSlice';
 import { PayoutData } from '../../../../types';
 
 import styles from './styles.module.scss';
+import { GameHelper } from '../../../../common/utils/GameHelper';
 
 interface IProps {
     data: PayoutData[];
@@ -15,6 +16,8 @@ interface IProps {
 const TableMenuPayout = ({ data }: IProps) => {
     const currency = useAppSelector(selectCurrency);
     const lang = useAppSelector(selectLanguage);
+
+    const basePcode = GameHelper.getBasePcode();
 
     return (
         <div className={styles['"payout-table-container"']}>
@@ -39,7 +42,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                 <td>
                                     <LabelTranslate
                                         value={item.name}
-                                        keyLang="p6"
+                                        keyLang={basePcode}
                                         style={{ textTransform: 'capitalize' }}
                                     />
                                 </td>
@@ -55,7 +58,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                         <td className={styles['bet-child']}>
                                             <LabelTranslate
                                                 value={child.name}
-                                                keyLang="p6"
+                                                keyLang={basePcode}
                                                 style={{ textTransform: 'capitalize' }}
                                             />
                                         </td>

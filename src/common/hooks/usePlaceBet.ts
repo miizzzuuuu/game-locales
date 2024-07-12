@@ -40,7 +40,7 @@ export const usePlaceBet = () => {
     const min50Bet = useAppSelector(selectMin50);
     const max50Bet = useAppSelector(selectMax50);
 
-    const basePcode = GameHelper.getBasePcode(GameHelper.pcode);
+    const basePcode = GameHelper.getBasePcode();
 
     const getChip = (bet: Bet) => {
         const { button, group } = bet;
