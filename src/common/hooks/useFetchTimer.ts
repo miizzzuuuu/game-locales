@@ -19,7 +19,7 @@ export function useFetchTimer() {
                 LoadingHelper.update(0, 'Load settings');
                 const data = await getTimer();
 
-                if (ignore) {
+                if (!ignore) {
                     dispatch(setTimer(data.timer));
 
                     const timerNumber = Number(data.time);

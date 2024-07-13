@@ -24,6 +24,7 @@
     .panel-history,
     .panel-bet {
         padding: 0 0.8rem;
+        height: 100%;
     }
 }
 
@@ -38,7 +39,8 @@
 
     .panel-history,
     .panel-bet {
-        padding: 0 5.7rem 0;
+        // padding: 0 5.7rem 0;
+        padding: 0 14.7rem 0;
     }
 }
 
@@ -48,4 +50,7 @@
 
 .panel-bet {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }

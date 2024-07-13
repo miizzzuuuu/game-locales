@@ -18,7 +18,7 @@ export function useFetchSettings() {
                 LoadingHelper.update(0, 'Load settings');
                 const data = await getPlayerSettings();
 
-                if (ignore) {
+                if (!ignore) {
                     dispatch(setSetings(data));
 
                     setFinish(true);

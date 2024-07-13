@@ -1,12 +1,12 @@
 import { Sound } from '../../services/sound';
-import { gameResultAction, loadNewValueAction } from '../actions/socketAction';
+import { gameResultAction, loadNewValueAction, scanNumberAction } from '../actions/socketAction';
 import { AppStartListening } from '../listenerMiddleware';
 import { placeMultiBet } from '../slice/betAddSlice';
 import { resetBetSend, selectAllBetSend } from '../slice/betSendSlice';
 import { setMessage } from '../slice/gameStateSlice';
 import { LastBetState, setLastBetData } from '../slice/lastBetsSlice';
 import { selectBalance } from '../slice/playerSlice';
-import { setResult } from '../slice/resultSlice';
+import { doneResult, setResult, setScanNumber } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
@@ -80,3 +80,50 @@ export const gameResultListener = (startListening: AppStartListening) => {
         },
     });
 };
+
+export const scanNumberListener = (startListening: AppStartListening) => {
+    startListening({
+        actionCreator: scanNumberAction,
+        effect: async (action, listenerApi) => {
+            console.log('middleware: scanNumber');
+
+            console.log('middleware:scanNumber', {
+                action,
+                listenerApi,
+            });
+
+            const dispatch = listenerApi.dispatch;
+            // const state = listenerApi.getState();
+
+            const scanNumber = action.payload;
+
+            dispatch(setScanNumber(scanNumber));
+            
+            debounce(() => {
+                if (scanNumber.submit) {
+                    dispatch(
+                        doneResult(scanNumber as any),
+                    );
+                }
+            }, 5000)();
+
+            // Sound.playCardScan();
+        },
+    });
+};
+
+
+let timerId: any;
+function debounce(callback: () => void, wait: number) {
+  return () => {
+      if(timerId) {
+        
+      }else{
+          timerId = setTimeout(() => {
+              clearTimeout(timerId);
+              timerId = undefined;
+            }, wait);
+            callback();
+      }
+    };
+}

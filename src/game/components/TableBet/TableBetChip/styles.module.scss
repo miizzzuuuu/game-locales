@@ -1,7 +1,8 @@
 .chip {
     --opacity: 1;
 
-    position: relative;
+    // Todo: moduleException
+    // position: relative;
     border-radius: 9999px;
     overflow: hidden;
     opacity: var(--opacity);

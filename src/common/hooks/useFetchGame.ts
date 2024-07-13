@@ -18,7 +18,7 @@ export function useFetchGame() {
                 LoadingHelper.update(0, 'Load settings');
                 const data = await getGameData();
 
-                if (ignore) {
+                if (!ignore) {
                     dispatch(setGame(data));
 
                     setFinish(true);

@@ -1,0 +1,499 @@
+@use 'sass:math';
+
+$maxY: -30%;
+// $domainHeight: 32vh;
+$domainHeight: 33vw;
+$transformOpen: translate(-50%, -40%) scale(0.45);
+$transformClose:  perspective(calc(800px * var(--scale-height))) rotateX(40deg) translateZ(0) scale(1);
+$transformCloseZoom: translate(-50%, calc(-50%)) scale(0.6);
+
+$childBetM23Width : calc(98.5%/2);
+
+.tableBet {
+    width: calc(100% - 0.5rem);
+    border-radius: 1rem;
+    $anim-duration: 0.3s;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    &.open {
+        transform: $transformOpen;
+        animation: openTable;
+        animation-duration: $anim-duration;
+        bottom: -60%;
+
+    }
+
+    &.close {
+        transform: $transformClose;
+        animation: closeTable;
+        animation-duration: $anim-duration;
+        opacity: 0.6;
+    }
+
+    &.closeZoom {
+        transform: $transformCloseZoom;
+        animation: closeTableZoom;
+        animation-duration: $anim-duration;
+    }
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    transform: translateY(1rem);
+}
+
+
+
+.container {
+
+    width: 94%;
+    // margin-left: 5%;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+
+    &.show {
+        display: flex;
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+
+
+.buttonMore {
+    float: right;
+    margin: 1.5vh 0.5vh;
+    display: flex;
+    width: 16vh;
+    height: 5vh;
+
+    &>svg {
+        position: absolute;
+        width: 16vh;
+        height: 5vh;
+        right: 3vh;
+    }
+}
+
+.buttonMoreContent {
+    float: right;
+    margin: 1.5vh 0.5vh;
+    display: flex;
+    padding-left: 1vh;
+    padding-right: 2vh;
+    width: 16vh;
+    height: 5vh;
+    justify-content: space-between;
+    position: absolute;
+    right: 2vh;
+
+    svg {
+        // width: 5vh;
+        // height: 5vh;
+
+        margin-top: -1.5vh;
+        // margin-right: 1.5vh;
+
+    }
+
+    // padding-left: 2.5vh;
+    // padding-top: 2vh;
+    font-size: 1.5vh;
+
+    // left: 50%;
+    // top: 50%;
+}
+
+.grid {
+    width: 50%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(14, minmax(0, 1fr));
+    gap: 0.1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.betButton {
+    /* background-color: red; */
+    position: relative;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+    padding: 0;
+
+    &.win {
+        border: 0.2rem solid #83ff48;
+        animation: winGlow 1s infinite ease-in-out;
+    }
+}
+
+
+
+
+
+.slot-chip {
+    $percentChip: 70;
+
+    pointer-events: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.6);
+
+}
+
+.mobile-portrait {
+    .slot-chip {
+        width: calc(100cqw / 8 * 65 / 100);
+        height: calc(100cqw / 8 * 65 / 100);
+        font-size: calc(100cqw / 8 * 65 / 100);
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    .slot-chip {
+        width: calc(100cqh / 7 * 65 / 100);
+        height: calc(100cqh / 7 * 65 / 100);
+        font-size: calc(100cqh / 7 * 65 / 100);
+    }
+}
+
+
+
+
+.domain {
+    width: calc(99.5%/3);
+    margin: 0 calc(0.5%/3);
+
+    svg {}
+}
+
+
+.domainTie {
+    width: calc(99.5%/3);
+    margin: 0 calc(0.5%/3);
+    text-align: center;
+    // margin-top: -4%;
+    margin-top: -4.5%;
+}
+
+.domainContent {
+    width: calc(99.5%/3);
+    margin: 0 calc(0.5%/3);
+    position: absolute;
+    padding-inline: 2rem 1rem;
+    padding-block: 0.5rem;
+    height: 63%;
+
+    &>div:nth-child(1) {
+        margin-top: 0 !important;
+    }
+}
+
+.betButtonLabel {
+    font-size: 0.8rem;
+}
+
+.domainLabel {
+    display: flex;
+    width: 100%;
+    height: 55%;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-top: 6%;
+    position: absolute;
+    bottom: 0;
+
+    span:nth-child(1) {
+        padding-right: 1rem;
+
+    }
+
+    span {
+        // position: absolute;
+        // top: 300%;
+        // top: 80%;
+        // display: flex;\
+        // padding-left: 1rem;
+        text-transform: uppercase;
+    }
+}
+
+.tieLabel {
+    // height: 10vh;
+    text-transform: uppercase;
+
+}
+
+.domainContentTie {
+    width: calc(99.5%/3);
+    margin: 0 calc(0.5%/3);
+    position: absolute;
+    padding-inline: 0.25rem;
+    padding-block: 0.25rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    z-index: 1;
+    height: 3rem;
+    padding-left: 1.5rem;
+
+    &>div {
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+}
+
+
+
+
+.childContainer,
+.childContainerBottom {
+
+    // background: linear-gradient(
+    //     90deg,
+    //     rgba(22, 77, 62, 0.5) 0%,
+    //     rgba(0, 71, 53, 0.5) 99.96%
+    // );
+    // border: 0.1rem solid #166458;
+    // border-radius: 0.7rem;
+
+    // height: 50%;
+    width: 100%;
+    // padding: 1rem;
+    // padding-top: 0.25rem;
+    // padding-bottom: 0.2rem;
+    // justify-content: space-between;
+    // align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+
+    &.show {
+        display: flex;
+    }
+
+    &.hide {
+        display: none;
+    }
+}
+
+.childContainer {
+    margin-top: -4.5%;
+    // width: 103%;
+    padding-top: 0.2rem;
+
+}
+
+.childContainerBottom {
+    margin-top: -3.5%;
+    // width: 103%;
+
+}
+
+
+.child {
+    width: $childBetM23Width;
+    margin: 0 calc(0.5%/4);
+    height: fit-content;
+
+    svg {
+        transform: scaleY(-1);
+        // position: absolute;
+    }
+
+
+}
+
+.child:nth-child(even) {
+    .childLabel {
+        // padding-inline: 1.5rem;
+
+        flex-direction: row-reverse;
+
+       
+        &>span {
+            &>div {
+                margin-left: 0.75rem;
+            }
+        }
+    }
+}
+
+.childLabel {
+    position: absolute;
+    width: $childBetM23Width;
+    display: flex;
+    // justify-content: space-between;
+    padding-inline: 1rem;
+    // padding-left: 1rem;
+    height: 2rem;
+    align-items: center;
+    align-self: center;
+    z-index: 1;
+    &>span {
+        padding-right: 1rem;
+        text-transform: uppercase;
+    }
+
+
+}
+
+.cardContainerDragon {
+    position: absolute;
+    bottom: 9rem;
+    right: auto;
+    left: 50%;
+    transform: perspective(1000px) translate(-5px, 15px);
+    width: 24%;
+    height: 31.68%;
+}
+
+.cardContainerTiger{
+    position: absolute;
+    bottom: 9rem;
+    left: auto;
+    right: 35%;
+    transform: perspective(1000px) translate(-5px, 15px);
+    width: 24%;
+    height: 31.68%;
+}
+
+.cardContainerWild {
+    position: absolute;
+    // top: -3rem;
+    top: -135%;
+    left: 43%;
+    margin: auto;
+    // right: auto;
+    // left: -4rem;
+    transform: perspective(1000px) translate(-5px, 15px);
+    // transform-origin: -250% -50%;
+    width: 24%;
+    height: 31.68%;
+}
+
+@keyframes chipLight {
+    0% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+
+    80% {
+        background-position: 0% 50%;
+        opacity: 1;
+    }
+
+    81% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes chipBlink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes winGlow {
+    0% {
+        box-shadow: 0 0 0.1rem #83ff48;
+    }
+
+    50% {
+        box-shadow: 0 0 0.8rem #83ff48;
+    }
+
+    100% {
+        box-shadow: 0 0 0.1rem #83ff48;
+    }
+}
+
+@keyframes upAndDown {
+    0% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    25% {
+        transform: translate(-50%, -1.6rem);
+    }
+
+    50% {
+        transform: translate(-50%, -0.8rem);
+    }
+
+    75% {
+        transform: translate(-50%, -1.6rem);
+    }
+
+    100% {
+        transform: translate(-50%, -0.8rem);
+    }
+}
+
+@keyframes closeTable {
+    from {
+        transform: $transformOpen;
+    }
+
+    to {
+        transform: $transformClose;
+    }
+}
+
+@keyframes closeTableZoom {
+    from {
+        transform: $transformClose;
+    }
+
+    to {
+        transform: $transformCloseZoom;
+    }
+}
+
+@keyframes openTable {
+    from {
+        transform: $transformClose;
+    }
+
+    to {
+        transform: $transformOpen;
+    }
+}

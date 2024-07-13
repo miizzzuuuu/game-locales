@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
 import { LobbyConnect } from '../../types';
 import { useAppDispatch } from '../../store/hooks';
-import { gameResultAction, loadNewValueAction } from '../../store/actions/socketAction';
+import { gameResultAction, loadNewValueAction, scanNumberAction } from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
 
 interface Params {
@@ -38,6 +38,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
 
         SocketComponent.instance.listenLoadNewValue((data) => {
             dispatch(loadNewValueAction(data));
+        });
+
+        SocketComponent.instance.listenScanNumber((data) => {
+            dispatch(scanNumberAction(data));
         });
 
         SocketComponent.instance.listenRecieveTotalWin((data) => {

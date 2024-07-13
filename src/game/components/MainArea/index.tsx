@@ -2,7 +2,8 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import HistoryResult from '../HistoryResult';
-import TableBet from '../TableBet';
+import TableBetWild from '../MobilePortraitWild/TableBetWild';
+// import TableBet from '../TableBet';
 import styles from './styles.module.scss';
 
 const MainArea = () => {
@@ -12,10 +13,10 @@ const MainArea = () => {
 
     return (
         <div className={`${styles['main-area']}${deviceClassName}`}>
-            <div className={styles['panel-history']}>{betIsOpen && <HistoryResult />}</div>
+            {/* <div className={styles['panel-history']}>{betIsOpen && <HistoryResult />}</div> */}
 
             <div className={styles['panel-bet']}>
-                <TableBet />
+                <TableBetWild />
             </div>
         </div>
     );

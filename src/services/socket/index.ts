@@ -6,6 +6,7 @@ import {
     LoadNewValueData,
     LobbyConnect,
     RecieveTotalWinData,
+    ScanNumberData,
     Thunder,
     TopWinnerData,
 } from '../../types';
@@ -24,6 +25,7 @@ export class SocketComponent {
     static SOCKET_EVENT = {
         connect: 'connect',
         loadNewValue: 'loadNewValue',
+        scanNumber: 'scanDragonTigerB',
         closeTimer: 'closeTimer',
         gameResult: 'gameResult',
         recieveTotalWin: 'recieve_totalwin',
@@ -120,7 +122,9 @@ export class SocketComponent {
                         return;
                     }
 
-                    this._lastLoadNewValuePeriod = data.periode;
+                    // this._lastLoadNewValuePeriod = data.periode;
+                    this._lastLoadNewValuePeriod = Number(data.shoePeriode.split("-")[1])-1;
+
                     callback(data);
                 });
             });
@@ -167,6 +171,21 @@ export class SocketComponent {
 
                 this.validationDataWithPcode(data, () => callback(data));
             });
+        }
+    }
+
+    listenScanNumber(callback: (data: ScanNumberData) => void): void {
+        if (this._socket) {
+            this._socket.on(
+                SocketComponent.SOCKET_EVENT.scanNumber,
+                (data: ScanNumberData) => {
+                    console.log('socket scanNumber:', data);
+                    if (data && data.pcode === GameHelper.pcode) {
+                        callback(data);
+                    }
+                }
+            );
+
         }
     }
 

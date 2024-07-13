@@ -16,6 +16,7 @@ export type LoadNewValueData = {
     pcode: string; // "pcode":"m43",
     timer: string; // "timer":"30",
     periode: number; // "periode":7011
+    shoePeriode: string;
 };
 
 export type CloseTimerData = {
@@ -27,6 +28,31 @@ export type RecieveTotalWinData = {
     game: string; // "6DCOLOR", // "BINGOSICBO",
     winamount: number; // 12000
 };
+
+
+export type ScanNumberData = {
+    "wild": string,
+    "dragon": string,
+    "tiger": string,
+    "submit": boolean,
+    "win": string,
+    "idnomor":  number,
+    "periode": number,
+    "value": number,
+    "pcode": string,
+    "gameSet": number,
+    "scan_number": number,
+    "wild_value": number,
+    "dragon_value": number,
+    "tiger_value": number,
+    "stat_third_card": string,
+    "wildValue": number,
+    "dragonValue": number,
+    "tigerValue": number,
+    "wildWin": string
+
+};
+
 
 export type CameraSequence = {
     pcode: string;

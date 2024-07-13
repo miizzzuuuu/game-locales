@@ -1,13 +1,14 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TwentyFourDHelper } from '../../game/utils/TwentyFourDHelper';
+import { ScanNumberData } from '../../types';
 
 export interface ResultState {
     periode: number | null;
     resultNumber: number | null;
     winBets: string[];
     status: 'idle' | 'spin' | 'done';
-
+    scanNumber: ScanNumberData | undefined;
     winAmount: number;
     winStatus: 'idle' | 'running' | 'show';
 }
@@ -16,6 +17,7 @@ const initialState: ResultState = {
     periode: null,
     resultNumber: null,
     winBets: [],
+    scanNumber: undefined,
     status: 'idle',
     winAmount: 0,
     winStatus: 'idle',
@@ -37,6 +39,10 @@ const baseSlice = createSlice({
         doneResult: (state) => {
             state.status = 'done';
         },
+        setScanNumber: (state, action: PayloadAction<ScanNumberData>) => {
+            console.log("setScannumber", action.payload);
+            state.scanNumber = action.payload
+        },
         resetResult: (state) => {
             state.resultNumber = null;
             state.winBets = [];
@@ -46,7 +52,6 @@ const baseSlice = createSlice({
                 state.winStatus = 'idle';
             }
         },
-
         setWinAmount: (state, action: PayloadAction<number>) => {
             state.winAmount = action.payload;
             state.winStatus = 'show';
@@ -60,7 +65,7 @@ const baseSlice = createSlice({
     },
 });
 
-export const { setResult, doneResult, resetResult, setWinAmount, endWinAnimation, clearWinAmount } =
+export const {setScanNumber, setResult, doneResult, resetResult, setWinAmount, endWinAnimation, clearWinAmount } =
     baseSlice.actions;
 
 export const selectResultNumber = (state: RootState) => state.result.resultNumber;
