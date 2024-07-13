@@ -1,10 +1,10 @@
 import { CSSProperties, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
-import { StringHelper } from '../../../../common/utils/StringHelper';
-import { useAppSelector } from '../../../../store/hooks';
-import { selectShowChip } from '../../../../store/slice/gameStateSlice';
-import SVGChip from '../../../../common/components/SVG/SVGChip';
+import { StringHelper } from '../../utils/StringHelper';
+import { useAppSelector } from '../../../store/hooks';
+import { selectShowChip } from '../../../store/slice/gameStateSlice';
+import SVGChip from '../SVG/SVGChip';
 
 interface IProps {
     value: number;
@@ -12,7 +12,7 @@ interface IProps {
     style?: CSSProperties;
 }
 
-const TableBetChip = ({ value, color, style }: IProps) => {
+const ChipBet = ({ value, color, style }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);
@@ -75,4 +75,4 @@ const TableBetChip = ({ value, color, style }: IProps) => {
     );
 };
 
-export default TableBetChip;
+export default ChipBet;

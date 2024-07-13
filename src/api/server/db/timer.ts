@@ -211,7 +211,7 @@ export const timers = [
     },
     {
         pcode: 'p6b',
-        time: '9999999',
+        time: 'BET CLOSED',
         timer: 25,
     },
     {

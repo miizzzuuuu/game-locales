@@ -39,27 +39,9 @@ const ButtonAction = ({
         onClick?.();
     };
 
-    // const [renderUI, setRenderUI] = useState(true);
-
-    // const handleAnimationEnd: AnimationEventHandler = (e) => {
-    //     if (e.animationName.indexOf('fadeout') >= 0) {
-    //         setRenderUI(false);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     if (show) {
-    //         setRenderUI(true);
-    //     }
-    // }, [show]);
-
-    // if (!show && !renderUI) {
-    //     return null;
-    // }
-
     return (
         <Button
-            className={`${styles['button-action']}${deviceClassName}${show ? ` ${styles.apear}` : ` ${styles.disapear}`}`}
+            className={`${styles['button-action']}${deviceClassName}${show ? '' : ` ${styles.disapear}`}`}
             style={style}
             onClick={handleClick}
             disabled={disabled}

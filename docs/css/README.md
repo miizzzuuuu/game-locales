@@ -7,4 +7,8 @@
 
 ## CSS Modules
 
-Learn more about (css-modules)[https://github.com/css-modules/css-modules]
+Learn more about [css-modules](https://github.com/css-modules/css-modules)
+
+## Styles for Portrait and Landscape
+
+To differentiate styles with different orientations, use [this guide](differentiating.md)

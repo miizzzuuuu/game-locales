@@ -49,9 +49,10 @@
     }
 
     .video-background {
-        flex: 1;
-        width: 100%;
+        height: calc(100% + 0.2rem);
+        width: calc(100% + 0.5rem);
         background-image: var(--streaming-color-1);
+        transform: translateY(-0.2rem);
     }
 }
 

@@ -1,0 +1,38 @@
+export const properties = [
+    {
+        type: 'banner',
+        position: 'banner-1',
+        link: 'https://lobbybalancing.mngtto.com/new_rl_soccer/?pcode=p7e',
+        description: '',
+        status: '1',
+        content: 'https://landingsplash.xyz/banner/image/promotion/Banner_amping.jpg',
+        datecreate: '2019-08-08T11:54:18.000Z',
+    },
+    {
+        type: 'banner',
+        position: 'modal',
+        link: 'https://lobbybalancing.mngtto.com/new_rl_soccer/?pcode=p7e',
+        description: '-',
+        status: '1',
+        content: 'https://landingsplash.xyz/banner/image/promotion/popupbanner.jpg',
+        datecreate: '2019-01-10T05:34:37.000Z',
+    },
+    {
+        type: 'banner',
+        position: 'banner-2',
+        link: 'https://lobbybalancing.mngtto.com/new_rl_soccer/?pcode=p7e',
+        description: '',
+        status: '1',
+        content: 'https://landingsplash.xyz/banner/image/promotion/gamethumbnail.jpg',
+        datecreate: '2019-05-08T03:08:26.000Z',
+    },
+    {
+        type: 'running-text',
+        position: 'header',
+        link: '-',
+        description: '-',
+        status: '1',
+        content: 'Selamat Datang di Permainan Live Dealer',
+        datecreate: '2019-01-10T05:34:37.000Z',
+    },
+];

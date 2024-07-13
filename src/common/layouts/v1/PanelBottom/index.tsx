@@ -15,6 +15,7 @@ const PanelBottom = () => {
             <ButtonMenu />
             <ButtonCancelBet show={betIsOpen} />
 
+            {/* <ChipDeck version={1} show={betIsOpen} /> */}
             <ChipDeck version={1} show={betIsOpen} />
 
             <ButtonRebet show={betIsOpen} />

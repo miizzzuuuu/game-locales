@@ -1,0 +1,92 @@
+export const lastbets: Record<string, { periode: number; data: any[] }> = {
+    p6b: {
+        periode: 335854,
+        data: [
+            {
+                tebak: '05',
+                type: 'n',
+                taruhan: 1000,
+            },
+            {
+                tebak: '10',
+                type: 'n',
+                taruhan: 1000,
+            },
+            {
+                tebak: '2nd Row',
+                type: 'n6',
+                taruhan: 5000,
+            },
+            {
+                tebak: '17,18',
+                type: 'n2',
+                taruhan: 5000,
+            },
+            {
+                tebak: '03,04,07,08',
+                type: 'n4',
+                taruhan: 5000,
+            },
+            {
+                tebak: '11,15',
+                type: 'n2',
+                taruhan: 5000,
+            },
+            {
+                tebak: '14,15,18,19',
+                type: 'n4',
+                taruhan: 5000,
+            },
+        ],
+    },
+    p7d: {
+        periode: 2098853,
+        data: [
+            {
+                tebak: '01',
+                type: 'n',
+                taruhan: 1000,
+            },
+            {
+                tebak: '05,06',
+                type: 'n2',
+                taruhan: 1000,
+            },
+            {
+                tebak: '10',
+                type: 'n',
+                taruhan: 1000,
+            },
+        ],
+    },
+    p7e: {
+        periode: 1909121,
+        data: [
+            {
+                button: '2nd 12',
+                group: 'n12',
+                value: 5000,
+            },
+            {
+                button: '05,06,08,09',
+                group: 'n4',
+                value: 5000,
+            },
+        ],
+    },
+    m22: {
+        periode: 2622457,
+        data: [
+            {
+                button: 'player',
+                group: 'player',
+                value: 5000,
+            },
+            {
+                button: 'bankerpair',
+                group: 'bankerpair',
+                value: 5000,
+            },
+        ],
+    },
+};

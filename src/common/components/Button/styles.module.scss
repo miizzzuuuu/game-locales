@@ -4,11 +4,11 @@
     opacity: var(--opacity);
 
     scale: 1;
-    transition: scale 0.2;
+    transition: scale 0.3;
 
     &:active:not(:disabled) {
         scale: 0.85;
-        transition: scale 0.2;
+        transition: scale 0.3;
     }
 
     &:disabled {
