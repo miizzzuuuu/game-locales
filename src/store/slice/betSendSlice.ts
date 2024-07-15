@@ -60,4 +60,6 @@ export const {
     selectIds: selectIdsBetSend,
 } = betSendAdapter.getSelectors((state: RootState) => state.betSend);
 
+export const selectTotalBetSend = (state: RootState) => state.betSend.total_bet;
+
 export default betSendSlice.reducer;

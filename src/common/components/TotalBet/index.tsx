@@ -1,5 +1,6 @@
 import { useAppSelector } from '../../../store/hooks';
 import { selectTotalBetAdd } from '../../../store/slice/betAddSlice';
+import { selectTotalBetSend } from '../../../store/slice/betSendSlice';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import { StringHelper } from '../../utils/StringHelper';
 import LabelTranslate from '../LabelTranslate';
@@ -9,6 +10,7 @@ import styles from './styles.module.scss';
 
 const TotalBet = () => {
     const totalPlaceBet = useAppSelector(selectTotalBetAdd);
+    const totalSendBet = useAppSelector(selectTotalBetSend);
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
@@ -20,7 +22,7 @@ const TotalBet = () => {
                 <LabelTranslate value="total-bet" className={styles['desc']} />
 
                 <span className={styles['value']}>
-                    {StringHelper.formatMoneyOnlyNumber(totalPlaceBet, 'id')}
+                    {StringHelper.formatMoneyOnlyNumber(totalPlaceBet + totalSendBet, 'id')}
                 </span>
             </div>
         </div>
