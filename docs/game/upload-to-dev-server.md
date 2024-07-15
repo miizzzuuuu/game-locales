@@ -19,17 +19,14 @@ Connect to the server:
 
 `43.246.216.38`
 
-SFTP
+### SFTP
 
 host: 43.246.216.38
-
 port: 2222
-
 username: idntotogames
-
 password: IDNtoto38#\*
 
-Upload all the folders and files inside `dist-dev` to the respective game paths:
+### Upload all the folders and files inside `dist-dev` to the respective game paths:
 
 -   **Sicbo Dice - p12**
 
