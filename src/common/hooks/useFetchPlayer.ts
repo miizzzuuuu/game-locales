@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
+import APIManager, { ENDPOINTS } from '../utils/APIManager';
 import { getPlayerData } from '../../services/api/playerData';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { setPlayerData } from '../../store/slice/playerSlice';
 import { setChipBase } from '../../store/slice/chipSlice';
+import { GameHelper } from '../utils/GameHelper';
+import { HistoryItem, setHistory } from '../../store/slice/resultSlice';
+import { AppDispatch } from '../../store/store';
 
 export function useFetchPlayer() {
     const dispatch = useAppDispatch();
@@ -21,6 +24,7 @@ export function useFetchPlayer() {
                 if (!ignore) {
                     dispatch(setPlayerData(data));
                     dispatch(setChipBase(data.chipBase));
+                    await getHistory(dispatch);
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load player data completed');
@@ -29,9 +33,9 @@ export function useFetchPlayer() {
                 APIManager.handleErrorApi(error);
             }
         };
+        
 
         fetchPlayerData();
-
         return () => {
             ignore = true;
         };
@@ -39,3 +43,26 @@ export function useFetchPlayer() {
 
     return { finish };
 }
+
+
+const fetchHistory = async (gameName: string): Promise<HistoryItem[]> => {
+    const response =await APIManager.get<HistoryItem[]>(ENDPOINTS.listGame+ `/${gameName}/1`);
+
+    if ('history' in response.data) {
+        return response.data.history as any;
+    } else {
+        throw new Error(
+            "Invalid response format: 'history' or 'totalHistory' property is missing",
+        );
+    }
+};
+
+const getHistory = async (dispatch: AppDispatch) => {
+    try {
+        const gameName = GameHelper.getGameName();
+        const data = await fetchHistory(gameName);
+        dispatch(setHistory(data));
+    } catch (error) {
+        console.log('get history error', error);
+    }
+};

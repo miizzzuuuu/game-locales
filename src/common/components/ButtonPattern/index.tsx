@@ -1,17 +1,19 @@
-import { useAppDispatch } from '../../../store/hooks';
-import { toggleMenuStatistic } from '../../../store/slice/menuSlice';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { togglePattern } from '../../../store/slice/resultSlice';
 import ButtonAction from '../ButtonAction';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconPattern from './SVG/SVGIconPattern';
 
 const ButtonPattern = () => {
     const dispatch = useAppDispatch();
-
+    const showPatternUI = useAppSelector((state) => state.result.showPatternUI);
+const color = showPatternUI? "#00C3D8" : "#fff"
     return (
         <ButtonAction
+            borderColor={color}
             label={<LabelTranslate value="pattern" />}
-            icon={<SVGIconPattern />}
-            onClick={() => dispatch(toggleMenuStatistic())}
+            icon={<SVGIconPattern strokeColor={color}/>}
+            onClick={() => dispatch(togglePattern())}
         />
     );
 };

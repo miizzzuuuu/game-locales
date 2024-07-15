@@ -9,8 +9,8 @@ import { RenderCard } from './RenderCard/RenderCard';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { Bet } from '../../../types';
-import TableBetChip from '../TableBet/TableBetChip';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import ChipBet from '../../../common/components/ChipBet';
 // import { RenderCard } from './RenderCard';
 
 interface IProps extends PropsWithChildren {
@@ -35,7 +35,7 @@ const TigerBetButton = (
 
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
-            onClick={() => handleClick(bet)}
+           
         >
 
             {
@@ -64,7 +64,7 @@ const TigerBetButton = (
                 >
 
                     {chip > 0 && (
-                        <TableBetChip
+                        <ChipBet
                             value={chip}
                             color={color}
                         />
@@ -103,6 +103,7 @@ const TigerBetButton = (
                 fill="none"
                 viewBox="0 0 128 100"
                 style={{ opacity: scanNumber && scanNumber.submit && scanNumber.win !== "tiger" ? 0.6 : 1 }}
+                onClick={() => handleClick(bet)}
             >
                 <path
                     fill="url(#paint0_linear_234_81)"

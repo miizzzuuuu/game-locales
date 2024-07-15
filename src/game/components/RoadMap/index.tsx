@@ -21,8 +21,9 @@ function RoadMap(props: IProps) {
 
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
     const darkMode = false;
-    const data = dummyM22history.m23.history
-    //useAppSelector((state) => state.history.history);
+    const data = 
+    //dummyM22history.m23.history
+    useAppSelector((state) => state.result.history);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const [historyBlink, setBlink] = useState(false);
 

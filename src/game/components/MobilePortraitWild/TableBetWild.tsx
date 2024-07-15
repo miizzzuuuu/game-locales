@@ -24,6 +24,7 @@ const TableBetWild = () => {
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
     const containerRef = useRef<HTMLDivElement>(null);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
+    const showPatternUI = useAppSelector((state) => state.result.showPatternUI);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
 
@@ -350,7 +351,7 @@ const TableBetWild = () => {
         <div ref={containerRef} className={[styles.tableBet, betIsOpen ? "" : styles.close, deviceClassName, "portrait"].join(" ")}>
 
 
-            {(betIsOpen && DisplayHelper.getOrientation() == "landscape") ||  DisplayHelper.getOrientation() == "portrait" ?
+            {(betIsOpen && DisplayHelper.getOrientation() == "landscape" && showPatternUI) ||  DisplayHelper.getOrientation() == "portrait" ?
                 <>
                     <RoadMap tableSection={tableSection} />
                     <div className={childContainerClassName}>

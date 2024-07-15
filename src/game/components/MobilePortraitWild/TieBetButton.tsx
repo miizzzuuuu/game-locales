@@ -5,8 +5,8 @@ import './styles.scss';import { useAppSelector } from '../../../store/hooks';
 import { Bet } from '../../../types';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
-import TableBetChip from '../TableBet/TableBetChip';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import ChipBet from '../../../common/components/ChipBet';
 // import CardHelper from '../../../utils/CardHelper';
 
 interface IProps extends PropsWithChildren {
@@ -47,7 +47,7 @@ const TieBetButton = (
                 style={{left: "80%", top: "15%"}}
                 >
                 {chip > 0 && (
-                    <TableBetChip
+                    <ChipBet
                         value={chip}
                         color={color}
                     />
@@ -68,6 +68,7 @@ const TieBetButton = (
                     zIndex: 3,
                     opacity: scanNumber && scanNumber.submit && scanNumber.win !== "tie" ? 0.6 : 1
                 }}
+                onClick={() => handleClick(bet)}
 
             >
                 <path

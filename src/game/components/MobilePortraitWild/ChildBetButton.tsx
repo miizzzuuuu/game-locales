@@ -4,8 +4,8 @@ import stylesLandscape from './table-bet-landscape.module.scss';
 import { Bet } from '../../../types';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
-import TableBetChip from '../TableBet/TableBetChip';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import ChipBet from '../../../common/components/ChipBet';
 
 interface IProps extends PropsWithChildren {
     className?: string;
@@ -48,7 +48,7 @@ const ChildBetButton = (
                     <div className={styles['slot-chip']}>
 
                         {chip > 0 && (
-                            <TableBetChip
+                            <ChipBet
                                 value={chip}
                                 color={color}
                             />

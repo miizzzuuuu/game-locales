@@ -33,7 +33,7 @@ export const ENDPOINTS = {
     timers: '/v2/timers', // path :pcode
 
     sendBet: '/games/send/send',
-
+    listGame: '/games/list-game',
     result: '/v2/result', // path :pcode, query ?page=&per_page=
     transaction: '/v2/transactions', // path :pcode. query ?page=&per_page=&date=
 };

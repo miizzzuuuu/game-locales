@@ -6,8 +6,8 @@ import { RenderCard } from './RenderCard/RenderCard';
 import { Bet } from '../../../types';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
-import TableBetChip from '../TableBet/TableBetChip';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import ChipBet from '../../../common/components/ChipBet';
 // import LevelStat from '../MobilePortrait/Content/LevelStat';
 
 interface IProps extends PropsWithChildren {
@@ -58,7 +58,7 @@ const SuperWildBetButton = (
                 >
 
                     {chip > 0 && (
-                        <TableBetChip
+                        <ChipBet
                             value={chip}
                             color={color}
                         />

@@ -2,6 +2,9 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TwentyFourDHelper } from '../../game/utils/TwentyFourDHelper';
 import { ScanNumberData } from '../../types';
+import { dummyM22history } from '../../game/components/RoadMap';
+
+
 
 export interface ResultState {
     periode: number | null;
@@ -10,8 +13,24 @@ export interface ResultState {
     status: 'idle' | 'spin' | 'done';
     scanNumber: ScanNumberData | undefined;
     winAmount: number;
+    showPatternUI: boolean;
     winStatus: 'idle' | 'running' | 'show';
+    history: HistoryItem[] 
 }
+
+export type HistoryItem = {
+    "dragon": string
+    "tiger": string
+    "result": string
+    "value": number,
+    "tanggal": string
+    "periode": number,
+    "hitung": string
+    "gamekey": number,
+    "idnomor": number,
+    "win": string
+};
+
 
 const initialState: ResultState = {
     periode: null,
@@ -20,13 +39,21 @@ const initialState: ResultState = {
     scanNumber: undefined,
     status: 'idle',
     winAmount: 0,
+    showPatternUI: false,
     winStatus: 'idle',
+    history: dummyM22history.m23.history
 };
 
 const baseSlice = createSlice({
     name: 'result',
     initialState,
     reducers: {
+        setHistory: (state, action: PayloadAction<HistoryItem[]>) => {
+            state.history = action.payload;
+        },
+        addHistory: (state, action: PayloadAction<HistoryItem>) => {
+            state.history.push(action.payload);
+        },
         setResult: (state, action: PayloadAction<number>) => {
             const resultNumber = action.payload;
             const winBet = TwentyFourDHelper.getWinResult(resultNumber);
@@ -36,8 +63,14 @@ const baseSlice = createSlice({
 
             state.status = 'spin';
         },
-        doneResult: (state) => {
+        doneResult: (state, action) => {
             state.status = 'done';
+            if(action.payload)
+            state.history.push(action.payload);
+
+        },
+        togglePattern: (state) => {
+            state.showPatternUI = !state.showPatternUI;
         },
         setScanNumber: (state, action: PayloadAction<ScanNumberData>) => {
             console.log("setScannumber", action.payload);
@@ -65,7 +98,7 @@ const baseSlice = createSlice({
     },
 });
 
-export const {setScanNumber, setResult, doneResult, resetResult, setWinAmount, endWinAnimation, clearWinAmount } =
+export const {setScanNumber, setHistory, addHistory, togglePattern, setResult, doneResult, resetResult, setWinAmount, endWinAnimation, clearWinAmount } =
     baseSlice.actions;
 
 export const selectResultNumber = (state: RootState) => state.result.resultNumber;
