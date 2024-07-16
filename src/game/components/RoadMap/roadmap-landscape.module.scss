@@ -1,12 +1,13 @@
 
 .container {
     display: flex;
-    flex-direction: column-reverse;
-    padding-inline: 0.5rem;
+    flex-direction: column;
+    padding-right: 1rem;
 }
 
 .scrolledYRoadmap {
-    height: 30vh;
+    position: relative;
+    height: 22vh;
     // padding-bottom: 1%;
     width: 100%;
     overflow-x: scroll;

@@ -1,0 +1,51 @@
+.roadmap-table.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.roadmap-table.bead-road.invisible {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1;
+}
+
+.roadmap-table {
+    transition-duration: 500ms;
+    transition-property: transform, top, left;
+}
+
+
+.roadmap-table.big-eye-road {
+
+
+    &.full {
+        transform: translate(-3px, -123px) scale(2) !important;
+    }
+}
+
+.roadmap-table.small-road {
+
+
+    &.full {
+        transform: translate(-195px, -123px) scale(2) !important;
+
+    }
+}
+
+
+.roadmap-table.cockroach-road {
+
+
+    &.full {
+        transform: translate(-387px, -123px) scale(2) !important;
+    }
+}
+.sl-roadmap-alternating {
+    animation: sl-roadmap-transition 0.25s infinite alternate;
+}
+
+@keyframes sl-roadmap-transition {
+    to {
+        opacity: 0;
+    }
+}
