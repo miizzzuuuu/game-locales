@@ -10,6 +10,7 @@ import { doneResult, setResult, setScanNumber } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
+import { addHistory } from '../slice/historySlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -98,11 +99,14 @@ export const scanNumberListener = (startListening: AppStartListening) => {
             const scanNumber = action.payload;
 
             dispatch(setScanNumber(scanNumber));
-            
+
             debounce(() => {
                 if (scanNumber.submit) {
                     dispatch(
-                        doneResult(scanNumber as any),
+                        doneResult(scanNumber as any)
+                    );
+                    dispatch(
+                        addHistory(scanNumber as any)
                     );
                 }
             }, 5000)();
@@ -115,15 +119,15 @@ export const scanNumberListener = (startListening: AppStartListening) => {
 
 let timerId: any;
 function debounce(callback: () => void, wait: number) {
-  return () => {
-      if(timerId) {
-        
-      }else{
-          timerId = setTimeout(() => {
-              clearTimeout(timerId);
-              timerId = undefined;
+    return () => {
+        if (timerId) {
+
+        } else {
+            timerId = setTimeout(() => {
+                clearTimeout(timerId);
+                timerId = undefined;
             }, wait);
             callback();
-      }
+        }
     };
 }

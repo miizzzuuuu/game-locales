@@ -6,7 +6,7 @@ import { LoadingHelper } from '../utils/LoadingHelper';
 import { setPlayerData } from '../../store/slice/playerSlice';
 import { setChipBase } from '../../store/slice/chipSlice';
 import { GameHelper } from '../utils/GameHelper';
-import { HistoryItem, setHistory } from '../../store/slice/resultSlice';
+import { HistoryItem, setHistory } from '../../store/slice/historySlice';
 import { AppDispatch } from '../../store/store';
 
 export function useFetchPlayer() {
@@ -45,8 +45,8 @@ export function useFetchPlayer() {
 }
 
 
-const fetchHistory = async (gameName: string): Promise<HistoryItem[]> => {
-    const response =await APIManager.get<HistoryItem[]>(ENDPOINTS.listGame+ `/${gameName}/1`);
+const fetchHistory = async (): Promise<HistoryItem[]> => {
+    const response =await APIManager.get<HistoryItem[]>(ENDPOINTS.result + `/${GameHelper.pcode}`);
 
     if ('history' in response.data) {
         return response.data.history as any;
@@ -59,8 +59,7 @@ const fetchHistory = async (gameName: string): Promise<HistoryItem[]> => {
 
 const getHistory = async (dispatch: AppDispatch) => {
     try {
-        const gameName = GameHelper.getGameName();
-        const data = await fetchHistory(gameName);
+        const data = await fetchHistory();
         dispatch(setHistory(data));
     } catch (error) {
         console.log('get history error', error);

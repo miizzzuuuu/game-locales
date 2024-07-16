@@ -24,7 +24,7 @@
     .panel-history,
     .panel-bet {
         padding: 0 0.8rem;
-        height: 100%;
+        height: fit-content;
     }
 }
 
@@ -41,6 +41,11 @@
     .panel-bet {
         // padding: 0 5.7rem 0;
         padding: 0 14.7rem 0;
+    }
+    .panel-history {
+        // transform: translate(0%, 240%);
+        // position: relative;
+        top: 3.5rem;
     }
 }
 

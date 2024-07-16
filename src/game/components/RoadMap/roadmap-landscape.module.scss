@@ -1,8 +1,13 @@
 
+.container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-inline: 0.5rem;
+}
 
 .scrolledYRoadmap {
     height: 30vh;
-    padding-bottom: 1%;
+    // padding-bottom: 1%;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -50,7 +55,7 @@
         // margin-left: -14px;
         svg {
             padding-right: 4px;
-            padding-bottom: 8px;
+            // padding-bottom: 8px;
 
         }
     }

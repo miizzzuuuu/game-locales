@@ -4,6 +4,7 @@ import betSendReducer from './slice/betSendSlice';
 import chipReducer from './slice/chipSlice';
 import gameReducer from './slice/gameSlice';
 import gameStateReducer from './slice/gameStateSlice';
+import historyReducer from './slice/historySlice';
 import lastBetsReducer from './slice/lastBetsSlice';
 import menuReducer from './slice/menuSlice';
 import playerReducer from './slice/playerSlice';
@@ -24,6 +25,7 @@ export const staticReducers = {
     menu: menuReducer,
     player: playerReducer,
     result: resultReducer,
+    history: historyReducer,
     settings: settingsReducer,
     timer: timerReducer,
     window: windowReducer,

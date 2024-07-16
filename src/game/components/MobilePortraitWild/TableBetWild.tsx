@@ -6,9 +6,6 @@ import DragonBetButton from './DragonBetButton';
 import TieBetButton from './TieBetButton';
 import TigerBetButton from './TigerBetButton';
 import ChildBetButton from './ChildBetButton';
-import ShoeStat from './Statistic';
-
-import RoadMap from './../RoadMap';
 import SuperWildBetButton from './SuperWildBetButton';
 import { useAppSelector } from '../../../store/hooks';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
@@ -24,7 +21,6 @@ const TableBetWild = () => {
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
     const containerRef = useRef<HTMLDivElement>(null);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-    const showPatternUI = useAppSelector((state) => state.result.showPatternUI);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
 
@@ -349,19 +345,6 @@ const TableBetWild = () => {
 
     return <>
         <div ref={containerRef} className={[styles.tableBet, betIsOpen ? "" : styles.close, deviceClassName, "portrait"].join(" ")}>
-
-
-            {(betIsOpen && DisplayHelper.getOrientation() == "landscape" && showPatternUI) ||  DisplayHelper.getOrientation() == "portrait" ?
-                <>
-                    <RoadMap tableSection={tableSection} />
-                    <div className={childContainerClassName}>
-                        <ShoeStat isLandscape={false} />
-                    </div>
-                </>
-                :<></>
-            }
-
-
             <div className={styles.table}>
 
                 {sections[tableSection]({

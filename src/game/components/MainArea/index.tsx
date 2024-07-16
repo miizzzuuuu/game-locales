@@ -3,6 +3,7 @@ import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import HistoryResult from '../HistoryResult';
 import TableBetWild from '../MobilePortraitWild/TableBetWild';
+import RoadMap from '../RoadMap';
 // import TableBet from '../TableBet';
 import styles from './styles.module.scss';
 
@@ -17,6 +18,11 @@ const MainArea = () => {
 
             <div className={styles['panel-bet']}>
                 <TableBetWild />
+
+            </div>
+            <div className={styles['panel-history']}>
+
+                <RoadMap tableSection={"more"} />
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
-import { BaseV2Roadmap, IKeyNumberDict } from "./M23";
-export const pcode = "m23";
+import { GameHelper } from "../../../../../common/utils/GameHelper";
+import { IKeyNumberDict } from "../game/M23";
+import { BaseV2Roadmap } from "./V2Roadmap";
 
-const basePcode: string = pcode;
 
 const isPortrait =
     () => true;
@@ -249,6 +249,7 @@ function checkLastIdx(ary: Array<any>, idx: number) {
 
 export function prepareV3Render(this: BaseV2Roadmap) {
     // console.log("prepareV3Render props", mainClass.props);
+    const basePcode: string = GameHelper.getBasePcode();
 
 
     this.firstDisplayedCol = 0;
@@ -405,14 +406,12 @@ function renderV3(this: BaseV2Roadmap) {
 
     const roadmapColumns = nary(this.totalColumns! + 2);
     const {
-        // pcode,
         darkMode, small, full, type } = this.props;
 
     const classList = joinClassList(
         "roadmap-table",
         "v3",
         full ? full == type ? "full" : "invisible" : "",
-        pcode,
         (small ? "small" : ""),
         (darkMode ? "dark" : ""),
         type
@@ -461,11 +460,11 @@ function renderV3(this: BaseV2Roadmap) {
                                 // Shio Fights
                                 type === "shio" ? (
                                     nary(4).map((row, rowIdx) =>
-                                        <div className="row" key={"cBR_" + this.props.pcode + "_" + row}>
+                                        <div className="row" key={"cBR_" + "_" + row}>
                                             {
                                                 roadmapColumns.map((col, colIdx) =>
                                                 (
-                                                    <div key={"cBR_" + this.props.pcode + "_" + row + "_" + col}>
+                                                    <div key={"cBR_" + row + "_" + col}>
                                                         {
                                                             this.roadmapDisplay![rowIdx][colIdx + this.firstDisplayedCol!] !== undefined ?
                                                                 this.roadmapDisplay![rowIdx][colIdx + this.firstDisplayedCol!] : null
@@ -475,11 +474,6 @@ function renderV3(this: BaseV2Roadmap) {
                                                             this.props.expanded || this.props.small
                                                                 ? null
                                                                 : null
-                                                            // <CardTooltip
-                                                            //     cardset={this.props.history[colIdx * 4 + rowIdx]}
-                                                            //     pcode={this.props.pcode}
-                                                            //     langdata={this.props.langdata}
-                                                            // />
                                                         }
                                                     </div>
                                                 )
@@ -492,7 +486,7 @@ function renderV3(this: BaseV2Roadmap) {
                                     //Predictions
                                     type === "predictions"
                                         ?
-                                        this.renderPredictions()
+                                        this.renderPredictions(this)
                                         // null
                                         : <div>Unknown type: {type}</div>
 
@@ -511,34 +505,46 @@ function renderV3(this: BaseV2Roadmap) {
     //     </div>
     // );
 }
-export function renderPredictions(this: BaseV2Roadmap) {
-    const { pcode } = this.props;
-    const clonePcode = pcode;
+export function renderPredictions(gameRoad: any) {
+    const basePcode: string = GameHelper.getBasePcode();
+    const clonePcode = basePcode;
 
     const blueLetter =
         clonePcode === 'm22' || clonePcode === 'm32' || basePcode === 'm38'
-            ? 'P'
+            ?  <text
+            x="5" y="10"
+            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
+            fill="white">PLAYER</text>
             : clonePcode === 'm23'
-                ? <path
-                    fill="#fff"
-                    d="M4.592 10.5V3.522h2.224l.344.005c.175.003.343.015.504.034.553.071 1.02.268 1.4.591.385.32.676.729.873 1.226.197.498.295 1.042.295 1.633s-.098 1.136-.295 1.633a3.036 3.036 0 01-.872 1.23c-.382.32-.848.516-1.4.587-.16.02-.326.03-.5.034l-.349.005H4.592zm1.187-1.1h1.037c.097 0 .22-.003.368-.01.152-.006.286-.02.403-.043a1.38 1.38 0 00.804-.441c.207-.233.359-.515.455-.848.1-.333.15-.682.15-1.047 0-.378-.05-.733-.15-1.066a2.1 2.1 0 00-.465-.838 1.398 1.398 0 00-.794-.431 2.07 2.07 0 00-.403-.044 8.761 8.761 0 00-.368-.01H5.78V9.4zm5.599 1.1V3.522h2.883c.068 0 .155.003.262.01.106.003.205.013.295.029.404.061.737.195.998.402.265.207.46.469.587.785.129.314.194.662.194 1.047 0 .568-.144 1.058-.432 1.468-.287.407-.728.66-1.323.756l-.499.044h-1.797V10.5h-1.168zm4.007 0L14.01 7.66l1.187-.261 1.512 3.101h-1.323zm-2.84-3.528h1.668c.064 0 .137-.003.218-.01.08-.006.155-.019.223-.038a.878.878 0 00.455-.257c.113-.123.192-.262.237-.417.049-.155.073-.307.073-.455 0-.149-.024-.3-.073-.456a1.034 1.034 0 00-.237-.421.878.878 0 00-.456-.257.95.95 0 00-.222-.034 2.763 2.763 0 00-.218-.01h-1.667v2.355zm4.746 3.528l2.2-6.978h1.71l2.2 6.978H22.2l-1.997-6.26h.262l-1.972 6.26H17.29zm1.226-1.512v-1.09h3.663v1.09h-3.663zm8.45 1.657c-.453 0-.878-.079-1.275-.237A3.043 3.043 0 0124.65 9.7c-.297-.31-.53-.69-.697-1.138-.168-.453-.252-.97-.252-1.55 0-.763.142-1.414.426-1.954a3.024 3.024 0 011.168-1.245 3.235 3.235 0 011.671-.436c.86 0 1.54.2 2.04.6.505.398.845.957 1.023 1.677l-1.192.19a2.045 2.045 0 00-.65-.99c-.3-.248-.683-.372-1.148-.372-.468-.007-.858.095-1.168.305-.31.21-.544.506-.702.887-.155.38-.233.827-.233 1.337s.078.955.233 1.333c.155.374.387.667.697.877.314.21.705.318 1.173.324.352.004.66-.06.926-.189.265-.132.481-.33.649-.596.168-.268.281-.602.34-1.003h-1.232v-.915h2.472c.006.051.011.127.014.227.004.1.005.16.005.18 0 .659-.13 1.245-.392 1.759a2.9 2.9 0 01-1.115 1.201c-.485.291-1.064.436-1.74.436zm7.17 0c-.697 0-1.295-.152-1.793-.455a3.044 3.044 0 01-1.148-1.28c-.265-.545-.397-1.178-.397-1.899 0-.72.132-1.353.397-1.9.268-.545.651-.97 1.148-1.274.498-.307 1.096-.46 1.793-.46.698 0 1.296.153 1.793.46.5.304.884.729 1.149 1.275.268.546.402 1.179.402 1.9 0 .72-.134 1.353-.402 1.899a3.001 3.001 0 01-1.149 1.279c-.497.303-1.095.455-1.793.455zm0-1.1c.469.004.858-.1 1.168-.31.313-.21.548-.505.703-.886.158-.382.237-.827.237-1.338 0-.51-.079-.953-.237-1.328a1.897 1.897 0 00-.703-.881c-.31-.21-.7-.319-1.168-.325-.468-.003-.857.1-1.168.31-.31.21-.544.506-.702.887-.155.38-.233.827-.233 1.337s.078.955.233 1.333c.155.374.388.667.698.877.313.21.704.318 1.172.324zm4.308.955V3.522h1.183l3.237 4.919V3.522h1.182V10.5h-1.182l-3.237-4.918V10.5h-1.183z"
-                ></path>
+                ? <text
+                x="5" y="11"
+                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                fill="white">DRAGON</text>
                 : clonePcode === 'm27'
-                    ? 'T'
+                    ? <text
+                    x="5" y="11"
+                    style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                    fill="white">DI</text>
                     : clonePcode === 'm34'
                         ? 'Hi'
                         : 'E';
 
     const redLetter =
         clonePcode === 'm22' || clonePcode === 'm32' || basePcode === 'm38'
-            ? 'B'
+            ? <text
+            x="82" y="9.5"
+            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
+            fill="white">BANKER</text>
             : clonePcode === 'm23'
-                ? <path
-                    fill="#fff"
-                    d="M86.385 10.5V4.617h-2.258V3.522h5.684v1.095h-2.258V10.5h-1.168zm4.297 0V3.522h1.168V10.5h-1.167zm5.498.145c-.452 0-.877-.079-1.274-.237a3.044 3.044 0 01-1.042-.708c-.297-.31-.53-.69-.698-1.138-.168-.453-.252-.97-.252-1.55 0-.763.142-1.414.427-1.954a3.025 3.025 0 011.167-1.245 3.235 3.235 0 011.672-.436c.86 0 1.54.2 2.04.6.504.398.845.957 1.023 1.677l-1.192.19a2.047 2.047 0 00-.65-.99c-.3-.248-.683-.372-1.148-.372-.469-.007-.858.095-1.168.305-.31.21-.544.506-.703.887-.155.38-.232.827-.232 1.337s.077.955.232 1.333c.155.374.388.667.698.877.314.21.704.318 1.173.324.352.004.66-.06.925-.189.265-.132.482-.33.65-.596.168-.268.28-.602.339-1.003h-1.23v-.915h2.47a2.7 2.7 0 01.015.227l.005.18c0 .659-.131 1.245-.393 1.759a2.9 2.9 0 01-1.114 1.201c-.485.291-1.065.436-1.74.436zm4.22-.145V3.522h4.506v1.095h-3.338v1.72h2.757v1.096h-2.757v1.972h3.338V10.5H100.4zm5.669 0V3.522h2.883c.068 0 .155.003.262.01.106.003.205.013.295.029.404.061.737.195.999.402.265.207.46.469.586.785.129.314.194.662.194 1.047 0 .568-.144 1.058-.431 1.468-.288.407-.729.66-1.323.756l-.499.044h-1.798V10.5h-1.168zm4.007 0L108.7 7.66l1.187-.261 1.512 3.101h-1.323zm-2.839-3.528h1.667c.064 0 .137-.003.218-.01.081-.006.155-.019.223-.038a.88.88 0 00.455-.257c.113-.123.192-.262.238-.417.048-.155.072-.307.072-.455 0-.149-.024-.3-.072-.456a1.045 1.045 0 00-.238-.421.88.88 0 00-.455-.257.949.949 0 00-.223-.034 2.777 2.777 0 00-.218-.01h-1.667v2.355z"
-                ></path>
+                ?  <text
+                x="85" y="11"
+                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                fill="white">TIGER</text>
                 : clonePcode === 'm27'
-                    ? 'D'
+                    ? <text
+                x="85" y="11"
+                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                fill="white">TIAN</text>
                     : clonePcode === 'm34'
                         ? 'Lo'
                         : 'O';
@@ -546,39 +552,39 @@ export function renderPredictions(this: BaseV2Roadmap) {
     const bluePredictionArray =
         clonePcode === 'm22' || clonePcode === 'm32' || clonePcode === 'm38'
             // @ts-ignore   
-            ? this.playerPrediction
+            ? gameRoad.playerPrediction
             : clonePcode === 'm23'
                 // @ts-ignore   
-                ? this.dragonPrediction
+                ? gameRoad.dragonPrediction
                 : clonePcode === 'm27'
                     // @ts-ignore   
 
-                    ? this.tianPrediction
+                    ? gameRoad.tianPrediction
                     : clonePcode === 'm34'
                         // @ts-ignore   
 
-                        ? this.hiPrediction
+                        ? gameRoad.hiPrediction
                         // @ts-ignore   
 
-                        : this.evenPrediction; //FanTan
+                        : gameRoad.evenPrediction; //FanTan
 
     const redPredictionArray =
         clonePcode === 'm22' || clonePcode === 'm32' || basePcode === 'm38'
             // @ts-ignore   
 
-            ? this.bankerPrediction
+            ? gameRoad.bankerPrediction
             : clonePcode === 'm23'
                 // @ts-ignore   
-                ? this.tigerPrediction
+                ? gameRoad.tigerPrediction
                 : clonePcode === 'm27'
                     // @ts-ignore   
-                    ? this.diPrediction
+                    ? gameRoad.diPrediction
                     : clonePcode === 'm34'
                         // @ts-ignore   
-                        ? this.loPrediction
+                        ? gameRoad.loPrediction
                         // @ts-ignore   
-                        : this.oddPrediction; //FanTan
-
+                        : gameRoad.oddPrediction; //FanTan
+                // @ts-ignore   
     //Template return, no need to change
     return (<>
         <svg
@@ -589,7 +595,7 @@ export function renderPredictions(this: BaseV2Roadmap) {
         >
 
             <g clipPath="url(#clip0_246_543)">
-                <rect width="75.091" height="14" x="0.818" fill="#F10149" rx="4"></rect>
+                <rect width="75.091" height="14" x="0.818" fill={gameRoad.layout.blueColor} rx="4"></rect>
                 <rect
                     width="26.091"
                     height="10.364"
@@ -602,15 +608,15 @@ export function renderPredictions(this: BaseV2Roadmap) {
                 {blueLetter}
 
                 <g filter="url(#filter0_d_246_543)">
-                
-                    {bluePredictionArray[0]({
-                        cx:"53.0002",cy:"7.00018"
+
+                    {bluePredictionArray[0] && bluePredictionArray[0]({
+                        cx: "53.0002", cy: "7.00018"
                     })}
-                    {bluePredictionArray[1]({
-                         cx:"60.8635",cy:"7.00018"
+                    {bluePredictionArray[1] && bluePredictionArray[1]({
+                        cx: "60.8635", cy: "7.00018"
                     })}
-                    {bluePredictionArray[2]({
-                        d:"M71.2735 4.45508L66.1826 9.54599" 
+                    {bluePredictionArray[2] && bluePredictionArray[2]({
+                        d: "M71.2735 4.45508L66.1826 9.54599"
                     })}
                 </g>
             </g>
@@ -619,7 +625,7 @@ export function renderPredictions(this: BaseV2Roadmap) {
                     width="62.091"
                     height="14"
                     x="80.909"
-                    fill="#D3942A"
+                    fill={gameRoad.layout.redColor}
                     rx="4"
                 ></rect>
                 <rect
@@ -633,17 +639,14 @@ export function renderPredictions(this: BaseV2Roadmap) {
                 ></rect>
                 {redLetter}
                 <g filter="url(#filter1_d_246_543)">
-
-
-                    {redPredictionArray[0]({
-                        cx:"120.091",cy:"7"
+                    {redPredictionArray[0] && redPredictionArray[0]({
+                        cx: "120.091", cy: "7"
                     })}
-
-                    {redPredictionArray[1](
-                         {cx:"127.954",cy:"7" }
+                    {redPredictionArray[1] && redPredictionArray[1](
+                        { cx: "127.954", cy: "7" }
                     )}
-                    {redPredictionArray[2]({
-                         d:"M138.364 4.455l-5.091 5.091"
+                    {redPredictionArray[2] && redPredictionArray[2]({
+                        d: "M138.364 4.455l-5.091 5.091"
                     })}
                 </g>
 
@@ -767,8 +770,8 @@ function getSimpleBaccaratResultArray(bigRoad: Array<any>) {
         return [];
 
     return bigRoad.map(item =>
-        item.win === "banker" ? "B" :
-            item.win === "player" ? "P" :
+        item.result === "banker" ? "B" :
+            item.result === "player" ? "P" :
                 "T"
     );
 }
@@ -788,18 +791,13 @@ function getSimpleBaccaratResultPairArray(bigRoad: Array<any>) {
 //Dragon & Tiger
 /** @param bigRoad props.history */
 function getSimpleDragonTigerResultArray(bigRoad: Array<any>) {
-    //big_road data:
-    // { "dragon": "Js", "tiger": "Kd", "value": "tiger", "periode": 42, "gamekey": "2803" }
-
-    //scanDragonTiger data:
-    //{ "pcode":"m23","dragon":"4h","tiger":"9c","value":"9","win":"tiger","submit":true,"periode":54,"gameSet":2803 }
 
     if (!bigRoad)
         return [];
 
     return bigRoad.map(item =>
-        item.win === "dragon" ? "D" :
-            item.win === "tiger" ? "T" : "t"
+        item.result === "dragon" ? "D" :
+            item.result === "tiger" ? "T" : "t"
     );
 }
 //ShioFight
@@ -809,8 +807,8 @@ function getSimpleShioFightResultArray(history: Array<any>) {
         return [];
 
     return history.map(item =>
-        item.win === "di" ? "D" :
-            item.win === "tian" ? "T" : "t"
+        item.result === "di" ? "D" :
+            item.result === "tian" ? "T" : "t"
     );
 }
 
