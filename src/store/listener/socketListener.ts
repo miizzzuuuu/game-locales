@@ -10,11 +10,8 @@ import { doneResult, setResult, setScanNumber } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
-<<<<<<< HEAD
 import { HistoryItem, addHistory } from '../slice/historySlice';
-=======
 import { updateGamePeriod } from '../slice/gameSlice';
->>>>>>> main
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({

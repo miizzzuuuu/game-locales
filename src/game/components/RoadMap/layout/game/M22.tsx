@@ -480,7 +480,7 @@ export default class M22 extends BaseV2Roadmap {
         const darkMode = true;
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
-        const periode = 1000 || useAppSelector((state) => state.result.periode);
+        const periode = useAppSelector((state) => state.result.periode);
         const a = periode?.toString().length
         const Layout = M22;
 
