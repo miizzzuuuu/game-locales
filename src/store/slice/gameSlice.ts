@@ -59,10 +59,14 @@ const gameSlice = createSlice({
             state.newSet = action.payload.newSet;
             state.fast_table = action.payload.fast_table;
         },
+
+        updateGamePeriod: (state, action: PayloadAction<number>) => {
+            state.periode = action.payload;
+        },
     },
 });
 
-export const { setGame } = gameSlice.actions;
+export const { setGame, updateGamePeriod } = gameSlice.actions;
 
 export const selectMin = (state: RootState) => state.game.min;
 export const selectMax = (state: RootState) => state.game.max;

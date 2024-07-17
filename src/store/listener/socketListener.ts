@@ -1,7 +1,7 @@
 import { Sound } from '../../services/sound';
 import { gameResultAction, loadNewValueAction } from '../actions/socketAction';
 import { AppStartListening } from '../listenerMiddleware';
-import { placeMultiBet } from '../slice/betAddSlice';
+import { newAddBetPeriod, placeMultiBet } from '../slice/betAddSlice';
 import { resetBetSend, selectAllBetSend } from '../slice/betSendSlice';
 import { setMessage } from '../slice/gameStateSlice';
 import { LastBetState, setLastBetData } from '../slice/lastBetsSlice';
@@ -10,6 +10,7 @@ import { setResult } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
+import { updateGamePeriod } from '../slice/gameSlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -23,6 +24,8 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
             const state = listenerApi.getState();
 
             dispatch(openTime(Number(data.timer)));
+            dispatch(updateGamePeriod(data.periode));
+            dispatch(newAddBetPeriod());
 
             const betSend = selectAllBetSend(state);
             if (betSend.length > 0) {
