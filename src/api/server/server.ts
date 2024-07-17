@@ -191,7 +191,7 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'p6b':
                         data = transactionsP6B;
                         break;
-                    case 'p7e':
+                    case 'p7':
                     case 'p7b':
                     case 'p7c':
                     case 'p7d':
