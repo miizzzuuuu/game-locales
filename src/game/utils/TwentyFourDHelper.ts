@@ -64,14 +64,14 @@ export class TwentyFourDHelper {
         'r-3': { button: '3rd Row', group: 'n6' },
         'r-4': { button: '4th Row', group: 'n6' },
 
-        'c-1-2': { button: '1st Column,2nd Column', group: 'n' },
-        'c-2-3': { button: '2nd Column,3rd Column', group: 'n' },
-        'c-3-4': { button: '3rd Column,4th Column', group: 'n' },
-        'c-4-5': { button: '4th Column,5th Column', group: 'n' },
-        'c-5-6': { button: '5th Column,6th Column', group: 'n' },
+        'c-1-2': { button: '1st Column,2nd Column', group: 'n4' },
+        'c-2-3': { button: '2nd Column,3rd Column', group: 'n4' },
+        'c-3-4': { button: '3rd Column,4th Column', group: 'n4' },
+        'c-4-5': { button: '4th Column,5th Column', group: 'n4' },
+        'c-5-6': { button: '5th Column,6th Column', group: 'n4' },
 
         'r-1-2': { button: '1st Row,2nd Row', group: 'n12' },
-        'r-3-4': { button: '3rd Row,4th Row', group: 'n' },
+        'r-3-4': { button: '3rd Row,4th Row', group: 'n12' },
     };
 
     static betMultiNumber: Record<string, Bet> = {
