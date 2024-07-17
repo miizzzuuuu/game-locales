@@ -87,48 +87,15 @@ export const scanNumberListener = (startListening: AppStartListening) => {
         actionCreator: scanNumberAction,
         effect: async (action, listenerApi) => {
             console.log('middleware: scanNumber');
-
-            console.log('middleware:scanNumber', {
-                action,
-                listenerApi,
-            });
-
             const dispatch = listenerApi.dispatch;
-            // const state = listenerApi.getState();
-
             const scanNumber = action.payload;
-
             dispatch(setScanNumber(scanNumber));
-
             debounce(() => {
                 if (scanNumber.submit) {
                     dispatch(
                         doneResult(scanNumber as any)
                     );
-                    function getFormattedDate() {
-                        const currentDate = new Date();
-                      
-                        // Get date components
-                        const year = currentDate.getFullYear();
-                        const month = padNumber(currentDate.getMonth() + 1); // Months are zero-indexed
-                        const day = padNumber(currentDate.getDate());
-                      
-                        // Get time components
-                        const hours = padNumber(currentDate.getHours());
-                        const minutes = padNumber(currentDate.getMinutes());
-                        const seconds = padNumber(currentDate.getSeconds());
-                      
-                        // Return the formatted date string
-                        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-                      }
-                      
-                      function padNumber(number: number) {
-                        return number.toString().padStart(2, '0');
-                      }
-                      
-                      // Example usage:
-                      const formattedDate = getFormattedDate();
-                    
+                    const formattedDate = getFormattedDate();
                     const result: HistoryItem  = {
                         ...scanNumber,
                         result: scanNumber.win,
@@ -136,21 +103,15 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                         value: scanNumber.value,
                         hitung: "1",
                         tanggal: formattedDate,
-
                     };
-
                     dispatch(
-
                         addHistory(result as any)
                     );
                 }
             }, 5000)();
-
-            // Sound.playCardScan();
         },
     });
 };
-
 
 let timerId: any;
 function debounce(callback: () => void, wait: number) {
@@ -166,3 +127,20 @@ function debounce(callback: () => void, wait: number) {
         }
     };
 }
+
+
+function padNumber(number: number) {
+    return number.toString().padStart(2, '0');
+  }
+
+function getFormattedDate() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = padNumber(currentDate.getMonth() + 1); // Months are zero-indexed
+    const day = padNumber(currentDate.getDate());
+    const hours = padNumber(currentDate.getHours());
+    const minutes = padNumber(currentDate.getMinutes());
+    const seconds = padNumber(currentDate.getSeconds());
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  }
+
