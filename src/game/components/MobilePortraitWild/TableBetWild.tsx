@@ -64,6 +64,7 @@ const TableBetWild = () => {
                         startColor='#F30049'
                         endColor='#59001B'
                         borderColor='#BD043C'
+                        ratio='25:1'
                         bgSvg={() => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
@@ -135,7 +136,7 @@ const TableBetWild = () => {
                         startColor='#59001B'
                         endColor='#F30049'
                         borderColor='#BD043C'
-
+                        ratio='25:1'
                         bgSvg={() => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
@@ -202,7 +203,7 @@ const TableBetWild = () => {
                         //   className={classes}
                         bet={{ button: "dragon pair", group: "dragon-child" }}
                         opacity={scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.wild) ? 0.6 : 1}
-
+                        ratio='12:1'
                         chipCanBlinking
                         rounded='bottom-left'
                         startColor='#F30049'
@@ -279,6 +280,7 @@ const TableBetWild = () => {
                         startColor='#59001B'
                         endColor='#F30049'
                         borderColor='#BD043C'
+                        ratio='12:1'
                         bgSvg={() => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"

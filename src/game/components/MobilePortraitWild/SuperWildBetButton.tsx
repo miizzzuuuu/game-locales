@@ -27,10 +27,12 @@ const SuperWildBetButton = (
     // const totalPlacedChipCount = "12,640,600";
     // const totalPlacedUserCount = "12";
     // const domainPlacedPercentage = "12";
-    // const label = "DRAGON";
-    // const dividen = "1:1";
+    const label = "Super Wild";
+    const ratio = "80:1";
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
+    const isLose = scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.tiger && scanNumber.dragon == scanNumber.wild)
+    const isWin = scanNumber && scanNumber.submit && !isLose;
 
     return (
         <>
@@ -38,7 +40,7 @@ const SuperWildBetButton = (
             <div
 
                 style={{
-                    opacity: scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.tiger && scanNumber.dragon == scanNumber.wild) ? 0.6 : 1
+                    opacity: isLose ? 0.6 : 1
                 }}
                 onClick={() => handleClick(bet)}
 
@@ -47,9 +49,9 @@ const SuperWildBetButton = (
                 <div className={styles.tieLabel} >
                     <div style={{}}>
 
-                        <span className='text-lg'>Super Wild</span>
+                        <span className='text-lg'>{label}</span>
                         <br />
-                        <span className='text-white/[.75]'>1:1</span>
+                        <span className='text-white/[.75]'>{ratio}</span>
                     </div>
 
                 </div>
@@ -98,17 +100,21 @@ const SuperWildBetButton = (
                 onClick={() => handleClick(bet)}
                 style={{
                     zIndex: 3,
-                    opacity: scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.tiger && scanNumber.dragon == scanNumber.wild) ? 0.6 : 1
+                    opacity: isLose ? 0.6 : 1
                 }}
 
 
             >
                 <path
+                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+
                     fill="url(#paint0_linear_234_251)"
                     stroke="#00A4EA"
                     d="M128.47 63.5H1.531a.973.973 0 01-.982-1.003c.604-15.664 6.885-31.148 18.843-43.105 25.189-25.19 66.028-25.19 91.217 0 11.958 11.957 18.238 27.441 18.843 43.105a.973.973 0 01-.982 1.003z"
                 ></path>
                 <path
+                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+
                     fill="#00C4D1"
                     fillOpacity="0.24"
                     d="M4.736 64.02C5.666 31.272 32.491 5 65.49 5c32.998 0 59.823 26.272 60.753 59.02h-3.433v-.841H68.219V57.12h54.019l-1.118-5.25h-.052C116.155 32.294 101 16.515 81.633 10.822l-1.976-.494-3.275-.832v32.027h15.883v-5.251H81.607V16.36c16.481 5.355 29.375 18.821 34.028 35.51H68.167V8.587h-5.251v43.257H15.448C20.1 35.181 33.02 21.69 49.476 16.334v19.913H38.818v5.251H54.7V9.471l-3.275.832-1.95.546C30.11 16.516 14.954 32.295 10.041 51.844h-.052L8.87 57.096H62.89v6.057H8.299v.867H4.736z"

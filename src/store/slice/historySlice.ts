@@ -1,6 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { dummyM22history } from '../../game/components/RoadMap/dummyData';
-import { GameHelper } from '../../common/utils/GameHelper';
 
 
 
@@ -26,7 +25,7 @@ export type HistoryItem = {
 const initialState: ResultState = {
     showPatternUI: false,
     status: 'idle',
-    history: dummyM22history.m22.history
+    history: dummyM22history.m27.history
 };
 
 const baseSlice = createSlice({

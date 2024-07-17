@@ -256,7 +256,7 @@ body {
     /* aspect-ratio: 25/9; */
     position: absolute;
     left: 50%;
-    bottom: -25%;
+    bottom: -30%;
     transform: translate(-50%, -30%);
     padding-left: 5.5rem;
     padding-right: 5.5rem;

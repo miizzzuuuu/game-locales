@@ -10,7 +10,7 @@ import { doneResult, setResult, setScanNumber } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
-import { addHistory } from '../slice/historySlice';
+import { HistoryItem, addHistory } from '../slice/historySlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -105,8 +105,43 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                     dispatch(
                         doneResult(scanNumber as any)
                     );
+                    function getFormattedDate() {
+                        const currentDate = new Date();
+                      
+                        // Get date components
+                        const year = currentDate.getFullYear();
+                        const month = padNumber(currentDate.getMonth() + 1); // Months are zero-indexed
+                        const day = padNumber(currentDate.getDate());
+                      
+                        // Get time components
+                        const hours = padNumber(currentDate.getHours());
+                        const minutes = padNumber(currentDate.getMinutes());
+                        const seconds = padNumber(currentDate.getSeconds());
+                      
+                        // Return the formatted date string
+                        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+                      }
+                      
+                      function padNumber(number: number) {
+                        return number.toString().padStart(2, '0');
+                      }
+                      
+                      // Example usage:
+                      const formattedDate = getFormattedDate();
+                    
+                    const result: HistoryItem  = {
+                        ...scanNumber,
+                        result: scanNumber.win,
+                        gamekey: scanNumber.gameSet,
+                        value: scanNumber.value,
+                        hitung: "1",
+                        tanggal: formattedDate,
+
+                    };
+
                     dispatch(
-                        addHistory(scanNumber as any)
+
+                        addHistory(result as any)
                     );
                 }
             }, 5000)();

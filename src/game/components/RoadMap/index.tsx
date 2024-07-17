@@ -34,7 +34,7 @@ function RoadMap(props: IProps) {
     const data = useAppSelector((state) => state.history.history);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const [historyBlink, setBlink] = useState(false);
-
+    console.log(data);
     useEffect(() => {
         if (!!(scanNumber && scanNumber.submit)) {
             setBlink(true);
@@ -68,9 +68,11 @@ function RoadMap(props: IProps) {
     if (!GameHelper.getBasePcode()) return null;
     const GameRoadmap = layouts[GameHelper.getBasePcode()];
 
-    return (betIsOpen && DisplayHelper.getOrientation() == "landscape" && showPatternUI) || DisplayHelper.getOrientation() == "portrait" ? (
+    return  (
 
-        <div className={styles.container}>
+        <div className={styles.container} style={{
+            opacity: (betIsOpen && DisplayHelper.getOrientation() == "landscape" && showPatternUI) || DisplayHelper.getOrientation() == "portrait" ? 1:0 
+        }}>
             {GameRoadmap.layout.ShoeStat && <GameRoadmap.layout.ShoeStat />}
             <div className={styles.scrolledYRoadmap.concat("  ").concat(isZoom ? styles.zoom : "")}
 
@@ -149,7 +151,6 @@ function RoadMap(props: IProps) {
             </div>
         </div>
     )
-        : <></>;
 }
 
 

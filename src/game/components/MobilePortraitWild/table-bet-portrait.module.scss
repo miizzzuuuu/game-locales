@@ -24,8 +24,6 @@ $childBetM23Width : calc(98%/2);
     $anim-duration: 0s;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: flex-end;
-    margin-bottom: -2rem;
     &.open {
         transform: $transformOpen;
         animation: openTable;
@@ -53,8 +51,7 @@ $childBetM23Width : calc(98%/2);
     justify-content: center;
     flex-direction: column;
     height: fit-content;
-    transform: translateY(-2rem);
-}
+    transform: translateY(2rem);}
 
 .container {
 

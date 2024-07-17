@@ -46,10 +46,12 @@ export function useFetchPlayer() {
 
 
 const fetchHistory = async (): Promise<HistoryItem[]> => {
-    const response =await APIManager.get<HistoryItem[]>(ENDPOINTS.result + `/${GameHelper.pcode}`);
-
-    if ('history' in response.data) {
-        return response.data.history as any;
+    const response =await APIManager.get<{data: HistoryItem[], pagination: any}>(ENDPOINTS.result + `/${GameHelper.pcode}`);
+    
+    if (response.data.data) {
+        
+        console.log(response.data, "historyData")
+        return response.data.data as any;
     } else {
         throw new Error(
             "Invalid response format: 'history' or 'totalHistory' property is missing",

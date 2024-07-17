@@ -19,6 +19,57 @@ interface IProps extends PropsWithChildren {
     chipCanBlinking?: boolean;
 }
 
+function ResultNumber(props: {
+    value: number | undefined
+}) {
+    return props.value ? (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50%"
+            fill="none"
+            viewBox="0 0 51 28"
+            className={stylesLandscape["result-number-slide-right"]}
+            style={{
+                marginTop: "-10%",
+                marginLeft: "-8%",
+                zIndex: 1
+            }}
+        >
+            <path
+                fill="url(#paint0_linear_765_61326)"
+                stroke="url(#paint1_linear_765_61326)"
+                strokeWidth="0.96"
+                d="M1.12 1V.52H36.6C44.045.52 50.08 6.555 50.08 14S44.045 27.48 36.6 27.48H1.12V1z"
+            ></path>
+            <text
+                fill='#fff' x="25" y="20" fontSize={"1.5rem"} fontFamily='Manrope' className="small">{props.value}</text>
+            <defs>
+                <linearGradient
+                    id="paint0_linear_765_61326"
+                    x1="49.6"
+                    x2="1.6"
+                    y1="14"
+                    y2="14"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stopOpacity="0.32"></stop>
+                    <stop offset="1" stopOpacity="0.06"></stop>
+                </linearGradient>
+                <linearGradient
+                    id="paint1_linear_765_61326"
+                    x1="50.457"
+                    x2="2.457"
+                    y1="14"
+                    y2="14"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stopColor="#FFB72C" stopOpacity="0.953"></stop>
+                    <stop offset="1" stopColor="#FFB72C" stopOpacity="0"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+    ) : null;
+}
 
 
 const TigerBetButton = (
@@ -31,11 +82,14 @@ const TigerBetButton = (
     const { chip, color } = useGetChipBet(bet);
     const { placeBetHanlder: handleClick } = usePlaceBet();
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-  
 
+    const label = "Tiger";
+    const ratio = "1:1";
+    const isLose = scanNumber && scanNumber.submit && scanNumber.win !== "tiger";
+    const isWin = scanNumber && scanNumber.submit && !isLose
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
-           
+
         >
 
             {
@@ -44,8 +98,11 @@ const TigerBetButton = (
 
             {children}
             <div
-                style={{ opacity: scanNumber && scanNumber.submit && scanNumber.win !== "tiger" ? 0.6 : 1 }}
-                className={styles.domainContent}>
+                style={{
+                    opacity: isLose ? 0.6 : 1,
+                }}
+                className={[styles.domainContent, isWin ? "table-win-blink" : ""].join(" ")}
+            >
                 {/* <LevelStat level={45} /> */}
                 <PlacementStat float="right" totalChip={20} totalUser={123} />
                 <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
@@ -54,13 +111,17 @@ const TigerBetButton = (
                         justifyContent: "flex-end", marginRight: "5vw",
                     }}>
 
-                        <span className='text-white/[.75]'>1:1</span>
-                        <span className='text-lg'>Tiger</span>
+                        <span className='text-white/[.75]'>{ratio}</span>
+                        <span className='text-lg'>{label}</span>
                     </div>
 
                 </div>
+                {DisplayHelper.getOrientation() == "landscape"
+                    && scanNumber?.submit
+                    && <ResultNumber value={scanNumber?.tiger_value} />}
+
                 <div className={styles['slot-chip']}
-                style={{right: "-20%", left: "auto"}}
+                    style={{ right: "-20%", left: "auto" }}
                 >
 
                     {chip > 0 && (
@@ -73,27 +134,27 @@ const TigerBetButton = (
 
                     )}
                 </div>
-              
-                    <div
+
+                <div
                     className={styles.cardContainerTiger}
-                   
 
-                    >
-                        {scanNumber && <RenderCard
-                            top="0px"
-                            left="0px"
-                            right="0px"
-                            position={{ x: "3px", y: "15px" }}
-                            rotation={{ z: "0deg" }}
-                            value={scanNumber.tiger}
 
-                            visible={scanNumber.tiger == "x" ? false : true}
-                            submit={scanNumber.submit}
-                        />}
+                >
+                    {scanNumber && <RenderCard
+                        top="0px"
+                        left="0px"
+                        right="0px"
+                        position={{ x: "3px", y: "15px" }}
+                        rotation={{ z: "0deg" }}
+                        value={scanNumber.tiger}
 
-                    </div>
+                        visible={scanNumber.tiger == "x" ? false : true}
+                        submit={scanNumber.submit}
+                    />}
 
-                
+                </div>
+
+
             </div>
 
             <svg
@@ -102,15 +163,18 @@ const TigerBetButton = (
                 // height="100"
                 fill="none"
                 viewBox="0 0 128 100"
-                style={{ opacity: scanNumber && scanNumber.submit && scanNumber.win !== "tiger" ? 0.6 : 1 }}
+                style={{ opacity: isLose ? 0.6 : 1 }}
                 onClick={() => handleClick(bet)}
             >
                 <path
+                    className={[isWin ? "table-win-blink" : ""].join(" ")}
                     fill="url(#paint0_linear_234_81)"
                     stroke="#FFB72C"
                     d="M126.5 99.5H1.892C15.182 87.173 23.5 69.558 23.5 50S15.182 12.827 1.892.5H126.5a1 1 0 011 1v97a1 1 0 01-1 1z"
                 ></path>
                 <path
+                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+
                     fill="#D69729"
                     d="M8.208 100C20.71 87.049 28.401 69.423 28.401 50S20.71 12.951 8.208 0H1c13.746 12.27 22.4 30.124 22.4 50S14.747 87.73 1 100h7.208z"
                 ></path>

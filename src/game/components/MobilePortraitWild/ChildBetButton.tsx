@@ -17,11 +17,11 @@ interface IProps extends PropsWithChildren {
     borderColor: string
     bgSvg: () => JSX.Element
     opacity: number;
-
+    ratio: string;
 }
 
 const ChildBetButton = (
-    { bgSvg, bet, opacity, children, className, chipCanBlinking,
+    { bgSvg, bet, opacity, children,ratio, className, chipCanBlinking,
         //  rounded, startColor, endColor, borderColor 
     }: IProps
 ) => {
@@ -43,8 +43,10 @@ const ChildBetButton = (
 
         >
             {children}
-            <div className={[styles.childLabel, styles.betButtonLabel].join(" ")} >                <span className='text-lg'>{bet.button}</span>
-                <span className='text-white/[.75]'>1:1
+            <div className={[styles.childLabel, styles.betButtonLabel].join(" ")} >
+                <span className='text-lg'>{bet.button}</span>
+                <span className='text-white/[.75]'>
+                    {ratio}
                     <div className={styles['slot-chip']}>
 
                         {chip > 0 && (

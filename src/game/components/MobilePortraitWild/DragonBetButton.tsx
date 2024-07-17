@@ -16,6 +16,60 @@ interface IProps extends PropsWithChildren {
     chipCanBlinking?: boolean;
 }
 
+function ResultNumber(props: {
+    value: number | undefined
+}) {
+    return props.value ? (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50%"
+            fill="none"
+            viewBox="0 0 51 28"
+            className={stylesLandscape["result-number-slide-left"]}
+            style={{
+                marginTop: "-10%",
+                float: "right",
+                marginRight: "-12%"
+            }}
+        >
+            <path
+                fill="url(#paint0_linear_765_61320)"
+                stroke="url(#paint1_linear_765_61320)"
+                strokeWidth="0.96"
+                d="M49.48 1V.52H14C6.555.52.52 6.555.52 14S6.555 27.48 14 27.48h35.48V1z"
+            ></path>
+            <text
+                fill='#fff' x="15" y="20"
+                fontSize={"1.5rem"} fontFamily='Manrope'
+                className="small">{props.value}</text>
+            <defs>
+                <linearGradient
+                    id="paint0_linear_765_61320"
+                    x1="1"
+                    x2="49"
+                    y1="14"
+                    y2="14"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stopOpacity="0.32"></stop>
+                    <stop offset="1" stopOpacity="0.06"></stop>
+                </linearGradient>
+                <linearGradient
+                    id="paint1_linear_765_61320"
+                    x1="0.143"
+                    x2="48.143"
+                    y1="14"
+                    y2="14"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop stopColor="#F30049" stopOpacity="0.953"></stop>
+                    <stop offset="1" stopColor="#F30049" stopOpacity="0"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+    ) : null;
+}
+
 const DragonBetButton = (
     { bet, children, className, chipCanBlinking }: IProps
 ) => {
@@ -27,7 +81,10 @@ const DragonBetButton = (
     const { placeBetHanlder: handleClick } = usePlaceBet();
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-
+    const label = "Dragon";
+    const ratio = "1:1";
+    const isLose = scanNumber && scanNumber.submit && scanNumber.win !== "dragon";
+    const isWin = scanNumber && scanNumber.submit && !isLose;
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
             onClick={() => handleClick(bet)}
@@ -35,16 +92,21 @@ const DragonBetButton = (
             {children}
 
             <div
-                style={{ opacity: scanNumber && scanNumber.submit && scanNumber.win !== "dragon" ? 0.6 : 1 }}
-                className={styles.domainContent}>
+                style={{ opacity: isLose ? 0.6 : 1 }}
+                className={[styles.domainContent, isWin ? "table-win-blink" : ""].join(" ")}
+            >
                 {/* <LevelStat level={20} /> */}
                 <PlacementStat float="left" totalChip={20} totalUser={123} />
-                <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >                    <div style={{ display: 'flex', justifyContent: "flex-start" }}>
+                <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
+                    <div style={{ display: 'flex', justifyContent: "flex-start" }}>
+                        <span className='text-lg'>{label}</span>
+                        <span className='text-white/[.75]'>{ratio}</span>
+                    </div>
+                </div>
+                {DisplayHelper.getOrientation() == "landscape"
+                    && scanNumber?.submit
+                    && <ResultNumber value={scanNumber?.dragon_value} />}
 
-                    <span className='text-lg'>Dragon</span>
-                    <span className='text-white/[.75]'>1:1</span>
-                </div>
-                </div>
                 <div className={styles['slot-chip']}
                     style={{ left: "30%" }}
                 >
@@ -89,11 +151,14 @@ const DragonBetButton = (
                 onClick={() => handleClick(bet)}
             >
                 <path
+                    className={isWin ? "table-win-blink" : ""}
                     fill="url(#paint0_linear_234_178)"
                     stroke="#F30049"
                     d="M104.5 50c0 19.558 8.318 37.173 21.608 49.5H1.5a1 1 0 01-1-1v-97a1 1 0 011-1h124.608C112.818 12.827 104.5 30.442 104.5 50z"
                 ></path>
                 <path
+                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+
                     fill="#BC0038"
                     d="M120.192 100C107.69 87.049 100 69.423 100 50s7.69-37.049 20.192-50h7.208C113.654 12.27 105 30.124 105 50s8.654 37.73 22.4 50h-7.208z"
                 ></path>
