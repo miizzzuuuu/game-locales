@@ -1,0 +1,26 @@
+.text {
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    z-index: 1;
+
+    &::before {
+        content: attr(data-value);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        background: linear-gradient(180deg, var(--color) 0%, var(--color) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        letter-spacing: -0.6px;
+        font-size: 1.1em;
+        white-space: nowrap;
+    }
+}
