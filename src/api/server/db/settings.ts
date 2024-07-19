@@ -2,7 +2,7 @@ export const settings = {
     language: 'en',
     autoRebet: true,
     enableGameSound: true,
-    enableStreamingVideo: true,
+    enableStreamingVideo: false,
     enableStreamingSound: true,
     streamingQuality: 'high',
     volumeStreamingSound: 100,
