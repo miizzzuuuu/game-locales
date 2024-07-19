@@ -15,6 +15,7 @@ import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
 import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
+import TopWinner from '../TopWinner';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -63,6 +64,7 @@ function Game() {
             <Streaming />
             <Timer />
             <GameUI />
+            <TopWinner />
             <AlertUI />
             <Menu />
         </div>
