@@ -5,6 +5,17 @@
     background: rgba(15, 16, 29, 0.5);
     z-index: var(--layer-top-winner);
 
+    transform: translateY(-100%);
+    opacity: 0;
+
+    &.show {
+        animation: top-winner-show 0.5s forwards;
+    }
+
+    &.hide {
+        animation: top-winner-hide 0.5s forwards;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -32,4 +43,28 @@
     text-transform: uppercase;
     padding: 0 0.6rem;
     opacity: 0.8;
+}
+
+@keyframes top-winner-show {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes top-winner-hide {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }

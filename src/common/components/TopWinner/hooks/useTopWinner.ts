@@ -1,5 +1,6 @@
 import { RefObject, useEffect, useRef, useState } from 'react';
-import { topWinnerDummy } from '../../../dummy';
+import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
+import { resetTopWinner, selectTopWinner } from '../../../../store/slice/topWinnerSlice';
 
 interface Params {
     ref: RefObject<HTMLDivElement>;
@@ -8,11 +9,16 @@ interface Params {
 export function useTopWinner({ ref }: Params) {
     const toRef = useRef<ReturnType<typeof setTimeout>>();
     const to2Ref = useRef<ReturnType<typeof setTimeout>>();
-    const to3Ref = useRef<ReturnType<typeof setTimeout>>();
 
-    const [isFinish, setIsFinish] = useState(false);
+    const dispatch = useAppDispatch();
 
-    const [winnerData] = useState(topWinnerDummy);
+    const [isFinish, setIsFinish] = useState(true);
+
+    const winnerData = useAppSelector(selectTopWinner);
+
+    const resetWinnerData = () => {
+        dispatch(resetTopWinner());
+    };
 
     useEffect(() => {
         if (!ref.current) {
@@ -63,19 +69,16 @@ export function useTopWinner({ ref }: Params) {
                     if (index === wraps.length - 1) {
                         to2Ref.current = setTimeout(() => {
                             setIsFinish(true);
-
-                            to3Ref.current = setTimeout(() => {
-                                // dispatch(resetWinner());
-                                console.log('reset');
-                            }, 500);
                         }, 1500);
                     }
                 },
                 500 + 1500 * index,
-            ); // Delay of 1 second per wrap
+            );
         });
 
         return () => {
+            console.log('top winner unmount');
+
             if (toRef) {
                 clearTimeout(toRef.current);
                 toRef.current = undefined;
@@ -85,16 +88,12 @@ export function useTopWinner({ ref }: Params) {
                 clearTimeout(to2Ref.current);
                 to2Ref.current = undefined;
             }
-
-            if (to3Ref) {
-                clearTimeout(to3Ref.current);
-                to3Ref.current = undefined;
-            }
         };
-    }, winnerData);
+    }, [winnerData]);
 
     return {
         winnerData,
         isFinish,
+        resetWinnerData,
     };
 }

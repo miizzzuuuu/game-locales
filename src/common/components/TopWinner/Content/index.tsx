@@ -1,16 +1,16 @@
-import { useRef } from 'react';
-import { useTopWinner } from '../hooks/useTopWinner';
+import { forwardRef } from 'react';
 import ItemWinner from '../ItemWinner';
 import styles from './styles.module.scss';
+import { TopWinnerData } from '../../../../types';
 
-const Content = () => {
-    const winnerContentRef = useRef<HTMLDivElement>(null);
+interface IProps {
+    data: TopWinnerData['data'];
+}
 
-    const { winnerData } = useTopWinner({ ref: winnerContentRef });
-
+const Content = forwardRef<HTMLDivElement, IProps>(({ data }, ref) => {
     return (
-        <div className={`${styles.content} no-scrollbar`} ref={winnerContentRef}>
-            {winnerData.map((winner, idx) => (
+        <div className={`${styles.content} no-scrollbar`} ref={ref}>
+            {data.map((winner, idx) => (
                 <ItemWinner
                     key={idx}
                     isFirst={idx === 0}
@@ -20,6 +20,6 @@ const Content = () => {
             ))}
         </div>
     );
-};
+});
 
 export default Content;

@@ -10,6 +10,7 @@ import playerReducer from './slice/playerSlice';
 import resultReducer from './slice/resultSlice';
 import settingsReducer from './slice/settingsSlice';
 import timerReducer from './slice/timerSlice';
+import topWinnerReducer from './slice/topWinnerSlice';
 import windowReducer from './slice/windowSlice';
 
 export const staticReducers = {
@@ -26,5 +27,6 @@ export const staticReducers = {
     result: resultReducer,
     settings: settingsReducer,
     timer: timerReducer,
+    topWinner: topWinnerReducer,
     window: windowReducer,
 };
