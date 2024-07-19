@@ -2,6 +2,7 @@ import { AnimationEventHandler, useRef } from 'react';
 import Content from './Content';
 import styles from './styles.module.scss';
 import { useTopWinner } from './hooks/useTopWinner';
+import LabelTranslate from '../LabelTranslate';
 
 const TopWinner = () => {
     const winnerContentRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,9 @@ const TopWinner = () => {
             onAnimationEnd={animationEndHandler}
         >
             <div className={styles.wrapper}>
-                <div className={styles.label}>Winner:</div>
+                <div className={styles.label}>
+                    <LabelTranslate value="winner" />:
+                </div>
 
                 <Content ref={winnerContentRef} data={winnerData} />
             </div>

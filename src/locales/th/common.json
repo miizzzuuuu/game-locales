@@ -46,5 +46,6 @@
     "bet-error-min": "เดิมพัน '{{button}}' ขั้นต่ำ {{value}}",
     "insuffix-balance": "ยอดเงินคงเหลือไม่เพียงพอ",
     "autobet-error-insufficient-balance": "เดิมพันอัตโนมัติล้มเหลว ยอดเงินคงเหลือไม่เพียงพอ",
-    "doublebet-error-max-bet": "ข้อผิดพลาดในการเดิมพันสองเท่า การเดิมพันสูงสุด"
+    "doublebet-error-max-bet": "ข้อผิดพลาดในการเดิมพันสองเท่า การเดิมพันสูงสุด",
+    "winner": "ผู้ชนะ"
 }
