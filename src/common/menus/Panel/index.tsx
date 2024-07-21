@@ -27,19 +27,13 @@ const Panel = ({ show, title, children, footerBg, className, handleClose, handle
     const [hiddenUI, setVisibleUI] = useState(true);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (
-            e.animationName.indexOf('menu-slide-up') >= 0 ||
-            e.animationName.indexOf('menu-slide-left') >= 0
-        ) {
+        if (e.animationName.indexOf('menu-open') >= 0) {
             setVisibleUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (
-            e.animationName.indexOf('menu-slide-down') >= 0 ||
-            e.animationName.indexOf('menu-slide-right') >= 0
-        ) {
+        if (e.animationName.indexOf('menu-close') >= 0) {
             setVisibleUI(true);
         }
     };
@@ -50,7 +44,7 @@ const Panel = ({ show, title, children, footerBg, className, handleClose, handle
 
     return (
         <div
-            className={`${styles['menu-content']}${deviceClassName}${styles[`layout-${layoutVersion}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
+            className={`${styles['menu-content']}${deviceClassName} ${styles[`layout-${layoutVersion}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >
