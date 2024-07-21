@@ -10,16 +10,17 @@ interface IProps {
     value: number;
     color?: string;
     style?: CSSProperties;
+    ignoreTransparent?: boolean;
 }
 
-const ChipBet = ({ value, color, style }: IProps) => {
+const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);
 
     const stringValue = StringHelper.formatChipText(value);
 
-    const showChip = useAppSelector(selectShowChip);
+    const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 
     useEffect(() => {
         if (value !== lastValue.current) {
