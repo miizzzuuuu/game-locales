@@ -45,7 +45,11 @@
         width: min-content;
         min-width: 50%;
         max-width: 100%;
-        right: 0;
+        left: 0;
+
+        .version-2 {
+            right: 0;
+        }
 
         box-shadow: -0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 

@@ -8,6 +8,7 @@ export interface GameStateState {
         value: string | undefined;
         type: 'danger' | 'warning' | 'none';
     };
+    layoutVersion: number;
 }
 
 const initialState: GameStateState = {
@@ -17,6 +18,7 @@ const initialState: GameStateState = {
         value: '',
         type: 'danger',
     },
+    layoutVersion: 1,
 };
 
 const gameStateSlice = createSlice({
@@ -45,5 +47,6 @@ export const selectModeBet = (state: RootState) => state.gameState.modeBet;
 export const selectShowChip = (state: RootState) => state.gameState.showChip;
 export const selectMessageValue = (state: RootState) => state.gameState.message.value;
 export const selectMessageType = (state: RootState) => state.gameState.message.type;
+export const selectLayoutVersion = (state: RootState) => state.gameState.layoutVersion;
 
 export default gameStateSlice.reducer;
