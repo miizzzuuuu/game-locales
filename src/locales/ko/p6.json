@@ -1,30 +1,30 @@
 {
     "bet": {
-        "1st Column": "열 1",
-        "2nd Column": "열 2",
-        "3rd Column": "열 3",
-        "4th Column": "열 4",
-        "5th Column": "열 5",
-        "6th Column": "열 6",
+        "1st Column": "C.1",
+        "2nd Column": "C.2",
+        "3rd Column": "C.3",
+        "4th Column": "C.4",
+        "5th Column": "C.5",
+        "6th Column": "C.6",
 
-        "1st Row": "행 1",
-        "2nd Row": "행 2",
-        "3rd Row": "행 3",
-        "4th Row": "행 4",
+        "1st Row": "R.1",
+        "2nd Row": "R.2",
+        "3rd Row": "R.3",
+        "4th Row": "R.4",
 
-        "1st Column,2nd Column": "열 1-2",
-        "2nd Column,3rd Column": "열 2-3",
-        "3rd Column,4th Column": "열 3-4",
-        "4th Column,5th Column": "열 4-5",
-        "5th Column,6th Column": "열 5-6",
+        "1st Column,2nd Column": "C.1-2",
+        "2nd Column,3rd Column": "C.2-3",
+        "3rd Column,4th Column": "C.3-4",
+        "4th Column,5th Column": "C.4-5",
+        "5th Column,6th Column": "C.5-6",
 
-        "1st Row,2nd Row": "행 1-2",
-        "3rd Row,4th Row": "행 3-4"
+        "1st Row,2nd Row": "R.1-2",
+        "3rd Row,4th Row": "R.3-4"
     },
-    "big": "크다",
-    "small": "작다",
-    "odd": "홀수",
-    "even": "짝수",
-    "red": "빨간색",
-    "black": "검은색"
+    "big": "big",
+    "small": "small",
+    "odd": "odd",
+    "even": "even",
+    "red": "red",
+    "black": "black"
 }

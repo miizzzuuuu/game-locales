@@ -57,15 +57,16 @@ const TableBetWild = () => {
                 <div className={styles.childContainerBottom}>
                     <ChildBetButton
                         //   className={classes}
-                        bet={{ button: "dragon wild", group: "dragon-child" }}
-                        opacity={scanNumber && scanNumber.submit && !(scanNumber.stat_third_card == "dragon") ? 0.6 : 1}
+                        bet={{ button: "dragonwild", group: "wild" }}
+                        isLose={scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.wild_value && scanNumber.wild_value>scanNumber.tiger_value)}
+                        isSubmit={scanNumber && scanNumber.submit}
                         chipCanBlinking
                         rounded='bottom-left'
                         startColor='#F30049'
                         endColor='#59001B'
                         borderColor='#BD043C'
                         ratio='25:1'
-                        bgSvg={() => <svg
+                        bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
                             // height="28"
@@ -73,11 +74,13 @@ const TableBetWild = () => {
                             viewBox="0 0 171 28"
                         >
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="url(#paint0_linear_234_264)"
                                 stroke="#F30049"
                                 d="M169 27.5H.5V.5h129.07c11.231 9.088 25.438 14.646 40.93 14.984V26a1.5 1.5 0 01-1.5 1.5z"
                             ></path>
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#BC0038"
                                 d="M129.747.007C141.035 9.189 155.369 14.77 171 14.999V20c-18.928-.258-36.091-7.819-48.8-19.993h7.547z"
                             ></path>
@@ -130,14 +133,15 @@ const TableBetWild = () => {
 
                     <ChildBetButton
                         //   className={classes}
-                        bet={{ button: "tiger wild", group: "tiger-child" }}
-                        opacity={scanNumber && scanNumber.submit && !(scanNumber.stat_third_card == "tiger") ? 0.6 : 1}
+                        bet={{ button: "tigerwild", group: "wild" }}
+                        isLose={scanNumber && scanNumber.submit && !(scanNumber.tiger_value == scanNumber.wild_value && scanNumber.wild_value>scanNumber.dragon_value)}
+                        isSubmit={scanNumber && scanNumber.submit}
                         chipCanBlinking
                         startColor='#59001B'
                         endColor='#F30049'
                         borderColor='#BD043C'
                         ratio='25:1'
-                        bgSvg={() => <svg
+                        bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
                             // height="28"
@@ -145,11 +149,13 @@ const TableBetWild = () => {
                             viewBox="0 0 171 28"
                         >
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="url(#paint0_linear_234_257)"
                                 stroke="#FFB72C"
                                 d="M.5 26V15.484C15.992 15.146 30.199 9.588 41.43.5H170.5v27H2A1.5 1.5 0 01.5 26z"
                             ></path>
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#D69729"
                                 d="M41.253.007C29.965 9.189 15.63 14.77 0 14.999V20c18.928-.258 36.09-7.819 48.8-19.993h-7.547z"
                             ></path>
@@ -201,15 +207,16 @@ const TableBetWild = () => {
                 <div className={childContainerClassName}>
                     <ChildBetButton
                         //   className={classes}
-                        bet={{ button: "dragon pair", group: "dragon-child" }}
-                        opacity={scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.wild) ? 0.6 : 1}
+                        bet={{ button: "dragonpair", group: "pair" }}
+                        isLose={scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.wild_value)}
+                        isSubmit={scanNumber && scanNumber.submit}
                         ratio='12:1'
                         chipCanBlinking
                         rounded='bottom-left'
                         startColor='#F30049'
                         endColor='#59001B'
                         borderColor='#BD043C'
-                        bgSvg={() => <svg
+                        bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
                             //   height="28"
@@ -217,11 +224,13 @@ const TableBetWild = () => {
                             viewBox="0 0 171 28"
                         >
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="url(#paint0_linear_234_271)"
                                 stroke="#F30049"
                                 d="M.5 27.5V.5H169a1.5 1.5 0 011.5 1.5v10.516c-15.492.338-29.699 5.896-40.93 14.984H.5z"
                             ></path>
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#BC0038"
                                 d="M129.747 28c11.288-9.183 25.622-14.764 41.253-14.993v-5c-18.928.258-36.091 7.819-48.8 19.993h7.547z"
                             ></path>
@@ -274,14 +283,15 @@ const TableBetWild = () => {
 
                     <ChildBetButton
                         //   className={classes}
-                        bet={{ button: "tiger pair", group: "tiger-child" }}
-                        opacity={scanNumber && scanNumber.submit && !(scanNumber.tiger == scanNumber.wild) ? 0.6 : 1}
+                        bet={{ button: "tigerpair", group: "pair" }}
+                        isLose={scanNumber && scanNumber.submit && !(scanNumber.tiger_value == scanNumber.wild_value)}
+                        isSubmit={scanNumber && scanNumber.submit}
                         chipCanBlinking
                         startColor='#59001B'
                         endColor='#F30049'
                         borderColor='#BD043C'
                         ratio='12:1'
-                        bgSvg={() => <svg
+                        bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
                             //   height="28"
@@ -289,11 +299,13 @@ const TableBetWild = () => {
                             viewBox="0 0 171 28"
                         >
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="url(#paint0_linear_234_278)"
                                 stroke="#FFB72C"
                                 d="M170.5 27.5H41.43C30.199 18.412 15.992 12.854.5 12.516V2A1.5 1.5 0 012 .5h168.5v27z"
                             ></path>
                             <path
+                             className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#D69729"
                                 d="M41.253 28C29.965 18.817 15.63 13.236 0 13.007v-5C18.928 8.265 36.09 15.826 48.8 28h-7.547z"
                             ></path>
@@ -362,7 +374,7 @@ const TableBetWild = () => {
 
                                 <SuperWildBetButton
                                     //   className={classes}
-                                    bet={{ button: "super wild", group: "super-wild" }}
+                                    bet={{ button: "superwild", group: "superwild" }}
                                     chipCanBlinking
                                 />
 

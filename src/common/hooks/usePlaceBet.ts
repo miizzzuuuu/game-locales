@@ -1,3 +1,4 @@
+import { DragonTigerBBet } from '../../game/utils/DragonTigerBBet';
 import { useAppTranslate } from '../../services/i18next/hooks';
 import { Sound } from '../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
@@ -79,6 +80,25 @@ export const usePlaceBet = () => {
             }
         }
 
+        const DragonTigerBBetHelper = (BetHelper.game) as DragonTigerBBet;
+
+        // custom n50 dragontiger
+        const isHaveOppositedBetDT = bet.group == DragonTigerBBetHelper.Tiger ? getChip({ button: DragonTigerBBetHelper.Dragon, group: DragonTigerBBetHelper.Dragon }) : bet.group == DragonTigerBBetHelper.Dragon ? getChip({ button: DragonTigerBBetHelper.Tiger, group: DragonTigerBBetHelper.Tiger }) : false;
+        if (isHaveOppositedBetDT) {
+            const buttonName = t(`${basePcode}.${DragonTigerBBetHelper.getOpposite(bet.group)}`);
+            const message = t('common.bet-error-n50', { button: buttonName });
+
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
+
+            return;
+        }
+
         const curBalance = balance - totalBetAdd;
 
         // cek balance
@@ -97,6 +117,7 @@ export const usePlaceBet = () => {
         }
 
         const chipAfterBet = getChip(bet) + activeChip;
+    
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
             const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
@@ -116,12 +137,54 @@ export const usePlaceBet = () => {
             return;
         }
 
+        // custom min50 check dragon tiger
+        const minDT = DragonTigerBBetHelper.max50bet.includes(bet.group) ? min50Bet : minBet;
+        if (chipAfterBet < minDT) {
+            const buttonName = DragonTigerBBetHelper.max50bet.includes(bet.group) ? t(`${basePcode}.${button}`) : button;
+            const message = t('common.bet-error-min', {
+                button: buttonName,
+                value: StringHelper.formatMoneyOnlyNumber(minDT, lang),
+            });
+
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
+
+            return;
+        }
+
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
             const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,
                 value: StringHelper.formatMoneyOnlyNumber(max, lang),
+            });
+
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
+
+            return;
+        }
+
+
+        // custom max50 check dragon tiger
+        const maxDT = DragonTigerBBetHelper.max50bet.includes(bet.group) ? max50Bet : maxBet;
+       
+        if (chipAfterBet > maxDT) {
+            const buttonName = DragonTigerBBetHelper.max50bet.includes(bet.group) ? t(`${basePcode}.${button}`) : button;
+            const message = t('common.bet-error-max', {
+                button: buttonName,
+                value: StringHelper.formatMoneyOnlyNumber(maxDT, lang),
             });
 
             console.log('bet error', message);

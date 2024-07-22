@@ -11,7 +11,7 @@ import APIManager from './common/utils/APIManager.ts';
 import './services/i18next/index.ts';
 import './styles/main.scss';
 import { BetHelper } from './common/utils/BetHelper.ts';
-import { TwentyFourDBet } from './game/utils/TwentyFourDBet.ts';
+import { DragonTigerBBet } from './game/utils/DragonTigerBBet.ts';
 
 const main = async () => {
     if (import.meta.env.DEV) {
@@ -32,7 +32,7 @@ const main = async () => {
     GameHelper.pcode = pcode;
 
     // modify for spesifik
-    BetHelper.game = new TwentyFourDBet();
+    BetHelper.game = new DragonTigerBBet();
 
     ReactDOM.createRoot(document.getElementById('root')!).render(
         <React.StrictMode>

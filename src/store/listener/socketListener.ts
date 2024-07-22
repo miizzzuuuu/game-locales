@@ -27,6 +27,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
             dispatch(openTime(Number(data.timer)));
             dispatch(updateGamePeriod(data.periode));
             dispatch(newAddBetPeriod());
+            dispatch(setScanNumber(undefined));
 
             const betSend = selectAllBetSend(state);
             if (betSend.length > 0) {
@@ -93,8 +94,8 @@ export const scanNumberListener = (startListening: AppStartListening) => {
             const dispatch = listenerApi.dispatch;
             const scanNumber = action.payload;
             dispatch(setScanNumber(scanNumber));
+            if (scanNumber.submit) {
             debounce(() => {
-                if (scanNumber.submit) {
                     dispatch(
                         doneResult(scanNumber as any)
                     );
@@ -110,8 +111,8 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                     dispatch(
                         addHistory(result as any)
                     );
-                }
-            }, 5000)();
+                }, 5000)();
+            }
         },
     });
 };

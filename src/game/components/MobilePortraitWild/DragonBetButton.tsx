@@ -9,6 +9,9 @@ import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import LabelTranslate from '../../../common/components/LabelTranslate';
+import { GameHelper } from '../../../common/utils/GameHelper';
 
 interface IProps extends PropsWithChildren {
     className?: string;
@@ -81,10 +84,11 @@ const DragonBetButton = (
     const { placeBetHanlder: handleClick } = usePlaceBet();
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-    const label = "Dragon";
     const ratio = "1:1";
-    const isLose = scanNumber && scanNumber.submit && scanNumber.win !== "dragon";
-    const isWin = scanNumber && scanNumber.submit && !isLose;
+    const betIsOpen = useAppSelector(selectBetIsOpen);
+
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== "dragon";
+    const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
             onClick={() => handleClick(bet)}
@@ -99,7 +103,10 @@ const DragonBetButton = (
                 <PlacementStat float="left" totalChip={20} totalUser={123} />
                 <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
                     <div style={{ display: 'flex', justifyContent: "flex-start" }}>
-                        <span className='text-lg'>{label}</span>
+                        <span className='text-lg'>
+                            <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+
+                        </span>
                         <span className='text-white/[.75]'>{ratio}</span>
                     </div>
                 </div>
@@ -124,7 +131,7 @@ const DragonBetButton = (
                 <div
                     className={styles.cardContainerDragon}
                 >
-                    {scanNumber && <RenderCard
+                    {!betIsOpen && scanNumber && <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
@@ -132,7 +139,7 @@ const DragonBetButton = (
                         rotation={{ z: "0deg" }}
                         value={scanNumber.dragon}
 
-                        visible={scanNumber.dragon == "x" ? false : true}
+                        visible={ scanNumber.dragon == "x" ? false : true}
                         submit={scanNumber.submit}
                     />}
 

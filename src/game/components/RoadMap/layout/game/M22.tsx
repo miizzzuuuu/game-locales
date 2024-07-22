@@ -1,5 +1,6 @@
 import { DisplayHelper } from "../../../../../common/utils/DisplayHelper";
 import { useAppSelector } from "../../../../../store/hooks";
+import { selectPeriod } from "../../../../../store/slice/gameSlice";
 import {
     checkLastIdx,
 } from "../base/BaccaratRoadmaps";
@@ -480,7 +481,7 @@ export default class M22 extends BaseV2Roadmap {
         const darkMode = true;
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
-        const periode = useAppSelector((state) => state.result.periode);
+        const periode = useAppSelector(selectPeriod);
         const a = periode?.toString().length
         const Layout = M22;
 

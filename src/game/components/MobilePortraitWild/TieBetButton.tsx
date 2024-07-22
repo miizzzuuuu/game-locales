@@ -7,6 +7,9 @@ import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { GameHelper } from '../../../common/utils/GameHelper';
+import LabelTranslate from '../../../common/components/LabelTranslate';
 // import CardHelper from '../../../utils/CardHelper';
 
 interface IProps extends PropsWithChildren {
@@ -27,9 +30,10 @@ const TieBetButton = (
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const label = "Tie";
     const ratio = "8:1";
+    const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const isLose = scanNumber && scanNumber.submit && scanNumber.win !== "tie";
-    const isWin = scanNumber && scanNumber.submit && !isLose
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== "tie";
+    const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose
 
     return (
         <>
@@ -42,7 +46,9 @@ const TieBetButton = (
                 <div className={styles.tieLabel} >
                     <div style={{}}>
 
-                        <span className='text-lg'>{label}</span>
+                        <span className='text-lg'>
+                            <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+                        </span>
                         <br />
                         <span className='text-white/[.75]'>{ratio}</span>
                     </div>
@@ -71,7 +77,7 @@ const TieBetButton = (
                 viewBox="0 0 130 65"
                 style={{
                     zIndex: 3,
-                    opacity:isLose? 0.6 : 1
+                    opacity: isLose ? 0.6 : 1
                 }}
                 onClick={() => handleClick(bet)}
 

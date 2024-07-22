@@ -42,7 +42,7 @@ const baseSlice = createSlice({
         doneResult: (state) => {
             state.status = 'done';
         },
-        setScanNumber: (state, action: PayloadAction<ScanNumberData>) => {
+        setScanNumber: (state, action: PayloadAction<ScanNumberData|undefined>) => {
             console.log("setScannumber", action.payload);
             state.scanNumber = action.payload
         },

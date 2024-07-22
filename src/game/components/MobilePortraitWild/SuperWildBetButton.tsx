@@ -8,6 +8,9 @@ import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import LabelTranslate from '../../../common/components/LabelTranslate';
+import { GameHelper } from '../../../common/utils/GameHelper';
 // import LevelStat from '../MobilePortrait/Content/LevelStat';
 
 interface IProps extends PropsWithChildren {
@@ -27,12 +30,12 @@ const SuperWildBetButton = (
     // const totalPlacedChipCount = "12,640,600";
     // const totalPlacedUserCount = "12";
     // const domainPlacedPercentage = "12";
-    const label = "Super Wild";
     const ratio = "80:1";
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
+    const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const isLose = scanNumber && scanNumber.submit && !(scanNumber.dragon == scanNumber.tiger && scanNumber.dragon == scanNumber.wild)
-    const isWin = scanNumber && scanNumber.submit && !isLose;
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
+    const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
     return (
         <>
@@ -49,14 +52,17 @@ const SuperWildBetButton = (
                 <div className={styles.tieLabel} >
                     <div style={{}}>
 
-                        <span className='text-lg'>{label}</span>
+                        <span className='text-lg'>
+                            <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+
+                        </span>
                         <br />
                         <span className='text-white/[.75]'>{ratio}</span>
                     </div>
 
                 </div>
                 <div className={styles['slot-chip']}
-                style={{left: "30%"}}
+                    style={{ left: "30%" }}
                 >
 
                     {chip > 0 && (
@@ -69,14 +75,14 @@ const SuperWildBetButton = (
 
                     )}
                 </div>
-                
+
                 <div
-                  className={styles.cardContainerWild}
-                   
-                 
+                    className={styles.cardContainerWild}
+
+
 
                 >
-                    {scanNumber && <RenderCard
+                    { !betIsOpen && scanNumber && <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
@@ -90,7 +96,7 @@ const SuperWildBetButton = (
                 </div>
 
             </div>
-        
+
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="120%"

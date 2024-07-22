@@ -16,6 +16,14 @@ import thP6 from '../../locales/th/p6.json';
 import vnP6 from '../../locales/vn/p6.json';
 import zhP6 from '../../locales/zh/p6.json';
 
+// spesific game
+import enm23 from '../../locales/en/m23.json';
+import idm23 from '../../locales/id/m23.json';
+import kom23 from '../../locales/ko/m23.json';
+import thm23 from '../../locales/th/m23.json';
+import vnm23 from '../../locales/vn/m23.json';
+import zhm23 from '../../locales/zh/m23.json';
+
 // how to play
 import enHTP from '../../locales/en/htp.json';
 import idHTP from '../../locales/id/htp.json';
@@ -26,22 +34,22 @@ import zhHTP from '../../locales/zh/htp.json';
 
 const resources: Resource = {
     en: {
-        translation: { common: enCommon, p6: enP6, htp: enHTP },
+        translation: { common: enCommon, p6: enP6, m23: enm23, htp: enHTP },
     },
     id: {
-        translation: { common: idCommon, p6: idP6, htp: idHTP },
+        translation: { common: idCommon, p6: idP6, m23: idm23, htp: idHTP },
     },
     ko: {
-        translation: { common: koCommon, p6: koP6, htp: koHTP },
+        translation: { common: koCommon, p6: koP6, m23: kom23, htp: koHTP },
     },
     th: {
-        translation: { common: thCommon, p6: thP6, htp: thHTP },
+        translation: { common: thCommon, p6: thP6, m23: thm23, htp: thHTP },
     },
     vn: {
-        translation: { common: vnCommon, p6: vnP6, htp: vnHTP },
+        translation: { common: vnCommon, p6: vnP6, m23: vnm23, htp: vnHTP },
     },
     zh: {
-        translation: { common: zhCommon, p6: zhP6, htp: zhHTP },
+        translation: { common: zhCommon, p6: zhP6, m23: zhm23, htp: zhHTP },
     },
 };
 

@@ -11,6 +11,9 @@ import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { Bet } from '../../../types';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import LabelTranslate from '../../../common/components/LabelTranslate';
+import { GameHelper } from '../../../common/utils/GameHelper';
 // import { RenderCard } from './RenderCard';
 
 interface IProps extends PropsWithChildren {
@@ -78,18 +81,18 @@ const TigerBetButton = (
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+    const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const { chip, color } = useGetChipBet(bet);
     const { placeBetHanlder: handleClick } = usePlaceBet();
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
-    const label = "Tiger";
     const ratio = "1:1";
-    const isLose = scanNumber && scanNumber.submit && scanNumber.win !== "tiger";
-    const isWin = scanNumber && scanNumber.submit && !isLose
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== "tiger";
+    const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
-
+        onClick={() => handleClick(bet)}
         >
 
             {
@@ -112,7 +115,9 @@ const TigerBetButton = (
                     }}>
 
                         <span className='text-white/[.75]'>{ratio}</span>
-                        <span className='text-lg'>{label}</span>
+                        <span className='text-lg'>
+                        <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+                            </span>
                     </div>
 
                 </div>
@@ -140,7 +145,7 @@ const TigerBetButton = (
 
 
                 >
-                    {scanNumber && <RenderCard
+                    { !betIsOpen &&  scanNumber  && <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
@@ -164,7 +169,6 @@ const TigerBetButton = (
                 fill="none"
                 viewBox="0 0 128 100"
                 style={{ opacity: isLose ? 0.6 : 1 }}
-                onClick={() => handleClick(bet)}
             >
                 <path
                     className={[isWin ? "table-win-blink" : ""].join(" ")}
