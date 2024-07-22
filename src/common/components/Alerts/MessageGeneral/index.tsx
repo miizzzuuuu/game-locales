@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import {
-    selectLayoutVersion,
+    selectMessageType,
     selectMessageValue,
     setMessage,
 } from '../../../../store/slice/gameStateSlice';
@@ -14,7 +14,7 @@ const MessageGeneral = () => {
     const { t } = useAppTranslate();
 
     const message = useAppSelector(selectMessageValue);
-    const messageType = useAppSelector(selectLayoutVersion);
+    const messageType = useAppSelector(selectMessageType);
 
     const handleKeyboard = useCallback(
         (e: KeyboardEvent) => {

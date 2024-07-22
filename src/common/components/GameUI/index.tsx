@@ -4,9 +4,9 @@ import LayoutV1 from '../../layouts/v1';
 import LayoutV2 from '../../layouts/v2';
 
 const GameUI = () => {
-    const layout = useAppSelector(selectLayoutVersion);
+    const layoutVersion = useAppSelector(selectLayoutVersion);
 
-    if (layout === 1) {
+    if (layoutVersion === 1) {
         return <LayoutV1></LayoutV1>;
     }
 
