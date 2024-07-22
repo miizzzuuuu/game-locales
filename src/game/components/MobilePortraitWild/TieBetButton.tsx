@@ -28,8 +28,8 @@ const TieBetButton = (
     const { placeBetHanlder: handleClick } = usePlaceBet();
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-    const label = "Tie";
-    const ratio = "8:1";
+
+    const ratio = "11:1";
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== "tie";

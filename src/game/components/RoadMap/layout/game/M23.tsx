@@ -102,32 +102,32 @@ export default class M23 extends BaseV2Roadmap {
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">#{periode}</text>
 	  
-			  <rect width="12" height="12" x={a * 10} fill={Layout.redColor} rx="6"></rect>
+			  <rect width="12" height="12" x={a * 12.5} fill={Layout.redColor} rx="6"></rect>
 			  <text
-				x={a * 10 + 6 / 2} y={6 + 6 * 0.65}
+				x={a * 12.5 + 6 / 2} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">D</text>
 	  
 			  <text
-				x={a * 10 + 15} y={6 + 6 * 0.65}
+				x={a * 12.5 + 15} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">{data.filter(({ result }) => result == "dragon").length}</text>
-			  <rect width="12" height="12" x={a * 10 + 31} fill={Layout.blueColor} rx="6"></rect>
+			  <rect width="12" height="12" x={a * 12.5 + 31} fill={Layout.blueColor} rx="6"></rect>
 			  <text
-				x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
+				x={a * 12.5 + 31 + 6 / 2} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">T</text>
 			  <text
-				x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
+				x={a * 12.5 + 31 + 15} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">{data.filter(({ result }) => result == "tiger").length}</text>
-			  <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
+			  <rect width="12" height="12" x={a * 12.5 + 64} fill={Layout.greenColor} rx="6"></rect>
 			  <text
-				x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
+				x={a * 12.5 + 64 + 6 / 2} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">T</text>
 			  <text
-				x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
+				x={a * 12.5 + 64 + 15} y={6 + 6 * 0.65}
 				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 				fill="white">{data.filter(({ result }) => result == "tie").length}</text>
 			</svg>

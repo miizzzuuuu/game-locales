@@ -27,10 +27,8 @@ const SuperWildBetButton = (
     const { placeBetHanlder: handleClick } = usePlaceBet();
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
 
-    // const totalPlacedChipCount = "12,640,600";
-    // const totalPlacedUserCount = "12";
-    // const domainPlacedPercentage = "12";
-    const ratio = "80:1";
+
+    const ratio = "127:1";
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
