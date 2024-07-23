@@ -50,7 +50,11 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     {StringHelper.formatMoneyWithCurrency(item.min, currency, lang)}{' '}
                                     - {StringHelper.formatMoneyOnlyNumber(item.max, lang)}
                                 </td>
-                                <td className="text-center">{item.payout}</td>
+                                <td className="text-center">
+                                    {typeof item.payout === 'number'
+                                        ? `${item.payout}:1`
+                                        : item.payout}
+                                </td>
                             </tr>
                             {item.items.length > 0 &&
                                 item.items.map((child, idxChild) => (
@@ -63,7 +67,11 @@ const TableMenuPayout = ({ data }: IProps) => {
                                             />
                                         </td>
                                         <td className="text-center text-cyan"></td>
-                                        <td className="text-center">{child.payout}</td>
+                                        <td className="text-center">
+                                            {typeof child.payout === 'number'
+                                                ? `${child.payout}:1`
+                                                : child.payout}
+                                        </td>
                                     </tr>
                                 ))}
                         </Fragment>
