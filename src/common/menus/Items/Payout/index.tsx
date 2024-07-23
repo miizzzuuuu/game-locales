@@ -5,7 +5,7 @@ import Panel from '../../Panel';
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectOpenMenuPayout, toggleMenuPayout } from '../../../../store/slice/menuSlice';
-import PayoutContent from '../../../components/PayoutContent';
+import PayoutContent from './PayoutContent';
 
 const Payout = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();

@@ -1,13 +1,13 @@
-import { StringHelper } from '../../../../common/utils/StringHelper';
-import { useAppSelector } from '../../../../store/hooks';
+import { StringHelper } from '../../../../../utils/StringHelper';
+import { useAppSelector } from '../../../../../../store/hooks';
 import {
     selectGameName,
     selectMax50,
     selectMin,
     selectPeriod,
-} from '../../../../store/slice/gameSlice';
-import { selectCurrency } from '../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../store/slice/settingsSlice';
+} from '../../../../../../store/slice/gameSlice';
+import { selectCurrency } from '../../../../../../store/slice/playerSlice';
+import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 
 import './styles.scss';
 

@@ -1,13 +1,13 @@
 import { Fragment } from 'react/jsx-runtime';
-import LabelTranslate from '../../../../common/components/LabelTranslate';
-import { StringHelper } from '../../../../common/utils/StringHelper';
-import { useAppSelector } from '../../../../store/hooks';
-import { selectCurrency } from '../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../store/slice/settingsSlice';
-import { PayoutData } from '../../../../types';
+import LabelTranslate from '../../../../../components/LabelTranslate';
+import { StringHelper } from '../../../../../utils/StringHelper';
+import { useAppSelector } from '../../../../../../store/hooks';
+import { selectCurrency } from '../../../../../../store/slice/playerSlice';
+import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
+import { PayoutData } from '../../../../../../types';
 
 import styles from './styles.module.scss';
-import { GameHelper } from '../../../../common/utils/GameHelper';
+import { GameHelper } from '../../../../../utils/GameHelper';
 
 interface IProps {
     data: PayoutData[];
