@@ -19,6 +19,10 @@ const TableMenuPayout = ({ data }: IProps) => {
 
     const basePcode = GameHelper.getBasePcode();
 
+    const formatPayout = (value: number) => {
+        return StringHelper.formatMoneyOnlyNumber(value, lang);
+    };
+
     return (
         <div className={styles['"payout-table-container"']}>
             <table className={styles['payout-table']}>
@@ -52,7 +56,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                 </td>
                                 <td className="text-center">
                                     {typeof item.payout === 'number'
-                                        ? `${item.payout}:1`
+                                        ? `${formatPayout(item.payout)}:1`
                                         : item.payout}
                                 </td>
                             </tr>
@@ -69,7 +73,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                         <td className="text-center text-cyan"></td>
                                         <td className="text-center">
                                             {typeof child.payout === 'number'
-                                                ? `${child.payout}:1`
+                                                ? `${formatPayout(child.payout)}:1`
                                                 : child.payout}
                                         </td>
                                     </tr>
