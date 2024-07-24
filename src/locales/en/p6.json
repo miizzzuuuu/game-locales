@@ -26,5 +26,13 @@
     "odd": "odd",
     "even": "even",
     "red": "red",
-    "black": "black"
+    "black": "black",
+    "one number": "One Number",
+    "two number": "Two Number",
+    "four number": "Four Number",
+    "single row": "Single Row",
+    "single column": "Single Column",
+    "double row": "Double Row",
+    "double column": "Double Row",
+    "side bet": "Double Row"
 }

@@ -26,5 +26,13 @@
     "odd": "คี่",
     "even": "คู่",
     "red": "แดง",
-    "black": "ดำ"
+    "black": "ดำ",
+    "one number": "หนึ่งตัวเลข",
+    "two number": "สองตัวเลข",
+    "four number": "สี่ตัวเลข",
+    "single row": "แถวเดี่ยว",
+    "single column": "คอลัมน์เดี่ยว",
+    "double row": "แถวคู่",
+    "double column": "คอลัมน์คู่",
+    "side bet": "เดิมพันข้าง"
 }

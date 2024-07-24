@@ -26,5 +26,13 @@
     "odd": "ganjil",
     "even": "genap",
     "red": "merah",
-    "black": "hitam"
+    "black": "hitam",
+    "one number": "Satu Nomor",
+    "two number": "Dua Nomor",
+    "four number": "Empat Nomor",
+    "single row": "Baris Tunggal",
+    "single column": "Kolom Tunggal",
+    "double row": "Baris Ganda",
+    "double column": "Kolom Ganda",
+    "side bet": "Taruhan Sampingan"
 }

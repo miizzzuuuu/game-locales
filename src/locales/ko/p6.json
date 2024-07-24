@@ -26,5 +26,13 @@
     "odd": "홀수",
     "even": "짝수",
     "red": "빨간색",
-    "black": "검은색"
+    "black": "검은색",
+    "one number": "한 숫자",
+    "two number": "두 숫자",
+    "four number": "네 숫자",
+    "single row": "단일 행",
+    "single column": "단일 열",
+    "double row": "이중 행",
+    "double column": "이중 열",
+    "side bet": "사이드 베팅"
 }
