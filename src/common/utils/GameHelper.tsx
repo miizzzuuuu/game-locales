@@ -57,6 +57,7 @@ export class GameHelper {
         p7d: 'rouletted',
         p7e: 'roulettee',
         p7f: 'roulettef',
+        m23: "dragontiger" 
     };
 
     static GAME_DISPLAY_NAME: Record<string, string> = {
@@ -112,6 +113,8 @@ export class GameHelper {
         p9b: '12D Thunder',
         p12: 'Sicbo[Dice]',
     };
+
+    
 
     static getBasePcode() {
         const mixedPcode = this.pcode;

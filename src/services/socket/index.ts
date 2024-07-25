@@ -11,6 +11,7 @@ import {
     TopWinnerData,
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
+import { StringUtility } from '../../game/components/External/managers/StringUtility';
 
 export class SocketComponent {
     static _instance: SocketComponent;
@@ -25,7 +26,7 @@ export class SocketComponent {
     static SOCKET_EVENT = {
         connect: 'connect',
         loadNewValue: 'loadNewValue',
-        scanNumber: 'scanDragonTigerB',
+        scanNumber: 'scan',
         closeTimer: 'closeTimer',
         gameResult: 'gameResult',
         recieveTotalWin: 'recieve_totalwin',
@@ -177,7 +178,7 @@ export class SocketComponent {
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {
             this._socket.on(
-                SocketComponent.SOCKET_EVENT.scanNumber,
+                SocketComponent.SOCKET_EVENT.scanNumber.concat(StringUtility.convertGameCodeToGameName(GameHelper.pcode)),
                 (data: ScanNumberData) => {
                     console.log('socket scanNumber:', data);
                     if (data && data.pcode === GameHelper.pcode) {
@@ -185,6 +186,11 @@ export class SocketComponent {
                     }
                 }
             );
+            console.log(
+                SocketComponent.SOCKET_EVENT.scanNumber.concat(StringUtility.convertGameCodeToGameName(GameHelper.pcode)),
+
+            );
+
 
         }
     }
