@@ -143,7 +143,8 @@ export function addDisplayTileLegacy(this: BaseV2Roadmap, displayAry: any, tile:
     } else {
         if (displayAry[this.currentDisplayRow! + 1][this.currentDisplayCol!])
             this.currentDirection = RoadmapDirections.Right;
-
+        if (!this.roadmapDisplay![this.currentDisplayRow! + 1][this.currentDisplayCol!])
+            this.currentDirection = RoadmapDirections.Down;
         if (this.currentDirection === RoadmapDirections.Right)
             this.currentDisplayCol!++;
         else
@@ -184,6 +185,9 @@ export function addDisplayTile(this: BaseV2Roadmap, tile: OptionalJSXElement, ty
     } else {
         if (this.roadmapDisplay![this.currentDisplayRow! + 1][this.currentDisplayCol!])
             this.currentDirection = RoadmapDirections.Right;
+
+        if (!this.roadmapDisplay![this.currentDisplayRow! + 1][this.currentDisplayCol!])
+            this.currentDirection = RoadmapDirections.Down;
 
         if (this.currentDirection === RoadmapDirections.Right)
             this.currentDisplayCol!++;
