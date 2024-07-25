@@ -14,7 +14,7 @@ import './../External/components/css/animation.css';
 import { Panel } from './panel';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import RoadMap from '../RoadMap';
+import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetWild from '../MobilePortraitWild/TableBetWild';
 
 
