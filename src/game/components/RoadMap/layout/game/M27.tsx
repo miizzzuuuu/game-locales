@@ -124,7 +124,7 @@ export default class M27 extends BaseV2Roadmap {
                     const di = item.di;
                     const tian = item.tian;
 
-                    if (this.currentRow! >= 3) {
+                    if (this.currentRow! >= 5) {
                         this.currentRow = 0;
                         this.currentCol! += 1;
                     } else this.currentRow! += 1;

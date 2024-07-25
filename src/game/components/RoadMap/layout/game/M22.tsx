@@ -51,7 +51,7 @@ export default class M22 extends BaseV2Roadmap {
         history.forEach((item: BaccaratHistory, idx: number) => {
             let ele = null;
 
-            if (this.currentRow! >= 8) {
+            if (this.currentRow! >= 7) {
                 this.currentRow = 0;
                 this.currentCol! += 1;
             } else this.currentRow! += 1;

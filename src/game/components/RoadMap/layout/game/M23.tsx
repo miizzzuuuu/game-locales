@@ -165,7 +165,7 @@ export default class M23 extends BaseV2Roadmap {
 				if (Math.ceil(history.length / 8) >= 24!)
 					this.firstDisplayedCol = Math.ceil(history.length / 8) - 24!;
 
-				// console.log("m23 hist", history);
+				console.log("m23 hist", history);
 
 				history.forEach((item: any, idx: number) => {
 					let ele = null;
@@ -176,7 +176,7 @@ export default class M23 extends BaseV2Roadmap {
 					const tigerVal = getTigerVal(item);
 					dragonVal;
 					tigerVal;
-					if (this.currentRow! >= 8) {
+					if (this.currentRow! >= 7) {
 						this.currentRow = 0;
 						this.currentCol! += 1;
 					} else
@@ -236,7 +236,7 @@ export default class M23 extends BaseV2Roadmap {
 				this.resetDisplayPointer();
 				this.resetAnalysisPointer();
 
-				// console.log("sBR", this.simpleBigRoad);
+				console.log("sBR", this.simpleBigRoad, this.props.type);
 
 				//Actual data
 				this.simpleBigRoad!
