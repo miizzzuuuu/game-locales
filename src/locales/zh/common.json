@@ -47,5 +47,6 @@
     "bet-error-min": "下注 '{{button}}' 最小 {{value}}",
     "insuffix-balance": "余额不足",
     "autobet-error-insufficient-balance": "自动下注失败，余额不足",
-    "doublebet-error-max-bet": "双倍下注错误，最大下注"
+    "doublebet-error-max-bet": "双倍下注错误，最大下注",
+    "winner": "赢家"
 }

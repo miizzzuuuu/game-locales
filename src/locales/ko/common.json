@@ -47,5 +47,6 @@
     "bet-error-min": "'{{button}}' 베팅 최소 {{value}}",
     "insuffix-balance": "잔액 부족",
     "autobet-error-insufficient-balance": "자동 베팅 실패, 잔액 부족",
-    "doublebet-error-max-bet": "이중 베팅 오류, 최대 베팅"
+    "doublebet-error-max-bet": "이중 베팅 오류, 최대 베팅",
+    "winner": "승자"
 }

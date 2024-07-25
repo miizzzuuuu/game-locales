@@ -21,10 +21,18 @@
         "1st Row,2nd Row": "R.1-2",
         "3rd Row,4th Row": "R.3-4"
     },
-    "big": "big",
-    "small": "small",
-    "odd": "odd",
-    "even": "even",
-    "red": "red",
-    "black": "black"
+    "big": "크다",
+    "small": "작다",
+    "odd": "홀수",
+    "even": "짝수",
+    "red": "빨간색",
+    "black": "검은색",
+    "one number": "한 숫자",
+    "two numbers": "두 숫자",
+    "four numbers": "네 숫자",
+    "single row": "단일 행",
+    "single column": "단일 열",
+    "double row": "이중 행",
+    "double column": "이중 열",
+    "side bet": "사이드 베팅"
 }

@@ -9,12 +9,14 @@ import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { selectTime, setTime } from '../../../store/slice/timerSlice';
-import { dummyLoadNewValue } from '../../dummy';
+import { dummyLoadNewValue, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
 import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
+import TopWinner from '../TopWinner';
+import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -43,6 +45,14 @@ function Game() {
         if (e.key === 'c') {
             dispatch(setTime(0));
         }
+        if (e.key === 't') {
+            dispatch(
+                setTopWinner({
+                    data: topWinnerDummy,
+                    periode: 0,
+                }),
+            );
+        }
     }, []);
 
     useKeyboard(handleKeyboardTest);
@@ -63,6 +73,7 @@ function Game() {
             <Streaming />
             <Timer />
             <GameUI />
+            <TopWinner />
             <AlertUI />
             <Menu />
         </div>

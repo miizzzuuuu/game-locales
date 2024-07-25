@@ -92,13 +92,13 @@ export interface SendBetParam {
 
 export type PayoutItem = {
     name: string;
-    payout: number | null;
+    payout: number | string | null;
 };
 
 export type PayoutData = {
     name: string;
     min: number;
     max: number;
-    payout: number | null;
+    payout: number | string | null;
     items: PayoutItem[];
 };

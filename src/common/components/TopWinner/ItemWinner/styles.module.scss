@@ -1,0 +1,27 @@
+.item {
+    height: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    &:first-child {
+        .label {
+            color: #70ff5e;
+        }
+    }
+}
+
+.label,
+.value {
+    font-size: 0.8rem;
+    letter-spacing: -0.016rem;
+}
+
+.label {
+    font-weight: 400;
+}
+
+.value {
+    color: #ffc71c;
+    font-weight: 600;
+}

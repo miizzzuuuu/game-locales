@@ -1,4 +1,4 @@
-import { LoadNewValueData } from '../../types';
+import { LoadNewValueData, TopWinnerData } from '../../types';
 
 export const dummyChipBase = [
     1000, 5000, 10000, 20000, 50000, 100000, 200000, 500000, 1000000, 5000000,
@@ -100,5 +100,44 @@ export const payoutData = [
                 payout: 1,
             },
         ],
+    },
+];
+
+export const topWinnerDummy: TopWinnerData['data'] = [
+    {
+        username: 'rajarungkat',
+        totalWin: 320000000,
+    },
+    {
+        username: 'janjijiwa',
+        totalWin: 8250000,
+    },
+    {
+        username: 'salamanan',
+        totalWin: 5000000,
+    },
+    {
+        username: 'sandiwara',
+        totalWin: 2250000,
+    },
+    {
+        username: 'huhasgys',
+        totalWin: 1278000,
+    },
+    {
+        username: 'rajacasino',
+        totalWin: 1120000,
+    },
+    {
+        username: 'gilajudi',
+        totalWin: 895000,
+    },
+    {
+        username: 'damarsatya',
+        totalWin: 812000,
+    },
+    {
+        username: 'sukasukasaya',
+        totalWin: 501000,
     },
 ];

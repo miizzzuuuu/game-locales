@@ -192,4 +192,8 @@ export class DisplayHelper {
 
         return styles[device] === undefined ? '' : ` ${styles[device]}`;
     }
+
+    static getLangClassName(styles: CSSModuleClasses, lang: string) {
+        return styles[lang] === undefined ? '' : ` ${styles[lang]}`;
+    }
 }

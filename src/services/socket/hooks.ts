@@ -4,6 +4,7 @@ import { LobbyConnect } from '../../types';
 import { useAppDispatch } from '../../store/hooks';
 import { gameResultAction, loadNewValueAction, scanNumberAction } from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
+import { setTopWinner } from '../../store/slice/topWinnerSlice';
 
 interface Params {
     nickname: string;
@@ -47,6 +48,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
         SocketComponent.instance.listenRecieveTotalWin((data) => {
             const { winamount } = data;
             dispatch(setWinAmount(winamount));
+        });
+
+        SocketComponent.instance.listenTopWinner((data) => {
+            dispatch(setTopWinner(data));
         });
 
         return () => {

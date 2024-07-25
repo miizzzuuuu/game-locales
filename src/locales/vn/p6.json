@@ -26,5 +26,13 @@
     "odd": "lẻ",
     "even": "chẵn",
     "red": "đỏ",
-    "black": "đen"
+    "black": "đen",
+    "one number": "Một Số",
+    "two numbers": "Hai Số",
+    "four numbers": "Bốn Số",
+    "single row": "Hàng Đơn",
+    "single column": "Cột Đơn",
+    "double row": "Hàng Đôi",
+    "double column": "Cột Đôi",
+    "side bet": "Cược Bên"
 }

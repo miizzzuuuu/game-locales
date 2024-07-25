@@ -1,13 +1,13 @@
 import { Fragment } from 'react/jsx-runtime';
-import LabelTranslate from '../../../../common/components/LabelTranslate';
-import { StringHelper } from '../../../../common/utils/StringHelper';
-import { useAppSelector } from '../../../../store/hooks';
-import { selectCurrency } from '../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../store/slice/settingsSlice';
-import { PayoutData } from '../../../../types';
+import LabelTranslate from '../../../../../components/LabelTranslate';
+import { StringHelper } from '../../../../../utils/StringHelper';
+import { useAppSelector } from '../../../../../../store/hooks';
+import { selectCurrency } from '../../../../../../store/slice/playerSlice';
+import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
+import { PayoutData } from '../../../../../../types';
 
 import styles from './styles.module.scss';
-import { GameHelper } from '../../../../common/utils/GameHelper';
+import { GameHelper } from '../../../../../utils/GameHelper';
 
 interface IProps {
     data: PayoutData[];
@@ -18,6 +18,10 @@ const TableMenuPayout = ({ data }: IProps) => {
     const lang = useAppSelector(selectLanguage);
 
     const basePcode = GameHelper.getBasePcode();
+
+    const formatPayout = (value: number) => {
+        return StringHelper.formatMoneyOnlyNumber(value, lang);
+    };
 
     return (
         <div className={styles['"payout-table-container"']}>
@@ -50,7 +54,11 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     {StringHelper.formatMoneyWithCurrency(item.min, currency, lang)}{' '}
                                     - {StringHelper.formatMoneyOnlyNumber(item.max, lang)}
                                 </td>
-                                <td className="text-center">{item.payout}</td>
+                                <td className="text-center">
+                                    {typeof item.payout === 'number'
+                                        ? `${formatPayout(item.payout)}:1`
+                                        : item.payout}
+                                </td>
                             </tr>
                             {item.items.length > 0 &&
                                 item.items.map((child, idxChild) => (
@@ -63,7 +71,11 @@ const TableMenuPayout = ({ data }: IProps) => {
                                             />
                                         </td>
                                         <td className="text-center text-cyan"></td>
-                                        <td className="text-center">{child.payout}</td>
+                                        <td className="text-center">
+                                            {typeof child.payout === 'number'
+                                                ? `${formatPayout(child.payout)}:1`
+                                                : child.payout}
+                                        </td>
                                     </tr>
                                 ))}
                         </Fragment>

@@ -47,5 +47,6 @@
     "bet-error-min": "Cược '{{button}}' tối thiểu {{value}}",
     "insuffix-balance": "số dư không đủ",
     "autobet-error-insufficient-balance": "tự động cược thất bại, số dư không đủ",
-    "doublebet-error-max-bet": "lỗi cược đôi, cược tối đa"
+    "doublebet-error-max-bet": "lỗi cược đôi, cược tối đa",
+    "winner": "người thắng"
 }

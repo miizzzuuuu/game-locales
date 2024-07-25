@@ -170,7 +170,7 @@ export class SocketComponent {
             this._socket.on(SocketComponent.SOCKET_EVENT.topWinner, (data: TopWinnerData) => {
                 // console.log('socket topWinner:', data);
 
-                this.validationDataWithPcode(data, () => callback(data));
+                this.validationDataWithPcodeAndGameCode(data, () => callback(data));
             });
         }
     }
@@ -211,6 +211,15 @@ export class SocketComponent {
 
     validationDataWithGameCode<T extends { game: string }>(data: T, callback?: () => void) {
         if (data.game === GameHelper.getGameCode()) {
+            callback?.();
+        }
+    }
+
+    validationDataWithPcodeAndGameCode<T extends { pcode: string }>(
+        data: T,
+        callback?: () => void,
+    ) {
+        if (data.pcode === GameHelper.pcode || data.pcode === GameHelper.getGameCode()) {
             callback?.();
         }
     }

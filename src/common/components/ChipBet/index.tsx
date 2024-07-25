@@ -10,16 +10,17 @@ interface IProps {
     value: number;
     color?: string;
     style?: CSSProperties;
+    ignoreTransparent?: boolean;
 }
 
-const ChipBet = ({ value, color, style }: IProps) => {
+const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);
 
     const stringValue = StringHelper.formatChipText(value);
 
-    const showChip = useAppSelector(selectShowChip);
+    const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 
     useEffect(() => {
         if (value !== lastValue.current) {
@@ -40,35 +41,13 @@ const ChipBet = ({ value, color, style }: IProps) => {
         }
     }, [value]);
 
-    useEffect(() => {
-        const handleAnimationEnd = () => {
-            chipRef.current?.classList.remove(styles['place-chip']);
-        };
-
-        chipRef.current?.addEventListener('animationend', handleAnimationEnd);
-
-        return () => {
-            chipRef.current?.removeEventListener('animationend', handleAnimationEnd);
-        };
-    }, []);
-
     return (
         <div
             className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`}
             style={style}
             ref={chipRef}
         >
-            <SVGChip color={color} />
-
-            <div className={styles['chip-content']}>
-                <span
-                    className={styles['chip-text']}
-                    data-value={stringValue}
-                    style={{ '--color': color } as React.CSSProperties & { '--color': string }}
-                >
-                    {stringValue}
-                </span>
-            </div>
+            <SVGChip color={color} value={stringValue} />
 
             <div ref={lightRef} className={styles['chip-light']} />
         </div>

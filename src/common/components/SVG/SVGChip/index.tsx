@@ -1,13 +1,15 @@
 import { SVGProps } from 'react';
+import TextChip from './TextChip';
 
 interface IProps {
     color?: string;
+    value?: string;
     svgProps?: SVGProps<SVGSVGElement>;
 }
 
-const SVGChip = ({ color = '#266EE9', svgProps }: IProps) => {
+const SVGChip = ({ color = '#266EE9', value, svgProps }: IProps) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 40" fill="none" {...svgProps}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" fill="none" {...svgProps}>
             <path
                 d="M20.5 40C31.5457 40 40.5 31.0457 40.5 20C40.5 8.9543 31.5457 0 20.5 0C9.4543 0 0.5 8.9543 0.5 20C0.5 31.0457 9.4543 40 20.5 40Z"
                 fill={color}
@@ -38,6 +40,9 @@ const SVGChip = ({ color = '#266EE9', svgProps }: IProps) => {
                 fill="url(#paint2_linear_563_25187)"
                 fillOpacity={0.2}
             />
+
+            <TextChip color={color} value={value} />
+
             <defs>
                 <radialGradient
                     id="paint0_radial_563_25187"

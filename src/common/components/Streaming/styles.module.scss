@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: var(--layer-streaming);
 }
 
 .video-container {
@@ -16,7 +17,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 1;
     }
 
     .video-container {

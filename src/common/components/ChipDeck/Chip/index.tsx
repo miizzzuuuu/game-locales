@@ -33,16 +33,7 @@ const Chip = ({ version = 1, value, onClick, color, isActive }: IProps) => {
                 ref={chipRef}
                 onClick={handleClick}
             >
-                <SVGChip color={color} />
-
-                <div className={styles.content}>
-                    <span
-                        data-value={stringValue}
-                        style={{ '--color': color } as React.CSSProperties & { '--color': string }}
-                    >
-                        {stringValue}
-                    </span>
-                </div>
+                <SVGChip color={color} value={stringValue} />
             </div>
         </div>
     );

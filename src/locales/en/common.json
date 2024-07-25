@@ -46,5 +46,6 @@
     "bet-error-min": "Bet '{{button}}' min {{value}}",
     "insuffix-balance": "insuffix balance",
     "autobet-error-insufficient-balance": "autobet failed, insufficient balance",
-    "doublebet-error-max-bet": "double bet error, max bet"
+    "doublebet-error-max-bet": "double bet error, max bet",
+    "winner": "winner"
 }

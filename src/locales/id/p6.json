@@ -21,10 +21,18 @@
         "1st Row,2nd Row": "R.1-2",
         "3rd Row,4th Row": "R.3-4"
     },
-    "big": "big",
-    "small": "small",
-    "odd": "odd",
-    "even": "even",
-    "red": "red",
-    "black": "black"
+    "big": "besar",
+    "small": "kecil",
+    "odd": "ganjil",
+    "even": "genap",
+    "red": "merah",
+    "black": "hitam",
+    "one number": "Satu Nomor",
+    "two numbers": "Dua Nomor",
+    "four numbers": "Empat Nomor",
+    "single row": "Baris Tunggal",
+    "single column": "Kolom Tunggal",
+    "double row": "Baris Ganda",
+    "double column": "Kolom Ganda",
+    "side bet": "Taruhan Sampingan"
 }

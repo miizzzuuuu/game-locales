@@ -26,5 +26,13 @@
     "odd": "单",
     "even": "双",
     "red": "红",
-    "black": "黑"
+    "black": "黑",
+    "one number": "一个号码",
+    "two numbers": "两个号码",
+    "four numbers": "四个号码",
+    "single row": "单行",
+    "single column": "单列",
+    "double row": "双行",
+    "double column": "双列",
+    "side bet": "边注"
 }
