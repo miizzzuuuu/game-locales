@@ -1,3 +1,4 @@
+import MainArea from '../../../game/components/MainArea';
 import { useAppSelector } from '../../../store/hooks';
 import { selectLayoutVersion } from '../../../store/slice/gameStateSlice';
 import LayoutV1 from '../../layouts/v1';
@@ -7,7 +8,9 @@ const GameUI = () => {
     const layoutVersion = useAppSelector(selectLayoutVersion);
 
     if (layoutVersion === 1) {
-        return <LayoutV1></LayoutV1>;
+        return <LayoutV1>
+            <MainArea></MainArea>
+        </LayoutV1>;
     }
 
     return <LayoutV2></LayoutV2>;
