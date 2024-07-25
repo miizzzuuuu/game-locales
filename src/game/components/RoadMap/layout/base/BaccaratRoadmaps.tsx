@@ -1,3 +1,4 @@
+import React from "react";
 import { GameHelper } from "../../../../../common/utils/GameHelper";
 import { IKeyNumberDict } from "../game/M23";
 import { BaseV2Roadmap } from "./V2Roadmap";
@@ -101,10 +102,23 @@ function addBigRoadDisplay(this: BaseV2Roadmap, displayAry: Array<Array<Optional
         this.currentDisplayRow = 0;
         this.lastDisplayCol! += 1;
         this.currentDisplayCol = this.lastDisplayCol;
-    } else {
+    }
+    else if (this.currentType !== type || this.currentDisplayRow! >= maxIdxRow) {
+        this.currentDirection = RoadmapDirections.Down;
+
+        this.currentDisplayRow = 0;
+        this.lastDisplayCol! += 1;
+        this.currentDisplayCol = this.lastDisplayCol;
+    }
+     else {
+        // console.log("sBR", this.currentDisplayRow! + 1, this.currentDisplayCol!, this.props.type);
+
         // @ts-ignore
         if (displayAry[this.currentDisplayRow! + 1][this.currentDisplayCol!])
             this.currentDirection = RoadmapDirections.Right;
+        // @ts-ignore
+        if (!displayAry[this.currentDisplayRow! + 1][this.currentDisplayCol!])
+            this.currentDirection = RoadmapDirections.Down;
 
         if (this.currentDirection === RoadmapDirections.Right)
             this.currentDisplayCol!++;
@@ -183,9 +197,9 @@ export function addDisplayTile(this: BaseV2Roadmap, tile: OptionalJSXElement, ty
         this.currentDisplayCol = this.lastDisplayCol;
 
     } else {
+
         if (this.roadmapDisplay![this.currentDisplayRow! + 1][this.currentDisplayCol!])
             this.currentDirection = RoadmapDirections.Right;
-
         if (!this.roadmapDisplay![this.currentDisplayRow! + 1][this.currentDisplayCol!])
             this.currentDirection = RoadmapDirections.Down;
 
@@ -463,12 +477,12 @@ function renderV3(this: BaseV2Roadmap) {
 
                                 // Shio Fights
                                 type === "shio" ? (
-                                    nary(4).map((row, rowIdx) =>
-                                        <div className="row" key={"cBR_" + "_" + row}>
+                                    nary(6).map((row, rowIdx) =>
+                                        <React.Fragment  key={"cBR_" + "_" + row}>
                                             {
                                                 roadmapColumns.map((col, colIdx) =>
                                                 (
-                                                    <div key={"cBR_" + row + "_" + col}>
+                                                    <React.Fragment key={"cBR_" + row + "_" + col}>
                                                         {
                                                             this.roadmapDisplay![rowIdx][colIdx + this.firstDisplayedCol!] !== undefined ?
                                                                 this.roadmapDisplay![rowIdx][colIdx + this.firstDisplayedCol!] : null
@@ -479,11 +493,11 @@ function renderV3(this: BaseV2Roadmap) {
                                                                 ? null
                                                                 : null
                                                         }
-                                                    </div>
+                                                    </React.Fragment>
                                                 )
                                                 )
                                             }
-                                        </div>
+                                        </React.Fragment>
                                     )
                                 ) :
 
@@ -515,20 +529,20 @@ export function renderPredictions(gameRoad: any) {
 
     const blueLetter =
         clonePcode === 'm22' || clonePcode === 'm32' || basePcode === 'm38'
-            ?  <text
-            x="5" y="10"
-            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
-            fill="white">PLAYER</text>
+            ? <text
+                x="5" y="10"
+                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
+                fill="white">PLAYER</text>
             : clonePcode === 'm23'
                 ? <text
-                x="5" y="11"
-                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
-                fill="white">DRAGON</text>
-                : clonePcode === 'm27'
-                    ? <text
                     x="5" y="11"
                     style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
-                    fill="white">DI</text>
+                    fill="white">DRAGON</text>
+                : clonePcode === 'm27'
+                    ? <text
+                        x="5" y="11"
+                        style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                        fill="white">DI</text>
                     : clonePcode === 'm34'
                         ? 'Hi'
                         : 'E';
@@ -536,19 +550,19 @@ export function renderPredictions(gameRoad: any) {
     const redLetter =
         clonePcode === 'm22' || clonePcode === 'm32' || basePcode === 'm38'
             ? <text
-            x="82" y="9.5"
-            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
-            fill="white">BANKER</text>
+                x="82" y="9.5"
+                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 8 }}
+                fill="white">BANKER</text>
             : clonePcode === 'm23'
-                ?  <text
-                x="85" y="11"
-                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
-                fill="white">TIGER</text>
+                ? <text
+                    x="85" y="11"
+                    style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                    fill="white">TIGER</text>
                 : clonePcode === 'm27'
                     ? <text
-                x="85" y="11"
-                style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
-                fill="white">TIAN</text>
+                        x="85" y="11"
+                        style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 10 }}
+                        fill="white">TIAN</text>
                     : clonePcode === 'm34'
                         ? 'Lo'
                         : 'O';
@@ -588,7 +602,7 @@ export function renderPredictions(gameRoad: any) {
                         ? gameRoad.loPrediction
                         // @ts-ignore   
                         : gameRoad.oddPrediction; //FanTan
-                // @ts-ignore   
+    // @ts-ignore   
     //Template return, no need to change
     return (<>
         <svg

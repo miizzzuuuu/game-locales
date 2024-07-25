@@ -31,9 +31,9 @@ export default class M22 extends BaseV2Roadmap {
     static redColor = "#F10149";
     static blueColor = "#2673D9";
     static greenColor = "#01C995";
-     redColor = "#F10149";
-     blueColor = "#2673D9";
-     greenColor = "#01C995";
+    redColor = M22.redColor;
+    blueColor = M22.blueColor;
+    greenColor = M22.greenColor;
     layout = M22;
     processBeadRoad() {
         this.currentRow = -1;
@@ -112,7 +112,7 @@ export default class M22 extends BaseV2Roadmap {
         this.resetAnalysisPointer();
         console.log("starting type", this.props.type)
         //Actual data
-        console.log("sBR", this.simpleBigRoad);
+        // console.log("sBR", this.simpleBigRoad);
 
         // Note: This should've been a 2D array of strings, not JSX Elements
         this.simpleBigRoad!.forEach((item, idx) => {
@@ -343,11 +343,12 @@ export default class M22 extends BaseV2Roadmap {
         let startingCol = 0;
         let startingRow = 0;
 
-        // console.log("rT", this.roadmapTypes);
+        console.log("rT", this.roadmapTypes);
 
         const lastBigRoadSequence =
             this.bigRoadSequence![this.bigRoadSequence!.length - 1];
         if (lastBigRoadSequence === undefined) return;
+
 
         startingRow = lastBigRoadSequence[0];
         startingCol = lastBigRoadSequence[1];
@@ -364,65 +365,14 @@ export default class M22 extends BaseV2Roadmap {
         // console.log("bRS", this.bigRoadSequence);
 
         //Use this.currentRow only for predictions on the same column (the same currentPlayer)
-        for (a = 0; a < this.roadmapTypes!.length; a++)
-            if (this.roadmapTypes![a][this.currentCol!]) startingRow = a;
-            else break;
+        for (a = 0; a < this.roadmapTypes!.length; a++) {
 
-        this.currentRow = startingRow;
-        this.currentCol = startingCol;
-        // console.log({this.currentCol: this.currentCol, this.currentRow: this.currentRow, this.currentType: this.currentType, currentPlayer: currentPlayer});
-
-        //Banker and player are disabled for now
-
-        //Evaluate banker
-        if (currentPlayer === 'banker') {
-            this.currentRow += 1;
-
-            for (a = 0; a < 3; a++) {
-                if (this.currentCol - a - 1 < 0)
-                    this.bankerPrediction[a] = redElements[a];
-                else if (
-                    this.roadmapTypes![this.currentRow][
-                    this.currentCol - a - 1
-                    ] ===
-                    this.roadmapTypes![this.currentRow - 1][
-                    this.currentCol - a - 1
-                    ]
-                )
-                    this.bankerPrediction[a] = redElements[a];
-                else this.bankerPrediction[a] = blueElements[a];
+            if (this.roadmapTypes![a][this.currentCol!]) {
+                startingRow = a
             }
-        } else {
-            //evaluate different column
-            this.currentRow = 0;
-            this.currentCol += 1;
-            // console.log("pred banker", this.currentRow, this.currentCol);
 
-            let lengthLeft, lengthRight;
-
-            for (let col = 0; col < 3; col++) {
-                if (this.currentCol - col - 2 < 0) {
-                    this.bankerPrediction[col] = redElements[col];
-                    continue;
-                }
-
-                lengthLeft = 0;
-                lengthRight = 0;
-                for (a = 0; a < this.roadmapTypes!.length; a++) {
-                    if (this.roadmapTypes![a][this.currentCol - col - 2])
-                        lengthLeft++;
-                    if (this.roadmapTypes![a][this.currentCol - 1])
-                        lengthRight++;
-                }
-
-                // console.log("ll, lr", lengthLeft, lengthRight);
-
-                this.bankerPrediction[col] =
-                    lengthLeft === lengthRight
-                        ? redElements[col]
-                        : blueElements[col];
-            }
         }
+        console.log("rT", this.bigRoadSequence, lastBigRoadSequence, this.roadmapTypes);
 
         this.currentRow = startingRow;
         this.currentCol = startingCol;
@@ -430,10 +380,13 @@ export default class M22 extends BaseV2Roadmap {
         //Evaluate player
         if (currentPlayer === 'player') {
             this.currentRow += 1;
-
             for (a = 0; a < 3; a++) {
-                if (this.currentCol - a - 1 < 0)
-                    this.playerPrediction[a] = blueElements[a];
+                
+                if (this.currentCol - a - 1 < 0) {
+
+                    // this.playerPrediction[a] = blueElements[a];
+                    // this.bankerPrediction[a] = redElements[a];
+                }
                 else if (
                     this.roadmapTypes![this.currentRow][
                     this.currentCol - a - 1
@@ -441,9 +394,15 @@ export default class M22 extends BaseV2Roadmap {
                     this.roadmapTypes![this.currentRow - 1][
                     this.currentCol - a - 1
                     ]
-                )
+                ) {
+
                     this.playerPrediction[a] = redElements[a];
-                else this.playerPrediction[a] = blueElements[a];
+                    this.bankerPrediction[a] = blueElements[a];
+                }
+                else {
+                    this.playerPrediction[a] = blueElements[a];
+                    this.bankerPrediction[a] = redElements[a];
+                }
             }
         } else {
             //evaluate different column
@@ -452,8 +411,10 @@ export default class M22 extends BaseV2Roadmap {
             // console.log("pred player", this.currentRow, this.currentCol);
 
             for (let col = 0; col < 3; col++) {
+
                 if (this.currentCol - col - 2 < 0) {
-                    this.playerPrediction[col] = blueElements[col];
+                    // this.playerPrediction[col] = blueElements[col];
+                    // this.bankerPrediction[col] = redElements[col];
                     continue;
                 }
 
@@ -473,6 +434,10 @@ export default class M22 extends BaseV2Roadmap {
                     lengthLeft === lengthRight
                         ? redElements[col]
                         : blueElements[col];
+                this.bankerPrediction[col] =
+                    lengthLeft === lengthRight
+                        ? blueElements[col]
+                        : redElements[col];
             }
         }
     }

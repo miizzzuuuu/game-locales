@@ -65,81 +65,81 @@ function getTigerVal(win: DragonTigerWinType): number {
 
 export default class M23 extends BaseV2Roadmap {
 	dragonPrediction: ((props: any) => JSX.Element)[] | [] = [];
-	tigerPrediction: ((props: any) => JSX.Element)[] | []= [];
-	 static redColor = "#F10149";
-	 static blueColor = "#D3942A";
-	 static greenColor = "#01C995";
-	  redColor = "#F10149";
-	  blueColor = "#D3942A";
-	  greenColor = "#01C995";
-	 layout = M23;
+	tigerPrediction: ((props: any) => JSX.Element)[] | [] = [];
+	static redColor = "#F10149";
+	static blueColor = "#D3942A";
+	static greenColor = "#01C995";
+	redColor = M23.redColor;
+	blueColor = M23.blueColor;
+	greenColor = M23.greenColor;
+	layout = M23;
 
 	static ShoeStat() {
 		const darkMode = true;
 		const historyBlink = false;
 		const data = useAppSelector((state) => state.history.history);
 		console.log(data)
-        const periode = useAppSelector(selectPeriod);
+		const periode = useAppSelector(selectPeriod);
 		const a = periode?.toString().length
 		const Layout = M23;
-	  
+
 		return (
-		  <div style={{
-			display: "flex",
-			justifyContent: "space-between",
-			flexDirection: "row",
-			width: "100%",
-			paddingBlock: "1%"
-		  }}>
-			<svg
-			  xmlns="http://www.w3.org/2000/svg"
-			  width="180"
-			  fill="none"
-			  viewBox="0 0 180 12"
-			>
-			  <text
-				x={0 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">#{periode}</text>
-	  
-			  <rect width="12" height="12" x={a * 12.5} fill={Layout.redColor} rx="6"></rect>
-			  <text
-				x={a * 12.5 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">D</text>
-	  
-			  <text
-				x={a * 12.5 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "dragon").length}</text>
-			  <rect width="12" height="12" x={a * 12.5 + 31} fill={Layout.blueColor} rx="6"></rect>
-			  <text
-				x={a * 12.5 + 31 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">T</text>
-			  <text
-				x={a * 12.5 + 31 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "tiger").length}</text>
-			  <rect width="12" height="12" x={a * 12.5 + 64} fill={Layout.greenColor} rx="6"></rect>
-			  <text
-				x={a * 12.5 + 64 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">T</text>
-			  <text
-				x={a * 12.5 + 64 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "tie").length}</text>
-			</svg>
-			<Layout
-			  darkMode={darkMode}
-			  historyBlink={historyBlink}
-			  history={data}
-			  full={""}
-			  isLandscape={DisplayHelper.getOrientation() == "landscape"}
-			  onClick={() => console.log("")}
-			  type="predictions" />
-		  </div>
+			<div style={{
+				display: "flex",
+				justifyContent: "space-between",
+				flexDirection: "row",
+				width: "100%",
+				paddingBlock: "1%"
+			}}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="180"
+					fill="none"
+					viewBox="0 0 180 12"
+				>
+					<text
+						x={0 + 6 / 2} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">#{periode}</text>
+
+					<rect width="12" height="12" x={a * 12.5} fill={Layout.redColor} rx="6"></rect>
+					<text
+						x={a * 12.5 + 6 / 2} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">D</text>
+
+					<text
+						x={a * 12.5 + 15} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">{data.filter(({ result }) => result == "dragon").length}</text>
+					<rect width="12" height="12" x={a * 12.5 + 31} fill={Layout.blueColor} rx="6"></rect>
+					<text
+						x={a * 12.5 + 31 + 6 / 2} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">T</text>
+					<text
+						x={a * 12.5 + 31 + 15} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">{data.filter(({ result }) => result == "tiger").length}</text>
+					<rect width="12" height="12" x={a * 12.5 + 64} fill={Layout.greenColor} rx="6"></rect>
+					<text
+						x={a * 12.5 + 64 + 6 / 2} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">T</text>
+					<text
+						x={a * 12.5 + 64 + 15} y={6 + 6 * 0.65}
+						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+						fill="white">{data.filter(({ result }) => result == "tie").length}</text>
+				</svg>
+				<Layout
+					darkMode={darkMode}
+					historyBlink={historyBlink}
+					history={data}
+					full={""}
+					isLandscape={DisplayHelper.getOrientation() == "landscape"}
+					onClick={() => console.log("")}
+					type="predictions" />
+			</div>
 		);
 	}
 
@@ -236,7 +236,7 @@ export default class M23 extends BaseV2Roadmap {
 				this.resetDisplayPointer();
 				this.resetAnalysisPointer();
 
-				console.log("sBR", this.simpleBigRoad, this.props.type);
+				// console.log("sBR", this.simpleBigRoad, this.props.type);
 
 				//Actual data
 				this.simpleBigRoad!
@@ -452,6 +452,7 @@ export default class M23 extends BaseV2Roadmap {
 				startingRow = 0;
 
 				// console.log("rT", this.roadmapTypes);
+				// console.log("bRS", this.bigRoadSequence);
 
 				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
 				if (lastBigRoadSequence === undefined)
@@ -487,13 +488,26 @@ export default class M23 extends BaseV2Roadmap {
 					this.currentRow += 1;
 
 					for (a = 0; a < 3; a++) {
-						if (this.currentCol - a - 1 < 0)
-							this.tigerPrediction[a] = redElements[a];
+						if (this.currentCol - a - 1 < 0) {
+
+							// this.tigerPrediction[a] = redElements[a];
+							// this.dragonPrediction[a] = blueElements[a];
+						}
 						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1])
+							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+
 							this.tigerPrediction[a] = redElements[a];
-						else this.tigerPrediction[a] = blueElements[a];
+							this.dragonPrediction[a] = blueElements[a];
+						}
+						else {
+
+							this.tigerPrediction[a] = blueElements[a];
+							this.dragonPrediction[a] = redElements[a];
+						}
 					}
+
+					// console.log("currplay",  this.bigRoadSequence!);
+
 				} else {
 					//evaluate different column
 
@@ -502,7 +516,8 @@ export default class M23 extends BaseV2Roadmap {
 
 					for (let col = 0; col < 3; col++) {
 						if (this.currentCol - col - 2 < 0) {
-							this.tigerPrediction[col] = redElements[col];
+							// this.tigerPrediction[col] = redElements[col];
+							// this.dragonPrediction[col] = blueElements[col];
 							continue;
 						}
 
@@ -518,57 +533,13 @@ export default class M23 extends BaseV2Roadmap {
 						this.tigerPrediction[col] = (lengthLeft === lengthRight) ?
 							redElements[col] :
 							blueElements[col];
+						this.dragonPrediction[col] = (lengthLeft === lengthRight) ?
+							blueElements[col] :
+							redElements[col];
 					}
 				}
 
-				this.currentRow = startingRow;
-				this.currentCol = startingCol;
 
-				//Evaluate player
-				if (currentPlayer === "dragon") {
-					this.currentRow += 1;
-
-					for (a = 0; a < 3; a++) {
-						if (this.currentCol - a - 1 < 0)
-							this.dragonPrediction[a] = blueElements[a];
-						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1])
-							this.dragonPrediction[a] = redElements[a];
-						else this.dragonPrediction[a] = blueElements[a];
-					}
-				} else {
-					//evaluate different column
-
-					this.currentRow = 0;
-					this.currentCol += 1;
-
-					lengthLeft = 0;
-					lengthRight = 0;
-					try {
-						for (let col = 0; col < 3; col++) {
-							if (this.currentCol - col - 2 < 0) {
-								this.dragonPrediction[col] = blueElements[col];
-								continue;
-							}
-
-							lengthLeft = 0;
-							lengthRight = 0;
-							for (a = 0; a < this.roadmapTypes!.length; a++) {
-								if (this.roadmapTypes![a][this.currentCol - col - 2])
-									lengthLeft++;
-								if (this.roadmapTypes![a][this.currentCol - 1])
-									lengthRight++;
-							}
-
-							this.dragonPrediction[col] = (lengthLeft === lengthRight) ?
-								redElements[col] :
-								blueElements[col];
-						}
-					} catch (error) {
-						console.log(error);
-					}
-
-				}
 
 
 				break;

@@ -10,86 +10,89 @@ import {
 // import { assetImg } from 'src/modules/moduleImporter';
 import { BaseV2Roadmap } from '../base/V2Roadmap';
 
+import { Dog, Dragon, Goat, Horse, Monkey, Ox, Pig, Rabbit, Rat, Rooster, Snake, Tiger } from '../base/SVGShio';
+
+
 export default class M27 extends BaseV2Roadmap {
-    tianPrediction: ((props: any) => JSX.Element)[] | []= [];
-    diPrediction: ((props: any) => JSX.Element)[] | []= [];
-   static redColor = "#F10149";
-   static blueColor = "#2673D9";
-   static greenColor = "#01C995";
-    redColor = "#F10149";
-    blueColor = "#2673D9";
-    greenColor = "#01C995";
+    tianPrediction: ((props: any) => JSX.Element)[] | [] = [];
+    diPrediction: ((props: any) => JSX.Element)[] | [] = [];
+    static redColor = "#F10149";
+    static blueColor = "#2673D9";
+    static greenColor = "#01C995";
+    redColor = M27.redColor;
+    blueColor = M27.blueColor;
+    greenColor = M27.greenColor;
     layout = M27;
 
     static ShoeStat() {
-		const darkMode = true;
-		const historyBlink = false;
-		const data = useAppSelector((state) => state.history.history);
+        const darkMode = true;
+        const historyBlink = false;
+        const data = useAppSelector((state) => state.history.history);
         const periode = useAppSelector(selectPeriod);
-		const a = periode?.toString().length
-		const Layout = M27;
-	  
-		return (
-		  <div style={{
-			display: "flex",
-			justifyContent: "space-between",
-			flexDirection: "row",
-			width: "100%",
-			paddingBlock: "1%"
-		  }}>
-			<svg
-			  xmlns="http://www.w3.org/2000/svg"
-			  width="180"
-			  fill="none"
-			  viewBox="0 0 180 12"
-			>
-			  <text
-				x={0 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">#{periode}</text>
-	  
-			  <rect width="12" height="12" x={a * 10} fill={Layout.blueColor} rx="6"></rect>
-			  <text
-				x={a * 10 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">D</text>
-	  
-			  <text
-				x={a * 10 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "di").length}</text>
-			  <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
-			  <text
-				x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">T</text>
-	  
-			  <text
-				x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "tian").length}</text>
-			  <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
-			  <text
-				x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">T</text>
-	  
-			  <text
-				x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
-				style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-				fill="white">{data.filter(({ result }) => result == "tie").length}</text>
-			</svg>
-			<Layout
-			  darkMode={darkMode}
-			  historyBlink={historyBlink}
-			  history={data}
-			  full={""}
-			  isLandscape={DisplayHelper.getOrientation() == "landscape"}
-			  onClick={() => console.log("")}
-			  type="predictions" />
-		  </div>
-		);
-	}
+        const a = periode?.toString().length
+        const Layout = M27;
+
+        return (
+            <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: "row",
+                width: "100%",
+                paddingBlock: "1%"
+            }}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="180"
+                    fill="none"
+                    viewBox="0 0 180 12"
+                >
+                    <text
+                        x={0 + 6 / 2} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">#{periode}</text>
+
+                    <rect width="12" height="12" x={a * 10} fill={Layout.blueColor} rx="6"></rect>
+                    <text
+                        x={a * 10 + 6 / 2} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">D</text>
+
+                    <text
+                        x={a * 10 + 15} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">{data.filter(({ result }) => result == "di").length}</text>
+                    <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
+                    <text
+                        x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">T</text>
+
+                    <text
+                        x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">{data.filter(({ result }) => result == "tian").length}</text>
+                    <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
+                    <text
+                        x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">T</text>
+
+                    <text
+                        x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
+                        style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
+                        fill="white">{data.filter(({ result }) => result == "tie").length}</text>
+                </svg>
+                <Layout
+                    darkMode={darkMode}
+                    historyBlink={historyBlink}
+                    history={data}
+                    full={""}
+                    isLandscape={DisplayHelper.getOrientation() == "landscape"}
+                    onClick={() => console.log("")}
+                    type="predictions" />
+            </div>
+        );
+    }
 
     render(): any {
         // console.log("m27 RL props", this.props);
@@ -104,80 +107,348 @@ export default class M27 extends BaseV2Roadmap {
         // Formats history to desired roadmap
         switch (this.props.type) {
             case 'shio':
-                this.currentRow = -1;
-                this.currentCol = 0;
 
-                //Note: always use actual history array on release
-                const history = this.props.history;
+            this.currentRow = -1;
 
-                //Skips render when history props is empty
-                if (!history) return null;
+            this.currentCol = 0;
 
-                //Formula: history length divided by displayed rows
-                if (Math.ceil(history.length / 4) >= this.totalColumns!)
-                    this.firstDisplayedCol =
-                        Math.ceil(history.length / 4) - this.totalColumns!;
 
-                history.forEach((item: any, idx: number) => {
-                    let ele = null;
 
-                    const di = item.di;
-                    const tian = item.tian;
+            //Note: always use actual history array on release
 
-                    if (this.currentRow! >= 5) {
-                        this.currentRow = 0;
-                        this.currentCol! += 1;
-                    } else this.currentRow! += 1;
+            const history = this.props.history;
 
-                    if (item.result === 'tian') {
-                        ele = (
-                            <div
-                                className={
-                                    'sl-roadmap-circle sl-roadmap-blue ' +
-                                    (checkLastIdx(history, idx)
-                                        ? this.alternatingStyle
-                                        : null)
-                                }
-                            >
-                                {tian}
-                                {/* {assetImg('shio_fight_roadmap', tian)} */}
-                            </div>
-                        );
-                    } else if (item.result === 'di') {
-                        ele = (
-                            <div
-                                className={
-                                    'sl-roadmap-circle sl-roadmap-red ' +
-                                    (checkLastIdx(history, idx)
-                                        ? this.alternatingStyle
-                                        : null)
-                                }
-                            >
-                                {di}
-                                {/* {assetImg('shio_fight_roadmap', di)} */}
-                            </div>
-                        );
-                    } else {
-                        //tie
-                        ele = (
-                            <div
-                                className={
-                                    'sl-roadmap-circle sl-roadmap-green ' +
-                                    (checkLastIdx(history, idx)
-                                        ? this.alternatingStyle
-                                        : null)
-                                }
-                            >
-                                {di}
-                                {/* {assetImg('shio_fight_roadmap', di)} */}
-                            </div>
-                        );
-                    }
 
-                    this.roadmapDisplay![this.currentRow!][this.currentCol!] = ele;
-                });
-                break;
 
+            //Skips render when history props is empty
+
+            if (!history) return null;
+
+
+
+            //Formula: history length divided by displayed rows
+
+            if (Math.ceil(history.length / 6) >= this.totalColumns!)
+
+                this.firstDisplayedCol =
+
+                    Math.ceil(history.length / 6) - this.totalColumns!;
+
+            history.forEach((item: any, idx: number) => {
+
+                let ele = null;
+
+
+
+                const di = item.di;
+
+                const tian = item.tian;
+
+
+
+                if (this.currentRow! >= 5) {
+
+                    this.currentRow = 0;
+
+                    this.currentCol! += 1;
+
+                } else this.currentRow! += 1;
+
+
+
+                if (item.result === 'tian') {
+
+                    ele = (
+
+                        <>
+
+                            <g>
+
+                                <rect
+
+                                    x={4.5 + (this.currentCol! * 16)}
+
+                                    y={4.5 + (this.currentRow! * 16)}
+
+                                    width="13"
+
+                                    height="13"
+
+                                    rx="6.5"
+
+                                    fill="#fff"
+
+                                />
+
+                                <g
+
+                                    clip-path={`url(#${item.idnomor}-${item.di})`}
+
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+
+                                >
+
+                                    {
+
+                                        item.di === 'dog' ? <Dog color={M27.redColor} /> :
+
+                                            item.di === 'dragon' ? <Dragon color={M27.redColor} /> :
+
+                                                item.di === 'snake' ? <Snake color={M27.redColor} /> :
+
+                                                    item.di === 'rat' ? <Rat color={M27.redColor} /> :
+
+                                                        item.di === 'monkey' ? <Monkey color={M27.redColor} /> :
+
+                                                            item.di === 'rabbit' ? <Rabbit color={M27.redColor} /> :
+
+                                                                item.di === 'ox' ? <Ox color={M27.redColor} /> :
+
+                                                                    item.di === 'tiger' ? <Tiger color={M27.redColor} /> :
+
+                                                                        item.di === 'pig' ? <Pig color={M27.redColor} /> :
+
+                                                                            item.di === 'horse' ? <Horse color={M27.redColor} /> :
+
+                                                                                item.di === 'rooster' ? <Rooster color={M27.redColor} /> :
+
+                                                                                    item.di === 'goat' ? <Goat color={M27.redColor} /> : null
+
+                                    }
+
+                                </g>
+
+
+
+                                <defs>
+
+                                    <clipPath id={`${item.idnomor}-${item.di}`}>
+
+                                        <rect
+
+                                            x={0}
+
+                                            y={0}
+
+                                            width="13"
+
+                                            height="13"
+
+                                            rx="6.5"
+
+                                            fill="white"
+
+                                        />
+
+                                    </clipPath>
+
+                                </defs>
+
+                            </g>
+
+                        </>
+
+                    );
+
+                } else if (item.result === 'di') {
+
+                    ele = (
+
+                        <>
+
+                            <g>
+
+                                <rect
+
+                                    x={4.5 + (this.currentCol! * 16)}
+
+                                    y={4.5 + (this.currentRow! * 16)}
+
+                                    width="13"
+
+                                    height="13"
+
+                                    rx="6.5"
+
+                                    fill="#fff"
+
+                                />
+
+                                <g
+
+                                    clip-path={`url(#${item.idnomor}-${item.di})`}
+
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+
+                                >
+
+                                    {
+
+                                        item.di === 'dog' ? <Dog color={M27.blueColor} /> :
+
+                                            item.di === 'dragon' ? <Dragon color={M27.blueColor} /> :
+
+                                                item.di === 'snake' ? <Snake color={M27.blueColor} /> :
+
+                                                    item.di === 'rat' ? <Rat color={M27.blueColor} /> :
+
+                                                        item.di === 'monkey' ? <Monkey color={M27.blueColor} /> :
+
+                                                            item.di === 'rabbit' ? <Rabbit color={M27.blueColor} /> :
+
+                                                                item.di === 'ox' ? <Ox color={M27.blueColor} /> :
+
+                                                                    item.di === 'tiger' ? <Tiger color={M27.blueColor} /> :
+
+                                                                        item.di === 'pig' ? <Pig color={M27.blueColor} /> :
+
+                                                                            item.di === 'horse' ? <Horse color={M27.blueColor} /> :
+
+                                                                                item.di === 'rooster' ? <Rooster color={M27.blueColor} /> :
+
+                                                                                    item.di === 'goat' ? <Goat color={M27.blueColor} /> : null
+
+                                    }
+
+                                </g>
+
+
+
+                                <defs>
+
+                                    <clipPath id={`${item.idnomor}-${item.di}`}>
+
+                                        <rect
+
+                                            x={0}
+
+                                            y={0}
+
+                                            width="13"
+
+                                            height="13"
+
+                                            rx="6.5"
+
+                                            fill="white"
+
+                                        />
+
+                                    </clipPath>
+
+                                </defs>
+
+                            </g>
+
+                        </>
+
+                    );
+
+                } else {
+
+                    //tie
+
+                    ele = (
+
+                        <>
+
+                            <g>
+
+                                <rect
+
+                                    x={4.5 + (this.currentCol! * 16)}
+
+                                    y={4.5 + (this.currentRow! * 16)}
+
+                                    width="13"
+
+                                    height="13"
+
+                                    rx="6.5"
+
+                                    fill="#fff"
+
+                                />
+
+                                <g
+
+                                    clip-path={`url(#${item.idnomor}-${item.di})`}
+
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+
+                                >
+
+                                    {
+
+                                        item.di === 'dog' ? <Dog color={M27.greenColor} /> :
+
+                                            item.di === 'dragon' ? <Dragon color={M27.greenColor} /> :
+
+                                                item.di === 'snake' ? <Snake color={M27.greenColor} /> :
+
+                                                    item.di === 'rat' ? <Rat color={M27.greenColor} /> :
+
+                                                        item.di === 'monkey' ? <Monkey color={M27.greenColor} /> :
+
+                                                            item.di === 'rabbit' ? <Rabbit color={M27.greenColor} /> :
+
+                                                                item.di === 'ox' ? <Ox color={M27.greenColor} /> :
+
+                                                                    item.di === 'tiger' ? <Tiger color={M27.greenColor} /> :
+
+                                                                        item.di === 'pig' ? <Pig color={M27.greenColor} /> :
+
+                                                                            item.di === 'horse' ? <Horse color={M27.greenColor} /> :
+
+                                                                                item.di === 'rooster' ? <Rooster color={M27.greenColor} /> :
+
+                                                                                    item.di === 'goat' ? <Goat color={M27.greenColor} /> : null
+
+                                    }
+
+                                </g>
+
+
+
+                                <defs>
+
+                                    <clipPath id={`${item.idnomor}-${item.di}`}>
+
+                                        <rect
+
+                                            x={0}
+
+                                            y={0}
+
+                                            width="13"
+
+                                            height="13"
+
+                                            rx="6.5"
+
+                                            fill="white"
+
+                                        />
+
+                                    </clipPath>
+
+                                </defs>
+
+                            </g>
+
+                        </>
+
+                    );
+
+                }
+
+
+
+                this.roadmapDisplay![this.currentRow!][this.currentCol!] = ele;
+
+            });
+
+            break;
             case 'big-road':
             case 'big-eye-road':
             case 'small-road':
@@ -221,9 +492,9 @@ export default class M27 extends BaseV2Roadmap {
                             blink: (checkLastIdx(this.simpleBigRoad!, idx) ? this.alternatingStyle : 0)
                         }
 
-                        
+
                         // @ts-ignore
-                        this.addBigRoadDisplay( this.roadmapDisplay!,  data, item);
+                        this.addBigRoadDisplay(this.roadmapDisplay!, data, item);
 
                         // Use straight columns to set this.roadmapTypes columns, not dragon tail
 
@@ -246,7 +517,7 @@ export default class M27 extends BaseV2Roadmap {
 
         let startingCol;
 
-   
+
         let redElement: (props: any) => JSX.Element,
             blueElement: (props: any) => JSX.Element,
             redBlinkElement: (props: any) => JSX.Element,
@@ -439,12 +710,12 @@ export default class M27 extends BaseV2Roadmap {
                     this.simpleBigRoad![this.simpleBigRoad!.length - 1] !== 't'
                 )
                     if (this.currentType === 'red')
-						// @ts-ignore 
+                        // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
                         ] = redBlinkElement;
                     else
-						// @ts-ignore 
+                        // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
                         ] = blueBlinkElement;
@@ -505,8 +776,11 @@ export default class M27 extends BaseV2Roadmap {
                     this.currentRow += 1;
 
                     for (a = 0; a < 3; a++) {
-                        if (this.currentCol - a - 1 < 0)
+                        if (this.currentCol - a - 1 < 0) {
+
                             this.tianPrediction[a] = redElements[a];
+                            this.diPrediction[a] = blueElements[a];
+                        }
                         else if (
                             this.roadmapTypes![this.currentRow][
                             this.currentCol - a - 1
@@ -514,9 +788,15 @@ export default class M27 extends BaseV2Roadmap {
                             this.roadmapTypes![this.currentRow - 1][
                             this.currentCol - a - 1
                             ]
-                        )
+                        ) {
                             this.tianPrediction[a] = redElements[a];
-                        else this.tianPrediction[a] = blueElements[a];
+                            this.diPrediction[a] = blueElements[a];
+                        }
+                        else {
+
+                            this.tianPrediction[a] = blueElements[a];
+                            this.diPrediction[a] = redElements[a];
+                        }
                     }
                 } else {
                     //evaluate different column
@@ -529,7 +809,8 @@ export default class M27 extends BaseV2Roadmap {
 
                     for (let col = 0; col < 3; col++) {
                         if (this.currentCol - col - 2 < 0) {
-                            this.tianPrediction[col] = redElements[col];
+                            // this.tianPrediction[col] = redElements[col];
+                            // this.diPrediction[col] = blueElements[col];
                             continue;
                         }
 
@@ -548,60 +829,13 @@ export default class M27 extends BaseV2Roadmap {
                             lengthLeft === lengthRight
                                 ? redElements[col]
                                 : blueElements[col];
-                    }
-                }
-
-                this.currentRow = startingRow;
-                this.currentCol = startingCol;
-
-                //Evaluate player
-                if (currentPlayer === 'di') {
-                    this.currentRow += 1;
-
-                    for (a = 0; a < 3; a++) {
-                        if (this.currentCol - a - 1 < 0)
-                            this.diPrediction[a] = blueElements[a];
-                        else if (
-                            this.roadmapTypes![this.currentRow][
-                            this.currentCol - a - 1
-                            ] ===
-                            this.roadmapTypes![this.currentRow - 1][
-                            this.currentCol - a - 1
-                            ]
-                        )
-                            this.diPrediction[a] = redElements[a];
-                        else this.diPrediction[a] = blueElements[a];
-                    }
-                } else {
-                    //evaluate different column
-
-                    this.currentRow = 0;
-                    this.currentCol += 1;
-                    // console.log("pred player", this.currentRow, this.currentCol);
-
-                    for (let col = 0; col < 3; col++) {
-                        if (this.currentCol - col - 2 < 0) {
-                            this.diPrediction[col] = blueElements[col];
-                            continue;
-                        }
-
-                        let lengthLeft = 0;
-                        let lengthRight = 0;
-                        for (a = 0; a < this.roadmapTypes!.length; a++) {
-                            if (this.roadmapTypes![a][this.currentCol - col - 2])
-                                lengthLeft++;
-                            if (this.roadmapTypes![a][this.currentCol - 1])
-                                lengthRight++;
-                        }
-
-                        // console.log("ll, lr", lengthLeft, lengthRight);
-
                         this.diPrediction[col] =
                             lengthLeft === lengthRight
-                                ? redElements[col]
-                                : blueElements[col];
+                                ? blueElements[col]
+                                : redElements[col];
                     }
                 }
+
 
                 break;
             default:

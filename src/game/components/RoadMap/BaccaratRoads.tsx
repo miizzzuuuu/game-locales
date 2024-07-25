@@ -10,7 +10,7 @@ import { GameHelper } from '../../../common/utils/GameHelper';
 import M27 from './layout/game/M27';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { BaccaratGrid } from './layout/base/BaccaratGrid';
-// import { dummyM22history } from './dummyData';
+import { ShiofightGrid } from './layout/base/ShiofightGrid';
 
 export type TypeRoadmap = 'color' | 'pattern' | 'number';
 
@@ -20,13 +20,13 @@ interface IProps {
 }
 
 export const layouts: any = {
-    "m22": { layout: M22, rightType: "bead-road" },
-    "m23": { layout: M23, rightType: "bead-road" },
-    "m27": { layout: M27, rightType: "shio" },
-    "": { layout: M23, rightType: "" }
+    "m22": { layout: M22, rightType: "bead-road", grid: { a: BaccaratGrid, b: BaccaratGrid } },
+    "m23": { layout: M23, rightType: "bead-road", grid: { a: BaccaratGrid, b: BaccaratGrid } },
+    "m27": { layout: M27, rightType: "shio", grid:  { a: BaccaratGrid, b: ShiofightGrid } },
+    "": { layout: M23, rightType: "", grid:  { a: BaccaratGrid, b: BaccaratGrid } }
 }
 
-function RoadMap(props: IProps) {
+function BaccaratRoads(props: IProps) {
     const showPatternUI = useAppSelector((state) => state.history.showPatternUI);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
@@ -34,7 +34,7 @@ function RoadMap(props: IProps) {
     const data = useAppSelector((state) => state.history.history);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const [historyBlink, setBlink] = useState(false);
-    console.log(data);
+
     useEffect(() => {
         if (!!(scanNumber && scanNumber.submit)) {
             setBlink(true);
@@ -67,11 +67,11 @@ function RoadMap(props: IProps) {
     }
     if (!GameHelper.getBasePcode()) return null;
     const GameRoadmap = layouts[GameHelper.getBasePcode()];
-    console.log("divhelp",betIsOpen ,!DisplayHelper.isMobile() ,showPatternUI, DisplayHelper.getOrientation())
-    return  (
+    console.log("divhelp", betIsOpen, !DisplayHelper.isMobile(), showPatternUI, DisplayHelper.getOrientation())
+    return (
 
         <div className={styles.container} style={{
-            opacity: (betIsOpen && (DisplayHelper.getOrientation() == "landscape" ) && showPatternUI) || ((betIsOpen && !DisplayHelper.isMobile() && showPatternUI))||(DisplayHelper.isMobile() && DisplayHelper.getOrientation() == "portrait")? 1:0 
+            opacity: (betIsOpen && (DisplayHelper.getOrientation() == "landscape") && showPatternUI) || ((betIsOpen && !DisplayHelper.isMobile() && showPatternUI)) || (DisplayHelper.isMobile() && DisplayHelper.getOrientation() == "portrait") ? 1 : 0
         }}>
             {GameRoadmap.layout.ShoeStat && <GameRoadmap.layout.ShoeStat />}
             <div className={styles.scrolledYRoadmap.concat("  ").concat(isZoom ? styles.zoom : "")}
@@ -79,7 +79,7 @@ function RoadMap(props: IProps) {
             >
                 <div
                     className={styles.roadmapContent.concat(" ").concat(isZoom ? styles.zoom : "")}>
-                    <div className="roadmap-container big-road">
+                    <div className="roadmap-container">
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ function RoadMap(props: IProps) {
                             viewBox="0 0 294 102"
                         >
                             <rect width="294" height="102" fill={darkMode ? "#414258" : "#fff"} rx="6"></rect>
-                            <BaccaratGrid stroke={darkMode ? "#595A77" : "#F4F4F4"} />
+                            <GameRoadmap.grid.a stroke={darkMode ? "#595A77" : "#F4F4F4"} />
 
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
@@ -124,7 +124,7 @@ function RoadMap(props: IProps) {
 
 
                     </div>
-                    <div className="roadmap-container big-road">
+                    <div className="roadmap-container">
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ function RoadMap(props: IProps) {
                             viewBox="0 0 294 102"
                         >
                             <rect width="294" height="102" fill={darkMode ? "#414258" : "#fff"} rx="6"></rect>
-                            <BaccaratGrid stroke={darkMode ? "#595A77" : "#F4F4F4"} />
+                            <GameRoadmap.grid.b stroke={darkMode ? "#595A77" : "#F4F4F4"} />
 
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
@@ -156,5 +156,5 @@ function RoadMap(props: IProps) {
 
 
 
-export default RoadMap;
+export default BaccaratRoads;
 
