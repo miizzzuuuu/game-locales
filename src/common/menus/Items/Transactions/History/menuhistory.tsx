@@ -970,7 +970,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                             {det.tebak}
                                         </td>
                                         <td> {det.taruhan}</td>
-                                        <td style={{ paddingLeft: 3, paddingRight: 3 }}>9</td>
+                                        <td style={{ paddingLeft: 3, paddingRight: 3 }}>{det.prize}</td>
                                         <td style={!Number(det.win_amount)? {
                                             color: "#4c4d66"
                                         } : {}}> {det.win_amount}</td>
