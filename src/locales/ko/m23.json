@@ -34,5 +34,13 @@
     "odd": "odd",
     "even": "even",
     "red": "red",
-    "black": "black"
+    "black": "black",
+
+    "wild bet": "Wild Bet",
+    "dragon wild": "dragon wild",
+    "tiger wild": "tiger wild",
+    "super wild": "super wild",
+    "pair bet": "Pair Bet",
+    "dragon pair": "dragon pair",
+    "tiger pair": "tiger pair"
 }
