@@ -4,7 +4,7 @@ import { selectPeriod } from "../../../../../store/slice/gameSlice";
 import {
     checkLastIdx,
 } from "../base/BaccaratRoadmaps";
-import { BaseV2Roadmap, nullArray } from "../base/V2Roadmap";
+import { BaseV2Roadmap, ResultHaveResultString, nullArray } from "../base/V2Roadmap";
 
 
 export interface BaccaratHistory {
@@ -20,6 +20,8 @@ export interface BaccaratHistory {
     tanggal: string;
     value: number;
 }
+
+
 
 
 
@@ -478,7 +480,7 @@ export default class M22 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "player").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "player").length}</text>
                     <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
                     <text
                         x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
@@ -488,7 +490,7 @@ export default class M22 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "banker").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "banker").length}</text>
                     <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
                     <text
                         x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
@@ -498,7 +500,7 @@ export default class M22 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "tie").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
                 </svg>
                 <Layout
                     darkMode={darkMode}

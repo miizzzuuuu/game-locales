@@ -2,6 +2,10 @@ import React, { Fragment } from "react";
 import { OptionalJSXElement, RoadmapDirections, addBigRoadDisplay, addDisplayTile, addDisplayTileLegacy, prepareV3Render, pushRoadmapType, pushTieDisplay, renderPredictions, renderV3, resetAnalysisPointer, resetDisplayPointer, resetTieCount } from "./BaccaratRoadmaps";
 import { GameHelper } from "../../../../../common/utils/GameHelper";
 
+export interface ResultHaveResultString {
+	result: string
+}
+
 interface IStringDictionary {
 	[key: string]: string;
 }

@@ -5,7 +5,7 @@ import {
 	checkLastIdx,
 
 } from "../base/BaccaratRoadmaps";
-import { BaseV2Roadmap } from "../base/V2Roadmap";
+import { BaseV2Roadmap, ResultHaveResultString } from "../base/V2Roadmap";
 
 // import { PasarCode } from "./PasarCode";
 
@@ -111,7 +111,7 @@ export default class M23 extends BaseV2Roadmap {
 					<text
 						x={a * 12.5 + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-						fill="white">{data.filter(({ result }) => result == "dragon").length}</text>
+						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "dragon").length}</text>
 					<rect width="12" height="12" x={a * 12.5 + 31} fill={Layout.blueColor} rx="6"></rect>
 					<text
 						x={a * 12.5 + 31 + 6 / 2} y={6 + 6 * 0.65}
@@ -120,7 +120,7 @@ export default class M23 extends BaseV2Roadmap {
 					<text
 						x={a * 12.5 + 31 + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-						fill="white">{data.filter(({ result }) => result == "tiger").length}</text>
+						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tiger").length}</text>
 					<rect width="12" height="12" x={a * 12.5 + 64} fill={Layout.greenColor} rx="6"></rect>
 					<text
 						x={a * 12.5 + 64 + 6 / 2} y={6 + 6 * 0.65}
@@ -129,7 +129,7 @@ export default class M23 extends BaseV2Roadmap {
 					<text
 						x={a * 12.5 + 64 + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-						fill="white">{data.filter(({ result }) => result == "tie").length}</text>
+						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
 				</svg>
 				<Layout
 					darkMode={darkMode}

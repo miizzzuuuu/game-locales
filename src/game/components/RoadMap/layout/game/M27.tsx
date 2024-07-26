@@ -8,7 +8,7 @@ import {
 } from '../base/BaccaratRoadmaps';
 
 // import { assetImg } from 'src/modules/moduleImporter';
-import { BaseV2Roadmap } from '../base/V2Roadmap';
+import { BaseV2Roadmap, ResultHaveResultString } from '../base/V2Roadmap';
 
 import { Dog, Dragon, Goat, Horse, Monkey, Ox, Pig, Rabbit, Rat, Rooster, Snake, Tiger } from '../base/SVGShio';
 
@@ -60,7 +60,7 @@ export default class M27 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "di").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "di").length}</text>
                     <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
                     <text
                         x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
@@ -70,7 +70,7 @@ export default class M27 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "tian").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tian").length}</text>
                     <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
                     <text
                         x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
@@ -80,7 +80,7 @@ export default class M27 extends BaseV2Roadmap {
                     <text
                         x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
-                        fill="white">{data.filter(({ result }) => result == "tie").length}</text>
+                        fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
                 </svg>
                 <Layout
                     darkMode={darkMode}
@@ -134,17 +134,9 @@ export default class M27 extends BaseV2Roadmap {
 
                     Math.ceil(history.length / 6) - this.totalColumns!;
 
-            history.forEach((item: any, idx: number) => {
+            history.forEach((item: any) => {
 
                 let ele = null;
-
-
-
-                const di = item.di;
-
-                const tian = item.tian;
-
-
 
                 if (this.currentRow! >= 5) {
 
@@ -610,12 +602,14 @@ export default class M27 extends BaseV2Roadmap {
                         )
                             this.addDisplayTileLegacy(
                                 this.roadmapDisplay,
+                                // @ts-ignore
                                 redElement!,
                                 'red',
                             );
                         else
                             this.addDisplayTileLegacy(
                                 this.roadmapDisplay,
+                                // @ts-ignore
                                 blueElement!,
                                 'blue',
                             );
@@ -649,12 +643,14 @@ export default class M27 extends BaseV2Roadmap {
                         if (lengthLeft === lengthRight)
                             this.addDisplayTileLegacy(
                                 this.roadmapDisplay,
+                                // @ts-ignore
                                 redElement!,
                                 'red',
                             );
                         else
                             this.addDisplayTileLegacy(
                                 this.roadmapDisplay,
+                                // @ts-ignore
                                 blueElement!,
                                 'blue',
                             );
@@ -688,12 +684,14 @@ export default class M27 extends BaseV2Roadmap {
                                 )
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay,
+                                // @ts-ignore
                                         redElement!,
                                         'red',
                                     );
                                 else
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay,
+                                // @ts-ignore
                                         blueElement!,
                                         'blue',
                                     );
@@ -713,11 +711,13 @@ export default class M27 extends BaseV2Roadmap {
                         // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
+                                // @ts-ignore
                         ] = redBlinkElement;
                     else
                         // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
+                                // @ts-ignore
                         ] = blueBlinkElement;
                 break;
 
