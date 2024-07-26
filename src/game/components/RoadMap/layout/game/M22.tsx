@@ -66,19 +66,20 @@ export default class M22 extends BaseV2Roadmap {
             const { value } = item;
             const bankerPair = !!item.bankerPair;
             const playerPair = !!item.playerPair;
+            if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
 
             if (item.result === "banker") {
                 ele = (<>
                     <rect
                         className={alternatingStyleClass || ""}
-                        x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.redColor} />
+                        x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.redColor} />
                     <text
                         className={alternatingStyleClass || ""}
-                        x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+                        x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
                         style={{ fontFamily: "Manrope, ManropeCustom", fontWeight: "bold", fontSize: 7 }}
                         fill="white">B</text>
-                    {playerPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
-                    {bankerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
+                    {playerPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
+                    {bankerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
 
                 </>
                 );
@@ -86,19 +87,19 @@ export default class M22 extends BaseV2Roadmap {
                 ele = (<>
                     <rect
                         className={alternatingStyleClass || ""}
-                        x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.blueColor} />
+                        x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.blueColor} />
                     <text
                         className={alternatingStyleClass || ""}
-                        x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+                        x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
                         style={{ fontFamily: "Manrope, ManropeCustom", fontWeight: "bold", fontSize: 7 }}
                         fill="white">P</text>
-                    {playerPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
-                    {bankerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
+                    {playerPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
+                    {bankerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
                 </>);
             } else { //tie
                 ele = (<>
-                    <rect x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.greenColor} />
-                    <text x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+                    <rect x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.greenColor} />
+                    <text x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
                         style={{ fontFamily: "Manrope, ManropeCustom", fontWeight: "bold", fontSize: 7 }}
                         fill="white">T</text>
                 </>);
@@ -108,7 +109,6 @@ export default class M22 extends BaseV2Roadmap {
         });
     }
 
-    // /** process big road display & the data that will be processed for render */
     processBigRoadDerivatives() {
         this.resetDisplayPointer();
         this.resetAnalysisPointer();
@@ -176,155 +176,6 @@ export default class M22 extends BaseV2Roadmap {
             }
     }
 
-    // processBigRoadDerivativesLegacy() {
-    //     this.resetDisplayPointer();
-    //     this.resetAnalysisPointer();
-
-    //     //Hollow circles
-    //     //Test case 1
-    //     // ["BTBBBBBBTBPTPPPPPPPPBBTBBPPPPPTPBBPBPBPBTPBPPTBBBBPBBP",
-    //     // "BTBBBBBBTBPTPPPPPPPPBBTBBPPBTBBBBBBTBPTPPPPPPPPBBTBBPP",
-    //     // "BTBBBPPPTBPTBPTBTBTBTBBBTPPPPTPPPPBBBTBTTBBBPPTTPBBTPBBBBBPPPPPPPBBPBPBPBPBBP"].join("").split("")
-    //     //Test case 2
-    //     // ["PBBBBPBBBTP"
-    //     // ].join("").split("")
-
-    //     // console.log("sBR", this.roadmapTypes, this.simpleBigRoad);
-
-    //     //Actual data
-    //     // Note: This should be a 2D array of strings, not JSX Elements
-    //     this.simpleBigRoad!.forEach((item, idx) => {
-    //         if (item === 'T') this.addTieDisplay(this.roadmapTiesDisplay!);
-    //         else {
-    //             this.addBigRoadDisplay(
-    //                 this.roadmapDisplay!,
-    //                 item === 'B' ? (
-    //                     <div
-    //                         key={'sBR' + idx}
-    //                         className={
-    //                             'sl-roadmap-circle-hollow sl-roadmap-red ' +
-    //                             (checkLastIdx(this.simpleBigRoad!, idx)
-    //                                 ? this.alternatingStyle
-    //                                 : 0)
-    //                         }
-    //                     />
-    //                 ) : item === 'P' ? (
-    //                     <div
-    //                         key={'sBR' + idx}
-    //                         className={
-    //                             'sl-roadmap-circle-hollow sl-roadmap-blue ' +
-    //                             (checkLastIdx(this.simpleBigRoad!, idx)
-    //                                 ? this.alternatingStyle
-    //                                 : 0)
-    //                         }
-    //                     />
-    //                 ) : null,
-    //                 item,
-    //             );
-
-    //             // Use straight columns to set this.roadmapTypes columns, not dragon tail
-
-    //             this.addRoadmapType(this.roadmapTypes!, item);
-    //             this.resetTieCount();
-    //         }
-    //     });
-
-    //     // console.log("sBR", this.simpleBigRoad);
-
-    //     this.resetDisplayPointer();
-
-    //     //Pairs
-    //     //B: banker
-    //     //P: player
-    //     //D: banker & player (double)
-    //     //" ": skip
-
-    //     // console.log("rT", this.roadmapTypes);
-    //     // console.log("rD", this.roadmapDisplay);
-    //     // console.log("bRS", this.bigRoadSequence);
-
-    //     //Pairs
-    //     if (this.roadmapPairsDisplay)
-    //         try {
-    //             // "  DPBBPDBBPP	BDBPPBPB".split("")
-    //             // "DPBP ".split("")
-    //             this.simpleBigRoadPairs!.forEach((item, idx) => {
-    //                 const pos = this.bigRoadSequence![idx];
-
-    //                 // if(!pos) return;
-
-    //                 if (this.roadmapPairsDisplay![0].length - 1 < pos[1])
-    //                     for (const b in this.roadmapPairsDisplay) // @ts-ignore
-    //                         this.roadmapPairsDisplay[b].push(...[]);
-
-    //                 this.roadmapPairsDisplay![pos[0]][pos[1]] =
-    //                     item === 'D'
-    //                         ? [
-    //                               <div
-    //                                   key={'m22_RL_D_' + idx + '_' + 0}
-    //                                   className={
-    //                                       'sl-baccarat-banker-pair sl-roadmap-red ' +
-    //                                       (checkLastIdx(
-    //                                           this.simpleBigRoadPairs!,
-    //                                           idx,
-    //                                       )
-    //                                           ? this.alternatingStyle
-    //                                           : null)
-    //                                   }
-    //                               />,
-    //                               <div
-    //                                   key={'m22_RL_D_' + idx + '_' + 1}
-    //                                   className={
-    //                                       'sl-baccarat-player-pair sl-roadmap-blue ' +
-    //                                       (checkLastIdx(
-    //                                           this.simpleBigRoadPairs!,
-    //                                           idx,
-    //                                       )
-    //                                           ? this.alternatingStyle
-    //                                           : null)
-    //                                   }
-    //                               />,
-    //                           ]
-    //                         : item === 'B'
-    //                           ? [
-    //                                 <div
-    //                                     key={'m22_RL_B_' + idx}
-    //                                     className={
-    //                                         'sl-baccarat-banker-pair sl-roadmap-red ' +
-    //                                         (checkLastIdx(
-    //                                             this.simpleBigRoadPairs!,
-    //                                             idx,
-    //                                         )
-    //                                             ? this.alternatingStyle
-    //                                             : null)
-    //                                     }
-    //                                 />,
-    //                             ]
-    //                           : item === 'P'
-    //                             ? [
-    //                                   <div
-    //                                       key={'m22_RL_P_' + idx}
-    //                                       className={
-    //                                           'sl-baccarat-player-pair sl-roadmap-blue ' +
-    //                                           (checkLastIdx(
-    //                                               this.simpleBigRoadPairs!,
-    //                                               idx,
-    //                                           )
-    //                                               ? this.alternatingStyle
-    //                                               : null)
-    //                                       }
-    //                                   />,
-    //                               ]
-    //                             : null;
-    //                 // );
-    //             });
-    //         } catch (err) {
-    //             console.error(err);
-    //         }
-
-    //     // console.log({this.roadmapTypes: this.roadmapTypes});
-    // }
-
     processRenderPredictions() {
         this.playerPrediction = [];
         this.bankerPrediction = [];
@@ -383,7 +234,7 @@ export default class M22 extends BaseV2Roadmap {
         if (currentPlayer === 'player') {
             this.currentRow += 1;
             for (a = 0; a < 3; a++) {
-                
+
                 if (this.currentCol - a - 1 < 0) {
 
                     // this.playerPrediction[a] = blueElements[a];
@@ -449,7 +300,8 @@ export default class M22 extends BaseV2Roadmap {
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
         const periode = useAppSelector(selectPeriod);
-        const a = periode?.toString().length
+        const a = periode?.toString().length + 3
+        const firstSpace = a * 6;
         const Layout = M22;
 
         return (
@@ -471,34 +323,34 @@ export default class M22 extends BaseV2Roadmap {
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">#{periode}</text>
 
-                    <rect width="12" height="12" x={a * 10} fill={Layout.blueColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace} fill={Layout.blueColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">P</text>
 
                     <text
-                        x={a * 10 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "player").length}</text>
-                    <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace + 31} fill={Layout.redColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 31 + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">B</text>
 
                     <text
-                        x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 31 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "banker").length}</text>
-                    <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace + 64} fill={Layout.greenColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 64 + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">T</text>
 
                     <text
-                        x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 64 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
                 </svg>

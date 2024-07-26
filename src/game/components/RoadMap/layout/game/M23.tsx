@@ -79,10 +79,10 @@ export default class M23 extends BaseV2Roadmap {
 		const historyBlink = false;
 		const data = useAppSelector((state) => state.history.history);
 		console.log(data)
-		const periode = useAppSelector(selectPeriod);
-		const a = periode?.toString().length
+		const periode = 100000 || useAppSelector(selectPeriod);
+		const a = periode?.toString().length + 3
+		const firstSpace = a * 6;
 		const Layout = M23;
-
 		return (
 			<div style={{
 				display: "flex",
@@ -102,32 +102,32 @@ export default class M23 extends BaseV2Roadmap {
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">#{periode}</text>
 
-					<rect width="12" height="12" x={a * 12.5} fill={Layout.redColor} rx="6"></rect>
+					<rect width="12" height="12" x={firstSpace} fill={Layout.redColor} rx="6"></rect>
 					<text
-						x={a * 12.5 + 6 / 2} y={6 + 6 * 0.65}
+						x={firstSpace + 6 / 2} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">D</text>
 
 					<text
-						x={a * 12.5 + 15} y={6 + 6 * 0.65}
+						x={firstSpace + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "dragon").length}</text>
-					<rect width="12" height="12" x={a * 12.5 + 31} fill={Layout.blueColor} rx="6"></rect>
+					<rect width="12" height="12" x={firstSpace + 31} fill={Layout.blueColor} rx="6"></rect>
 					<text
-						x={a * 12.5 + 31 + 6 / 2} y={6 + 6 * 0.65}
+						x={firstSpace + 31 + 6 / 2} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">T</text>
 					<text
-						x={a * 12.5 + 31 + 15} y={6 + 6 * 0.65}
+						x={firstSpace + 31 + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tiger").length}</text>
-					<rect width="12" height="12" x={a * 12.5 + 64} fill={Layout.greenColor} rx="6"></rect>
+					<rect width="12" height="12" x={firstSpace + 64} fill={Layout.greenColor} rx="6"></rect>
 					<text
-						x={a * 12.5 + 64 + 6 / 2} y={6 + 6 * 0.65}
+						x={firstSpace + 64 + 6 / 2} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">T</text>
 					<text
-						x={a * 12.5 + 64 + 15} y={6 + 6 * 0.65}
+						x={firstSpace + 64 + 15} y={6 + 6 * 0.65}
 						style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
 						fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
 				</svg>
@@ -165,8 +165,6 @@ export default class M23 extends BaseV2Roadmap {
 				if (Math.ceil(history.length / 8) >= 24!)
 					this.firstDisplayedCol = Math.ceil(history.length / 8) - 24!;
 
-				console.log("m23 hist", history);
-
 				history.forEach((item: any, idx: number) => {
 					let ele = null;
 					const alternatingStyleClass = checkLastIdx(history, idx)
@@ -181,17 +179,17 @@ export default class M23 extends BaseV2Roadmap {
 						this.currentCol! += 1;
 					} else
 						this.currentRow! += 1;
-
+					if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
 					if (item.result === "tiger") {
 						ele = (<>
 							<rect
 								className={alternatingStyleClass || ""}
 
-								x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.blueColor} />
+								x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.blueColor} />
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+								x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">T</text>
 						</>
@@ -201,11 +199,11 @@ export default class M23 extends BaseV2Roadmap {
 							<rect
 								className={alternatingStyleClass || ""}
 
-								x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.redColor} />
+								x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.redColor} />
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+								x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">D</text>
 						</>);
@@ -214,11 +212,11 @@ export default class M23 extends BaseV2Roadmap {
 							<rect
 								className={alternatingStyleClass || ""}
 
-								x={4.5 + (12 * this.currentCol!)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.greenColor} />
+								x={4.5 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={4.5 + (12 * this.currentRow!)} width="9" height="9" rx="4.5" fill={this.greenColor} />
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(4.5 + 9) / 2 + (12 * this.currentCol!)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
+								x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">T</text>
 						</>);

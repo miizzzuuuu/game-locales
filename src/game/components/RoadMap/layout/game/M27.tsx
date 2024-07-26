@@ -29,7 +29,8 @@ export default class M27 extends BaseV2Roadmap {
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
         const periode = useAppSelector(selectPeriod);
-        const a = periode?.toString().length
+		const a = periode?.toString().length + 3
+		const firstSpace = a * 6;
         const Layout = M27;
 
         return (
@@ -51,34 +52,34 @@ export default class M27 extends BaseV2Roadmap {
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">#{periode}</text>
 
-                    <rect width="12" height="12" x={a * 10} fill={Layout.blueColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace} fill={Layout.blueColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">D</text>
 
                     <text
-                        x={a * 10 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "di").length}</text>
-                    <rect width="12" height="12" x={a * 10 + 31} fill={Layout.redColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace + 31} fill={Layout.redColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 31 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 31 + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">T</text>
 
                     <text
-                        x={a * 10 + 31 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 31 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tian").length}</text>
-                    <rect width="12" height="12" x={a * 10 + 64} fill={Layout.greenColor} rx="6"></rect>
+                    <rect width="12" height="12" x={firstSpace + 64} fill={Layout.greenColor} rx="6"></rect>
                     <text
-                        x={a * 10 + 64 + 6 / 2} y={6 + 6 * 0.65}
+                        x={firstSpace + 64 + 6 / 2} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">T</text>
 
                     <text
-                        x={a * 10 + 64 + 15} y={6 + 6 * 0.65}
+                        x={firstSpace + 64 + 15} y={6 + 6 * 0.65}
                         style={{ fontFamily: "Manrope", fontWeight: "500", fontSize: 10 }}
                         fill="white">{data.filter(({ result }: ResultHaveResultString) => result == "tie").length}</text>
                 </svg>
@@ -146,6 +147,7 @@ export default class M27 extends BaseV2Roadmap {
 
                 } else this.currentRow! += 1;
 
+                if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
 
 
                 if (item.result === 'tian') {
@@ -158,7 +160,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                 <rect
 
-                                    x={4.5 + (this.currentCol! * 16)}
+                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
 
                                     y={4.5 + (this.currentRow! * 16)}
 
@@ -176,7 +178,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                     clip-path={`url(#${item.idnomor}-${item.di})`}
 
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
 
                                 >
 
@@ -252,7 +254,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                 <rect
 
-                                    x={4.5 + (this.currentCol! * 16)}
+                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
 
                                     y={4.5 + (this.currentRow! * 16)}
 
@@ -270,7 +272,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                     clip-path={`url(#${item.idnomor}-${item.di})`}
 
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
 
                                 >
 
@@ -348,7 +350,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                 <rect
 
-                                    x={4.5 + (this.currentCol! * 16)}
+                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
 
                                     y={4.5 + (this.currentRow! * 16)}
 
@@ -366,7 +368,7 @@ export default class M27 extends BaseV2Roadmap {
 
                                     clip-path={`url(#${item.idnomor}-${item.di})`}
 
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
 
                                 >
 
