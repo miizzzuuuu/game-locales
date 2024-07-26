@@ -9,7 +9,6 @@ import lastBetsReducer from './slice/lastBetsSlice';
 import menuReducer from './slice/menuSlice';
 import playerReducer from './slice/playerSlice';
 import resultReducer from './slice/resultSlice';
-import historyReducer from './slice/historySlice';
 import settingsReducer from './slice/settingsSlice';
 import timerReducer from './slice/timerSlice';
 import topWinnerReducer from './slice/topWinnerSlice';
