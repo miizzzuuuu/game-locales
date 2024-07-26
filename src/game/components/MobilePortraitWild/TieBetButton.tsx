@@ -13,14 +13,12 @@ import LabelTranslate from '../../../common/components/LabelTranslate';
 // import CardHelper from '../../../utils/CardHelper';
 
 interface IProps extends PropsWithChildren {
-    className?: string;
     bet: Bet;
-    chipCanBlinking?: boolean;
 }
 
 
 const TieBetButton = (
-    { bet, children, className, chipCanBlinking }: IProps
+    { bet, children }: IProps
 ) => {
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
 

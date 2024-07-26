@@ -1,4 +1,4 @@
-import { DragonTigerBBet } from "../../game/utils/DragonTIgerBBet";
+import { DragonTigerBBet } from "../../game/utils/DragonTigerBBet";
 
 export interface GameBetHelper {
     GroupBet50: string[];

@@ -17,9 +17,7 @@ import { GameHelper } from '../../../common/utils/GameHelper';
 // import { RenderCard } from './RenderCard';
 
 interface IProps extends PropsWithChildren {
-    className?: string;
     bet: Bet;
-    chipCanBlinking?: boolean;
 }
 
 function ResultNumber(props: {
@@ -76,7 +74,7 @@ function ResultNumber(props: {
 
 
 const TigerBetButton = (
-    { bet, children, className, chipCanBlinking }: IProps
+    { bet, children }: IProps
 ) => {
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
 

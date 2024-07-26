@@ -14,9 +14,7 @@ import LabelTranslate from '../../../common/components/LabelTranslate';
 import { GameHelper } from '../../../common/utils/GameHelper';
 
 interface IProps extends PropsWithChildren {
-    className?: string;
     bet: Bet;
-    chipCanBlinking?: boolean;
 }
 
 function ResultNumber(props: {
@@ -74,7 +72,7 @@ function ResultNumber(props: {
 }
 
 const DragonBetButton = (
-    { bet, children, className, chipCanBlinking }: IProps
+    { bet, children }: IProps
 ) => {
 
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
@@ -139,7 +137,7 @@ const DragonBetButton = (
                         rotation={{ z: "0deg" }}
                         value={scanNumber.dragon}
 
-                        visible={ scanNumber.dragon == "x" ? false : true}
+                        visible={scanNumber.dragon == "x" ? false : true}
                         submit={scanNumber.submit}
                     />}
 

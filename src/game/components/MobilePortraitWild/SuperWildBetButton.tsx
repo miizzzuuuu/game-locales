@@ -21,7 +21,7 @@ interface IProps extends PropsWithChildren {
 
 
 const SuperWildBetButton = (
-    { bet, children, className, chipCanBlinking }: IProps
+    { bet, children }: IProps
 ) => {
     const { chip, color } = useGetChipBet(bet);
     const { placeBetHanlder: handleClick } = usePlaceBet();

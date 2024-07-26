@@ -10,6 +10,7 @@ export const dummyLoadNewValue: LoadNewValueData = {
     pcode: 'p6d',
     timer: '60',
     periode: 60,
+    shoePeriode: ""
 };
 
 export const payoutData = [

@@ -1,11 +1,10 @@
-import CardContainer from '../CardContainer';
-import Card from '../Card';
 import ContentEmpty from '../ContentEmpty';
 import { useFetchTransaction } from '../hooks/useFetchTransaction';
 import LabelTranslate from '../../../../components/LabelTranslate';
+import { MenuHistoryList } from '../History/menuhistory';
 
 const Today = () => {
-    const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'today' });
+    const { transactionData, isLoading } = useFetchTransaction({ date: 'today' });
 
     return (
         <div>
@@ -13,17 +12,9 @@ const Today = () => {
                 <ContentEmpty message={<LabelTranslate value="no-transactions" />} />
             )}
 
-            {transactionData.length > 0 && (
-                <CardContainer>
-                    {transactionData.map((t, index) => (
-                        <Card
-                            ref={index === transactionData.length - 1 ? lastItemRef : undefined}
-                            key={`${index}-${t.pcode}-${t.periode}`}
-                            data={t}
-                        />
-                    ))}
-                </CardContainer>
-            )}
+            {
+                transactionData.length > 0 && <MenuHistoryList date={transactionData[0] ? transactionData[0].tglbel : ""} tab={"today"} data={transactionData as any} isLandscape={false} />
+            }
 
             {isLoading && <ContentEmpty message="Loading..." />}
         </div>

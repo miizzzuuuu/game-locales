@@ -3,6 +3,7 @@
 class AudioManager {
     protected audio: { [key: string]: any } = {};
 
+    // @ts-ignore
     public loadAudio(name: string, url: string) {
         // this.audio[name] = new Howl({ src: [url] });
         console.log('audio load for: ' + url);
@@ -33,6 +34,7 @@ class AudioManager {
         }
     }
 
+    // @ts-ignore
     public setVolume(volume: number) {
         // Howler.volume(volume);
     }

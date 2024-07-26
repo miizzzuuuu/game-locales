@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { dummyM22history } from '../../game/components/RoadMap/dummyData';
 
 
 
