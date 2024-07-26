@@ -25,7 +25,7 @@ export type HistoryItem = {
 const initialState: ResultState = {
     showPatternUI: false,
     status: 'idle',
-    history: dummyM22history.m27.history
+    history: []
 };
 
 const baseSlice = createSlice({
