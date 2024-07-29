@@ -449,8 +449,12 @@ export default class M23 extends BaseV2Roadmap {
 				startingCol = 0;
 				startingRow = 0;
 
-				// console.log("rT", this.roadmapTypes);
-				// console.log("bRS", this.bigRoadSequence);
+				let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
+				console.log("rT", this.roadmapTypes, lastIdxCol);
+				console.log("bRS", this.bigRoadSequence);
+				// @ts-ignore
+
+
 
 				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
 				if (lastBigRoadSequence === undefined)
@@ -458,84 +462,142 @@ export default class M23 extends BaseV2Roadmap {
 
 				startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
 				startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
+				console.log(startingCol, startingRow);
+			
 
-				this.currentType = this.roadmapTypes![startingRow][startingCol];
+				// console.log("bRS", this.bigRoadSequence);
+
+				//Use this.currentRow only for predictions on the same column (the same currentPlayer)
+				for (a = 0; a < this.roadmapTypes!.length; a++)
+					if (this.roadmapTypes![a][startingCol])
+						startingRow = a;
+					else break;
+
+				this.currentRow = startingRow;
+				this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
+
+				this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
 
 				const currentPlayer =
 					this.currentType === "T" ? "tiger" :
 						this.currentType === "D" ? "dragon" : "tie";
 
 
-				// console.log("bRS", this.bigRoadSequence);
-
-				//Use this.currentRow only for predictions on the same column (the same currentPlayer)
-				for (a = 0; a < this.roadmapTypes!.length; a++)
-					if (this.roadmapTypes![a][this.currentCol])
-						startingRow = a;
-					else break;
-
-				this.currentRow = startingRow;
-				this.currentCol = startingCol;
 				// console.log({this.currentCol: this.currentCol, this.currentRow: this.currentRow, this.currentType: this.currentType, currentPlayer: currentPlayer});
 
 
 				//Banker and player are disabled for now
 
-				//Evaluate banker
-				if (currentPlayer === "tiger") {
+				// //Evaluate banker
+				// if (currentPlayer === "tiger") {
+				// 	this.currentRow += 1;
+
+				// 	for (a = 0; a < 3; a++) {
+
+				// 		if (lastIdxCol - a - 1 < 0) {
+
+				// 			// this.tigerPrediction[a] = redElements[a];
+				// 			// this.dragonPrediction[a] = blueElements[a];
+				// 		}
+				// 		else if (this.roadmapTypes![this.currentRow][lastIdxCol - a - 1] ===
+				// 			this.roadmapTypes![this.currentRow - 1][lastIdxCol - a - 1]) {
+
+				// 			this.tigerPrediction[a] = redElements[a];
+				// 			// this.dragonPrediction[a] = blueElements[a];
+				// 		}
+				// 		else {
+
+				// 			this.tigerPrediction[a] = blueElements[a];
+				// 			// this.dragonPrediction[a] = redElements[a];
+				// 		}
+				// 	}
+
+				// 	// console.log("currplay",  this.bigRoadSequence!);
+
+				// } else {
+				// 	//evaluate different column
+
+				// 	this.currentRow = 0;
+				// 	lastIdxCol += 1;
+
+				// 	for (let col = 0; col < 3; col++) {
+				// 		if (lastIdxCol+1 - col - 2 < 0) {
+				// 			// this.tigerPrediction[col] = redElements[col];
+				// 			// this.dragonPrediction[col] = blueElements[col];
+				// 			continue;
+				// 		}
+
+				// 		lengthLeft = 0;
+				// 		lengthRight = 0;
+				// 		for (a = 0; a < this.roadmapTypes!.length; a++) {
+				// 			if (this.roadmapTypes![a][lastIdxCol - col - 2])
+				// 				lengthLeft++;
+				// 			if (this.roadmapTypes![a][lastIdxCol - 1])
+				// 				lengthRight++;
+				// 		}
+
+				// 		this.tigerPrediction[col] = (lengthLeft === lengthRight) ?
+				// 			redElements[col] :
+				// 			blueElements[col];
+				// 		// this.dragonPrediction[col] = (lengthLeft === lengthRight) ?
+				// 		// 	blueElements[col] :
+				// 		// 	redElements[col];
+				// 	}
+				// }
+				console.log(currentPlayer, this.currentCol, this.currentRow);
+
+				if (currentPlayer == "tie") {
+
+				}
+
+				if (currentPlayer === "dragon") {
 					this.currentRow += 1;
 
 					for (a = 0; a < 3; a++) {
+
 						if (this.currentCol - a - 1 < 0) {
 
-							// this.tigerPrediction[a] = redElements[a];
-							// this.dragonPrediction[a] = blueElements[a];
 						}
 						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
 							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
 
-							this.tigerPrediction[a] = redElements[a];
-							this.dragonPrediction[a] = blueElements[a];
+							this.dragonPrediction[a] = redElements[a];
+							this.tigerPrediction[a] = blueElements[a];
+
 						}
 						else {
-
-							this.tigerPrediction[a] = blueElements[a];
-							this.dragonPrediction[a] = redElements[a];
+							this.dragonPrediction[a] = blueElements[a];
+							this.tigerPrediction[a] = redElements[a];
 						}
 					}
 
-					// console.log("currplay",  this.bigRoadSequence!);
-
-				} else {
-					//evaluate different column
-
-					this.currentRow = 0;
-					this.currentCol += 1;
-
-					for (let col = 0; col < 3; col++) {
-						if (this.currentCol - col - 2 < 0) {
-							// this.tigerPrediction[col] = redElements[col];
-							// this.dragonPrediction[col] = blueElements[col];
-							continue;
-						}
-
-						lengthLeft = 0;
-						lengthRight = 0;
-						for (a = 0; a < this.roadmapTypes!.length; a++) {
-							if (this.roadmapTypes![a][this.currentCol - col - 2])
-								lengthLeft++;
-							if (this.roadmapTypes![a][this.currentCol - 1])
-								lengthRight++;
-						}
-
-						this.tigerPrediction[col] = (lengthLeft === lengthRight) ?
-							redElements[col] :
-							blueElements[col];
-						this.dragonPrediction[col] = (lengthLeft === lengthRight) ?
-							blueElements[col] :
-							redElements[col];
-					}
+				
 				}
+
+				if (currentPlayer === "tiger") {
+					this.currentRow += 1;
+
+					for (a = 0; a < 3; a++) {
+
+						if (this.currentCol - a - 1 < 0) {
+
+						}
+						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+							this.dragonPrediction[a] = redElements[a];
+							this.tigerPrediction[a] = blueElements[a];
+						}
+						else {
+							this.dragonPrediction[a] = blueElements[a];
+
+							this.tigerPrediction[a] = redElements[a];
+						}
+					}
+
+				
+				}
+				
+
 
 
 

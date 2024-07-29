@@ -613,7 +613,7 @@ export function renderPredictions(gameRoad: any) {
         >
 
             <g clipPath="url(#clip0_246_543)">
-                <rect width="75.091" height="14" x="0.818" fill={gameRoad.layout.blueColor} rx="4"></rect>
+                <rect width="75.091" height="14" x="0.818" fill={clonePcode === 'm23'?gameRoad.layout.redColor:gameRoad.layout.blueColor} rx="4"></rect>
                 <rect
                     width="26.091"
                     height="10.364"
@@ -643,7 +643,7 @@ export function renderPredictions(gameRoad: any) {
                     width="62.091"
                     height="14"
                     x="80.909"
-                    fill={gameRoad.layout.redColor}
+                    fill={clonePcode === 'm23'?gameRoad.layout.blueColor:gameRoad.layout.redColor}
                     rx="4"
                 ></rect>
                 <rect
