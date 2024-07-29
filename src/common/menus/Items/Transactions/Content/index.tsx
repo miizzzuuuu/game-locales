@@ -27,7 +27,7 @@ const Content = () => {
                     <>
                         {tab === 'today' && <Today />}
                         {/* @ts-ignore */}
-                        {tab === 'previous' && Object.keys(transaction).length && <Previous />}
+                        {tab === 'previous' &&  <Previous />}
                     </>
 
                 }
