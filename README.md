@@ -25,3 +25,4 @@ To start creating a game, follow [these steps](docs/game).
 -   the translation for "show chip missing" is added
 -   fix the time format, change it to 24-hour
 -   hide log text during loading in production mode
+-   update width menu in landscape
