@@ -97,6 +97,18 @@ export const dummyM22history = {
             {
                 "dragon": "6s",
                 "tiger": "3c",
+                "result": "tiger",
+                "value": 6,
+                "tanggal": "2024-05-23 20:31:37",
+                "periode": 7,
+                "hitung": "1",
+                "gamekey": 52636,
+                "idnomor": 3042985,
+                "win": "dragon"
+            },
+            {
+                "dragon": "6s",
+                "tiger": "3c",
                 "result": "dragon",
                 "value": 6,
                 "tanggal": "2024-05-23 20:31:37",
@@ -109,13 +121,24 @@ export const dummyM22history = {
             {
                 "dragon": "6s",
                 "tiger": "3c",
-                "result": "tiger",
+                "result": "dragon",
                 "value": 6,
                 "tanggal": "2024-05-23 20:31:37",
                 "periode": 7,
                 "hitung": "1",
                 "gamekey": 52636,
                 "idnomor": 3042985,
+                "win": "dragon"
+            }, {
+                "dragon": "6c",
+                "tiger": "4c",
+                "result": "tie",
+                "value": 6,
+                "tanggal": "2024-05-23 20:37:35",
+                "periode": 15,
+                "hitung": "1",
+                "gamekey": 52636,
+                "idnomor": 3042993,
                 "win": "dragon"
             },
             {
@@ -130,18 +153,8 @@ export const dummyM22history = {
                 "idnomor": 3042985,
                 "win": "dragon"
             },
-            {
-                "dragon": "6c",
-                "tiger": "4c",
-                "result": "tiger",
-                "value": 6,
-                "tanggal": "2024-05-23 20:37:35",
-                "periode": 15,
-                "hitung": "1",
-                "gamekey": 52636,
-                "idnomor": 3042993,
-                "win": "dragon"
-            }
+            
+         
             
         ],
         "newSet": true,
