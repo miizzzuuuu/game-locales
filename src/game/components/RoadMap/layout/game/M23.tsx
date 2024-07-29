@@ -79,7 +79,7 @@ export default class M23 extends BaseV2Roadmap {
 		const historyBlink = false;
 		const data = useAppSelector((state) => state.history.history);
 		console.log(data)
-		const periode = 100000 || useAppSelector(selectPeriod);
+		const periode = useAppSelector(selectPeriod);
 		const a = periode?.toString().length + 3
 		const firstSpace = a * 6;
 		const Layout = M23;
