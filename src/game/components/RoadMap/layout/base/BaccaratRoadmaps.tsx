@@ -110,7 +110,7 @@ function addBigRoadDisplay(this: BaseV2Roadmap, displayAry: Array<Array<Optional
         this.lastDisplayCol! += 1;
         this.currentDisplayCol = this.lastDisplayCol;
     }
-     else {
+    else {
         // console.log("sBR", this.currentDisplayRow! + 1, this.currentDisplayCol!, this.props.type);
 
         // @ts-ignore
@@ -367,7 +367,7 @@ export function prepareV3Render(this: BaseV2Roadmap) {
     this.roadmapTiesDisplay = [];
 
     // Todo: use clonePcode later
-    if (basePcode === "m22" || basePcode === "m28" || basePcode === "m38")
+    if (basePcode === "m22" || GameHelper.pcode === "m23b" || basePcode === "m28" || basePcode === "m38")
         this.roadmapPairsDisplay = [];
 
     for (let a = 0; a < 9; a++) {
@@ -376,7 +376,7 @@ export function prepareV3Render(this: BaseV2Roadmap) {
         this.roadmapTiesDisplay[a] = [...Array(9).keys()].map(() => null);
 
         // Todo: use clonePcode later
-        if (basePcode === "m22" || basePcode === "m28" || basePcode === "m38")
+        if (basePcode === "m22" ||  GameHelper.pcode === "m23b" ||  basePcode === "m28" || basePcode === "m38")
             this.roadmapPairsDisplay![a] = "1".split("").map(() => []);
     }
 
@@ -391,6 +391,8 @@ export function prepareV3Render(this: BaseV2Roadmap) {
 
         case "m23":
             this.simpleBigRoad = getSimpleDragonTigerResultArray(this.props.history);
+            if(GameHelper.pcode=="m23b")
+            this.simpleBigRoadPairs = getSimpleDragonTigerResultPairArray(this.props.history);
             break;
 
         case "m25":
@@ -478,7 +480,7 @@ function renderV3(this: BaseV2Roadmap) {
                                 // Shio Fights
                                 type === "shio" ? (
                                     nary(6).map((row, rowIdx) =>
-                                        <React.Fragment  key={"cBR_" + "_" + row}>
+                                        <React.Fragment key={"cBR_" + "_" + row}>
                                             {
                                                 roadmapColumns.map((col, colIdx) =>
                                                 (
@@ -613,7 +615,7 @@ export function renderPredictions(gameRoad: any) {
         >
 
             <g clipPath="url(#clip0_246_543)">
-                <rect width="75.091" height="14" x="0.818" fill={clonePcode === 'm23'?gameRoad.layout.redColor:gameRoad.layout.blueColor} rx="4"></rect>
+                <rect width="75.091" height="14" x="0.818" fill={clonePcode === 'm23' ? gameRoad.layout.redColor : gameRoad.layout.blueColor} rx="4"></rect>
                 <rect
                     width="26.091"
                     height="10.364"
@@ -643,7 +645,7 @@ export function renderPredictions(gameRoad: any) {
                     width="62.091"
                     height="14"
                     x="80.909"
-                    fill={clonePcode === 'm23'?gameRoad.layout.blueColor:gameRoad.layout.redColor}
+                    fill={clonePcode === 'm23' ? gameRoad.layout.blueColor : gameRoad.layout.redColor}
                     rx="4"
                 ></rect>
                 <rect
@@ -804,6 +806,18 @@ function getSimpleBaccaratResultPairArray(bigRoad: Array<any>) {
         item.bankerPair && item.playerPair ? "D" :
             item.bankerPair ? "B" :
                 item.playerPair ? "P" : " ");
+}
+
+//Dragon Tiger Pair
+/** @param bigRoad props.history */
+function getSimpleDragonTigerResultPairArray(bigRoad: Array<any>) {
+    if (!bigRoad)
+        return [];
+console.log(bigRoad);
+    return bigRoad.map(item =>
+        item.tiger[0] == item.wild[0] && item.dragon[0] == item.wild[0] ? "D" :
+            item.tiger[0] == item.wild[0] ? "TG" :
+                item.dragon[0] == item.wild[0] ? "DG" : " ");
 }
 
 //Dragon & Tiger

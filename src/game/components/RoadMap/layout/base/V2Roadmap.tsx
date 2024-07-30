@@ -238,7 +238,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 												// Pairs
 												// @ts-ignore
-												basePcode === "m22" || basePcode === "m38" ?
+												basePcode === "m22"|| GameHelper.pcode === "m23b" || basePcode === "m38" ?
 													// @ts-ignore
 													this.roadmapPairsDisplay[row - 1]
 													// @ts-ignore

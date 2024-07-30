@@ -1,4 +1,5 @@
 import { DisplayHelper } from "../../../../../common/utils/DisplayHelper";
+import { GameHelper } from "../../../../../common/utils/GameHelper";
 import { useAppSelector } from "../../../../../store/hooks";
 import { selectPeriod } from "../../../../../store/slice/gameSlice";
 import {
@@ -180,6 +181,8 @@ export default class M23 extends BaseV2Roadmap {
 					} else
 						this.currentRow! += 1;
 					if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
+					const tigerPair = item.tiger[0] == item.wild[0];
+					const dragonPair = item.dragon[0] == item.wild[0];
 					if (item.result === "tiger") {
 						ele = (<>
 							<rect
@@ -192,6 +195,14 @@ export default class M23 extends BaseV2Roadmap {
 								x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">T</text>
+							{
+								GameHelper.pcode == "m23b" ? <>
+									{dragonPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
+									{tigerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
+								</>
+									: <></>
+							}
+
 						</>
 						);
 					} else if (item.result === "dragon") {
@@ -206,6 +217,13 @@ export default class M23 extends BaseV2Roadmap {
 								x={(4.5 + 9) / 2 + (12 * this.currentCol!) - ((this.firstDisplayedCol || 0) * 12)} y={((4.5) + 9) - 2 + (12 * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">D</text>
+							{
+								GameHelper.pcode == "m23b" ? <>
+									{dragonPair && <circle className={alternatingStyleClass || ""} cx={5.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (this.currentRow! * 12)} r="1.5" fill={this.redColor} />}
+									{tigerPair && <circle className={alternatingStyleClass || ""} cx={12.5 + (this.currentCol! * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (this.currentRow! * 12)} r="1.5" fill={this.blueColor} />}
+								</>
+									: <></>
+							}
 						</>);
 					} else { //tie
 						ele = (<>
@@ -268,7 +286,36 @@ export default class M23 extends BaseV2Roadmap {
 						}
 					});
 
+
+				// Banker & Player Pairs
 				this.resetDisplayPointer();
+
+				if (this.roadmapPairsDisplay)
+					try {
+						this.simpleBigRoadPairs!.forEach((item, idx) => {
+							const pos = this.bigRoadSequence![idx];
+
+							if (this.roadmapPairsDisplay![0].length - 1 < pos[1])
+								for (const b in this.roadmapPairsDisplay) // @ts-ignore
+									this.roadmapPairsDisplay[b].push(...[]);
+
+							const alternatingStyle = checkLastIdx(
+								this.simpleBigRoadPairs!,
+								idx,
+							) ? this.alternatingStyle : '';
+
+							this.roadmapPairsDisplay![pos[0]][pos[1]] = [
+								<>
+									{(item === 'D' || item === 'DG') &&
+										<circle className={alternatingStyle || ""} cx={5.5 + (pos[1] * 12)} cy={5.5 + (pos[0] * 12)} r="1.5" fill={this.redColor} />}
+									{(item === 'D' || item === 'TG') &&
+										<circle className={alternatingStyle || ""} cx={12.5 + (pos[1] * 12)} cy={12.5 + (pos[0] * 12)} r="1.5" fill={this.blueColor} />}
+								</>
+							];
+						});
+					} catch (err) {
+						console.error(err);
+					}
 				break;
 
 			default: break;
@@ -444,13 +491,13 @@ export default class M23 extends BaseV2Roadmap {
 					(props: any) => <circle {...{ ...props }} r="3.182" fill={this.blueColor}></circle>,
 					(props: any) => <path {...{ ...props }} stroke={this.blueColor} strokeWidth="0.955" ></path>
 				];
-				
+
 				startingCol = 0;
 				startingRow = 0;
 
 				let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
-				
-	
+
+
 				// @ts-ignore
 
 				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
@@ -459,14 +506,14 @@ export default class M23 extends BaseV2Roadmap {
 
 				startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
 				startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
-			
+
 				for (a = 0; a < this.roadmapTypes!.length; a++)
 					if (this.roadmapTypes![a][startingCol])
 						startingRow = a;
 					else break;
 
 				this.currentRow = startingRow;
-				this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
+				this.currentCol = startingCol > lastIdxCol ? lastIdxCol : startingCol;
 
 				this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
 
@@ -475,7 +522,7 @@ export default class M23 extends BaseV2Roadmap {
 						this.currentType === "D" ? "dragon" : "tie";
 
 
-			
+
 				if (currentPlayer == "tie") {
 
 				}
@@ -501,7 +548,7 @@ export default class M23 extends BaseV2Roadmap {
 						}
 					}
 
-				
+
 				}
 
 				if (currentPlayer === "tiger") {
@@ -524,9 +571,9 @@ export default class M23 extends BaseV2Roadmap {
 						}
 					}
 
-				
+
 				}
-				
+
 
 
 
