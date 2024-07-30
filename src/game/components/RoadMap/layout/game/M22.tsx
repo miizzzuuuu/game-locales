@@ -196,83 +196,87 @@ export default class M22 extends BaseV2Roadmap {
 
 
         let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
-        
+
 
         // @ts-ignore
 
         const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
-        if (lastBigRoadSequence === undefined)
-            return;
+        if (lastBigRoadSequence === undefined) {
 
-        startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
-        startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
-    
-        for (a = 0; a < this.roadmapTypes!.length; a++)
-            if (this.roadmapTypes![a][startingCol])
-                startingRow = a;
-            else return;
+        } else {
 
-        this.currentRow = startingRow;
-        this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
+            startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
+            startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
 
-        this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
+            for (a = 0; a < this.roadmapTypes!.length; a++)
+                if (this.roadmapTypes![a][startingCol])
+                    startingRow = a;
+                else break;
 
-        const currentPlayer =
-            this.currentType === "B" ? "banker" :
-                this.currentType === "P" ? "player" : "tie";
+            this.currentRow = startingRow;
+            this.currentCol = startingCol > lastIdxCol ? lastIdxCol : startingCol;
+
+            this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
+
+            const currentPlayer =
+                this.currentType === "B" ? "banker" :
+                    this.currentType === "P" ? "player" : "tie";
 
 
-    
-        if (currentPlayer == "tie") {
 
-        }
+            if (currentPlayer == "tie") {
 
-        if (currentPlayer === "player") {
-            this.currentRow += 1;
-
-            for (a = 0; a < 3; a++) {
-
-                if (this.currentCol - a - 1 < 0) {
-
-                }
-                else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-                    this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
-
-                    this.playerPrediction[a] = blueElements[a];
-                    this.bankerPrediction[a] = redElements[a];
-
-                }
-                else {
-                    this.playerPrediction[a] = redElements[a];
-                    this.bankerPrediction[a] = blueElements[a];
-                }
             }
 
-        
-        }
+            if (currentPlayer === "player") {
+                this.currentRow += 1;
 
-        if (currentPlayer === "banker") {
-            this.currentRow += 1;
+                for (a = 0; a < 3; a++) {
 
-            for (a = 0; a < 3; a++) {
+                    if (this.currentCol - a - 1 < 0) {
 
-                if (this.currentCol - a - 1 < 0) {
+                    }
+                    else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                        this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
 
+                        this.playerPrediction[a] = blueElements[a];
+                        this.bankerPrediction[a] = redElements[a];
+
+                    }
+                    else {
+                        this.playerPrediction[a] = redElements[a];
+                        this.bankerPrediction[a] = blueElements[a];
+                    }
                 }
-                else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-                    this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
-                    this.playerPrediction[a] = redElements[a];
-                    this.bankerPrediction[a] = blueElements[a];
-                }
-                else {
-                    this.playerPrediction[a] = blueElements[a];
 
-                    this.bankerPrediction[a] = redElements[a];
-                }
+
             }
 
-        
+            if (currentPlayer === "banker") {
+                this.currentRow += 1;
+
+                for (a = 0; a < 3; a++) {
+
+                    if (this.currentCol - a - 1 < 0) {
+
+                    }
+                    else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                        this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+                        this.playerPrediction[a] = redElements[a];
+                        this.bankerPrediction[a] = blueElements[a];
+                    }
+                    else {
+                        this.playerPrediction[a] = blueElements[a];
+
+                        this.bankerPrediction[a] = redElements[a];
+                    }
+                }
+
+
+            }
         }
+
+
     }
 
     static ShoeStat() {
