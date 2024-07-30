@@ -34,30 +34,4 @@ export class StringHelper {
 
         return String(value);
     }
-
-    static formatedDate = (datestring: string, lang: string): string => {
-        const locale = LangHelper.getCountryLanguageCodes(lang);
-
-        const date = new Date(datestring);
-        return date.toLocaleString(locale);
-    };
-
-    static formatDateByLocale(
-        dateString: string,
-        lang: string,
-        weekday: 'long' | 'short' | 'narrow' | undefined,
-        month: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow' | undefined = 'long',
-    ) {
-        const locale = LangHelper.getCountryLanguageCodes(lang);
-
-        const date = new Date(dateString);
-        const options: Intl.DateTimeFormatOptions = {
-            weekday: weekday,
-            year: 'numeric',
-            month: month,
-            day: 'numeric',
-        };
-
-        return new Intl.DateTimeFormat(locale, options).format(date);
-    }
 }

@@ -78,7 +78,7 @@ export class LangHelper {
         const locale = this.countryLanguageCodes[lang];
 
         const date = new Date(datestring);
-        return date.toLocaleString(locale);
+        return date.toLocaleString(locale, { hour12: false });
     };
 
     static formatDateByLocale(
@@ -95,6 +95,7 @@ export class LangHelper {
             year: 'numeric',
             month: month,
             day: 'numeric',
+            hour12: false,
         };
 
         return new Intl.DateTimeFormat(locale, options).format(date);
