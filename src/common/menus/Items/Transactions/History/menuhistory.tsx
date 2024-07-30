@@ -8,6 +8,7 @@ import "./style.css";
 import { StringUtility } from "../../../../../game/components/External/managers/StringUtility";
 import { Sound } from "../../../../../services/sound";
 import BettingTable from "../Card/BettingTable";
+import { DisplayHelper } from "../../../../utils/DisplayHelper";
 
 
 export interface DetailBetting {
@@ -98,6 +99,9 @@ const HistoryItem: React.FC<MenuItemParams> = ({
     } else {
         if (isBottom) borderRadiusStr = "0px 0px 8px 8px";
     }
+
+    const orientation = DisplayHelper.getOrientation();
+
 
     const cardContainer = useRef<HTMLDivElement>(null);
     const cardContainer2 = useRef<HTMLDivElement>(null);
@@ -434,6 +438,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                         justifyContent: "center",
                                         alignItems: "center",
                                         zIndex: 2
+
                                     }}
                                 >
                                     <Label
@@ -493,6 +498,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 right: "10px",
                                 bottom: "5px",
                                 height: "46%",
+                                ...(orientation == "landscape"?({transform: "scale(0.5) translateY(-1rem)"}):{})
                             }}
                         >
 
@@ -753,6 +759,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                         "linear-gradient(108deg, rgba(59, 232, 0, 0.75) 2.97%, rgba(64, 248, 0, 0.75) 49.79%, rgba(59, 232, 0, 0.75) 98.51%)",
                                     boxShadow: "-2px 4px 6px 0px rgba(0, 0, 0, 0.20)",
                                     backdropFilter: "blur(4px)",
+
                                 }}
                             />
                         </div>
@@ -766,7 +773,8 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 left: "40%",
                                 top: "40%",
                                 transform: "scale(1.25)",
-                                position: "absolute"
+                                position: "absolute",
+                                ...(orientation == "landscape"?({transform: "scale(0.65) translateY(-2rem)"}):{})
 
                             }}
                         >
@@ -897,6 +905,8 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 left: "10px",
                                 bottom: "5px",
                                 height: "46%",
+                                ...(orientation == "landscape"?({transform: "scale(0.5) translateY(-1rem)"}):{})
+
                             }}
                         >
                             <div
@@ -908,6 +918,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                     transform: "scale(1.25)",
                                     marginLeft: "0.5rem",
                                     marginTop: "-0.5rem",
+
 
                                 }}
                             >
