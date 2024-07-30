@@ -736,108 +736,88 @@ export default class M27 extends BaseV2Roadmap {
                     (props: any) => <circle {...{ ...props }} r="3.182" fill={this.blueColor}></circle>,
                     (props: any) => <path {...{ ...props }} stroke={this.blueColor} strokeWidth="0.955" ></path>
                 ];
+				
+				 startingCol = 0;
+				let startingRow = 0;
 
-                startingCol = 0;
-                let startingRow = 0;
+				let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
+				
+	
+				// @ts-ignore
 
-                // console.log("rT", this.roadmapTypes);
+				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
+				if (lastBigRoadSequence === undefined)
+					break;
 
-                const lastBigRoadSequence =
-                    this.bigRoadSequence![this.bigRoadSequence!.length - 1];
-                if (lastBigRoadSequence === undefined) break;
+				startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
+				startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
+			
+				for (a = 0; a < this.roadmapTypes!.length; a++)
+					if (this.roadmapTypes![a][startingCol])
+						startingRow = a;
+					else break;
 
-                startingRow =
-                    this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
-                startingCol =
-                    this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
+				this.currentRow = startingRow;
+				this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
 
-                this.currentType = this.roadmapTypes![startingRow][startingCol];
+				this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
 
-                const currentPlayer =
-                    this.currentType === 'T'
-                        ? 'tian'
-                        : this.currentType === 'D'
-                            ? 'di'
-                            : 'tie';
+				const currentPlayer =
+					this.currentType === "T" ? "tian" :
+						this.currentType === "D" ? "di" : "tie";
 
-                // console.log("bRS", this.bigRoadSequence);
 
-                //Use this.currentRow only for predictions on the same column (the same currentPlayer)
-                for (a = 0; a < this.roadmapTypes!.length; a++)
-                    if (this.roadmapTypes![a][this.currentCol]) startingRow = a;
-                    else break;
+			
+				if (currentPlayer == "tie") {
 
-                this.currentRow = startingRow;
-                this.currentCol = startingCol;
-                // console.log({this.currentCol: this.currentCol, this.currentRow: this.currentRow, this.currentType: this.currentType, currentPlayer: currentPlayer});
+				}
 
-                //Banker and player are disabled for now
+				if (currentPlayer === "di") {
+					this.currentRow += 1;
 
-                //Evaluate banker
-                if (currentPlayer === 'tian') {
-                    this.currentRow += 1;
+					for (a = 0; a < 3; a++) {
 
-                    for (a = 0; a < 3; a++) {
-                        if (this.currentCol - a - 1 < 0) {
+						if (this.currentCol - a - 1 < 0) {
 
-                            this.tianPrediction[a] = redElements[a];
-                            this.diPrediction[a] = blueElements[a];
-                        }
-                        else if (
-                            this.roadmapTypes![this.currentRow][
-                            this.currentCol - a - 1
-                            ] ===
-                            this.roadmapTypes![this.currentRow - 1][
-                            this.currentCol - a - 1
-                            ]
-                        ) {
-                            this.tianPrediction[a] = redElements[a];
-                            this.diPrediction[a] = blueElements[a];
-                        }
-                        else {
+						}
+						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
 
-                            this.tianPrediction[a] = blueElements[a];
-                            this.diPrediction[a] = redElements[a];
-                        }
-                    }
-                } else {
-                    //evaluate different column
+							this.diPrediction[a] = blueElements[a];
+							this.tianPrediction[a] = redElements[a];
 
-                    this.currentRow = 0;
-                    this.currentCol += 1;
-                    // console.log("pred banker", this.currentRow, this.currentCol);
+						}
+						else {
+							this.diPrediction[a] = redElements[a];
+							this.tianPrediction[a] = blueElements[a];
+						}
+					}
 
-                    let lengthLeft, lengthRight;
+				
+				}
 
-                    for (let col = 0; col < 3; col++) {
-                        if (this.currentCol - col - 2 < 0) {
-                            // this.tianPrediction[col] = redElements[col];
-                            // this.diPrediction[col] = blueElements[col];
-                            continue;
-                        }
+				if (currentPlayer === "tian") {
+					this.currentRow += 1;
 
-                        lengthLeft = 0;
-                        lengthRight = 0;
-                        for (a = 0; a < this.roadmapTypes!.length; a++) {
-                            if (this.roadmapTypes![a][this.currentCol - col - 2])
-                                lengthLeft++;
-                            if (this.roadmapTypes![a][this.currentCol - 1])
-                                lengthRight++;
-                        }
+					for (a = 0; a < 3; a++) {
 
-                        // console.log("ll, lr", lengthLeft, lengthRight);
+						if (this.currentCol - a - 1 < 0) {
 
-                        this.tianPrediction[col] =
-                            lengthLeft === lengthRight
-                                ? redElements[col]
-                                : blueElements[col];
-                        this.diPrediction[col] =
-                            lengthLeft === lengthRight
-                                ? blueElements[col]
-                                : redElements[col];
-                    }
-                }
+						}
+						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+							this.diPrediction[a] = redElements[a];
+							this.tianPrediction[a] = blueElements[a];
+						}
+						else {
+							this.diPrediction[a] = blueElements[a];
 
+							this.tianPrediction[a] = redElements[a];
+						}
+					}
+
+				
+				}
 
                 break;
             default:

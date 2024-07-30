@@ -444,17 +444,14 @@ export default class M23 extends BaseV2Roadmap {
 					(props: any) => <circle {...{ ...props }} r="3.182" fill={this.blueColor}></circle>,
 					(props: any) => <path {...{ ...props }} stroke={this.blueColor} strokeWidth="0.955" ></path>
 				];
-				//@ts-ignore
-				//  blueElements[0].stroke = "#000";
+				
 				startingCol = 0;
 				startingRow = 0;
 
 				let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
-				console.log("rT", this.roadmapTypes, lastIdxCol);
-				console.log("bRS", this.bigRoadSequence);
+				
+	
 				// @ts-ignore
-
-
 
 				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
 				if (lastBigRoadSequence === undefined)
@@ -462,12 +459,7 @@ export default class M23 extends BaseV2Roadmap {
 
 				startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
 				startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
-				console.log(startingCol, startingRow);
 			
-
-				// console.log("bRS", this.bigRoadSequence);
-
-				//Use this.currentRow only for predictions on the same column (the same currentPlayer)
 				for (a = 0; a < this.roadmapTypes!.length; a++)
 					if (this.roadmapTypes![a][startingCol])
 						startingRow = a;

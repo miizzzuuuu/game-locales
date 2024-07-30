@@ -181,7 +181,8 @@ export default class M22 extends BaseV2Roadmap {
         this.bankerPrediction = [];
 
         let a = 0;
-
+        let startingCol = 0;
+        let startingRow = 0;
         const redElements = [
             (props: any) => <circle {...{ ...props }} r="2.70455" stroke={this.redColor} stroke-width="0.954546" />,
             (props: any) => <circle {...{ ...props }} r="3.18182" fill={this.redColor} />,
@@ -193,105 +194,84 @@ export default class M22 extends BaseV2Roadmap {
             (props: any) => <path {...{ ...props }} stroke={this.blueColor} strokeWidth="0.955" ></path>
         ];
 
-        let startingCol = 0;
-        let startingRow = 0;
 
-        console.log("rT", this.roadmapTypes);
+        let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
+        
 
-        const lastBigRoadSequence =
-            this.bigRoadSequence![this.bigRoadSequence!.length - 1];
-        if (lastBigRoadSequence === undefined) return;
+        // @ts-ignore
 
+        const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
+        if (lastBigRoadSequence === undefined)
+            return;
 
-        startingRow = lastBigRoadSequence[0];
-        startingCol = lastBigRoadSequence[1];
-
-        this.currentType = this.roadmapTypes![startingRow][startingCol];
-
-        const currentPlayer =
-            this.currentType === 'B'
-                ? 'banker'
-                : this.currentType === 'P'
-                    ? 'player'
-                    : 'tie';
-
-        // console.log("bRS", this.bigRoadSequence);
-
-        //Use this.currentRow only for predictions on the same column (the same currentPlayer)
-        for (a = 0; a < this.roadmapTypes!.length; a++) {
-
-            if (this.roadmapTypes![a][this.currentCol!]) {
-                startingRow = a
-            }
-
-        }
-        console.log("rT", this.bigRoadSequence, lastBigRoadSequence, this.roadmapTypes);
+        startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
+        startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
+    
+        for (a = 0; a < this.roadmapTypes!.length; a++)
+            if (this.roadmapTypes![a][startingCol])
+                startingRow = a;
+            else return;
 
         this.currentRow = startingRow;
-        this.currentCol = startingCol;
+        this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
 
-        //Evaluate player
-        if (currentPlayer === 'player') {
+        this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
+
+        const currentPlayer =
+            this.currentType === "B" ? "banker" :
+                this.currentType === "P" ? "player" : "tie";
+
+
+    
+        if (currentPlayer == "tie") {
+
+        }
+
+        if (currentPlayer === "player") {
             this.currentRow += 1;
+
             for (a = 0; a < 3; a++) {
 
                 if (this.currentCol - a - 1 < 0) {
 
-                    // this.playerPrediction[a] = blueElements[a];
-                    // this.bankerPrediction[a] = redElements[a];
                 }
-                else if (
-                    this.roadmapTypes![this.currentRow][
-                    this.currentCol - a - 1
-                    ] ===
-                    this.roadmapTypes![this.currentRow - 1][
-                    this.currentCol - a - 1
-                    ]
-                ) {
+                else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                    this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
 
+                    this.playerPrediction[a] = blueElements[a];
+                    this.bankerPrediction[a] = redElements[a];
+
+                }
+                else {
+                    this.playerPrediction[a] = redElements[a];
+                    this.bankerPrediction[a] = blueElements[a];
+                }
+            }
+
+        
+        }
+
+        if (currentPlayer === "banker") {
+            this.currentRow += 1;
+
+            for (a = 0; a < 3; a++) {
+
+                if (this.currentCol - a - 1 < 0) {
+
+                }
+                else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                    this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
                     this.playerPrediction[a] = redElements[a];
                     this.bankerPrediction[a] = blueElements[a];
                 }
                 else {
                     this.playerPrediction[a] = blueElements[a];
+
                     this.bankerPrediction[a] = redElements[a];
                 }
             }
-        } else {
-            //evaluate different column
-            this.currentRow = 0;
-            this.currentCol += 1;
-            // console.log("pred player", this.currentRow, this.currentCol);
 
-            for (let col = 0; col < 3; col++) {
-
-                if (this.currentCol - col - 2 < 0) {
-                    // this.playerPrediction[col] = blueElements[col];
-                    // this.bankerPrediction[col] = redElements[col];
-                    continue;
-                }
-
-                let lengthLeft = 0,
-                    lengthRight = 0;
-
-                for (a = 0; a < this.roadmapTypes!.length; a++) {
-                    if (this.roadmapTypes![a][this.currentCol - col - 2])
-                        lengthLeft++;
-                    if (this.roadmapTypes![a][this.currentCol - 1])
-                        lengthRight++;
-                }
-
-                // console.log("ll, lr", lengthLeft, lengthRight);
-
-                this.playerPrediction[col] =
-                    lengthLeft === lengthRight
-                        ? redElements[col]
-                        : blueElements[col];
-                this.bankerPrediction[col] =
-                    lengthLeft === lengthRight
-                        ? blueElements[col]
-                        : redElements[col];
-            }
+        
         }
     }
 
