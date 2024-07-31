@@ -262,6 +262,8 @@ export default class M23 extends BaseV2Roadmap {
 
 				// console.log("sBR", this.simpleBigRoad, this.props.type);
 
+				if (Math.ceil(history.length / 8) >= 24!)
+					this.firstDisplayedCol = Math.ceil(history.length / 8) - 24!;
 				//Actual data
 				this.simpleBigRoad!
 					.forEach((item, idx) => {
@@ -315,9 +317,9 @@ export default class M23 extends BaseV2Roadmap {
 							this.roadmapPairsDisplay![pos[0]][pos[1]] = [
 								<>
 									{(item === 'D' || item === 'DG') &&
-										<circle className={alternatingStyle || ""} cx={5.5 + (pos[1] * 12)} cy={5.5 + (pos[0] * 12)} r="1.5" fill={this.redColor} />}
+										<circle className={alternatingStyle || ""} cx={5.5 + (pos[1] * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (pos[0] * 12)} r="1.5" fill={this.redColor} />}
 									{(item === 'D' || item === 'TG') &&
-										<circle className={alternatingStyle || ""} cx={12.5 + (pos[1] * 12)} cy={12.5 + (pos[0] * 12)} r="1.5" fill={this.blueColor} />}
+										<circle className={alternatingStyle || ""} cx={12.5 + (pos[1] * 12 )- ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (pos[0] * 12)} r="1.5" fill={this.blueColor} />}
 								</>
 							];
 						});

@@ -165,9 +165,9 @@ export default class M22 extends BaseV2Roadmap {
                     this.roadmapPairsDisplay![pos[0]][pos[1]] = [
                         <>
                             {(item === 'D' || item === 'B') &&
-                                <circle className={alternatingStyle || ""} cx={5.5 + (pos[1] * 12)} cy={5.5 + (pos[0] * 12)} r="1.5" fill={this.redColor} />}
+                                <circle className={alternatingStyle || ""} cx={5.5 + (pos[1] * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={5.5 + (pos[0] * 12)} r="1.5" fill={this.redColor} />}
                             {(item === 'D' || item === 'P') &&
-                                <circle className={alternatingStyle || ""} cx={12.5 + (pos[1] * 12)} cy={12.5 + (pos[0] * 12)} r="1.5" fill={this.blueColor} />}
+                                <circle className={alternatingStyle || ""} cx={12.5 + (pos[1] * 12) - ((this.firstDisplayedCol || 0) * 12)} cy={12.5 + (pos[0] * 12)} r="1.5" fill={this.blueColor} />}
                         </>
                     ];
                 });
