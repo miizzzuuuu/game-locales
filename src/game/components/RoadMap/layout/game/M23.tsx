@@ -80,7 +80,7 @@ export default class M23 extends BaseV2Roadmap {
 		const historyBlink = false;
 		const data = useAppSelector((state) => state.history.history);
 		console.log(data)
-		const periode = useAppSelector(selectPeriod);
+		const periode = data.length;
 		const a = periode?.toString().length + 3
 		const firstSpace = a * 6;
 		const Layout = M23;
@@ -260,10 +260,9 @@ export default class M23 extends BaseV2Roadmap {
 				this.resetDisplayPointer();
 				this.resetAnalysisPointer();
 
-				// console.log("sBR", this.simpleBigRoad, this.props.type);
+				console.log("firstDisplayedCol", this.roadmapTypes,this.simpleBigRoad, this.props.type);
 
-				if (Math.ceil(history.length / 8) >= 24!)
-					this.firstDisplayedCol = Math.ceil(history.length / 8) - 24!;
+			
 				//Actual data
 				this.simpleBigRoad!
 					.forEach((item, idx) => {
@@ -296,7 +295,8 @@ export default class M23 extends BaseV2Roadmap {
 						}
 					});
 
-
+					if (Math.ceil(this.roadmapTypes![0].length) >= 24!)
+						this.firstDisplayedCol = Math.ceil(this.roadmapTypes![0].length) - 24!;
 				// Banker & Player Pairs
 				this.resetDisplayPointer();
 

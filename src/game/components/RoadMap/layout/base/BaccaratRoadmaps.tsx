@@ -299,12 +299,12 @@ export function prepareV3Render(this: BaseV2Roadmap) {
 
                         this.props.mobile ? (
                             isPortrait() ? 14 : //mobile portrait
-                                (this.props.expanded ? 22 : //mobile landscape V2 expanded
+                                (this.props.expanded ? 24 : //mobile landscape V2 expanded
                                     basePcode === "m32" ? 14 : 4) //mobile landscape
                         ) : //landscape open/close
 
                             this.props.small ? 14 : //lobby desktop
-                                basePcode === "m32" ? 17 : 22; //desktop in-game
+                                basePcode === "m32" ? 17 : 24; //desktop in-game
                 break;
 
             case "bead-road":
