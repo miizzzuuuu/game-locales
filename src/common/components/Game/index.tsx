@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
-import { selectTime, setTime } from '../../../store/slice/timerSlice';
+import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { dummyLoadNewValue, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
@@ -43,7 +43,7 @@ function Game() {
             dispatch(setWinAmount(1000000));
         }
         if (e.key === 'c') {
-            dispatch(setTime(0));
+            dispatch(closeTime());
         }
         if (e.key === 't') {
             dispatch(
@@ -62,7 +62,7 @@ function Game() {
 
         if (time != 0) {
             console.log('close game');
-            dispatch(setTime(0));
+            dispatch(closeTime());
         }
     }, [time]);
 
