@@ -6,7 +6,7 @@ import {
     checkLastIdx,
 
 } from '../base/BaccaratRoadmaps';
-
+import '../../style.scss'
 // import { assetImg } from 'src/modules/moduleImporter';
 import { BaseV2Roadmap, ResultHaveResultString } from '../base/V2Roadmap';
 
@@ -29,21 +29,20 @@ export default class M27 extends BaseV2Roadmap {
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
         const periode = useAppSelector(selectPeriod);
-		const a = periode?.toString().length + 3
-		const firstSpace = a * 6;
+        const a = periode?.toString().length + 3
+        const firstSpace = a * 6;
         const Layout = M27;
-
         return (
             <div style={{
                 display: "flex",
                 justifyContent: "space-between",
                 flexDirection: "row",
                 width: "100%",
-                paddingBlock: "1%"
+                paddingBlock: '0.5rem'
             }}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="180"
+                    width="50%"
                     fill="none"
                     viewBox="0 0 180 12"
                 >
@@ -109,340 +108,349 @@ export default class M27 extends BaseV2Roadmap {
         switch (this.props.type) {
             case 'shio':
 
-            this.currentRow = -1;
+                this.currentRow = -1;
 
-            this.currentCol = 0;
-
-
-
-            //Note: always use actual history array on release
-
-            const history = this.props.history;
+                this.currentCol = 0;
 
 
 
-            //Skips render when history props is empty
+                //Note: always use actual history array on release
 
-            if (!history) return null;
-
-
-
-            //Formula: history length divided by displayed rows
-
-            if (Math.ceil(history.length / 6) >= this.totalColumns!)
-
-                this.firstDisplayedCol =
-
-                    Math.ceil(history.length / 6) - this.totalColumns!;
-
-            history.forEach((item: any) => {
-
-                let ele = null;
-
-                if (this.currentRow! >= 5) {
-
-                    this.currentRow = 0;
-
-                    this.currentCol! += 1;
-
-                } else this.currentRow! += 1;
-
-                if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
+                const history = this.props.history;
 
 
-                if (item.result === 'tian') {
 
-                    ele = (
+                //Skips render when history props is empty
 
-                        <>
+                if (!history) return null;
 
-                            <g>
 
-                                <rect
 
-                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
+                //Formula: history length divided by displayed rows
 
-                                    y={4.5 + (this.currentRow! * 16)}
+                if (Math.ceil(history.length / 6) >= this.totalColumns!)
 
-                                    width="13"
+                    this.firstDisplayedCol =
 
-                                    height="13"
+                        Math.ceil(history.length / 6) - this.totalColumns!;
 
-                                    rx="6.5"
+                history.forEach((item: any, idx: any) => {
 
-                                    fill="#fff"
+                    let ele = null;
 
-                                />
+                    if (this.currentRow! >= 5) {
 
-                                <g
+                        this.currentRow = 0;
 
-                                    clip-path={`url(#${item.idnomor}-${item.di})`}
+                        this.currentCol! += 1;
 
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
+                    } else this.currentRow! += 1;
 
-                                >
+                    if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
 
-                                    {
 
-                                        item.di === 'dog' ? <Dog color={M27.redColor} /> :
+                    if (item.result === 'tian') {
 
-                                            item.di === 'dragon' ? <Dragon color={M27.redColor} /> :
+                        ele = (
 
-                                                item.di === 'snake' ? <Snake color={M27.redColor} /> :
+                            <>
 
-                                                    item.di === 'rat' ? <Rat color={M27.redColor} /> :
+                                <g>
 
-                                                        item.di === 'monkey' ? <Monkey color={M27.redColor} /> :
+                                    <rect
 
-                                                            item.di === 'rabbit' ? <Rabbit color={M27.redColor} /> :
+                                        x={3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 14)}
 
-                                                                item.di === 'ox' ? <Ox color={M27.redColor} /> :
+                                        y={4.5 + (this.currentRow! * 16)}
+                                        width="13"
 
-                                                                    item.di === 'tiger' ? <Tiger color={M27.redColor} /> :
+                                        height="13"
 
-                                                                        item.di === 'pig' ? <Pig color={M27.redColor} /> :
+                                        rx="6.5"
+                                        fill={M27.redColor}
 
-                                                                            item.di === 'horse' ? <Horse color={M27.redColor} /> :
+                                    />
 
-                                                                                item.di === 'rooster' ? <Rooster color={M27.redColor} /> :
+                                    <g
+                                        className={
+                                            'sl-roadmap-circle sl-roadmap-blue ' +
+                                            (checkLastIdx(history, idx)
+                                                ? this.alternatingStyle
+                                                : null)
+                                        }
+                                        clip-path={`url(#${item.idnomor}-${item.di})`}
 
-                                                                                    item.di === 'goat' ? <Goat color={M27.redColor} /> : null
+                                        transform={`translate(${3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 16)}, ${4.5 + (this.currentRow! * 16)})`}
 
-                                    }
+                                    >
+
+                                        {
+
+                                            item.tian === 'dog' ? <Dog color={M27.redColor} /> :
+
+                                                item.tian === 'dragon' ? <Dragon color={M27.redColor} /> :
+
+                                                    item.tian === 'snake' ? <Snake color={M27.redColor} /> :
+
+                                                        item.tian === 'rat' ? <Rat color={M27.redColor} /> :
+
+                                                            item.tian === 'monkey' ? <Monkey color={M27.redColor} /> :
+
+                                                                item.tian === 'rabbit' ? <Rabbit color={M27.redColor} /> :
+
+                                                                    item.tian === 'ox' ? <Ox color={M27.redColor} /> :
+
+                                                                        item.tian === 'tiger' ? <Tiger color={M27.redColor} /> :
+
+                                                                            item.tian === 'pig' ? <Pig color={M27.redColor} /> :
+
+                                                                                item.tian === 'horse' ? <Horse color={M27.redColor} /> :
+
+                                                                                    item.tian === 'rooster' ? <Rooster color={M27.redColor} /> :
+
+                                                                                        item.tian === 'goat' ? <Goat color={M27.redColor} /> : null
+
+                                        }
+
+                                    </g>
+
+
+
+                                    <defs>
+
+                                        <clipPath id={`${item.idnomor}-${item.di}`}>
+
+                                            <rect
+
+                                                x={0}
+
+                                                y={0}
+
+                                                width="13"
+
+                                                height="13"
+
+                                                rx="6.5"
+
+                                                fill="white"
+
+                                            />
+
+                                        </clipPath>
+
+                                    </defs>
 
                                 </g>
 
+                            </>
+
+                        );
+
+                    } else if (item.result === 'di') {
+
+                        ele = (
+
+                            <>
+
+                                <g>
+
+                                    <rect
+
+                                        x={3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 14)}
+
+                                        y={4.5 + (this.currentRow! * 16)}
+                                        width="13"
+
+                                        height="13"
 
 
-                                <defs>
+                                        rx="6.5"
 
-                                    <clipPath id={`${item.idnomor}-${item.di}`}>
+                                        fill="#2673D9"
 
-                                        <rect
+                                    />
 
-                                            x={0}
+                                    <g
+                                        className={
+                                            'sl-roadmap-circle sl-roadmap-blue ' +
+                                            (checkLastIdx(history, idx)
+                                                ? this.alternatingStyle
+                                                : null)
+                                        }
+                                        clip-path={`url(#${item.idnomor}-${item.di})`}
 
-                                            y={0}
+                                        transform={`translate(${3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+                                    >
 
-                                            width="13"
+                                        {
 
-                                            height="13"
+                                            item.di === 'dog' ? <Dog color={M27.blueColor} /> :
 
-                                            rx="6.5"
+                                                item.di === 'dragon' ? <Dragon color={M27.blueColor} /> :
 
-                                            fill="white"
+                                                    item.di === 'snake' ? <Snake color={M27.blueColor} /> :
 
-                                        />
+                                                        item.di === 'rat' ? <Rat color={M27.blueColor} /> :
 
-                                    </clipPath>
+                                                            item.di === 'monkey' ? <Monkey color={M27.blueColor} /> :
 
-                                </defs>
+                                                                item.di === 'rabbit' ? <Rabbit color={M27.blueColor} /> :
 
-                            </g>
+                                                                    item.di === 'ox' ? <Ox color={M27.blueColor} /> :
 
-                        </>
+                                                                        item.di === 'tiger' ? <Tiger color={M27.blueColor} /> :
 
-                    );
+                                                                            item.di === 'pig' ? <Pig color={M27.blueColor} /> :
 
-                } else if (item.result === 'di') {
+                                                                                item.di === 'horse' ? <Horse color={M27.blueColor} /> :
 
-                    ele = (
+                                                                                    item.di === 'rooster' ? <Rooster color={M27.blueColor} /> :
 
-                        <>
+                                                                                        item.di === 'goat' ? <Goat color={M27.blueColor} /> : null
 
-                            <g>
+                                        }
 
-                                <rect
+                                    </g>
 
-                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
 
-                                    y={4.5 + (this.currentRow! * 16)}
 
-                                    width="13"
+                                    <defs>
 
-                                    height="13"
+                                        <clipPath id={`${item.idnomor}-${item.di}`}>
 
-                                    rx="6.5"
+                                            <rect
 
-                                    fill="#fff"
+                                                x={0}
 
-                                />
+                                                y={0}
 
-                                <g
+                                                width="13"
 
-                                    clip-path={`url(#${item.idnomor}-${item.di})`}
+                                                height="13"
 
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
+                                                rx="6.5"
 
-                                >
+                                                fill="white"
 
-                                    {
+                                            />
 
-                                        item.di === 'dog' ? <Dog color={M27.blueColor} /> :
+                                        </clipPath>
 
-                                            item.di === 'dragon' ? <Dragon color={M27.blueColor} /> :
-
-                                                item.di === 'snake' ? <Snake color={M27.blueColor} /> :
-
-                                                    item.di === 'rat' ? <Rat color={M27.blueColor} /> :
-
-                                                        item.di === 'monkey' ? <Monkey color={M27.blueColor} /> :
-
-                                                            item.di === 'rabbit' ? <Rabbit color={M27.blueColor} /> :
-
-                                                                item.di === 'ox' ? <Ox color={M27.blueColor} /> :
-
-                                                                    item.di === 'tiger' ? <Tiger color={M27.blueColor} /> :
-
-                                                                        item.di === 'pig' ? <Pig color={M27.blueColor} /> :
-
-                                                                            item.di === 'horse' ? <Horse color={M27.blueColor} /> :
-
-                                                                                item.di === 'rooster' ? <Rooster color={M27.blueColor} /> :
-
-                                                                                    item.di === 'goat' ? <Goat color={M27.blueColor} /> : null
-
-                                    }
+                                    </defs>
 
                                 </g>
 
+                            </>
+
+                        );
+
+                    } else {
+
+                        //tie
+
+                        ele = (
+
+                            <>
+
+                                <g>
+
+                                    <rect
+
+                                        x={3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 14)}
+
+                                        y={4.5 + (this.currentRow! * 16)}
+                                        width="13"
+
+                                        height="13"
+                                        fill={M27.greenColor}
+                                        rx="6.5"
+
+                                    />
+
+                                    <g
+                                        className={
+                                            'sl-roadmap-circle sl-roadmap-blue ' +
+                                            (checkLastIdx(history, idx)
+                                                ? this.alternatingStyle
+                                                : null)
+                                        }
+                                        clip-path={`url(#${item.idnomor}-${item.di})`}
+
+                                        transform={`translate(${3.5 + (this.currentCol! * 14) - ((this.firstDisplayedCol || 0) * 16)}, ${4.5 + (this.currentRow! * 16)})`}
+
+                                    >
+
+                                        {
+
+                                            item.di === 'dog' ? <Dog color={M27.greenColor} /> :
+
+                                                item.di === 'dragon' ? <Dragon color={M27.greenColor} /> :
+
+                                                    item.di === 'snake' ? <Snake color={M27.greenColor} /> :
+
+                                                        item.di === 'rat' ? <Rat color={M27.greenColor} /> :
+
+                                                            item.di === 'monkey' ? <Monkey color={M27.greenColor} /> :
+
+                                                                item.di === 'rabbit' ? <Rabbit color={M27.greenColor} /> :
+
+                                                                    item.di === 'ox' ? <Ox color={M27.greenColor} /> :
+
+                                                                        item.di === 'tiger' ? <Tiger color={M27.greenColor} /> :
+
+                                                                            item.di === 'pig' ? <Pig color={M27.greenColor} /> :
+
+                                                                                item.di === 'horse' ? <Horse color={M27.greenColor} /> :
+
+                                                                                    item.di === 'rooster' ? <Rooster color={M27.greenColor} /> :
+
+                                                                                        item.di === 'goat' ? <Goat color={M27.greenColor} /> : null
+
+                                        }
+
+                                    </g>
 
 
-                                <defs>
 
-                                    <clipPath id={`${item.idnomor}-${item.di}`}>
+                                    <defs>
 
-                                        <rect
+                                        <clipPath id={`${item.idnomor}-${item.di}`}>
 
-                                            x={0}
+                                            <rect
 
-                                            y={0}
+                                                x={0}
 
-                                            width="13"
+                                                y={0}
 
-                                            height="13"
+                                                width="13"
 
-                                            rx="6.5"
+                                                height="13"
 
-                                            fill="white"
+                                                rx="6.5"
 
-                                        />
+                                                fill="white"
 
-                                    </clipPath>
+                                            />
 
-                                </defs>
+                                        </clipPath>
 
-                            </g>
-
-                        </>
-
-                    );
-
-                } else {
-
-                    //tie
-
-                    ele = (
-
-                        <>
-
-                            <g>
-
-                                <rect
-
-                                    x={4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}
-
-                                    y={4.5 + (this.currentRow! * 16)}
-
-                                    width="13"
-
-                                    height="13"
-
-                                    rx="6.5"
-
-                                    fill="#fff"
-
-                                />
-
-                                <g
-
-                                    clip-path={`url(#${item.idnomor}-${item.di})`}
-
-                                    transform={`translate(${4.5 + (this.currentCol! * 16)-((this.firstDisplayedCol || 0)*16)}, ${4.5 + (this.currentRow! * 16)})`}
-
-                                >
-
-                                    {
-
-                                        item.di === 'dog' ? <Dog color={M27.greenColor} /> :
-
-                                            item.di === 'dragon' ? <Dragon color={M27.greenColor} /> :
-
-                                                item.di === 'snake' ? <Snake color={M27.greenColor} /> :
-
-                                                    item.di === 'rat' ? <Rat color={M27.greenColor} /> :
-
-                                                        item.di === 'monkey' ? <Monkey color={M27.greenColor} /> :
-
-                                                            item.di === 'rabbit' ? <Rabbit color={M27.greenColor} /> :
-
-                                                                item.di === 'ox' ? <Ox color={M27.greenColor} /> :
-
-                                                                    item.di === 'tiger' ? <Tiger color={M27.greenColor} /> :
-
-                                                                        item.di === 'pig' ? <Pig color={M27.greenColor} /> :
-
-                                                                            item.di === 'horse' ? <Horse color={M27.greenColor} /> :
-
-                                                                                item.di === 'rooster' ? <Rooster color={M27.greenColor} /> :
-
-                                                                                    item.di === 'goat' ? <Goat color={M27.greenColor} /> : null
-
-                                    }
+                                    </defs>
 
                                 </g>
 
+                            </>
 
+                        );
 
-                                <defs>
-
-                                    <clipPath id={`${item.idnomor}-${item.di}`}>
-
-                                        <rect
-
-                                            x={0}
-
-                                            y={0}
-
-                                            width="13"
-
-                                            height="13"
-
-                                            rx="6.5"
-
-                                            fill="white"
-
-                                        />
-
-                                    </clipPath>
-
-                                </defs>
-
-                            </g>
-
-                        </>
-
-                    );
-
-                }
+                    }
 
 
 
-                this.roadmapDisplay![this.currentRow!][this.currentCol!] = ele;
+                    this.roadmapDisplay![this.currentRow!][this.currentCol!] = ele;
 
-            });
+                });
 
-            break;
+                break;
             case 'big-road':
             case 'big-eye-road':
             case 'small-road':
@@ -686,14 +694,14 @@ export default class M27 extends BaseV2Roadmap {
                                 )
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay,
-                                // @ts-ignore
+                                        // @ts-ignore
                                         redElement!,
                                         'red',
                                     );
                                 else
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay,
-                                // @ts-ignore
+                                        // @ts-ignore
                                         blueElement!,
                                         'blue',
                                     );
@@ -713,13 +721,13 @@ export default class M27 extends BaseV2Roadmap {
                         // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
-                                // @ts-ignore
+                            // @ts-ignore
                         ] = redBlinkElement;
                     else
                         // @ts-ignore 
                         this.roadmapDisplay![this.currentDisplayRow!][
                             this.currentDisplayCol!
-                                // @ts-ignore
+                            // @ts-ignore
                         ] = blueBlinkElement;
                 break;
 
@@ -736,88 +744,88 @@ export default class M27 extends BaseV2Roadmap {
                     (props: any) => <circle {...{ ...props }} r="3.182" fill={this.blueColor}></circle>,
                     (props: any) => <path {...{ ...props }} stroke={this.blueColor} strokeWidth="0.955" ></path>
                 ];
-				
-				 startingCol = 0;
-				let startingRow = 0;
 
-				let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
-				
-	
-				// @ts-ignore
+                startingCol = 0;
+                let startingRow = 0;
 
-				const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
-				if (lastBigRoadSequence === undefined)
-					break;
-
-				startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
-				startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
-			
-				for (a = 0; a < this.roadmapTypes!.length; a++)
-					if (this.roadmapTypes![a][startingCol])
-						startingRow = a;
-					else break;
-
-				this.currentRow = startingRow;
-				this.currentCol = startingCol>lastIdxCol?lastIdxCol:startingCol;
-
-				this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
-
-				const currentPlayer =
-					this.currentType === "T" ? "tian" :
-						this.currentType === "D" ? "di" : "tie";
+                let lastIdxCol = this.roadmapTypes![0].filter((i) => i).length - 1;
 
 
-			
-				if (currentPlayer == "tie") {
+                // @ts-ignore
 
-				}
+                const lastBigRoadSequence = this.bigRoadSequence![this.bigRoadSequence!.length - 1];
+                if (lastBigRoadSequence === undefined)
+                    break;
 
-				if (currentPlayer === "di") {
-					this.currentRow += 1;
+                startingRow = this.bigRoadSequence![this.bigRoadSequence!.length - 1][0];
+                startingCol = this.bigRoadSequence![this.bigRoadSequence!.length - 1][1];
 
-					for (a = 0; a < 3; a++) {
+                for (a = 0; a < this.roadmapTypes!.length; a++)
+                    if (this.roadmapTypes![a][startingCol])
+                        startingRow = a;
+                    else break;
 
-						if (this.currentCol - a - 1 < 0) {
+                this.currentRow = startingRow;
+                this.currentCol = startingCol > lastIdxCol ? lastIdxCol : startingCol;
 
-						}
-						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+                this.currentType = this.roadmapTypes![this.currentRow][this.currentCol];
 
-							this.diPrediction[a] = blueElements[a];
-							this.tianPrediction[a] = redElements[a];
+                const currentPlayer =
+                    this.currentType === "T" ? "tian" :
+                        this.currentType === "D" ? "di" : "tie";
 
-						}
-						else {
-							this.diPrediction[a] = redElements[a];
-							this.tianPrediction[a] = blueElements[a];
-						}
-					}
 
-				
-				}
 
-				if (currentPlayer === "tian") {
-					this.currentRow += 1;
+                if (currentPlayer == "tie") {
 
-					for (a = 0; a < 3; a++) {
+                }
 
-						if (this.currentCol - a - 1 < 0) {
+                if (currentPlayer === "di") {
+                    this.currentRow += 1;
 
-						}
-						else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
-							this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
-							this.diPrediction[a] = redElements[a];
-							this.tianPrediction[a] = blueElements[a];
-						}
-						else {
-							this.diPrediction[a] = blueElements[a];
+                    for (a = 0; a < 3; a++) {
 
-							this.tianPrediction[a] = redElements[a];
-						}
-					}
+                        if (this.currentCol - a - 1 < 0) {
 
-				
-				}
+                        }
+                        else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                            this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+
+                            this.diPrediction[a] = blueElements[a];
+                            this.tianPrediction[a] = redElements[a];
+
+                        }
+                        else {
+                            this.diPrediction[a] = redElements[a];
+                            this.tianPrediction[a] = blueElements[a];
+                        }
+                    }
+
+
+                }
+
+                if (currentPlayer === "tian") {
+                    this.currentRow += 1;
+
+                    for (a = 0; a < 3; a++) {
+
+                        if (this.currentCol - a - 1 < 0) {
+
+                        }
+                        else if (this.roadmapTypes![this.currentRow][this.currentCol - a - 1] ===
+                            this.roadmapTypes![this.currentRow - 1][this.currentCol - a - 1]) {
+                            this.diPrediction[a] = redElements[a];
+                            this.tianPrediction[a] = blueElements[a];
+                        }
+                        else {
+                            this.diPrediction[a] = blueElements[a];
+
+                            this.tianPrediction[a] = redElements[a];
+                        }
+                    }
+
+
+                }
 
                 break;
             default:
