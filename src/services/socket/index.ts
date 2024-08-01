@@ -12,6 +12,7 @@ import {
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
 import { StringUtility } from '../../game/components/External/managers/StringUtility';
+import { setHistory } from '../../store/slice/historySlice';
 
 export class SocketComponent {
     static _instance: SocketComponent;
@@ -27,6 +28,7 @@ export class SocketComponent {
         connect: 'connect',
         loadNewValue: 'loadNewValue',
         scanNumber: 'scan',
+        newDragonTigerShoe: 'dragonTigerNewSet',
         closeTimer: 'closeTimer',
         gameResult: 'gameResult',
         recieveTotalWin: 'recieve_totalwin',
@@ -125,6 +127,24 @@ export class SocketComponent {
 
                     // this._lastLoadNewValuePeriod = data.periode;
                     this._lastLoadNewValuePeriod = Number(data.shoePeriode.split("-")[1])-1;
+
+                    callback(data);
+                });
+            });
+        }
+    }
+
+
+    listenNewShoe(callback: (data: LoadNewValueData) => void): void {
+        if (this._socket) {
+            const variantUpper = Number.isNaN(GameHelper.pcode[GameHelper.pcode.length-1])?GameHelper.pcode[GameHelper.pcode.length-1].toUpperCase():"";
+            this._socket.on(SocketComponent.SOCKET_EVENT.newDragonTigerShoe.concat(variantUpper), (data: LoadNewValueData) => {
+                // console.log('socket loadNewValue:', data);
+
+                this.validationDataWithPcode(data, () => {
+                    if (this._lastLoadNewValuePeriod === data.periode) {
+                        return;
+                    }
 
                     callback(data);
                 });

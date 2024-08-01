@@ -5,6 +5,7 @@ import { useAppDispatch } from '../../store/hooks';
 import { gameResultAction, loadNewValueAction, scanNumberAction } from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
+import { setHistory } from '../../store/slice/historySlice';
 
 interface Params {
     nickname: string;
@@ -43,6 +44,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
 
         SocketComponent.instance.listenScanNumber((data) => {
             dispatch(scanNumberAction(data));
+        });
+
+        SocketComponent.instance.listenNewShoe((data) => {
+            dispatch(setHistory([]));
         });
 
         SocketComponent.instance.listenRecieveTotalWin((data) => {
