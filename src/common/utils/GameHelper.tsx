@@ -1,5 +1,5 @@
 export class GameHelper {
-    static OFFSET_TIME = 3;
+    static OFFSET_TIME = 4;
 
     private static _pcode = '';
 
