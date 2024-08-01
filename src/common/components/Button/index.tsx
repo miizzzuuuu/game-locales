@@ -9,10 +9,23 @@ type ButtonProps = Pick<
 
 interface IProps extends ButtonProps {
     custonSound?: () => void;
+    disableAnimation?: boolean;
 }
 
 export const Button = forwardRef<HTMLButtonElement, IProps>(
-    ({ children, className, style, disabled, onAnimationEnd, onClick, custonSound }, buttonRef) => {
+    (
+        {
+            children,
+            className,
+            style,
+            disabled,
+            onAnimationEnd,
+            onClick,
+            custonSound,
+            disableAnimation,
+        },
+        buttonRef,
+    ) => {
         const clickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
             if (custonSound) {
                 custonSound();
@@ -27,7 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, IProps>(
             <button
                 ref={buttonRef}
                 type="button"
-                className={`${styles.button}${className ? ` ${className}` : ''}`}
+                className={`${styles.button}${disableAnimation ? '' : ` ${styles.animate}`}${className ? ` ${className}` : ''}`}
                 style={style}
                 disabled={disabled}
                 onAnimationEnd={onAnimationEnd}

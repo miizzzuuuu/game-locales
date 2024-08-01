@@ -18,11 +18,11 @@ const timerSlice = createSlice({
     name: 'timer',
     initialState,
     reducers: {
-        setTime: (state, action: PayloadAction<number>) => {
-            state.time = action.payload;
-        },
+        // setTime: (state, action: PayloadAction<number>) => {
+        //     state.time = action.payload;
+        // },
         setTimer: (state, action: PayloadAction<number>) => {
-            state.timer = action.payload;
+            state.timer = GameHelper.normalizeTime(action.payload);
         },
 
         closeTime: (state) => {
@@ -37,7 +37,7 @@ const timerSlice = createSlice({
     },
 });
 
-export const { setTime, setTimer, openTime, closeTime } = timerSlice.actions;
+export const { setTimer, openTime, closeTime } = timerSlice.actions;
 
 export const selectTime = (state: RootState) => state.timer.time;
 export const selectTimer = (state: RootState) => state.timer.timer;
