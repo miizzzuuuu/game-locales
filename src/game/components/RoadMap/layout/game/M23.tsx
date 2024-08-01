@@ -79,7 +79,6 @@ export default class M23 extends BaseV2Roadmap {
 		const darkMode = true;
 		const historyBlink = false;
 		const data = useAppSelector((state) => state.history.history);
-		console.log(data)
 		const periode = data.length;
 		const a = periode?.toString().length + 3
 		const firstSpace = a * 6;
@@ -295,8 +294,8 @@ export default class M23 extends BaseV2Roadmap {
 						}
 					});
 
-					if (Math.ceil(this.roadmapTypes![0].length) >= 24!)
-						this.firstDisplayedCol = Math.ceil(this.roadmapTypes![0].length) - 24!;
+				if (Math.ceil(this.roadmapTypes![0].filter((x)=>x).length) >= 24!)
+					this.firstDisplayedCol = Math.ceil(this.roadmapTypes![0].filter((x)=>x).length) - 24!;
 				// Banker & Player Pairs
 				this.resetDisplayPointer();
 

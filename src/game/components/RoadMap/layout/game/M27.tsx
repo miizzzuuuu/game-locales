@@ -28,7 +28,7 @@ export default class M27 extends BaseV2Roadmap {
         const darkMode = true;
         const historyBlink = false;
         const data = useAppSelector((state) => state.history.history);
-        const periode = useAppSelector(selectPeriod);
+        const periode = data.length;
         const a = periode?.toString().length + 3
         const firstSpace = a * 6;
         const Layout = M27;
