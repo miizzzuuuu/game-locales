@@ -12,7 +12,6 @@ import {
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
 import { StringUtility } from '../../game/components/External/managers/StringUtility';
-import { setHistory } from '../../store/slice/historySlice';
 
 export class SocketComponent {
     static _instance: SocketComponent;
