@@ -74,7 +74,7 @@ export function RenderCardV2(props: any) {
                   left: "0px",
                   margin: "-2px 0px 0px 2px",
                   fontFamily: "Manrope",
-                  fontSize: "14px",
+                  fontSize: "1.4rem",
                   fontStyle: "normal",
                   fontWeight: "700",
                   lineHeight: "normal",
