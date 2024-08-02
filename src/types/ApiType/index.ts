@@ -102,3 +102,9 @@ export type PayoutData = {
     payout: number | string | null;
     items: PayoutItem[];
 };
+
+export type Pagination = {
+    total_datas: number;
+    current_page: number;
+    total_pages: number;
+};
