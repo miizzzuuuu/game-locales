@@ -1,6 +1,5 @@
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
-import { selectPeriod } from '../../../../../store/slice/gameSlice';
 import { checkLastIdx } from '../base/BaccaratRoadmaps';
 import { BaseV2Roadmap, ResultHaveResultString, nullArray } from '../base/V2Roadmap';
 

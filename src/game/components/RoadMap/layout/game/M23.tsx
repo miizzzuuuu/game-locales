@@ -1,7 +1,6 @@
 import { DisplayHelper } from "../../../../../common/utils/DisplayHelper";
 import { GameHelper } from "../../../../../common/utils/GameHelper";
 import { useAppSelector } from "../../../../../store/hooks";
-import { selectPeriod } from "../../../../../store/slice/gameSlice";
 import {
 	checkLastIdx,
 

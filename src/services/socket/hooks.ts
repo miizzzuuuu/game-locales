@@ -47,6 +47,7 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
         });
 
         SocketComponent.instance.listenNewShoe((data) => {
+            data;
             dispatch(setHistory([]));
         });
 

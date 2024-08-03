@@ -105,7 +105,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
     const cardContainer = useRef<HTMLDivElement>(null);
     const cardContainer2 = useRef<HTMLDivElement>(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const [dimensions2, setDimensions2] = useState({ width: 0, height: 0 });
+    const [ _, setDimensions2] = useState({ width: 0, height: 0 });
 
     const updateDimensions = () => {
         if (cardContainer.current) {
