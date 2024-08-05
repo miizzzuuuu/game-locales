@@ -28,6 +28,14 @@ password: IDNtoto38#\*
 
 ### Upload all the folders and files inside `dist-dev` to the respective game paths:
 
+-   **24D - p6**
+
+Path: `~/gameserver/build/new_24d_react`
+
+-   **24D Spin - m6**
+
+Path: `~/gameserver/build/new_24d_spin_react`
+
 -   **Sicbo Dice - p12**
 
 Path: `~/gameserver/build/new_sicbo_dice_react`
