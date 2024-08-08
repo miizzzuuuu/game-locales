@@ -19,26 +19,14 @@ export class TransactionHelper {
     }
 
     static is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
-        return item.pcode === 'p6' || item.pcode === 'p6b';
+        return /^p6/.test(item.pcode);
     };
 
     static isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
-        return (
-            item.pcode === 'p7' ||
-            item.pcode === 'p7b' ||
-            item.pcode === 'p7c' ||
-            item.pcode === 'p7d' ||
-            item.pcode === 'p7e' ||
-            item.pcode === 'p7f'
-        );
+        return /^p7/.test(item.pcode);
     };
 
     static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
-        return (
-            item.pcode === 'm22' ||
-            item.pcode === 'm22b' ||
-            item.pcode === 'm22c' ||
-            item.pcode === 'm22d'
-        );
+        return /^m22/.test(item.pcode);
     };
 }
