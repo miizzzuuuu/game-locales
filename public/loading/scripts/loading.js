@@ -62,7 +62,7 @@ function addLoadingScreen() {
     // Create the loading text span
     const loadingText = document.createElement('span');
     loadingText.id = 'loading-text-value';
-    loadingText.textContent = '';
+    loadingText.textContent = 'Loading...';
 
     // Append loading text to loading text container
     loadingTextContainer.appendChild(loadingText);
