@@ -1,6 +1,9 @@
 import { DeviceType, GameSize, Orientation, Platform } from '../../types';
 
 export class DisplayHelper {
+    private static currentDeviceType: DeviceType = 'desktop';
+    private static deviceClassCache: Record<string, string> = {};
+
     static size: Record<string, GameSize> = {
         desktop: {
             width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 680),
@@ -113,6 +116,8 @@ export class DisplayHelper {
 
         // if (platform === 'desktop' || platform === 'tablet') {
         if (platform === 'desktop') {
+            this.currentDeviceType = 'desktop';
+
             return {
                 type: 'desktop',
                 orientation: 'landscape',
@@ -122,11 +127,15 @@ export class DisplayHelper {
         const orientation = this.getOrientation();
 
         if (orientation === 'portrait') {
+            this.currentDeviceType = 'mobile-portrait';
+
             return {
                 type: 'mobile-portrait',
                 orientation,
             };
         }
+
+        this.currentDeviceType = 'mobile-landscape';
 
         return {
             type: 'mobile-landscape',
@@ -217,10 +226,25 @@ export class DisplayHelper {
         }
     }
 
-    static getDeviceClassName(styles: CSSModuleClasses) {
-        const { type: device } = this.getDevice();
+    static hashStyles(styles: CSSModuleClasses): string {
+        return JSON.stringify(styles);
+    }
 
-        return styles[device] === undefined ? '' : ` ${styles[device]}`;
+    static getDeviceClassName(styles: CSSModuleClasses) {
+        const device = this.currentDeviceType;
+        const stylesHash = this.hashStyles(styles);
+
+        const cacheKey = `${device}-${stylesHash}`;
+
+        // check cache first
+        if (this.deviceClassCache[cacheKey]) {
+            return this.deviceClassCache[cacheKey];
+        }
+
+        const className = styles[device] === undefined ? '' : ` ${styles[device]}`;
+        this.deviceClassCache[cacheKey] = className;
+
+        return className;
     }
 
     static getLangClassName(styles: CSSModuleClasses, lang: string) {
