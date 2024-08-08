@@ -39,8 +39,8 @@ export class DisplayHelper {
 
         return (
             window.navigator.userAgent.includes('Android') &&
-            Math.max(width, height) >= 829 &&
-            Math.min(width, height) >= 690
+            Math.max(width, height) >= 1024 &&
+            Math.min(width, height) >= 768
         );
     }
 
@@ -80,7 +80,15 @@ export class DisplayHelper {
         return regex.test(navigator.userAgent);
     }
 
+    static isIpad() {
+        return navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 0;
+    }
+
     static isTablet() {
+        if (this.isIpad()) {
+            return true;
+        }
+
         const userAgent = this.getUserAgent();
 
         return /(tablet|ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
@@ -103,7 +111,8 @@ export class DisplayHelper {
     static getDevice = (): { type: DeviceType; orientation: Orientation } => {
         const platform = this.getPlatform();
 
-        if (platform === 'desktop' || platform === 'tablet') {
+        // if (platform === 'desktop' || platform === 'tablet') {
+        if (platform === 'desktop') {
             return {
                 type: 'desktop',
                 orientation: 'landscape',
