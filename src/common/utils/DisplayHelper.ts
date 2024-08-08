@@ -44,6 +44,27 @@ export class DisplayHelper {
         );
     }
 
+    static getLetterOrPillarBoxActive() {
+        const { type: device } = this.getDevice();
+
+        if (device === 'desktop') {
+            return false;
+        }
+
+        const { innerWidth: width, innerHeight: height } = window;
+
+        const aspectRatio = height / width;
+
+        const size = this.size[device];
+        const standart = size.height / size.width;
+
+        if (device === 'mobile-portrait') {
+            return aspectRatio < standart;
+        }
+
+        return aspectRatio > standart;
+    }
+
     static getUserAgent() {
         return window
             ? this.checkLargeIphone()
