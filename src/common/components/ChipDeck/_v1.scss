@@ -1,9 +1,13 @@
+.chip-deck {
+    --size-chip: 2.55rem;
+    --chip-scale: 1.1;
+}
+
 .mobile-portrait {
     &.v1 {
         &.chip-deck {
-            // background-color: red;
             --gap: 0.75rem;
-            --offset: 0.75rem;
+            --offset: 0.4rem;
 
             position: relative;
 
@@ -13,7 +17,7 @@
                 gap: var(--gap);
                 padding: 0 var(--offset);
 
-                border: 0.1rem solid rgba(255, 255, 255, 0.16);
+                outline: 0.1rem solid rgba(255, 255, 255, 0.16);
             }
 
             .wrapper {
@@ -21,7 +25,7 @@
 
                 overflow: auto;
 
-                width: calc((2.2rem * 5) + (var(--gap) * 4) + (var(--offset) * 2) + 0.1rem);
+                width: calc((var(--size-chip) * 5) + (var(--gap) * 4) + (var(--offset) * 2));
 
                 border-radius: 3.4rem;
                 background: rgba(0, 0, 0, 0.32);
@@ -35,9 +39,8 @@
 .mobile-landscape {
     &.v1 {
         &.chip-deck {
-            // background-color: red;
             --gap: 0.75rem;
-            --offset: 0.75rem;
+            --offset: 0.4rem;
 
             position: relative;
 
@@ -48,7 +51,7 @@
                 gap: var(--gap);
                 padding: var(--offset) 0;
 
-                border: 0.1rem solid rgba(255, 255, 255, 0.16);
+                outline: 0.1rem solid rgba(255, 255, 255, 0.16);
             }
 
             .wrapper {
@@ -56,7 +59,7 @@
 
                 overflow: auto;
 
-                height: calc((2.2rem * 4) + (var(--gap) * 3) + (var(--offset) * 2) + 0.1rem);
+                height: calc((var(--size-chip) * 4) + (var(--gap) * 3) + (var(--offset) * 2));
 
                 border-radius: 3.4rem;
                 background: rgba(0, 0, 0, 0.32);
