@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import APIManager from '../utils/APIManager';
 import { getPlayerData } from '../../services/api/playerData';
@@ -39,37 +39,3 @@ export function useFetchPlayer() {
 
     return { finish };
 }
-
-export const useSessionCheck = () => {
-    const checkSession = useCallback(async () => {
-        try {
-            await getPlayerData();
-        } catch (error) {
-            APIManager.handleErrorApi(error);
-        }
-    }, []);
-
-    useEffect(() => {
-        checkSession();
-
-        // set interval untuk mengecek setiap 1 let sekali
-        let intervalId: ReturnType<typeof setInterval>;
-
-        const to = setTimeout(() => {
-            intervalId = setInterval(() => {
-                checkSession();
-            }, 60000);
-        }, 60000);
-
-        return () => {
-            if (to) {
-                console.log('clear timeout to');
-                clearTimeout(to);
-            }
-            if (intervalId) {
-                console.log('clear intreval');
-                clearInterval(intervalId);
-            }
-        };
-    }, [checkSession]);
-};
