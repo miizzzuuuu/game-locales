@@ -12,7 +12,7 @@ interface IProps {
     onClick?: () => void;
 }
 
-const Chip = ({ version = 1, value, onClick, color, isActive }: IProps) => {
+const Chip = ({ value, onClick, color, isActive }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -26,7 +26,10 @@ const Chip = ({ version = 1, value, onClick, color, isActive }: IProps) => {
     };
 
     return (
-        <div className={`chip-item${deviceClassName} ${styles[`v${version}`]}`}>
+        <div
+            // className={`chip-item${deviceClassName} ${styles[`v${version}`]}`}
+            className={`chip-item${deviceClassName}`}
+        >
             <div
                 className={`${styles.chip}${isActive ? ` ${styles.active}` : ''}`}
                 data-value={value}

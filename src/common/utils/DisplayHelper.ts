@@ -1,6 +1,9 @@
 import { DeviceType, GameSize, Orientation, Platform } from '../../types';
 
 export class DisplayHelper {
+    private static currentDeviceType: DeviceType = 'desktop';
+    private static deviceClassCache: Record<string, string> = {};
+
     static size: Record<string, GameSize> = {
         desktop: {
             width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 680),
@@ -39,9 +42,30 @@ export class DisplayHelper {
 
         return (
             window.navigator.userAgent.includes('Android') &&
-            Math.max(width, height) >= 829 &&
-            Math.min(width, height) >= 690
+            Math.max(width, height) >= 1024 &&
+            Math.min(width, height) >= 768
         );
+    }
+
+    static getLetterOrPillarBoxActive() {
+        const { type: device } = this.getDevice();
+
+        if (device === 'desktop') {
+            return false;
+        }
+
+        const { innerWidth: width, innerHeight: height } = window;
+
+        const aspectRatio = height / width;
+
+        const size = this.size[device];
+        const standart = size.height / size.width;
+
+        if (device === 'mobile-portrait') {
+            return aspectRatio < standart;
+        }
+
+        return aspectRatio > standart;
     }
 
     static getUserAgent() {
@@ -59,7 +83,15 @@ export class DisplayHelper {
         return regex.test(navigator.userAgent);
     }
 
+    static isIpad() {
+        return navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 0;
+    }
+
     static isTablet() {
+        if (this.isIpad()) {
+            return true;
+        }
+
         const userAgent = this.getUserAgent();
 
         return /(tablet|ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
@@ -82,7 +114,10 @@ export class DisplayHelper {
     static getDevice = (): { type: DeviceType; orientation: Orientation } => {
         const platform = this.getPlatform();
 
-        if (platform === 'desktop' || platform === 'tablet') {
+        // if (platform === 'desktop' || platform === 'tablet') {
+        if (platform === 'desktop') {
+            this.currentDeviceType = 'desktop';
+
             return {
                 type: 'desktop',
                 orientation: 'landscape',
@@ -92,11 +127,15 @@ export class DisplayHelper {
         const orientation = this.getOrientation();
 
         if (orientation === 'portrait') {
+            this.currentDeviceType = 'mobile-portrait';
+
             return {
                 type: 'mobile-portrait',
                 orientation,
             };
         }
+
+        this.currentDeviceType = 'mobile-landscape';
 
         return {
             type: 'mobile-landscape',
@@ -187,10 +226,25 @@ export class DisplayHelper {
         }
     }
 
-    static getDeviceClassName(styles: CSSModuleClasses) {
-        const { type: device } = this.getDevice();
+    static hashStyles(styles: CSSModuleClasses): string {
+        return JSON.stringify(styles);
+    }
 
-        return styles[device] === undefined ? '' : ` ${styles[device]}`;
+    static getDeviceClassName(styles: CSSModuleClasses) {
+        const device = this.currentDeviceType;
+        const stylesHash = this.hashStyles(styles);
+
+        const cacheKey = `${device}-${stylesHash}`;
+
+        // check cache first
+        if (this.deviceClassCache[cacheKey]) {
+            return this.deviceClassCache[cacheKey];
+        }
+
+        const className = styles[device] === undefined ? '' : ` ${styles[device]}`;
+        this.deviceClassCache[cacheKey] = className;
+
+        return className;
     }
 
     static getLangClassName(styles: CSSModuleClasses, lang: string) {

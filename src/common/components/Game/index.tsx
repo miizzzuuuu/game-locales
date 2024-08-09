@@ -20,6 +20,7 @@ import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+    const isLetterOrPillarBoxActive = DisplayHelper.getLetterOrPillarBoxActive();
 
     const dispatch = useAppDispatch();
 
@@ -69,7 +70,9 @@ function Game() {
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
     return (
-        <div className={`${styles['game-area']}${deviceClassName}`}>
+        <div
+            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive ? ` ${styles.box}` : ''}`}
+        >
             <Streaming />
             <Timer />
             <GameUI />

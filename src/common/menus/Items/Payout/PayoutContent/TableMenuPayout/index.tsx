@@ -54,7 +54,9 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     {StringHelper.formatMoneyWithCurrency(item.min, currency, lang)}{' '}
                                     - {StringHelper.formatMoneyOnlyNumber(item.max, lang)}
                                 </td>
-                                <td className="text-center">
+                                <td
+                                    className={`${'text-center'}${item.payout ? '' : ' ' + styles.shading}`}
+                                >
                                     {typeof item.payout === 'number'
                                         ? `${formatPayout(item.payout)}:1`
                                         : item.payout}
