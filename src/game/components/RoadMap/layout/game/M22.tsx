@@ -275,9 +275,8 @@ export default class M22 extends BaseV2Roadmap {
             }
         });
 
-        if (Math.ceil(this.roadmapTypes![0].filter((x) => x).length) >= 24!) {
-            this.firstDisplayedCol = Math.ceil(this.roadmapTypes![0].filter((x) => x).length) - 24!;
-        }
+        if (Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >= 24)
+            this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24;
 
         // console.log('roadmapTypes: ' + this.roadmapTypes![0].filter((x) => x));
         // console.log('roadmapTypes length: ' + this.roadmapTypes![0].filter((x) => x).length);
