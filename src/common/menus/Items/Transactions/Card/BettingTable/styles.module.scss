@@ -32,6 +32,10 @@
     tr.win {
         background: rgba(59, 232, 0, 0.16);
     }
+
+    td.shading {
+        background: var(--bg-shading);
+    }
 }
 
 .bigger {

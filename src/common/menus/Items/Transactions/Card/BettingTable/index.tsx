@@ -65,7 +65,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                                 {StringHelper.formatMoneyOnlyNumber(total_debit, lang)}
                             </div>
                         </td>
-                        <td>&nbsp;</td>
+                        <td className={`${styles.shading}`}>&nbsp;</td>
                         <td>
                             <div
                                 className={`${styles['text-center']} ${styles['bigger']}`}
