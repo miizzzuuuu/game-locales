@@ -6,9 +6,10 @@ import Chip from './Chip';
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
-import { selectDevice, selectOrientation } from '../../../store/slice/windowSlice';
+import { selectOrientation } from '../../../store/slice/windowSlice';
 import { Sound } from '../../../services/sound';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { useDragToScroll } from '../../hooks/useDragToScroll';
 
 interface IProps {
     version?: number;
@@ -20,7 +21,6 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     const dispatch = useAppDispatch();
 
-    const device = useAppSelector(selectDevice);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
@@ -75,73 +75,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
         scrollToCenter(index);
     }, [activeChip, chipBase, scrollToCenter]);
 
-    useEffect(() => {
-        if (device !== 'desktop') {
-            return;
-        }
-
-        let mouseDown = false;
-        let startX: number;
-        let scrollLeft: number;
-
-        let startY: number;
-        let scrollTop: number;
-
-        const startDragging = (e: MouseEvent) => {
-            mouseDown = true;
-
-            if (version === 1) {
-                startY = e.pageY - (slider.current?.offsetTop ?? 0);
-                scrollTop = slider.current?.scrollTop ?? 0;
-                return;
-            }
-
-            if (version === 2) {
-                startX = e.pageX - (slider.current?.offsetLeft ?? 0);
-                scrollLeft = slider.current?.scrollLeft ?? 0;
-            }
-        };
-
-        const stopDragging = () => {
-            mouseDown = false;
-        };
-
-        const move = (e: MouseEvent) => {
-            e.preventDefault();
-            if (!mouseDown) {
-                return;
-            }
-
-            if (version === 1) {
-                const y = e.pageY - (slider.current?.offsetTop ?? 0);
-                const scroll = y - startY;
-                if (slider.current) {
-                    slider.current.scrollTop = scrollTop - scroll;
-                }
-                return;
-            }
-
-            if (version === 2) {
-                const x = e.pageX - (slider.current?.offsetLeft ?? 0);
-                const scroll = x - startX;
-                if (slider.current) {
-                    slider.current.scrollLeft = scrollLeft - scroll;
-                }
-            }
-        };
-
-        slider.current?.addEventListener('mousemove', move, false);
-        slider.current?.addEventListener('mousedown', startDragging, false);
-        slider.current?.addEventListener('mouseup', stopDragging, false);
-        slider.current?.addEventListener('mouseleave', stopDragging, false);
-
-        return () => {
-            slider.current?.removeEventListener('mousemove', move);
-            slider.current?.removeEventListener('mousedown', startDragging);
-            slider.current?.removeEventListener('mouseup', stopDragging);
-            slider.current?.removeEventListener('mouseleave', stopDragging);
-        };
-    }, [device, version]);
+    useDragToScroll({ slider, direction: version === 1 ? 'vertical' : 'horizontal' });
 
     return (
         <div
