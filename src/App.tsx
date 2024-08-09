@@ -4,7 +4,7 @@ import { useWindowResize } from './common/hooks/useWindowResize';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { useAppDispatch } from './store/hooks';
-import { useFetchPlayer } from './common/hooks/useFetchPlayer';
+import { useSessionCheck, useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
 import { useFetchLastbets } from './common/hooks/useFetchLastbets';
 import { useFetchGame } from './common/hooks/useFetchGame';
@@ -43,6 +43,7 @@ function App() {
         }
     }, [finishGetPlayer, finishGetSettings, finishGetLastbets, finishGetGame, finishGetTimer]);
 
+    useSessionCheck();
     const { deviceType, orientation } = useAutoResize();
 
     useEffect(() => {
