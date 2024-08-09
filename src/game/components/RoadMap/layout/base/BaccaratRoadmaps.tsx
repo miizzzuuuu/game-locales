@@ -813,7 +813,6 @@ function getSimpleBaccaratResultPairArray(bigRoad: Array<any>) {
 function getSimpleDragonTigerResultPairArray(bigRoad: Array<any>) {
     if (!bigRoad)
         return [];
-console.log(bigRoad);
     return bigRoad.map(item =>
         item.tiger[0] == item.wild[0] && item.dragon[0] == item.wild[0] ? "D" :
             item.tiger[0] == item.wild[0] ? "TG" :

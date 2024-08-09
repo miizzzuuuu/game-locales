@@ -60,14 +60,13 @@ function BaccaratRoads(props: IProps) {
         setFullSection((old) => {
             console.log(old)
             console.log(type);
-
             return fullSection != type ? type : "";
 
         });
     }
     if (!GameHelper.getBasePcode()) return null;
     const GameRoadmap = layouts[GameHelper.getBasePcode()];
-    console.log("divhelp", betIsOpen, !DisplayHelper.isMobile(), showPatternUI, DisplayHelper.getOrientation())
+    // console.log("divhelp", betIsOpen, !DisplayHelper.isMobile(), showPatternUI, DisplayHelper.getOrientation())
     return (
 
         <div className={styles.container} style={{

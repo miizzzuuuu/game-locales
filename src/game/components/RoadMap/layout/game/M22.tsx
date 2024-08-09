@@ -279,9 +279,9 @@ export default class M22 extends BaseV2Roadmap {
             this.firstDisplayedCol = Math.ceil(this.roadmapTypes![0].filter((x) => x).length) - 24!;
         }
 
-        console.log('roadmapTypes: ' + this.roadmapTypes![0].filter((x) => x));
-        console.log('roadmapTypes length: ' + this.roadmapTypes![0].filter((x) => x).length);
-        console.log('firstDisplayCol: ' + this.firstDisplayedCol);
+        // console.log('roadmapTypes: ' + this.roadmapTypes![0].filter((x) => x));
+        // console.log('roadmapTypes length: ' + this.roadmapTypes![0].filter((x) => x).length);
+        // console.log('firstDisplayCol: ' + this.firstDisplayedCol);
 
         // Banker & Player Pairs
         this.resetDisplayPointer();
