@@ -50,7 +50,7 @@ $childBetM23Width : calc(98%/2);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: fit-content;
+    height: 100%;
     transform: translateY(2rem);}
 
 .container {
@@ -179,9 +179,7 @@ $childBetM23Width : calc(98%/2);
 .domain {
     width: calc(99.5%/3);
     margin: 0 calc(0.5%/3);
-    // z-index: 1;
 
-    svg {}
 }
 
 
@@ -216,24 +214,33 @@ $childBetM23Width : calc(98%/2);
     position: absolute;
     bottom: 0;
 
-    span:nth-child(1) {
+    span.text_lg {
         padding-right: 1rem;
+        padding-left: 1rem;
+        opacity: 1;
 
     }
-
+    
     span {
-        // position: absolute;
-        // top: 300%;
-        // top: 80%;
-        // display: flex;\
-        // padding-left: 1rem;
+        font-weight: bold;
+        opacity: 0.75;
         text-transform: uppercase;
     }
 }
 
 .tieLabel {
-    // height: 10vw;
-    text-transform: uppercase;
+    span.text_lg {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        opacity: 1;
+
+    }
+    
+    span {
+        font-weight: bold;
+        opacity: 0.75;
+        text-transform: uppercase;
+    }
 
 }
 
@@ -352,8 +359,10 @@ $childBetM23Width : calc(98%/2);
         // padding-inline: 1.5rem;
 
         flex-direction: row-reverse;
-
+      
         &>span {
+         
+
             &>div {
                 margin-left: 0.75rem;
             }
@@ -373,14 +382,17 @@ $childBetM23Width : calc(98%/2);
     align-self: center;
     z-index: 1;
 
+    &>span.text_lg {
+        opacity: 1;
+    }
     &>span {
+        opacity: 0.75;
+        font-weight: bold;
         padding-right: 1rem;
         text-transform: uppercase;
     }
 
-    .slot-chip {
-        // transform: translate(-50%, -50%) scale(0.6);
-    }
+
 
 }
 

@@ -52,10 +52,10 @@ const ChildBetButton = (
         >
             {children}
             <div className={[styles.childLabel, styles.betButtonLabel].join(" ")} >
-                <span className='text-lg'>
+                <span className={styles.text_lg}>
                     <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
                 </span>
-                <span className='text-white/[.75]'>
+                <span >
                     {ratio}
                     <div className={styles['slot-chip']}>
 

@@ -48,52 +48,56 @@ const SuperWildBetButton = (
                 className={styles.domainContentTie}>
                 {/* <LevelStat level={90} /> */}
                 <div className={styles.tieLabel} >
-                    <div style={{}}>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column"
+                    }}>
 
-                        <span className='text-lg'>
-                            <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+                    <span className={styles.text_lg}>
+                        <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
 
-                        </span>
-                        <br />
-                        <span className='text-white/[.75]'>{ratio}</span>
-                    </div>
-
-                </div>
-                <div className={styles['slot-chip']}
-                    style={{ left: "30%" }}
-                >
-
-                    {chip > 0 && (
-                        <ChipBet
-                            value={chip}
-                            color={color}
-                        />
-
-
-
-                    )}
-                </div>
-
-                <div
-                    className={styles.cardContainerWild}
-
-
-
-                >
-                    { !betIsOpen && scanNumber && <RenderCard
-                        top="0px"
-                        left="0px"
-                        right="0px"
-                        position={{ x: "3px", y: "15px" }}
-                        rotation={{ z: "0deg" }}
-                        value={scanNumber.wild}
-
-                        visible={scanNumber.wild == "x" ? false : true}
-                        submit={scanNumber.submit}
-                    />}
+                    </span>
+                    <br />
+                    <span>{ratio}</span>
                 </div>
 
             </div>
+            <div className={styles['slot-chip']}
+                style={{ left: "30%" }}
+            >
+
+                {chip > 0 && (
+                    <ChipBet
+                        value={chip}
+                        color={color}
+                    />
+
+
+
+                )}
+            </div>
+
+            <div
+                className={styles.cardContainerWild}
+
+
+
+            >
+                {!betIsOpen && scanNumber && <RenderCard
+                    top="0px"
+                    left="0px"
+                    right="0px"
+                    position={{ x: "3px", y: "15px" }}
+                    rotation={{ z: "0deg" }}
+                    value={scanNumber.wild}
+
+                    visible={scanNumber.wild == "x" ? false : true}
+                    submit={scanNumber.submit}
+                />}
+            </div>
+
+        </div >
 
             <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -101,11 +101,11 @@ const DragonBetButton = (
                 <PlacementStat float="left" totalChip={20} totalUser={123} />
                 <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
                     <div style={{ display: 'flex', justifyContent: "flex-start" }}>
-                        <span className='text-lg'>
+                        <span className={styles.text_lg}>
                             <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
 
                         </span>
-                        <span className='text-white/[.75]'>{ratio}</span>
+                        <span>{ratio}</span>
                     </div>
                 </div>
                 {DisplayHelper.getOrientation() == "landscape"

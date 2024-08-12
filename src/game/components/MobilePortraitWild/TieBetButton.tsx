@@ -42,13 +42,17 @@ const TieBetButton = (
                 className={[styles.domainContentTie, deviceClassName, "notSuperWild"].join(" ")}>
                 {/* <LevelStat level={90} /> */}
                 <div className={styles.tieLabel} >
-                    <div style={{}}>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexDirection: "column"
+                    }}>
 
-                        <span className='text-lg'>
+                        <span className={styles.text_lg}>
                             <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
                         </span>
                         <br />
-                        <span className='text-white/[.75]'>{ratio}</span>
+                        <span>{ratio}</span>
                     </div>
 
                 </div>

@@ -90,7 +90,7 @@ const TigerBetButton = (
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose
     return (
         <div className={[styles.domain, deviceClassName].join(" ")}
-        onClick={() => handleClick(bet)}
+            onClick={() => handleClick(bet)}
         >
 
             {
@@ -112,10 +112,10 @@ const TigerBetButton = (
                         justifyContent: "flex-end", marginRight: "5vw",
                     }}>
 
-                        <span className='text-white/[.75]'>{ratio}</span>
-                        <span className='text-lg'>
-                        <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
-                            </span>
+                        <span>{ratio}</span>
+                        <span className={styles.text_lg}>
+                            <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
+                        </span>
                     </div>
 
                 </div>
@@ -143,7 +143,7 @@ const TigerBetButton = (
 
 
                 >
-                    { !betIsOpen &&  scanNumber  && <RenderCard
+                    {!betIsOpen && scanNumber && <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
@@ -258,7 +258,7 @@ const scrollSvg = <svg
     width="2%"
     style={{
         position: "absolute",
-        transform: "translate(1770%, -20%)",
+        transform: "translate(1775%, -20%)",
         zIndex: 2
     }}
     fill="none"
