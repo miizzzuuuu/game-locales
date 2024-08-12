@@ -64,7 +64,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                             </tr>
                             {item.items.length > 0 &&
                                 item.items.map((child, idxChild) => (
-                                    <tr key={`${idx}-${idxChild}`}>
+                                    <tr key={`${idx}-${idxChild}`} className={styles['sub-item']}>
                                         <td className={styles['bet-child']}>
                                             <LabelTranslate
                                                 value={child.name}

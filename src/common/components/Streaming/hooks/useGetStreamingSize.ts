@@ -8,19 +8,14 @@ export const useGetStreamingSize = () => {
     const device = useAppSelector(selectDevice);
 
     const handleResize = useCallback(() => {
-        const { widthScreen } = DisplayHelper.getWindowSize();
-
-        const scale = Number(
-            window
-                .getComputedStyle(document.documentElement)
-                .getPropertyValue('--streaming-scale-portrait') ?? 1,
-        );
-
         if (device === 'mobile-portrait') {
-            const widthStreaming = widthScreen * scale;
+            const widthStreaming = Number(
+                window
+                    .getComputedStyle(document.documentElement)
+                    .getPropertyValue('--width-game') ?? 1,
+            );
             const heightStreaming = (9 / 16) * widthStreaming;
 
-            DisplayHelper.setGlobalProperty('--width-streaming', `${widthStreaming}`);
             DisplayHelper.setGlobalProperty('--height-streaming', `${heightStreaming}`);
         }
     }, [device]);

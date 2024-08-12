@@ -15,12 +15,22 @@ interface IProps {
     children?: ReactNode | undefined;
     footerBg?: string;
     className?: string;
+    bodyClassName?: string;
 
     handleClose: () => void;
     handleBack?: () => void;
 }
 
-const Panel = ({ show, title, children, footerBg, className, handleClose, handleBack }: IProps) => {
+const Panel = ({
+    show,
+    title,
+    children,
+    footerBg,
+    className,
+    bodyClassName,
+    handleClose,
+    handleBack,
+}: IProps) => {
     const layoutVersion = useAppSelector(selectLayoutVersion);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
@@ -51,7 +61,9 @@ const Panel = ({ show, title, children, footerBg, className, handleClose, handle
             <SliderUp />
             <Header title={title} handleBack={handleBack} handleClose={handleClose} />
 
-            <div className={styles['menu-body']}>{children}</div>
+            <div className={`${styles['menu-body']}${bodyClassName ? ` ${bodyClassName}` : ''}`}>
+                {children}
+            </div>
 
             <Footer style={{ backgroundColor: footerBg ? footerBg : undefined }} />
         </div>

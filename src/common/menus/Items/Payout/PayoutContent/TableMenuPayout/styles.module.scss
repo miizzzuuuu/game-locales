@@ -34,17 +34,15 @@
     }
 }
 
+.sub-item {
+    background-color: #242435;
+}
+
 .bet-child {
     font-size: 400;
     color: #c8c9db;
 }
 
 .shading {
-    background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 2px,
-        #2c2d3f 6px,
-        #2c2d3f 6px
-    );
+    background: var(--bg-shading);
 }

@@ -51,4 +51,12 @@
     --layer-top-winner: 4;
     --layer-alert: 5;
     --layer-menu: 6;
+
+    --bg-shading: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 0.3rem,
+        #2c2d3f 0.5rem,
+        #2c2d3f 0.5rem
+    );
 }
