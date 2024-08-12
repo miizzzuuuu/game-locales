@@ -307,7 +307,8 @@ export default class M23 extends BaseV2Roadmap {
 					try {
 						this.simpleBigRoadPairs!.forEach((item, idx) => {
 							const pos = this.bigRoadSequence![idx];
-
+							if (Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >= 24)
+								this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24;
 							if (this.roadmapPairsDisplay![0].length - 1 < pos[1])
 								for (const b in this.roadmapPairsDisplay) // @ts-ignore
 									this.roadmapPairsDisplay[b].push(...[]);

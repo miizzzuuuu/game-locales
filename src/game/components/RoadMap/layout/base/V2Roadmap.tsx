@@ -164,7 +164,8 @@ export class BaseV2Roadmap extends React.Component<Props> {
 		const roadmapColumns = nary(this.totalColumns + 2);
 		const maxRow = 5;
 		const basePcode = GameHelper.getBasePcode();
-
+		if (Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >= 24)
+			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24;
 		return nary(maxRow).map((row) => {
 			return (
 				<Fragment key={self.crypto.randomUUID()}>
