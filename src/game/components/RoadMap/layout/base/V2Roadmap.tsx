@@ -167,7 +167,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 		if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1])+1 >= 24){
 
-			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24;
+			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24+1;
 		}
 
 		return nary(maxRow).map((row) => {
