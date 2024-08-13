@@ -10,25 +10,33 @@
     transform: scale(1);
     transition: transform 0.2s linear;
 
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: calc(100% + 0.5rem);
+        height: calc(100% + 0.5rem);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 195, 216, 0.5);
+
+        border: 0.15rem solid #00c3d8;
+        filter: drop-shadow(0px 0px 0.2rem rgba(0, 195, 216, 0.75));
+        backdrop-filter: blur(0.2rem);
+        border-radius: 9999px;
+
+        opacity: 0;
+        transition: opacity 0.2s linear;
+    }
+
     &.active {
         transform: scale(var(--chip-scale));
         transition: transform 0.2s linear;
 
         &::before {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: calc(100% + 0.5rem);
-            height: calc(100% + 0.5rem);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 195, 216, 0.5);
-
-            border: 0.15rem solid #00c3d8;
-            filter: drop-shadow(0px 0px 0.2rem rgba(0, 195, 216, 0.75));
-            backdrop-filter: blur(0.2rem);
-            border-radius: 9999px;
+            opacity: 1;
+            transition: opacity 0.2s linear;
         }
     }
 }
