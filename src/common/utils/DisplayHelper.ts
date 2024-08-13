@@ -6,16 +6,16 @@ export class DisplayHelper {
 
     static size: Record<string, GameSize> = {
         desktop: {
-            width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 680),
+            width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 720),
             height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 360),
         },
         'mobile-landscape': {
-            width: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_WIDTH || 680),
+            width: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_WIDTH || 720),
             height: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_HEIGHT || 360),
         },
         'mobile-portrait': {
             width: Number(import.meta.env.VITE_MOBILE_PORTRAIT_WIDTH || 360),
-            height: Number(import.meta.env.VITE_MOBILE_PORTRAIT_HEIGHT || 680),
+            height: Number(import.meta.env.VITE_MOBILE_PORTRAIT_HEIGHT || 720),
         },
     };
 
