@@ -7,13 +7,14 @@
     height: -moz-fill-available;
     height: fill-available;
     height: 100%;
+    padding-top: 0.25rem;
 
 }
 
 .scrolledYRoadmap {
     // max-height: 30vw;
+    padding-top: 0;
     height: 9rem;
-    padding: 0;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
