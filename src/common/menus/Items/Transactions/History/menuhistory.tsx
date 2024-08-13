@@ -9,6 +9,7 @@ import { StringUtility } from "../../../../../game/components/External/managers/
 import { Sound } from "../../../../../services/sound";
 import BettingTable from "../Card/BettingTable";
 import { DisplayHelper } from "../../../../utils/DisplayHelper";
+import NoResult from "../Card/NoResult";
 
 
 export interface DetailBetting {
@@ -53,8 +54,6 @@ interface MenuItemParams {
     id: string;
     title: string;
     data: Transaction
-    dragonNumber: number;
-    tigerNumber: number;
     dateTime: string;
     winAmount: number;
     betAmount: number;
@@ -73,8 +72,6 @@ interface MenuItemParams {
 const HistoryItem: React.FC<MenuItemParams> = ({
     id,
     title,
-    dragonNumber,
-    tigerNumber,
     data,
     dateTime,
     winAmount,
@@ -105,7 +102,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
     const cardContainer = useRef<HTMLDivElement>(null);
     const cardContainer2 = useRef<HTMLDivElement>(null);
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-    const [ _, setDimensions2] = useState({ width: 0, height: 0 });
+    const [_, setDimensions2] = useState({ width: 0, height: 0 });
 
     const updateDimensions = () => {
         if (cardContainer.current) {
@@ -365,7 +362,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                     padding: "12px 0px",
                 }}
             >
-                <div
+                {!data.detail_result || Array.isArray(data.detail_result) ? <NoResult /> : <div
                     style={{
                         width: "100%",
                         display: "flex",
@@ -405,6 +402,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 position: "absolute",
                                 left: "7px",
                                 top: "7px",
+                                width: "80%"
                             }}
                         >
                             <div
@@ -469,7 +467,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 </div>
                             </div>
                             <Label
-                                value={`${dragonNumber}`}
+                                value={`${Number(isNaN(Number(data.detail_result.dragon[0])) ? getValueOfLeterCard(data.detail_result.dragon[0]) : data.detail_result.dragon[0])}`}
                                 style={{
                                     color: "#FFF",
                                     textAlign: "center",
@@ -837,7 +835,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                         justifyContent: "center",
                                         alignItems: "center",
                                         zIndex: 2,
-                                     
+
                                     }}
                                 >
                                     <Label
@@ -883,7 +881,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
                                 />
                             </div>
                             <Label
-                                value={`${tigerNumber}`}
+                                value={`${Number(isNaN(Number(data.detail_result.tiger[0])) ? getValueOfLeterCard(data.detail_result.tiger[0]) : data.detail_result.tiger[0])}`}
                                 style={{
                                     color: "#FFF",
                                     textAlign: "center",
@@ -938,7 +936,7 @@ const HistoryItem: React.FC<MenuItemParams> = ({
 
                         </div>
                     </div>
-                </div>
+                </div>}
                 <BettingTable data={data} />
 
             </div> : <></>}
@@ -1046,8 +1044,7 @@ export function MenuHistoryList(props: IProps) {
                                 id={"#" + trans.periode}
                                 dateTime={StringUtility.stringToDateTime(trans.tglbel)}
                                 title="Europe DragonTiger Wild"
-                                dragonNumber={Number(isNaN(Number(trans.detail_result.dragon[0])) ? getValueOfLeterCard(trans.detail_result.dragon[0]) : trans.detail_result.dragon[0])}
-                                tigerNumber={Number(isNaN(Number(trans.detail_result.tiger[0])) ? getValueOfLeterCard(trans.detail_result.tiger[0]) : trans.detail_result.tiger[0])}
+                               
                                 winAmount={trans.total_transaction}
                                 betAmount={trans.total_debit}
                                 index={index}
