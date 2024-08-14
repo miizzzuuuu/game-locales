@@ -28,7 +28,11 @@
 
                 overflow: auto;
 
-                height: calc((var(--size-chip) * 5) + (var(--gap) * 4) + (var(--offset) * 2));
+                // height: calc((var(--size-chip) * 5) + (var(--gap) * 4) + (var(--offset) * 2));
+                height: calc(
+                    (var(--size-chip) * 4) + (var(--size-chip) * 50 / 100) + (var(--gap) * 4) +
+                        (var(--offset) * 2)
+                );
 
                 border-radius: var(--button-action-size);
                 background: rgba(0, 0, 0, 0.32);
@@ -61,7 +65,11 @@
 
                 overflow: auto;
 
-                width: calc((var(--size-chip) * 5) + (var(--gap) * 4) + (var(--offset) * 2));
+                // width: calc((var(--size-chip) * 5) + (var(--gap) * 4) + (var(--offset) * 2));
+                width: calc(
+                    (var(--size-chip) * 4) + (var(--size-chip) * 50 / 100) + (var(--gap) * 4) +
+                        (var(--offset) * 2)
+                );
 
                 border-radius: var(--button-action-size);
                 background: rgba(0, 0, 0, 0.32);
