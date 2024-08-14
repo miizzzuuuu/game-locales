@@ -17,7 +17,14 @@ function PlacementStat(
                 width: "100%",
                 float,
                 marginTop: "-10%",
-                flexDirection: "column"
+                flexDirection: "column",
+                fontStyle: "normal",
+                fontWeight: 800,
+                lineHeight: "normal",
+                letterSpacing: "0.09px",
+                textTransform: "uppercase",
+                fontFamily: "Manrope",
+                opacity: 0.5
             }}>
 
             {
