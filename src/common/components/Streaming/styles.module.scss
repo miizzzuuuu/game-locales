@@ -25,26 +25,23 @@
         flex-shrink: 0;
         width: calc(100% * var(--streaming-scale-portrait));
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 39%;
-            background: var(--streaming-color-2);
-            z-index: 1;
-        }
-
+        &::before,
         &::after {
             content: '';
             position: absolute;
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 39%;
-            background: var(--streaming-color-3);
+            height: var(--height-overlay-streaming-portrait);
             z-index: 1;
+        }
+
+        &::before {
+            background: var(--streaming-color-2);
+        }
+
+        &::after {
+            background: var(--streaming-color-3);
         }
     }
 
