@@ -30,6 +30,7 @@ const main = async () => {
     }
 
     GameHelper.pcode = pcode;
+    GameHelper.activeLetterBox = false; // default false
 
     // modify for spesifik
     BetHelper.game = new TwentyFourDBet();

@@ -11,6 +11,8 @@ export class GameHelper {
         return this._pcode;
     }
 
+    static activeLetterBox: boolean = false;
+
     static GAME_CODE: Record<string, string> = {
         p6: '24D',
         p7: 'RL',

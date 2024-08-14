@@ -20,6 +20,10 @@ pcode list can be seen in api documentation. or in [pcode](pcode.md)
 
 ## [Streaming Customization](streaming-customization.md)
 
+## Enable Letterbox
+
+to enable letterbox, use [this guide](enable-letterbox.md)
+
 ## Portrait and Landscape
 
 To differentiate styles with different orientations, use [this guide](docs/css/differentiating.md)
