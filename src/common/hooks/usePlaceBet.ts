@@ -65,7 +65,7 @@ export const usePlaceBet = () => {
 
             if (oppositeBetKey && idsBetAdd.includes(oppositeBetKey)) {
                 const buttonName = t(`${basePcode}.${oppositeBetKey.split('-')[0]}`);
-                const message = t('common.bet-error-n50', { button: buttonName });
+                const message = t('common.bet-error-n50', { button: buttonName, other: button });
 
                 console.log('bet error', message);
                 dispatch(

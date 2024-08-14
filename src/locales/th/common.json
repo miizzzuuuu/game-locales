@@ -1,5 +1,6 @@
 {
     "menu": "เมนู",
+    "pattern": "ลวดลาย",
     "lobby": "ล็อบบี้",
     "history": "ประวัติ",
     "how-to-play": "วิธีการเล่น",
@@ -41,11 +42,12 @@
     "you-win": "คุณชนะ",
     "bet-confirmed": "ยืนยันการเดิมพัน",
     "bet-error": "ข้อผิดพลาดในการเดิมพัน",
-    "bet-error-n50": "วางเดิมพัน '{{button}}' แล้ว",
-    "bet-error-max": "เดิมพัน '{{button}}' สูงสุด {{value}}",
-    "bet-error-min": "เดิมพัน '{{button}}' ขั้นต่ำ {{value}}",
+    "bet-error-n50": "วางเดิมพัน {{button}} แล้ว คุณไม่สามารถเดิมพัน {{other}} ได้",
+    "bet-error-max": "เดิมพัน {{button}} สูงสุด {{value}}",
+    "bet-error-min": "เดิมพัน {{button}} ขั้นต่ำ {{value}}",
     "insuffix-balance": "ยอดเงินคงเหลือไม่เพียงพอ",
     "autobet-error-insufficient-balance": "เดิมพันอัตโนมัติล้มเหลว ยอดเงินคงเหลือไม่เพียงพอ",
     "doublebet-error-max-bet": "ข้อผิดพลาดในการเดิมพันสองเท่า การเดิมพันสูงสุด",
+    "bet-void-n50": "คุณต้องวางเดิมพันกับผู้เล่นหรือเจ้ามือหรือเสมอก่อนเพื่อที่จะเดิมพันที่ {{button}}",
     "winner": "ผู้ชนะ"
 }

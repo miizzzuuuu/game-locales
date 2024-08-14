@@ -1,5 +1,6 @@
 {
     "menu": "menu",
+    "pattern": "pattern",
     "lobby": "lobby",
     "history": "history",
     "how-to-play": "how to play",
@@ -41,11 +42,12 @@
     "you-win": "you win",
     "bet-confirmed": "bet confirmed",
     "bet-error": "bet error",
-    "bet-error-n50": "Already placed a '{{button}}' bet",
-    "bet-error-max": "Bet '{{button}}' max {{value}}",
-    "bet-error-min": "Bet '{{button}}' min {{value}}",
+    "bet-error-n50": "Already placed {{button}} bet, can't bet {{other}}",
+    "bet-error-max": "Bet {{button}} maximal {{value}}",
+    "bet-error-min": "Bet {{button}} minimal {{value}}",
     "insuffix-balance": "insuffix balance",
     "autobet-error-insufficient-balance": "autobet failed, insufficient balance",
     "doublebet-error-max-bet": "double bet error, max bet",
+    "bet-void-n50": "Place the main bet first",
     "winner": "winner"
 }
