@@ -358,7 +358,7 @@ const TableBetWild = () => {
 
 
     return <>
-        <div ref={containerRef} className={[styles.tableBet, betIsOpen ? "" : styles.close, deviceClassName, "portrait"].join(" ")}>
+        <div ref={containerRef} className={[styles.tableBet, betIsOpen ? styles.open : styles.close, deviceClassName, "portrait"].join(" ")}>
             <div className={styles.table}>
 
                 {sections[tableSection]({

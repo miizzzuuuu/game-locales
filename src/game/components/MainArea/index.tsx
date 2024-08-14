@@ -52,9 +52,9 @@ const MainArea = () => {
     if (isLandscape) {
         return (
             <div className={`${styles['main-area']}${deviceClassName}`}>
+
                 <Panel
-                    className={`container-center-board ${betIsOpen == true ? 'openpanel' : 'closepanel'
-                        }`}
+                    className={`container-center-board`}
                 >
                     <Panel
                         className={`landscape-top-board ${roadmapOpen == true ? 'open' : 'close'}`}
@@ -72,6 +72,7 @@ const MainArea = () => {
                         {/* <BoardInfoFooter /> */}
                     </Panel>
                 </Panel>
+
             </div>
         );
     }

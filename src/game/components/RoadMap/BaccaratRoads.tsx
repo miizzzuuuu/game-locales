@@ -70,7 +70,7 @@ function BaccaratRoads(props: IProps) {
     return (
 
         <div className={styles.container} style={{
-            opacity: (betIsOpen && (DisplayHelper.getOrientation() == "landscape") && showPatternUI) || ((betIsOpen && !DisplayHelper.isMobile() && showPatternUI)) || (DisplayHelper.isMobile() && DisplayHelper.getOrientation() == "portrait") ? 1 : 0
+            // opacity: ((DisplayHelper.getOrientation() == "landscape") && showPatternUI) || ((!DisplayHelper.isMobile() && showPatternUI)) || (DisplayHelper.isMobile() && DisplayHelper.getOrientation() == "portrait") ? 1 : 0
         }}>
             {GameRoadmap.layout.ShoeStat && <GameRoadmap.layout.ShoeStat />}
             <div className={styles.scrolledYRoadmap.concat("  ").concat(isZoom ? styles.zoom : "")}
