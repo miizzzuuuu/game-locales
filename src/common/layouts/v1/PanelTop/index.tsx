@@ -1,13 +1,13 @@
 // import ButtonFavorite from '../../../components/ButtonFavorite';
-// import ButtonHideChip from '../../../components/ButtonHideChip';
+import ButtonHideChip from '../../../components/ButtonHideChip';
 // import ButtonSatatistic from '../../../components/ButtonSatatistic';
 import styles from './styles.module.scss';
 
 const PanelTop = () => {
     return (
         <div className={styles['panel-top']}>
-            {/* <ButtonHideChip />
-            <ButtonFavorite />
+             <ButtonHideChip />
+           {/* <ButtonFavorite />
             <ButtonSatatistic /> */}
         </div>
     );
