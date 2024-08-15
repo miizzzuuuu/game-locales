@@ -1,0 +1,9 @@
+.container {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--height-footer) + 9.4rem);
+    translate: -50% 0;
+
+    width: 10rem;
+    height: 10rem;
+}
