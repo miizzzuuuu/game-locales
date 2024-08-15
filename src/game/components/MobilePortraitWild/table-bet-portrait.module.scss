@@ -199,7 +199,7 @@ $childBetM23Width : calc(98%/2);
     position: absolute;
     padding-inline: 1rem 1rem;
     padding-block: 0.5rem;
-    height: 60%;
+    height: 55%;
 
     &>div:nth-child(1) {
         margin-top: 0 !important;
@@ -383,6 +383,7 @@ $childBetM23Width : calc(98%/2);
     height: 8vw;
     align-items: center;
     align-self: center;
+    // justify-content: space-between;
     z-index: 1;
     font-style: normal;
     font-weight: 800;
@@ -395,7 +396,9 @@ $childBetM23Width : calc(98%/2);
 
     &>span {
         opacity: 0.75;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 1.5rem;
+        padding-top: 1rem;
         text-transform: uppercase;
     }
 

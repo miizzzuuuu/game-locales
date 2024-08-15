@@ -69,30 +69,29 @@ const TableBetWild = () => {
                         bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
-                            // height="28"
                             fill="none"
-                            viewBox="0 0 171 28"
+                            viewBox="0 0 171 38"
                         >
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="url(#paint0_linear_234_264)"
+                                fill="url(#paint0_linear_12_591)"
                                 stroke="#F30049"
-                                d="M169 27.5H.5V.5h129.07c11.231 9.088 25.438 14.646 40.93 14.984V26a1.5 1.5 0 01-1.5 1.5z"
+                                d="M169 37.5H.5V.5h129.07c11.231 9.088 25.438 14.646 40.93 14.984V36a1.5 1.5 0 01-1.5 1.5z"
                             ></path>
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#BC0038"
                                 d="M129.747.007C141.035 9.189 155.369 14.77 171 14.999V20c-18.928-.258-36.091-7.819-48.8-19.993h7.547z"
                             ></path>
-                            <path fill="url(#paint1_linear_234_264)" d="M0 1H11V27H0z"></path>
+                            <path fill="url(#paint1_linear_12_591)" d="M0 1H11V37H0z"></path>
                             <path
-                                fill="url(#paint2_linear_234_264)"
+                                fill="url(#paint2_linear_12_591)"
                                 fillOpacity="0.4"
-                                d="M0 1H11V27H0z"
+                                d="M0 1H11V37H0z"
                             ></path>
                             <defs>
                                 <linearGradient
-                                    id="paint0_linear_234_264"
+                                    id="paint0_linear_12_591"
                                     x1="172.23"
                                     x2="0"
                                     y1="14.08"
@@ -103,11 +102,11 @@ const TableBetWild = () => {
                                     <stop offset="1" stopColor="#69001F"></stop>
                                 </linearGradient>
                                 <linearGradient
-                                    id="paint1_linear_234_264"
+                                    id="paint1_linear_12_591"
                                     x1="11"
                                     x2="0"
-                                    y1="14"
-                                    y2="14"
+                                    y1="19"
+                                    y2="19"
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#470015" stopOpacity="0"></stop>
@@ -115,11 +114,11 @@ const TableBetWild = () => {
                                     <stop offset="0.703" stopColor="#470015"></stop>
                                 </linearGradient>
                                 <linearGradient
-                                    id="paint2_linear_234_264"
+                                    id="paint2_linear_12_591"
                                     x1="11"
                                     x2="0"
-                                    y1="14"
-                                    y2="14"
+                                    y1="19"
+                                    y2="19"
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#470015" stopOpacity="0"></stop>
@@ -141,64 +140,65 @@ const TableBetWild = () => {
                         endColor='#F30049'
                         borderColor='#BD043C'
                         ratio='24:1'
-                        bgSvg={(isWin) => <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="100%"
-                            // height="28"
-                            fill="none"
-                            viewBox="0 0 171 28"
-                        >
-                            <path
-                                className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="url(#paint0_linear_234_257)"
-                                stroke="#FFB72C"
-                                d="M.5 26V15.484C15.992 15.146 30.199 9.588 41.43.5H170.5v27H2A1.5 1.5 0 01.5 26z"
-                            ></path>
-                            <path
-                                className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="#D69729"
-                                d="M41.253.007C29.965 9.189 15.63 14.77 0 14.999V20c18.928-.258 36.09-7.819 48.8-19.993h-7.547z"
-                            ></path>
-                            <path fill="url(#paint1_linear_234_257)" d="M160 1H171V27H160z"></path>
-                            <path fill="url(#paint2_linear_234_257)" d="M160 1H171V27H160z"></path>
-                            <defs>
-                                <linearGradient
-                                    id="paint0_linear_234_257"
-                                    x1="171"
-                                    x2="0"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop stopColor="#8C5400"></stop>
-                                    <stop offset="1" stopColor="#FFC65B"></stop>
-                                </linearGradient>
-                                <linearGradient
-                                    id="paint1_linear_234_257"
-                                    x1="171"
-                                    x2="160"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop offset="0.297" stopColor="#5A3800"></stop>
-                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient
-                                    id="paint2_linear_234_257"
-                                    x1="171"
-                                    x2="160"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop offset="0.297" stopColor="#5A3800"></stop>
-                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                                </linearGradient>
-                            </defs>
-                        </svg>}
+                        bgSvg={(isWin) =>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="100%"
+                                fill="none"
+                                viewBox="0 0 171 38"
+                            >
+                                <path
+                                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+                                    fill="url(#paint0_linear_12_598)"
+                                    stroke="#FFB72C"
+                                    d="M.5 36V15.484C15.992 15.146 30.199 9.588 41.43.5H170.5v37H2A1.5 1.5 0 01.5 36z"
+                                ></path>
+                                <path
+                                    className={[isWin ? "table-win-blink" : ""].join(" ")}
+                                    fill="#D69729"
+                                    d="M41.253.007C29.965 9.189 15.63 14.77 0 14.999V20c18.928-.258 36.09-7.819 48.8-19.993h-7.547z"
+                                ></path>
+                                <path fill="url(#paint1_linear_12_598)" d="M160 1H171V38H160z"></path>
+                                <path fill="url(#paint2_linear_12_598)" d="M160 1H171V38H160z"></path>
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_12_598"
+                                        x1="171"
+                                        x2="0"
+                                        y1="14"
+                                        y2="14"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stopColor="#8C5400"></stop>
+                                        <stop offset="1" stopColor="#FFC65B"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        id="paint1_linear_12_598"
+                                        x1="171"
+                                        x2="160"
+                                        y1="19.5"
+                                        y2="19.5"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop offset="0.297" stopColor="#5A3800"></stop>
+                                        <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                        <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                                    </linearGradient>
+                                    <linearGradient
+                                        id="paint2_linear_12_598"
+                                        x1="171"
+                                        x2="160"
+                                        y1="19.5"
+                                        y2="19.5"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop offset="0.297" stopColor="#5A3800"></stop>
+                                        <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                        <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            }
                     />
                 </div>
 
@@ -219,45 +219,44 @@ const TableBetWild = () => {
                         bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
-                            //   height="28"
                             fill="none"
-                            viewBox="0 0 171 28"
+                            viewBox="0 0 171 38"
                         >
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="url(#paint0_linear_234_271)"
+                                fill="url(#paint0_linear_11_577)"
                                 stroke="#F30049"
-                                d="M.5 27.5V.5H169a1.5 1.5 0 011.5 1.5v10.516c-15.492.338-29.699 5.896-40.93 14.984H.5z"
+                                d="M.5 37.5V.5H169a1.5 1.5 0 011.5 1.5v20.516c-15.492.338-29.699 5.896-40.93 14.984H.5z"
                             ></path>
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
                                 fill="#BC0038"
-                                d="M129.747 28c11.288-9.183 25.622-14.764 41.253-14.993v-5c-18.928.258-36.091 7.819-48.8 19.993h7.547z"
+                                d="M129.747 38c11.288-9.183 25.622-14.764 41.253-14.993v-5c-18.928.258-36.091 7.819-48.8 19.993h7.547z"
                             ></path>
-                            <path fill="url(#paint1_linear_234_271)" d="M0 1H11V27H0z"></path>
+                            <path fill="url(#paint1_linear_11_577)" d="M0 1H11V37H0z"></path>
                             <path
-                                fill="url(#paint2_linear_234_271)"
+                                fill="url(#paint2_linear_11_577)"
                                 fillOpacity="0.4"
-                                d="M0 1H11V27H0z"
+                                d="M0 1H11V37H0z"
                             ></path>
                             <defs>
                                 <linearGradient
-                                    id="paint0_linear_234_271"
+                                    id="paint0_linear_11_577"
                                     x1="172.23"
                                     x2="0"
-                                    y1="14.08"
-                                    y2="14.08"
+                                    y1="24.08"
+                                    y2="24.08"
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#F30049"></stop>
                                     <stop offset="1" stopColor="#69001F"></stop>
                                 </linearGradient>
                                 <linearGradient
-                                    id="paint1_linear_234_271"
+                                    id="paint1_linear_11_577"
                                     x1="11"
                                     x2="0"
-                                    y1="14"
-                                    y2="14"
+                                    y1="19"
+                                    y2="19"
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#470015" stopOpacity="0"></stop>
@@ -265,11 +264,11 @@ const TableBetWild = () => {
                                     <stop offset="0.703" stopColor="#470015"></stop>
                                 </linearGradient>
                                 <linearGradient
-                                    id="paint2_linear_234_271"
+                                    id="paint2_linear_11_577"
                                     x1="11"
                                     x2="0"
-                                    y1="14"
-                                    y2="14"
+                                    y1="19"
+                                    y2="19"
                                     gradientUnits="userSpaceOnUse"
                                 >
                                     <stop stopColor="#470015" stopOpacity="0"></stop>
@@ -291,64 +290,64 @@ const TableBetWild = () => {
                         endColor='#F30049'
                         borderColor='#BD043C'
                         ratio='11:1'
-                        bgSvg={(isWin) => <svg
+                        bgSvg={(isWin) =>   <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
-                            //   height="28"
                             fill="none"
-                            viewBox="0 0 171 28"
-                        >
+                            viewBox="0 0 171 38"
+                          >
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="url(#paint0_linear_234_278)"
-                                stroke="#FFB72C"
-                                d="M170.5 27.5H41.43C30.199 18.412 15.992 12.854.5 12.516V2A1.5 1.5 0 012 .5h168.5v27z"
+                              fill="url(#paint0_linear_12_584)"
+                              stroke="#FFB72C"
+                              d="M170.5 37.5H41.43C30.199 28.412 15.992 22.854.5 22.516V2A1.5 1.5 0 012 .5h168.5v37z"
                             ></path>
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                                fill="#D69729"
-                                d="M41.253 28C29.965 18.817 15.63 13.236 0 13.007v-5C18.928 8.265 36.09 15.826 48.8 28h-7.547z"
+                              fill="#D69729"
+                              d="M41.253 38C29.965 28.817 15.63 23.236 0 23.007v-5c18.928.258 36.09 7.819 48.8 19.993h-7.547z"
                             ></path>
-                            <path fill="url(#paint1_linear_234_278)" d="M160 1H171V27H160z"></path>
-                            <path fill="url(#paint2_linear_234_278)" d="M160 1H171V27H160z"></path>
+                            <path fill="url(#paint1_linear_12_584)" d="M160 0H171V37H160z"></path>
+                            <path fill="url(#paint2_linear_12_584)" d="M160 0H171V37H160z"></path>
                             <defs>
-                                <linearGradient
-                                    id="paint0_linear_234_278"
-                                    x1="171"
-                                    x2="0"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop stopColor="#8C5400"></stop>
-                                    <stop offset="1" stopColor="#FFC65B"></stop>
-                                </linearGradient>
-                                <linearGradient
-                                    id="paint1_linear_234_278"
-                                    x1="171"
-                                    x2="160"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop offset="0.297" stopColor="#5A3800"></stop>
-                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                                </linearGradient>
-                                <linearGradient
-                                    id="paint2_linear_234_278"
-                                    x1="171"
-                                    x2="160"
-                                    y1="14"
-                                    y2="14"
-                                    gradientUnits="userSpaceOnUse"
-                                >
-                                    <stop offset="0.297" stopColor="#5A3800"></stop>
-                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                                </linearGradient>
+                              <linearGradient
+                                id="paint0_linear_12_584"
+                                x1="171"
+                                x2="0"
+                                y1="24"
+                                y2="24"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stopColor="#8C5400"></stop>
+                                <stop offset="1" stopColor="#FFC65B"></stop>
+                              </linearGradient>
+                              <linearGradient
+                                id="paint1_linear_12_584"
+                                x1="171"
+                                x2="160"
+                                y1="18.5"
+                                y2="18.5"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop offset="0.297" stopColor="#5A3800"></stop>
+                                <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                              </linearGradient>
+                              <linearGradient
+                                id="paint2_linear_12_584"
+                                x1="171"
+                                x2="160"
+                                y1="18.5"
+                                y2="18.5"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop offset="0.297" stopColor="#5A3800"></stop>
+                                <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                              </linearGradient>
                             </defs>
-                        </svg>}
+                          </svg>
+                          }
                     />
                 </div>
             </>
