@@ -63,3 +63,19 @@ Update the background color for streaming to match the design in Figma.
 ```css
 --streaming-scale-portrait: 1.1;
 ```
+
+## Custom Height Overlay Streaming Portrait
+
+### File Location
+
+`src/styles/base/variables.scss`
+
+```css
+--height-overlay-streaming-portrait: {value}
+```
+
+example:
+
+```css
+--height-overlay-streaming-portrait: 5.3rem;
+```

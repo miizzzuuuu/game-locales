@@ -1,5 +1,6 @@
 {
     "menu": "menu",
+    "pattern": "pola",
     "lobby": "lobi",
     "history": "riwayat",
     "how-to-play": "cara bermain",
@@ -42,11 +43,12 @@
     "you-win": "kamu menang",
     "bet-confirmed": "taruhan dikonfirmasi",
     "bet-error": "kesalahan taruhan",
-    "bet-error-n50": "Sudah pasang taruhan '{{button}}'",
-    "bet-error-max": "Taruhan '{{button}}' maksimal {{value}}",
-    "bet-error-min": "Taruhan '{{button}}' minimal {{value}}",
+    "bet-error-n50": "Pasang {{button}}, Tidak bisa pasang {{other}}",
+    "bet-error-max": "Taruhan {{button}} maksimal {{value}}",
+    "bet-error-min": "Taruhan {{button}} minimal {{value}}",
     "insuffix-balance": "saldo tidak cukup",
     "autobet-error-insufficient-balance": "autobet gagal, saldo tidak mencukupi",
     "doublebet-error-max-bet": "kesalahan gandakan taruhan, taruhan maksimum",
+    "bet-void-n50": "Pasang taruhan utama terlebih dahulu",
     "winner": "pemenang"
 }

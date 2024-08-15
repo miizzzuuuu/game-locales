@@ -1,5 +1,6 @@
 {
     "menu": "menu",
+    "pattern": "mẫu",
     "lobby": "sảnh",
     "history": "lịch sử",
     "how-to-play": "cách chơi",
@@ -42,11 +43,12 @@
     "you-win": "bạn thắng",
     "bet-confirmed": "đặt cược đã xác nhận",
     "bet-error": "lỗi đặt cược",
-    "bet-error-n50": "Đã đặt cược '{{button}}'",
-    "bet-error-max": "Cược '{{button}}' tối đa {{value}}",
-    "bet-error-min": "Cược '{{button}}' tối thiểu {{value}}",
+    "bet-error-n50": "Đã đặt cược {{button}}, bạn không thể đặt cược {{other}}",
+    "bet-error-max": "Cược {{button}} tối đa {{value}}",
+    "bet-error-min": "Cược {{button}} tối thiểu {{value}}",
     "insuffix-balance": "số dư không đủ",
     "autobet-error-insufficient-balance": "tự động cược thất bại, số dư không đủ",
     "doublebet-error-max-bet": "lỗi cược đôi, cược tối đa",
+    "bet-void-n50": "Bạn phải đặt cược vào Người chơi hoặc Nhà cái hoặc Hòa trước để đặt cược vào {{button}}",
     "winner": "người thắng"
 }

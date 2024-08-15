@@ -9,12 +9,19 @@ export const useGetStreamingSize = () => {
 
     const handleResize = useCallback(() => {
         if (device === 'mobile-portrait') {
-            const widthStreaming = Number(
+            const widthGame = Number(
                 window
                     .getComputedStyle(document.documentElement)
                     .getPropertyValue('--width-game') ?? 1,
             );
-            const heightStreaming = (9 / 16) * widthStreaming;
+            const scaleStreaming =
+                Number(
+                    window
+                        .getComputedStyle(document.documentElement)
+                        .getPropertyValue('--streaming-scale-portrait'),
+                ) ?? 1;
+
+            const heightStreaming = (9 / 16) * widthGame * scaleStreaming;
 
             DisplayHelper.setGlobalProperty('--height-streaming', `${heightStreaming}`);
         }

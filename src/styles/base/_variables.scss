@@ -6,6 +6,7 @@
 
     // setting streaming scale in portrait
     --streaming-scale-portrait: 1.1;
+    --height-overlay-streaming-portrait: 4.8rem;
 
     // portrait, streaming ke bawah
     --streaming-color-1: linear-gradient(180deg, #FF7401 0%, #452204 40.22%, #0B0500 100%);
@@ -59,4 +60,6 @@
         #2c2d3f 0.5rem,
         #2c2d3f 0.5rem
     );
+
+    --button-action-size: 3.8rem;
 }
