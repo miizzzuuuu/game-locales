@@ -221,26 +221,39 @@ $childBetM23Width : calc(98.5%/2);
     margin-top: 6%;
     position: absolute;
     bottom: 0;
-
-    span:nth-child(1) {
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
+    span.text_lg {
         padding-right: 1rem;
-
+        padding-left: 1rem;
+        opacity: 1;
     }
 
     span {
-        // position: absolute;
-        // top: 300%;
-        // top: 80%;
-        // display: flex;\
-        // padding-left: 1rem;
-        text-transform: uppercase;
+        opacity: 0.75;
     }
 }
 
 .tieLabel {
-    // height: 10vh;
     text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
+    span.text_lg {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        opacity: 1;
 
+    }
+
+    span {
+        opacity: 0.75;
+    }
 }
 
 .domainContentTie {
@@ -350,8 +363,17 @@ $childBetM23Width : calc(98.5%/2);
     align-items: center;
     align-self: center;
     z-index: 1;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.09px;
+    text-transform: uppercase;
+    &>span.text_lg {
+        opacity: 1;
+    }
 
     &>span {
+        opacity: 0.75;
         padding-right: 1rem;
         text-transform: uppercase;
     }
