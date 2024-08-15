@@ -3,7 +3,7 @@
 $maxY: -30%;
 // $domainHeight: 32vh;
 $domainHeight: 33vw;
-$transformOpen: translate(0%, 0%) scale(1);
+$transformOpen: translate(0%, 0%) scale(0.8);
 $transformClose: translate(0%, 0%) scale(0.75, 0.75) perspective(1000px) rotateX(45deg);;
 $transformCloseZoom: translate(-50%, calc(-50%)) scale(0.6);
 
