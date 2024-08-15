@@ -4,7 +4,7 @@ $maxY: -20%;
 // $domainHeight: 32vw;
 $domainHeight: 33vw;
 $scaleOpen: 0.99;
-$transformOpen: translate(-54%, $maxY) scale($scaleOpen);
+$transformOpen: translate(0%, 0%) scale($scaleOpen);
 $transformClose: translate(0%, 0%) scale(1);
 $transformCloseZoom: translate(-50%, calc(-50%)) scale(0.6);
 
