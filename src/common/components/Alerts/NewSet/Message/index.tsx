@@ -1,4 +1,4 @@
-import { AnimationEventHandler, ReactNode, useRef } from 'react';
+import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import SVGBackground from './SVG/SVGBackground';
@@ -9,10 +9,19 @@ interface IProps {
     close?: boolean;
 }
 
-const Message = ({ value, handleClose }: IProps) => {
+const Message = ({ value, close, handleClose }: IProps) => {
     const messageRef = useRef<HTMLDivElement>(null);
 
     const prevMessage = useRef<ReactNode | undefined>();
+
+    useEffect(() => {
+        if (close) {
+            if (messageRef.current) {
+                prevMessage.current = value;
+                messageRef.current.classList.add(styles.disapear);
+            }
+        }
+    }, [close]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (e.animationName.indexOf('message-fadeout') >= 0) {

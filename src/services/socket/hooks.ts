@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
-import { LobbyConnect } from '../../types';
+import { LobbyConnect, NewSetData } from '../../types';
 import { useAppDispatch } from '../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
@@ -11,9 +11,7 @@ interface Params {
     operatorId: string | number;
 
     listenerCloseTimerHandler?: () => void;
-    // listenerGameResultHandler?: (data: LoadNewValueData) => void;
-    // listenerLoadNewValueHandler?: (data: LoadNewValueData) => void;
-    // listenerReceiveTotalWinHandler?: (data: RecieveTotalWinData) => void;
+    listenerGameResultHandler?: (data: NewSetData) => void;
 }
 
 export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: Params) => {

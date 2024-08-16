@@ -17,7 +17,7 @@ const SVGBackground = ({ className, style }: SVGProps<SVGSVGElement>) => {
                 height="19"
                 rx="1.5"
                 stroke="url(#paint1_linear_533_2381)"
-                stroke-opacity="0.1"
+                strokeOpacity="0.1"
             />
 
             <defs>
@@ -29,9 +29,9 @@ const SVGBackground = ({ className, style }: SVGProps<SVGSVGElement>) => {
                     y2="10"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="white" stop-opacity="0" />
-                    <stop offset="0.5" stop-color="white" stop-opacity="0.4" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" stopOpacity="0" />
+                    <stop offset="0.5" stopColor="white" stopOpacity="0.4" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_533_2381"
@@ -41,9 +41,9 @@ const SVGBackground = ({ className, style }: SVGProps<SVGSVGElement>) => {
                     y2="10"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="white" stop-opacity="0" />
-                    <stop offset="0.5" stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" stopOpacity="0" />
+                    <stop offset="0.5" stopColor="white" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                 </linearGradient>
             </defs>
         </svg>

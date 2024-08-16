@@ -1,13 +1,34 @@
+import { useEffect, useState } from 'react';
+import { useAppSelector } from '../../../../store/hooks';
+import { selectGameNewset } from '../../../../store/slice/gameSlice';
 import Message from './Message';
 import ShufflingAnimation from './ShufflingAnimation/Animation';
 import styles from './styles.module.scss';
 
 const NewSet = () => {
+    const newSet = useAppSelector(selectGameNewset);
+
+    const [renderUI, setRenderUI] = useState(false);
+
+    const handleClose = () => {
+        setRenderUI(false);
+    };
+
+    useEffect(() => {
+        if (newSet) {
+            setRenderUI(true);
+        }
+    }, [newSet]);
+
+    if (!newSet && !renderUI) {
+        return null;
+    }
+
     return (
         <div className={styles['new-set']}>
-            <Message value="shuffling card" />
+            <Message value="shuffling card" handleClose={handleClose} close={!newSet} />
 
-            <ShufflingAnimation />
+            <ShufflingAnimation close={!newSet} />
         </div>
     );
 };
