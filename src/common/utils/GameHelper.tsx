@@ -115,6 +115,35 @@ export class GameHelper {
         p12: 'Sicbo[Dice]',
     };
 
+    static getEventNewSet() {
+        let baseNewSet: string = '';
+
+        const variant = this.getVariant();
+        const pcode = this.pcode;
+
+        if (/^m22/.test(pcode)) {
+            baseNewSet = 'baccaratNewSet';
+        } else if (/^m23/.test(pcode)) {
+            baseNewSet = 'dragonTigerNewSet';
+        } else if (/^m24/.test(pcode)) {
+            baseNewSet = 'niuniuNewSet';
+        } else if (/^m27/.test(pcode)) {
+            baseNewSet = 'shioFightNewSet';
+        } else if (/^m28/.test(pcode)) {
+            baseNewSet = 'idn4standNewSet';
+        } else if (/^m38/.test(pcode)) {
+            baseNewSet = 'baccaratmachineNewSet';
+        } else if (/^m41/.test(pcode)) {
+            baseNewSet = 'dominoNewSet';
+        }
+
+        if (!variant) {
+            return baseNewSet;
+        }
+
+        return baseNewSet + variant.toUpperCase();
+    }
+
     static getBasePcode() {
         const mixedPcode = this.pcode;
 
