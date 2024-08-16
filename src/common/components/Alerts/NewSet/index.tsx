@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useAppSelector } from '../../../../store/hooks';
-import { selectGameNewset } from '../../../../store/slice/gameSlice';
+import { selectGameNewSet } from '../../../../store/slice/gameSlice';
 import Message from './Message';
 import ShufflingAnimation from './ShufflingAnimation/Animation';
 import styles from './styles.module.scss';
 
 const NewSet = () => {
-    const newSet = useAppSelector(selectGameNewset);
+    const newSet = useAppSelector(selectGameNewSet);
 
     const [renderUI, setRenderUI] = useState(false);
 

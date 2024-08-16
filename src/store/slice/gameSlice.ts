@@ -86,7 +86,7 @@ export const selectPeriod = (state: RootState) => state.game.periode;
 export const selectStream = (state: RootState) => state.game.stream;
 export const selectStreamHD = (state: RootState) => state.game.stream_hd;
 
-export const selectGameNewset = (state: RootState) => state.game.newSet;
+export const selectGameNewSet = (state: RootState) => state.game.newSet;
 export const selectGameSet = (state: RootState) => state.game.shoePeriode.split('-')[0];
 
 export default gameSlice.reducer;
