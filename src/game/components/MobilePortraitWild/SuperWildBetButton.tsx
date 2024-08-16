@@ -58,7 +58,6 @@ const SuperWildBetButton = (
                         <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
 
                     </span>
-                    <br />
                     <span>{ratio}</span>
                 </div>
 

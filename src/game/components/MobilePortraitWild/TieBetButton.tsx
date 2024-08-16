@@ -51,7 +51,6 @@ const TieBetButton = (
                         <span className={styles.text_lg}>
                             <LabelTranslate value={bet.button.toLowerCase()} keyLang={GameHelper.getBasePcode()} />
                         </span>
-                        <br />
                         <span>{ratio}</span>
                     </div>
 
