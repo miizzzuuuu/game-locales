@@ -86,7 +86,7 @@ export const usePlaceBet = () => {
         const isHaveOppositedBetDT = bet.group == DragonTigerBBetHelper.Tiger ? getChip({ button: DragonTigerBBetHelper.Dragon, group: DragonTigerBBetHelper.Dragon }) : bet.group == DragonTigerBBetHelper.Dragon ? getChip({ button: DragonTigerBBetHelper.Tiger, group: DragonTigerBBetHelper.Tiger }) : false;
         if (isHaveOppositedBetDT) {
             const buttonName = t(`${basePcode}.${DragonTigerBBetHelper.getOpposite(bet.group)}`);
-            const message = t('common.bet-error-n50', { button: buttonName });
+            const message = t('common.bet-error-n50', { button: buttonName, other: bet.button });
 
             console.log('bet error', message);
             dispatch(
