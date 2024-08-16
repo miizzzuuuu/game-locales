@@ -1,11 +1,11 @@
 .message {
     --translate-x: -50%;
+    --translate-y: 0;
 
     position: absolute;
     left: 50%;
-    top: calc(var(--height-streaming) * 1px);
 
-    transform: translateX(var(--translate-x)) translateY(-2rem);
+    transform: translateX(var(--translate-x)) translateY(var(--translate-y));
 
     // width: 22rem;
     width: 27.8rem;
@@ -27,6 +27,21 @@
         .content {
             animation: show-message-content 0.3s linear forwards;
         }
+    }
+}
+
+.mobile-portrait {
+    &.message {
+        --translate-y: -2rem;
+
+        top: calc(var(--height-streaming) * 1px);
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    &.message {
+        top: 0.4rem;
     }
 }
 
