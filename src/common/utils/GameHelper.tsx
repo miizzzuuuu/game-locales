@@ -156,4 +156,15 @@ export class GameHelper {
 
         return result;
     }
+
+    static getVariant(): string {
+        const pcode = this.pcode;
+
+        if (pcode.length === 3) {
+            return '';
+        }
+
+        const variant = pcode.charAt(pcode.length - 1);
+        return variant;
+    }
 }
