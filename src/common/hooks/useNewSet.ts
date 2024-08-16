@@ -10,6 +10,8 @@ export function useNewSet({ handleNewSet }: Params) {
     const gameNewSet = useAppSelector(selectGameNewSet);
 
     useEffect(() => {
-        handleNewSet();
+        if (gameNewSet) {
+            handleNewSet();
+        }
     }, [gameNewSet]);
 }
