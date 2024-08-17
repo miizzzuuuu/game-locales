@@ -6,7 +6,7 @@ export class DisplayHelper {
 
     static size: Record<string, GameSize> = {
         desktop: {
-            width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 640),
+            width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 720),
             height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 360),
         },
         'mobile-landscape': {
