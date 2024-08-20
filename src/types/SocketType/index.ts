@@ -101,3 +101,5 @@ export type ThunderP9B = {
     coordinate: string;
     prize_thunder: number;
 }[];
+
+export type NewSetData = { pcode: string; gameSet: 13494; status: boolean };

@@ -5,6 +5,7 @@ import {
     GameConnect,
     LoadNewValueData,
     LobbyConnect,
+    NewSetData,
     RecieveTotalWinData,
     ScanNumberData,
     Thunder,
@@ -222,6 +223,20 @@ export class SocketComponent {
         }
     }
 
+    listenNewSet(callback: (data: NewSetData) => void): void {
+        const eventName = GameHelper.getEventNewSet();
+
+        if (!eventName) {
+            return;
+        }
+
+        if (this._socket) {
+            this._socket.on(eventName, (data: NewSetData) => {
+                this.validationDataWithPcode(data, () => callback(data));
+            });
+        }
+    }
+
     validationDataWithPcode<T extends { pcode: string }>(data: T, callback?: () => void) {
         if (data.pcode === GameHelper.pcode) {
             callback?.();
@@ -264,6 +279,11 @@ export class SocketComponent {
             allEvent.forEach((eventName) => {
                 this._socket.off(eventName);
             });
+
+            const eventNewSet = GameHelper.getEventNewSet();
+            if (eventNewSet) {
+                this._socket.off(eventNewSet);
+            }
 
             this._socket.disconnect();
         }
