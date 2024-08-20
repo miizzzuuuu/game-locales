@@ -644,7 +644,7 @@
 
 @keyframes landscape-board-show {
     0% {
-        transform: translateY(100px);
+        transform: translateY(-100px);
         opacity: 0;
     }
     100% {
@@ -659,7 +659,7 @@
         opacity: 1;
     }
     100% {
-        transform: translateY(100px);
+        transform: translateY(-100px);
         opacity: 0;
     }
 }
