@@ -133,7 +133,7 @@ const DragonBetButton = (
                         top="0px"
                         left="0px"
                         right="0px"
-                        position={{ x: "3px", y: "15px" }}
+                        position={{ x: "3px", y: "13px" }}
                         rotation={{ z: "0deg" }}
                         value={scanNumber.dragon}
 

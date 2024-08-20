@@ -414,12 +414,13 @@ function renderV3(this: BaseV2Roadmap) {
 
     const roadmapColumns = nary(this.totalColumns! + 2);
     const {
-        darkMode, small, full, type } = this.props;
+        darkMode, small, full, type, totalColumns } = this.props;
 
     const classList = joinClassList(
         "roadmap-table",
         "v3",
         full ? full == type ? "full" : "invisible" : "",
+        `col-${totalColumns!.toString()}`,
         (small ? "small" : ""),
         (darkMode ? "dark" : ""),
         type

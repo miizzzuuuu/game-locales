@@ -19,15 +19,30 @@
 
 
     &.full {
-        transform: translate(-3px, -123px) scale(2) !important;
+        transform: translate(-4px, -144px) scale(2) !important;
     }
 }
 
 .roadmap-table.small-road {
 
 
-    &.full {
-        transform: translate(-195px, -123px) scale(2) !important;
+    &.full.col-8 {
+        transform: translate(-145px, -145px) scale(2) !important;
+
+    }
+
+    &.full.col-10 {
+        transform: translate(-145px, -145px) scale(2) !important;
+
+    }
+    
+    &.full.col-12 {
+        transform: translate(-145px, -145px) scale(2) !important;
+
+    }
+
+    &.full.col-14 {
+        transform: translate(-145px, -145px) scale(2) !important;
 
     }
 }
@@ -36,8 +51,24 @@
 .roadmap-table.cockroach-road {
 
 
-    &.full {
-        transform: translate(-387px, -123px) scale(2) !important;
+    &.full.col-8 {
+        transform: translate(-285px,-144px) scale(2)!important
+
+    }
+
+    &.full.col-10 {
+        transform: translate(-145px, -144px) scale(2) !important;
+
+    }
+    
+    &.full.col-12 {
+        transform: translate(-145px, -144px) scale(2) !important;
+
+    }
+
+    &.full.col-14 {
+        transform: translate(-145px, -144px) scale(2) !important;
+
     }
 }
 
