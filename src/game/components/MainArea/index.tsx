@@ -13,17 +13,16 @@ import './../External/components/css/animation.css';
 // import { BoardInfoFooter } from '../External/components/implement/boardinfofooter';
 import { Panel } from './panel';
 import { useAppSelector } from '../../../store/hooks';
-import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+// import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetWild from '../MobilePortraitWild/TableBetWild';
-
 
 const MainArea = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     // const dispatch = useAppDispatch();
     // const detailBetOpen = useAppSelector(selectOpenDetailBet);
-    const isLandscape = DisplayHelper.getOrientation() == "landscape";
-    const betIsOpen = useAppSelector(selectBetIsOpen);
+    const isLandscape = DisplayHelper.getOrientation() == 'landscape';
+    // const betIsOpen = useAppSelector(selectBetIsOpen);
     const roadmapOpen = useAppSelector((state) => state.history.showPatternUI);
     // const slotPlayer = useAppSelector(selectPlayerCards);
     // const slotBanker = useAppSelector(selectBankerCards);
@@ -52,10 +51,7 @@ const MainArea = () => {
     if (isLandscape) {
         return (
             <div className={`${styles['main-area']}${deviceClassName}`}>
-
-                <Panel
-                    className={`container-center-board`}
-                >
+                <Panel className={`container-center-board`}>
                     <Panel
                         className={`landscape-top-board ${roadmapOpen == true ? 'open' : 'close'}`}
                     >
@@ -66,13 +62,9 @@ const MainArea = () => {
                     </Panel> */}
                     <div className={styles['panel-bet']}>
                         <TableBetWild />
-
                     </div>
-                    <Panel className="landscape-bottom-board">
-                        {/* <BoardInfoFooter /> */}
-                    </Panel>
+                    <Panel className="landscape-bottom-board">{/* <BoardInfoFooter /> */}</Panel>
                 </Panel>
-
             </div>
         );
     }
@@ -103,15 +95,16 @@ const MainArea = () => {
             </PanelTopToggle> */}
             <div className={styles['panel-bet']}>
                 <TableBetWild />
-
             </div>
-            <RoadMap  activeColumns={21} />
+
+            <div style={{ height: '100%', maxHeight: '17rem' }}>
+                <RoadMap activeColumns={18} />
+            </div>
         </div>
     );
 };
 
 export default MainArea;
-
 
 // import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 // import { useAppSelector } from '../../../store/hooks';

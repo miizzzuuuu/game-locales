@@ -5,11 +5,11 @@
     --gray: #c8c9db;
 
     // setting streaming scale in portrait
-    --streaming-scale-portrait: 1.1;
+    --streaming-scale-portrait: 1.4;
     --height-overlay-streaming-portrait: 4.8rem;
 
     // portrait, streaming ke bawah
-    --streaming-color-1: linear-gradient(180deg, #FF7401 0%, #452204 40.22%, #0B0500 100%);
+    --streaming-color-1: linear-gradient(180deg, #ff7401 0%, #452204 40.22%, #0b0500 100%);
     // portrait, blur di bawah streaming 1
     --streaming-color-2: linear-gradient(
         180deg,
@@ -17,19 +17,19 @@
         rgba(255, 116, 0, 0.5) 100%
     );
     // portrait, blur di bawah streaming 2
-    --streaming-color-3: linear-gradient(180deg, rgba(255, 116, 0, 0) 0%, #FF7401 100%);
+    --streaming-color-3: linear-gradient(180deg, rgba(255, 116, 0, 0) 0%, #ff7401 100%);
 
     // landscape, bawah
-    --streaming-color-4: linear-gradient(to right, rgba(14,11,8, 0.8) 0%, transparent 100%);
+    --streaming-color-4: linear-gradient(to right, rgba(14, 11, 8, 0.8) 0%, transparent 100%);
     // landscape, kiri
-    --streaming-color-5: linear-gradient(to left, rgba(14,11,8, 0.8) 0%, transparent 100%);
+    --streaming-color-5: linear-gradient(to left, rgba(14, 11, 8, 0.8) 0%, transparent 100%);
     // landscape, bawah
     --streaming-color-6: linear-gradient(
-            180deg,
-            rgba(255, 116, 0, 0) 0%,
-            rgba(255, 116, 0, 1) 50%,
-            #4C2200 100%
-        );
+        180deg,
+        rgba(255, 116, 0, 0) 0%,
+        rgba(255, 116, 0, 1) 50%,
+        #4c2200 100%
+    );
 
     --bg-footer: transparent; // rgba(2, 10, 20, 0.5);
 
