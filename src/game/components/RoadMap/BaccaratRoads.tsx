@@ -14,17 +14,27 @@ import { ShiofightGrid } from './layout/base/ShiofightGrid';
 
 export type TypeRoadmap = 'color' | 'pattern' | 'number';
 
+const dataColumns = {
+    24: 14,
+    21: 12,
+    18: 10,
+    15: 8,
+}
+
 interface IProps {
     tableSection?: "less" | "more"
     isLandscape?: boolean
+    activeColumns: keyof typeof dataColumns
 }
 
 export const layouts: any = {
     "m22": { layout: M22, rightType: "bead-road", grid: { a: BaccaratGrid, b: BaccaratGrid } },
     "m23": { layout: M23, rightType: "bead-road", grid: { a: BaccaratGrid, b: BaccaratGrid } },
-    "m27": { layout: M27, rightType: "shio", grid:  { a: BaccaratGrid, b: ShiofightGrid } },
-    "": { layout: M23, rightType: "", grid:  { a: BaccaratGrid, b: BaccaratGrid } }
+    "m27": { layout: M27, rightType: "shio", grid: { a: BaccaratGrid, b: ShiofightGrid } },
+    "": { layout: M23, rightType: "", grid: { a: BaccaratGrid, b: BaccaratGrid } }
 }
+
+
 
 function BaccaratRoads(props: IProps) {
     const showPatternUI = useAppSelector((state) => state.history.showPatternUI);
@@ -46,7 +56,7 @@ function BaccaratRoads(props: IProps) {
     }, [!!(scanNumber && scanNumber.submit)])
 
     const isZoom = props.tableSection == "less";
-    const { isLandscape } = props;
+    const { isLandscape, activeColumns } = props;
     const [fullSection, setFullSection] = useState<
         "" |
         "big-road" |
@@ -66,7 +76,6 @@ function BaccaratRoads(props: IProps) {
     }
     if (!GameHelper.getBasePcode()) return null;
     const GameRoadmap = layouts[GameHelper.getBasePcode()];
-    // console.log("divhelp", betIsOpen, !DisplayHelper.isMobile(), showPatternUI, DisplayHelper.getOrientation())
     return (
 
         <div className={styles.container} style={{
@@ -80,15 +89,7 @@ function BaccaratRoads(props: IProps) {
                     className={styles.roadmapContent.concat(" ").concat(isZoom ? styles.zoom : "")}>
                     <div className="roadmap-container">
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-
-                            height={"100%"}
-                            fill="none"
-                            viewBox="0 0 294 102"
-                        >
-                            <rect width="294" height="102" fill={darkMode ? "#414258" : "#fff"} rx="6"></rect>
-                            <GameRoadmap.grid.a stroke={darkMode ? "#595A77" : "#F4F4F4"} />
+                        <GameRoadmap.grid.a col={activeColumns} stroke={darkMode ? "#595A77" : "#F4F4F4"} >
 
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
@@ -96,6 +97,7 @@ function BaccaratRoads(props: IProps) {
                                 full={fullSection}
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("big-road")}
+                                totalColumns={activeColumns}
                                 type="big-road" />
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
@@ -103,6 +105,7 @@ function BaccaratRoads(props: IProps) {
                                 full={fullSection}
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("big-eye-road")}
+                                totalColumns={dataColumns[activeColumns]}
                                 type="big-eye-road" />
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
@@ -110,6 +113,7 @@ function BaccaratRoads(props: IProps) {
                                 full={fullSection}
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("small-road")}
+                                totalColumns={dataColumns[activeColumns]}
                                 type="small-road" />
 
                             <GameRoadmap.layout
@@ -118,22 +122,14 @@ function BaccaratRoads(props: IProps) {
                                 full={fullSection}
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("cockroach-road")}
+                                totalColumns={dataColumns[activeColumns]}
                                 type="cockroach-road" />
-                        </svg>
+                        </GameRoadmap.grid.a>
 
 
                     </div>
                     <div className="roadmap-container">
-
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height={"100%"}
-                            fill="none"
-                            viewBox="0 0 294 102"
-                        >
-                            <rect width="294" height="102" fill={darkMode ? "#414258" : "#fff"} rx="6"></rect>
-                            <GameRoadmap.grid.b stroke={darkMode ? "#595A77" : "#F4F4F4"} />
-
+                        <GameRoadmap.grid.b col={24} stroke={darkMode ? "#595A77" : "#F4F4F4"} >
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
                                 history={data}
@@ -141,10 +137,10 @@ function BaccaratRoads(props: IProps) {
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("")}
                                 type={GameRoadmap.rightType}
+                                totalColumns={24}
+
                             />
-
-                        </svg>
-
+                        </GameRoadmap.grid.b>
                     </div>
                 </div>
             </div>

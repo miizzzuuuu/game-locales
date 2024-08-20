@@ -280,15 +280,14 @@ export function prepareV3Render(this: BaseV2Roadmap) {
         switch (this.props.type) {
             case "big-eye-road":
                 this.totalColumns =
-
-                    basePcode === "m32" ? 27 :
-                        14;
+                this.props.totalColumns || 
+                        16;
                 break;
             case "small-road":
             case "cockroach-road":
                 this.totalColumns =
 
-                    basePcode === "m32" ? 12 : 14; //desktop single
+                    basePcode === "m32" ? 12 : this.props.totalColumns|| 16; //desktop single
                 break;
             case "big-road":
                 this.totalColumns =
@@ -304,23 +303,12 @@ export function prepareV3Render(this: BaseV2Roadmap) {
                         ) : //landscape open/close
 
                             this.props.small ? 14 : //lobby desktop
-                                basePcode === "m32" ? 17 : 24; //desktop in-game
+                                basePcode === "m32" ? 17 : this.props.totalColumns|| 24; //desktop in-game
                 break;
 
             case "bead-road":
                 this.totalColumns =
-                    this.props.lobbyMobile ? (
-                        this.props.showLobbyGameGroup && isPortrait() ? 29 :
-                            isPortrait() ? 13 : 17
-                    ) : //lobby mobile
-
-                        this.props.mobile ? (
-                            isPortrait() ? 14 : //mobile portrait
-                                (this.props.expanded ? 18 : 4)
-                        ) : //mobile single game
-
-                            this.props.small ? (basePcode === "m25" ? 12 : 14) : //lobby desktop
-                                (basePcode === "m32" ? 12 : 26); //desktop in-game
+                this.props.totalColumns|| 24; //desktop in-game
                 break;
 
             case "fan":

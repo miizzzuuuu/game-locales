@@ -35,6 +35,8 @@ export interface Props {
 	small?: boolean;
 	mobile?: boolean;
 	showLobbyGameGroup?: boolean;
+	totalColumns: number | undefined;
+
 }
 
 
@@ -126,7 +128,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 	beadRoadFragment() {
 		// @ts-ignore
-		const roadmapColumns = nary(this.totalColumns + 2);
+		const roadmapColumns = nary(this.totalColumns);
 		const basePcode = GameHelper.getBasePcode();
 
 		return (
@@ -161,13 +163,13 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 	bigRoadFragment() {
 		// @ts-ignore
-		const roadmapColumns = nary(this.totalColumns + 2);
+		const roadmapColumns = nary(this.totalColumns );
 		const maxRow = 5;
 		const basePcode = GameHelper.getBasePcode();
 
-		if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1])+1 >= 24){
+		if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1])+1 >= (this.props.totalColumns||24)){
 
-			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - 24+1;
+			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - (this.props.totalColumns||24)+1;
 		}
 
 		return nary(maxRow).map((row) => {
@@ -193,20 +195,20 @@ export class BaseV2Roadmap extends React.Component<Props> {
 												[col - 1 + this.firstRoadmapDisplayedCol] ?
 													<>
 														<rect
-															width="9"
-															height="9"
+															width="10.5882"
+															height="10.5882"
 															// @ts-ignore
 
-															x={4.5 + (12 * (col - 1))}
-															y={4.5 + 12 * (row - 1)}
+															x={5.29382 + (14.1176 * (col - 1))}
+															y={5.29382 + 14.1176 * (row - 1)}
 															// @ts-ignore
 															stroke={this.roadmapDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].color}
 
 															// @ts-ignore
 															className={this.roadmapDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].blink}
 
-															strokeWidth="1.2"
-															rx="4.5"
+															strokeWidth="1.41176"
+															rx="5.29412"
 														></rect>
 
 
@@ -224,7 +226,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
 														stroke={this.greenColor!}
 														strokeLinecap="round"
 														// @ts-ignore
-														d={`M${7 + (12 * (col - 1))} ${11 + (12 * (row - 1))}l4-4`}
+														d={`M${8.79382 + (14.1176 * (col - 1))} ${12.79382 + (14.1176 * (row - 1))}l4-4`}
 													></path>
 													<text
 														fill={this.props.darkMode ? "#fff" : "#000"}
@@ -264,7 +266,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 	bigRoadDerivativesFragment() {
 		// @ts-ignore
-		const roadmapColumns = nary(this.totalColumns + 2);
+		const roadmapColumns = nary(this.totalColumns);
 		const maxRow = 5;
 		// const maxIdxRow = maxRow - 1;
 		return nary(maxRow + 1).map((row, rowIdx) =>

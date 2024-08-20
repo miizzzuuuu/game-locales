@@ -59,7 +59,7 @@ const MainArea = () => {
                     <Panel
                         className={`landscape-top-board ${roadmapOpen == true ? 'open' : 'close'}`}
                     >
-                        <RoadMap isLandscape={true} />
+                        <RoadMap activeColumns={21} isLandscape={true} />
                     </Panel>
                     {/* <Panel className="landscape-center-board">
                         <TableBetWild />
@@ -105,7 +105,7 @@ const MainArea = () => {
                 <TableBetWild />
 
             </div>
-            <RoadMap />
+            <RoadMap  activeColumns={21} />
         </div>
     );
 };
