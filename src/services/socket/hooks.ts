@@ -5,7 +5,7 @@ import { useAppDispatch } from '../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
-import { setNewSet } from '../../store/slice/gameSlice';
+import { setNewSet, updateGameSet } from '../../store/slice/gameSlice';
 
 interface Params {
     nickname: string;
@@ -50,9 +50,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
         });
 
         SocketComponent.instance.listenNewSet((data) => {
-            const { status } = data;
+            const { status, gameSet } = data;
 
             dispatch(setNewSet(status));
+            dispatch(updateGameSet(gameSet));
         });
 
         return () => {
