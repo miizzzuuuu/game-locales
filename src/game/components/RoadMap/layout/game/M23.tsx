@@ -194,7 +194,7 @@ export default class M23 extends BaseV2Roadmap {
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 2 + (spacing * this.currentRow!)}
+								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">T</text>
 							{
@@ -216,7 +216,7 @@ export default class M23 extends BaseV2Roadmap {
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 2 + (spacing * this.currentRow!)}
+								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">D</text>
 							{
@@ -236,7 +236,7 @@ export default class M23 extends BaseV2Roadmap {
 							<text
 								className={alternatingStyleClass || ""}
 
-								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 2 + (spacing * this.currentRow!)}
+								x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
 								style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
 								fill="white">T</text>
 
