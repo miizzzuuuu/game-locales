@@ -24,10 +24,11 @@ export class SocketComponent {
 
     url = import.meta.env.VITE_URL_SOCKET;
 
+    static scanNumber = 'scan';
+
     static SOCKET_EVENT = {
         connect: 'connect',
         loadNewValue: 'loadNewValue',
-        scanNumber: 'scan',
         newDragonTigerShoe: 'dragonTigerNewSet',
         closeTimer: 'closeTimer',
         gameResult: 'gameResult',
@@ -126,7 +127,7 @@ export class SocketComponent {
                     }
 
                     // this._lastLoadNewValuePeriod = data.periode;
-                    this._lastLoadNewValuePeriod = Number(data.shoePeriode.split("-")[1])-1;
+                    this._lastLoadNewValuePeriod = Number(data.shoePeriode.split('-')[1]) - 1;
 
                     callback(data);
                 });
@@ -134,21 +135,25 @@ export class SocketComponent {
         }
     }
 
-
     listenNewShoe(callback: (data: LoadNewValueData) => void): void {
         if (this._socket) {
-            const variantUpper = Number.isNaN(GameHelper.pcode[GameHelper.pcode.length-1])?GameHelper.pcode[GameHelper.pcode.length-1].toUpperCase():"";
-            this._socket.on(SocketComponent.SOCKET_EVENT.newDragonTigerShoe.concat(variantUpper), (data: LoadNewValueData) => {
-                // console.log('socket loadNewValue:', data);
+            const variantUpper = Number.isNaN(GameHelper.pcode[GameHelper.pcode.length - 1])
+                ? GameHelper.pcode[GameHelper.pcode.length - 1].toUpperCase()
+                : '';
+            this._socket.on(
+                SocketComponent.SOCKET_EVENT.newDragonTigerShoe.concat(variantUpper),
+                (data: LoadNewValueData) => {
+                    // console.log('socket loadNewValue:', data);
 
-                this.validationDataWithPcode(data, () => {
-                    if (this._lastLoadNewValuePeriod === data.periode) {
-                        return;
-                    }
+                    this.validationDataWithPcode(data, () => {
+                        if (this._lastLoadNewValuePeriod === data.periode) {
+                            return;
+                        }
 
-                    callback(data);
-                });
-            });
+                        callback(data);
+                    });
+                },
+            );
         }
     }
 
@@ -197,21 +202,17 @@ export class SocketComponent {
 
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {
-            this._socket.on(
-                SocketComponent.SOCKET_EVENT.scanNumber.concat(StringUtility.convertGameCodeToGameName(GameHelper.pcode)),
-                (data: ScanNumberData) => {
-                    console.log('socket scanNumber:', data);
-                    if (data && data.pcode === GameHelper.pcode) {
-                        callback(data);
-                    }
+            const eventName = SocketComponent.scanNumber.concat(
+                StringUtility.convertGameCodeToGameName(GameHelper.pcode),
+            );
+
+            this._socket.on(eventName, (data: ScanNumberData) => {
+                console.log('socket scanNumber:', data);
+                if (data && data.pcode === GameHelper.pcode) {
+                    callback(data);
                 }
-            );
-            console.log(
-                SocketComponent.SOCKET_EVENT.scanNumber.concat(StringUtility.convertGameCodeToGameName(GameHelper.pcode)),
-
-            );
-
-
+            });
+            console.log(eventName);
         }
     }
 
@@ -284,6 +285,13 @@ export class SocketComponent {
             const eventNewSet = GameHelper.getEventNewSet();
             if (eventNewSet) {
                 this._socket.off(eventNewSet);
+            }
+
+            const eventScan = SocketComponent.scanNumber.concat(
+                StringUtility.convertGameCodeToGameName(GameHelper.pcode),
+            );
+            if (eventScan) {
+                this._socket.off(eventScan);
             }
 
             this._socket.disconnect();
