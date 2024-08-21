@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import { ITransactionCardProps } from '..';
 import NoResult from '../NoResult';
 import { TransactionHelper } from '../../../../../utils/TransactionHelper';
-import Result24DTransaction from '../../../../../../game/components/Result24DTransaction';
+import ResultDTWildTransaction from '../../../../../../game/components/ResultDTWildTransaction';
 
 interface IProps extends ITransactionCardProps {
     setExpand: (value: boolean) => void;
@@ -14,8 +14,8 @@ const CardMaximize = forwardRef<HTMLDivElement, IProps>(({ data, setExpand }, re
     let element;
     if (!data.detail_result || Array.isArray(data.detail_result)) {
         element = <NoResult />;
-    } else if (TransactionHelper.is24D(data)) {
-        element = <Result24DTransaction data={data} />;
+    } else if (TransactionHelper.isDragonTigerWild(data)) {
+        element = <ResultDTWildTransaction data={data} />;
     }
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {

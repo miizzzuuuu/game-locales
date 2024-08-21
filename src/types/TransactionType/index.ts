@@ -1,4 +1,4 @@
-import { Pcode, Pcode24D, PcodeBaccarat, PcodeRoulette } from '../CommonType';
+import { Pcode, Pcode24D, PcodeBaccarat, PcodeDragonTigerWild, PcodeRoulette } from '../CommonType';
 
 export type Status = 'Win' | 'Lose';
 
@@ -24,12 +24,14 @@ export type BaseTransaction = {
 export type Transaction<PCode extends string> = PCode extends Pcode24D
     ? BaseTransaction & DetailResultP6
     : PCode extends PcodeRoulette
-      ? BaseTransaction & DetailResultP7
-      : PCode extends PcodeBaccarat
-        ? BaseTransaction & DetailResultM22
-        : BaseTransaction & {
-              detail_result: {} | [];
-          };
+    ? BaseTransaction & DetailResultP7
+    : PCode extends PcodeBaccarat
+    ? BaseTransaction & DetailResultM22
+    : PCode extends PcodeDragonTigerWild
+    ? BaseTransaction & DetailResultM23B
+    : BaseTransaction & {
+        detail_result: {} | [];
+    };
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -43,10 +45,10 @@ export type TransactionData = {
 // result all game
 export type DetailResultP7 = {
     detail_result:
-        | {
-              angka: string;
-          }
-        | [];
+    | {
+        angka: string;
+    }
+    | [];
 };
 
 export type DetailResultP6 = {
@@ -62,22 +64,39 @@ export type DetailResultP6 = {
 
 export type DetailResultM22 = {
     detail_result:
-        | {
-              idnomor: number;
-              tanggal: string;
-              periode: number;
-              hitung: string;
-              banker: string;
-              player: string;
-              result: 'banker' | 'player' | 'tie';
-              gamekey: string;
-              value: number;
-              bankerPair: number;
-              playerPair: number;
-              playerValue: number;
-              bankerValue: number;
-          }
-        | [];
+    | {
+        idnomor: number;
+        tanggal: string;
+        periode: number;
+        hitung: string;
+        banker: string;
+        player: string;
+        result: 'banker' | 'player' | 'tie';
+        gamekey: string;
+        value: number;
+        bankerPair: number;
+        playerPair: number;
+        playerValue: number;
+        bankerValue: number;
+    }
+    | [];
+};
+
+export type DetailResultM23B = {
+    detail_result:
+    | {
+        idnomor: number;
+        tanggal: string;
+        periode: number;
+        hitung: string;
+        dragon: string;
+        tiger: string;
+        result: string;
+        gamekey: string;
+        value: number;
+        wild: string;
+    }
+    | [];
 };
 
 // TODO: add another game result type

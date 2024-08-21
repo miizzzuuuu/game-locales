@@ -1,4 +1,4 @@
-import { Pcode, Pcode24D, PcodeBaccarat, PcodeRoulette, Transaction } from '../../types';
+import { Pcode, Pcode24D, PcodeBaccarat, PcodeDragonTigerWild, PcodeRoulette, Transaction } from '../../types';
 
 export class TransactionHelper {
     static groupTransactionsByDate(transactions: Transaction<Pcode>[]): {
@@ -28,5 +28,9 @@ export class TransactionHelper {
 
     static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
         return /^m22/.test(item.pcode);
+    };
+
+    static isDragonTigerWild = (item: Transaction<string>): item is Transaction<PcodeDragonTigerWild> => {
+        return /^m23b/.test(item.pcode);
     };
 }
