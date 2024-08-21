@@ -362,12 +362,13 @@ $childBetM23Width : calc(98%/2);
         // padding-inline: 1.5rem;
 
         flex-direction: row-reverse;
+        padding-right: 0rem;
 
-        &>span {
+        span {
 
 
             &>div {
-                margin-left: 0.75rem;
+                margin-left: 3% !important;
             }
         }
     }

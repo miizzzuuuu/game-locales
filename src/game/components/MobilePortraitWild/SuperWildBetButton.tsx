@@ -63,7 +63,7 @@ const SuperWildBetButton = (
 
                 </div>
                 <div className={styles['slot-chip']}
-                    style={{ left: "30%" }}
+                    style={{ left: "80%" }}
                 >
 
                     {chip > 0 && (

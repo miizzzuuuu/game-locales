@@ -15,7 +15,6 @@ interface IProps extends PropsWithChildren {
     className?: string;
     bet: Bet;
     chipCanBlinking?: boolean;
-    rounded?: "bottom-left" | "bottom-right"
     startColor: string
     endColor: string
     borderColor: string
@@ -57,7 +56,9 @@ const ChildBetButton = (
                 </span>
                 <span >
                     {ratio}
-                    <div className={styles['slot-chip']}>
+                    <div className={styles['slot-chip']}
+                    style={{ marginInline: "5%", marginTop: "3%" }}
+                    >
 
                         {chip > 0 && (
                             <ChipBet

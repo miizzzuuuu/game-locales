@@ -289,9 +289,19 @@ const scrollSvg = <svg
         d="M0 0H8V170H0z"
         transform="matrix(-1 0 0 1 8 14)"
     ></path>
-    <path fill="#FF8A00" d="M1 13H7V190H1z"></path>
-    <path fill="#FF8A00" d="M0.9 11.2H7.2V13.6H0.9z"></path>
-    <path fill="#FF8A00" d="M0.9 174.4H7.2V176.8H0.9z"></path>
+    <g style={{ mixBlendMode: "color" }}>
+
+        <path fill="#FF8A00" d="M1 13H7V190H1z"></path>
+    </g>
+    <g style={{ mixBlendMode: "color" }}>
+
+        <path fill="#FF8A00" d="M0.9 11.2H7.2V13.6H0.9z"></path>
+    </g>
+    <g style={{ mixBlendMode: "color" }}>
+
+        <path fill="#FF8A00" d="M0.9 174.4H7.2V176.8H0.9z"></path>
+    </g>
+    
     <defs>
         <pattern
             id="pattern0_1779_4673"

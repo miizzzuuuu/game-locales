@@ -56,7 +56,7 @@ const TieBetButton = (
 
                 </div>
                 <div className={styles['slot-chip']}
-                    style={{ left: "80%", top: "15%" }}
+                    style={{ left: "30%", top: "15%" }}
                 >
                     {chip > 0 && (
                         <ChipBet
