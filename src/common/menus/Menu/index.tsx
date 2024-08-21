@@ -18,24 +18,19 @@ export interface MenuPageProps {
 const Menu = () => {
     const dispatch = useAppDispatch();
 
-    const [hiddenUI, setVisibleUI] = useState(true);
+    const [hiddenUI, setHiddenUI] = useState(true);
 
     const menuOpened = useAppSelector(selectMenuOpened);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (e.animationName.indexOf('panel-fadein') >= 0) {
-            setVisibleUI(false);
+            setHiddenUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        console.log('handleAnimationEnd menu', e.animationName);
-        if (
-            (e.animationName.indexOf('menu-slide-down') >= 0 ||
-                e.animationName.indexOf('menu-slide-right') >= 0) &&
-            menuOpened.length === 0
-        ) {
-            setVisibleUI(true);
+        if (e.animationName.indexOf('panel-fadeout') && menuOpened.length === 0) {
+            setHiddenUI(true);
         }
     };
 
