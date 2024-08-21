@@ -37,8 +37,7 @@ export const layouts: any = {
 
 
 function BaccaratRoads(props: IProps) {
-    const showPatternUI = useAppSelector((state) => state.history.showPatternUI);
-    const betIsOpen = useAppSelector(selectBetIsOpen);
+
     const styles = DisplayHelper.getOrientation() == "landscape" ? stylesLandscape : stylesPortrait;
     const darkMode = false;
     const data = useAppSelector((state) => state.history.history);
