@@ -373,7 +373,7 @@ export default class M23 extends BaseV2Roadmap {
 				startingCol = 2;
 				break;
 			case "cockroach-road":
-				startingX = 7.05873 * (this.props.totalColumns! * 2 + 2) + (8.05873);
+				startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + (6.05873);
 				const startXCoach = startingX;
 				redElement = (props) => <path
 					stroke={this.redColor}

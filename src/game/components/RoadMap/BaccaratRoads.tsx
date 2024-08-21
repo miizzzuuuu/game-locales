@@ -90,7 +90,6 @@ function BaccaratRoads(props: IProps) {
                     <div className="roadmap-container">
 
                         <GameRoadmap.grid.a col={activeColumns} stroke={darkMode ? "#595A77" : "#F4F4F4"} >
-
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
                                 history={data}
