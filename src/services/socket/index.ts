@@ -127,7 +127,7 @@ export class SocketComponent {
                     }
 
                     // this._lastLoadNewValuePeriod = data.periode;
-                    this._lastLoadNewValuePeriod = Number(data.shoePeriode.split('-')[1]) - 1;
+                    this._lastLoadNewValuePeriod = Number(data.shoePeriode?.split('-')[1]) - 1;
 
                     callback(data);
                 });
