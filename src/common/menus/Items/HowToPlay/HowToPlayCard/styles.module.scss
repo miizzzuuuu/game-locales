@@ -1,11 +1,13 @@
 .wrapper {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: min-content 0fr;
     border: 0.1rem solid #343547;
     cursor: pointer;
 
-    transition: background-color 0.4s linear;
+    transition:
+        background-color 0.4s,
+        grid-template-rows 0.4s;
 
     &:first-child {
         border-radius: 0.8rem 0.8rem 0 0;
@@ -17,7 +19,7 @@
 
     &.open {
         background: #1e1f2e;
-        transition: background-color 0.4s linear;
+        grid-template-rows: min-content 1fr;
     }
 }
 
@@ -48,79 +50,26 @@
         height: 100%;
     }
 
+    transition:
+        transform 0.4s,
+        color 0.4s;
+
     &.close {
-        animation: accordion-icon-general-close 0.4s linear forwards;
+        transform: rotateZ(0deg);
+        color: #6b6c80;
     }
 
     &.open {
-        animation: accordion-icon-general-open 0.4s linear forwards;
+        transform: rotateZ(180deg);
+        color: white;
     }
 }
 
 .accordion-content {
-    height: 0px;
-    opacity: 0;
-    transform: scaleY(0);
+    visibility: hidden;
+    overflow: hidden;
 
     &.open {
-        animation: accordion-general-open 0.4s linear forwards;
-    }
-
-    &.close {
-        animation: accordion-general-close 0.4s linear forwards;
-    }
-}
-
-@keyframes accordion-icon-general-open {
-    0% {
-        transform: rotateZ(0deg);
-        color: #6b6c80;
-    }
-    100% {
-        transform: rotateZ(180deg);
-        color: white;
-    }
-}
-
-@keyframes accordion-icon-general-close {
-    0% {
-        transform: rotateZ(180deg);
-        color: white;
-    }
-    100% {
-        transform: rotateZ(0deg);
-        color: #6b6c80;
-    }
-}
-
-@keyframes accordion-general-close {
-    0% {
-        height: fit-content;
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    10% {
-        opacity: 0;
-    }
-    100% {
-        height: 0px;
-        opacity: 0;
-        transform: scaleY(0);
-    }
-}
-
-@keyframes accordion-general-open {
-    0% {
-        height: 0%;
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        height: fit-content;
-        opacity: 1;
-        transform: scaleY(1);
+        visibility: visible;
     }
 }

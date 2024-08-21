@@ -1,16 +1,9 @@
 .maximize {
-    height: 0px;
-    opacity: 0;
-    transform: scaleY(0);
+    visibility: hidden;
+    overflow: hidden;
 
     &.open {
-        // display: flex;
-        animation: accordion-history-open 0.4s linear forwards;
-    }
-
-    &.close {
-        // display: none;
-        animation: accordion-history-close 0.4s linear forwards;
+        visibility: visible;
     }
 }
 
@@ -44,40 +37,5 @@
 }
 
 .result-wrapper {
-    // display: flex;
-    // justify-content: center;
-
     padding: 0.8rem 0;
-}
-
-@keyframes accordion-history-close {
-    0% {
-        height: fit-content;
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    10% {
-        opacity: 0;
-    }
-    100% {
-        height: 0px;
-        opacity: 0;
-        transform: scaleY(0);
-    }
-}
-
-@keyframes accordion-history-open {
-    0% {
-        height: 0px;
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        height: fit-content;
-        opacity: 1;
-        transform: scaleY(1);
-    }
 }

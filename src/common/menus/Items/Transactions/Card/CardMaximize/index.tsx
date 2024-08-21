@@ -1,4 +1,3 @@
-import { AnimationEventHandler, forwardRef } from 'react';
 import BettingTable from '../BettingTable';
 import styles from './styles.module.scss';
 import { ITransactionCardProps } from '..';
@@ -7,10 +6,10 @@ import { TransactionHelper } from '../../../../../utils/TransactionHelper';
 import Result24DTransaction from '../../../../../../game/components/Result24DTransaction';
 
 interface IProps extends ITransactionCardProps {
-    setExpand: (value: boolean) => void;
+    expand: boolean;
 }
 
-const CardMaximize = forwardRef<HTMLDivElement, IProps>(({ data, setExpand }, ref) => {
+const CardMaximize = ({ data, expand }: IProps) => {
     let element;
     if (!data.detail_result || Array.isArray(data.detail_result)) {
         element = <NoResult />;
@@ -18,14 +17,8 @@ const CardMaximize = forwardRef<HTMLDivElement, IProps>(({ data, setExpand }, re
         element = <Result24DTransaction data={data} />;
     }
 
-    const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('accordion-history-close') > 0) {
-            setExpand(false);
-        }
-    };
-
     return (
-        <div className={`${styles.maximize}`} ref={ref} onAnimationEnd={handleAnimationEnd}>
+        <div className={`${styles.maximize}${expand ? ` ${styles.open}` : ''}`}>
             <div className={styles['maximize-content']}>
                 <div className={styles['result-wrapper']}>{element}</div>
 
@@ -33,6 +26,6 @@ const CardMaximize = forwardRef<HTMLDivElement, IProps>(({ data, setExpand }, re
             </div>
         </div>
     );
-});
+};
 
 export default CardMaximize;
