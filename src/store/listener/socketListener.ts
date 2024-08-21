@@ -11,7 +11,7 @@ import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
 import { HistoryItem, addHistory } from '../slice/historySlice';
-import { updateGamePeriod } from '../slice/gameSlice';
+import { updateGamePeriod, updateGameSet } from '../slice/gameSlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -26,6 +26,9 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
 
             dispatch(openTime(Number(data.timer)));
             dispatch(updateGamePeriod(data.periode));
+            if (data.shoePeriode) {
+                dispatch(updateGameSet(data.shoePeriode));
+            }
             dispatch(newAddBetPeriod());
             dispatch(setScanNumber(undefined));
 
@@ -95,22 +98,18 @@ export const scanNumberListener = (startListening: AppStartListening) => {
             const scanNumber = action.payload;
             dispatch(setScanNumber(scanNumber));
             if (scanNumber.submit) {
-            debounce(() => {
-                    dispatch(
-                        doneResult(scanNumber as any)
-                    );
+                debounce(() => {
+                    dispatch(doneResult(scanNumber as any));
                     const formattedDate = getFormattedDate();
-                    const result: HistoryItem  = {
+                    const result: HistoryItem = {
                         ...scanNumber,
                         result: scanNumber.win,
                         gamekey: scanNumber.gameSet,
                         value: scanNumber.value,
-                        hitung: "1",
+                        hitung: '1',
                         tanggal: formattedDate,
                     };
-                    dispatch(
-                        addHistory(result as any)
-                    );
+                    dispatch(addHistory(result as any));
                 }, 5000)();
             }
         },
@@ -121,7 +120,6 @@ let timerId: any;
 function debounce(callback: () => void, wait: number) {
     return () => {
         if (timerId) {
-
         } else {
             timerId = setTimeout(() => {
                 clearTimeout(timerId);
@@ -132,10 +130,9 @@ function debounce(callback: () => void, wait: number) {
     };
 }
 
-
 function padNumber(number: number) {
     return number.toString().padStart(2, '0');
-  }
+}
 
 function getFormattedDate() {
     const currentDate = new Date();
@@ -146,5 +143,4 @@ function getFormattedDate() {
     const minutes = padNumber(currentDate.getMinutes());
     const seconds = padNumber(currentDate.getSeconds());
     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-  }
-
+}

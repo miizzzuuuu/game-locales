@@ -1,30 +1,25 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-
-
 export interface ResultState {
     status: 'idle' | 'done';
     history: any | HistoryItem[];
-    showPatternUI: boolean;
 }
 
 export type HistoryItem = {
-    "dragon": string
-    "tiger": string
-    "result": string
-    "value": number,
-    "tanggal": string
-    "periode": number,
-    "hitung": string
-    "gamekey": number,
-    "idnomor": number,
+    dragon: string;
+    tiger: string;
+    result: string;
+    value: number;
+    tanggal: string;
+    periode: number;
+    hitung: string;
+    gamekey: number;
+    idnomor: number;
 };
 
-
 const initialState: ResultState = {
-    showPatternUI: false,
     status: 'idle',
-    history: []
+    history: [],
 };
 
 const baseSlice = createSlice({
@@ -37,13 +32,12 @@ const baseSlice = createSlice({
         addHistory: (state, action: PayloadAction<HistoryItem>) => {
             state.history.push(action.payload);
         },
-        togglePattern: (state) => {
-            state.showPatternUI = !state.showPatternUI;
+        resetHistory: (state) => {
+            state.history = [];
         },
     },
 });
 
-export const {setHistory, addHistory, togglePattern } =
-    baseSlice.actions;
+export const { setHistory, addHistory, resetHistory } = baseSlice.actions;
 
 export default baseSlice.reducer;
