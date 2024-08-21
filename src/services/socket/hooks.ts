@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
-import { LobbyConnect } from '../../types';
+import { LobbyConnect, NewSetData } from '../../types';
 import { useAppDispatch } from '../../store/hooks';
-import { gameResultAction, loadNewValueAction, scanNumberAction } from '../../store/actions/socketAction';
+import {
+    gameResultAction,
+    loadNewValueAction,
+    scanNumberAction,
+} from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
 import { setHistory } from '../../store/slice/historySlice';
+import { setNewSet } from '../../store/slice/gameSlice';
 
 interface Params {
     nickname: string;
     operatorId: string | number;
 
     listenerCloseTimerHandler?: () => void;
-    // listenerGameResultHandler?: (data: LoadNewValueData) => void;
-    // listenerLoadNewValueHandler?: (data: LoadNewValueData) => void;
-    // listenerReceiveTotalWinHandler?: (data: RecieveTotalWinData) => void;
+    listenerGameResultHandler?: (data: NewSetData) => void;
 }
 
 export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: Params) => {
@@ -58,6 +61,12 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
 
         SocketComponent.instance.listenTopWinner((data) => {
             dispatch(setTopWinner(data));
+        });
+
+        SocketComponent.instance.listenNewSet((data) => {
+            const { status } = data;
+
+            dispatch(setNewSet(status));
         });
 
         return () => {

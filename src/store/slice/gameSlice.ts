@@ -63,10 +63,17 @@ const gameSlice = createSlice({
         updateGamePeriod: (state, action: PayloadAction<number>) => {
             state.periode = action.payload;
         },
+
+        setNewSet: (state, action: PayloadAction<boolean>) => {
+            state.newSet = action.payload;
+        },
+        updateGameSet: (state, action: PayloadAction<number>) => {
+            state.shoePeriode = state.shoePeriode.replace(/^[^-]+/, action.payload.toString());
+        },
     },
 });
 
-export const { setGame, updateGamePeriod } = gameSlice.actions;
+export const { setGame, updateGamePeriod, setNewSet, updateGameSet } = gameSlice.actions;
 
 export const selectMin = (state: RootState) => state.game.min;
 export const selectMax = (state: RootState) => state.game.max;
@@ -78,5 +85,8 @@ export const selectPeriod = (state: RootState) => state.game.periode;
 
 export const selectStream = (state: RootState) => state.game.stream;
 export const selectStreamHD = (state: RootState) => state.game.stream_hd;
+
+export const selectGameNewSet = (state: RootState) => state.game.newSet;
+export const selectGameSet = (state: RootState) => state.game.shoePeriode.split('-')[0];
 
 export default gameSlice.reducer;

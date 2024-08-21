@@ -225,6 +225,7 @@ export class SocketComponent {
 
     listenNewSet(callback: (data: NewSetData) => void): void {
         const eventName = GameHelper.getEventNewSet();
+        console.log('event new set', eventName);
 
         if (!eventName) {
             return;
