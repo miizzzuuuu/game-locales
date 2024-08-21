@@ -1,19 +1,21 @@
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { togglePattern } from '../../../store/slice/historySlice';
+import { selectShowPatternUI, togglePatternUI } from '../../../store/slice/gameStateSlice';
+
 import ButtonAction from '../ButtonAction';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconPattern from './SVG/SVGIconPattern';
 
 const ButtonPattern = () => {
     const dispatch = useAppDispatch();
-    const showPatternUI = useAppSelector((state) => state.history.showPatternUI);
-const color = showPatternUI? "#00C3D8" : "#fff"
+    const showPatternUI = useAppSelector(selectShowPatternUI);
+    const color = showPatternUI ? '#00C3D8' : '#fff';
+
     return (
         <ButtonAction
-            borderColor={color}
             label={<LabelTranslate value="pattern" />}
-            icon={<SVGIconPattern strokeColor={color}/>}
-            onClick={() => dispatch(togglePattern())}
+            icon={<SVGIconPattern strokeColor={color} />}
+            borderColor={!showPatternUI ? undefined : '#00C3D8'}
+            onClick={() => dispatch(togglePatternUI())}
         />
     );
 };

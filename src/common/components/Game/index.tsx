@@ -19,6 +19,8 @@ import TopWinner from '../TopWinner';
 import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { GameHelper } from '../../utils/GameHelper';
 import { setNewSet } from '../../../store/slice/gameSlice';
+import { useNewSet } from '../../hooks/useNewSet';
+import { resetHistory } from '../../../store/slice/historySlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -77,6 +79,12 @@ function Game() {
     }, [time]);
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
+
+    useNewSet({
+        handleNewSet: () => {
+            dispatch(resetHistory());
+        },
+    });
 
     return (
         <div

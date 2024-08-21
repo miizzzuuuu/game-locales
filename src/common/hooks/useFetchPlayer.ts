@@ -24,7 +24,6 @@ export function useFetchPlayer() {
                 if (!ignore) {
                     dispatch(setPlayerData(data));
                     dispatch(setChipBase(data.chipBase));
-                    await getHistory(dispatch);
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load player data completed');
@@ -33,7 +32,6 @@ export function useFetchPlayer() {
                 APIManager.handleErrorApi(error);
             }
         };
-        
 
         fetchPlayerData();
         return () => {
@@ -44,24 +42,22 @@ export function useFetchPlayer() {
     return { finish };
 }
 
+const fetchHistory = async (gameSet: number | string): Promise<HistoryItem[]> => {
+    const response = await APIManager.get<{ data: HistoryItem[]; pagination: any }>(
+        ENDPOINTS.result + `/${GameHelper.pcode}` + '?per_deck=' + gameSet,
+    );
 
-const fetchHistory = async (): Promise<HistoryItem[]> => {
-    const response =await APIManager.get<{data: HistoryItem[], pagination: any}>(ENDPOINTS.result + `/${GameHelper.pcode}`);
-    
     if (response.data.data) {
-        
-        console.log(response.data, "historyData")
+        console.log(response.data, 'historyData');
         return response.data.data as any;
     } else {
-        throw new Error(
-            "Invalid response format: 'history' or 'totalHistory' property is missing",
-        );
+        throw new Error("Invalid response format: 'history' or 'totalHistory' property is missing");
     }
 };
 
-const getHistory = async (dispatch: AppDispatch) => {
+export const getHistory = async (dispatch: AppDispatch, gameSet: number | string) => {
     try {
-        const data = await fetchHistory();
+        const data = await fetchHistory(gameSet);
         dispatch(setHistory(data));
     } catch (error) {
         console.log('get history error', error);

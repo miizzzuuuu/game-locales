@@ -16,6 +16,8 @@ import { useAppSelector } from '../../../store/hooks';
 // import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetWild from '../MobilePortraitWild/TableBetWild';
+import { selectGameNewSet } from '../../../store/slice/gameSlice';
+import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
 
 const MainArea = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -23,11 +25,13 @@ const MainArea = () => {
     // const detailBetOpen = useAppSelector(selectOpenDetailBet);
     const isLandscape = DisplayHelper.getOrientation() == 'landscape';
     // const betIsOpen = useAppSelector(selectBetIsOpen);
-    const roadmapOpen = useAppSelector((state) => state.history.showPatternUI);
+    const showPatternUI = useAppSelector(selectShowPatternUI);
     // const slotPlayer = useAppSelector(selectPlayerCards);
     // const slotBanker = useAppSelector(selectBankerCards);
     // const slotSubmit = useAppSelector(selectSubmitCards);
     // const slotWinner = useAppSelector(selectWinnerBoard);
+
+    const gameNewSet = useAppSelector(selectGameNewSet);
 
     // useEffect(
     //     function () {
@@ -53,7 +57,7 @@ const MainArea = () => {
             <div className={`${styles['main-area']}${deviceClassName}`}>
                 <Panel className={`container-center-board`}>
                     <Panel
-                        className={`landscape-top-board ${roadmapOpen == true ? 'open' : 'close'}`}
+                        className={`landscape-top-board ${showPatternUI == true ? 'open' : 'close'}`}
                     >
                         <RoadMap activeColumns={21} isLandscape={true} />
                     </Panel>
@@ -97,7 +101,7 @@ const MainArea = () => {
                 <TableBetWild />
             </div>
 
-            <div style={{ height: '100%', maxHeight: '17rem' }}>
+            <div style={{ height: '100%', maxHeight: '17rem', opacity: gameNewSet ? '0.6' : '1' }}>
                 <RoadMap activeColumns={18} />
             </div>
         </div>
