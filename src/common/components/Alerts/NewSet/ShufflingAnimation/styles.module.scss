@@ -1,0 +1,59 @@
+.container {
+    position: absolute;
+
+    width: 10rem;
+    height: 10rem;
+
+    animation: fadein 0.45s linear forwards;
+
+    &.disapear {
+        animation: fadeout 0.45s linear forwards;
+    }
+}
+
+.mobile-portrait {
+    &.container {
+        left: 50%;
+        bottom: calc(var(--height-footer) + 9.4rem);
+        translate: -50% 0;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    80% {
+        scale: 1;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    80% {
+        scale: 0;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0;
+    }
+}
