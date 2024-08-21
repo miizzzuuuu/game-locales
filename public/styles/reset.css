@@ -46,6 +46,7 @@ ol[role='list'] {
 body {
     min-height: 100vh;
     font-family: 'Manrope', sans-serif;
+    font-optical-sizing: auto;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: inherit;
