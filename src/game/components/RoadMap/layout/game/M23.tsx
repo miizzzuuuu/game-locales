@@ -364,7 +364,7 @@ export default class M23 extends BaseV2Roadmap {
 				startingCol = 1;
 				break;
 			case "small-road":
-				startingX = 7.05873 * (this.props.totalColumns! + 2) - 7.05873;
+				startingX = 7.05873 * (this.props.totalColumns! + 2) + 7.05873;
 				redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} ></circle>;
 				blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} ></circle>;
 
@@ -373,7 +373,7 @@ export default class M23 extends BaseV2Roadmap {
 				startingCol = 2;
 				break;
 			case "cockroach-road":
-				startingX = 7.05873 * (this.props.totalColumns! * 2 + 2) - (8.05873);
+				startingX = 7.05873 * (this.props.totalColumns! * 2 + 2) + (8.05873);
 				const startXCoach = startingX;
 				redElement = (props) => <path
 					stroke={this.redColor}
