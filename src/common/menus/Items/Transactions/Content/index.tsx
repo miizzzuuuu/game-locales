@@ -1,9 +1,8 @@
-import {  useState, useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import styles from './styles.module.scss';
 import Tabs from '../Tabs';
 import Today from '../Today';
 import Previous from '../Previous';
-
 
 export type TabTransactions = 'today' | 'previous';
 
@@ -17,21 +16,13 @@ const Content = () => {
         });
     }
 
-
     return (
         <>
             <Tabs activeTab={tab} setActiveTab={selectTab} />
 
             <div className={styles['menu-history-main']}>
-                {
-                    <>
-                        {tab === 'today' && <Today />}
-                        {/* @ts-ignore */}
-                        {tab === 'previous' &&  <Previous />}
-                    </>
-
-                }
-
+                {tab === 'today' && <Today />}
+                {tab === 'previous' && <Previous />}
             </div>
         </>
     );
