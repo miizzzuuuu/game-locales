@@ -16,6 +16,7 @@ export type LoadNewValueData = {
     pcode: string; // "pcode":"m43",
     timer: string; // "timer":"30",
     periode: number; // "periode":7011
+    shoePeriode?: string;
 };
 
 export type CloseTimerData = {

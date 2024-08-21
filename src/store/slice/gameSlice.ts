@@ -67,8 +67,8 @@ const gameSlice = createSlice({
         setNewSet: (state, action: PayloadAction<boolean>) => {
             state.newSet = action.payload;
         },
-        updateGameSet: (state, action: PayloadAction<number>) => {
-            state.shoePeriode = state.shoePeriode.replace(/^[^-]+/, action.payload.toString());
+        updateGameSet: (state, action: PayloadAction<string>) => {
+            state.shoePeriode = action.payload;
         },
     },
 });
