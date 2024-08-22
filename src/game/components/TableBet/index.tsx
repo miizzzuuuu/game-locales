@@ -11,6 +11,7 @@ import BetText from './ButtonBet/BetText';
 import styles from './styles.module.scss';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { selectWinBets } from '../../../store/slice/resultSlice';
+import { GameHelper } from '../../../common/utils/GameHelper';
 
 const TableBet = () => {
     const tableBetRef = useRef<HTMLDivElement>(null);
@@ -34,6 +35,8 @@ const TableBet = () => {
             }
         }
     }, [betIsOpen]);
+
+    const basePcode = GameHelper.getBasePcode();
 
     return (
         <div
@@ -73,7 +76,9 @@ const TableBet = () => {
                         isWin={isWin}
                         onClick={() => placeBetHanlder(bet)}
                     >
-                        <BetColRow label={<LabelTranslate value={bet.button} keyLang="p6.bet" />} />
+                        <BetColRow
+                            label={<LabelTranslate value={bet.button} keyLang={basePcode} />}
+                        />
                     </ButtonBet>
                 );
             })}
@@ -98,7 +103,12 @@ const TableBet = () => {
                         onClick={() => placeBetHanlder(bet)}
                     >
                         <BetText
-                            label={<LabelTranslate value={bet.button.toLowerCase()} keyLang="p6" />}
+                            label={
+                                <LabelTranslate
+                                    value={bet.button.toLowerCase()}
+                                    keyLang={basePcode}
+                                />
+                            }
                         />
                     </ButtonBet>
                 );
