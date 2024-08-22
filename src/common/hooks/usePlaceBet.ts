@@ -18,7 +18,11 @@ import { BetHelper } from '../utils/BetHelper';
 import { GameHelper } from '../utils/GameHelper';
 import { StringHelper } from '../utils/StringHelper';
 
-export const usePlaceBet = () => {
+interface Params {
+    useLowerCase?: boolean | undefined;
+}
+
+export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
     const dispatch = useAppDispatch();
 
     const { t } = useAppTranslate('');
@@ -61,8 +65,19 @@ export const usePlaceBet = () => {
             const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
 
             if (oppositeBetKey && idsBetAdd.includes(oppositeBetKey)) {
-                const buttonName = t(`${basePcode}.${oppositeBetKey.split('-')[0]}`);
-                const message = t('common.bet-error-n50', { button: buttonName, other: button });
+                const opposite = oppositeBetKey.split('-')[0];
+
+                const buttonOpposite = t(
+                    `${basePcode}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
+                );
+                const buttonName = t(
+                    `${basePcode}.${useLowerCase ? button.toLowerCase() : button}`,
+                );
+
+                const message = t('common.bet-error-n50', {
+                    button: buttonOpposite,
+                    other: buttonName,
+                });
 
                 console.log('bet error', message);
                 dispatch(
@@ -96,7 +111,9 @@ export const usePlaceBet = () => {
         const chipAfterBet = getChip(bet) + activeChip;
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
-            const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
+            const buttonName = isGroup50
+                ? t(`${basePcode}.${useLowerCase ? button.toLowerCase() : button}`)
+                : button;
             const message = t('common.bet-error-min', {
                 button: buttonName,
                 value: StringHelper.formatNumber(min),
@@ -115,7 +132,9 @@ export const usePlaceBet = () => {
 
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
-            const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
+            const buttonName = isGroup50
+                ? t(`${basePcode}.${useLowerCase ? button.toLowerCase() : button}`)
+                : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,
                 value: StringHelper.formatNumber(max),
