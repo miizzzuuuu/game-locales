@@ -14,5 +14,13 @@
             "Only bets on a single number are eligible for the Lucky Number & Jackpot Number bonus system. All bets outside of single number bets will be paid normally according to the payout table.",
             "The result for one game round is only one number consisting of numbers 1 to 24. If the ball is not clearly positioned, a \"no game\" status will occur, and the dealer will spin the cage again until the result is clear."
         ]
+    },
+    "placing-a-bet": {
+        "title": "Placing A Bet",
+        "single-bet": "Bet on 1 number (Single Bet).",
+        "split-bet": "Bet on 2 numbers (Split Bet).",
+        "corner-bet": "Bet on 4 numbers (Corner Bet).",
+        "row-column-bets": "Row & Column Bets.",
+        "50-50-bet": "50-50 Bet (Small/Big, Odd/Even, Red/Black)."
     }
 }

@@ -24,6 +24,14 @@ export class TwentyFourDHelper {
         }
     }
 
+    static PAYOUT: Record<string, number> = {
+        n: 18,
+        n4: 3.75,
+        n6: 2.16,
+        n8: 1.375,
+        n12: 0.95,
+    };
+
     static bets: Record<string, Bet> = {
         'n-1': { button: '01', group: 'n' },
         'n-2': { button: '02', group: 'n' },

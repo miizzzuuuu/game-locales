@@ -14,5 +14,13 @@
             "Hanya Taruhan 1 Angka saja yang berhak mengikuti sistem Bonus Lucky Number & Jackpot Number. Semua taruhan diluar taruhan 1 Angka akan dibayar normal sesuai dengan yang ada didalam tabel pembayaran.",
             "Hasil untuk 1 putaran permainan hanyalah 1 angka yang terdiri dari angka 1 sampai 24 saja. dan jika bola tidak terposisikan dengan jelas maka \"no game\" status akan terjadi dan dealer akan memutar sangkar sekali lagi hingga hasilnya jelas."
         ]
+    },
+    "placing-a-bet": {
+        "title": "Memasang Taruhan",
+        "single-bet": "Bertaruh pada 1 angka (Taruhan Tunggal).",
+        "split-bet": "Bertaruh pada 2 angka (Taruhan Split).",
+        "corner-bet": "Bertaruh pada 4 angka (Taruhan Pojok).",
+        "row-column-bets": "Taruhan Baris & Kolom.",
+        "50-50-bet": "Taruhan 50-50 (Kecil/Besar, Ganjil/Genap, Merah/Hitam)."
     }
 }
