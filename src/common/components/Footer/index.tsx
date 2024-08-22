@@ -7,7 +7,6 @@ import {
     selectPeriod,
 } from '../../../store/slice/gameSlice';
 import { selectBalance, selectCurrency, selectNickname } from '../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../store/slice/settingsSlice';
 import { StringHelper } from '../../utils/StringHelper';
 import TotalBet from '../TotalBet';
 import UserInfo from '../UserInfo';
@@ -17,8 +16,6 @@ const Footer = () => {
     const nickname = useAppSelector(selectNickname);
     const balance = useAppSelector(selectBalance);
     const currency = useAppSelector(selectCurrency);
-
-    const lang = useAppSelector(selectLanguage);
 
     const totalBetAdd = useAppSelector(selectTotalBetAdd);
 
@@ -31,12 +28,12 @@ const Footer = () => {
         <div className={styles.footer}>
             <UserInfo
                 label={nickname}
-                value={StringHelper.formatMoneyWithCurrency(balance - totalBetAdd, currency, lang)}
+                value={StringHelper.formatCurrency(balance - totalBetAdd, currency)}
             />
             <UserInfo
                 label={`#${period}`}
                 labelSecond={gameName}
-                value={`${StringHelper.formatMoneyWithCurrency(min, currency, lang)}-${StringHelper.formatMoneyOnlyNumber(max50, lang)}`}
+                value={`${StringHelper.formatCurrency(min, currency)}-${StringHelper.formatNumber(max50)}`}
                 isRight
             />
 

@@ -1,10 +1,10 @@
 import { LangHelper } from './LangHelper';
 
 export class StringHelper {
-    static formatMoneyWithCurrency(number: number, currency: string, lang: string): string {
-        const code = LangHelper.getCountryLanguageCodes(lang);
+    static formatCurrency(number: number, currency: string): string {
+        const locale = LangHelper.getLoacale();
 
-        let result = number.toLocaleString(code, {
+        let result = number.toLocaleString(locale, {
             style: 'currency',
             currency: currency,
         });
@@ -16,9 +16,36 @@ export class StringHelper {
         return result;
     }
 
-    static formatMoneyOnlyNumber(number: number, lang: string): string {
-        const code = LangHelper.countryLanguageCodes[lang];
-        return new Intl.NumberFormat(code).format(number);
+    static formatNumber(number: number): string {
+        const locale = LangHelper.getLoacale();
+
+        return new Intl.NumberFormat(locale).format(number);
+    }
+
+    static formatedDate = (datestring: string): string => {
+        const locale = LangHelper.getLoacale();
+
+        const date = new Date(datestring);
+        return date.toLocaleString(locale, { hour12: false });
+    };
+
+    static formatDateByLocale(
+        dateString: string,
+        weekday: 'long' | 'short' | 'narrow' | undefined = 'long',
+        month: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow' | undefined = 'long',
+    ) {
+        const locale = LangHelper.getLoacale();
+
+        const date = new Date(dateString);
+        const options: Intl.DateTimeFormatOptions = {
+            weekday: weekday,
+            year: 'numeric',
+            month: month,
+            day: 'numeric',
+            hour12: false,
+        };
+
+        return new Intl.DateTimeFormat(locale, options).format(date);
     }
 
     static formatChipText(value: number): string {

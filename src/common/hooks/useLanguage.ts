@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { selectLanguage } from '../../store/slice/settingsSlice';
 import { useAppSelector } from '../../store/hooks';
+import { LangHelper } from '../utils/LangHelper';
 
 export const useLanguage = () => {
     const lang = useAppSelector(selectLanguage);
@@ -10,5 +11,6 @@ export const useLanguage = () => {
 
     useEffect(() => {
         i18n.changeLanguage(lang);
+        LangHelper.activeLang = lang;
     }, [lang]);
 };

@@ -7,13 +7,11 @@ import {
     selectPeriod,
 } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 
 import './styles.scss';
 
 const MenuPayoutTop = () => {
     const currency = useAppSelector(selectCurrency);
-    const lang = useAppSelector(selectLanguage);
 
     const gameName = useAppSelector(selectGameName);
     const period = useAppSelector(selectPeriod);
@@ -28,8 +26,7 @@ const MenuPayoutTop = () => {
             </div>
 
             <span className="menu-payout-top-bottom">
-                {StringHelper.formatMoneyWithCurrency(min, currency, lang)} -{' '}
-                {StringHelper.formatMoneyOnlyNumber(max50, lang)}
+                {StringHelper.formatCurrency(min, currency)} - {StringHelper.formatNumber(max50)}
             </span>
         </div>
     );

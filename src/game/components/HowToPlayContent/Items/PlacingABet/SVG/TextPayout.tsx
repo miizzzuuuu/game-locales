@@ -1,6 +1,4 @@
 import { SVGProps } from 'react';
-import { useAppSelector } from '../../../../../../store/hooks';
-import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 import { StringHelper } from '../../../../../../common/utils/StringHelper';
 import { TwentyFourDHelper } from '../../../../../utils/TwentyFourDHelper';
 
@@ -10,8 +8,6 @@ interface TextPayoutProps {
 }
 
 const TextPayout = ({ group, tSpanAttributes }: TextPayoutProps) => {
-    const lang = useAppSelector(selectLanguage);
-
     return (
         <text
             fill="white"
@@ -22,7 +18,7 @@ const TextPayout = ({ group, tSpanAttributes }: TextPayoutProps) => {
             letterSpacing="-0.02em"
         >
             <tspan {...tSpanAttributes}>
-                {StringHelper.formatMoneyOnlyNumber(TwentyFourDHelper.PAYOUT[group], lang)}:1
+                {StringHelper.formatNumber(TwentyFourDHelper.PAYOUT[group])}:1
             </tspan>
         </text>
     );

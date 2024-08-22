@@ -11,7 +11,6 @@ import { selectActiveChip } from '../../store/slice/chipSlice';
 import { selectMax, selectMax50, selectMin, selectMin50 } from '../../store/slice/gameSlice';
 import { setMessage } from '../../store/slice/gameStateSlice';
 import { selectBalance } from '../../store/slice/playerSlice';
-import { selectLanguage } from '../../store/slice/settingsSlice';
 
 import { selectBetIsOpen } from '../../store/slice/timerSlice';
 import { Bet } from '../../types';
@@ -25,8 +24,6 @@ export const usePlaceBet = () => {
     const { t } = useAppTranslate('');
 
     const activeChip = useAppSelector(selectActiveChip);
-
-    const lang = useAppSelector(selectLanguage);
 
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const balance = useAppSelector(selectBalance);
@@ -102,7 +99,7 @@ export const usePlaceBet = () => {
             const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
             const message = t('common.bet-error-min', {
                 button: buttonName,
-                value: StringHelper.formatMoneyOnlyNumber(min, lang),
+                value: StringHelper.formatNumber(min),
             });
 
             console.log('bet error', message);
@@ -121,7 +118,7 @@ export const usePlaceBet = () => {
             const buttonName = isGroup50 ? t(`${basePcode}.${button}`) : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,
-                value: StringHelper.formatMoneyOnlyNumber(max, lang),
+                value: StringHelper.formatNumber(max),
             });
 
             console.log('bet error', message);
