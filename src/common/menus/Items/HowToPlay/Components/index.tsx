@@ -8,6 +8,7 @@ interface IProps {
     value: string;
     option?: TOptions;
     className?: string;
+    multiLine?: boolean;
 }
 
 interface ContainerProps {
@@ -26,7 +27,7 @@ export const Container = ({ children, className }: ContainerProps) => {
     );
 };
 
-export const Heading2 = ({ keyLang, className, value, option }: IProps) => {
+export const Heading2 = ({ keyLang, className, value, option, multiLine }: IProps) => {
     return (
         <LabelTranslate
             type="h2"
@@ -34,17 +35,32 @@ export const Heading2 = ({ keyLang, className, value, option }: IProps) => {
             keyLang={keyLang}
             value={value}
             option={option}
+            multiLine={multiLine}
         />
     );
 };
 
-export const P = ({ keyLang, className, value, option }: IProps) => {
+export const Heading3 = ({ keyLang, className, value, option, multiLine }: IProps) => {
+    return (
+        <LabelTranslate
+            type="h2"
+            className={`${styles['heading-3']}${className ? ` ${className}` : ''}`}
+            keyLang={keyLang}
+            value={value}
+            option={option}
+            multiLine={multiLine}
+        />
+    );
+};
+
+export const P = ({ keyLang, className, value, option, multiLine }: IProps) => {
     return (
         <LabelTranslate
             keyLang={keyLang}
             className={`${styles['text-htp']}${className ? ` ${className}` : ''}`}
             value={value}
             option={option}
+            multiLine={multiLine}
         />
     );
 };
