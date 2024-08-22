@@ -22,5 +22,45 @@
         "corner-bet": "Bet on 4 numbers (Corner Bet).",
         "row-column-bets": "Row & Column Bets.",
         "50-50-bet": "50-50 Bet (Small/Big, Odd/Even, Red/Black)."
+    },
+    "bonus-system": {
+        "title": "Bonus System",
+        "introduction": {
+            "heading": "INTRODUCTION",
+            "content": "In each round of the game, the system will randomly determine which numbers will be selected into the Lucky Number & Jackpot Number categories. Numbers that have been selected as Lucky Numbers or Jackpot Numbers will automatically have their payouts increased drastically. Numbers that have been selected as Jackpot Numbers will no longer be selected as Lucky Numbers, and vice versa."
+        },
+        "lucky-numbers": {
+            "heading": "LUCKY NUMBERS",
+            "content": "In each round of the game, the system will randomly select {{minNumbers}} to {{maxNumbers}} numbers which will become Lucky Numbers. For each Lucky Number selected, the payout will increase drastically above the normal payout. The smallest Lucky Number bonus will get {{minMultiplier}}x your bet and can reach {{maxMultiplier}}x your bet."
+        },
+        "jackpot-number": {
+            "heading": "JACKPOT NUMBER",
+            "content": "In each round of the game, the system will also randomly select 1 number which will be the Jackpot Number. The selected number becomes the Jackpot Number, and the payout will increase more drastically above the Lucky Number Bonus payout. The chance of winning this Jackpot Number is as small as {{minJackpotMultiplier}}x your bet and can reach {{maxJackpotMultiplier}}x your bet."
+        },
+        "how-to-get-bonuses": {
+            "heading": "HOW TO GET BONUSES",
+            "content": "To get this bonus, you have to place a bet on the right number and the result of the game for that round must also match the number you placed."
+        },
+        "example-1": {
+            "title": "Example 1: Win Lucky Number Bonus",
+            "period": "Period {{period}}",
+            "description": "You place a bet on the numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Lucky Number Prize = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Example 2: Win Jackpot Number Bonus",
+            "period": "Period {{period}}",
+            "description": "You place a bet on the numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Jackpot Prize = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Example 3: Win Normal 1 Number Bet",
+            "period": "Period {{period}}",
+            "description": "You placed a bet on numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Normal Prize = {{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
     }
 }

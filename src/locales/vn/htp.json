@@ -22,5 +22,45 @@
         "corner-bet": "Cược vào 4 số (Cược góc).",
         "row-column-bets": "Cược hàng & cột.",
         "50-50-bet": "Cược 50-50 (Nhỏ/Lớn, Lẻ/Chẵn, Đỏ/Đen)."
+    },
+    "bonus-system": {
+        "title": "Hệ Thống Thưởng",
+        "introduction": {
+            "heading": "GIỚI THIỆU",
+            "content": "Trong mỗi vòng chơi, hệ thống sẽ ngẫu nhiên xác định các số sẽ được chọn vào các danh mục Số May Mắn & Số Jackpot. Các số được chọn làm Số May Mắn hoặc Số Jackpot sẽ tự động tăng tiền thưởng lên rất nhiều. Các số được chọn làm Số Jackpot sẽ không còn được chọn làm Số May Mắn nữa và ngược lại."
+        },
+        "lucky-numbers": {
+            "heading": "SỐ MAY MẮN",
+            "content": "Trong mỗi vòng chơi, hệ thống sẽ ngẫu nhiên chọn {{minNumbers}} đến {{maxNumbers}} số sẽ trở thành Số May Mắn. Đối với mỗi Số May Mắn được chọn, tiền thưởng sẽ tăng đáng kể so với tiền thưởng thông thường. Tiền thưởng nhỏ nhất của Số May Mắn sẽ nhận được {{minMultiplier}}x cược của bạn và có thể lên đến {{maxMultiplier}}x cược của bạn."
+        },
+        "jackpot-number": {
+            "heading": "SỐ JACKPOT",
+            "content": "Trong mỗi vòng chơi, hệ thống cũng sẽ ngẫu nhiên chọn 1 số sẽ trở thành Số Jackpot. Số được chọn trở thành Số Jackpot và tiền thưởng sẽ tăng đáng kể hơn nhiều so với tiền thưởng của Số May Mắn. Cơ hội trúng thưởng Số Jackpot này thấp nhất là {{minJackpotMultiplier}}x cược của bạn và có thể lên đến {{maxJackpotMultiplier}}x cược của bạn."
+        },
+        "how-to-get-bonuses": {
+            "heading": "CÁCH NHẬN TIỀN THƯỞNG",
+            "content": "Để nhận tiền thưởng này, bạn phải đặt cược vào số đúng và kết quả của trò chơi trong vòng đó cũng phải khớp với số bạn đã đặt cược."
+        },
+        "example-1": {
+            "title": "Ví dụ 1: Thắng Tiền Thưởng Số May Mắn",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Số May Mắn = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Ví dụ 2: Thắng Tiền Thưởng Số Jackpot",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Jackpot = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Ví dụ 3: Thắng cược số bình thường 1 số",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Thông Thường\n{{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
     }
 }

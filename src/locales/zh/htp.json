@@ -22,5 +22,45 @@
         "corner-bet": "押4个数字（角注）。",
         "row-column-bets": "行和列的投注。",
         "50-50-bet": "50-50投注（小/大，单/双，红/黑）。"
+    },
+    "bonus-system": {
+        "title": "奖金系统",
+        "introduction": {
+            "heading": "介绍",
+            "content": "在每轮游戏中，系统将随机决定哪些数字将被选为幸运号码和头奖号码。被选为幸运号码或头奖号码的数字将自动大幅增加其奖金。被选为头奖号码的数字将不再被选为幸运号码，反之亦然。"
+        },
+        "lucky-numbers": {
+            "heading": "幸运数字",
+            "content": "在每轮游戏中，系统将随机选择{{minNumbers}}至{{maxNumbers}}个数字作为幸运号码。对于每个选中的幸运号码，奖金将大幅增加，超过正常奖金。最小的幸运号码奖金将获得{{minMultiplier}}倍的投注，最高可达到{{maxMultiplier}}倍的投注。"
+        },
+        "jackpot-number": {
+            "heading": "头奖号码",
+            "content": "在每轮游戏中，系统还将随机选择1个数字作为头奖号码。被选中的数字将成为头奖号码，奖金将大幅增加，超过幸运号码奖金。赢得头奖号码的机会最低为投注的{{minJackpotMultiplier}}倍，最高可达{{maxJackpotMultiplier}}倍。"
+        },
+        "how-to-get-bonuses": {
+            "heading": "如何获得奖金",
+            "content": "要获得此奖金，您必须在正确的数字上下注，并且该轮游戏的结果还必须与您下注的数字匹配。"
+        },
+        "example-1": {
+            "title": "示例 1：赢得幸运号码奖金",
+            "period": "第{{period}}期",
+            "description": "您以每个{{bet, number}}的金额投注数字{{numbers}}。",
+            "result": "幸运号码 = {{luckyNumbers}}.\n幸运号码倍数 = x{{luckyMultiplier}}.\n头奖号码 = {{jackpotNumber}}.\n头奖号码倍数 = x{{jackpotMultiplier}}.\n游戏结果 = {{gameResult}}。",
+            "winnings": "您的奖金如下:\n投注 * 幸运号码奖金 = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}。"
+        },
+        "example-2": {
+            "title": "示例 2：赢得头奖号码奖金",
+            "period": "第{{period}}期",
+            "description": "您以每个{{bet, number}}的金额投注数字{{numbers}}。",
+            "result": "幸运号码 = {{luckyNumbers}}.\n幸运号码倍数 = x{{luckyMultiplier}}.\n头奖号码 = {{jackpotNumber}}.\n头奖号码倍数 = x{{jackpotMultiplier}}.\n游戏结果 = {{gameResult}}。",
+            "winnings": "您的奖金如下:\n投注 * 头奖奖金 = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}。"
+        },
+        "example-3": {
+            "title": "示例 3: 赢得普通单个号码投注",
+            "period": "第{{period}}期",
+            "description": "您以每个{{bet, number}}的金额投注数字{{numbers}}。",
+            "result": "幸运号码 = {{luckyNumbers}}.\n幸运号码倍数 = x{{luckyMultiplier}}.\n头奖号码 = {{jackpotNumber}}.\n头奖号码倍数 = x{{jackpotMultiplier}}.\n游戏结果 = {{gameResult}}。",
+            "winnings": "您的奖金如下:\n投注 * 普通奖\n{{bet, number}} * 19 = {{totalWinnings, number}}。"
+        }
     }
 }

@@ -1,17 +1,18 @@
 import { MenuContentContainer } from '../../../../common/menus/MenuContentContainer';
+import BonusSystem from '../Items/BonusSystem';
 import Introduction from '../Items/Introduction';
+import PlacingABet from '../Items/PlacingABet';
 import Rules from '../Items/Rules';
-import styles from './styles.module.scss';
 
-const HowToPlayContent = () => {
+const Content = () => {
     return (
-        <div className={styles.htp}>
-            <MenuContentContainer>
-                <Introduction />
-                <Rules />
-            </MenuContentContainer>
-        </div>
+        <MenuContentContainer>
+            <Introduction />
+            <Rules />
+            <PlacingABet />
+            <BonusSystem />
+        </MenuContentContainer>
     );
 };
 
-export default HowToPlayContent;
+export default Content;

@@ -22,5 +22,45 @@
         "corner-bet": "Bertaruh pada 4 angka (Taruhan Pojok).",
         "row-column-bets": "Taruhan Baris & Kolom.",
         "50-50-bet": "Taruhan 50-50 (Kecil/Besar, Ganjil/Genap, Merah/Hitam)."
+    },
+    "bonus-system": {
+        "title": "Sistem Bonus",
+        "introduction": {
+            "heading": "PENGENALAN",
+            "content": "Di dalam setiap putaran permainan, sistem akan menentukan secara acak angka mana saja yang akan terpilih ke dalam kategori Lucky Number & Jackpot Number. Angka yang sudah terpilih menjadi Lucky Number maupun Jackpot Number secara otomatis pembayarannya akan meningkat secara drastis. Angka yang sudah terpilih menjadi Jackpot Number tidak akan terpilih lagi menjadi Lucky Number , dan begitu juga sebaliknya."
+        },
+        "lucky-numbers": {
+            "heading": "LUCKY NUMBER",
+            "content": "Disetiap putaran permainan sistem akan secara acak memilih {{minNumbers}} sampai {{maxNumbers}} angka yang akan menjadi Lucky Number. Untuk setiap Lucky Number yang terpilih maka pembayaran akan meningkat secara drastis diatas bayaran normal. Lucky Number bonus sekecil kecilnya akan mendapatkan {{minMultiplier}}x Taruhan anda dan bisa mencapai {{maxMultiplier}}x Taruhan anda."
+        },
+        "jackpot-number": {
+            "heading": "JACKPOT NUMBER",
+            "content": "Disetiap putaran permainan sistem juga akan secara acak memilih 1 angka saja yang akan menjadi Jackpot Number. Angka terpilih yang menjadi Jackpot Number maka pembayaran akan meningkat secara lebih drastis diatas pembayaran Lucky Number Bonus. Kesempatan menang Jackpot Number ini sekecil kecilnya adalah {{minJackpotMultiplier}}x Taruhan anda dan bisa mencapai {{maxJackpotMultiplier}}x Taruhan anda."
+        },
+        "how-to-get-bonuses": {
+            "heading": "CARA MENDAPATKAN BONUS",
+            "content": "Untuk mendapatkan bonus ini, Anda harus memasang taruhan pada nomor yang benar dan hasil permainan untuk putaran tersebut juga harus sesuai dengan nomor yang Anda pasang."
+        },
+        "example-1": {
+            "title": "Contoh 1: Menangkan Bonus Lucky Number",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai {{bet, number}} masing-masing.",
+            "result": "Lucky Number {{luckyNumbers}}.\nLucky Number Multiplier x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan = {{gameResult}}.",
+            "winnings": "Kemenangan Anda adalah sebagai berikut:\nTaruhan * Hadiah Lucky Number {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Contoh 2: Menangkan Bonus Jackpot Number",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai {{bet, number}} masing-masing.",
+            "result": "Lucky Number {{luckyNumbers}}.\nLucky Number Multiplier x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan = {{gameResult}}.",
+            "winnings": "Kemenangan Anda adalah sebagai berikut:\nTaruhan * Hadiah Jackpot = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Contoh 3: Menang Taruhan 1 Angka Normal",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai masing-masing {{bet, number}}.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan Angka = {{gameResult}}.",
+            "winnings": "Kemenangan anda sebagai berikut:\nTaruhan * Hadiah Normal = {{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
     }
 }
