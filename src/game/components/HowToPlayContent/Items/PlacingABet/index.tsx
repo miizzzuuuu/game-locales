@@ -1,5 +1,5 @@
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
-import Heading2 from '../../../../../common/menus/Items/HowToPlay/Components';
+import { Heading2 } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
 import stylesParent from '../styles.module.scss';
 import SVGBet50 from './SVG/SVGBet50';
