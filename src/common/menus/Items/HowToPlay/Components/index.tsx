@@ -8,10 +8,21 @@ interface IProps {
     className?: string;
 }
 
+interface ContainerProps {
+    children?: ReactNode;
+    className?: string;
+}
+
 interface UlProps {
     children?: ReactNode;
     className?: string;
 }
+
+export const Container = ({ children, className }: ContainerProps) => {
+    return (
+        <div className={`${styles.container}${className ? ` ${className}` : ''}`}>{children}</div>
+    );
+};
 
 export const Heading2 = ({ keyLang, className, value }: IProps) => {
     return (

@@ -1,15 +1,14 @@
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
-import { P, Ul } from '../../../../../common/menus/Items/HowToPlay/Components';
+import { Container, P, Ul } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
 import { ArrayHelper } from '../../../../../common/utils/ArrayHelper';
-import stylesParent from '../styles.module.scss';
 
 const Rules = () => {
     const keyLang = 'htp.rules';
 
     return (
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
-            <div className={stylesParent.container}>
+            <Container>
                 <Ul>
                     {ArrayHelper.range(4).map((_, idx) => (
                         <li key={idx}>
@@ -17,7 +16,7 @@ const Rules = () => {
                         </li>
                     ))}
                 </Ul>
-            </div>
+            </Container>
         </HowToPlayCard>
     );
 };
