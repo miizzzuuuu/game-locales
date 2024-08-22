@@ -1,9 +1,13 @@
 import { SVGProps } from 'react';
+import { useAppTranslate } from '../../../../../../services/i18next/hooks';
+import { GameHelper } from '../../../../../../common/utils/GameHelper';
 // import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
 const SVGColRow = ({ className, style }: IProps) => {
+    const { t } = useAppTranslate(GameHelper.getBasePcode());
+
     return (
         <svg
             // width="200"
@@ -33,15 +37,18 @@ const SVGColRow = ({ className, style }: IProps) => {
                     strokeWidth="0.465116"
                 />
                 <text
+                    x="12.245408"
+                    y="11.046508"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
                     fill="white"
                     fontFamily="Manrope"
                     fontSize="6"
                     fontWeight="800"
                     letterSpacing="0em"
+                    style={{ textTransform: 'uppercase' }}
                 >
-                    <tspan x="3.80792" y="13.3445">
-                        KECIL
-                    </tspan>
+                    {t('small')}
                 </text>
             </g>
             <rect
@@ -651,15 +658,18 @@ const SVGColRow = ({ className, style }: IProps) => {
                     strokeWidth="0.465116"
                 />
                 <text
+                    x="187.75085"
+                    y="11.046508"
+                    textAnchor="middle"
+                    dominantBaseline="middle"
                     fill="white"
                     fontFamily="Manrope"
                     fontSize="6"
                     fontWeight="800"
                     letterSpacing="0em"
+                    style={{ textTransform: 'uppercase' }}
                 >
-                    <tspan x="178.001" y="13.3445">
-                        BESAR
-                    </tspan>
+                    {t('big')}
                 </text>
             </g>
             <rect
