@@ -1,5 +1,27 @@
 .heading-2 {
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-block: 1rem;
+    line-height: 1.2;
+}
+
+.text-htp {
+    color: #c8c9db;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+
+.htp-list {
+    padding: 0;
+    list-style: disc outside;
+    margin-left: 1.2rem;
+
+    li {
+        padding: 0.25rem 0;
+    }
+
+    p {
+        display: inline;
+    }
 }
