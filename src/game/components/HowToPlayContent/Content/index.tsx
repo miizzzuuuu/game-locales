@@ -1,4 +1,5 @@
 import { MenuContentContainer } from '../../../../common/menus/MenuContentContainer';
+import BetDescription from '../Items/BetDescription';
 import BonusSystem from '../Items/BonusSystem';
 import Introduction from '../Items/Introduction';
 import PlacingABet from '../Items/PlacingABet';
@@ -10,6 +11,7 @@ const Content = () => {
             <Introduction />
             <Rules />
             <PlacingABet />
+            <BetDescription />
             <BonusSystem />
         </MenuContentContainer>
     );

@@ -62,5 +62,129 @@
             "result": "幸运号码 = {{luckyNumbers}}.\n幸运号码倍数 = x{{luckyMultiplier}}.\n头奖号码 = {{jackpotNumber}}.\n头奖号码倍数 = x{{jackpotMultiplier}}.\n游戏结果 = {{gameResult}}。",
             "winnings": "您的奖金如下:\n投注 * 普通奖\n{{bet, number}} * 19 = {{totalWinnings, number}}。"
         }
+    },
+    "bet-description-and-example": {
+        "title": "投注说明和示例",
+        "winning-conditions": "获胜条件",
+        "bet": "投注",
+        "result": "结果",
+        "status": "状态",
+        "main-bet": {
+            "heading": "主要投注",
+            "single": {
+                "title": "单注",
+                "description": "投注一个数字",
+                "winning-conditions": "结果与您的投注匹配",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "赢" },
+                    { "bet": "1", "result": "2", "status": "输" }
+                ]
+            },
+            "split": {
+                "title": "分注",
+                "description": "投注两个垂直/水平相邻的数字",
+                "winning-conditions": "结果是您投注的两个相邻数字中的一个",
+                "examples": [
+                    { "bet": "1, 2", "result": "1", "status": "赢" },
+                    { "bet": "1, 2", "result": "3", "status": "输" }
+                ]
+            },
+            "corner": {
+                "title": "角注",
+                "description": "投注相交于一个角的四个数字",
+                "winning-conditions": "结果是您投注的四个数字中的一个",
+                "examples": [
+                    { "bet": "1, 2, 5, 6", "result": "5", "status": "赢" },
+                    { "bet": "1, 2, 5, 6", "result": "13", "status": "输" }
+                ]
+            },
+            "single-row": {
+                "title": "单行",
+                "description": "6个数字",
+                "winning-conditions": "结果位于您投注的\"单行\"中",
+                "examples": [
+                    { "bet": "第1行", "result": "5", "status": "赢" },
+                    { "bet": "第1行", "result": "6", "status": "输" }
+                ]
+            },
+            "single-column": {
+                "title": "单列",
+                "description": "4个数字",
+                "winning-conditions": "结果位于您投注的\"单列\"中",
+                "examples": [
+                    { "bet": "第1列", "result": "3", "status": "赢" },
+                    { "bet": "第1列", "result": "7", "status": "输" }
+                ]
+            },
+            "double-row": {
+                "title": "双行",
+                "description": "12个数字",
+                "winning-conditions": "结果位于您投注的\"双行\"中",
+                "examples": [
+                    { "bet": "第1-2行", "result": "14", "status": "赢" },
+                    { "bet": "第1-2行", "result": "24", "status": "输" }
+                ]
+            },
+            "double-column": {
+                "title": "双列",
+                "description": "12个数字",
+                "winning-conditions": "结果位于您投注的\"双列\"中",
+                "examples": [
+                    { "bet": "第1-2列", "result": "7", "status": "赢" },
+                    { "bet": "第1-2列", "result": "19", "status": "输" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "50-50投注",
+            "small": {
+                "title": "小",
+                "winning-conditions": "结果在1到12之间",
+                "examples": [
+                    { "bet": "小", "result": "2", "status": "赢" },
+                    { "bet": "小", "result": "13", "status": "输" }
+                ]
+            },
+            "big": {
+                "title": "大",
+                "winning-conditions": "结果在12到24之间",
+                "examples": [
+                    { "bet": "大", "result": "13", "status": "赢" },
+                    { "bet": "大", "result": "2", "status": "输" }
+                ]
+            },
+            "odd": {
+                "title": "奇数",
+                "winning-conditions": "结果是一个奇数",
+                "examples": [
+                    { "bet": "奇数", "result": "13", "status": "赢" },
+                    { "bet": "奇数", "result": "12", "status": "输" }
+                ]
+            },
+            "even": {
+                "title": "偶数",
+                "winning-conditions": "结果是一个偶数",
+                "examples": [
+                    { "bet": "偶数", "result": "12", "status": "赢" },
+                    { "bet": "偶数", "result": "13", "status": "输" }
+                ]
+            },
+            "red": {
+                "title": "红色",
+                "winning-conditions": "结果是红色",
+                "examples": [
+                    { "bet": "红色", "result": "10", "status": "赢" },
+                    { "bet": "红色", "result": "14", "status": "输" }
+                ]
+            },
+            "black": {
+                "title": "黑色",
+                "winning-conditions": "结果是黑色",
+                "examples": [
+                    { "bet": "黑色", "result": "12", "status": "赢" },
+                    { "bet": "黑色", "result": "13", "status": "输" }
+                ]
+            }
+        }
     }
 }

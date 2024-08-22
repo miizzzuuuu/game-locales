@@ -62,5 +62,129 @@
             "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
             "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Thông Thường\n{{bet, number}} * 19 = {{totalWinnings, number}}."
         }
+    },
+    "bet-description-and-example": {
+        "title": "Mô tả và Ví dụ về Cược",
+        "winning-conditions": "Điều kiện Thắng",
+        "bet": "CƯỢC",
+        "result": "KẾT QUẢ",
+        "status": "TRẠNG THÁI",
+        "main-bet": {
+            "heading": "Cược Chính",
+            "single": {
+                "title": "Cược Đơn",
+                "description": "Cược vào một số",
+                "winning-conditions": "Kết quả khớp với cược của bạn",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "THẮNG" },
+                    { "bet": "1", "result": "2", "status": "THUA" }
+                ]
+            },
+            "split": {
+                "title": "Cược Đôi",
+                "description": "Cược vào hai số liền kề theo chiều dọc/ngang",
+                "winning-conditions": "Kết quả là một trong hai số bạn đã đặt cược",
+                "examples": [
+                    { "bet": "1, 2", "result": "1", "status": "THẮNG" },
+                    { "bet": "1, 2", "result": "3", "status": "THUA" }
+                ]
+            },
+            "corner": {
+                "title": "Cược Góc",
+                "description": "Cược vào bốn số gặp nhau ở một góc",
+                "winning-conditions": "Kết quả là một trong bốn số bạn đã đặt cược",
+                "examples": [
+                    { "bet": "1, 2, 5, 6", "result": "5", "status": "THẮNG" },
+                    { "bet": "1, 2, 5, 6", "result": "13", "status": "THUA" }
+                ]
+            },
+            "single-row": {
+                "title": "Hàng Đơn",
+                "description": "6 số",
+                "winning-conditions": "Kết quả nằm trong \"Hàng Đơn\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Hàng 1", "result": "5", "status": "THẮNG" },
+                    { "bet": "Hàng 1", "result": "6", "status": "THUA" }
+                ]
+            },
+            "single-column": {
+                "title": "Cột Đơn",
+                "description": "4 số",
+                "winning-conditions": "Kết quả nằm trong \"Cột Đơn\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Cột 1", "result": "3", "status": "THẮNG" },
+                    { "bet": "Cột 1", "result": "7", "status": "THUA" }
+                ]
+            },
+            "double-row": {
+                "title": "Hàng Đôi",
+                "description": "12 số",
+                "winning-conditions": "Kết quả nằm trong \"Hàng Đôi\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Hàng 1-2", "result": "14", "status": "THẮNG" },
+                    { "bet": "Hàng 1-2", "result": "24", "status": "THUA" }
+                ]
+            },
+            "double-column": {
+                "title": "Cột Đôi",
+                "description": "12 số",
+                "winning-conditions": "Kết quả nằm trong \"Cột Đôi\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Cột 1-2", "result": "7", "status": "THẮNG" },
+                    { "bet": "Cột 1-2", "result": "19", "status": "THUA" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "Cược 50-50",
+            "small": {
+                "title": "Nhỏ",
+                "winning-conditions": "Kết quả từ 1 đến 12",
+                "examples": [
+                    { "bet": "Nhỏ", "result": "2", "status": "THẮNG" },
+                    { "bet": "Nhỏ", "result": "13", "status": "THUA" }
+                ]
+            },
+            "big": {
+                "title": "Lớn",
+                "winning-conditions": "Kết quả từ 12 đến 24",
+                "examples": [
+                    { "bet": "Lớn", "result": "13", "status": "THẮNG" },
+                    { "bet": "Lớn", "result": "2", "status": "THUA" }
+                ]
+            },
+            "odd": {
+                "title": "Lẻ",
+                "winning-conditions": "Kết quả là số lẻ",
+                "examples": [
+                    { "bet": "Lẻ", "result": "13", "status": "THẮNG" },
+                    { "bet": "Lẻ", "result": "12", "status": "THUA" }
+                ]
+            },
+            "even": {
+                "title": "Chẵn",
+                "winning-conditions": "Kết quả là số chẵn",
+                "examples": [
+                    { "bet": "Chẵn", "result": "12", "status": "THẮNG" },
+                    { "bet": "Chẵn", "result": "13", "status": "THUA" }
+                ]
+            },
+            "red": {
+                "title": "Đỏ",
+                "winning-conditions": "Kết quả là màu đỏ",
+                "examples": [
+                    { "bet": "Đỏ", "result": "10", "status": "THẮNG" },
+                    { "bet": "Đỏ", "result": "14", "status": "THUA" }
+                ]
+            },
+            "black": {
+                "title": "Đen",
+                "winning-conditions": "Kết quả là màu đen",
+                "examples": [
+                    { "bet": "Đen", "result": "12", "status": "THẮNG" },
+                    { "bet": "Đen", "result": "13", "status": "THUA" }
+                ]
+            }
+        }
     }
 }

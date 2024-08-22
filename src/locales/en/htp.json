@@ -62,5 +62,129 @@
             "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
             "winnings": "Your winnings are as follows:\nBet * Normal Prize = {{bet, number}} * 19 = {{totalWinnings, number}}."
         }
+    },
+    "bet-description-and-example": {
+        "title": "Bet Description and Example",
+        "winning-conditions": "Winning Conditions",
+        "bet": "BET",
+        "result": "RESULT",
+        "status": "STATUS",
+        "main-bet": {
+            "heading": "Main Bet",
+            "single": {
+                "title": "Single",
+                "description": "Bet on one number",
+                "winning-conditions": "The result matches your bet",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "WIN" },
+                    { "bet": "1", "result": "2", "status": "LOSE" }
+                ]
+            },
+            "split": {
+                "title": "Split",
+                "description": "Bet on two adjacent numbers vertically/horizontally",
+                "winning-conditions": "The result is 1 of the 2 adjacent numbers you bet",
+                "examples": [
+                    { "bet": "1, 2", "result": "1", "status": "WIN" },
+                    { "bet": "1, 2", "result": "3", "status": "LOSE" }
+                ]
+            },
+            "corner": {
+                "title": "Corner",
+                "description": "Bet on four numbers meeting in one corner",
+                "winning-conditions": "The result is 1 of the 4 numbers you bet",
+                "examples": [
+                    { "bet": "1, 2, 5, 6", "result": "5", "status": "WIN" },
+                    { "bet": "1, 2, 5, 6", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "single-row": {
+                "title": "Single Row",
+                "description": "6 numbers",
+                "winning-conditions": "The result is in the \"Single Row\" you bet",
+                "examples": [
+                    { "bet": "Row 1", "result": "5", "status": "WIN" },
+                    { "bet": "Row 1", "result": "6", "status": "LOSE" }
+                ]
+            },
+            "single-column": {
+                "title": "Single Column",
+                "description": "4 numbers",
+                "winning-conditions": "The result is in the \"Single Column\" you bet",
+                "examples": [
+                    { "bet": "Column 1", "result": "3", "status": "WIN" },
+                    { "bet": "Column 1", "result": "7", "status": "LOSE" }
+                ]
+            },
+            "double-row": {
+                "title": "Double Row",
+                "description": "12 numbers",
+                "winning-conditions": "The result is in the \"Double Row\" you bet",
+                "examples": [
+                    { "bet": "Row 1-2", "result": "14", "status": "WIN" },
+                    { "bet": "Row 1-2", "result": "24", "status": "LOSE" }
+                ]
+            },
+            "double-column": {
+                "title": "Double Column",
+                "description": "12 numbers",
+                "winning-conditions": "The result is in the \"Double Column\" you bet",
+                "examples": [
+                    { "bet": "Column 1-2", "result": "7", "status": "WIN" },
+                    { "bet": "Column 1-2", "result": "19", "status": "LOSE" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "50-50 Bet",
+            "small": {
+                "title": "Small",
+                "winning-conditions": "The result is from 1 to 12",
+                "examples": [
+                    { "bet": "Small", "result": "2", "status": "WIN" },
+                    { "bet": "Small", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "big": {
+                "title": "Big",
+                "winning-conditions": "The result is from 12 to 24",
+                "examples": [
+                    { "bet": "Big", "result": "13", "status": "WIN" },
+                    { "bet": "Big", "result": "2", "status": "LOSE" }
+                ]
+            },
+            "odd": {
+                "title": "Odd",
+                "winning-conditions": "The result is an odd number",
+                "examples": [
+                    { "bet": "Odd", "result": "13", "status": "WIN" },
+                    { "bet": "Odd", "result": "12", "status": "LOSE" }
+                ]
+            },
+            "even": {
+                "title": "Even",
+                "winning-conditions": "The result is an even number",
+                "examples": [
+                    { "bet": "Even", "result": "12", "status": "WIN" },
+                    { "bet": "Even", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "red": {
+                "title": "Red",
+                "winning-conditions": "The result is red",
+                "examples": [
+                    { "bet": "Red", "result": "10", "status": "WIN" },
+                    { "bet": "Red", "result": "14", "status": "LOSE" }
+                ]
+            },
+            "black": {
+                "title": "Black",
+                "winning-conditions": "The result is black",
+                "examples": [
+                    { "bet": "Black", "result": "12", "status": "WIN" },
+                    { "bet": "Black", "result": "13", "status": "LOSE" }
+                ]
+            }
+        }
     }
 }

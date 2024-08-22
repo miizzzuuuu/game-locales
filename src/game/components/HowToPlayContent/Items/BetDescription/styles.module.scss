@@ -1,0 +1,75 @@
+.h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-block: 1rem;
+    line-height: 1.2;
+}
+
+.bet-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.bet-card {
+    border-radius: 0.5rem;
+    border: 0.1rem solid #414362;
+    background: #2f314a;
+    padding: 1rem 0.8rem;
+}
+
+.bet-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.winning-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.example-table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.example-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead tr {
+        border: 0.1rem solid #414362;
+        background: #1d1f2e;
+        text-transform: uppercase;
+    }
+
+    tbody tr {
+        border: 0.1rem solid #414362;
+        background: #272a3f;
+    }
+
+    th,
+    td {
+        padding: 0.8rem 0.4rem;
+    }
+
+    td {
+        text-align: center;
+    }
+}
+
+.win {
+    color: #54d725;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.lose {
+    color: #e0326f;
+    text-transform: uppercase;
+    font-weight: 500;
+}
