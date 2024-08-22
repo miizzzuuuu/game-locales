@@ -16,7 +16,6 @@ import { selectBetIsOpen } from '../../store/slice/timerSlice';
 import { Bet } from '../../types';
 import { BetHelper } from '../utils/BetHelper';
 import { GameHelper } from '../utils/GameHelper';
-import { StringHelper } from '../utils/StringHelper';
 
 interface Params {
     useLowerCase?: boolean | undefined;
@@ -116,7 +115,7 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
                 : button;
             const message = t('common.bet-error-min', {
                 button: buttonName,
-                value: StringHelper.formatNumber(min),
+                value: min,
             });
 
             console.log('bet error', message);
@@ -137,7 +136,7 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
                 : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,
-                value: StringHelper.formatNumber(max),
+                value: max,
             });
 
             console.log('bet error', message);
