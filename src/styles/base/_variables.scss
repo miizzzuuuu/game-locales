@@ -13,11 +13,11 @@
     // portrait, blur di bawah streaming 1
     --streaming-color-2: linear-gradient(
         180deg,
-        rgba(255, 116, 0, 0) 0%,
+        rgba(255, 116, 0, 0) 10%,
         rgba(255, 116, 0, 0.5) 100%
     );
     // portrait, blur di bawah streaming 2
-    --streaming-color-3: linear-gradient(180deg, rgba(255, 116, 0, 0) 0%, #ff7401 100%);
+    --streaming-color-3: linear-gradient(180deg, rgba(255, 116, 0, 0) 75%, #ff7401 100%);
 
     // landscape, bawah
     --streaming-color-4: linear-gradient(to right, rgba(14, 11, 8, 0.8) 0%, transparent 100%);
