@@ -10,6 +10,7 @@ import SuperWildBetButton from './SuperWildBetButton';
 import { useAppSelector } from '../../../store/hooks';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { RenderCard } from './RenderCard/RenderCard';
 
 export type FadeStatus =
     | "fadeInUp"
@@ -61,7 +62,6 @@ const TableBetWild = () => {
                         isLose={scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.wild_value && scanNumber.wild_value > scanNumber.tiger_value)}
                         isSubmit={scanNumber && scanNumber.submit}
                         chipCanBlinking
-                        rounded='bottom-left'
                         startColor='#F30049'
                         endColor='#59001B'
                         borderColor='#BD043C'
@@ -198,7 +198,7 @@ const TableBetWild = () => {
                                     </linearGradient>
                                 </defs>
                             </svg>
-                            }
+                        }
                     />
                 </div>
 
@@ -212,7 +212,6 @@ const TableBetWild = () => {
                         isSubmit={scanNumber && scanNumber.submit}
                         ratio='11:1'
                         chipCanBlinking
-                        rounded='bottom-left'
                         startColor='#F30049'
                         endColor='#59001B'
                         borderColor='#BD043C'
@@ -290,71 +289,72 @@ const TableBetWild = () => {
                         endColor='#F30049'
                         borderColor='#BD043C'
                         ratio='11:1'
-                        bgSvg={(isWin) =>   <svg
+                        bgSvg={(isWin) => <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="100%"
                             fill="none"
                             viewBox="0 0 171 38"
-                          >
+                        >
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                              fill="url(#paint0_linear_12_584)"
-                              stroke="#FFB72C"
-                              d="M170.5 37.5H41.43C30.199 28.412 15.992 22.854.5 22.516V2A1.5 1.5 0 012 .5h168.5v37z"
+                                fill="url(#paint0_linear_12_584)"
+                                stroke="#FFB72C"
+                                d="M170.5 37.5H41.43C30.199 28.412 15.992 22.854.5 22.516V2A1.5 1.5 0 012 .5h168.5v37z"
                             ></path>
                             <path
                                 className={[isWin ? "table-win-blink" : ""].join(" ")}
-                              fill="#D69729"
-                              d="M41.253 38C29.965 28.817 15.63 23.236 0 23.007v-5c18.928.258 36.09 7.819 48.8 19.993h-7.547z"
+                                fill="#D69729"
+                                d="M41.253 38C29.965 28.817 15.63 23.236 0 23.007v-5c18.928.258 36.09 7.819 48.8 19.993h-7.547z"
                             ></path>
                             <path fill="url(#paint1_linear_12_584)" d="M160 0H171V37H160z"></path>
                             <path fill="url(#paint2_linear_12_584)" d="M160 0H171V37H160z"></path>
                             <defs>
-                              <linearGradient
-                                id="paint0_linear_12_584"
-                                x1="171"
-                                x2="0"
-                                y1="24"
-                                y2="24"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop stopColor="#8C5400"></stop>
-                                <stop offset="1" stopColor="#FFC65B"></stop>
-                              </linearGradient>
-                              <linearGradient
-                                id="paint1_linear_12_584"
-                                x1="171"
-                                x2="160"
-                                y1="18.5"
-                                y2="18.5"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop offset="0.297" stopColor="#5A3800"></stop>
-                                <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                              </linearGradient>
-                              <linearGradient
-                                id="paint2_linear_12_584"
-                                x1="171"
-                                x2="160"
-                                y1="18.5"
-                                y2="18.5"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop offset="0.297" stopColor="#5A3800"></stop>
-                                <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
-                                <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
-                              </linearGradient>
+                                <linearGradient
+                                    id="paint0_linear_12_584"
+                                    x1="171"
+                                    x2="0"
+                                    y1="24"
+                                    y2="24"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop stopColor="#8C5400"></stop>
+                                    <stop offset="1" stopColor="#FFC65B"></stop>
+                                </linearGradient>
+                                <linearGradient
+                                    id="paint1_linear_12_584"
+                                    x1="171"
+                                    x2="160"
+                                    y1="18.5"
+                                    y2="18.5"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0.297" stopColor="#5A3800"></stop>
+                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                                </linearGradient>
+                                <linearGradient
+                                    id="paint2_linear_12_584"
+                                    x1="171"
+                                    x2="160"
+                                    y1="18.5"
+                                    y2="18.5"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop offset="0.297" stopColor="#5A3800"></stop>
+                                    <stop offset="0.668" stopColor="#5A3800" stopOpacity="0.32"></stop>
+                                    <stop offset="1" stopColor="#5A3800" stopOpacity="0"></stop>
+                                </linearGradient>
                             </defs>
-                          </svg>
-                          }
+                        </svg>
+                        }
                     />
                 </div>
             </>
         }
     }
 
-
+    const isSuperWildLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
+    const isSuperWildWin = !betIsOpen && scanNumber && scanNumber.submit && !isSuperWildLose;
 
     return <>
         <div ref={containerRef} className={[styles.tableBet, betIsOpen ? styles.open : styles.close, deviceClassName, "portrait"].join(" ")}>
@@ -376,6 +376,25 @@ const TableBetWild = () => {
                                 <TieBetButton
                                     bet={{ button: "tie", group: "tie" }}
                                 />
+                                <div
+                                    className={styles.cardContainerWild}
+
+// todo : opacit
+
+                                >
+                                    {!betIsOpen && scanNumber && <RenderCard
+                                        top={DisplayHelper.getOrientation() !== "landscape" ?  "calc(100%/2)" : "calc(100%/2)"}
+                                        left="0px"
+                                        right="0px"
+                                        opacity={!isSuperWildLose?1:0.5}
+                                        position={{ x: "3px", y: "10px" }}
+                                        rotation={{ z: "0deg" }}
+                                        value={scanNumber.wild}
+
+                                        visible={scanNumber.wild == "x" ? false : true}
+                                        submit={scanNumber.submit}
+                                    />}
+                                </div>
                             </div>
 
                             <TigerBetButton

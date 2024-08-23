@@ -49,7 +49,7 @@ $childBetM23Width : calc(98%/2);
 
 .table {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     height: 100%;
     transform: translateY(2rem);
@@ -280,28 +280,28 @@ $childBetM23Width : calc(98%/2);
     right: auto;
     left: 55px;
     transform: perspective(1000px) translate(-5px, 15px);
-    width: 24;
-    height: 31.68px;
+    width: 24%;
+    // height: 31.68px;
 }
 
 .cardContainerTiger {
     position: absolute;
     top: -25px;
-    left: auto;
-    right: 65px;
+    left: 55px;
+    right: auto;
     transform: perspective(1000px) translate(-5px, 15px);
-    width: 24;
-    height: 31.68px;
+    width: 24%;
+    // height: 31.68px;
 }
 
 .cardContainerWild {
     position: absolute;
-    bottom: 83.5%;
+    bottom: 17rem;
     right: auto;
     left: 47.5%;
     transform: perspective(1000px) translate(-5px, 15px);
-    width: 24;
-    height: 31.68px;
+    width: 24%;
+    // height: 31.68px;
 }
 
 

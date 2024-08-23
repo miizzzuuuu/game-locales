@@ -77,24 +77,7 @@ const SuperWildBetButton = (
                     )}
                 </div>
 
-                <div
-                    className={styles.cardContainerWild}
-
-
-
-                >
-                    {!betIsOpen && scanNumber && <RenderCard
-                        top="0px"
-                        left="0px"
-                        right="0px"
-                        position={{ x: "3px", y: "10px" }}
-                        rotation={{ z: "0deg" }}
-                        value={scanNumber.wild}
-
-                        visible={scanNumber.wild == "x" ? false : true}
-                        submit={scanNumber.submit}
-                    />}
-                </div>
+                
 
             </div >
 

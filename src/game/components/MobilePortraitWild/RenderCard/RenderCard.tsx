@@ -14,6 +14,7 @@ export function RenderCard(props: any) {
       style={{
         position: "absolute",
         top: `${props.top}`,
+        opacity: `${props.opacity}`,
         left: `${props.left}`,
         right: `${props.right}`,
         transform: `perspective(1000px) translate(${props.position.x}, ${props.position.y})`,
