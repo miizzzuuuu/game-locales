@@ -258,11 +258,11 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             className="card-container-item"
                             style={{
                                 height: "100%",
-                                width: `1rem`,
+                                width: `2rem`,
                                 background: "rgba(255, 255, 255, 0)",
                                 marginRight: "1.5rem",
                                 marginTop: "-0.5rem",
-                                ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "scale(0.5) translateY(-1rem)" }) : {
+                                ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "" }) : {
                                     transform: "scale(1.25)",
 
                                 })
@@ -279,36 +279,45 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                         flex: "1",
                         display: "flex",
                         alignSelf: "stretch",
-                        // padding: "12px",
                         flexDirection: "column",
                         justifyContent: "space-between",
                         alignItems: "stretch",
                         borderRadius: "4px 2px 2px 4px",
-                        // border:
-                        //     winner == "banker"
-                        //         ? "0.6px solid #F30049"
-                        //         : "0.6px solid #4C4D66",
-                        // background:
-                        //     winner == "banker"
-                        //         ? "linear-gradient(0deg, #F30049 -39.84%, rgba(243, 0, 73, 0.00) 105.47%)"
-                        //         : "linear-gradient(180deg, #42445F 0%, #2F3046 100%)",
                         position: "relative",
+                        height: "64px",
+                        minWidth: "calc(100%/3)"
                     }}
                 >
-                    {/* data.detail_result.dragon[0] == data.detail_result.tiger[0] && (data.detail_result.wild[0] == data.detail_result.tiger[0] && data.detail_result.wild[0] == data.detail_result.dragon[0])  */}
-                    {/* <div className={styles.triangle_container}> */}
+          
                     <span>
-                        <div className={styles.triangle_border_1}></div>
-                        <div className={styles.triangle_1}>
-                            <span>Super Wild</span>
+                        <div className={[styles.triangle_border_1, (data.detail_result.wild[0] == data.detail_result.dragon[0] && data.detail_result.wild[0]  == data.detail_result.tiger[0] ?styles.win:"")].join(" ")}></div>
+                        <div className={[styles.triangle_1,  (data.detail_result.wild[0] == data.detail_result.dragon[0] && data.detail_result.wild[0]  == data.detail_result.tiger[0] ?styles.win:"")].join(" ")}>
+                            <span
+                                style={{
+                                    wordSpacing: "2rem",
+                                    paddingLeft: "0.5rem",
+                                    paddingTop: "0.25rem",
+                                    width: "5rem",
+                                    display: "flex"
+                                }}
+                            >SUPER WILD</span>
                         </div>
                     </span>
 
                     <span>
-                        <div className={styles.triangle_border}>
+                        <div className={[styles.triangle_border, (data.detail_result.dragon[0] == data.detail_result.tiger[0] ?styles.win:"")].join(" ")}>
                         </div>
-                        <div className={styles.triangle}>
-                            <span>Tie</span>
+                        <div className={[styles.triangle, (data.detail_result.dragon[0] == data.detail_result.tiger[0] ?styles.win:"")].join(" ")}>
+                            <span
+                                style={{
+                                    float: "right",
+                                    wordSpacing: "2rem",
+                                    paddingLeft: "2.5rem",
+                                    paddingTop: "3.25rem",
+                                    width: "5rem",
+                                    display: "flex"
+                                }}
+                            >TIE</span>
                         </div>
                     </span>
                     <div
@@ -400,13 +409,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     <div
                         className="card-container-item"
                         style={{
-                            height: "100%",
-                            width: `${dimensions.width}px`,
+                            height: "3rem",
+                            width: `2rem`,
                             background: "rgba(255, 255, 255, 0)",
                             left: "40%",
-                            top: "40%",
+                            top: "30%",
                             position: "absolute",
-                            ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "scale(0.5) translateY(-3rem)" }) : {
+                            ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "" }) : {
                                 transform: "scale(1.25)",
 
                             })
@@ -550,11 +559,11 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             className="card-container-item"
                             style={{
                                 height: "100%",
-                                width: `1rem`,
+                                width: `2rem`,
                                 background: "rgba(255, 255, 255, 0)",
                                 marginLeft: "0.5rem",
                                 marginTop: "-0.5rem",
-                                ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "scale(0.5) translateY(-1rem)" }) : {
+                                ...(DisplayHelper.getOrientation() == "landscape" ? ({ transform: "" }) : {
                                     transform: "scale(1.25)",
 
                                 })

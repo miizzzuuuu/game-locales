@@ -75,7 +75,7 @@
 .triangle {
     position: absolute;
     bottom: 0.6px;
-    right: 0.6px;
+    right: 1.2px;
     width: calc(100% - 4.6px);
     height: calc(100% - 4.6px);
     /* Adjust to match the border width */
@@ -86,11 +86,11 @@
 }
 
 .triangle_border.win {
-    border: 0.6px solid rgba(1, 203, 167, 1)
+    background-color:  rgba(1, 203, 167, 1);
 }
 
 .triangle.win {
-    background-image: linear-gradient(0deg, #01CBA7 -13.46%, rgba(1, 203, 167, 0) 99.77%);
+    background-image: linear-gradient(0deg, #01CBA7 -13.46%, rgba(30, 31, 46, 1) 99.77%);
 
 }
 
@@ -111,7 +111,7 @@
 .triangle_1 {
     position: absolute;
     top: 0.6px;
-    left: 0.6px;
+    left: 1.2px;
     width: calc(100% - 4.6px);
     height: calc(100% - 4.6px);
     border-radius: 2px 2px 2px 2px;
@@ -121,11 +121,11 @@
 }
 
 .triangle_border_1.win {
-    border: 0.6px solid rgba(0, 164, 234, 1);
+    background-color: rgba(0, 164, 234, 1);
 }
 
 .triangle_1.win {
-    background-image: linear-gradient(0deg, #00A4EA 0.23%, rgba(0, 164, 234, 0) 122.17%);
+    background-image: linear-gradient(0deg, #00A4EA 0.23%, rgba(30, 31, 46, 1) 122.17%);
 
 }
 
