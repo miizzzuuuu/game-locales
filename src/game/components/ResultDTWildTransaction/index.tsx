@@ -409,7 +409,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     <div
                         className="card-container-item"
                         style={{
-                            height: "3rem",
+                            height: "2.5rem",
                             width: `2rem`,
                             background: "rgba(255, 255, 255, 0)",
                             left: "40%",
