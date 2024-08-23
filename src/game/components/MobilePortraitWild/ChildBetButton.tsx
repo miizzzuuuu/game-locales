@@ -57,7 +57,6 @@ const ChildBetButton = (
                 <span >
                     {ratio}
                     <div className={styles['slot-chip']}
-                    style={{ marginInline: "5%", marginTop: "3%" }}
                     >
 
                         {chip > 0 && (

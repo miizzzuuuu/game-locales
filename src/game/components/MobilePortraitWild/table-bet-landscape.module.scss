@@ -153,6 +153,8 @@ $childBetM23Width : calc(98.5%/2);
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-inline: -2%;
+    // margin-top: 3%;
 
     transform: translate(-50%, -50%) scale(0.6);
 
@@ -345,7 +347,7 @@ $childBetM23Width : calc(98.5%/2);
 
         &>span {
             &>div {
-                margin-left: 0.75rem;
+                margin-left: 0.5rem;
             }
         }
     }
@@ -373,7 +375,8 @@ $childBetM23Width : calc(98.5%/2);
 
     &>span {
         opacity: 0.75;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 1.5rem;
         text-transform: uppercase;
     }
 

@@ -153,7 +153,8 @@ $childBetM23Width : calc(98%/2);
     position: absolute;
     top: 50%;
     left: 50%;
-
+    margin-inline: 5%;
+    margin-top: 3%;
     transform: translate(-50%, -50%) scale(0.6);
 
 }
@@ -220,11 +221,12 @@ $childBetM23Width : calc(98%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     span.text_lg {
         padding-right: 1rem;
         padding-left: 1rem;
         opacity: 1;
- 
+
     }
 
     span {
@@ -239,6 +241,7 @@ $childBetM23Width : calc(98%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     span.text_lg {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -391,6 +394,7 @@ $childBetM23Width : calc(98%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     &>span.text_lg {
         opacity: 1;
     }
