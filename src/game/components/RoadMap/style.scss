@@ -11,7 +11,7 @@
 
 .roadmap-table {
     transition-duration: 500ms;
-    transition-property: transform, top, left;
+    transition-property: transform, top, left, x, y, d, cx, cy;
 }
 
 
@@ -27,22 +27,22 @@
 
 
     &.full.col-8 {
-        transform: translate(-145px, -145px) scale(2) !important;
+        transform: translate(-4px, -145px) scale(2) !important;
 
     }
 
     &.full.col-10 {
-        transform: translate(-145px, -145px) scale(2) !important;
+        transform: translate(-4px, -145px) scale(2) !important;
 
     }
     
     &.full.col-12 {
-        transform: translate(-145px, -145px) scale(2) !important;
+        transform: translate(-4px, -145px) scale(2) !important;
 
     }
 
     &.full.col-14 {
-        transform: translate(-145px, -145px) scale(2) !important;
+        transform: translate(-4px, -145px) scale(2) !important;
 
     }
 }
@@ -52,22 +52,22 @@
 
 
     &.full.col-8 {
-        transform: translate(-285px,-144px) scale(2)!important
+        transform: translate(-4px,-144px) scale(2)!important
 
     }
 
     &.full.col-10 {
-        transform: translate(-145px, -144px) scale(2) !important;
+        transform: translate(-4px, -144px) scale(2) !important;
 
     }
     
     &.full.col-12 {
-        transform: translate(-145px, -144px) scale(2) !important;
+        transform: translate(-4px, -144px) scale(2) !important;
 
     }
 
     &.full.col-14 {
-        transform: translate(-145px, -144px) scale(2) !important;
+        transform: translate(-4px, -144px) scale(2) !important;
 
     }
 }

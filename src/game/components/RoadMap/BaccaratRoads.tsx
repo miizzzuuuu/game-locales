@@ -8,7 +8,6 @@ import { useAppSelector } from '../../../store/hooks';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { GameHelper } from '../../../common/utils/GameHelper';
 import M27 from './layout/game/M27';
-import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { BaccaratGrid } from './layout/base/BaccaratGrid';
 import { ShiofightGrid } from './layout/base/ShiofightGrid';
 
@@ -127,7 +126,7 @@ function BaccaratRoads(props: IProps) {
 
                     </div>
                     <div className="roadmap-container">
-                        <GameRoadmap.grid.b col={24} stroke={darkMode ? "#595A77" : "#F4F4F4"} >
+                        <GameRoadmap.grid.b col={activeColumns} stroke={darkMode ? "#595A77" : "#F4F4F4"} >
                             <GameRoadmap.layout
                                 {...{ historyBlink, darkMode }}
                                 history={data}
@@ -135,8 +134,7 @@ function BaccaratRoads(props: IProps) {
                                 isLandscape={isLandscape}
                                 onClick={() => handleClick("")}
                                 type={GameRoadmap.rightType}
-                                totalColumns={24}
-
+                                totalColumns={dataColumns[activeColumns]}
                             />
                         </GameRoadmap.grid.b>
                     </div>
