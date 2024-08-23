@@ -59,7 +59,7 @@ const MainArea = () => {
                     <Panel
                         className={`landscape-top-board ${showPatternUI == true ? 'open' : 'close'}`}
                     >
-                        <RoadMap activeColumns={21} isLandscape={true} />
+                        <RoadMap activeColumns={18} isLandscape={true} />
                     </Panel>
                     {/* <Panel className="landscape-center-board">
                         <TableBetWild />
@@ -102,7 +102,7 @@ const MainArea = () => {
             </div>
 
             <div style={{ height: '100%', maxHeight: '17rem', opacity: gameNewSet ? '0.6' : '1' }}>
-                <RoadMap activeColumns={18} />
+                <RoadMap activeColumns={21} />
             </div>
         </div>
     );
