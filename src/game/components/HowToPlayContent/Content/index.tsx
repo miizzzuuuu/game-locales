@@ -2,6 +2,7 @@ import { MenuContentContainer } from '../../../../common/menus/MenuContentContai
 import BetDescription from '../Items/BetDescription';
 import BonusSystem from '../Items/BonusSystem';
 import Introduction from '../Items/Introduction';
+import Payout from '../Items/Payout';
 import PlacingABet from '../Items/PlacingABet';
 import Rules from '../Items/Rules';
 
@@ -13,6 +14,7 @@ const Content = () => {
             <PlacingABet />
             <BetDescription />
             <BonusSystem />
+            <Payout />
         </MenuContentContainer>
     );
 };

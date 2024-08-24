@@ -4,6 +4,7 @@ import MenuPayoutNote from './MenuPayoutNote';
 import TableMenuPayout from './TableMenuPayout';
 import { useFetchPayout } from '../../../../hooks/useFetchPayout';
 import { useState } from 'react';
+import Loading from '../../../../components/Loading';
 
 const PayoutContent = () => {
     const { loading, data } = useFetchPayout();
@@ -14,13 +15,7 @@ const PayoutContent = () => {
             <MenuPayoutTop />
 
             <div className={styles['table-wrapper']}>
-                {loading ? (
-                    <div className={styles.loading}>
-                        <p className={styles['loading-text']}>Loading...</p>
-                    </div>
-                ) : (
-                    <TableMenuPayout data={data} />
-                )}
+                {loading ? <Loading /> : <TableMenuPayout data={data} />}
             </div>
 
             {showPayoutNote && <MenuPayoutNote />}
