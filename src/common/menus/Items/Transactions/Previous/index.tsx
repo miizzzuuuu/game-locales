@@ -6,17 +6,13 @@ import styles from './styles.module.scss';
 
 import { useFetchTransaction } from '../hooks/useFetchTransaction';
 import ContentEmpty from '../ContentEmpty';
-import { useAppSelector } from '../../../../../store/hooks';
-import { selectLanguage } from '../../../../../store/slice/settingsSlice';
 import { TransactionHelper } from '../../../../utils/TransactionHelper';
 import LabelTranslate from '../../../../components/LabelTranslate';
-import { LangHelper } from '../../../../utils/LangHelper';
+import { StringHelper } from '../../../../utils/StringHelper';
 
 const Previous = () => {
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'before' });
     const groupTransaction = TransactionHelper.groupTransactionsByDate(transactionData);
-
-    const lang = useAppSelector(selectLanguage);
 
     return (
         <div className={styles.container}>
@@ -29,7 +25,7 @@ const Previous = () => {
                     return (
                         <Fragment key={key}>
                             <div className={styles.date}>
-                                {LangHelper.formatDateByLocale(key, lang, 'long')}
+                                {StringHelper.formatDateByLocale(key, 'long')}
                             </div>
 
                             <CardContainer>

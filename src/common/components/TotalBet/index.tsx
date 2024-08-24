@@ -22,7 +22,7 @@ const TotalBet = () => {
                 <LabelTranslate value="total-bet" className={styles['desc']} />
 
                 <span className={styles['value']}>
-                    {StringHelper.formatMoneyOnlyNumber(totalPlaceBet + totalSendBet, 'id')}
+                    {StringHelper.formatNumber(totalPlaceBet + totalSendBet)}
                 </span>
             </div>
         </div>

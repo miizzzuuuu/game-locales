@@ -3,7 +3,6 @@ import LabelTranslate from '../../../../../components/LabelTranslate';
 import { StringHelper } from '../../../../../utils/StringHelper';
 import { useAppSelector } from '../../../../../../store/hooks';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 import { PayoutData } from '../../../../../../types';
 
 import styles from './styles.module.scss';
@@ -15,12 +14,11 @@ interface IProps {
 
 const TableMenuPayout = ({ data }: IProps) => {
     const currency = useAppSelector(selectCurrency);
-    const lang = useAppSelector(selectLanguage);
 
     const basePcode = GameHelper.getBasePcode();
 
     const formatPayout = (value: number) => {
-        return StringHelper.formatMoneyOnlyNumber(value, lang);
+        return StringHelper.formatNumber(value);
     };
 
     return (
@@ -51,8 +49,8 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     />
                                 </td>
                                 <td className="text-center text-cyan">
-                                    {StringHelper.formatMoneyWithCurrency(item.min, currency, lang)}{' '}
-                                    - {StringHelper.formatMoneyOnlyNumber(item.max, lang)}
+                                    {StringHelper.formatCurrency(item.min, currency)} -{' '}
+                                    {StringHelper.formatNumber(item.max)}
                                 </td>
                                 <td
                                     className={`${'text-center'}${item.payout ? '' : ' ' + styles.shading}`}

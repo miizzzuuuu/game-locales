@@ -7,7 +7,6 @@ import {
     selectWinAmount,
     selectWinStatus,
 } from '../../../../store/slice/resultSlice';
-import { selectLanguage } from '../../../../store/slice/settingsSlice';
 import { StringHelper } from '../../../utils/StringHelper';
 import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
@@ -15,7 +14,6 @@ import styles from './styles.module.scss';
 import { AnimationEventHandler, useEffect, useRef, useState } from 'react';
 
 const MessageYouWin = () => {
-    const lang = useAppSelector(selectLanguage);
     const currency = useAppSelector(selectCurrency);
 
     const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
@@ -140,7 +138,7 @@ const MessageYouWin = () => {
                 <LabelTranslate value="you-win" className={styles.label} />
 
                 <div className={styles.value}>
-                    {StringHelper.formatMoneyWithCurrency(displayValue, currency, lang)}
+                    {StringHelper.formatCurrency(displayValue, currency)}
                 </div>
             </div>
         </div>

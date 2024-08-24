@@ -14,5 +14,13 @@
             "Chỉ các cược vào một số duy nhất mới đủ điều kiện cho hệ thống tiền thưởng Số may mắn & Số Jackpot. Tất cả các cược ngoài cược số duy nhất sẽ được thanh toán bình thường theo bảng thanh toán.",
             "Kết quả cho một vòng chơi chỉ là một số từ 1 đến 24. Nếu bóng không được định vị rõ ràng, trạng thái \"không có trò chơi\" sẽ xảy ra và người chia bài sẽ quay lồng lại cho đến khi kết quả rõ ràng."
         ]
+    },
+    "placing-a-bet": {
+        "title": "Đặt cược",
+        "single-bet": "Cược vào 1 số (Cược đơn).",
+        "split-bet": "Cược vào 2 số (Cược chia).",
+        "corner-bet": "Cược vào 4 số (Cược góc).",
+        "row-column-bets": "Cược hàng & cột.",
+        "50-50-bet": "Cược 50-50 (Nhỏ/Lớn, Lẻ/Chẵn, Đỏ/Đen)."
     }
 }

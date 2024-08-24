@@ -10,6 +10,16 @@ import SVGLangKr from '../components/SVG/languages/SVGLangKr';
 export type SupportLang = (typeof LangHelper.supportLang)[number];
 
 export class LangHelper {
+    private static _activeLang: string = 'en';
+
+    static get activeLang() {
+        return this._activeLang;
+    }
+
+    static set activeLang(lang: string) {
+        this._activeLang = this.formatedLanguage(lang);
+    }
+
     static readonly supportLang = ['en', 'id', 'vn', 'th', 'zh', 'ko'] as const;
 
     static logo: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
@@ -30,6 +40,8 @@ export class LangHelper {
         ko: '한국어',
     };
 
+    static getDisplayName() {}
+
     static countryLanguageCodes: Record<string, string> = {
         en: 'en-US',
         id: 'id-ID',
@@ -39,6 +51,10 @@ export class LangHelper {
         ko: 'ko-KR',
     };
 
+    static getLoacale() {
+        return this.countryLanguageCodes[this.activeLang];
+    }
+
     static langMap: Record<string, string> = {
         en: 'en',
         id: 'id',
@@ -47,12 +63,6 @@ export class LangHelper {
         zh: 'zh',
         ko: 'ko',
     };
-
-    static getCountryLanguageCodes(lang: string) {
-        lang = this.formatedLanguage(lang);
-
-        return this.countryLanguageCodes[lang];
-    }
 
     static formatedLanguage = (lang: string) => {
         if (lang === '') {
@@ -71,33 +81,4 @@ export class LangHelper {
 
         return this.supportLang[0];
     };
-
-    static formatedDate = (datestring: string, lang: string): string => {
-        lang = this.formatedLanguage(lang);
-
-        const locale = this.countryLanguageCodes[lang];
-
-        const date = new Date(datestring);
-        return date.toLocaleString(locale, { hour12: false });
-    };
-
-    static formatDateByLocale(
-        dateString: string,
-        lang: string,
-        weekday: 'long' | 'short' | 'narrow' | undefined = 'long',
-        month: 'numeric' | '2-digit' | 'long' | 'short' | 'narrow' | undefined = 'long',
-    ) {
-        const locale = this.countryLanguageCodes[lang];
-
-        const date = new Date(dateString);
-        const options: Intl.DateTimeFormatOptions = {
-            weekday: weekday,
-            year: 'numeric',
-            month: month,
-            day: 'numeric',
-            hour12: false,
-        };
-
-        return new Intl.DateTimeFormat(locale, options).format(date);
-    }
 }

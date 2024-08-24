@@ -1,18 +1,15 @@
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
+import { Container, P } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
 
-import stylesParent from '../styles.module.scss';
-
 const Introduction = () => {
+    const keyLang = 'htp.introduction';
+
     return (
-        <HowToPlayCard title={<LabelTranslate value="title" keyLang="htp.introduction" />}>
-            <div className={stylesParent.container}>
-                <LabelTranslate
-                    value="content"
-                    keyLang="htp.introduction"
-                    className={stylesParent['text-htp']}
-                />
-            </div>
+        <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
+            <Container>
+                <P keyLang={keyLang} value="content" />
+            </Container>
         </HowToPlayCard>
     );
 };

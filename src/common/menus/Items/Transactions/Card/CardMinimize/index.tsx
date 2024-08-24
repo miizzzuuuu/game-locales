@@ -1,17 +1,14 @@
 import { ITransactionCardProps } from '..';
 import { useAppSelector } from '../../../../../../store/hooks';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
-import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { GameHelper } from '../../../../../utils/GameHelper';
-import { LangHelper } from '../../../../../utils/LangHelper';
 import { StringHelper } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const CardMinimize = ({ data }: ITransactionCardProps) => {
     const { tglbel, pcode, total_transaction, total_debit, periode } = data;
 
-    const lang = useAppSelector(selectLanguage);
     const currency = useAppSelector(selectCurrency);
 
     return (
@@ -26,16 +23,16 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
                     }}
                 >
                     {total_transaction > 0 ? '+' : ''}
-                    {StringHelper.formatMoneyWithCurrency(total_transaction, currency, lang)}
+                    {StringHelper.formatCurrency(total_transaction, currency)}
                 </span>
             </div>
 
             <div className={`${styles['col-2']}`}>
                 <span className={styles['text-secondary']}>
-                    {LangHelper.formatedDate(tglbel, lang)}
+                    {StringHelper.formatedDate(tglbel)}
                 </span>
                 <span className={styles['text-secondary']}>
-                    {StringHelper.formatMoneyWithCurrency(total_debit, currency, lang)}
+                    {StringHelper.formatCurrency(total_debit, currency)}
                 </span>
             </div>
 

@@ -1,15 +1,11 @@
 import { ITransactionCardProps } from '..';
 import BettingItemTransaction from '../../../../../../game/components/BettingItemTransaction';
-import { useAppSelector } from '../../../../../../store/hooks';
-import { selectLanguage } from '../../../../../../store/slice/settingsSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { StringHelper } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const BettingTable = ({ data }: ITransactionCardProps) => {
     const { detail_betting, total_debit, total_credit } = data;
-
-    const lang = useAppSelector(selectLanguage);
 
     return (
         <div className={styles['table-wrapper']}>
@@ -38,7 +34,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                             </td>
                             <td>
                                 <div className={`${styles['text-center']}`}>
-                                    {StringHelper.formatMoneyOnlyNumber(betting.taruhan, lang)}
+                                    {StringHelper.formatNumber(betting.taruhan)}
                                 </div>
                             </td>
                             <td>
@@ -50,7 +46,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                                         betting.win_amount <= 0 ? ` ${styles.muted}` : ''
                                     }`}
                                 >
-                                    {StringHelper.formatMoneyOnlyNumber(betting.win_amount, lang)}
+                                    {StringHelper.formatNumber(betting.win_amount)}
                                 </div>
                             </td>
                         </tr>
@@ -62,7 +58,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                         </td>
                         <td>
                             <div className={`${styles['text-center']}`}>
-                                {StringHelper.formatMoneyOnlyNumber(total_debit, lang)}
+                                {StringHelper.formatNumber(total_debit)}
                             </div>
                         </td>
                         <td className={`${styles.shading}`}>&nbsp;</td>
@@ -73,7 +69,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                                     color: total_credit >= 0 ? '#3be800' : '#ff2667',
                                 }}
                             >
-                                {StringHelper.formatMoneyOnlyNumber(total_credit, lang)}
+                                {StringHelper.formatNumber(total_credit)}
                             </div>
                         </td>
                     </tr>
