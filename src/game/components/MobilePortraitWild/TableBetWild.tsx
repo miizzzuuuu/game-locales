@@ -354,7 +354,7 @@ const TableBetWild = () => {
     }
 
     const isSuperWildLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
-    const isSuperWildWin = !betIsOpen && scanNumber && scanNumber.submit && !isSuperWildLose;
+    // const isSuperWildWin = !betIsOpen && scanNumber && scanNumber.submit && !isSuperWildLose;
 
     return <>
         <div ref={containerRef} className={[styles.tableBet, betIsOpen ? styles.open : styles.close, deviceClassName, "portrait"].join(" ")}>
@@ -379,21 +379,22 @@ const TableBetWild = () => {
                                 <div
                                     className={styles.cardContainerWild}
 
-// todo : opacit
+                                // todo : opacit
 
                                 >
-                                    {!betIsOpen && scanNumber && <RenderCard
-                                        top={DisplayHelper.getOrientation() !== "landscape" ?  "calc(100%/2)" : "calc(100%/2)"}
+                                    <RenderCard
+                                        top={DisplayHelper.getOrientation() !== "landscape" ? "calc(100%/2)" : "calc(100%/2)"}
                                         left="0px"
                                         right="0px"
-                                        opacity={!isSuperWildLose?1:0.5}
+                                        opacity={!isSuperWildLose ? 1 : 0.5}
                                         position={{ x: "3px", y: "10px" }}
                                         rotation={{ z: "0deg" }}
-                                        value={scanNumber.wild}
+                                        value={scanNumber ? scanNumber.wild : ""}
 
-                                        visible={scanNumber.wild == "x" ? false : true}
-                                        submit={scanNumber.submit}
-                                    />}
+                                        appear={scanNumber && scanNumber.wild == "x" ? false : true}
+                                        disappear={!scanNumber}
+                                        submit={scanNumber && scanNumber.submit}
+                                    />
                                 </div>
                             </div>
 

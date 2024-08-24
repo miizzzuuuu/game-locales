@@ -12,11 +12,15 @@
     transform: rotateY(180deg)
 }
 .card-slot {
-    animation: cardpush .65s linear forwards
+    animation: none;
+
+}
+.card-slot.appear {
+    animation: cardpush .65s linear forwards;
 }
 
 .card-slot.disappear {
-    animation: cardpull .65s linear forwards
+    animation: cardpull .65s linear forwards;
 }
 
 @keyframes cardpush {

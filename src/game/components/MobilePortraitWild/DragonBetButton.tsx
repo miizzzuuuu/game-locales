@@ -129,17 +129,18 @@ const DragonBetButton = (
                 <div
                     className={styles.cardContainerDragon}
                 >
-                    {!betIsOpen && scanNumber && <RenderCard
+                    <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
                         position={{ x: "3px", y: "13px" }}
                         rotation={{ z: "0deg" }}
-                        value={scanNumber.dragon}
-
-                        visible={scanNumber.dragon == "x" ? false : true}
-                        submit={scanNumber.submit}
-                    />}
+                        opacity={1}
+                        value={scanNumber ? scanNumber.dragon : ""}
+                        appear={scanNumber && scanNumber.dragon == "x" ? false : true}
+                        disappear={!scanNumber}
+                        submit={scanNumber && scanNumber.submit}
+                    />
 
                 </div>
             </div>

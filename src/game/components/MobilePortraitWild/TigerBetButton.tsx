@@ -143,17 +143,18 @@ const TigerBetButton = (
 
 
                 >
-                    {!betIsOpen && scanNumber && <RenderCard
+                    <RenderCard
                         top="0px"
                         left="0px"
                         right="0px"
                         position={{ x: "3px", y: "13px" }}
                         rotation={{ z: "0deg" }}
-                        value={scanNumber.tiger}
-
-                        visible={scanNumber.tiger == "x" ? false : true}
-                        submit={scanNumber.submit}
-                    />}
+                        opacity={1}
+                        value={scanNumber ? scanNumber.tiger : ""}
+                        appear={scanNumber && scanNumber.tiger == "x" ? false : true}
+                        disappear={!scanNumber}
+                        submit={scanNumber && scanNumber.submit}
+                    />
 
                 </div>
 
@@ -301,7 +302,7 @@ const scrollSvg = <svg
 
         <path fill="#FF8A00" d="M0.9 174.4H7.2V176.8H0.9z"></path>
     </g>
-    
+
     <defs>
         <pattern
             id="pattern0_1779_4673"

@@ -23,7 +23,7 @@ export function RenderCard(props: any) {
       }}
     >
       <div
-        className={`card-slot ${props.visible == true ? "" : "disappear"}`}
+        className={`card-slot ${props.appear == true ? "appear" : ""}  ${props.disappear == true ? "disappear" : ""}`}
         style={{
           position: "absolute",
           width: "100%",
