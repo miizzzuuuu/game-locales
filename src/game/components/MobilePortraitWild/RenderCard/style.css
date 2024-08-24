@@ -13,10 +13,12 @@
 }
 .card-slot {
     animation: none;
+    opacity: 0
 
 }
 .card-slot.appear {
     animation: cardpush .65s linear forwards;
+
 }
 
 .card-slot.disappear {
@@ -34,11 +36,15 @@
     }
 
     65% {
-        transform: translateY(120%)
+        transform: translateY(120%);
+        opacity: 1
+
     }
 
     to {
-        transform: translateY(120%)
+        transform: translateY(120%);
+        opacity: 1
+
     }
 }
 

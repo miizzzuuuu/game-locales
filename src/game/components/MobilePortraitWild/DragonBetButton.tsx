@@ -137,7 +137,7 @@ const DragonBetButton = (
                         rotation={{ z: "0deg" }}
                         opacity={1}
                         value={scanNumber ? scanNumber.dragon : ""}
-                        appear={scanNumber && scanNumber.dragon == "x" ? false : true}
+                        appear={scanNumber && scanNumber.dragon && scanNumber.dragon == "x" ? false : true}
                         disappear={!scanNumber}
                         submit={scanNumber && scanNumber.submit}
                     />

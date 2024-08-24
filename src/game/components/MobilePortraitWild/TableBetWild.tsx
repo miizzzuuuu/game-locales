@@ -391,7 +391,7 @@ const TableBetWild = () => {
                                         rotation={{ z: "0deg" }}
                                         value={scanNumber ? scanNumber.wild : ""}
 
-                                        appear={scanNumber && scanNumber.wild == "x" ? false : true}
+                                        appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
                                         disappear={!scanNumber}
                                         submit={scanNumber && scanNumber.submit}
                                     />

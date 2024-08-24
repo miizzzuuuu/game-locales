@@ -151,7 +151,7 @@ const TigerBetButton = (
                         rotation={{ z: "0deg" }}
                         opacity={1}
                         value={scanNumber ? scanNumber.tiger : ""}
-                        appear={scanNumber && scanNumber.tiger == "x" ? false : true}
+                        appear={scanNumber && scanNumber.tiger && scanNumber.tiger == "x"  ? false : true}
                         disappear={!scanNumber}
                         submit={scanNumber && scanNumber.submit}
                     />
