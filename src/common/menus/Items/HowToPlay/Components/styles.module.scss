@@ -38,3 +38,34 @@
         display: inline;
     }
 }
+
+.table,
+.table .th,
+.table .td {
+    border-collapse: collapse;
+    border: 0.05rem solid #4c4d66;
+}
+
+.table {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+
+    .th {
+        text-transform: capitalize;
+    }
+
+    .th,
+    .td {
+        padding: 0 0.6rem;
+        height: 2.5rem;
+
+        &.bet-child {
+            padding-left: 1.6rem;
+        }
+    }
+
+    .thead .tr {
+        background-color: #2c2d3f;
+    }
+}

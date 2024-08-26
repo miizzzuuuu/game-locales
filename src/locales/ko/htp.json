@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "지불"
+        "title": "지불",
+        "bet-payout": "베팅 지불금",
+        "bonus-payout": "보너스 지불금",
+        "lucky-number-multiplier": "행운 번호 배수",
+        "jackpot-number-multiplier": "잭팟 번호 배수",
+        "number-times": "{{value}}배"
     }
 }

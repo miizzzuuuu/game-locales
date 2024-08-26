@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "pembayaran"
+        "title": "pembayaran",
+        "bet-payout": "pembayaran taruhan",
+        "bonus-payout": "pembayaran bonus",
+        "lucky-number-multiplier": "Pengali Lucky Number",
+        "jackpot-number-multiplier": "Pengali Jackpot Number",
+        "number-times": "{{value}}x"
     }
 }

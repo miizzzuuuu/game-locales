@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "payout"
+        "title": "payout",
+        "bet-payout": "bet payout",
+        "bonus-payout": "bonus payout",
+        "lucky-number-multiplier": "Lucky Number Multiplier",
+        "jackpot-number-multiplier": "Jackpot Number Multiplier",
+        "number-times": "x{{value}}"
     }
 }

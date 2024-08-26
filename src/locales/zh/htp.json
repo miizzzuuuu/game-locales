@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "支付"
+        "title": "支付",
+        "bet-payout": "投注支付",
+        "bonus-payout": "奖金支付",
+        "lucky-number-multiplier": "幸运号码倍数",
+        "jackpot-number-multiplier": "头奖号码倍数",
+        "number-times": "{{value}}倍"
     }
 }

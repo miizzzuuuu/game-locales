@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "การจ่ายเงิน"
+        "title": "การจ่ายเงิน",
+        "bet-payout": "การจ่ายเงินเดิมพัน",
+        "bonus-payout": "การจ่ายโบนัส",
+        "lucky-number-multiplier": "ตัวคูณหมายเลขโชคดี",
+        "jackpot-number-multiplier": "ตัวคูณหมายเลขแจ็คพอต",
+        "number-times": "{{value}} เท่า"
     }
 }

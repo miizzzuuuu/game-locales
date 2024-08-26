@@ -188,6 +188,11 @@
         }
     },
     "payout": {
-        "title": "thanh toán"
+        "title": "thanh toán",
+        "bet-payout": "thanh toán cược",
+        "bonus-payout": "thanh toán thưởng",
+        "lucky-number-multiplier": "Hệ số nhân số may mắn",
+        "jackpot-number-multiplier": "Hệ số nhân số jackpot",
+        "number-times": "{{value}} lần"
     }
 }
