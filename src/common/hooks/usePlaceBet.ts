@@ -156,7 +156,7 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
             const buttonName = DragonTigerBBetHelper.max50bet.includes(bet.group) ? t(`${basePcode}.${button}`) : button;
             const message = t('common.bet-error-min', {
                 button: buttonName,
-                value: StringHelper.formatMoneyOnlyNumber(minDT, lang),
+                value: minDT,
             });
 
             console.log('bet error', message);
@@ -194,12 +194,12 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
 
         // custom max50 check dragon tiger
         const maxDT = DragonTigerBBetHelper.max50bet.includes(bet.group) ? max50Bet : maxBet;
-       
+        
         if (chipAfterBet > maxDT) {
             const buttonName = DragonTigerBBetHelper.max50bet.includes(bet.group) ? t(`${basePcode}.${button}`) : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,
-                value: StringHelper.formatMoneyOnlyNumber(maxDT, lang),
+                value: maxDT,
             });
 
             console.log('bet error', message);
