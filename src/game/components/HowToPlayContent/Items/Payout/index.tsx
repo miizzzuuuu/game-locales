@@ -11,6 +11,7 @@ import {
     TR,
 } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
+import PayoutNote from '../../../../../common/menus/Items/Payout/PayoutContent/PayoutNote';
 import TableMenuPayout from '../../../../../common/menus/Items/Payout/PayoutContent/TableMenuPayout';
 
 const bonusPayout = [
@@ -44,7 +45,14 @@ const Payout = () => {
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
                 <Heading2 keyLang={keyLang} value="bet-payout" uppercase />
-                {loading ? <Loading /> : <TableMenuPayout data={data} />}
+                {loading ? (
+                    <Loading />
+                ) : (
+                    <>
+                        <TableMenuPayout data={data} />
+                        <PayoutNote content="payout-no-initial-bet" />
+                    </>
+                )}
 
                 <Heading2 keyLang={keyLang} value="bonus-payout" uppercase />
                 <div>
@@ -87,6 +95,7 @@ const Payout = () => {
                         </tbody>
                     </Table>
                 </div>
+                <PayoutNote content="payout-includes-initial-bet" />
             </Container>
         </HowToPlayCard>
     );

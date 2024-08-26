@@ -49,5 +49,7 @@
     "autobet-error-insufficient-balance": "autobet gagal, saldo tidak mencukupi",
     "doublebet-error-max-bet": "kesalahan gandakan taruhan, taruhan maksimum",
     "bet-void-n50": "Pasang taruhan utama terlebih dahulu",
-    "winner": "pemenang"
+    "winner": "pemenang",
+    "payout-no-initial-bet": "Pembayaran tidak termasuk taruhan awal.",
+    "payout-includes-initial-bet": "Pembayaran termasuk taruhan awal."
 }
