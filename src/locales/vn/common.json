@@ -65,6 +65,20 @@
                 "paragraph-5": "Màn hình chip cho phép bạn chọn giá trị của mỗi chip bạn muốn đặt cược. Bạn có thể chọn giá trị chip cho cược bằng cách nhấp vào chip ở cuối màn hình gần các nút Hủy, Nhân đôi và Đặt lại để xem tất cả các giá trị chip có sẵn. Chỉ những giá trị chip có thể được sử dụng với số dư hiện tại của bạn mới có thể được chọn."
             },
             "game-name": "Tên Trò Chơi"
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Các nút bổ sung để giúp người chơi dễ dàng chơi trò chơi.",
+            "content": {
+                "paragraph-1": "Nút Hoàn tác sẽ xóa một chip mà bạn đã đặt trên bàn trước đó.",
+                "paragraph-2": "Nhân đôi số lượng chip bạn đã đặt. Hãy đảm bảo số dư tài khoản của bạn đủ để nhân đôi tất cả các cược đã đặt.",
+                "paragraph-3": "Cho phép bạn lặp lại cược mà bạn đã đặt ở vòng trước trên bàn.",
+                "paragraph-4": "Menu Burger cung cấp các menu cần thiết cho trò chơi.",
+                "paragraph-5": "Ẩn hiển thị các chip mà bạn đã đặt trên bàn.",
+                "paragraph-6": "Để hiển thị Thống kê của trò chơi đang diễn ra.",
+                "paragraph-7": "Để lưu và sử dụng các cược yêu thích của mỗi người chơi.",
+                "paragraph-8": "Hiển thị hoặc ẩn Lộ trình / Thống kê trò chơi."
+            }
         }
     }
 }
