@@ -2,7 +2,6 @@ import { PropsWithChildren } from 'react';
 import stylesPortrait from './table-bet-portrait.module.scss';
 import stylesLandscape from './table-bet-landscape.module.scss';
 import { useAppSelector } from '../../../store/hooks';
-import { RenderCard } from './RenderCard/RenderCard';
 import { Bet } from '../../../types';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
@@ -46,7 +45,6 @@ const SuperWildBetButton = (
                 onClick={() => handleClick(bet)}
 
                 className={styles.domainContentTie}>
-                {/* <LevelStat level={90} /> */}
                 <div className={styles.tieLabel} >
                     <div style={{
                         display: "flex",

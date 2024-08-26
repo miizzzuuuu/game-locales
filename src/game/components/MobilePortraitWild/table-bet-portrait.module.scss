@@ -207,6 +207,12 @@ $childBetM23Width : calc(98%/2);
     }
 }
 
+.domainContent:nth-child(2) {
+    padding-right: 0rem;
+
+}
+
+
 .domainLabel {
     display: flex;
     width: 100%;

@@ -209,9 +209,14 @@ $childBetM23Width : calc(98.5%/2);
         margin-top: 0 !important;
     }
 }
+.domainContent:nth-child(2) {
+    padding-right: 1rem;
+
+}
+
 
 .betButtonLabel {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .domainLabel {
@@ -347,7 +352,17 @@ $childBetM23Width : calc(98.5%/2);
 
         &>span {
             &>div {
-                margin-left: 0.5rem;
+                margin-left: -0.75rem;
+            }
+        }
+    }
+}
+
+.child:nth-child(odd) {
+    .childLabel {
+        &>span {
+            &>div {
+                margin-left: 1rem;
             }
         }
     }
