@@ -139,6 +139,7 @@
             "heading": "Cược 50-50",
             "small": {
                 "title": "Nhỏ",
+                "description": "",
                 "winning-conditions": "Kết quả từ 1 đến 12",
                 "examples": [
                     { "bet": "Nhỏ", "result": "2", "status": "THẮNG" },
@@ -147,6 +148,7 @@
             },
             "big": {
                 "title": "Lớn",
+                "description": "",
                 "winning-conditions": "Kết quả từ 12 đến 24",
                 "examples": [
                     { "bet": "Lớn", "result": "13", "status": "THẮNG" },
@@ -155,6 +157,7 @@
             },
             "odd": {
                 "title": "Lẻ",
+                "description": "",
                 "winning-conditions": "Kết quả là số lẻ",
                 "examples": [
                     { "bet": "Lẻ", "result": "13", "status": "THẮNG" },
@@ -163,6 +166,7 @@
             },
             "even": {
                 "title": "Chẵn",
+                "description": "",
                 "winning-conditions": "Kết quả là số chẵn",
                 "examples": [
                     { "bet": "Chẵn", "result": "12", "status": "THẮNG" },
@@ -171,6 +175,7 @@
             },
             "red": {
                 "title": "Đỏ",
+                "description": "",
                 "winning-conditions": "Kết quả là màu đỏ",
                 "examples": [
                     { "bet": "Đỏ", "result": "10", "status": "THẮNG" },
@@ -179,6 +184,7 @@
             },
             "black": {
                 "title": "Đen",
+                "description": "",
                 "winning-conditions": "Kết quả là màu đen",
                 "examples": [
                     { "bet": "Đen", "result": "12", "status": "THẮNG" },

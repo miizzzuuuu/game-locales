@@ -139,6 +139,7 @@
             "heading": "Taruhan 50-50",
             "small": {
                 "title": "Kecil",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah dari 1 sampai 12",
                 "examples": [
                     { "bet": "Kecil", "result": "2", "status": "MENANG" },
@@ -147,6 +148,7 @@
             },
             "big": {
                 "title": "Besar",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah dari 12 sampai 24",
                 "examples": [
                     { "bet": "Besar", "result": "13", "status": "MENANG" },
@@ -155,6 +157,7 @@
             },
             "odd": {
                 "title": "Ganjil",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah angka ganjil",
                 "examples": [
                     { "bet": "Ganjil", "result": "13", "status": "MENANG" },
@@ -163,6 +166,7 @@
             },
             "even": {
                 "title": "Genap",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah angka genap",
                 "examples": [
                     { "bet": "Genap", "result": "12", "status": "MENANG" },
@@ -171,6 +175,7 @@
             },
             "red": {
                 "title": "Merah",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah merah",
                 "examples": [
                     { "bet": "Merah", "result": "10", "status": "MENANG" },
@@ -179,6 +184,7 @@
             },
             "black": {
                 "title": "Hitam",
+                "description": "",
                 "winning-conditions": "Hasilnya adalah hitam",
                 "examples": [
                     { "bet": "Hitam", "result": "12", "status": "MENANG" },

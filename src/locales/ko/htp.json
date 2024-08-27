@@ -139,6 +139,7 @@
             "heading": "50-50 베팅",
             "small": {
                 "title": "작음",
+                "description": "",
                 "winning-conditions": "결과가 1에서 12 사이입니다",
                 "examples": [
                     { "bet": "작음", "result": "2", "status": "승리" },
@@ -147,6 +148,7 @@
             },
             "big": {
                 "title": "큼",
+                "description": "",
                 "winning-conditions": "결과가 12에서 24 사이입니다",
                 "examples": [
                     { "bet": "큼", "result": "13", "status": "승리" },
@@ -155,6 +157,7 @@
             },
             "odd": {
                 "title": "홀수",
+                "description": "",
                 "winning-conditions": "결과가 홀수입니다",
                 "examples": [
                     { "bet": "홀수", "result": "13", "status": "승리" },
@@ -163,6 +166,7 @@
             },
             "even": {
                 "title": "짝수",
+                "description": "",
                 "winning-conditions": "결과가 짝수입니다",
                 "examples": [
                     { "bet": "짝수", "result": "12", "status": "승리" },
@@ -171,6 +175,7 @@
             },
             "red": {
                 "title": "빨강",
+                "description": "",
                 "winning-conditions": "결과가 빨강입니다",
                 "examples": [
                     { "bet": "빨강", "result": "10", "status": "승리" },
@@ -179,6 +184,7 @@
             },
             "black": {
                 "title": "검정",
+                "description": "",
                 "winning-conditions": "결과가 검정입니다",
                 "examples": [
                     { "bet": "검정", "result": "12", "status": "승리" },

@@ -139,6 +139,7 @@
             "heading": "50-50 Bet",
             "small": {
                 "title": "Small",
+                "description": "",
                 "winning-conditions": "The result is from 1 to 12",
                 "examples": [
                     { "bet": "Small", "result": "2", "status": "WIN" },
@@ -147,6 +148,7 @@
             },
             "big": {
                 "title": "Big",
+                "description": "",
                 "winning-conditions": "The result is from 12 to 24",
                 "examples": [
                     { "bet": "Big", "result": "13", "status": "WIN" },
@@ -155,6 +157,7 @@
             },
             "odd": {
                 "title": "Odd",
+                "description": "",
                 "winning-conditions": "The result is an odd number",
                 "examples": [
                     { "bet": "Odd", "result": "13", "status": "WIN" },
@@ -163,6 +166,7 @@
             },
             "even": {
                 "title": "Even",
+                "description": "",
                 "winning-conditions": "The result is an even number",
                 "examples": [
                     { "bet": "Even", "result": "12", "status": "WIN" },
@@ -171,6 +175,7 @@
             },
             "red": {
                 "title": "Red",
+                "description": "",
                 "winning-conditions": "The result is red",
                 "examples": [
                     { "bet": "Red", "result": "10", "status": "WIN" },
@@ -179,6 +184,7 @@
             },
             "black": {
                 "title": "Black",
+                "description": "",
                 "winning-conditions": "The result is black",
                 "examples": [
                     { "bet": "Black", "result": "12", "status": "WIN" },

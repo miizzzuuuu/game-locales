@@ -139,6 +139,7 @@
             "heading": "เดิมพัน 50-50",
             "small": {
                 "title": "เล็ก",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์อยู่ระหว่าง 1 ถึง 12",
                 "examples": [
                     { "bet": "เล็ก", "result": "2", "status": "ชนะ" },
@@ -147,6 +148,7 @@
             },
             "big": {
                 "title": "ใหญ่",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์อยู่ระหว่าง 12 ถึง 24",
                 "examples": [
                     { "bet": "ใหญ่", "result": "13", "status": "ชนะ" },
@@ -155,6 +157,7 @@
             },
             "odd": {
                 "title": "คี่",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์เป็นหมายเลขคี่",
                 "examples": [
                     { "bet": "คี่", "result": "13", "status": "ชนะ" },
@@ -163,6 +166,7 @@
             },
             "even": {
                 "title": "คู่",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์เป็นหมายเลขคู่",
                 "examples": [
                     { "bet": "คู่", "result": "12", "status": "ชนะ" },
@@ -171,6 +175,7 @@
             },
             "red": {
                 "title": "แดง",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์เป็นสีแดง",
                 "examples": [
                     { "bet": "แดง", "result": "10", "status": "ชนะ" },
@@ -179,6 +184,7 @@
             },
             "black": {
                 "title": "ดำ",
+                "description": "",
                 "winning-conditions": "ผลลัพธ์เป็นสีดำ",
                 "examples": [
                     { "bet": "ดำ", "result": "12", "status": "ชนะ" },
