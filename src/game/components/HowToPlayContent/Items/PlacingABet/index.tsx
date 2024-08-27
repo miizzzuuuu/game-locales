@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
 import { Container, Heading2 } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
+import styles from './styles.module.scss';
 
 import SVGBet50 from './SVG/SVGBet50';
 import SVGColRow from './SVG/SVGColRow';
@@ -40,7 +41,7 @@ const PlacingABet = () => {
     return (
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
-                <div>
+                <div className={styles.wrapper}>
                     {data.map((value, idx) => (
                         <div key={idx}>
                             <Heading2 keyLang={keyLang} value={value.key} />
