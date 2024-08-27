@@ -700,7 +700,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
-                x="99.4751"
+                x="125.071"
                 y="66.30235"
                 textAnchor="middle"
                 dominantBaseline="middle"
