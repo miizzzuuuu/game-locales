@@ -156,6 +156,6 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
     };
 
     return {
-        placeBetHanlder: placeBetHandler,
+        placeBetHandler,
     };
 };

@@ -21,7 +21,7 @@ const TableBet = () => {
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const winBets = useAppSelector(selectWinBets);
 
-    const { placeBetHanlder } = usePlaceBet({ useLowerCase: true });
+    const { placeBetHandler: placeBetHanlder } = usePlaceBet({ useLowerCase: true });
 
     useEffect(() => {
         if (!betIsOpen) {
