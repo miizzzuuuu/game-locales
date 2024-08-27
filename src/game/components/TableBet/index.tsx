@@ -21,7 +21,7 @@ const TableBet = () => {
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const winBets = useAppSelector(selectWinBets);
 
-    const { placeBetHandler: placeBetHanlder } = usePlaceBet({ useLowerCase: true });
+    const { placeBetHandler } = usePlaceBet({ useLowerCase: true });
 
     useEffect(() => {
         if (!betIsOpen) {
@@ -55,7 +55,7 @@ const TableBet = () => {
                         bet={bet}
                         className={className}
                         isWin={isWin}
-                        onClick={() => placeBetHanlder(bet)}
+                        onClick={() => placeBetHandler(bet)}
                     >
                         <BetNumber button={bet.button} />
                     </ButtonBet>
@@ -74,7 +74,7 @@ const TableBet = () => {
                         bet={bet}
                         className={className}
                         isWin={isWin}
-                        onClick={() => placeBetHanlder(bet)}
+                        onClick={() => placeBetHandler(bet)}
                     >
                         <BetColRow
                             label={<LabelTranslate value={bet.button} keyLang={basePcode} />}
@@ -100,7 +100,7 @@ const TableBet = () => {
                         bet={bet}
                         className={className}
                         isWin={isWin}
-                        onClick={() => placeBetHanlder(bet)}
+                        onClick={() => placeBetHandler(bet)}
                     >
                         <BetText
                             label={
@@ -124,7 +124,7 @@ const TableBet = () => {
                         key={key}
                         bet={bet}
                         className={className}
-                        onClick={() => placeBetHanlder(bet)}
+                        onClick={() => placeBetHandler(bet)}
                     />
                 );
             })}
