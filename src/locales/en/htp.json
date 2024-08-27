@@ -85,8 +85,8 @@
                 "description": "Bet on two adjacent numbers vertically/horizontally",
                 "winning-conditions": "The result is 1 of the 2 adjacent numbers you bet",
                 "examples": [
-                    { "bet": "1, 2", "result": "1", "status": "WIN" },
-                    { "bet": "1, 2", "result": "3", "status": "LOSE" }
+                    { "bet": "1,2", "result": "1", "status": "WIN" },
+                    { "bet": "1,2", "result": "3", "status": "LOSE" }
                 ]
             },
             "corner": {
@@ -94,8 +94,8 @@
                 "description": "Bet on four numbers meeting in one corner",
                 "winning-conditions": "The result is 1 of the 4 numbers you bet",
                 "examples": [
-                    { "bet": "1, 2, 5, 6", "result": "5", "status": "WIN" },
-                    { "bet": "1, 2, 5, 6", "result": "13", "status": "LOSE" }
+                    { "bet": "1,2,5,6", "result": "5", "status": "WIN" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "LOSE" }
                 ]
             },
             "single-row": {

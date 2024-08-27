@@ -85,8 +85,8 @@
                 "description": "投注两个垂直/水平相邻的数字",
                 "winning-conditions": "结果是您投注的两个相邻数字中的一个",
                 "examples": [
-                    { "bet": "1, 2", "result": "1", "status": "赢" },
-                    { "bet": "1, 2", "result": "3", "status": "输" }
+                    { "bet": "1,2", "result": "1", "status": "赢" },
+                    { "bet": "1,2", "result": "3", "status": "输" }
                 ]
             },
             "corner": {
@@ -94,8 +94,8 @@
                 "description": "投注相交于一个角的四个数字",
                 "winning-conditions": "结果是您投注的四个数字中的一个",
                 "examples": [
-                    { "bet": "1, 2, 5, 6", "result": "5", "status": "赢" },
-                    { "bet": "1, 2, 5, 6", "result": "13", "status": "输" }
+                    { "bet": "1,2,5,6", "result": "5", "status": "赢" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "输" }
                 ]
             },
             "single-row": {

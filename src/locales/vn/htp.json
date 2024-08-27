@@ -85,8 +85,8 @@
                 "description": "Cược vào hai số liền kề theo chiều dọc/ngang",
                 "winning-conditions": "Kết quả là một trong hai số bạn đã đặt cược",
                 "examples": [
-                    { "bet": "1, 2", "result": "1", "status": "THẮNG" },
-                    { "bet": "1, 2", "result": "3", "status": "THUA" }
+                    { "bet": "1,2", "result": "1", "status": "THẮNG" },
+                    { "bet": "1,2", "result": "3", "status": "THUA" }
                 ]
             },
             "corner": {
@@ -94,8 +94,8 @@
                 "description": "Cược vào bốn số gặp nhau ở một góc",
                 "winning-conditions": "Kết quả là một trong bốn số bạn đã đặt cược",
                 "examples": [
-                    { "bet": "1, 2, 5, 6", "result": "5", "status": "THẮNG" },
-                    { "bet": "1, 2, 5, 6", "result": "13", "status": "THUA" }
+                    { "bet": "1,2,5,6", "result": "5", "status": "THẮNG" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "THUA" }
                 ]
             },
             "single-row": {

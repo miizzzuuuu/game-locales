@@ -85,8 +85,8 @@
                 "description": "เดิมพันในสองหมายเลขที่อยู่ติดกันในแนวตั้งหรือแนวนอน",
                 "winning-conditions": "ผลลัพธ์เป็นหนึ่งในสองหมายเลขที่คุณเดิมพัน",
                 "examples": [
-                    { "bet": "1, 2", "result": "1", "status": "ชนะ" },
-                    { "bet": "1, 2", "result": "3", "status": "แพ้" }
+                    { "bet": "1,2", "result": "1", "status": "ชนะ" },
+                    { "bet": "1,2", "result": "3", "status": "แพ้" }
                 ]
             },
             "corner": {
@@ -94,8 +94,8 @@
                 "description": "เดิมพันในสี่หมายเลขที่มุมหนึ่ง",
                 "winning-conditions": "ผลลัพธ์เป็นหนึ่งในสี่หมายเลขที่คุณเดิมพัน",
                 "examples": [
-                    { "bet": "1, 2, 5, 6", "result": "5", "status": "ชนะ" },
-                    { "bet": "1, 2, 5, 6", "result": "13", "status": "แพ้" }
+                    { "bet": "1,2,5,6", "result": "5", "status": "ชนะ" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "แพ้" }
                 ]
             },
             "single-row": {

@@ -85,8 +85,8 @@
                 "description": "Bertaruh pada dua angka yang berdekatan secara vertikal/horizontal",
                 "winning-conditions": "Hasilnya adalah salah satu dari dua angka yang Anda pasang",
                 "examples": [
-                    { "bet": "1, 2", "result": "1", "status": "MENANG" },
-                    { "bet": "1, 2", "result": "3", "status": "KALAH" }
+                    { "bet": "1,2", "result": "1", "status": "MENANG" },
+                    { "bet": "1,2", "result": "3", "status": "KALAH" }
                 ]
             },
             "corner": {
@@ -94,8 +94,8 @@
                 "description": "Bertaruh pada empat angka yang bertemu di satu sudut",
                 "winning-conditions": "Hasilnya adalah salah satu dari empat angka yang Anda pasang",
                 "examples": [
-                    { "bet": "1, 2, 5, 6", "result": "5", "status": "MENANG" },
-                    { "bet": "1, 2, 5, 6", "result": "13", "status": "KALAH" }
+                    { "bet": "1,2,5,6", "result": "5", "status": "MENANG" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "KALAH" }
                 ]
             },
             "single-row": {
