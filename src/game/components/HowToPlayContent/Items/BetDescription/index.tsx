@@ -52,80 +52,96 @@ const BetDescription = () => {
     return (
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
-                <Heading2 keyLang={keyLang} value="main-bet.heading" />
+                <div className={styles.wrapper}>
+                    <div>
+                        <Heading2 keyLang={keyLang} uppercase value="main-bet.heading" />
 
-                <div className={styles['bet-container']}>
-                    {mainKeys.map((betType) => (
-                        <div key={betType} className={styles['bet-card']}>
-                            <h3 className={styles['bet-name']}>
-                                {t(`${keyLang}.main-bet.${betType}.title`)}
-                            </h3>
-                            <P keyLang={keyLang} value={`main-bet.${betType}.description`} />
+                        <div className={styles['bet-container']}>
+                            {mainKeys.map((betType) => (
+                                <div key={betType} className={styles['bet-card']}>
+                                    <h3 className={styles['bet-name']}>
+                                        {t(`${keyLang}.main-bet.${betType}.title`)}
+                                    </h3>
+                                    <P
+                                        keyLang={keyLang}
+                                        value={`main-bet.${betType}.description`}
+                                    />
 
-                            <h4 className={styles['winning-title']}>
-                                {t(`${keyLang}.winning-conditions`)}
-                            </h4>
-                            <P keyLang={keyLang} value={`main-bet.${betType}.winning-conditions`} />
+                                    <h4 className={styles['winning-title']}>
+                                        {t(`${keyLang}.winning-conditions`)}
+                                    </h4>
+                                    <P
+                                        keyLang={keyLang}
+                                        value={`main-bet.${betType}.winning-conditions`}
+                                    />
 
-                            <div className={styles['example-table-container']}>
-                                <table className={styles['example-table']}>
-                                    <thead>
-                                        <tr>
-                                            <th>{t(`${keyLang}.bet`)}</th>
-                                            <th>{t(`${keyLang}.result`)}</th>
-                                            <th>{t(`${keyLang}.status`)}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {renderExamples(
-                                            t(`${keyLang}.main-bet.${betType}.examples`, {}, true),
-                                        )}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <div className={styles['example-table-container']}>
+                                        <table className={styles['example-table']}>
+                                            <thead>
+                                                <tr>
+                                                    <th>{t(`${keyLang}.bet`)}</th>
+                                                    <th>{t(`${keyLang}.result`)}</th>
+                                                    <th>{t(`${keyLang}.status`)}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {renderExamples(
+                                                    t(
+                                                        `${keyLang}.main-bet.${betType}.examples`,
+                                                        {},
+                                                        true,
+                                                    ),
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
 
-                <Heading2 keyLang={keyLang} value="fifty-fifty-bet.heading" />
+                    <div>
+                        <Heading2 keyLang={keyLang} value="fifty-fifty-bet.heading" uppercase />
 
-                <div className={styles['bet-container']}>
-                    {fiftyFiftyKeys.map((betType) => (
-                        <div key={betType} className={styles['bet-card']}>
-                            <h3 className={styles['bet-name']}>
-                                {t(`${keyLang}.fifty-fifty-bet.${betType}.title`)}
-                            </h3>
+                        <div className={styles['bet-container']}>
+                            {fiftyFiftyKeys.map((betType) => (
+                                <div key={betType} className={styles['bet-card']}>
+                                    <h3 className={styles['bet-name']}>
+                                        {t(`${keyLang}.fifty-fifty-bet.${betType}.title`)}
+                                    </h3>
 
-                            <h4 className={styles['winning-title']}>
-                                {t(`${keyLang}.winning-conditions`)}
-                            </h4>
-                            <P
-                                keyLang={keyLang}
-                                value={`fifty-fifty-bet.${betType}.winning-conditions`}
-                            />
+                                    <h4 className={styles['winning-title']}>
+                                        {t(`${keyLang}.winning-conditions`)}
+                                    </h4>
+                                    <P
+                                        keyLang={keyLang}
+                                        value={`fifty-fifty-bet.${betType}.winning-conditions`}
+                                    />
 
-                            <div className={styles['example-table-container']}>
-                                <table className={styles['example-table']}>
-                                    <thead>
-                                        <tr>
-                                            <th>{t(`${keyLang}.bet`)}</th>
-                                            <th>{t(`${keyLang}.result`)}</th>
-                                            <th>{t(`${keyLang}.status`)}</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {renderExamples(
-                                            t(
-                                                `${keyLang}.fifty-fifty-bet.${betType}.examples`,
-                                                {},
-                                                true,
-                                            ),
-                                        )}
-                                    </tbody>
-                                </table>
-                            </div>
+                                    <div className={styles['example-table-container']}>
+                                        <table className={styles['example-table']}>
+                                            <thead>
+                                                <tr>
+                                                    <th>{t(`${keyLang}.bet`)}</th>
+                                                    <th>{t(`${keyLang}.result`)}</th>
+                                                    <th>{t(`${keyLang}.status`)}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {renderExamples(
+                                                    t(
+                                                        `${keyLang}.fifty-fifty-bet.${betType}.examples`,
+                                                        {},
+                                                        true,
+                                                    ),
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </Container>
         </HowToPlayCard>

@@ -1,4 +1,4 @@
-import { HTMLProps, ReactNode } from 'react';
+import { CSSProperties, HTMLProps, ReactNode } from 'react';
 import { TOptions } from 'i18next';
 import LabelTranslate from '../../../../components/LabelTranslate';
 import styles from './styles.module.scss';
@@ -8,6 +8,7 @@ interface IProps {
     value: string;
     option?: TOptions;
     className?: string;
+    style?: CSSProperties;
     multiLine?: boolean;
 }
 
@@ -34,6 +35,7 @@ export const Container = ({ children, className }: ContainerProps) => {
 export const Heading2 = ({
     keyLang,
     className,
+    style,
     value,
     option,
     multiLine,
@@ -43,7 +45,7 @@ export const Heading2 = ({
         <LabelTranslate
             type="h2"
             className={`${styles['heading-2']}${className ? ` ${className}` : ''}`}
-            style={{ textTransform: uppercase ? 'uppercase' : 'none' }}
+            style={{ ...style, textTransform: uppercase ? 'uppercase' : 'none' }}
             keyLang={keyLang}
             value={value}
             option={option}

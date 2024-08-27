@@ -1,8 +1,7 @@
-.h2 {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-block: 1rem;
-    line-height: 1.2;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 .bet-container {
