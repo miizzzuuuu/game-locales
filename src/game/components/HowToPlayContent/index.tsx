@@ -11,8 +11,8 @@ const HowToPlayContent = () => {
         <MenuContentContainer>
             <Introduction />
             <Rules />
-            <PlacingABet />
             <BetDescription />
+            <PlacingABet />
             <BonusSystem />
             <Payout />
         </MenuContentContainer>
