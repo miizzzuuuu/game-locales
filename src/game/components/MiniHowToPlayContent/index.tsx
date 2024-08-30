@@ -5,8 +5,13 @@ import Slide3 from './Slide3';
 
 const data: ModalItem[] = [Slide1, Slide2, Slide3];
 
-const MiniHowToPlayContent = () => {
-    return <Modal data={data} />;
+interface IProps {
+    showUI: boolean;
+    setShowUI: (value: boolean) => void;
+}
+
+const MiniHowToPlayContent = ({ showUI, setShowUI }: IProps) => {
+    return <Modal data={data} showUI={showUI} setShowUI={setShowUI} />;
 };
 
 export default MiniHowToPlayContent;

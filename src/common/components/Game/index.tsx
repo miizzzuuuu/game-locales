@@ -18,6 +18,7 @@ import { selectNickname, selectOperatorId } from '../../../store/slice/playerSli
 import TopWinner from '../TopWinner';
 import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { GameHelper } from '../../utils/GameHelper';
+import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -54,6 +55,9 @@ function Game() {
                     periode: 0,
                 }),
             );
+        }
+        if (e.key === 'p') {
+            dispatch(setShowMiniHowToPlay(true));
         }
     }, []);
 

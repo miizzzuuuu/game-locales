@@ -6,6 +6,8 @@ import DontShowAgain from './DontShowAgain';
 import Indicators from './Indicators';
 import styles from './styles.module.scss';
 import { DisplayHelper } from '../../../utils/DisplayHelper';
+import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
+import { useAppDispatch } from '../../../../store/hooks';
 
 export type ModalItem = {
     title: string;
@@ -17,7 +19,14 @@ export interface ModalProps {
     data: ModalItem[];
 }
 
-const Modal = ({ data }: ModalProps) => {
+export interface IProps extends ModalProps {
+    showUI: boolean;
+    setShowUI: (value: boolean) => void;
+}
+
+const Modal = ({ data, showUI, setShowUI }: IProps) => {
+    const dispatch = useAppDispatch();
+
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const modalRef = useRef<HTMLDivElement>(null);
@@ -40,6 +49,18 @@ const Modal = ({ data }: ModalProps) => {
                     : sliderRef.current.scrollLeft + containerWidth,
             behavior: 'smooth',
         });
+    };
+
+    const handleClose = () => {
+        if (showUI) {
+            setShowUI(false);
+        }
+    };
+
+    const openHTPDetail = () => {
+        handleClose();
+
+        dispatch(toggleMenuHTP());
     };
 
     useLayoutEffect(() => {
@@ -99,26 +120,30 @@ const Modal = ({ data }: ModalProps) => {
             detectCurrent();
 
             sliderRef.current?.addEventListener('scroll', () => detectCurrent());
-            document.addEventListener('resize', () => storeBounds());
             modalRef.current?.addEventListener('animationend', handleModalAnimationEnd);
+            document.addEventListener('resize', () => storeBounds());
 
             return () => {
                 sliderRef.current?.removeEventListener('scroll', () => detectCurrent());
-                document.removeEventListener('resize', () => storeBounds());
+
                 modalRef.current?.removeEventListener('animationend', handleModalAnimationEnd);
+                document.removeEventListener('resize', () => storeBounds());
             };
         }
     }, []);
 
     return (
-        <div className={`${styles.modal}${deviceClassName}`} ref={modalRef}>
-            <ButtonClose />
+        <div
+            className={`${styles.modal}${deviceClassName}${!showUI ? ` ${styles.close}` : ''}`}
+            ref={modalRef}
+        >
+            <ButtonClose handleClose={handleClose} />
 
             <div className={styles.body}>
                 <Slider data={data} ref={sliderRef} />
             </div>
 
-            <ButtonDetails show={activeIndex === data.length - 1} />
+            <ButtonDetails show={activeIndex === data.length - 1} openHTPDetail={openHTPDetail} />
             <Indicators data={data} activeIndex={activeIndex} handleSlideClick={handleSlideClick} />
             <DontShowAgain />
         </div>

@@ -9,6 +9,8 @@ export interface GameStateState {
         type: 'danger' | 'warning' | 'none';
     };
     layoutVersion: number;
+
+    showMiniHowToPlay: boolean;
 }
 
 const initialState: GameStateState = {
@@ -19,6 +21,8 @@ const initialState: GameStateState = {
         type: 'danger',
     },
     layoutVersion: 1,
+
+    showMiniHowToPlay: true,
 };
 
 const gameStateSlice = createSlice({
@@ -38,15 +42,20 @@ const gameStateSlice = createSlice({
         setMessage: (state, action: PayloadAction<GameStateState['message']>) => {
             state.message = action.payload;
         },
+        setShowMiniHowToPlay: (state, action: PayloadAction<boolean>) => {
+            state.showMiniHowToPlay = action.payload;
+        },
     },
 });
 
-export const { toggleModeBet, toggleShowChip, setMessage } = gameStateSlice.actions;
+export const { toggleModeBet, toggleShowChip, setMessage, setShowMiniHowToPlay } =
+    gameStateSlice.actions;
 
 export const selectModeBet = (state: RootState) => state.gameState.modeBet;
 export const selectShowChip = (state: RootState) => state.gameState.showChip;
 export const selectMessageValue = (state: RootState) => state.gameState.message.value;
 export const selectMessageType = (state: RootState) => state.gameState.message.type;
 export const selectLayoutVersion = (state: RootState) => state.gameState.layoutVersion;
+export const selectShowMiniHowToPlay = (state: RootState) => state.gameState.showMiniHowToPlay;
 
 export default gameStateSlice.reducer;

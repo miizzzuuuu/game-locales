@@ -4,10 +4,14 @@
     background: rgba(0, 0, 0, 0.8);
     padding: 2.4rem 0.8rem 2rem;
     border-radius: 1.6rem;
-    animation: open-modal 0.4s forwards;
+    animation: open-modal 0.45s forwards;
 
     display: flex;
     flex-direction: column;
+
+    &.close {
+        animation: close-modal 0.4s forwards;
+    }
 }
 
 .body {
@@ -26,7 +30,7 @@
 @keyframes open-modal {
     0% {
         opacity: 0;
-        scale: 0;
+        scale: 0.5;
     }
 
     80% {
@@ -36,5 +40,17 @@
     100% {
         opacity: 1;
         scale: 1;
+    }
+}
+
+@keyframes close-modal {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.5;
     }
 }

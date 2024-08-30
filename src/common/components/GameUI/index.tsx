@@ -1,10 +1,10 @@
 import { useAppSelector } from '../../../store/hooks';
-import { selectLayoutVersion } from '../../../store/slice/gameStateSlice';
+import { selectShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import LayoutV1 from '../../layouts/v1';
 import LayoutV2 from '../../layouts/v2';
 
 const GameUI = () => {
-    const layoutVersion = useAppSelector(selectLayoutVersion);
+    const layoutVersion = useAppSelector(selectShowMiniHowToPlay);
 
     if (layoutVersion === 1) {
         return <LayoutV1></LayoutV1>;

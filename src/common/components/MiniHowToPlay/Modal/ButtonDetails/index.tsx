@@ -3,14 +3,20 @@ import styles from './styles.module.scss';
 
 interface IProps {
     show?: boolean;
+    openHTPDetail: () => void;
 }
 
-const ButtonDetails = ({ show }: IProps) => {
+const ButtonDetails = ({ show, openHTPDetail }: IProps) => {
     return (
         <div className={styles.container}>
             <Button
                 className={`${styles.button} ${show ? styles.show : styles.hide}`}
                 disabled={!show}
+                onClick={() => {
+                    if (show) {
+                        openHTPDetail();
+                    }
+                }}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" fill="none">
                     <g clip-path="url(#clip0_3009_34085)">

@@ -1,9 +1,13 @@
 import Button from '../../../Button';
 import styles from './styles.module.scss';
 
-const ButtonClose = () => {
+interface IProps {
+    handleClose: () => void;
+}
+
+const ButtonClose = ({ handleClose }: IProps) => {
     return (
-        <Button className={styles.button}>
+        <Button className={styles.button} onClick={handleClose}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

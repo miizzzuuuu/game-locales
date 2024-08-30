@@ -10,4 +10,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: open-background-modal 0.3s forwards;
+
+    &.close {
+        animation: close-background-modal 0.4s forwards;
+    }
+}
+
+@keyframes open-background-modal {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes close-background-modal {
+    from {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0);
+    }
 }
