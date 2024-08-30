@@ -1,12 +1,13 @@
-const SVGWheel = () => {
+import { SVGProps } from 'react';
+
+const SVGWheel = ({ style }: SVGProps<SVGSVGElement>) => {
     return (
         <svg
-            width="184"
-            height="184"
             viewBox="0 0 184 184"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
+            style={style}
         >
             <rect width="184" height="184" fill="url(#pattern0_3009_38202)" />
             <defs>

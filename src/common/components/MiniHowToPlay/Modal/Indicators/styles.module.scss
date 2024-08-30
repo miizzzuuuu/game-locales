@@ -24,8 +24,10 @@
     height: 0.6rem;
     border-radius: 0.6rem;
     background: rgba(255, 255, 255, 0.12);
+    transform: background 0.2s linear;
 }
 
 .dot.active {
     background: rgba(255, 255, 255, 1);
+    transform: background 0.2s linear;
 }

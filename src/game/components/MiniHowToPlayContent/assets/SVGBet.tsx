@@ -1,12 +1,8 @@
-const SVGBet = () => {
+import { SVGProps } from 'react';
+
+const SVGBet = ({ style }: SVGProps<SVGSVGElement>) => {
     return (
-        <svg
-            width="310"
-            height="46"
-            viewBox="0 0 310 46"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 310 46" fill="none" xmlns="http://www.w3.org/2000/svg" style={style}>
             <g clip-path="url(#clip0_3009_38300)">
                 <rect x="1" y="1" width="308" height="44" rx="4" fill="#1E1F2E" />
                 <rect x="1" y="1" width="36" height="22" fill="#2C2D3F" />

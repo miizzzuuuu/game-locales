@@ -8,9 +8,7 @@ export const title = 'Hasil Permainan';
 export const GraphicComponent = () => {
     return (
         <Graphic>
-            <div>
-                <SVGResult />
-            </div>
+            <SVGResult style={{ width: '16rem' }} />
         </Graphic>
     );
 };

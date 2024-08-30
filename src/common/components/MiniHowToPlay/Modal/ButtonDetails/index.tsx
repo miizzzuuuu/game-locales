@@ -9,8 +9,7 @@ const ButtonDetails = ({ show }: IProps) => {
     return (
         <div className={styles.container}>
             <Button
-                className={styles.button}
-                style={{ visibility: show ? 'visible' : 'hidden' }}
+                className={`${styles.button} ${show ? styles.show : styles.hide}`}
                 disabled={!show}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" fill="none">

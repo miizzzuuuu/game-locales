@@ -1,12 +1,8 @@
-const SVGResult = () => {
+import { SVGProps } from 'react';
+
+const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
     return (
-        <svg
-            width="160"
-            height="76"
-            viewBox="0 0 160 76"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 160 76" fill="none" xmlns="http://www.w3.org/2000/svg" style={style}>
             <path
                 d="M96.0117 48.412C98.6786 49.4486 101.25 50.7463 103.688 52.2936C110.77 56.7896 116.427 63.2078 119.998 70.7987L160 51.9816C152.859 36.7997 141.545 23.9632 127.38 14.9713C122.538 11.8976 117.431 9.31644 112.137 7.25024C112.174 7.3049 112.212 7.35963 112.25 7.41444L96.0117 48.412Z"
                 fill="url(#paint0_linear_3009_38347)"

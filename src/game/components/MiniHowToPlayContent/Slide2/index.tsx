@@ -8,9 +8,7 @@ export const title = 'Taruhan';
 export const GraphicComponent = () => {
     return (
         <Graphic>
-            <div>
-                <SVGBet />
-            </div>
+            <SVGBet style={{ width: '100%', height: '100%' }} />
         </Graphic>
     );
 };

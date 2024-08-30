@@ -1,8 +1,9 @@
 .slide {
     scroll-snap-align: center;
-    width: 31.2rem;
+    width: calc(var(--width-modal-mini-htp) - 1.6rem);
     min-height: fit-content;
     height: 100%;
+    padding-inline: 0.8rem;
 }
 
 .title {
@@ -25,4 +26,17 @@
 
 .content {
     grid-row: 3;
+}
+
+.mobile-portrait {
+    &.graphic {
+        max-height: 18rem;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    &.graphic {
+        height: 9rem;
+    }
 }

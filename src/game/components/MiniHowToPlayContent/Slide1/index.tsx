@@ -8,9 +8,7 @@ export const title = 'Cara Bermain';
 export const GraphicComponent = () => {
     return (
         <Graphic>
-            <div>
-                <SVGWheel />
-            </div>
+            <SVGWheel style={{ width: '100%', height: '100%' }} />
         </Graphic>
     );
 };
