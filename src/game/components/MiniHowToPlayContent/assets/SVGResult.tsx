@@ -6,47 +6,47 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
             <path
                 d="M96.0117 48.412C98.6786 49.4486 101.25 50.7463 103.688 52.2936C110.77 56.7896 116.427 63.2078 119.998 70.7987L160 51.9816C152.859 36.7997 141.545 23.9632 127.38 14.9713C122.538 11.8976 117.431 9.31644 112.137 7.25024C112.174 7.3049 112.212 7.35963 112.25 7.41444L96.0117 48.412Z"
                 fill="url(#paint0_linear_3009_38347)"
-                fill-opacity="0.9"
+                fillOpacity="0.9"
             />
             <path
                 d="M96.0117 48.412C98.6786 49.4486 101.25 50.7463 103.688 52.2936C110.77 56.7896 116.427 63.2078 119.998 70.7987L160 51.9816C152.859 36.7997 141.545 23.9632 127.38 14.9713C122.538 11.8976 117.431 9.31644 112.137 7.25024C112.174 7.3049 112.212 7.35963 112.25 7.41444L96.0117 48.412Z"
                 fill="url(#paint1_linear_3009_38347)"
-                fill-opacity="0.24"
+                fillOpacity="0.24"
             />
             <path
                 d="M63.4669 48.6145C63.4522 48.58 63.4375 48.5454 63.4228 48.5108L47.1958 7.51001C42.1429 9.52848 37.2652 12.0178 32.63 14.9586C18.4629 23.9466 7.14564 36.78 0 51.96L39.9974 70.7879C43.5703 63.198 49.2289 56.7812 56.3125 52.2872C58.5908 50.8418 60.9862 49.6145 63.4669 48.6145Z"
                 fill="url(#paint2_linear_3009_38347)"
-                fill-opacity="0.9"
+                fillOpacity="0.9"
             />
             <path
                 d="M63.4669 48.6145C63.4522 48.58 63.4375 48.5454 63.4228 48.5108L47.1958 7.51001C42.1429 9.52848 37.2652 12.0178 32.63 14.9586C18.4629 23.9466 7.14564 36.78 0 51.96L39.9974 70.7879C43.5703 63.198 49.2289 56.7812 56.3125 52.2872C58.5908 50.8418 60.9862 49.6145 63.4669 48.6145Z"
                 fill="url(#paint3_linear_3009_38347)"
-                fill-opacity="0.24"
+                fillOpacity="0.24"
             />
             <g filter="url(#filter0_d_3009_38347)">
                 <path
                     d="M38.884 47.1825L30.2554 38.554L29.471 41.8425L27.2082 39.5797L28.0228 36.3214L30.1196 34.2246L40.9808 45.0857L38.884 47.1825Z"
                     fill="white"
-                    fill-opacity="0.8"
-                    shape-rendering="crispEdges"
+                    fillOpacity="0.8"
+                    shapeRendering="crispEdges"
                 />
             </g>
             <path
                 d="M63.4233 48.5108C73.8783 44.373 85.5171 44.3745 95.9709 48.5152L112.25 7.4144C91.3425 -0.866745 68.0649 -0.869903 47.155 7.40565L63.4233 48.5108Z"
                 fill="black"
-                fill-opacity="0.8"
+                fillOpacity="0.8"
             />
             <path
                 d="M62.9273 48.707L63.1236 49.2029L63.6195 49.0067C73.9484 44.9188 85.4468 44.9204 95.7745 49.0111L96.2703 49.2075L96.4667 48.7116L112.746 7.6108L112.942 7.11495L112.447 6.91855C91.4128 -1.41255 67.9948 -1.41573 46.9588 6.90975L46.4629 7.10601L46.6591 7.60192L62.9273 48.707Z"
                 stroke="url(#paint4_linear_3009_38347)"
-                stroke-opacity="0.8"
-                stroke-width="1.06667"
+                strokeOpacity="0.8"
+                strokeWidth="1.06667"
             />
             <path
                 d="M62.9273 48.707L63.1236 49.2029L63.6195 49.0067C73.9484 44.9188 85.4468 44.9204 95.7745 49.0111L96.2703 49.2075L96.4667 48.7116L112.746 7.6108L112.942 7.11495L112.447 6.91855C91.4128 -1.41255 67.9948 -1.41573 46.9588 6.90975L46.4629 7.10601L46.6591 7.60192L62.9273 48.707Z"
                 stroke="black"
-                stroke-opacity="0.2"
-                stroke-width="1.06667"
+                strokeOpacity="0.2"
+                strokeWidth="1.06667"
             />
             <g filter="url(#filter1_d_3009_38347)">
                 <path
@@ -58,8 +58,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                 <path
                     d="M115.891 42.5278L124.519 33.8992L121.231 33.1148L123.494 30.852L126.752 31.6666L128.849 33.7634L117.988 44.6246L115.891 42.5278ZM124.973 51.6104L126.663 49.9209L121.941 45.1993L123.857 43.2835L134.537 39.452L136.89 41.8052L126.21 45.6368L128.579 48.0051L131.294 45.2898L133.376 47.3716L130.66 50.0868L131.626 51.0523L129.71 52.9681L128.745 52.0026L127.055 53.6921L124.973 51.6104Z"
                     fill="white"
-                    fill-opacity="0.8"
-                    shape-rendering="crispEdges"
+                    fillOpacity="0.8"
+                    shapeRendering="crispEdges"
                 />
             </g>
             <g filter="url(#filter3_d_3009_38347)">
@@ -74,8 +74,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     cy="49.2013"
                     r="10.1333"
                     stroke="url(#paint6_linear_3009_38347)"
-                    stroke-opacity="0.32"
-                    stroke-width="1.06667"
+                    strokeOpacity="0.32"
+                    strokeWidth="1.06667"
                 />
                 <ellipse
                     cx="76.2656"
@@ -84,7 +84,7 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     ry="2.13333"
                     transform="rotate(-36.421 76.2656 43.868)"
                     fill="white"
-                    fill-opacity="0.32"
+                    fillOpacity="0.32"
                 />
             </g>
             <defs>
@@ -95,9 +95,9 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     width="16.0611"
                     height="16.5944"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -130,9 +130,9 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     width="25.3338"
                     height="17.6"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -165,9 +165,9 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     width="26.094"
                     height="26.6275"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -200,9 +200,9 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     width="53.3332"
                     height="53.3333"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                 >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -236,8 +236,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     y2="62.739"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#F30049" />
-                    <stop offset="1" stop-color="#F30049" stop-opacity="0" />
+                    <stop stopColor="#F30049" />
+                    <stop offset="1" stopColor="#F30049" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="paint1_linear_3009_38347"
@@ -248,7 +248,7 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop />
-                    <stop offset="1" stop-opacity="0" />
+                    <stop offset="1" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="paint2_linear_3009_38347"
@@ -258,8 +258,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     y2="58.585"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#F30049" />
-                    <stop offset="1" stop-color="#F30049" stop-opacity="0" />
+                    <stop stopColor="#F30049" />
+                    <stop offset="1" stopColor="#F30049" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="paint3_linear_3009_38347"
@@ -270,7 +270,7 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop />
-                    <stop offset="1" stop-opacity="0" />
+                    <stop offset="1" stopOpacity="0" />
                 </linearGradient>
                 <linearGradient
                     id="paint4_linear_3009_38347"
@@ -280,12 +280,12 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     y2="50.2679"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#DDDDDD" />
-                    <stop offset="0.235" stop-color="white" />
-                    <stop offset="0.451475" stop-color="#DBDBDB" />
-                    <stop offset="0.610655" stop-color="white" />
-                    <stop offset="0.804816" stop-color="white" />
-                    <stop offset="1" stop-color="#999999" />
+                    <stop stopColor="#DDDDDD" />
+                    <stop offset="0.235" stopColor="white" />
+                    <stop offset="0.451475" stopColor="#DBDBDB" />
+                    <stop offset="0.610655" stopColor="white" />
+                    <stop offset="0.804816" stopColor="white" />
+                    <stop offset="1" stopColor="#999999" />
                 </linearGradient>
                 <radialGradient
                     id="paint5_radial_3009_38347"
@@ -295,8 +295,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     gradientUnits="userSpaceOnUse"
                     gradientTransform="translate(77.332 45.4679) rotate(47.8624) scale(15.1038)"
                 >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#7F7F7F" />
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="#7F7F7F" />
                 </radialGradient>
                 <linearGradient
                     id="paint6_linear_3009_38347"
@@ -306,8 +306,8 @@ const SVGResult = ({ style }: SVGProps<SVGSVGElement>) => {
                     y2="56.1346"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="white" stop-opacity="0" />
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
                 </linearGradient>
             </defs>
         </svg>
