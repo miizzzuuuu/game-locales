@@ -101,17 +101,11 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
             const detectCurrent = () => {
                 const scrollX = container.scrollLeft;
 
-                console.log('scrollX', scrollX);
-
                 let active = 0;
                 let prev: number;
 
                 items.current?.forEach((item, index) => {
-                    console.log('offeset:', item.offsetX);
-
                     const current = Math.abs((item.offsetX ?? 0) - scrollX);
-
-                    console.log(`${index} ${current}`);
 
                     if (prev && current < prev) {
                         active = index;
@@ -119,8 +113,6 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
 
                     prev = current;
                 });
-
-                console.log('active', active);
 
                 setActiveIndex(active);
             };
