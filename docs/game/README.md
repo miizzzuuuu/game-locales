@@ -73,6 +73,10 @@ To create a betting panel, use [this guide](betting-panel.md).
 
 To change the contents of the menu, use [this guide](menu.md).
 
+## Mini How To Play
+
+To custumize mini how to play, use [this guide](mini-how-to-play.md).
+
 ## Build and Upload to Dev
 
 [How to Build and Upload to dev](upload-to-dev-server.md).
