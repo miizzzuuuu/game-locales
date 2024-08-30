@@ -13,7 +13,11 @@ export const getMiniHowToPlay = async () => {
     }
 };
 
-export const updatePlayerSettings = async (params: MiniHowToPlay) => {
+export const updateMiniHowToPlay = async (params: MiniHowToPlay) => {
+    if (GameHelper.isDev()) {
+        throw new Error('avoid update mini how to play in dev');
+    }
+
     try {
         const response = await APIManager.put<MiniHowToPlay>(
             ENDPOINTS.miniHowToPlay + `/${GameHelper.pcode}`,

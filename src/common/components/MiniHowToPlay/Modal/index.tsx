@@ -9,6 +9,7 @@ import { DisplayHelper } from '../../../utils/DisplayHelper';
 import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
 import { useAppDispatch } from '../../../../store/hooks';
 import { GameHelper } from '../../../utils/GameHelper';
+import { updateMiniHowToPlay } from '../../../../services/api/miniHowToPlay';
 
 export type ModalItem = {
     title: string;
@@ -34,6 +35,7 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
     const sliderRef = useRef<HTMLDivElement>(null);
 
     const [activeIndex, setActiveIndex] = useState(0);
+    const [dontShowAgain, setDontShowAgain] = useState(false);
 
     const items =
         useRef<{ el: HTMLDivElement; bounds?: DOMRect; offsetY?: number; offsetX?: number }[]>();
@@ -56,6 +58,10 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
         if (showUI) {
             setShowUI(false);
             GameHelper.hideMiniHowToPlayLocalStorage();
+
+            if (dontShowAgain) {
+                updateMiniHowToPlay({ show: false });
+            }
         }
     };
 
@@ -147,7 +153,7 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
 
             <ButtonDetails show={activeIndex === data.length - 1} openHTPDetail={openHTPDetail} />
             <Indicators data={data} activeIndex={activeIndex} handleSlideClick={handleSlideClick} />
-            <DontShowAgain />
+            <DontShowAgain checked={dontShowAgain} setChecked={setDontShowAgain} />
         </div>
     );
 };
