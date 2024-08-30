@@ -243,7 +243,7 @@ export default class M23 extends BaseV2Roadmap {
 							{
 								GameHelper.pcode == "m23b" ? <>
 									{dragonPair && <circle className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-									{tigerPair && <circle className={alternatingStyleClass || ""} cx={13.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={13.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+									{tigerPair && <circle className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
 								</>
 									: <></>
 							}
