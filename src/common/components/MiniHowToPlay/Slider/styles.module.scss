@@ -1,0 +1,11 @@
+.slider {
+    width: 31.2rem;
+
+    display: grid;
+    grid-template-columns: repeat(var(--column), 31.2rem);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1.6rem;
+    column-gap: 1.6rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}

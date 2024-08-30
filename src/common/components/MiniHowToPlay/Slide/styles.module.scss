@@ -1,0 +1,28 @@
+.slide {
+    scroll-snap-align: center;
+    width: 31.2rem;
+    min-height: fit-content;
+    height: 100%;
+}
+
+.title {
+    grid-row: 1;
+
+    h1 {
+        text-align: center;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6rem;
+        // letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+}
+
+.graphic {
+    grid-row: 2;
+}
+
+.content {
+    grid-row: 3;
+}

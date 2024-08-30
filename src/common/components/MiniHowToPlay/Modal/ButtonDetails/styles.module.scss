@@ -1,0 +1,26 @@
+.container {
+    flex-shrink: 0;
+    margin-block-start: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0.4rem;
+}
+
+.button svg {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.button span {
+    color: #00c3d8;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.012rem;
+}

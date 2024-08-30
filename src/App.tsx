@@ -16,6 +16,7 @@ import { useLanguage } from './common/hooks/useLanguage';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
 import useFullscreen from './common/hooks/useFullscreen';
+import MiniHowToPlay from './common/components/MiniHowToPlay';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -72,6 +73,8 @@ function App() {
     return (
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
+
+            {showGame && <MiniHowToPlay />}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>

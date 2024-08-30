@@ -1,0 +1,31 @@
+.indicator {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-block-start: 0.8rem;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.dot-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.6rem;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.dot.active {
+    background: rgba(255, 255, 255, 1);
+}

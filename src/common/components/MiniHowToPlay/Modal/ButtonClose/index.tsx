@@ -1,0 +1,25 @@
+import Button from '../../../Button';
+import styles from './styles.module.scss';
+
+const ButtonClose = () => {
+    return (
+        <Button className={styles.button}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                style={{ width: '2.4rem', height: '2.4rem' }}
+            >
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="#6B6C80"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </Button>
+    );
+};
+
+export default ButtonClose;
