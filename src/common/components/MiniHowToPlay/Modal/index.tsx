@@ -5,6 +5,7 @@ import ButtonDetails from './ButtonDetails';
 import DontShowAgain from './DontShowAgain';
 import Indicators from './Indicators';
 import styles from './styles.module.scss';
+import { DisplayHelper } from '../../../utils/DisplayHelper';
 
 export type ModalItem = {
     title: string;
@@ -17,6 +18,8 @@ export interface ModalProps {
 }
 
 const Modal = ({ data }: ModalProps) => {
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+
     const modalRef = useRef<HTMLDivElement>(null);
     const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -108,7 +111,7 @@ const Modal = ({ data }: ModalProps) => {
     }, []);
 
     return (
-        <div className={styles.modal} ref={modalRef}>
+        <div className={`${styles.modal}${deviceClassName}`} ref={modalRef}>
             <ButtonClose />
 
             <div className={styles.body}>

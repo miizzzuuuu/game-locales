@@ -1,6 +1,4 @@
 .modal {
-    --width-modal-mini-htp: 34rem;
-
     position: relative;
     width: var(--width-modal-mini-htp);
     background: rgba(0, 0, 0, 0.8);
@@ -14,6 +12,15 @@
 
 .body {
     flex: 1;
+}
+
+.mobile-portrait {
+    --width-modal-mini-htp: 34rem;
+}
+
+.desktop,
+.mobile-landscape {
+    --width-modal-mini-htp: 42rem;
 }
 
 @keyframes open-modal {
