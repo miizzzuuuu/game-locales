@@ -218,6 +218,19 @@ export function makeServer({ environment = 'test' } = {}) {
                     message: 'success',
                 };
             });
+
+            // mini how to play
+            this.get(ENDPOINTS.miniHowToPlay + '/:pcode', () => {
+                return {
+                    show: true,
+                };
+            });
+
+            this.put(ENDPOINTS.miniHowToPlay + '/:pcode', () => {
+                return {
+                    show: false,
+                };
+            });
         },
     });
 

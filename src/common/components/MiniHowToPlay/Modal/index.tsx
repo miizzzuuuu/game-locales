@@ -8,6 +8,7 @@ import styles from './styles.module.scss';
 import { DisplayHelper } from '../../../utils/DisplayHelper';
 import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
 import { useAppDispatch } from '../../../../store/hooks';
+import { GameHelper } from '../../../utils/GameHelper';
 
 export type ModalItem = {
     title: string;
@@ -54,6 +55,7 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
     const handleClose = () => {
         if (showUI) {
             setShowUI(false);
+            GameHelper.hideMiniHowToPlayLocalStorage();
         }
     };
 

@@ -36,6 +36,8 @@ export const ENDPOINTS = {
 
     result: '/v2/result', // path :pcode, query ?page=&per_page=
     transaction: '/v2/transactions', // path :pcode. query ?page=&per_page=&date=
+
+    miniHowToPlay: '/v2/player/mini-how-to-play',
 };
 
 class APIManager {

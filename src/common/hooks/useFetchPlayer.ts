@@ -5,6 +5,9 @@ import { getPlayerData } from '../../services/api/playerData';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { setPlayerData } from '../../store/slice/playerSlice';
 import { setChipBase } from '../../store/slice/chipSlice';
+import { getMiniHowToPlay } from '../../services/api/miniHowToPlay';
+import { setShowMiniHowToPlay } from '../../store/slice/gameStateSlice';
+import { GameHelper } from '../utils/GameHelper';
 
 export function useFetchPlayer() {
     const dispatch = useAppDispatch();
@@ -21,6 +24,14 @@ export function useFetchPlayer() {
                 if (!ignore) {
                     dispatch(setPlayerData(data));
                     dispatch(setChipBase(data.chipBase));
+
+                    // fetch mini how to play
+                    const dataMiniHTP = await getMiniHowToPlay();
+                    const showMiniHowToPlayLS = GameHelper.getMiniHowToPlayLocalStorage();
+
+                    console.log('showMiniHowToPlayLS', showMiniHowToPlayLS);
+
+                    dispatch(setShowMiniHowToPlay(dataMiniHTP.show && showMiniHowToPlayLS));
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load player data completed');
