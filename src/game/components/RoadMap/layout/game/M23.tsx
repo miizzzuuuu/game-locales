@@ -180,8 +180,11 @@ export default class M23 extends BaseV2Roadmap {
 					} else
 						this.currentRow! += 1;
 					if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
-					const tigerPair = item.tiger[0] == item.wild[0];
-					const dragonPair = item.dragon[0] == item.wild[0];
+					let tigerPair, dragonPair;
+					if(GameHelper.pcode == "m23b"){
+						tigerPair = item.tiger[0] == item.wild[0];
+						dragonPair = item.dragon[0] == item.wild[0];
+					}
 					const spacing = 14.1176;
 					const baseStarting = 5.29382;
 
