@@ -230,21 +230,22 @@ export class BaseV2Roadmap extends React.Component<Props> {
 														d={`M${4.79382 + (baseSpace * (col - 1))} ${15.79382 + (baseSpace * (row - 1))}l11-11`}
 													></path>
 													<defs>
-														<filter x="0" y="0" width="1" height="1" id="solid">
-															<feFlood flood-color="#fff" result="bg" />
+														<filter id="whiteOutlineEffect" color-interpolation-filters="sRGB">
+															<feMorphology in="SourceAlpha" result="MORPH" operator="dilate" radius="2" />
+															<feColorMatrix in="MORPH" result="WHITENED" type="matrix" values="-1 0 0 0 1, 0 -1 0 0 1, 0 0 -1 0 1, 0 0 0 1 0" />
 															<feMerge>
-																<feMergeNode in="bg" />
+																<feMergeNode in="WHITENED" />
 																<feMergeNode in="SourceGraphic" />
 															</feMerge>
 														</filter>
 													</defs>
 													<text
-														filter="url(#solid)"
+														filter="url(#whiteOutlineEffect)"
 														fill={this.props.darkMode ? "#fff" : "#000"}
 														fontFamily="Manrope"
 														// @ts-ignore
 														className={this.roadmapDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].blink}
-														fontSize="5"
+														fontSize="9"
 														x={5.29382 + (baseSpace * (col - 1)) + (baseSpace / 4)}
 														y={5.29382 + baseSpace * (row - 1) + (baseSpace / 2)}
 														// fill="white"
@@ -256,11 +257,11 @@ export class BaseV2Roadmap extends React.Component<Props> {
 														}}
 													// transform="translate(7 -1.5) rotate(20deg)"
 													>
-														
+
 
 														{
 															/* @ts-ignore */
-															this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num>1?this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num:""
+															this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num > 1 ? this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num : ""
 														}
 														{/* @ts-ignore */}
 														{/* <textPath href={`#${idKey}`}>{this.roadmapTiesDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].num}</textPath> */}
