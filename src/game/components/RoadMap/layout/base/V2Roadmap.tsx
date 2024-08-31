@@ -163,14 +163,15 @@ export class BaseV2Roadmap extends React.Component<Props> {
 
 	bigRoadFragment() {
 		// @ts-ignore
-		const roadmapColumns = nary(this.totalColumns );
+		const roadmapColumns = nary(this.totalColumns);
 		const maxRow = 5;
 		const basePcode = GameHelper.getBasePcode();
 
-		if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1])+1 >= (this.props.totalColumns||24)){
+		if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) + 1 >= (this.props.totalColumns || 24)) {
 
-			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - (this.props.totalColumns||24)+1;
+			this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - (this.props.totalColumns || 24) + 1;
 		}
+		const baseSpace = 14.1176;
 
 		return nary(maxRow).map((row) => {
 			return (
@@ -199,8 +200,8 @@ export class BaseV2Roadmap extends React.Component<Props> {
 															height="10.5882"
 															// @ts-ignore
 
-															x={5.29382 + (14.1176 * (col - 1))}
-															y={5.29382 + 14.1176 * (row - 1)}
+															x={5.29382 + (baseSpace * (col - 1))}
+															y={5.29382 + baseSpace * (row - 1)}
 															// @ts-ignore
 															stroke={this.roadmapDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].color}
 
@@ -226,26 +227,50 @@ export class BaseV2Roadmap extends React.Component<Props> {
 														stroke={this.greenColor!}
 														strokeLinecap="round"
 														// @ts-ignore
-														d={`M${8.79382 + (14.1176 * (col - 1))} ${12.79382 + (14.1176 * (row - 1))}l4-4`}
+														d={`M${4.79382 + (baseSpace * (col - 1))} ${15.79382 + (baseSpace * (row - 1))}l11-11`}
 													></path>
+													<defs>
+														<filter x="0" y="0" width="1" height="1" id="solid">
+															<feFlood flood-color="#fff" result="bg" />
+															<feMerge>
+																<feMergeNode in="bg" />
+																<feMergeNode in="SourceGraphic" />
+															</feMerge>
+														</filter>
+													</defs>
 													<text
+														filter="url(#solid)"
 														fill={this.props.darkMode ? "#fff" : "#000"}
 														fontFamily="Manrope"
 														// @ts-ignore
 														className={this.roadmapDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].blink}
 														fontSize="5"
-														style={{ textAlign: "center" }}
-														transform="translate(.5 -1.5)"
+														x={5.29382 + (baseSpace * (col - 1)) + (baseSpace / 4)}
+														y={5.29382 + baseSpace * (row - 1) + (baseSpace / 2)}
+														// fill="white"
+														style={{
+															textAlign: "center",
+															backgroundColor: "white"
+															// rotate: "90deg"
+															// transformOrigin: "-20 -20"
+														}}
+													// transform="translate(7 -1.5) rotate(20deg)"
 													>
+														
+
+														{
+															/* @ts-ignore */
+															this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num>1?this.roadmapTiesDisplay![row - 1][col - 1 + this.firstRoadmapDisplayedCol!]!.num:""
+														}
 														{/* @ts-ignore */}
-														<textPath href={`#${idKey}`}>{this.roadmapTiesDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].num}</textPath>
+														{/* <textPath href={`#${idKey}`}>{this.roadmapTiesDisplay[row - 1][col - 1 + this.firstRoadmapDisplayedCol].num}</textPath> */}
 													</text>
 												</>
 													: null,
 
 												// Pairs
 												// @ts-ignore
-												basePcode === "m22"|| GameHelper.pcode === "m23b" || basePcode === "m38" ?
+												basePcode === "m22" || GameHelper.pcode === "m23b" || basePcode === "m38" ?
 													// @ts-ignore
 													this.roadmapPairsDisplay[row - 1]
 													// @ts-ignore

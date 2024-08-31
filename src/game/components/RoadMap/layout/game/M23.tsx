@@ -202,8 +202,8 @@ export default class M23 extends BaseV2Roadmap {
 								fill="white">T</text>
 							{
 								GameHelper.pcode == "m23b" ? <>
-									{dragonPair && <circle className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-									{tigerPair && <circle className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+									{dragonPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
+									{tigerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
 								</>
 									: <></>
 							}
@@ -224,8 +224,8 @@ export default class M23 extends BaseV2Roadmap {
 								fill="white">D</text>
 							{
 								GameHelper.pcode == "m23b" ? <>
-									{dragonPair && <circle className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-									{tigerPair && <circle className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+									{dragonPair && <circle stroke="white"  className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
+									{tigerPair && <circle stroke="white"  className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
 								</>
 									: <></>
 							}
@@ -245,8 +245,8 @@ export default class M23 extends BaseV2Roadmap {
 
 							{
 								GameHelper.pcode == "m23b" ? <>
-									{dragonPair && <circle className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-									{tigerPair && <circle className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+									{dragonPair && <circle stroke="white"  className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
+									{tigerPair && <circle stroke="white"  className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
 								</>
 									: <></>
 							}
@@ -324,9 +324,9 @@ export default class M23 extends BaseV2Roadmap {
 							this.roadmapPairsDisplay![pos[0]][pos[1]] = [
 								<>
 									{(item === 'D' || item === 'DG') &&
-										<circle className={alternatingStyle || ""} cx={6.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (pos[0] * spacing)} r="1.5" fill={this.redColor} />}
+										<circle stroke="white" className={alternatingStyle || ""} cx={6.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (pos[0] * spacing)} r="1.5" fill={this.redColor} />}
 									{(item === 'D' || item === 'TG') &&
-										<circle className={alternatingStyle || ""} cx={14.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (pos[0] * spacing)} r="1.5" fill={this.blueColor} />}
+										<circle stroke="white" className={alternatingStyle || ""} cx={14.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (pos[0] * spacing)} r="1.5" fill={this.blueColor} />}
 								</>
 							];
 						});
