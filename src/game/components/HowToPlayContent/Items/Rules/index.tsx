@@ -10,7 +10,7 @@ const Rules = () => {
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
                 <Ul>
-                    {ArrayHelper.range(4).map((_, idx) => (
+                    {ArrayHelper.range(7).map((_, idx) => (
                         <li key={idx}>
                             <P keyLang={keyLang} value={`steps.${idx}`} />
                         </li>

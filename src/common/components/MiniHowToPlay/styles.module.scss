@@ -1,0 +1,39 @@
+.mini-how-to-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: open-background-modal 0.3s forwards;
+
+    &.close {
+        animation: close-background-modal 0.4s forwards;
+    }
+}
+
+@keyframes open-background-modal {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@keyframes close-background-modal {
+    from {
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    to {
+        background: rgba(0, 0, 0, 0);
+    }
+}

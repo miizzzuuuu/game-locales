@@ -108,3 +108,7 @@ export type Pagination = {
     current_page: number;
     total_pages: number;
 };
+
+export type MiniHowToPlay = {
+    show: boolean;
+};

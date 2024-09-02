@@ -11,7 +11,7 @@ import {
 import { Sound } from '../../../../services/sound';
 import { DisplayHelper } from '../../../utils/DisplayHelper';
 
-const length = 138.23;
+export const length = 138.23;
 
 const TimerContent = () => {
     const dispatch = useAppDispatch();

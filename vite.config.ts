@@ -6,9 +6,14 @@ export default defineConfig(({ mode }) => {
     return {
         plugins: [react()],
         build: {
+            chunkSizeWarningLimit: 1600,
             rollupOptions: {
                 output: {
                     manualChunks(id: string) {
+                        if (id.indexOf('i18next') >= 0) {
+                            return 'i18next';
+                        }
+
                         if (id.indexOf('react') >= 0) {
                             return 'react';
                         }

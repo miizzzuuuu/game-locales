@@ -1,0 +1,42 @@
+.slide {
+    scroll-snap-align: center;
+    width: calc(var(--width-modal-mini-htp) - 1.6rem);
+    min-height: fit-content;
+    height: 100%;
+    padding-inline: 0.8rem;
+}
+
+.title {
+    grid-row: 1;
+
+    h1 {
+        text-align: center;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6rem;
+        // letter-spacing: 0.28px;
+        text-transform: uppercase;
+    }
+}
+
+.graphic {
+    grid-row: 2;
+}
+
+.content {
+    grid-row: 3;
+}
+
+.mobile-portrait {
+    &.graphic {
+        max-height: 18rem;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    &.graphic {
+        height: 9rem;
+    }
+}

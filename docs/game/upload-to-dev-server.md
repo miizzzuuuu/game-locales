@@ -28,6 +28,14 @@ password: IDNtoto38#\*
 
 ### Upload all the folders and files inside `dist-dev` to the respective game paths:
 
+-   **Poker Dice - m14**
+
+Path: `~/gameserver/build/new_poker_dice_react`
+
+-   **Roulette - p7**
+
+Path: `~/gameserver/build/new_rl_kd_react`
+
 -   **24D - p6**
 
 Path: `~/gameserver/build/new_24d_react`

@@ -3,7 +3,7 @@ import { LoadingHelper } from './common/utils/LoadingHelper';
 import { useWindowResize } from './common/hooks/useWindowResize';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
-import { useAppDispatch } from './store/hooks';
+import { useAppDispatch, useAppSelector } from './store/hooks';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
 import { useFetchLastbets } from './common/hooks/useFetchLastbets';
@@ -16,6 +16,9 @@ import { useLanguage } from './common/hooks/useLanguage';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
 import useFullscreen from './common/hooks/useFullscreen';
+import MiniHowToPlay from './common/components/MiniHowToPlay';
+import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { Features } from './common/utils/Features';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -23,6 +26,8 @@ function App() {
     const [showOverlayResize, setShowOverlayResize] = useState(false);
 
     const [showGame, setShowGame] = useState(false);
+    const showMiniHowToPlay = useAppSelector(selectShowMiniHowToPlay);
+
     const { finish: finishGetPlayer } = useFetchPlayer();
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetLastbets } = useFetchLastbets();
@@ -72,6 +77,8 @@ function App() {
     return (
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
+
+            {showGame && showMiniHowToPlay && Features.MINI_HOW_TO_PLAY && <MiniHowToPlay />}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>

@@ -1,9 +1,13 @@
 import { SVGProps } from 'react';
+import { useAppTranslate } from '../../../../../../services/i18next/hooks';
+import { GameHelper } from '../../../../../../common/utils/GameHelper';
 // import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
 const SVGBet50 = ({ className, style }: IProps) => {
+    const { t } = useAppTranslate(GameHelper.getBasePcode());
+
     return (
         <svg
             // width="200"
@@ -40,15 +44,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="12.245408"
+                y="11.046508"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="3.80792" y="13.3445">
-                    KECIL
-                </tspan>
+                {t('small')}
             </text>
             <g filter="url(#filter0_dd_356_884)">
                 <g clipPath="url(#clip0_356_884)">
@@ -370,15 +377,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="187.75085"
+                y="11.046508"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="178.001" y="13.3445">
-                    BESAR
-                </tspan>
+                {t('big')}
             </text>
             <g opacity="0.32">
                 <g clipPath="url(#clip3_356_884)">
@@ -570,15 +580,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="24.781558"
+                y="66.30235"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="14.3343" y="68.6224">
-                    GANJIL
-                </tspan>
+                {t('odd')}
             </text>
             <g filter="url(#filter1_dd_356_884)">
                 <g clipPath="url(#clip4_356_884)">
@@ -648,15 +661,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="74.9261"
+                y="66.30235"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="64.7484" y="68.6224">
-                    GENAP
-                </tspan>
+                {t('even')}
             </text>
             <rect
                 x="100.522"
@@ -684,15 +700,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="125.071"
+                y="66.30235"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="114.459" y="68.6224">
-                    MERAH
-                </tspan>
+                {t('red')}
             </text>
             <g filter="url(#filter2_dd_356_884)">
                 <g clipPath="url(#clip7_356_884)">
@@ -762,15 +781,18 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 strokeWidth="0.465116"
             />
             <text
+                x="175.215"
+                y="66.30235"
+                textAnchor="middle"
+                dominantBaseline="middle"
                 fill="white"
                 fontFamily="Manrope"
                 fontSize="6"
                 fontWeight="800"
                 letterSpacing="0em"
+                style={{ textTransform: 'uppercase' }}
             >
-                <tspan x="165.723" y="68.6224">
-                    HITAM
-                </tspan>
+                {t('black')}
             </text>
             <defs>
                 <filter

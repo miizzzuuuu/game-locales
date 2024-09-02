@@ -9,7 +9,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
-import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
+import { dummyLoadNewValue, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
@@ -18,9 +18,9 @@ import { selectNickname, selectOperatorId } from '../../../store/slice/playerSli
 import TopWinner from '../TopWinner';
 import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { GameHelper } from '../../utils/GameHelper';
-import { setNewSet } from '../../../store/slice/gameSlice';
 import { useNewSet } from '../../hooks/useNewSet';
 import { resetHistory } from '../../../store/slice/historySlice';
+import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -58,12 +58,8 @@ function Game() {
                 }),
             );
         }
-
-        if (e.key === 'n') {
-            dispatch(setNewSet(newSetDummy.status));
-        }
-        if (e.key === 'm') {
-            dispatch(setNewSet(false));
+        if (e.key === 'p') {
+            dispatch(setShowMiniHowToPlay(true));
         }
     }, []);
 

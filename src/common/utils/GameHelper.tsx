@@ -11,6 +11,10 @@ export class GameHelper {
         return this._pcode;
     }
 
+    static isDev() {
+        return import.meta.env.MODE === 'development';
+    }
+
     static activeLetterBox: boolean = false;
 
     static GAME_CODE: Record<string, string> = {
@@ -116,7 +120,35 @@ export class GameHelper {
         p12: 'Sicbo[Dice]',
     };
 
-    
+    static KEY_MINI_HOW_TO_PLAY = 'mini-htp';
+
+    static getKeyMiniHowToPlay() {
+        return `${this.KEY_MINI_HOW_TO_PLAY}-${this.pcode}`;
+    }
+
+    static getMiniHowToPlayLocalStorage() {
+        if (this.isDev()) {
+            console.log('is dev');
+            return true;
+        }
+
+        const item = localStorage.getItem(this.getKeyMiniHowToPlay());
+        if (!item) {
+            return true;
+        }
+
+        return !!(item === 'true');
+    }
+
+    static hideMiniHowToPlayLocalStorage() {
+        if (this.isDev()) {
+            console.log('is dev');
+            return;
+        }
+
+        localStorage.setItem(this.getKeyMiniHowToPlay(), 'false');
+    }
+
     static getEventNewSet() {
         let baseNewSet: string = '';
 

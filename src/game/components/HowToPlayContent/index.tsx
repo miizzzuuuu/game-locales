@@ -1,19 +1,21 @@
 import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
+import BetDescription from './Items/BetDescription';
+import BonusSystem from './Items/BonusSystem';
 import Introduction from './Items/Introduction';
+import Payout from './Items/Payout';
 import PlacingABet from './Items/PlacingABet';
 import Rules from './Items/Rules';
 
-import styles from './styles.module.scss';
-
 const HowToPlayContent = () => {
     return (
-        <div className={styles.htp}>
-            <MenuContentContainer>
-                <Introduction />
-                <Rules />
-                <PlacingABet />
-            </MenuContentContainer>
-        </div>
+        <MenuContentContainer>
+            <Introduction />
+            <Rules />
+            <BetDescription />
+            <PlacingABet />
+            <BonusSystem />
+            <Payout />
+        </MenuContentContainer>
     );
 };
 

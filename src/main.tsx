@@ -44,4 +44,6 @@ const main = async () => {
     );
 };
 
+console.log('running in mode:', import.meta.env.MODE);
+
 main();
