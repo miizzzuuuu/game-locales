@@ -547,6 +547,7 @@ export default class M22 extends BaseV2Roadmap {
                     full={''}
                     isLandscape={DisplayHelper.getOrientation() == 'landscape'}
                     onClick={() => console.log('')}
+                    totalColumns={0}
                     type="predictions"
                 />
             </div>

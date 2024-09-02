@@ -1,5 +1,5 @@
 import React from "react";
-import { RenderObject } from "../../../../../../game/components/External/components/base/renderObject";
+import { RenderObject } from "../../MainArea/renderObject";
 
 export class Label extends RenderObject<any> {
   public render(): React.ReactNode {

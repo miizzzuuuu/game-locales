@@ -35,7 +35,7 @@ export interface Props {
 	small?: boolean;
 	mobile?: boolean;
 	showLobbyGameGroup?: boolean;
-	totalColumns: number | undefined;
+	totalColumns: number;
 
 }
 

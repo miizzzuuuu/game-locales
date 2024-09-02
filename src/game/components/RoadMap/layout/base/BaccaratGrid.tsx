@@ -1,4 +1,4 @@
-export const BaccaratGrid = ({ stroke, col, children }: {
+export const BaccaratGrid = ({ col, children }: {
     stroke: string
     col: number
     children: any

@@ -1,5 +1,5 @@
-import { StringUtility } from "../../../../../../game/components/External/managers/StringUtility";
-import { RenderSymbol } from "../../../../../../game/components/External/prefabs/cardsymbol";
+import { StringUtility } from "../../MobilePortraitWild/RenderCard/StringUtility";
+
 
 export function RenderCardV2(props: any) {
   let displayValue = StringUtility.splitCharStringToArray(props.value);
