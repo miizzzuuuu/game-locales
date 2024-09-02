@@ -1,5 +1,20 @@
 ## Mini How To Play
 
+### Enable Features `mini How-To-Play`
+
+`src/common/utils/Features.ts`
+
+set `MINI_HOW_TO_PLAY` to `true`
+
+```ts
+...
+
+export const Features: FeaturesType = {
+    ...
+    MINI_HOW_TO_PLAY: true,
+};
+```
+
 how to add mini how to play
 
 edit the file in the `src/game/components/MiniHowToPlayContent` folder

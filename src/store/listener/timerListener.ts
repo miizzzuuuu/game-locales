@@ -1,3 +1,4 @@
+import { Features } from '../../common/utils/Features';
 import { GameHelper } from '../../common/utils/GameHelper';
 import { confirmBet } from '../../services/api/sendBet';
 import { AppStartListening } from '../listenerMiddleware';
@@ -12,12 +13,14 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
     if (state) {
         const betAdd = selectAllBetAdd(state);
 
-        const showPatternUI = state.gameState.showPatternUI;
-        if (showPatternUI) {
-            dispatch(setShowPatternBeforeClose(true));
-            dispatch(togglePatternUI());
-        } else {
-            dispatch(setShowPatternBeforeClose(false));
+        if (Features.BUTTON_PATTERN) {
+            const showPatternUI = state.gameState.showPatternUI;
+            if (showPatternUI) {
+                dispatch(setShowPatternBeforeClose(true));
+                dispatch(togglePatternUI());
+            } else {
+                dispatch(setShowPatternBeforeClose(false));
+            }
         }
 
         if (betAdd.length > 0) {
@@ -41,7 +44,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
 };
 
 const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
-    if (state) {
+    if (Features.BUTTON_PATTERN && state) {
         const showPatternUIBeforeClose = state.gameState.showPatternUIBeforeClose;
         if (showPatternUIBeforeClose) {
             dispatch(togglePatternUI());

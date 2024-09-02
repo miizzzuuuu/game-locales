@@ -18,6 +18,7 @@ import { useFocus } from './common/hooks/useFocus';
 import useFullscreen from './common/hooks/useFullscreen';
 import MiniHowToPlay from './common/components/MiniHowToPlay';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { Features } from './common/utils/Features';
 
 function App() {
     const dispatch = useAppDispatch();
@@ -77,7 +78,7 @@ function App() {
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
 
-            {showGame && showMiniHowToPlay && <MiniHowToPlay />}
+            {showGame && showMiniHowToPlay && Features.MINI_HOW_TO_PLAY && <MiniHowToPlay />}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>
