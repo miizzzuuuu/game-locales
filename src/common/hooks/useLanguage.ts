@@ -4,7 +4,7 @@ import { selectLanguage } from '../../store/slice/settingsSlice';
 import { useAppSelector } from '../../store/hooks';
 import { LangHelper } from '../utils/LangHelper';
 
-export const useLanguage = () => {
+function useLanguage() {
     const lang = useAppSelector(selectLanguage);
 
     const { i18n } = useTranslation();
@@ -13,4 +13,6 @@ export const useLanguage = () => {
         i18n.changeLanguage(lang);
         LangHelper.activeLang = lang;
     }, [lang]);
-};
+}
+
+export { useLanguage };

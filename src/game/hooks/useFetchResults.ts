@@ -3,7 +3,7 @@ import { useAppDispatch } from '../../store/hooks';
 import { getResults } from '../../services/api/results';
 import { ResultP6B } from '../../types';
 
-export function useFetchResults() {
+function useFetchResults() {
     const dispatch = useAppDispatch();
 
     const [loading, setLoading] = useState(false);
@@ -38,3 +38,5 @@ export function useFetchResults() {
 
     return { finish, loading };
 }
+
+export { useFetchResults };

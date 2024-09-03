@@ -5,7 +5,7 @@ import { LoadingHelper } from '../utils/LoadingHelper';
 import { getGameData } from '../../services/api/gameData';
 import { setGame } from '../../store/slice/gameSlice';
 
-export function useFetchGame() {
+function useFetchGame() {
     const dispatch = useAppDispatch();
 
     const [finish, setFinish] = useState(false);
@@ -38,3 +38,5 @@ export function useFetchGame() {
 
     return { finish };
 }
+
+export { useFetchGame };

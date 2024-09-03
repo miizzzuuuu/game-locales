@@ -21,7 +21,7 @@ interface Params {
     useLowerCase?: boolean | undefined;
 }
 
-export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
+function usePlaceBet({ useLowerCase }: Params = {}) {
     const dispatch = useAppDispatch();
 
     const { t } = useAppTranslate('');
@@ -158,4 +158,6 @@ export const usePlaceBet = ({ useLowerCase }: Params = {}) => {
     return {
         placeBetHandler,
     };
-};
+}
+
+export { usePlaceBet };

@@ -7,7 +7,7 @@ interface Params {
     handleNewSet: () => void;
 }
 
-export function useNewSet({ handleNewSet }: Params) {
+function useNewSet({ handleNewSet }: Params) {
     if (!Features.SHUFFLE_THE_CARDS) {
         return;
     }
@@ -20,3 +20,5 @@ export function useNewSet({ handleNewSet }: Params) {
         }
     }, [gameNewSet]);
 }
+
+export { useNewSet };

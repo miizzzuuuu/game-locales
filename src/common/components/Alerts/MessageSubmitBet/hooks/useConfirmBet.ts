@@ -7,7 +7,7 @@ import {
     selectConfirmBetStatus,
 } from '../../../../../store/slice/betAddSlice';
 
-export const useConfirmBet = () => {
+function useConfirmBet() {
     const dispatch = useAppDispatch();
 
     const { t } = useAppTranslate();
@@ -59,4 +59,6 @@ export const useConfirmBet = () => {
         messageConfirmBet: message,
         messageConfirmBetHandleClose: handleClose,
     };
-};
+}
+
+export { useConfirmBet };

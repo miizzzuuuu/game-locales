@@ -6,7 +6,7 @@ import { LoadingHelper } from '../utils/LoadingHelper';
 import { getTimer } from '../../services/api/timer';
 import { openTime, setTimer } from '../../store/slice/timerSlice';
 
-export function useFetchTimer() {
+function useFetchTimer() {
     const dispatch = useAppDispatch();
 
     const [finish, setFinish] = useState(false);
@@ -44,3 +44,5 @@ export function useFetchTimer() {
 
     return { finish };
 }
+
+export { useFetchTimer };

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { PayoutData } from '../../types';
 import { getGamePayout } from '../../services/api/gamePayout';
 
-export const useFetchPayout = () => {
+function useFetchPayout() {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState<PayoutData[]>([]);
 
@@ -34,4 +34,6 @@ export const useFetchPayout = () => {
     }, []);
 
     return { loading, data };
-};
+}
+
+export { useFetchPayout };

@@ -9,7 +9,7 @@ import { getMiniHowToPlay } from '../../services/api/miniHowToPlay';
 import { setShowMiniHowToPlay } from '../../store/slice/gameStateSlice';
 import { GameHelper } from '../utils/GameHelper';
 
-export function useFetchPlayer() {
+function useFetchPlayer() {
     const dispatch = useAppDispatch();
     const [finish, setFinish] = useState(false);
 
@@ -50,3 +50,5 @@ export function useFetchPlayer() {
 
     return { finish };
 }
+
+export { useFetchPlayer };

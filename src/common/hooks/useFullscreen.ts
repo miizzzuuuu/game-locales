@@ -3,7 +3,7 @@ import { DisplayHelper } from '../utils/DisplayHelper';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
 
-const useFullscreen = () => {
+function useFullscreen() {
     const device = useAppSelector(selectDevice);
 
     useEffect(() => {
@@ -25,6 +25,6 @@ const useFullscreen = () => {
             document.removeEventListener('click', toggleFullScreen);
         };
     }, [device]);
-};
+}
 
-export default useFullscreen;
+export { useFullscreen };

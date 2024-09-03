@@ -4,7 +4,7 @@ import { selectEnableGameSound, selectVolumeGameSound } from '../../store/slice/
 import { Sound } from '../../services/sound';
 import { selectFocus } from '../../store/slice/windowSlice';
 
-export function useSettingSound() {
+function useSettingSound() {
     const [allowPlayAudio, setAllowPlayAudio] = useState(false);
     const enableSoundGame = useAppSelector(selectEnableGameSound);
     const volumeGameSound = useAppSelector(selectVolumeGameSound);
@@ -64,3 +64,5 @@ export function useSettingSound() {
     }, [enableSoundGame, allowPlayAudio]);
     // end sound setting
 }
+
+export { useSettingSound };
