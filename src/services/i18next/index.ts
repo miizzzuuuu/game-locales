@@ -8,6 +8,13 @@ import thCommon from '../../locales/th/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
+import enFeatures from '../../locales/en/features.json';
+import idFeatures from '../../locales/id/features.json';
+import koFeatures from '../../locales/ko/features.json';
+import thFeatures from '../../locales/th/features.json';
+import vnFeatures from '../../locales/vn/features.json';
+import zhFeatures from '../../locales/zh/features.json';
+
 // spesific game
 import enP6 from '../../locales/en/p6.json';
 import idP6 from '../../locales/id/p6.json';
@@ -26,22 +33,22 @@ import zhHTP from '../../locales/zh/htp.json';
 
 const resources: Resource = {
     en: {
-        translation: { common: enCommon, p6: enP6, htp: enHTP },
+        translation: { common: { ...enCommon, ...enFeatures }, p6: enP6, htp: enHTP },
     },
     id: {
-        translation: { common: idCommon, p6: idP6, htp: idHTP },
+        translation: { common: { ...idCommon, ...idFeatures }, p6: idP6, htp: idHTP },
     },
     ko: {
-        translation: { common: koCommon, p6: koP6, htp: koHTP },
+        translation: { common: { ...koCommon, ...koFeatures }, p6: koP6, htp: koHTP },
     },
     th: {
-        translation: { common: thCommon, p6: thP6, htp: thHTP },
+        translation: { common: { ...thCommon, ...thFeatures }, p6: thP6, htp: thHTP },
     },
     vn: {
-        translation: { common: vnCommon, p6: vnP6, htp: vnHTP },
+        translation: { common: { ...vnCommon, ...vnFeatures }, p6: vnP6, htp: vnHTP },
     },
     zh: {
-        translation: { common: zhCommon, p6: zhP6, htp: zhHTP },
+        translation: { common: { ...zhCommon, ...zhFeatures }, p6: zhP6, htp: zhHTP },
     },
 };
 

@@ -1,0 +1,29 @@
+{
+    "htp": {
+        "general": {
+            "title": "General",
+            "content": {
+                "paragraph-1": "You must have sufficient funds to cover your bets to participate in a game. Your current balance can be seen at the bottom left of your screen.",
+                "paragraph-2": "The TOTAL BET indicator displays the total bet amount you have placed for the current round.",
+                "paragraph-3": "Displays the minimum and maximum bets allowed on the table and can change anytime. It also shows the current period's unique code and the name of the game you are playing.",
+                "paragraph-4": "The timer will tell you how much time it takes to place a bet. Once it has expired, betting is closed, and no more bets can be accepted. Once the betting time has expired, you will receive a \"bet accepted\" confirmation if your bet was accepted to participate in the game round; otherwise, you will receive a \"Not all bets accepted\" or \"Bet declined\" notification.",
+                "paragraph-5": "The chip display allows you to select the value of each chip you wish to bet. You can choose the chip value for a bet by clicking on the chip at the bottom of the screen near the Undol, Double, and Rebet buttons to see all available chip values. Only chip values ​​that can be used with your current balance can be selected."
+            },
+            "game-name": "Game Name"
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Additional buttons to make it easier for players to play the game.",
+            "content": {
+                "paragraph-1": "The Undo button will remove one chip you previously placed on the table.",
+                "paragraph-2": "Doubles the number of chips you have placed. Make sure your account balance is sufficient to double all bets placed.",
+                "paragraph-3": "Allows you to repeat the bet you placed on the previous round at the table.",
+                "paragraph-4": "The Burger menu provides essential menus for the game.",
+                "paragraph-5": "Disguise the display of chips that you have placed on the table.",
+                "paragraph-6": "To display the Statistics of the game in progress.",
+                "paragraph-7": "To save and use each player's favorite bets.",
+                "paragraph-8": "Show or hide the Roadmap / Game Statistics."
+            }
+        }
+    }
+}
