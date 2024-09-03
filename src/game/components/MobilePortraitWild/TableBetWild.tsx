@@ -378,9 +378,6 @@ const TableBetWild = () => {
                                 />
                                 <div
                                     className={styles.cardContainerWild}
-
-                                // todo : opacit
-
                                 >
                                     <RenderCard
                                         top={DisplayHelper.getOrientation() !== "landscape" ? "calc(100%/2)" : "calc(100%/2)"}

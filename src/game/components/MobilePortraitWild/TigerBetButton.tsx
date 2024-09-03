@@ -82,7 +82,7 @@ const TigerBetButton = (
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const { chip, color } = useGetChipBet(bet);
-    const { placeBetHanlder: handleClick } = usePlaceBet();
+    const { placeBetHandler: handleClick } = usePlaceBet();
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
     const ratio = "1:1";
@@ -101,6 +101,7 @@ const TigerBetButton = (
             <div
                 style={{
                     opacity: isLose ? 0.6 : 1,
+                    marginLeft: "0.5rem"
                 }}
                 className={[styles.domainContent, isWin ? "table-win-blink" : ""].join(" ")}
             >
@@ -109,7 +110,7 @@ const TigerBetButton = (
                 <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
                     <div style={{
                         display: 'flex',
-                        justifyContent: "flex-end", marginRight: "5vw",
+                        justifyContent: "flex-end", marginRight: "4rem",
                     }}>
 
                         <span>{ratio}</span>
