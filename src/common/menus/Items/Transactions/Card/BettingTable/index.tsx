@@ -14,14 +14,15 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                     <tr>
                         <th>&nbsp;</th>
                         <th>
-                            <LabelTranslate value="bet" style={{ textTransform: 'capitalize' }} />
+                            <LabelTranslate value="bet" className="text-capitalize" />
                         </th>
                         <th>(x)</th>
                         <th>
                             X{' '}
                             <LabelTranslate
                                 value="win"
-                                style={{ textTransform: 'capitalize', display: 'inline' }}
+                                style={{ display: 'inline' }}
+                                className="text-capitalize"
                             />
                         </th>
                     </tr>
@@ -29,7 +30,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                 <tbody>
                     {detail_betting.map((betting, index) => (
                         <tr key={index} className={`${betting.win_amount > 0 ? styles.win : ''}`}>
-                            <td>
+                            <td className="text-nowrap">
                                 <BettingItemTransaction data={betting.tebak} />
                             </td>
                             <td>
@@ -54,7 +55,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
 
                     <tr>
                         <td>
-                            <LabelTranslate value="total" style={{ textTransform: 'capitalize' }} />
+                            <LabelTranslate value="total" className="text-uppercase" />
                         </td>
                         <td>
                             <div className={`${styles['text-center']}`}>

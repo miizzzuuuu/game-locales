@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import CardContainer from '../CardContainer';
 import Card from '../Card';
 
@@ -23,7 +22,7 @@ const Previous = () => {
                     const lastDate = indexDate === Object.keys(groupTransaction).length - 1;
 
                     return (
-                        <Fragment key={key}>
+                        <div key={key} className={styles.wrapper}>
                             <div className={styles.date}>
                                 {StringHelper.formatDateByLocale(key, 'long')}
                             </div>
@@ -41,7 +40,7 @@ const Previous = () => {
                                     />
                                 ))}
                             </CardContainer>
-                        </Fragment>
+                        </div>
                     );
                 })
             )}
