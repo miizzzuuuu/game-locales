@@ -10,7 +10,7 @@ import { setResult } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
-import { updateGamePeriod } from '../slice/gameSlice';
+import { updateGamePeriod, updateGameSet } from '../slice/gameSlice';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -25,6 +25,9 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
 
             dispatch(openTime(Number(data.timer)));
             dispatch(updateGamePeriod(data.periode));
+            if (data.shoePeriode) {
+                dispatch(updateGameSet(data.shoePeriode));
+            }
             dispatch(newAddBetPeriod());
 
             const betSend = selectAllBetSend(state);

@@ -3,6 +3,7 @@ import MessageYouWin from '../Alerts/MessageYouWin';
 import MessageGeneral from '../Alerts/MessageGeneral';
 import MessageSubmitBet from '../Alerts/MessageSubmitBet';
 import Result from '../../../game/components/Result';
+import NewSet from '../Alerts/NewSet';
 
 const AlertUI = () => {
     return (
@@ -11,6 +12,7 @@ const AlertUI = () => {
             <MessageSubmitBet />
             <Result />
             <MessageYouWin />
+            <NewSet />
         </div>
     );
 };

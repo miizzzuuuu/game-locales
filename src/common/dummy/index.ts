@@ -141,3 +141,5 @@ export const topWinnerDummy: TopWinnerData['data'] = [
         totalWin: 501000,
     },
 ];
+
+export const newSetDummy = { pcode: 'm22', gameSet: 13494, status: true };
