@@ -6,6 +6,6 @@ export type FeaturesType = {
 
 export const Features: FeaturesType = {
     LAYOUT_VERSION: 1,
-    BUTTON_PATTERN: false,
-    MINI_HOW_TO_PLAY: false,
+    BUTTON_PATTERN: true,
+    MINI_HOW_TO_PLAY: true,
 };
