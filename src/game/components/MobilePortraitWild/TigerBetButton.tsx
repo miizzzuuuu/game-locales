@@ -110,7 +110,7 @@ const TigerBetButton = (
                 <div className={[styles.domainLabel, styles.betButtonLabel].join(" ")} >
                     <div style={{
                         display: 'flex',
-                        justifyContent: "flex-end", marginRight: "4rem",
+                        justifyContent: "flex-end", marginRight: DisplayHelper.getOrientation() == "landscape" ? "3rem" : "5vw",
                     }}>
 
                         <span>{ratio}</span>
@@ -152,7 +152,7 @@ const TigerBetButton = (
                         rotation={{ z: "0deg" }}
                         opacity={1}
                         value={scanNumber ? scanNumber.tiger : ""}
-                        appear={scanNumber && scanNumber.tiger && scanNumber.tiger == "x"  ? false : true}
+                        appear={scanNumber && scanNumber.tiger && scanNumber.tiger == "x" ? false : true}
                         disappear={!scanNumber}
                         submit={scanNumber && scanNumber.submit}
                     />
