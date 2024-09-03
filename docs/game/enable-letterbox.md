@@ -1,15 +1,25 @@
-## Enable Letterbox
+## Enable Letter Box
 
-Edit the file "src/main.tsx"
+Edit file `src/common/utils/Features.ts`
 
 Change this line of code:
 
 ```ts
-GameHelper.activeLetterBox = false;
+...
+
+export const Features: FeaturesType = {
+    ...
+    LETTER_BOX: false,
+};
 ```
 
 to:
 
 ```ts
-GameHelper.activeLetterBox = true;
+...
+
+export const Features: FeaturesType = {
+    ...
+    LETTER_BOX: true,
+};
 ```

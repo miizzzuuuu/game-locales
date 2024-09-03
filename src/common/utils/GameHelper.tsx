@@ -15,8 +15,6 @@ export class GameHelper {
         return import.meta.env.MODE === 'development';
     }
 
-    static activeLetterBox: boolean = false;
-
     static GAME_CODE: Record<string, string> = {
         p6: '24D',
         p7: 'RL',

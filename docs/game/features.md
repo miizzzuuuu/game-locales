@@ -25,3 +25,9 @@ MINI_HOW_TO_PLAY: boolen;
 ```ts
 SHUFFLE_THE_CARDS: boolen;
 ```
+
+## Enable Letter Box
+
+```ts
+LETTER_BOX: boolen;
+```

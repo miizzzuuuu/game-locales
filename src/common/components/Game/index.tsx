@@ -17,7 +17,6 @@ import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 import TopWinner from '../TopWinner';
 import { setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { GameHelper } from '../../utils/GameHelper';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
@@ -99,7 +98,7 @@ function Game() {
 
     return (
         <div
-            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || GameHelper.activeLetterBox ? ` ${styles.box}` : ''}`}
+            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
             <Timer />
