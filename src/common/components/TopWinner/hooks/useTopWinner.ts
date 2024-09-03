@@ -69,10 +69,10 @@ export function useTopWinner({ ref }: Params) {
                     if (index === wraps.length - 1) {
                         to2Ref.current = setTimeout(() => {
                             setIsFinish(true);
-                        }, 1500);
+                        }, 2500);
                     }
                 },
-                500 + 1500 * index,
+                400 + 2500 * index,
             );
         });
 
