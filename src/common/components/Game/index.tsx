@@ -20,6 +20,8 @@ import { setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { GameHelper } from '../../utils/GameHelper';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
+import { Features } from '../../utils/Features';
+import { useNewSet } from '../../hooks/useNewSet';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -61,9 +63,17 @@ function Game() {
             dispatch(setShowMiniHowToPlay(true));
         }
         if (e.key === 'n') {
+            if (!Features.SHUFFLE_THE_CARDS) {
+                return;
+            }
+
             dispatch(setNewSet(newSetDummy.status));
         }
         if (e.key === 'm') {
+            if (!Features.SHUFFLE_THE_CARDS) {
+                return;
+            }
+
             dispatch(setNewSet(false));
         }
     }, []);
@@ -80,6 +90,12 @@ function Game() {
     }, [time]);
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
+
+    useNewSet({
+        handleNewSet: () => {
+            // callback when new set
+        },
+    });
 
     return (
         <div

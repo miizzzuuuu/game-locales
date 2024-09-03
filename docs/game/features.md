@@ -19,3 +19,9 @@ BUTTON_PATTERN: boolean;
 ```ts
 MINI_HOW_TO_PLAY: boolen;
 ```
+
+### Enable Animation Shuffle The Card
+
+```ts
+SHUFFLE_THE_CARDS: boolen;
+```

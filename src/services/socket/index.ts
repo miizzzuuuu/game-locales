@@ -11,6 +11,7 @@ import {
     TopWinnerData,
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
+import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
     static _instance: SocketComponent;
@@ -180,6 +181,10 @@ export class SocketComponent {
     }
 
     listenNewSet(callback: (data: NewSetData) => void): void {
+        if (!Features.SHUFFLE_THE_CARDS) {
+            return;
+        }
+
         const eventName = GameHelper.getEventNewSet();
         console.log('event new set', eventName);
 
