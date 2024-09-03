@@ -10,7 +10,9 @@ const ButtonHideChip = () => {
 
     return (
         <ButtonAction
-            label={<LabelTranslate value={`${showChip ? 'hide' : 'show'}`} />}
+            label={
+                <LabelTranslate value={`${showChip ? 'hide' : 'show'}`} option={{ lng: 'en' }} />
+            }
             icon={<SVGIconHideChip fill={showChip ? 'white' : '#00C3D8'} />}
             borderColor={showChip ? undefined : '#00C3D8'}
             onClick={() => dispatch(toggleShowChip())}

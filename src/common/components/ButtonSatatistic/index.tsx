@@ -9,7 +9,7 @@ const ButtonSatatistic = () => {
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="statistic" />}
+            label={<LabelTranslate value="statistic" option={{ lng: 'en' }} />}
             icon={<SVGIconStatistic />}
             onClick={() => dispatch(toggleMenuStatistic())}
         />
