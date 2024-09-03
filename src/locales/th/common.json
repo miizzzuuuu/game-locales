@@ -53,5 +53,6 @@
     "payout-no-initial-bet": "การจ่ายเงินไม่รวมเงินเดิมพันเริ่มต้น",
     "payout-includes-initial-bet": "การจ่ายเงินรวมถึงเงินเดิมพันเริ่มต้น",
     "game": "เกม",
-    "features": "คุณสมบัติ"
+    "features": "คุณสมบัติ",
+    "shuffling-cards": "สับไพ่"
 }

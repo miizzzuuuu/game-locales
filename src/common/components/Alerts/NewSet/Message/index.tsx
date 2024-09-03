@@ -1,11 +1,12 @@
-import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
+import { AnimationEventHandler, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import SVGBackground from './SVG/SVGBackground';
 import { DisplayHelper } from '../../../../utils/DisplayHelper';
+import LabelTranslate from '../../../LabelTranslate';
 
 interface IProps {
-    value?: ReactNode | undefined;
+    value?: string;
     handleClose?: () => void;
     close?: boolean;
 }
@@ -14,8 +15,7 @@ const Message = ({ value, close, handleClose }: IProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const messageRef = useRef<HTMLDivElement>(null);
-
-    const prevMessage = useRef<ReactNode | undefined>();
+    const prevMessage = useRef<string | undefined>();
 
     useEffect(() => {
         if (close) {
@@ -46,7 +46,7 @@ const Message = ({ value, close, handleClose }: IProps) => {
             <SVGBackground className={styles.background} type="new-set" />
 
             <div className={styles.content}>
-                <div className={styles.text}>{value}</div>
+                {value && <LabelTranslate value={value} className={styles.text} />}
             </div>
         </div>
     );

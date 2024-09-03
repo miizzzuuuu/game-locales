@@ -53,5 +53,6 @@
     "payout-no-initial-bet": "支付不包括初始投注。",
     "payout-includes-initial-bet": "支付包括初始投注。",
     "game": "游戏",
-    "features": "功能"
+    "features": "功能",
+    "shuffling-cards": "洗牌"
 }

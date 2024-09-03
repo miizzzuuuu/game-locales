@@ -53,5 +53,6 @@
     "payout-no-initial-bet": "지불금에는 초기 베팅이 포함되지 않습니다.",
     "payout-includes-initial-bet": "지불금에는 초기 베팅이 포함됩니다.",
     "game": "게임",
-    "features": "기능"
+    "features": "기능",
+    "shuffling-cards": "카드 셔플링"
 }

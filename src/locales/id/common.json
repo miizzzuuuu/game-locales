@@ -53,5 +53,6 @@
     "payout-no-initial-bet": "Pembayaran tidak termasuk taruhan awal.",
     "payout-includes-initial-bet": "Pembayaran termasuk taruhan awal.",
     "game": "permainan",
-    "features": "fitur"
+    "features": "fitur",
+    "shuffling-cards": "mengocok kartu"
 }

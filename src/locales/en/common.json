@@ -53,5 +53,6 @@
     "payout-no-initial-bet": "Payout does not include initial bet.",
     "payout-includes-initial-bet": "Payout includes initial bet.",
     "game": "game",
-    "features": "features"
+    "features": "features",
+    "shuffling-cards": "shuffling cards"
 }
