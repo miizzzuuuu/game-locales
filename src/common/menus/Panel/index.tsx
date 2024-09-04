@@ -5,8 +5,7 @@ import Footer from './Footer';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import SliderUp from './SliderUp';
 import Header from './Header/Header';
-import { useAppSelector } from '../../../store/hooks';
-import { selectShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
+import { Features } from '../../utils/Features';
 
 interface IProps {
     show: boolean;
@@ -31,7 +30,7 @@ const Panel = ({
     handleClose,
     handleBack,
 }: IProps) => {
-    const layoutVersion = useAppSelector(selectShowMiniHowToPlay);
+    const layoutVersion = Features.LAYOUT_VERSION;
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const [hiddenUI, setVisibleUI] = useState(true);
