@@ -11,6 +11,8 @@ import transactionsP12 from './response/transactions/p12.json';
 import transactionsP12B from './response/transactions/p12b.json';
 import transactionsM8 from './response/transactions/m8.json';
 import transactionsM8B from './response/transactions/m8b.json';
+import transactionsM11 from './response/transactions/m11.json';
+import transactionsM11B from './response/transactions/m11b.json';
 import transactionsM14 from './response/transactions/m14.json';
 import transactionsM14B from './response/transactions/m14b.json';
 import transactionsM22 from './response/transactions/m22.json';
@@ -39,6 +41,8 @@ const transactionData: Record<string, object> = {
     p12b: transactionsP12B,
     m8: transactionsM8,
     m8b: transactionsM8B,
+    m11: transactionsM11,
+    m11b: transactionsM11B,
     m14: transactionsM14,
     m14b: transactionsM14B,
     m22: transactionsM22,

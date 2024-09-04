@@ -67,6 +67,10 @@ export type ResultM8Fever = ResultM8 & {
     };
 };
 
+export type ResultM11 = {
+    angka: string; // '1,2,3' 1 = red, 2 = white, 3 = jp
+};
+
 export type ResultM14 = {
     angka: string; // '1b,1b,1b,1b,1b';
     angka2: string; // '1b,1b,1b,1b,1b';

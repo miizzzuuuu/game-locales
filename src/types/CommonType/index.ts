@@ -13,14 +13,17 @@ export type Pcode12D = 'p9' | 'p9c' | 'p9d' | 'p9e' | 'p9f' | 'p9g' | 'p9h';
 export type Pcode12DThunder = 'p9b';
 
 // pcode Sicbo Dice
-export type PcodeSicboDice = 'p12' | 'p12c' | 'p12d' | 'p12e' | 'p12f' | 'p12g' | 'p12h';
+export type PcodeSicboDice = 'p12' | 'p12b' | 'p12c' | 'p12d' | 'p12e' | 'p12f' | 'p12g' | 'p12h';
 
 // pcode Dice 6
 export type PcodeDice6 = 'm8' | 'm8c' | 'm8d' | 'm8e' | 'm8f' | 'm8g' | 'm8h';
 export type PcodeDice6Fever = 'm8b';
 
+// pcode Red White
+export type PcodeRedWhite = 'm11' | 'm11b' | 'm11c' | 'm11d' | 'm11e' | 'm11f' | 'm11g' | 'm11h';
+
 // pcode Poker Dice
-export type PcodePokerDice = 'm14' | 'm14c' | 'm14d' | 'm14e' | 'm14f' | 'm14g' | 'm14h';
+export type PcodePokerDice = 'm14' | 'm14b' | 'm14c' | 'm14d' | 'm14e' | 'm14f' | 'm14g' | 'm14h';
 
 // pcode Baccarat
 export type PcodeBaccarat = 'm22' | 'm22b' | 'm22c' | 'm22d' | 'm22e' | 'm22f' | 'm22g' | 'm22h';
@@ -48,6 +51,7 @@ export type Pcode =
     | PcodeSicboDice
     | PcodeDice6
     | PcodeDice6Fever
+    | PcodeRedWhite
     | PcodePokerDice
     | PcodeBaccarat
     | PcodeDragonTiger

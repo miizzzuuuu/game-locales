@@ -70,6 +70,7 @@ export class GameHelper {
         m8b: 'Dice 6 Fever',
         m10: 'Head Tail',
         m11: 'Red White',
+        m11b: 'Europe Red White',
         m13: 'Billiards',
         m14: 'Poker Dice',
         m14b: 'Europe Poker Dice',

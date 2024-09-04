@@ -11,6 +11,8 @@ import resultsP12 from './response/results/p12.json';
 import resultsP12B from './response/results/p12b.json';
 import resultM8 from './response/results/m8.json';
 import resultM8B from './response/results/m8b.json';
+import resultM11 from './response/results/m11.json';
+import resultM11B from './response/results/m11b.json';
 import resultM14 from './response/results/m14.json';
 import resultM14B from './response/results/m14b.json';
 import resultM22 from './response/results/m22.json';
@@ -42,6 +44,8 @@ const resultData: Record<string, { data: any[] }> = {
     p12b: resultsP12B,
     m8: resultM8,
     m8b: resultM8B,
+    m11: resultM11,
+    m11b: resultM11B,
     m14: resultM14,
     m14b: resultM14B,
     m22: resultM22,
