@@ -1,5 +1,6 @@
 import { ITransactionCardProps } from '..';
 import { useAppSelector } from '../../../../../../store/hooks';
+import { selectGameName } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { GameHelper } from '../../../../../utils/GameHelper';
@@ -10,11 +11,14 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
     const { tglbel, pcode, total_transaction, total_debit, periode } = data;
 
     const currency = useAppSelector(selectCurrency);
+    const gameName = useAppSelector(selectGameName);
 
     return (
         <div className={styles['card-top']}>
             <div className={`${styles['col-2']}`}>
-                <span className={styles['game-name']}>{GameHelper.getGameDisplayName(pcode)}</span>
+                <span className={styles['game-name']}>
+                    {pcode === GameHelper.pcode ? gameName : GameHelper.getGameDisplayName(pcode)}
+                </span>
 
                 <span
                     className={`${styles['text-total-transaction']}`}
