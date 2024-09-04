@@ -61,10 +61,16 @@ export type ResultM8 = CommonResult & {
     angka: string;
 };
 
-export type ResultM8B = ResultM8 & {
+export type ResultM8Fever = ResultM8 & {
     thunder: {
         generate_thunder: ThunderM8B;
     };
+};
+
+export type ResultM14 = {
+    angka: string; // '1b,1b,1b,1b,1b';
+    angka2: string; // '1b,1b,1b,1b,1b';
+    angka3: string; // '5 of a Kind';
 };
 
 export type ResultM22 = CommonResult & {
