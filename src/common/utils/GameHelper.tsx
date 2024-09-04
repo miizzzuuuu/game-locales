@@ -98,6 +98,7 @@ export class GameHelper {
         m33: 'Gong Ball Jitu',
         m34: 'HILO',
         m35: '48D',
+        m35b: 'Europe 48D',
         m36: '36D',
         m37: 'Bingo Sicbo',
         m38: 'Bingo Baccarat',

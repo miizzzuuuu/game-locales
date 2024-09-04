@@ -32,6 +32,9 @@ export type PcodeDragonTigerWild = 'm23b' | 'm23c';
 // pcode Shio Fight
 export type PcodeShioFight = 'm27' | 'm27b' | 'm27c' | 'm27d' | 'm27e' | 'm27f' | 'm27g' | 'm27h';
 
+// pcode 48D
+export type Pcode48D = 'm35' | 'm35b' | 'm35c' | 'm35d' | 'm35e' | 'm35f' | 'm35g' | 'm35h';
+
 // pcode Domino
 export type PcodeDomino = 'm41' | 'm41b' | 'm41c' | 'm41d' | 'm41e' | 'm41f' | 'm41g' | 'm41h';
 
@@ -50,6 +53,7 @@ export type Pcode =
     | PcodeDragonTiger
     | PcodeDragonTigerWild
     | PcodeShioFight
+    | Pcode48D
     | PcodeDomino;
 
 export type ShioName =

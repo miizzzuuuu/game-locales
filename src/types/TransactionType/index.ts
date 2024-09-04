@@ -4,9 +4,11 @@ import {
     Pcode12DThunder,
     Pcode24D,
     Pcode24DJackpot,
+    Pcode48D,
     PcodeBaccarat,
     PcodeDice6,
     PcodeDice6Fever,
+    PcodeDomino,
     PcodeDragonTiger,
     PcodeDragonTigerWild,
     PcodePokerDice,
@@ -21,6 +23,7 @@ import {
     ResultM23,
     ResultM23Wild,
     ResultM27,
+    ResultM35,
     ResultM8,
     ResultM8Fever,
     ResultP12,
@@ -85,7 +88,11 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                             ? BaseTransaction & DetailResultM23Wild
                             : PCode extends PcodeShioFight
                               ? BaseTransaction & DetailResultM27
-                              : BaseTransaction & DefaultDetailResult;
+                              : PCode extends Pcode48D
+                                ? BaseTransaction & DetailResultM35
+                                : PCode extends PcodeDomino
+                                  ? BaseTransaction & DetailResultM41
+                                  : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -153,11 +160,13 @@ export type DetailResultM27 = {
     detail_result: ResultM27 | [];
 };
 
+export type DetailResultM35 = {
+    detail_result: ResultM35 | [];
+};
+
 export type DetailResultM41 = {
     detail_result: ResultM27 | [];
 };
-
-// not done
 
 // TODO: add another game result type
 

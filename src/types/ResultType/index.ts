@@ -101,6 +101,10 @@ export type ResultM27 = CommonResult & {
     result: 'di' | 'tian' | 'tie';
 };
 
+export type ResultM35 = CommonResult & {
+    angka: string;
+};
+
 export type ResultM41 = CommonResult & {
     banker: string;
     player: string;
