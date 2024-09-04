@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
-import { getResults } from '../../services/api/results';
-import { ResultP6Jackpot } from '../../types';
+import { getResultHistory } from '../../services/api/results';
+import { Pagination } from '../../types';
+import { AppDispatch } from '../../store/store';
 
 function useFetchResults() {
     const dispatch = useAppDispatch();
@@ -15,7 +16,10 @@ function useFetchResults() {
         const fetchPlayerSettings = async () => {
             try {
                 setLoading(true);
-                const data = await getResults<ResultP6Jackpot>();
+                const data = await getResultHistory<{
+                    data: any;
+                    pagination: Pagination;
+                }>();
 
                 if (!ignore) {
                     console.log('result', data);
@@ -40,3 +44,26 @@ function useFetchResults() {
 }
 
 export { useFetchResults };
+
+export const fetchResultHistory = async (
+    // @ts-ignore
+    dispatch: AppDispatch,
+    gameSet?: number | string,
+) => {
+    try {
+        const page: number = 1;
+        const perPage: number = 10;
+
+        const data = await getResultHistory<{
+            data: any; // change to type data your game
+            pagination: Pagination;
+        }>(page, perPage, gameSet);
+
+        console.log(data);
+
+        // run action to save history result to redux
+        // dispatch(setHistory(data));
+    } catch (error) {
+        console.log('get history error', error);
+    }
+};

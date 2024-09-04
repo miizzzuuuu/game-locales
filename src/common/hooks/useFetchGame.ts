@@ -4,6 +4,7 @@ import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { getGameData } from '../../services/api/gameData';
 import { setGame } from '../../store/slice/gameSlice';
+import { fetchResultHistory } from '../../game/hooks/useFetchResults';
 
 function useFetchGame() {
     const dispatch = useAppDispatch();
@@ -20,6 +21,8 @@ function useFetchGame() {
 
                 if (!ignore) {
                     dispatch(setGame(data));
+
+                    await fetchResultHistory(dispatch);
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load settings completed');
