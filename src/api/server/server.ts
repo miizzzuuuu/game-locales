@@ -6,16 +6,20 @@ import sendBetData from './response/send-bet/success.json';
 // result
 import resultP6 from './response/results/p6.json';
 import resultP6B from './response/results/p6b.json';
-import resultsP7 from './response/results/p7e.json';
+import resultsP7 from './response/results/p7.json';
 import resultsP7B from './response/results/p7b.json';
 import resultsP7C from './response/results/p7c.json';
 import resultsP7D from './response/results/p7d.json';
 import resultsP7E from './response/results/p7e.json';
+import resultsP9 from './response/results/p9.json';
+import resultsP9B from './response/results/p9b.json';
+import resultM23 from './response/results/m23.json';
+import resultM23B from './response/results/m23b.json';
+import resultM23C from './response/results/m23c.json';
 
 import resultsM6 from './response/results/m6.json';
 import resultsM7 from './response/results/m7.json';
 import resultM22 from './response/results/m22.json';
-import resultM23 from './response/results/m23.json';
 
 // transaction
 import transactionsP6 from './response/transactions/p6.json';
@@ -25,6 +29,11 @@ import transactionsP7B from './response/transactions/p7b.json';
 import transactionsP7C from './response/transactions/p7c.json';
 import transactionsP7D from './response/transactions/p7d.json';
 import transactionsP7E from './response/transactions/p7e.json';
+import transactionsP9 from './response/transactions/p9.json';
+import transactionsP9B from './response/transactions/p9b.json';
+import transactionsM23 from './response/transactions/m23.json';
+import transactionsM23B from './response/transactions/m23b.json';
+import transactionsM23C from './response/transactions/m23c.json';
 
 // database
 import { games } from './db/games';
@@ -173,6 +182,21 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'p7e':
                         data = resultsP7E;
                         break;
+                    case 'p9':
+                        data = resultsP9;
+                        break;
+                    case 'p9b':
+                        data = resultsP9B;
+                        break;
+                    case 'm23':
+                        data = resultM23;
+                        break;
+                    case 'm23b':
+                        data = resultM23B;
+                        break;
+                    case 'm23c':
+                        data = resultM23C;
+                        break;
 
                     case 'm6':
                         data = resultsM6;
@@ -186,9 +210,6 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'm22c':
                     case 'm22d':
                         data = resultM22;
-                        break;
-                    case 'm23':
-                        data = resultM23;
                         break;
 
                     default:
@@ -236,6 +257,21 @@ export function makeServer({ environment = 'test' } = {}) {
                         break;
                     case 'p7e':
                         data = transactionsP7E;
+                        break;
+                    case 'p9':
+                        data = transactionsP9;
+                        break;
+                    case 'p9b':
+                        data = transactionsP9B;
+                        break;
+                    case 'm23':
+                        data = transactionsM23;
+                        break;
+                    case 'm23b':
+                        data = transactionsM23B;
+                        break;
+                    case 'm23c':
+                        data = transactionsM23C;
                         break;
 
                     default:

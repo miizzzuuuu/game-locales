@@ -5,11 +5,15 @@ import {
     Pcode24D,
     Pcode24DJackpot,
     PcodeBaccarat,
+    PcodeDragonTiger,
+    PcodeDragonTigerWild,
     PcodeRoulette,
     PcodeRouletteSoccer,
 } from '../CommonType';
 import {
     ResultM22,
+    ResultM23,
+    ResultM23Wild,
     ResultP6,
     ResultP6Jackpot,
     ResultP7,
@@ -51,11 +55,15 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
             ? BaseTransaction & DetailResultP9
             : PCode extends Pcode12DThunder
               ? BaseTransaction & DetailResultP9Thunder
-              : PCode extends PcodeBaccarat
-                ? BaseTransaction & DetailResultM22
-                : BaseTransaction & {
-                      detail_result: {} | [];
-                  };
+              : PCode extends PcodeDragonTiger
+                ? BaseTransaction & DetailResultM23
+                : PCode extends PcodeDragonTigerWild
+                  ? BaseTransaction & DetailResultM23Wild
+                  : PCode extends PcodeBaccarat
+                    ? BaseTransaction & DetailResultM22
+                    : BaseTransaction & {
+                          detail_result: {} | [];
+                      };
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -91,41 +99,16 @@ export type DetailResultP9Thunder = {
     detail_result: ResultP9Thunder | [];
 };
 
-export type DetailResultM22 = {
-    detail_result: ResultM22 | [];
-};
-
 export type DetailResultM23 = {
-    detail_result:
-        | {
-              idnomor: number;
-              tanggal: string;
-              periode: string;
-              hitung: string;
-              dragon: string;
-              result: 'dragon' | 'tiger' | 'tie';
-              tiger: string;
-              gamekey: string;
-              value: string;
-          }
-        | [];
+    detail_result: ResultM23 | [];
 };
 
 export type DetailResultM23Wild = {
-    detail_result:
-        | {
-              idnomor: number;
-              tanggal: string;
-              periode: number;
-              hitung: string;
-              dragon: string;
-              tiger: string;
-              result: string;
-              gamekey: string;
-              value: number;
-              wild: string;
-          }
-        | [];
+    detail_result: ResultM23Wild | [];
+};
+
+export type DetailResultM22 = {
+    detail_result: ResultM22 | [];
 };
 
 // TODO: add another game result type

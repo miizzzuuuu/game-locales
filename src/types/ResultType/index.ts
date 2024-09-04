@@ -52,6 +52,17 @@ export type ResultP9Thunder = ResultP9 & {
     };
 };
 
+export type ResultM23 = CommonResult & {
+    value: string;
+    result: 'dragon' | 'tiger' | 'tie';
+    dragon: string;
+    tiger: string;
+};
+
+export type ResultM23Wild = ResultM23 & {
+    wild: string;
+};
+
 export type ResultM22 = CommonResult & {
     result: 'banker' | 'player' | 'tie';
     value: number | string;
@@ -78,17 +89,5 @@ export type ResultM7 = {
     periode: number;
     hitung: string;
     gamekey: number;
-    idnomor: number;
-};
-
-export type ResultM23 = {
-    dragon: string;
-    tiger: string;
-    result: string;
-    value: string;
-    tanggal: string;
-    periode: string;
-    hitung: string;
-    gamekey: string;
     idnomor: number;
 };

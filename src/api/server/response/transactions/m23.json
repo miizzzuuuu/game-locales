@@ -1,0 +1,706 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-07-30T04:52:50.000Z",
+            "periode": "25780",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 0.5,
+                    "win_amount": 2500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 640000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25780,
+                "tanggal": "2024-07-30T04:53:34.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "9d",
+                "wild": "9h",
+                "result": "tie",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 822500,
+            "total_transaction": 787500
+        },
+        {
+            "tglbel": "2024-07-30T04:52:09.000Z",
+            "periode": "25779",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 125000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25779,
+                "tanggal": "2024-07-30T04:52:25.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "8c",
+                "wild": "9d",
+                "result": "dragon",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 195000,
+            "total_transaction": 160000
+        },
+        {
+            "tglbel": "2024-07-30T04:41:48.000Z",
+            "periode": "25778",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 0.5,
+                    "win_amount": 2500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 640000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25778,
+                "tanggal": "2024-07-30T04:51:47.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "9d",
+                "wild": "9h",
+                "result": "tie",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 822500,
+            "total_transaction": 787500
+        },
+        {
+            "tglbel": "2024-07-30T04:41:16.000Z",
+            "periode": "25777",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 125000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25777,
+                "tanggal": "2024-07-30T04:41:27.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "8c",
+                "tiger": "9c",
+                "wild": "9d",
+                "result": "tiger",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 195000,
+            "total_transaction": 160000
+        },
+        {
+            "tglbel": "2024-07-30T04:40:40.000Z",
+            "periode": "25776",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 125000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25776,
+                "tanggal": "2024-07-30T04:40:56.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "8c",
+                "wild": "9d",
+                "result": "dragon",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 185000,
+            "total_transaction": 150000
+        },
+        {
+            "tglbel": "2024-07-30T04:40:00.000Z",
+            "periode": "25775",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 0.5,
+                    "win_amount": 2500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 640000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25775,
+                "tanggal": "2024-07-30T04:40:18.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "9d",
+                "wild": "9h",
+                "result": "tie",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 822500,
+            "total_transaction": 787500
+        },
+        {
+            "tglbel": "2024-07-30T04:39:17.000Z",
+            "periode": "25774",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 125000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25774,
+                "tanggal": "2024-07-30T04:39:40.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "8c",
+                "tiger": "9c",
+                "wild": "9d",
+                "result": "tiger",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 185000,
+            "total_transaction": 150000
+        },
+        {
+            "tglbel": "2024-07-30T04:38:43.000Z",
+            "periode": "25773",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 125000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25773,
+                "tanggal": "2024-07-30T04:38:56.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "8c",
+                "wild": "9d",
+                "result": "dragon",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 195000,
+            "total_transaction": 160000
+        },
+        {
+            "tglbel": "2024-07-30T04:38:00.000Z",
+            "periode": "25772",
+            "pcode": "m23b",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 0.5,
+                    "win_amount": 2500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 5000,
+                    "prize": 128,
+                    "win_amount": 640000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tie",
+                    "type": "tie",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "dragonpair",
+                    "type": "pair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 60000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 25772,
+                "tanggal": "2024-07-30T04:38:22.000Z",
+                "periode": 6,
+                "hitung": "1",
+                "dragon": "9c",
+                "tiger": "9d",
+                "wild": "9h",
+                "result": "tie",
+                "gamekey": "1330",
+                "value": 9
+            },
+            "total_debit": 35000,
+            "total_credit": 822500,
+            "total_transaction": 787500
+        }
+    ]
+}

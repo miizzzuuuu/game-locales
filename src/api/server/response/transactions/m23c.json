@@ -1,0 +1,322 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T11:32:02.000Z",
+            "periode": "1087953",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "dragonwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087953,
+                "tanggal": "2024-09-04T11:32:24.000Z",
+                "periode": 63,
+                "hitung": "1",
+                "dragon": "Ac",
+                "tiger": "5s",
+                "wild": "3h",
+                "result": "tiger",
+                "gamekey": "16593",
+                "value": 5,
+                "angka": null
+            },
+            "total_debit": 10000,
+            "total_credit": 0,
+            "total_transaction": -10000
+        },
+        {
+            "tglbel": "2024-09-04T09:10:28.000Z",
+            "periode": "1087855",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087855,
+                "tanggal": "2024-09-04T09:10:48.000Z",
+                "periode": 34,
+                "hitung": "1",
+                "dragon": "Tc",
+                "tiger": "2h",
+                "wild": "3s",
+                "result": "dragon",
+                "gamekey": "16592",
+                "value": 10,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        },
+        {
+            "tglbel": "2024-09-04T09:09:33.000Z",
+            "periode": "1087854",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087854,
+                "tanggal": "2024-09-04T09:09:55.000Z",
+                "periode": 33,
+                "hitung": "1",
+                "dragon": "5c",
+                "tiger": "Qh",
+                "wild": "Qh",
+                "result": "tiger",
+                "gamekey": "16592",
+                "value": 12,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 10000,
+            "total_transaction": 5000
+        },
+        {
+            "tglbel": "2024-09-04T09:08:45.000Z",
+            "periode": "1087853",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087853,
+                "tanggal": "2024-09-04T09:09:05.000Z",
+                "periode": 32,
+                "hitung": "1",
+                "dragon": "9s",
+                "tiger": "Ts",
+                "wild": "3h",
+                "result": "tiger",
+                "gamekey": "16592",
+                "value": 10,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 10000,
+            "total_transaction": 5000
+        },
+        {
+            "tglbel": "2024-09-04T09:00:36.000Z",
+            "periode": "1087844",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087844,
+                "tanggal": "2024-09-04T09:00:56.000Z",
+                "periode": 23,
+                "hitung": "1",
+                "dragon": "Qc",
+                "tiger": "Ac",
+                "wild": "Jh",
+                "result": "dragon",
+                "gamekey": "16592",
+                "value": 12,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        },
+        {
+            "tglbel": "2024-09-04T08:59:48.000Z",
+            "periode": "1087843",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tiger",
+                    "type": "tiger",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087843,
+                "tanggal": "2024-09-04T09:00:08.000Z",
+                "periode": 22,
+                "hitung": "1",
+                "dragon": "2s",
+                "tiger": "Qd",
+                "wild": "5c",
+                "result": "tiger",
+                "gamekey": "16592",
+                "value": 12,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 10000,
+            "total_transaction": 5000
+        },
+        {
+            "tglbel": "2024-09-04T08:58:00.000Z",
+            "periode": "1087841",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "tigerwild",
+                    "type": "wild",
+                    "taruhan": 5000,
+                    "prize": 25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087841,
+                "tanggal": "2024-09-04T08:58:22.000Z",
+                "periode": 20,
+                "hitung": "1",
+                "dragon": "Jd",
+                "tiger": "Qs",
+                "wild": "3h",
+                "result": "tiger",
+                "gamekey": "16592",
+                "value": 12,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        },
+        {
+            "tglbel": "2024-09-04T08:57:12.000Z",
+            "periode": "1087840",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087840,
+                "tanggal": "2024-09-04T08:57:32.000Z",
+                "periode": 19,
+                "hitung": "1",
+                "dragon": "Qs",
+                "tiger": "As",
+                "wild": "Qs",
+                "result": "dragon",
+                "gamekey": "16592",
+                "value": 12,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 10000,
+            "total_transaction": 5000
+        },
+        {
+            "tglbel": "2024-09-04T08:54:33.000Z",
+            "periode": "1087837",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "dragon",
+                    "type": "dragon",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087837,
+                "tanggal": "2024-09-04T08:54:55.000Z",
+                "periode": 16,
+                "hitung": "1",
+                "dragon": "Kd",
+                "tiger": "6s",
+                "wild": "8c",
+                "result": "dragon",
+                "gamekey": "16592",
+                "value": 13,
+                "angka": null
+            },
+            "total_debit": 5000,
+            "total_credit": 10000,
+            "total_transaction": 5000
+        },
+        {
+            "tglbel": "2024-09-04T08:50:41.000Z",
+            "periode": "1087833",
+            "pcode": "m23c",
+            "detail_betting": [
+                {
+                    "tebak": "superwild",
+                    "type": "superwild",
+                    "taruhan": 1000,
+                    "prize": 128,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1087833,
+                "tanggal": "2024-09-04T08:51:10.000Z",
+                "periode": 12,
+                "hitung": "1",
+                "dragon": "8c",
+                "tiger": "Kc",
+                "wild": "3c",
+                "result": "tiger",
+                "gamekey": "16592",
+                "value": 13,
+                "angka": null
+            },
+            "total_debit": 1000,
+            "total_credit": 0,
+            "total_transaction": -1000
+        }
+    ]
+}

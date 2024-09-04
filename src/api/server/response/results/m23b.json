@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "wild": "7s",
+            "dragon": "4d",
+            "tiger": "8s",
+            "result": "tiger",
+            "value": "8",
+            "tanggal": "2024-09-04 18:35:10",
+            "periode": "66",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087956
+        },
+        {
+            "wild": "8s",
+            "dragon": "Qh",
+            "tiger": "Js",
+            "result": "dragon",
+            "value": "12",
+            "tanggal": "2024-09-04 18:34:16",
+            "periode": "65",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087955
+        },
+        {
+            "wild": "3d",
+            "dragon": "6h",
+            "tiger": "4h",
+            "result": "dragon",
+            "value": "6",
+            "tanggal": "2024-09-04 18:33:23",
+            "periode": "64",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087954
+        },
+        {
+            "wild": "3h",
+            "dragon": "Ac",
+            "tiger": "5s",
+            "result": "tiger",
+            "value": "5",
+            "tanggal": "2024-09-04 18:32:28",
+            "periode": "63",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087953
+        },
+        {
+            "wild": "Tc",
+            "dragon": "Th",
+            "tiger": "Kh",
+            "result": "tiger",
+            "value": "13",
+            "tanggal": "2024-09-04 18:31:34",
+            "periode": "62",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087952
+        },
+        {
+            "wild": "2s",
+            "dragon": "6d",
+            "tiger": "3s",
+            "result": "dragon",
+            "value": "6",
+            "tanggal": "2024-09-04 18:30:38",
+            "periode": "61",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087951
+        },
+        {
+            "wild": "Tc",
+            "dragon": "6d",
+            "tiger": "Js",
+            "result": "tiger",
+            "value": "11",
+            "tanggal": "2024-09-04 18:29:44",
+            "periode": "60",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087950
+        },
+        {
+            "wild": "4h",
+            "dragon": "9d",
+            "tiger": "4c",
+            "result": "dragon",
+            "value": "9",
+            "tanggal": "2024-09-04 18:28:49",
+            "periode": "59",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087949
+        },
+        {
+            "wild": "3c",
+            "dragon": "8d",
+            "tiger": "8d",
+            "result": "tie",
+            "value": "8",
+            "tanggal": "2024-09-04 18:27:53",
+            "periode": "58",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087948
+        },
+        {
+            "wild": "2d",
+            "dragon": "Jc",
+            "tiger": "Kc",
+            "result": "tiger",
+            "value": "13",
+            "tanggal": "2024-09-04 18:26:59",
+            "periode": "57",
+            "hitung": "1",
+            "gamekey": "16593",
+            "idnomor": 1087947
+        }
+    ]
+}
