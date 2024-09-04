@@ -13,6 +13,8 @@ import resultsP7D from './response/results/p7d.json';
 import resultsP7E from './response/results/p7e.json';
 import resultsP9 from './response/results/p9.json';
 import resultsP9B from './response/results/p9b.json';
+import resultM8 from './response/results/m8.json';
+import resultM8B from './response/results/m8b.json';
 import resultM23 from './response/results/m23.json';
 import resultM23B from './response/results/m23b.json';
 import resultM23C from './response/results/m23c.json';
@@ -31,6 +33,8 @@ import transactionsP7D from './response/transactions/p7d.json';
 import transactionsP7E from './response/transactions/p7e.json';
 import transactionsP9 from './response/transactions/p9.json';
 import transactionsP9B from './response/transactions/p9b.json';
+import transactionsM8 from './response/transactions/m8.json';
+import transactionsM8B from './response/transactions/m8b.json';
 import transactionsM23 from './response/transactions/m23.json';
 import transactionsM23B from './response/transactions/m23b.json';
 import transactionsM23C from './response/transactions/m23c.json';
@@ -188,6 +192,12 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'p9b':
                         data = resultsP9B;
                         break;
+                    case 'm8':
+                        data = resultM8;
+                        break;
+                    case 'm8b':
+                        data = resultM8B;
+                        break;
                     case 'm23':
                         data = resultM23;
                         break;
@@ -263,6 +273,12 @@ export function makeServer({ environment = 'test' } = {}) {
                         break;
                     case 'p9b':
                         data = transactionsP9B;
+                        break;
+                    case 'm8':
+                        data = transactionsM8;
+                        break;
+                    case 'm8b':
+                        data = transactionsM8B;
                         break;
                     case 'm23':
                         data = transactionsM23;

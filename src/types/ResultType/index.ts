@@ -1,4 +1,4 @@
-import { ThunderP6B, ThunderP7E, ThunderP9B } from '../SocketType';
+import { ThunderM8B, ThunderP6B, ThunderP7E, ThunderP9B } from '../SocketType';
 
 export type CommonResult = {
     tanggal: string;
@@ -49,6 +49,16 @@ export type ResultP9Thunder = ResultP9 & {
             result: string;
         };
         generate_thunder: ThunderP9B;
+    };
+};
+
+export type ResultM8 = CommonResult & {
+    angka: string;
+};
+
+export type ResultM8B = ResultM8 & {
+    thunder: {
+        generate_thunder: ThunderM8B;
     };
 };
 

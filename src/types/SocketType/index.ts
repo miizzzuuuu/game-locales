@@ -56,6 +56,10 @@ export type Thunder =
     | {
           pcode: 'p9b';
           data: ThunderP9B;
+      }
+    | {
+          pcode: 'm8b';
+          data: ThunderM8B;
       };
 
 export type ThunderP6B = {
@@ -76,5 +80,12 @@ export type ThunderP9B = {
     coordinate: string;
     prize_thunder: number;
 }[];
+
+export type ThunderM8B = {
+    cold: string[]; // ['3', 'Big'];
+    hot: string[]; // ['Small', '6', '1', '5'];
+    normal: string[]; // ['4', 'Odd', 'Even', '2'];
+    jackpot: string | null; // "4";
+};
 
 export type NewSetData = { pcode: string; gameSet: 13494; status: boolean };

@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T12:07:40.000Z",
+            "periode": "3668362",
+            "pcode": "m8",
+            "detail_betting": [
+                {
+                    "tebak": "Odd",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 11700,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "1",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 5.5,
+                    "win_amount": 5500,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2567180,
+                "tanggal": "2024-09-04T12:08:33.000Z",
+                "periode": 3668362,
+                "hitung": "1",
+                "gamekey": "3668362",
+                "angka": "1"
+            },
+            "total_debit": 7000,
+            "total_credit": 17200,
+            "total_transaction": 10200
+        }
+    ]
+}
