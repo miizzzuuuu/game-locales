@@ -13,7 +13,7 @@ const CardMaximize = ({ data, expand }: IProps) => {
     let element;
     if (!data.detail_result || Array.isArray(data.detail_result)) {
         element = <NoResult />;
-    } else if (TransactionHelper.is24D(data)) {
+    } else if (TransactionHelper.is24DJackpot(data)) {
         element = <Result24DTransaction data={data} />;
     }
 

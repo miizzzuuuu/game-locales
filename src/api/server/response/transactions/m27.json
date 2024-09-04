@@ -1,0 +1,93 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-07-16T08:45:54.000Z",
+            "periode": "146706",
+            "pcode": "m27",
+            "detail_betting": [
+                {
+                    "tebak": "di",
+                    "type": "di",
+                    "taruhan": 10000,
+                    "prize": 2,
+                    "win_amount": 20000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 146706,
+                "tanggal": "2024-07-16T03:55:51.000Z",
+                "periode": 16,
+                "hitung": "1",
+                "gamekey": "5",
+                "di": "snake",
+                "tian": "dog",
+                "result": "tian"
+            },
+            "total_debit": 10000,
+            "total_credit": 20000,
+            "total_transaction": 10000
+        },
+        {
+            "tglbel": "2024-07-16T08:45:54.000Z",
+            "periode": "146706",
+            "pcode": "m27",
+            "detail_betting": [
+                {
+                    "tebak": "di",
+                    "type": "di",
+                    "taruhan": 10000,
+                    "prize": 2,
+                    "win_amount": 20000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 146706,
+                "tanggal": "2024-07-16T03:55:51.000Z",
+                "periode": 16,
+                "hitung": "1",
+                "gamekey": "5",
+                "di": "dog",
+                "tian": "dog",
+                "result": "tie"
+            },
+            "total_debit": 10000,
+            "total_credit": 20000,
+            "total_transaction": 10000
+        },
+        {
+            "tglbel": "2024-07-16T08:45:54.000Z",
+            "periode": "146706",
+            "pcode": "m27",
+            "detail_betting": [
+                {
+                    "tebak": "di",
+                    "type": "di",
+                    "taruhan": 10000,
+                    "prize": 2,
+                    "win_amount": 20000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 146706,
+                "tanggal": "2024-07-16T03:55:51.000Z",
+                "periode": 16,
+                "hitung": "1",
+                "gamekey": "5",
+                "di": "dog",
+                "tian": "pig",
+                "result": "di"
+            },
+            "total_debit": 10000,
+            "total_credit": 20000,
+            "total_transaction": 10000
+        }
+    ],
+    "pagination": {
+        "total_datas": 1,
+        "current_page": 1,
+        "total_pages": 1
+    }
+}

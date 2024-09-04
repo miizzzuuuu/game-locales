@@ -11,12 +11,16 @@ import {
     PcodeDragonTigerWild,
     PcodeRoulette,
     PcodeRouletteSoccer,
+    PcodeShioFight,
+    PcodeSicboDice,
 } from '../CommonType';
 import {
     ResultM22,
     ResultM23,
     ResultM23Wild,
+    ResultM27,
     ResultM8,
+    ResultP12,
     ResultP6,
     ResultP6Jackpot,
     ResultP7,
@@ -46,6 +50,10 @@ export type BaseTransaction = {
     detail_betting: Array<BettingDetail>;
 };
 
+type DefaultDetailResult = {
+    detail_result: {} | [];
+};
+
 export type Transaction<PCode extends string> = PCode extends Pcode24D
     ? BaseTransaction & DetailResultP6
     : PCode extends Pcode24DJackpot
@@ -58,19 +66,21 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
             ? BaseTransaction & DetailResultP9
             : PCode extends Pcode12DThunder
               ? BaseTransaction & DetailResultP9Thunder
-              : PCode extends PcodeDragonTiger
-                ? BaseTransaction & DetailResultM23
-                : PCode extends PcodeDragonTigerWild
-                  ? BaseTransaction & DetailResultM23Wild
-                  : PCode extends PcodeDice6
-                    ? BaseTransaction & DetailResultM8
-                    : PCode extends PcodeDice6Fever
-                      ? BaseTransaction & DetailResultM8Fever
-                      : PCode extends PcodeBaccarat
-                        ? BaseTransaction & DetailResultM22
-                        : BaseTransaction & {
-                              detail_result: {} | [];
-                          };
+              : PCode extends PcodeSicboDice
+                ? BaseTransaction & DetailResultP12
+                : PCode extends PcodeDice6
+                  ? BaseTransaction & DetailResultM8
+                  : PCode extends PcodeDice6Fever
+                    ? BaseTransaction & DetailResultM8Fever
+                    : PCode extends PcodeDragonTiger
+                      ? BaseTransaction & DetailResultM23
+                      : PCode extends PcodeDragonTigerWild
+                        ? BaseTransaction & DetailResultM23Wild
+                        : PCode extends PcodeShioFight
+                          ? BaseTransaction & DetailResultM27
+                          : PCode extends PcodeBaccarat
+                            ? BaseTransaction & DetailResultM22
+                            : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -106,6 +116,10 @@ export type DetailResultP9Thunder = {
     detail_result: ResultP9Thunder | [];
 };
 
+export type DetailResultP12 = {
+    detail_result: ResultP12 | [];
+};
+
 export type DetailResultM8 = {
     detail_result: ResultM8 | [];
 };
@@ -121,6 +135,16 @@ export type DetailResultM23 = {
 export type DetailResultM23Wild = {
     detail_result: ResultM23Wild | [];
 };
+
+export type DetailResultM27 = {
+    detail_result: ResultM27 | [];
+};
+
+export type DetailResultM41 = {
+    detail_result: ResultM27 | [];
+};
+
+// not done
 
 export type DetailResultM22 = {
     detail_result: ResultM22 | [];

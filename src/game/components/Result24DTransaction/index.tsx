@@ -1,10 +1,10 @@
-import { Pcode24D, Transaction } from '../../../types';
+import { Pcode24DJackpot, Transaction } from '../../../types';
 import SVGResult24D from '../SVG/SVG24DResult';
 
 import styles from './styles.module.scss';
 
 interface IProps {
-    data: Transaction<Pcode24D>;
+    data: Transaction<Pcode24DJackpot>;
 }
 
 const Result24DTransaction = ({ data }: IProps) => {

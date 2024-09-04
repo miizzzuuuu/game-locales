@@ -13,11 +13,14 @@ import resultsP7D from './response/results/p7d.json';
 import resultsP7E from './response/results/p7e.json';
 import resultsP9 from './response/results/p9.json';
 import resultsP9B from './response/results/p9b.json';
+import resultsP12 from './response/results/p12.json';
+import resultsP12B from './response/results/p12b.json';
 import resultM8 from './response/results/m8.json';
 import resultM8B from './response/results/m8b.json';
 import resultM23 from './response/results/m23.json';
 import resultM23B from './response/results/m23b.json';
 import resultM23C from './response/results/m23c.json';
+import resultM41 from './response/results/m41.json';
 
 import resultsM6 from './response/results/m6.json';
 import resultsM7 from './response/results/m7.json';
@@ -33,11 +36,14 @@ import transactionsP7D from './response/transactions/p7d.json';
 import transactionsP7E from './response/transactions/p7e.json';
 import transactionsP9 from './response/transactions/p9.json';
 import transactionsP9B from './response/transactions/p9b.json';
+import transactionsP12 from './response/transactions/p12.json';
+import transactionsP12B from './response/transactions/p12b.json';
 import transactionsM8 from './response/transactions/m8.json';
 import transactionsM8B from './response/transactions/m8b.json';
 import transactionsM23 from './response/transactions/m23.json';
 import transactionsM23B from './response/transactions/m23b.json';
 import transactionsM23C from './response/transactions/m23c.json';
+import transactionsM41 from './response/transactions/m41.json';
 
 // database
 import { games } from './db/games';
@@ -192,6 +198,12 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'p9b':
                         data = resultsP9B;
                         break;
+                    case 'p12':
+                        data = resultsP12;
+                        break;
+                    case 'p12b':
+                        data = resultsP12B;
+                        break;
                     case 'm8':
                         data = resultM8;
                         break;
@@ -207,7 +219,11 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'm23c':
                         data = resultM23C;
                         break;
+                    case 'm41':
+                        data = resultM41;
+                        break;
 
+                    // not fix
                     case 'm6':
                         data = resultsM6;
                         break;
@@ -274,6 +290,12 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'p9b':
                         data = transactionsP9B;
                         break;
+                    case '12':
+                        data = transactionsP12;
+                        break;
+                    case '12b':
+                        data = transactionsP12B;
+                        break;
                     case 'm8':
                         data = transactionsM8;
                         break;
@@ -288,6 +310,9 @@ export function makeServer({ environment = 'test' } = {}) {
                         break;
                     case 'm23c':
                         data = transactionsM23C;
+                        break;
+                    case 'm41':
+                        data = transactionsM41;
                         break;
 
                     default:

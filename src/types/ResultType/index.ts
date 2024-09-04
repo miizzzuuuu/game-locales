@@ -1,3 +1,4 @@
+import { ShioName } from '../CommonType';
 import { ThunderM8B, ThunderP6B, ThunderP7E, ThunderP9B } from '../SocketType';
 
 export type CommonResult = {
@@ -52,6 +53,10 @@ export type ResultP9Thunder = ResultP9 & {
     };
 };
 
+export type ResultP12 = CommonResult & {
+    angka: string; // '4,4,4';
+};
+
 export type ResultM8 = CommonResult & {
     angka: string;
 };
@@ -72,6 +77,24 @@ export type ResultM23 = CommonResult & {
 export type ResultM23Wild = ResultM23 & {
     wild: string;
 };
+
+export type ResultM27 = CommonResult & {
+    di: ShioName;
+    tian: ShioName;
+    result: 'di' | 'tian' | 'tie';
+};
+
+export type ResultM41 = CommonResult & {
+    banker: string;
+    player: string;
+    result: 'banker' | 'player' | 'tie';
+    pure: string;
+    qiu: string;
+    value: number | string;
+    balak: boolean;
+};
+
+// not done
 
 export type ResultM22 = CommonResult & {
     result: 'banker' | 'player' | 'tie';

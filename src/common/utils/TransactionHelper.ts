@@ -1,4 +1,11 @@
-import { Pcode, Pcode24D, PcodeBaccarat, PcodeRoulette, Transaction } from '../../types';
+import {
+    Pcode,
+    Pcode24D,
+    Pcode24DJackpot,
+    PcodeBaccarat,
+    PcodeRoulette,
+    Transaction,
+} from '../../types';
 
 export class TransactionHelper {
     static groupTransactionsByDate(transactions: Transaction<Pcode>[]): {
@@ -19,7 +26,13 @@ export class TransactionHelper {
     }
 
     static is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
-        return /^p6/.test(item.pcode);
+        return /^p6(?![b]$)/.test(item.pcode);
+    };
+
+    static is24DJackpot = (item: Transaction<string>): item is Transaction<Pcode24DJackpot> => {
+        // return /^p6[bc]$/.test(item.pcode);
+        // return item.pcode === 'p6b' || item.pcode === 'p6c';
+        return /^p6[b]$/.test(item.pcode);
     };
 
     static isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
