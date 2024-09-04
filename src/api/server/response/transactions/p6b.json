@@ -1,160 +1,277 @@
 {
     "data": [
         {
-            "tglbel": "2024-07-05T05:58:06.000Z",
-            "periode": "335854",
+            "tglbel": "2024-09-04T07:45:16.000Z",
+            "periode": "418651",
             "pcode": "p6b",
             "detail_betting": [
                 {
-                    "tebak": "14,15,18,19",
+                    "tebak": "4th Column",
                     "type": "n4",
-                    "taruhan": 5000,
+                    "taruhan": 1000,
                     "prize": 4.75,
-                    "win_amount": 0,
-                    "status": "Lose"
+                    "win_amount": 0
                 },
                 {
-                    "tebak": "11,15",
-                    "type": "n2",
-                    "taruhan": 5000,
-                    "prize": 9.5,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "03,04,07,08",
-                    "type": "n4",
-                    "taruhan": 5000,
-                    "prize": 4.75,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "17,18",
-                    "type": "n2",
-                    "taruhan": 5000,
-                    "prize": 9.5,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "2nd Row",
-                    "type": "n6",
-                    "taruhan": 5000,
-                    "prize": 3.16,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "10",
+                    "tebak": "11",
                     "type": "n",
                     "taruhan": 1000,
                     "prize": 19,
-                    "win_amount": 0,
-                    "status": "Lose"
+                    "win_amount": 0
                 },
                 {
-                    "tebak": "05",
+                    "tebak": "01",
                     "type": "n",
                     "taruhan": 1000,
                     "prize": 19,
-                    "win_amount": 0,
-                    "status": "Lose"
+                    "win_amount": 0
                 }
             ],
             "detail_result": {
-                "idnomor": 335855,
-                "tanggal": "2024-07-05T05:58:36.000Z",
-                "periode": 335854,
+                "idnomor": 418652,
+                "tanggal": "2024-09-04T07:45:45.000Z",
+                "periode": 418651,
                 "hitung": "1",
-                "gamekey": "335854",
-                "angka": "01"
+                "gamekey": "418651",
+                "angka": "15",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["23", "1"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 10,
+                            "prize": 100
+                        }
+                    }
+                }
             },
-            "total_debit": 27000,
+            "total_debit": 3000,
             "total_credit": 0,
-            "total_transaction": -27000
+            "total_transaction": -3000
         },
         {
-            "tglbel": "2024-07-04T14:45:48.000Z",
-            "periode": "334982",
+            "tglbel": "2024-09-02T11:17:23.000Z",
+            "periode": "416154",
             "pcode": "p6b",
             "detail_betting": [],
             "detail_result": {
-                "idnomor": 334983,
-                "tanggal": "2024-07-04T14:46:26.000Z",
-                "periode": 334982,
+                "idnomor": 416155,
+                "tanggal": "2024-09-02T11:17:50.000Z",
+                "periode": 416154,
                 "hitung": "1",
-                "gamekey": "334982",
-                "angka": "01"
+                "gamekey": "416154",
+                "angka": "16",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["2", "19"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 8,
+                            "prize": 100
+                        }
+                    }
+                }
             },
             "total_debit": 0,
             "total_credit": 0,
             "total_transaction": 0
         },
         {
-            "tglbel": "2024-07-04T14:44:41.000Z",
-            "periode": "334981",
+            "tglbel": "2024-09-02T11:09:25.000Z",
+            "periode": "416146",
             "pcode": "p6b",
             "detail_betting": [],
             "detail_result": {
-                "idnomor": 334982,
-                "tanggal": "2024-07-04T14:45:20.000Z",
-                "periode": 334981,
+                "idnomor": 416147,
+                "tanggal": "2024-09-02T11:09:53.000Z",
+                "periode": 416146,
                 "hitung": "1",
-                "gamekey": "334981",
-                "angka": "03"
+                "gamekey": "416146",
+                "angka": "05",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["21", "3"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 20,
+                            "prize": 120
+                        }
+                    }
+                }
             },
             "total_debit": 0,
             "total_credit": 0,
             "total_transaction": 0
         },
         {
-            "tglbel": "2024-07-04T14:43:38.000Z",
-            "periode": "334980",
+            "tglbel": "2024-09-02T10:32:09.000Z",
+            "periode": "416111",
             "pcode": "p6b",
             "detail_betting": [],
             "detail_result": {
-                "idnomor": 334981,
-                "tanggal": "2024-07-04T14:44:11.000Z",
-                "periode": 334980,
+                "idnomor": 416112,
+                "tanggal": "2024-09-02T10:32:42.000Z",
+                "periode": 416111,
                 "hitung": "1",
-                "gamekey": "334980",
-                "angka": "05"
+                "gamekey": "416111",
+                "angka": "02",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["17", "8"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 10,
+                            "prize": 120
+                        }
+                    }
+                }
             },
             "total_debit": 0,
             "total_credit": 0,
             "total_transaction": 0
         },
         {
-            "tglbel": "2024-07-04T14:42:31.000Z",
-            "periode": "334979",
+            "tglbel": "2024-09-02T10:31:07.000Z",
+            "periode": "416110",
             "pcode": "p6b",
             "detail_betting": [],
             "detail_result": {
-                "idnomor": 334980,
-                "tanggal": "2024-07-04T14:43:08.000Z",
-                "periode": 334979,
+                "idnomor": 416111,
+                "tanggal": "2024-09-02T10:31:40.000Z",
+                "periode": 416110,
                 "hitung": "1",
-                "gamekey": "334979",
-                "angka": "14"
+                "gamekey": "416110",
+                "angka": "10",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["12", "4", "5"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 18,
+                            "prize": 100
+                        }
+                    }
+                }
             },
             "total_debit": 0,
             "total_credit": 0,
             "total_transaction": 0
         },
         {
-            "tglbel": "2024-07-04T14:40:28.000Z",
-            "periode": "334977",
+            "tglbel": "2024-09-02T10:28:57.000Z",
+            "periode": "416108",
             "pcode": "p6b",
             "detail_betting": [],
             "detail_result": {
-                "idnomor": 334978,
-                "tanggal": "2024-07-04T14:41:00.000Z",
-                "periode": 334977,
+                "idnomor": 416109,
+                "tanggal": "2024-09-02T10:29:31.000Z",
+                "periode": 416108,
                 "hitung": "1",
-                "gamekey": "334977",
-                "angka": "05"
+                "gamekey": "416108",
+                "angka": "10",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["5", "7"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 8,
+                            "prize": 100
+                        }
+                    }
+                }
             },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-02T10:27:52.000Z",
+            "periode": "416107",
+            "pcode": "p6b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 416108,
+                "tanggal": "2024-09-02T10:28:25.000Z",
+                "periode": 416107,
+                "hitung": "1",
+                "gamekey": "416107",
+                "angka": "20",
+                "thunder": {
+                    "data_thunder": {
+                        "prize_thunder": 0
+                    },
+                    "generate_thunder": {
+                        "lucky_number": {
+                            "data": ["24", "21"],
+                            "prize": 30
+                        },
+                        "jackpot_number": {
+                            "data": 7,
+                            "prize": 100
+                        }
+                    }
+                }
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-08-30T07:36:58.000Z",
+            "periode": "411766",
+            "pcode": "p6b",
+            "detail_betting": [],
+            "detail_result": [],
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-08-30T07:35:55.000Z",
+            "periode": "411765",
+            "pcode": "p6b",
+            "detail_betting": [],
+            "detail_result": [],
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-08-30T07:34:52.000Z",
+            "periode": "411764",
+            "pcode": "p6b",
+            "detail_betting": [],
+            "detail_result": [],
             "total_debit": 0,
             "total_credit": 0,
             "total_transaction": 0

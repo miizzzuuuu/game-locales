@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch } from '../../store/hooks';
 import { getResults } from '../../services/api/results';
-import { ResultP6B } from '../../types';
+import { ResultP6Jackpot } from '../../types';
 
 function useFetchResults() {
     const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ function useFetchResults() {
         const fetchPlayerSettings = async () => {
             try {
                 setLoading(true);
-                const data = await getResults<ResultP6B>();
+                const data = await getResults<ResultP6Jackpot>();
 
                 if (!ignore) {
                     console.log('result', data);

@@ -1,0 +1,72 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T09:05:35.000Z",
+            "periode": "2933765",
+            "pcode": "p9",
+            "detail_betting": [
+                {
+                    "tebak": "Even",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "10",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 11,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1894438,
+                "tanggal": "2024-09-04T09:06:54.000Z",
+                "periode": 2933765,
+                "hitung": "1",
+                "gamekey": "1894278",
+                "angka": "07"
+            },
+            "total_debit": 6000,
+            "total_credit": 0,
+            "total_transaction": -6000
+        },
+        {
+            "tglbel": "2024-09-04T09:04:04.000Z",
+            "periode": "2933764",
+            "pcode": "p9",
+            "detail_betting": [
+                {
+                    "tebak": "04,05,06",
+                    "type": "n3",
+                    "taruhan": 1000,
+                    "prize": 3.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "01",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 11,
+                    "win_amount": 11000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1894437,
+                "tanggal": "2024-09-04T09:05:23.000Z",
+                "periode": 2933764,
+                "hitung": "1",
+                "gamekey": "1894277",
+                "angka": "01"
+            },
+            "total_debit": 2000,
+            "total_credit": 11000,
+            "total_transaction": 9000
+        }
+    ]
+}

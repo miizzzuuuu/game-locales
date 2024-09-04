@@ -4,14 +4,26 @@ import { ENDPOINTS } from '../../common/utils/APIManager';
 import sendBetData from './response/send-bet/success.json';
 
 // result
+import resultP6 from './response/results/p6.json';
+import resultP6B from './response/results/p6b.json';
+import resultsP7 from './response/results/p7e.json';
+import resultsP7B from './response/results/p7b.json';
+import resultsP7C from './response/results/p7c.json';
+import resultsP7D from './response/results/p7d.json';
+import resultsP7E from './response/results/p7e.json';
+
 import resultsM6 from './response/results/m6.json';
 import resultsM7 from './response/results/m7.json';
 import resultM22 from './response/results/m22.json';
 import resultM23 from './response/results/m23.json';
-import resultP6 from './response/results/p6.json';
-import resultsP7E from './response/results/p7e.json';
 
+// transaction
+import transactionsP6 from './response/transactions/p6.json';
 import transactionsP6B from './response/transactions/p6b.json';
+import transactionsP7 from './response/transactions/p7.json';
+import transactionsP7B from './response/transactions/p7b.json';
+import transactionsP7C from './response/transactions/p7c.json';
+import transactionsP7D from './response/transactions/p7d.json';
 import transactionsP7E from './response/transactions/p7e.json';
 
 // database
@@ -22,6 +34,7 @@ import { settings } from './db/settings';
 import { properties } from './db/properties';
 import { lastbets } from './db/lastbets';
 import { payouts } from './db/payouts';
+
 import { PayoutData } from '../../types';
 
 export function makeServer({ environment = 'test' } = {}) {
@@ -139,12 +152,35 @@ export function makeServer({ environment = 'test' } = {}) {
 
                 let data: { data: any[] };
                 switch (pcode) {
+                    case 'p6':
+                        data = resultP6;
+                        break;
+                    case 'p6b':
+                        data = resultP6B;
+                        break;
+                    case 'p7':
+                        data = resultsP7;
+                        break;
+                    case 'p7b':
+                        data = resultsP7B;
+                        break;
+                    case 'p7c':
+                        data = resultsP7C;
+                        break;
+                    case 'p7d':
+                        data = resultsP7D;
+                        break;
+                    case 'p7e':
+                        data = resultsP7E;
+                        break;
+
                     case 'm6':
                         data = resultsM6;
                         break;
                     case 'm7':
                         data = resultsM7;
                         break;
+
                     case 'm22':
                     case 'm22b':
                     case 'm22c':
@@ -154,14 +190,7 @@ export function makeServer({ environment = 'test' } = {}) {
                     case 'm23':
                         data = resultM23;
                         break;
-                    case 'p6':
-                    case 'p6b':
-                        data = resultP6;
-                        break;
-                    case 'p7d':
-                    case 'p7e':
-                        data = resultsP7E;
-                        break;
+
                     default:
                         data = { data: [] };
                 }
@@ -188,16 +217,27 @@ export function makeServer({ environment = 'test' } = {}) {
                 let data: object;
                 switch (pcode) {
                     case 'p6':
+                        data = transactionsP6;
+                        break;
                     case 'p6b':
                         data = transactionsP6B;
                         break;
                     case 'p7':
+                        data = transactionsP7;
+                        break;
                     case 'p7b':
+                        data = transactionsP7B;
+                        break;
                     case 'p7c':
+                        data = transactionsP7C;
+                        break;
                     case 'p7d':
+                        data = transactionsP7D;
+                        break;
                     case 'p7e':
                         data = transactionsP7E;
                         break;
+
                     default:
                         data = { data: [] };
                 }

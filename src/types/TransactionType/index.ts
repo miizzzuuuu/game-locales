@@ -1,4 +1,22 @@
-import { Pcode, Pcode24D, PcodeBaccarat, PcodeRoulette } from '../CommonType';
+import {
+    Pcode,
+    Pcode12D,
+    Pcode12DThunder,
+    Pcode24D,
+    Pcode24DJackpot,
+    PcodeBaccarat,
+    PcodeRoulette,
+    PcodeRouletteSoccer,
+} from '../CommonType';
+import {
+    ResultM22,
+    ResultP6,
+    ResultP6Jackpot,
+    ResultP7,
+    ResultP7Soccer,
+    ResultP9,
+    ResultP9Thunder,
+} from '../ResultType';
 
 export type Status = 'Win' | 'Lose';
 
@@ -23,13 +41,21 @@ export type BaseTransaction = {
 
 export type Transaction<PCode extends string> = PCode extends Pcode24D
     ? BaseTransaction & DetailResultP6
-    : PCode extends PcodeRoulette
-      ? BaseTransaction & DetailResultP7
-      : PCode extends PcodeBaccarat
-        ? BaseTransaction & DetailResultM22
-        : BaseTransaction & {
-              detail_result: {} | [];
-          };
+    : PCode extends Pcode24DJackpot
+      ? BaseTransaction & DetailResultP6Jackpot
+      : PCode extends PcodeRoulette
+        ? BaseTransaction & DetailResultP7
+        : PCode extends PcodeRouletteSoccer
+          ? BaseTransaction & DetailResultP7Soccer
+          : PCode extends Pcode12D
+            ? BaseTransaction & DetailResultP9
+            : PCode extends Pcode12DThunder
+              ? BaseTransaction & DetailResultP9Thunder
+              : PCode extends PcodeBaccarat
+                ? BaseTransaction & DetailResultM22
+                : BaseTransaction & {
+                      detail_result: {} | [];
+                  };
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -41,41 +67,63 @@ export type TransactionData = {
 };
 
 // result all game
+export type DetailResultP6 = {
+    detail_result: ResultP6 | [];
+};
+
+export type DetailResultP6Jackpot = {
+    detail_result: ResultP6Jackpot | [];
+};
+
 export type DetailResultP7 = {
+    detail_result: ResultP7 | [];
+};
+
+export type DetailResultP7Soccer = {
+    detail_result: ResultP7Soccer | [];
+};
+
+export type DetailResultP9 = {
+    detail_result: ResultP9 | [];
+};
+
+export type DetailResultP9Thunder = {
+    detail_result: ResultP9Thunder | [];
+};
+
+export type DetailResultM22 = {
+    detail_result: ResultM22 | [];
+};
+
+export type DetailResultM23 = {
     detail_result:
         | {
-              angka: string;
+              idnomor: number;
+              tanggal: string;
+              periode: string;
+              hitung: string;
+              dragon: string;
+              result: 'dragon' | 'tiger' | 'tie';
+              tiger: string;
+              gamekey: string;
+              value: string;
           }
         | [];
 };
 
-export type DetailResultP6 = {
-    detail_result: {
-        angka: number;
-        thunder: {
-            data_thunder: {
-                prize_thunder: number;
-            };
-        };
-    };
-};
-
-export type DetailResultM22 = {
+export type DetailResultM23Wild = {
     detail_result:
         | {
               idnomor: number;
               tanggal: string;
               periode: number;
               hitung: string;
-              banker: string;
-              player: string;
-              result: 'banker' | 'player' | 'tie';
+              dragon: string;
+              tiger: string;
+              result: string;
               gamekey: string;
               value: number;
-              bankerPair: number;
-              playerPair: number;
-              playerValue: number;
-              bankerValue: number;
+              wild: string;
           }
         | [];
 };
