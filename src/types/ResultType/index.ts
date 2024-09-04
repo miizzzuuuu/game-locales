@@ -67,6 +67,17 @@ export type ResultM8B = ResultM8 & {
     };
 };
 
+export type ResultM22 = CommonResult & {
+    result: 'banker' | 'player' | 'tie';
+    value: number | string;
+    playerValue: number;
+    bankerValue: number;
+    banker: string;
+    player: string;
+    bankerPair: number;
+    playerPair: number;
+};
+
 export type ResultM23 = CommonResult & {
     value: string;
     result: 'dragon' | 'tiger' | 'tie';
@@ -95,17 +106,6 @@ export type ResultM41 = CommonResult & {
 };
 
 // not done
-
-export type ResultM22 = CommonResult & {
-    result: 'banker' | 'player' | 'tie';
-    value: number | string;
-    playerValue: number;
-    bankerValue: number;
-    banker: string;
-    player: string;
-    bankerPair: number;
-    playerPair: number;
-};
 
 export type ResultM6 = {
     angka: string;

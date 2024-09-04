@@ -72,14 +72,14 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                   ? BaseTransaction & DetailResultM8
                   : PCode extends PcodeDice6Fever
                     ? BaseTransaction & DetailResultM8Fever
-                    : PCode extends PcodeDragonTiger
-                      ? BaseTransaction & DetailResultM23
-                      : PCode extends PcodeDragonTigerWild
-                        ? BaseTransaction & DetailResultM23Wild
-                        : PCode extends PcodeShioFight
-                          ? BaseTransaction & DetailResultM27
-                          : PCode extends PcodeBaccarat
-                            ? BaseTransaction & DetailResultM22
+                    : PCode extends PcodeBaccarat
+                      ? BaseTransaction & DetailResultM22
+                      : PCode extends PcodeDragonTiger
+                        ? BaseTransaction & DetailResultM23
+                        : PCode extends PcodeDragonTigerWild
+                          ? BaseTransaction & DetailResultM23Wild
+                          : PCode extends PcodeShioFight
+                            ? BaseTransaction & DetailResultM27
                             : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
@@ -128,6 +128,10 @@ export type DetailResultM8Fever = {
     detail_result: DetailResultM8Fever | [];
 };
 
+export type DetailResultM22 = {
+    detail_result: ResultM22 | [];
+};
+
 export type DetailResultM23 = {
     detail_result: ResultM23 | [];
 };
@@ -145,10 +149,6 @@ export type DetailResultM41 = {
 };
 
 // not done
-
-export type DetailResultM22 = {
-    detail_result: ResultM22 | [];
-};
 
 // TODO: add another game result type
 

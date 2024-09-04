@@ -1,464 +1,184 @@
 {
     "data": [
         {
-            "tglbel": "2024-06-30T22:25:08.000Z",
-            "periode": "172150",
+            "tglbel": "2024-09-04T15:28:29.000Z",
+            "periode": "2705100",
             "pcode": "m22",
             "detail_betting": [
-                {
-                    "tebak": "bankerpair",
-                    "type": "bankerpair",
-                    "taruhan": 3000,
-                    "prize": 12,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
                 {
                     "tebak": "banker",
                     "type": "banker",
-                    "taruhan": 60000,
+                    "taruhan": 5000,
                     "prize": 1.95,
-                    "win_amount": 117000,
+                    "win_amount": 9750,
                     "status": "Win"
+                },
+                {
+                    "tebak": "tie2",
+                    "type": "tie2",
+                    "taruhan": 5000,
+                    "prize": 221,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2705100,
+                "tanggal": "2024-09-04T15:29:08.000Z",
+                "periode": 9,
+                "hitung": "1",
+                "banker": "4s-Kc-5s",
+                "player": "3c-4c-x",
+                "result": "banker",
+                "gamekey": "36943",
+                "value": 9,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 7,
+                "bankerValue": 9
+            },
+            "total_debit": 10000,
+            "total_credit": 9750,
+            "total_transaction": -250
+        },
+        {
+            "tglbel": "2024-09-04T15:21:04.000Z",
+            "periode": "2705093",
+            "pcode": "m22",
+            "detail_betting": [
+                {
+                    "tebak": "perfectpair",
+                    "type": "perfectpair",
+                    "taruhan": 1000,
+                    "prize": 26,
+                    "win_amount": 0,
+                    "status": "Lose"
                 },
                 {
                     "tebak": "tie",
                     "type": "tie",
-                    "taruhan": 15000,
+                    "taruhan": 1000,
                     "prize": 9,
                     "win_amount": 0,
                     "status": "Lose"
                 }
             ],
             "detail_result": {
-                "idnomor": 172150,
-                "tanggal": "2024-07-01T09:54:10.000Z",
-                "periode": 4,
+                "idnomor": 2705093,
+                "tanggal": "2024-09-04T15:21:53.000Z",
+                "periode": 2,
                 "hitung": "1",
-                "banker": "Jh-4s-5c",
-                "player": "8h-8h-x",
+                "banker": "Td-4d-3h",
+                "player": "3d-Kh-7s",
                 "result": "banker",
-                "gamekey": "1554",
-                "value": 9,
+                "gamekey": "36943",
+                "value": 7,
                 "bankerPair": 0,
-                "playerPair": 1,
-                "playerValue": 6,
-                "bankerValue": 9
+                "playerPair": 0,
+                "playerValue": 0,
+                "bankerValue": 7
             },
-            "total_debit": 78000,
-            "total_credit": 117000,
-            "total_transaction": 39000
+            "total_debit": 2000,
+            "total_credit": 0,
+            "total_transaction": -2000
         },
         {
-            "tglbel": "2024-06-30T22:22:44.000Z",
-            "periode": "172150",
+            "tglbel": "2024-09-04T15:20:02.000Z",
+            "periode": "2705092",
             "pcode": "m22",
             "detail_betting": [
+                {
+                    "tebak": "playerpair",
+                    "type": "playerpair",
+                    "taruhan": 1000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
                 {
                     "tebak": "bankerpair",
                     "type": "bankerpair",
-                    "taruhan": 3000,
+                    "taruhan": 1000,
                     "prize": 12,
                     "win_amount": 0,
                     "status": "Lose"
                 },
                 {
-                    "tebak": "banker",
-                    "type": "banker",
-                    "taruhan": 60000,
-                    "prize": 1.95,
-                    "win_amount": 117000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "tie",
-                    "type": "tie",
-                    "taruhan": 15000,
-                    "prize": 9,
+                    "tebak": "player",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
                     "win_amount": 0,
                     "status": "Lose"
                 }
             ],
             "detail_result": {
-                "idnomor": 172150,
-                "tanggal": "2024-07-01T09:54:10.000Z",
-                "periode": 4,
+                "idnomor": 2705092,
+                "tanggal": "2024-09-04T15:20:38.000Z",
+                "periode": 1,
                 "hitung": "1",
-                "banker": "Jh-4s-5c",
-                "player": "8h-8h-x",
+                "banker": "Qs-2h-6d",
+                "player": "6s-Kh-x",
                 "result": "banker",
-                "gamekey": "1554",
-                "value": 9,
+                "gamekey": "36943",
+                "value": 8,
                 "bankerPair": 0,
-                "playerPair": 1,
+                "playerPair": 0,
                 "playerValue": 6,
-                "bankerValue": 9
+                "bankerValue": 8
             },
-            "total_debit": 78000,
-            "total_credit": 117000,
-            "total_transaction": 39000
+            "total_debit": 7000,
+            "total_credit": 0,
+            "total_transaction": -7000
         },
         {
-            "tglbel": "2024-06-30T16:49:03.000Z",
-            "periode": "172149",
+            "tglbel": "2024-09-04T15:19:58.000Z",
+            "periode": "2705092",
             "pcode": "m22",
             "detail_betting": [
                 {
-                    "tebak": "small",
-                    "type": "small",
-                    "taruhan": 100000,
-                    "prize": 2.5,
+                    "tebak": "playerpair",
+                    "type": "playerpair",
+                    "taruhan": 1000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "bankerpair",
+                    "type": "bankerpair",
+                    "taruhan": 1000,
+                    "prize": 12,
                     "win_amount": 0,
                     "status": "Lose"
                 },
                 {
                     "tebak": "player",
                     "type": "player",
-                    "taruhan": 50000,
+                    "taruhan": 5000,
                     "prize": 2,
-                    "win_amount": 100000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172149,
-                "tanggal": "2024-06-30T18:41:52.000Z",
-                "periode": 3,
-                "hitung": "1",
-                "banker": "4c-5c-6c",
-                "player": "7c-9c-Jc",
-                "result": "player",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 0,
-                "playerPair": 0,
-                "playerValue": 6,
-                "bankerValue": 5
-            },
-            "total_debit": 150000,
-            "total_credit": 100000,
-            "total_transaction": -50000
-        },
-        {
-            "tglbel": "2024-06-29T09:40:02.000Z",
-            "periode": "172149",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "small",
-                    "type": "small",
-                    "taruhan": 100000,
-                    "prize": 2.5,
                     "win_amount": 0,
                     "status": "Lose"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 50000,
-                    "prize": 2,
-                    "win_amount": 100000,
-                    "status": "Win"
                 }
             ],
             "detail_result": {
-                "idnomor": 172149,
-                "tanggal": "2024-06-30T18:41:52.000Z",
-                "periode": 3,
+                "idnomor": 2705092,
+                "tanggal": "2024-09-04T15:20:38.000Z",
+                "periode": 1,
                 "hitung": "1",
-                "banker": "4c-5c-6c",
-                "player": "7c-9c-Jc",
-                "result": "player",
-                "gamekey": "1554",
-                "value": 6,
+                "banker": "Qs-2h-6d",
+                "player": "6s-Kh-x",
+                "result": "banker",
+                "gamekey": "36943",
+                "value": 8,
                 "bankerPair": 0,
                 "playerPair": 0,
                 "playerValue": 6,
-                "bankerValue": 5
+                "bankerValue": 8
             },
-            "total_debit": 150000,
-            "total_credit": 100000,
-            "total_transaction": -50000
-        },
-        {
-            "tglbel": "2024-06-29T08:59:31.000Z",
-            "periode": "172149",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "small",
-                    "type": "small",
-                    "taruhan": 100000,
-                    "prize": 2.5,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 50000,
-                    "prize": 2,
-                    "win_amount": 100000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172149,
-                "tanggal": "2024-06-30T18:41:52.000Z",
-                "periode": 3,
-                "hitung": "1",
-                "banker": "4c-5c-6c",
-                "player": "7c-9c-Jc",
-                "result": "player",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 0,
-                "playerPair": 0,
-                "playerValue": 6,
-                "bankerValue": 5
-            },
-            "total_debit": 150000,
-            "total_credit": 100000,
-            "total_transaction": -50000
-        },
-        {
-            "tglbel": "2024-06-29T08:51:45.000Z",
-            "periode": "172149",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "small",
-                    "type": "small",
-                    "taruhan": 100000,
-                    "prize": 2.5,
-                    "win_amount": 0,
-                    "status": "Lose"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 50000,
-                    "prize": 2,
-                    "win_amount": 100000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172149,
-                "tanggal": "2024-06-30T18:41:52.000Z",
-                "periode": 3,
-                "hitung": "1",
-                "banker": "4c-5c-6c",
-                "player": "7c-9c-Jc",
-                "result": "player",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 0,
-                "playerPair": 0,
-                "playerValue": 6,
-                "bankerValue": 5
-            },
-            "total_debit": 150000,
-            "total_credit": 100000,
-            "total_transaction": -50000
-        },
-        {
-            "tglbel": "2024-06-29T03:35:15.000Z",
-            "periode": "172148",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "playerpair",
-                    "type": "playerpair",
-                    "taruhan": 200000,
-                    "prize": 12,
-                    "win_amount": 2400000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "tie",
-                    "type": "tie",
-                    "taruhan": 150000,
-                    "prize": 9,
-                    "win_amount": 1350000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 300000,
-                    "prize": 2,
-                    "win_amount": 600000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172148,
-                "tanggal": "2024-06-29T06:25:26.000Z",
-                "periode": 2,
-                "hitung": "1",
-                "banker": "8d-8d-x",
-                "player": "8d-8d-x",
-                "result": "tie",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 1,
-                "playerPair": 1,
-                "playerValue": 6,
-                "bankerValue": 6
-            },
-            "total_debit": 650000,
-            "total_credit": 4350000,
-            "total_transaction": 3700000
-        },
-        {
-            "tglbel": "2024-06-29T03:33:16.000Z",
-            "periode": "172148",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "playerpair",
-                    "type": "playerpair",
-                    "taruhan": 200000,
-                    "prize": 12,
-                    "win_amount": 2400000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "tie",
-                    "type": "tie",
-                    "taruhan": 150000,
-                    "prize": 9,
-                    "win_amount": 1350000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 300000,
-                    "prize": 2,
-                    "win_amount": 600000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172148,
-                "tanggal": "2024-06-29T06:25:26.000Z",
-                "periode": 2,
-                "hitung": "1",
-                "banker": "8d-8d-x",
-                "player": "8d-8d-x",
-                "result": "tie",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 1,
-                "playerPair": 1,
-                "playerValue": 6,
-                "bankerValue": 6
-            },
-            "total_debit": 650000,
-            "total_credit": 4350000,
-            "total_transaction": 3700000
-        },
-        {
-            "tglbel": "2024-06-28T11:04:03.000Z",
-            "periode": "172148",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "playerpair",
-                    "type": "playerpair",
-                    "taruhan": 200000,
-                    "prize": 12,
-                    "win_amount": 2400000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "tie",
-                    "type": "tie",
-                    "taruhan": 150000,
-                    "prize": 9,
-                    "win_amount": 1350000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 300000,
-                    "prize": 2,
-                    "win_amount": 600000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172148,
-                "tanggal": "2024-06-29T06:25:26.000Z",
-                "periode": 2,
-                "hitung": "1",
-                "banker": "8d-8d-x",
-                "player": "8d-8d-x",
-                "result": "tie",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 1,
-                "playerPair": 1,
-                "playerValue": 6,
-                "bankerValue": 6
-            },
-            "total_debit": 650000,
-            "total_credit": 4350000,
-            "total_transaction": 3700000
-        },
-        {
-            "tglbel": "2024-06-28T11:02:56.000Z",
-            "periode": "172148",
-            "pcode": "m22",
-            "detail_betting": [
-                {
-                    "tebak": "playerpair",
-                    "type": "playerpair",
-                    "taruhan": 200000,
-                    "prize": 12,
-                    "win_amount": 2400000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "tie",
-                    "type": "tie",
-                    "taruhan": 150000,
-                    "prize": 9,
-                    "win_amount": 1350000,
-                    "status": "Win"
-                },
-                {
-                    "tebak": "player",
-                    "type": "player",
-                    "taruhan": 300000,
-                    "prize": 2,
-                    "win_amount": 600000,
-                    "status": "Win"
-                }
-            ],
-            "detail_result": {
-                "idnomor": 172148,
-                "tanggal": "2024-06-29T06:25:26.000Z",
-                "periode": 2,
-                "hitung": "1",
-                "banker": "8d-8d-x",
-                "player": "8d-8d-x",
-                "result": "tie",
-                "gamekey": "1554",
-                "value": 6,
-                "bankerPair": 1,
-                "playerPair": 1,
-                "playerValue": 6,
-                "bankerValue": 6
-            },
-            "total_debit": 650000,
-            "total_credit": 4350000,
-            "total_transaction": 3700000
+            "total_debit": 7000,
+            "total_credit": 0,
+            "total_transaction": -7000
         }
-    ],
-    "total_data": 160,
-    "total_page": 16
+    ]
 }
