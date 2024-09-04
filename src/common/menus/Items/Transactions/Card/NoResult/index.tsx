@@ -6,7 +6,7 @@ const NoResult = () => {
     return (
         <div className={styles.result}>
             <div className={styles['no-data']}>
-                <LabelTranslate value="no-result" />
+                <LabelTranslate value="no-results-yet" />
             </div>
         </div>
     );
