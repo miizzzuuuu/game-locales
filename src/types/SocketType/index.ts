@@ -44,23 +44,19 @@ export type TopWinnerData = {
     }>;
 };
 
-export type Thunder =
-    | {
-          pcode: 'p6b';
-          data: ThunderP6B;
-      }
-    | {
-          pcode: 'p7e';
-          data: ThunderP7E;
-      }
-    | {
-          pcode: 'p9b';
-          data: ThunderP9B;
-      }
-    | {
-          pcode: 'm8b';
-          data: ThunderM8B;
-      };
+export type BaseThunder = { pcode: string };
+
+export type Thunder<PCode extends string> = PCode extends 'p6b'
+    ? BaseThunder & { data: ThunderP6B }
+    : PCode extends 'p7e'
+      ? BaseThunder & { data: ThunderP7E }
+      : PCode extends 'p9b'
+        ? BaseThunder & {
+              data: ThunderP9B;
+          }
+        : PCode extends 'm8b'
+          ? BaseThunder & ThunderM8B
+          : BaseThunder & { data: any };
 
 export type ThunderP6B = {
     lucky_number: { data: string[]; prize: number };
