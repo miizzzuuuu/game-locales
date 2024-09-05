@@ -4,6 +4,7 @@ import {
     Pcode24DJackpot,
     PcodeBaccarat,
     PcodeRoulette,
+    PcodeSicboDice,
     Transaction,
 } from '../../types';
 
@@ -41,5 +42,9 @@ export class TransactionHelper {
 
     static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
         return /^m22/.test(item.pcode);
+    };
+
+    static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
+        return /^p12/.test(item.pcode);
     };
 }
