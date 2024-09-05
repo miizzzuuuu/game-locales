@@ -353,13 +353,10 @@ const TableBetWild = () => {
         }
     }
 
-    const isSuperWildLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
-    // const isSuperWildWin = !betIsOpen && scanNumber && scanNumber.submit && !isSuperWildLose;
 
     return <>
         <div ref={containerRef} className={[styles.tableBet, betIsOpen ? styles.open : styles.close, deviceClassName, "portrait"].join(" ")}>
             <div className={styles.table}>
-
                 {sections[tableSection]({
                     children:
                         <div className={domainContainerClassName}>
@@ -367,51 +364,21 @@ const TableBetWild = () => {
                                 bet={{ button: "dragon", group: "dragon" }}
                             />
                             <div className={styles.domainTie} >
-
-
                                 <SuperWildBetButton
                                     bet={{ button: "superwild", group: "superwild" }}
                                 />
-
                                 <TieBetButton
                                     bet={{ button: "tie", group: "tie" }}
                                 />
-                                <div
-                                    className={styles.cardContainerWild}
-                                >
-                                    <RenderCard
-                                        top={DisplayHelper.getOrientation() !== "landscape" ? "calc(100%/2)" : "calc(100%/2)"}
-                                        left="0px"
-                                        right="0px"
-                                        opacity={!isSuperWildLose ? 1 : 0.5}
-                                        position={{ x: "3px", y: "10px" }}
-                                        rotation={{ z: "0deg" }}
-                                        value={scanNumber ? scanNumber.wild : ""}
-
-                                        appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
-                                        disappear={!scanNumber}
-                                        submit={scanNumber && scanNumber.submit}
-                                    />
-                                </div>
+                              
                             </div>
-
                             <TigerBetButton
                                 bet={{ button: "tiger", group: "tiger" }}
                             />
-
-
                         </div>
                 }
                 )}
             </div>
-
-
-            {/* <ButtonMore label={tableSection == "less" ? "MORE BET" : "LESS BET"} onClick={() => tableSection == "less" ? setTableSection("more") : setTableSection("less")} /> */}
-
-
-
-
-
         </div>
     </>
 };

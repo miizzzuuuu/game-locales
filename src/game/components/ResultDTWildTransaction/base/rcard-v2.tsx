@@ -1,4 +1,4 @@
-import { StringUtility } from "../../MobilePortraitWild/RenderCard/StringUtility";
+import { StringUtility } from "../../TableBet/RenderCard/StringUtility";
 
 
 export function RenderCardV2(props: any) {

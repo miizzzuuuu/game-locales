@@ -79,6 +79,7 @@ function ResultNumber(props: { value: number | undefined }) {
 }
 
 const TigerBetButton = ({ bet, children }: IProps) => {
+
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -91,6 +92,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
     const ratio = '1:1';
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'tiger';
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
+
     return (
         <div
             className={[styles.domain, deviceClassName].join(' ')}
@@ -138,7 +140,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                         top="0px"
                         left="0px"
                         right="0px"
-                        position={{ x: '3px', y: '13px' }}
+                        position={{ x: '5px', y: '5px' }}
                         rotation={{ z: '0deg' }}
                         opacity={1}
                         value={scanNumber ? scanNumber.tiger : ''}
