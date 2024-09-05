@@ -172,9 +172,9 @@ export class SocketComponent {
         }
     }
 
-    listenThunder(callback: (data: Thunder) => void): void {
+    listenThunder(callback: (data: Thunder<string>) => void): void {
         if (this._socket) {
-            this._socket.on(SocketComponent.SOCKET_EVENT.thunder, (data: Thunder) => {
+            this._socket.on(SocketComponent.SOCKET_EVENT.thunder, (data: Thunder<string>) => {
                 this.validationDataWithPcode(data, () => callback(data));
             });
         }
