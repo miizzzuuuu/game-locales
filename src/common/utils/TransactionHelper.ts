@@ -4,6 +4,7 @@ import {
     Pcode24DJackpot,
     PcodeBaccarat,
     PcodeRoulette,
+    PcodeShioFight,
     PcodeSicboDice,
     Transaction,
 } from '../../types';
@@ -46,5 +47,9 @@ export class TransactionHelper {
 
     static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
         return /^p12/.test(item.pcode);
+    };
+
+    static isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
+        return /^m27/.test(item.pcode);
     };
 }
