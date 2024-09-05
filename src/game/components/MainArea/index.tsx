@@ -15,7 +15,7 @@ import { Panel } from './panel';
 import { useAppSelector } from '../../../store/hooks';
 // import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
-import TableBetWild from '../MobilePortraitWild/TableBetWild';
+import TableBetWild from '../TableBet/TableBetWild';
 import { selectGameNewSet } from '../../../store/slice/gameSlice';
 import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
 
