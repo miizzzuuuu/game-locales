@@ -29,7 +29,7 @@ function ResultNumber(props: { value: number | undefined }) {
             viewBox="0 0 51 28"
             className={stylesLandscape['result-number-slide-right']}
             style={{
-                marginTop: '-10%',
+                marginTop: '-20%',
                 marginLeft: '-8%',
                 zIndex: 1,
             }}
