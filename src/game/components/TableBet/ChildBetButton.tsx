@@ -63,7 +63,9 @@ const ChildBetButton = ({
                     />
                 </span>
                 <span>
+                    <span>
                     {ratio}
+                    </span>
                     <div className={styles['slot-chip']}>
                         {chip > 0 && <ChipBet value={chip} color={color} />}
                     </div>

@@ -209,6 +209,7 @@ $childBetM23Width : calc(98.5%/2);
         margin-top: 0 !important;
     }
 }
+
 .domainContent:nth-child(2) {
     padding-right: 1rem;
 
@@ -233,6 +234,7 @@ $childBetM23Width : calc(98.5%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     span.text_lg {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -251,6 +253,7 @@ $childBetM23Width : calc(98.5%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     span.text_lg {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -335,6 +338,7 @@ $childBetM23Width : calc(98.5%/2);
     width: $childBetM23Width;
     margin: 0 calc(0.5%/4);
     display: flex;
+
     &>svg {
         transform: scaleY(-1);
         // position: absolute;
@@ -384,12 +388,17 @@ $childBetM23Width : calc(98.5%/2);
     line-height: normal;
     letter-spacing: 0.09px;
     text-transform: uppercase;
+
     &>span.text_lg {
         opacity: 1;
     }
 
     &>span {
-        opacity: 0.75;
+
+        &>span {
+            opacity: 0.75;
+        }
+
         padding-left: 0.5rem;
         padding-right: 1.5rem;
         text-transform: uppercase;
@@ -412,7 +421,7 @@ $childBetM23Width : calc(98.5%/2);
     position: absolute;
     bottom: 9rem;
     left: auto;
-    right: 35%;
+    right: 40%;
     transform: perspective(1000px) translate(-5px, 15px);
     width: 24%;
     height: 31.68%;

@@ -30,7 +30,7 @@ function ResultNumber(props: { value: number | undefined }) {
             className={stylesLandscape['result-number-slide-right']}
             style={{
                 marginTop: '-20%',
-                marginLeft: '-8%',
+                marginLeft: '-15%',
                 zIndex: 1,
             }}
         >
