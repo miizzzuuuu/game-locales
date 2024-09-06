@@ -57,6 +57,8 @@ export type ResultP12 = CommonResult & {
     angka: string; // '4,4,4';
 };
 
+export type ResultM6 = ResultP6;
+
 export type ResultM8 = CommonResult & {
     angka: string;
 };
@@ -120,15 +122,6 @@ export type ResultM41 = CommonResult & {
 };
 
 // not done
-
-export type ResultM6 = {
-    angka: string;
-    tanggal: string;
-    periode: number;
-    hitung: string;
-    gamekey: number;
-    idnomor: number;
-};
 
 export type ResultM7 = {
     angka: string;

@@ -15,6 +15,9 @@ export type Pcode12DThunder = 'p9b';
 // pcode Sicbo Dice
 export type PcodeSicboDice = 'p12' | 'p12b' | 'p12c' | 'p12d' | 'p12e' | 'p12f' | 'p12g' | 'p12h';
 
+// pcode 24D Spin
+export type Pcode24DSpin = 'm6' | 'm6b' | 'm6c' | 'm6d' | 'm6e' | 'm6f' | 'm6g' | 'm6h';
+
 // pcode Dice 6
 export type PcodeDice6 = 'm8' | 'm8c' | 'm8d' | 'm8e' | 'm8f' | 'm8g' | 'm8h';
 export type PcodeDice6Fever = 'm8b';
@@ -49,6 +52,7 @@ export type Pcode =
     | Pcode12D
     | Pcode12DThunder
     | PcodeSicboDice
+    | Pcode24DSpin
     | PcodeDice6
     | PcodeDice6Fever
     | PcodeRedWhite
