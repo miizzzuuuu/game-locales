@@ -389,7 +389,11 @@ $childBetM23Width : calc(98%/2);
     }
 
     &>span {
-        opacity: 0.75;
+        &span>{
+            opacity: 0.75;
+
+        }
+
         padding-left: 0.5rem;
         padding-right: 1.5rem;
         padding-top: 1rem;
