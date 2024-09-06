@@ -50,7 +50,10 @@ export function RenderCard(props: any) {
           >
             <div
               className="card-cover"
-              style={{ position: "absolute", width: "100%", height: "100%" }}
+              style={{
+                position: "absolute", width: "100%", height: "100%",
+                boxShadow: "0px 0px 0.64px 0px rgba(0, 0, 0, 0.4) 0px 0.64px 0.64px 0px rgba(0, 0, 0, 0.2)"
+              }}
             >
               <svg
                 width="100%"
