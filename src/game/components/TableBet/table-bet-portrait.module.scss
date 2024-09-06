@@ -338,7 +338,7 @@ $childBetM23Width : calc(98%/2);
     margin: 0 calc(0.5%/4);
     height: fit-content;
 
-    svg {
+    &>svg {
         z-index: 0;
 
         // position: absolute;

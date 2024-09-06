@@ -335,7 +335,7 @@ $childBetM23Width : calc(98.5%/2);
     width: $childBetM23Width;
     margin: 0 calc(0.5%/4);
     display: flex;
-    svg {
+    &>svg {
         transform: scaleY(-1);
         // position: absolute;
     }
