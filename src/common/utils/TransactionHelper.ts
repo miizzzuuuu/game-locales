@@ -2,6 +2,7 @@ import {
     Pcode,
     Pcode24D,
     Pcode24DJackpot,
+    Pcode48D,
     PcodeBaccarat,
     PcodeRoulette,
     PcodeShioFight,
@@ -51,5 +52,9 @@ export class TransactionHelper {
 
     static isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
         return /^m27/.test(item.pcode);
+    };
+
+    static is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
+        return /^m35/.test(item.pcode);
     };
 }
