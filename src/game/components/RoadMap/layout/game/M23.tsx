@@ -34,8 +34,8 @@ function getDragonVal(win: DragonTigerWinType): number {
     return letter in specialCardLetters
         ? specialCardLetters[letter]
         : isNaN(+letter)
-          ? 0
-          : Number(letter);
+            ? 0
+            : Number(letter);
 }
 
 function getTigerVal(win: DragonTigerWinType): number {
@@ -46,8 +46,8 @@ function getTigerVal(win: DragonTigerWinType): number {
     return letter in specialCardLetters
         ? specialCardLetters[letter]
         : isNaN(+letter)
-          ? 0
-          : Number(letter);
+            ? 0
+            : Number(letter);
 }
 
 export default class M23 extends BaseV2Roadmap {
@@ -778,7 +778,7 @@ export default class M23 extends BaseV2Roadmap {
                 this.currentRow = 0;
                 this.currentCol++;
 
-                for (; this.currentCol < this.roadmapTypes![0].length; ) {
+                for (; this.currentCol < this.roadmapTypes![0].length;) {
                     //Evaluate the next column
                     if (this.roadmapTypes![0][this.currentCol]) {
                         //Count filled cells
@@ -813,15 +813,16 @@ export default class M23 extends BaseV2Roadmap {
                                 //Checks adjacent cells
                                 if (
                                     this.roadmapTypes![this.currentRow][
-                                        this.currentCol - startingCol!
+                                    this.currentCol - startingCol!
                                     ] === //1
                                     this.roadmapTypes![this.currentRow - 1][
-                                        this.currentCol - startingCol!
+                                    this.currentCol - startingCol!
                                     ]
                                 )
                                     // @ts-ignore
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay!,
+                                        // @ts-ignore
                                         redElement!,
                                         'red',
                                     );
@@ -829,6 +830,7 @@ export default class M23 extends BaseV2Roadmap {
                                 else
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay!,
+                                        // @ts-ignore
                                         blueElement!,
                                         'blue',
                                     );
@@ -847,10 +849,12 @@ export default class M23 extends BaseV2Roadmap {
                     if (this.currentType === 'red')
                         // @ts-ignore
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore  
                             redBlinkElement!;
                     // @ts-ignore
                     else
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore   
                             blueBlinkElement!;
                 break;
 
@@ -914,8 +918,8 @@ export default class M23 extends BaseV2Roadmap {
                     this.currentType === 'T'
                         ? 'tiger'
                         : this.currentType === 'D'
-                          ? 'dragon'
-                          : 'tie';
+                            ? 'dragon'
+                            : 'tie';
 
                 if (currentPlayer == 'tie') {
                 }

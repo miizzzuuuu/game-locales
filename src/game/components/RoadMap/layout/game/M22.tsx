@@ -324,7 +324,7 @@ export default class M22 extends BaseV2Roadmap {
                     if (
                         this.bigRoadSequence!.length &&
                         Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >=
-                            (this.props.totalColumns || 24)
+                        (this.props.totalColumns || 24)
                     )
                         this.firstDisplayedCol =
                             Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) -
@@ -836,7 +836,7 @@ export default class M22 extends BaseV2Roadmap {
                 this.currentRow = 0;
                 this.currentCol++;
 
-                for (; this.currentCol < this.roadmapTypes![0].length; ) {
+                for (; this.currentCol < this.roadmapTypes![0].length;) {
                     //Evaluate the next column
                     if (this.roadmapTypes![0][this.currentCol]) {
                         //Count filled cells
@@ -871,15 +871,16 @@ export default class M22 extends BaseV2Roadmap {
                                 //Checks adjacent cells
                                 if (
                                     this.roadmapTypes![this.currentRow][
-                                        this.currentCol - startingCol!
+                                    this.currentCol - startingCol!
                                     ] === //1
                                     this.roadmapTypes![this.currentRow - 1][
-                                        this.currentCol - startingCol!
+                                    this.currentCol - startingCol!
                                     ]
                                 )
                                     // @ts-ignore
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay!,
+                                        // @ts-ignore
                                         redElement!,
                                         'red',
                                     );
@@ -887,6 +888,7 @@ export default class M22 extends BaseV2Roadmap {
                                 else
                                     this.addDisplayTileLegacy(
                                         this.roadmapDisplay!,
+                                        // @ts-ignore
                                         blueElement!,
                                         'blue',
                                     );
@@ -905,10 +907,12 @@ export default class M22 extends BaseV2Roadmap {
                     if (this.currentType === 'red')
                         // @ts-ignore
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore
                             redBlinkElement!;
                     // @ts-ignore
                     else
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore
                             blueBlinkElement!;
                 break;
 

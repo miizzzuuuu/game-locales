@@ -10,7 +10,6 @@ import SuperWildBetButton from './SuperWildBetButton';
 import { useAppSelector } from '../../../store/hooks';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { RenderCard } from './RenderCard/RenderCard';
 
 export type FadeStatus =
     | "fadeInUp"
