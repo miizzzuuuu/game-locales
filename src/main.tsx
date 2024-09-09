@@ -30,7 +30,6 @@ const main = async () => {
     }
 
     GameHelper.pcode = pcode;
-    GameHelper.activeLetterBox = true; // default false
 
     // modify for spesifik
     BetHelper.game = new DragonTigerBBet();

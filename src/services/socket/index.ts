@@ -13,6 +13,7 @@ import {
 } from '../../types';
 import { GameHelper } from '../../common/utils/GameHelper';
 import { StringUtility } from '../../game/components/External/managers/StringUtility';
+import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
     static _instance: SocketComponent;
@@ -216,15 +217,19 @@ export class SocketComponent {
         }
     }
 
-    listenThunder(callback: (data: Thunder) => void): void {
+    listenThunder(callback: (data: Thunder<string>) => void): void {
         if (this._socket) {
-            this._socket.on(SocketComponent.SOCKET_EVENT.thunder, (data: Thunder) => {
+            this._socket.on(SocketComponent.SOCKET_EVENT.thunder, (data: Thunder<string>) => {
                 this.validationDataWithPcode(data, () => callback(data));
             });
         }
     }
 
     listenNewSet(callback: (data: NewSetData) => void): void {
+        if (!Features.SHUFFLE_THE_CARDS) {
+            return;
+        }
+
         const eventName = GameHelper.getEventNewSet();
         console.log('event new set', eventName);
 

@@ -4,15 +4,10 @@ import { ENDPOINTS } from '../../common/utils/APIManager';
 import sendBetData from './response/send-bet/success.json';
 
 // result
-import resultsM6 from './response/results/m6.json';
-import resultsM7 from './response/results/m7.json';
-import resultM22 from './response/results/m22.json';
-import resultM23 from './response/results/m23.json';
-import resultP6 from './response/results/p6.json';
-import resultsP7E from './response/results/p7e.json';
+import resultData from './resultData';
 
-import transactionsP6B from './response/transactions/p6b.json';
-import transactionsP7E from './response/transactions/p7e.json';
+// transaction
+import transactionData from './transactionData';
 
 // database
 import { games } from './db/games';
@@ -22,6 +17,7 @@ import { settings } from './db/settings';
 import { properties } from './db/properties';
 import { lastbets } from './db/lastbets';
 import { payouts } from './db/payouts';
+
 import { PayoutData } from '../../types';
 
 export function makeServer({ environment = 'test' } = {}) {
@@ -138,32 +134,11 @@ export function makeServer({ environment = 'test' } = {}) {
                 const total_page = Math.ceil(total_datas / per_page);
 
                 let data: { data: any[] };
-                switch (pcode) {
-                    case 'm6':
-                        data = resultsM6;
-                        break;
-                    case 'm7':
-                        data = resultsM7;
-                        break;
-                    case 'm22':
-                    case 'm22b':
-                    case 'm22c':
-                    case 'm22d':
-                        data = resultM22;
-                        break;
-                    case 'm23':
-                        data = resultM23;
-                        break;
-                    case 'p6':
-                    case 'p6b':
-                        data = resultP6;
-                        break;
-                    case 'p7d':
-                    case 'p7e':
-                        data = resultsP7E;
-                        break;
-                    default:
-                        data = { data: [] };
+
+                if (pcode in resultData) {
+                    data = resultData[pcode];
+                } else {
+                    data = { data: [] };
                 }
 
                 return {
@@ -186,20 +161,10 @@ export function makeServer({ environment = 'test' } = {}) {
                 // const total_page = Math.ceil(total_datas / per_page);
 
                 let data: object;
-                switch (pcode) {
-                    case 'p6':
-                    case 'p6b':
-                        data = transactionsP6B;
-                        break;
-                    case 'p7':
-                    case 'p7b':
-                    case 'p7c':
-                    case 'p7d':
-                    case 'p7e':
-                        data = transactionsP7E;
-                        break;
-                    default:
-                        data = { data: [] };
+                if (pcode in transactionData) {
+                    data = transactionData[pcode];
+                } else {
+                    data = { data: [] };
                 }
 
                 return {

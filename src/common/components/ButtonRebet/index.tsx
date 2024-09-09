@@ -71,7 +71,9 @@ const ButtonRebet = ({ show, styles }: IProps) => {
     return (
         <ButtonAction
             show={show}
-            label={<LabelTranslate value={`${autoRebet ? 'stop' : 'rebet'}`} />}
+            label={
+                <LabelTranslate value={`${autoRebet ? 'stop' : 'rebet'}`} option={{ lng: 'en' }} />
+            }
             icon={autoRebet ? <SVGIconPause /> : <SVGIconRebet />}
             circle={autoRebet}
             background={autoRebet ? 'rgba(255, 0, 77, 0.20)' : undefined}

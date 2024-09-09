@@ -4,7 +4,7 @@ import { LoadingHelper } from '../utils/LoadingHelper';
 import { getLastbets } from '../../services/api/lastbets';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
 
-export function useFetchLastbets() {
+function useFetchLastbets() {
     const dispatch = useAppDispatch();
 
     const [finish, setFinish] = useState(false);
@@ -37,3 +37,5 @@ export function useFetchLastbets() {
 
     return { finish };
 }
+
+export { useFetchLastbets };

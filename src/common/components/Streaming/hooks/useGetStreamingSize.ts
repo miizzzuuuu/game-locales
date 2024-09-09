@@ -4,7 +4,7 @@ import { DisplayHelper } from '../../../utils/DisplayHelper';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectDevice } from '../../../../store/slice/windowSlice';
 
-export const useGetStreamingSize = () => {
+function useGetStreamingSize() {
     const device = useAppSelector(selectDevice);
 
     const handleResize = useCallback(() => {
@@ -28,4 +28,6 @@ export const useGetStreamingSize = () => {
     }, [device]);
 
     useWindowResize(handleResize);
-};
+}
+
+export { useGetStreamingSize };

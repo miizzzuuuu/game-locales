@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "angka": "4,4,4",
+            "tanggal": "2024-07-12 05:53:21",
+            "periode": 13920,
+            "hitung": "1",
+            "gamekey": 13920,
+            "idnomor": 84765
+        },
+        {
+            "angka": "2,4,6",
+            "tanggal": "2024-07-12 05:52:43",
+            "periode": 13919,
+            "hitung": "1",
+            "gamekey": 13919,
+            "idnomor": 84764
+        },
+        {
+            "angka": "5,5,6",
+            "tanggal": "2024-07-12 05:52:04",
+            "periode": 13918,
+            "hitung": "1",
+            "gamekey": 13918,
+            "idnomor": 84763
+        },
+        {
+            "angka": "3,4,6",
+            "tanggal": "2024-07-12 05:51:26",
+            "periode": 13917,
+            "hitung": "1",
+            "gamekey": 13917,
+            "idnomor": 84762
+        },
+        {
+            "angka": "2,5,6",
+            "tanggal": "2024-07-12 05:50:47",
+            "periode": 13916,
+            "hitung": "1",
+            "gamekey": 13916,
+            "idnomor": 84761
+        },
+        {
+            "angka": "3,4,4",
+            "tanggal": "2024-07-12 05:50:02",
+            "periode": 13915,
+            "hitung": "1",
+            "gamekey": 13915,
+            "idnomor": 84760
+        },
+        {
+            "angka": "3,5,6",
+            "tanggal": "2024-07-12 05:49:23",
+            "periode": 13914,
+            "hitung": "1",
+            "gamekey": 13914,
+            "idnomor": 84759
+        },
+        {
+            "angka": "1,3,4",
+            "tanggal": "2024-07-12 05:48:45",
+            "periode": 13913,
+            "hitung": "1",
+            "gamekey": 13913,
+            "idnomor": 84758
+        },
+        {
+            "angka": "2,3,6",
+            "tanggal": "2024-07-12 05:48:07",
+            "periode": 13912,
+            "hitung": "1",
+            "gamekey": 13912,
+            "idnomor": 84757
+        },
+        {
+            "angka": "3,4,5",
+            "tanggal": "2024-07-12 05:47:27",
+            "periode": 13911,
+            "hitung": "1",
+            "gamekey": 13911,
+            "idnomor": 84756
+        }
+    ]
+}

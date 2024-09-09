@@ -9,7 +9,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
-import { dummyLoadNewValue, topWinnerDummy } from '../../dummy';
+import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
@@ -17,10 +17,11 @@ import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 import TopWinner from '../TopWinner';
 import { setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { GameHelper } from '../../utils/GameHelper';
-import { useNewSet } from '../../hooks/useNewSet';
 import { resetHistory } from '../../../store/slice/historySlice';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
+import { setNewSet } from '../../../store/slice/gameSlice';
+import { Features } from '../../utils/Features';
+import { useNewSet } from '../../hooks/useNewSet';
 
 function Game() {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -61,6 +62,20 @@ function Game() {
         if (e.key === 'p') {
             dispatch(setShowMiniHowToPlay(true));
         }
+        if (e.key === 'n') {
+            if (!Features.SHUFFLE_THE_CARDS) {
+                return;
+            }
+
+            dispatch(setNewSet(newSetDummy.status));
+        }
+        if (e.key === 'm') {
+            if (!Features.SHUFFLE_THE_CARDS) {
+                return;
+            }
+
+            dispatch(setNewSet(false));
+        }
     }, []);
 
     useKeyboard(handleKeyboardTest);
@@ -78,13 +93,14 @@ function Game() {
 
     useNewSet({
         handleNewSet: () => {
+            // callback when new set
             dispatch(resetHistory());
         },
     });
 
     return (
         <div
-            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || GameHelper.activeLetterBox ? ` ${styles.box}` : ''}`}
+            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
             <Timer />

@@ -1,0 +1,29 @@
+{
+    "htp": {
+        "general": {
+            "title": "Umum",
+            "content": {
+                "paragraph-1": "Untuk ikut serta dalam permainan, Anda harus memiliki saldo/dana yang mencukupi untuk menutupi taruhan Anda. Saldo Anda saat ini dapat dilihat di bagian kiri bawah layar anda.",
+                "paragraph-2": "Indikator TOTAL TARUHAN Menampilkan total jumlah taruhan yang Anda pasang untuk babak saat ini.",
+                "paragraph-3": "Menampilkan taruhan minimum dan maksimum yang diperbolehkan di atas meja dan dapat berubah kapan saja. Selain itu terdapat kode unik periode saat ini dan nama game yang sedang anda mainkan.",
+                "paragraph-4": "Timer akan memberitahukan waktu yang tersisa untuk memasang taruhan, setelah berakhir, taruhan di tutup dan tidak ada lagi taruhan yang diterima. Setelah waktu taruhan berakhir, Anda akan menerima konfirmasi \"taruhan diterima\" jika taruhan Anda diterima untuk berpartisipasi dalam putaran permainan; jika tidak, Anda akan mendapatkan pemberitahuan \"Tidak semua taruhan diterima\" atau \"Taruhan ditolak\".",
+                "paragraph-5": "Tampilan chip memungkinkan Anda untuk memilih nilai dari setiap chip yang ingin dipertaruhkan. Anda dapat memilih nilai chip untuk taruhan dengan mengklik chip di bagian bawah layar, yang terletak dekat dengan tombol Batalkan, Gandakan, dan Pasang Lagi (Rebet), untuk melihat semua nilai chip yang tersedia. Hanya nilai chip yang dapat digunakan dengan saldo Anda saat ini yang dapat di pilih."
+            },
+            "game-name": "Nama Game"
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Tombol tambahan untuk mempermudah pemain dalam permainan.",
+            "content": {
+                "paragraph-1": "Tombol Batal akan menghapus satu chip yang sudah anda letakan sebelumnya di meja.",
+                "paragraph-2": "Menggandakan dua kali jumlah chip yang telah anda pasang. Pastikan saldo akun Anda mencukupi untuk menggandakan semua taruhan yang dipasang.",
+                "paragraph-3": "Memperbolehkan anda untuk mengulang taruhan yang sama seperti yang Anda pasang pada putaran sebelumnya di meja.",
+                "paragraph-4": "Menu Burger menyediakan menu menu penting dalam permainan untuk digunakan.",
+                "paragraph-5": "Menyamarkan tampilan chip yang telah anda pasang di meja.",
+                "paragraph-6": "Untuk memunculkan Statistic permainan yang sedang berlangsung.",
+                "paragraph-7": "Untuk menyimpan dan menggunakan taruhan favorit masing masing pemain.",
+                "paragraph-8": "Menampilkan atau menyembunyikan Roadmap / Statistik permainan."
+            }
+        }
+    }
+}

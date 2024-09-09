@@ -28,7 +28,7 @@ const NewSet = () => {
 
     return (
         <div className={`${styles['new-set']}${deviceClassName}`}>
-            <Message value="shuffling card" handleClose={handleClose} close={!newSet} />
+            <Message value="shuffling-cards" handleClose={handleClose} close={!newSet} />
 
             <ShufflingAnimation close={!newSet} />
         </div>

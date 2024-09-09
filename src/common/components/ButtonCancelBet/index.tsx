@@ -28,7 +28,7 @@ const ButtonCancelBet = ({ styles, show }: IProps) => {
     return (
         <ButtonAction
             show={show}
-            label={<LabelTranslate value="cancel" />}
+            label={<LabelTranslate value="cancel" option={{ lng: 'en' }} />}
             icon={<SVGIconCancelBet />}
             style={styles}
             disabled={!isActive}

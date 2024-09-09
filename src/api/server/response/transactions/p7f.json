@@ -1,0 +1,236 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-08-30T03:16:37.000Z",
+            "periode": "22642",
+            "pcode": "p7f",
+            "detail_betting": [
+                {
+                    "tebak": "01",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 22644,
+                "tanggal": "2024-08-30T03:17:31.000Z",
+                "periode": 22642,
+                "hitung": "1",
+                "gamekey": "22642",
+                "angka": "05",
+                "thunder": [
+                    {
+                        "id": 18,
+                        "mtp": 25
+                    },
+                    {
+                        "id": 7,
+                        "mtp": 75
+                    },
+                    {
+                        "id": 16,
+                        "mtp": 75
+                    }
+                ]
+            },
+            "total_debit": 1000,
+            "total_credit": 0,
+            "total_transaction": -1000
+        },
+        {
+            "tglbel": "2024-08-27T19:30:43.000Z",
+            "periode": "20577",
+            "pcode": "p7f",
+            "detail_betting": [
+                {
+                    "tebak": "05,10,15,20",
+                    "type": "n4",
+                    "taruhan": 5000,
+                    "prize": 4.25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "11,12,13,14,15",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 3.5,
+                    "win_amount": 17500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "04",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 50,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 20579,
+                "tanggal": "2024-08-27T19:34:37.000Z",
+                "periode": 20577,
+                "hitung": "1",
+                "gamekey": "20577",
+                "angka": "11",
+                "thunder": [
+                    {
+                        "id": 4,
+                        "mtp": 50
+                    },
+                    {
+                        "id": 1,
+                        "mtp": 25
+                    }
+                ]
+            },
+            "total_debit": 15000,
+            "total_credit": 17500,
+            "total_transaction": 2500
+        },
+        {
+            "tglbel": "2024-08-27T19:30:41.000Z",
+            "periode": "20577",
+            "pcode": "p7f",
+            "detail_betting": [
+                {
+                    "tebak": "05,10,15,20",
+                    "type": "n4",
+                    "taruhan": 5000,
+                    "prize": 4.25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "11,12,13,14,15",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 3.5,
+                    "win_amount": 17500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "04",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 50,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 20579,
+                "tanggal": "2024-08-27T19:34:37.000Z",
+                "periode": 20577,
+                "hitung": "1",
+                "gamekey": "20577",
+                "angka": "11",
+                "thunder": [
+                    {
+                        "id": 4,
+                        "mtp": 50
+                    },
+                    {
+                        "id": 1,
+                        "mtp": 25
+                    }
+                ]
+            },
+            "total_debit": 15000,
+            "total_credit": 17500,
+            "total_transaction": 2500
+        },
+        {
+            "tglbel": "2024-08-27T19:30:38.000Z",
+            "periode": "20577",
+            "pcode": "p7f",
+            "detail_betting": [
+                {
+                    "tebak": "05,10,15,20",
+                    "type": "n4",
+                    "taruhan": 5000,
+                    "prize": 4.25,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "11,12,13,14,15",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 3.5,
+                    "win_amount": 17500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "04",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 50,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 20579,
+                "tanggal": "2024-08-27T19:34:37.000Z",
+                "periode": 20577,
+                "hitung": "1",
+                "gamekey": "20577",
+                "angka": "11",
+                "thunder": [
+                    {
+                        "id": 4,
+                        "mtp": 50
+                    },
+                    {
+                        "id": 1,
+                        "mtp": 25
+                    }
+                ]
+            },
+            "total_debit": 15000,
+            "total_credit": 17500,
+            "total_transaction": 2500
+        },
+        {
+            "tglbel": "2024-08-27T19:27:05.000Z",
+            "periode": "20576",
+            "pcode": "p7f",
+            "detail_betting": [
+                {
+                    "tebak": "06",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 20578,
+                "tanggal": "2024-08-27T19:29:26.000Z",
+                "periode": 20576,
+                "hitung": "1",
+                "gamekey": "20576",
+                "angka": "13",
+                "thunder": [
+                    {
+                        "id": 16,
+                        "mtp": 25
+                    },
+                    {
+                        "id": 5,
+                        "mtp": 50
+                    }
+                ]
+            },
+            "total_debit": 1000,
+            "total_credit": 0,
+            "total_transaction": -1000
+        }
+    ]
+}

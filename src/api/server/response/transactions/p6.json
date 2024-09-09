@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T07:43:54.000Z",
+            "periode": "2392025",
+            "pcode": "p6",
+            "detail_betting": [
+                {
+                    "tebak": "1st Row,2nd Row",
+                    "type": "n12",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "14",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 23,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "1st Column",
+                    "type": "n4",
+                    "taruhan": 1000,
+                    "prize": 5.75,
+                    "win_amount": 5750,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1490728,
+                "tanggal": "2024-09-04T07:45:39.000Z",
+                "periode": 2392025,
+                "hitung": "1",
+                "gamekey": "2392025",
+                "angka": "02"
+            },
+            "total_debit": 3000,
+            "total_credit": 7700,
+            "total_transaction": 4700
+        }
+    ]
+}

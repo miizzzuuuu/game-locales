@@ -2,13 +2,13 @@ import { RefObject, useEffect } from 'react';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
 
-export const useDragToScroll = <T extends HTMLElement>({
+function useDragToScroll<T extends HTMLElement>({
     slider,
     direction = 'horizontal',
 }: {
     slider: RefObject<T>;
     direction?: 'horizontal' | 'vertical';
-}) => {
+}) {
     const device = useAppSelector(selectDevice);
 
     useEffect(() => {
@@ -78,4 +78,6 @@ export const useDragToScroll = <T extends HTMLElement>({
             slider.current?.removeEventListener('mouseleave', stopDragging);
         };
     }, [device, direction]);
-};
+}
+
+export { useDragToScroll };

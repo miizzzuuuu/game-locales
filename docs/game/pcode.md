@@ -2,6 +2,17 @@
 
 ```json
 {
+    "p6": "24D",
+    "p6b": "24D Jackpot",
+    "p7": "Roulette",
+    "p7b": "Roulette - Fast Table",
+    "p7c": "Bingo Roulette",
+    "p7d": "Europe Roulette",
+    "p7e": "Soccer Roulette",
+    "p7f": "Bounce Roulette",
+    "p9": "12D",
+    "p9b": "12D Thunder",
+    "p12": "Sicbo[Dice]",
     "m6": "24D Spin",
     "m7": "Oglok",
     "m8": "Dice 6",
@@ -41,17 +52,6 @@
     "m40": "Xoc Dia",
     "m41": "Domino",
     "m42": "Grandprix Number",
-    "m43": "6D Color",
-    "p6": "24D",
-    "p6b": "24D Jackpot",
-    "p7": "Roulette",
-    "p7b": "Roulette - Fast Table",
-    "p7c": "Bingo Roulette",
-    "p7d": "Europe Roulette",
-    "p7e": "Soccer Roulette",
-    "p7f": "Bounce Roulette",
-    "p9": "12D",
-    "p9b": "12D Thunder",
-    "p12": "Sicbo[Dice]"
+    "m43": "6D Color"
 }
 ```

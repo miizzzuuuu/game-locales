@@ -3,7 +3,7 @@ import { DeviceType, Orientation } from '../../types';
 import { DisplayHelper } from '../utils/DisplayHelper';
 import { useWindowResize } from './useWindowResize';
 
-export const useAutoResize = () => {
+function useAutoResize() {
     const [deviceType, setDeviceType] = useState<DeviceType>('desktop');
     const [orientation, setOrientation] = useState<Orientation>('landscape');
 
@@ -27,4 +27,6 @@ export const useAutoResize = () => {
     useWindowResize(handler);
 
     return { deviceType, orientation };
-};
+}
+
+export { useAutoResize };

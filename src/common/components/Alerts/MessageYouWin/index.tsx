@@ -3,7 +3,6 @@ import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectCurrency } from '../../../../store/slice/playerSlice';
 import {
     endWinAnimation,
-    selectResultStatus,
     selectWinAmount,
     selectWinStatus,
 } from '../../../../store/slice/resultSlice';
@@ -22,11 +21,11 @@ const MessageYouWin = () => {
     const dispatch = useAppDispatch();
 
     const [displayValue, setDisplayValue] = useState(0);
-    const [renderUI, setRenderUI] = useState(false);
+    // const [renderUI, setRenderUI] = useState(false);
 
     const winAmount = useAppSelector(selectWinAmount);
     const winStatus = useAppSelector(selectWinStatus);
-    const resultStatus = useAppSelector(selectResultStatus);
+    // const resultStatus = useAppSelector(selectResultStatus);
 
     useEffect(() => {
         if (currentTimeOut.current) {
@@ -34,14 +33,14 @@ const MessageYouWin = () => {
             currentTimeOut.current = undefined;
         }
 
-        if (winAmount > 0 && renderUI) {
+        if (winAmount > 0) {
             Sound.playYouWon();
 
             currentTimeOut.current = setTimeout(() => {
                 if (messageYouWinRef.current) {
                     messageYouWinRef.current.classList.add(styles.disapear);
                 }
-            }, 3000);
+            }, 4000);
         }
 
         return () => {
@@ -50,7 +49,7 @@ const MessageYouWin = () => {
                 currentTimeOut.current = undefined;
             }
         };
-    }, [winAmount, renderUI]);
+    }, [winAmount]);
 
     const requestRef = useRef<number | undefined>(undefined);
     const previousTimeRef = useRef<number | undefined>(undefined);
@@ -108,21 +107,21 @@ const MessageYouWin = () => {
         };
     }, [winAmount]);
 
-    useEffect(() => {
-        if (resultStatus === 'done') {
-            setRenderUI(true);
-        }
-    }, [resultStatus]);
+    // useEffect(() => {
+    //     if (resultStatus === 'done') {
+    //         setRenderUI(true);
+    //     }
+    // }, [resultStatus]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (e.animationName.indexOf('message-fadeout') >= 0) {
-            setRenderUI(false);
+            // setRenderUI(false);
             setDisplayValue(0);
             dispatch(endWinAnimation());
         }
     };
 
-    if (winStatus === 'idle' || winAmount <= 0 || !renderUI) {
+    if (winStatus === 'idle' || winAmount <= 0) {
         return null;
     }
 

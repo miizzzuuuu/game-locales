@@ -5,7 +5,7 @@ import { LoadingHelper } from '../utils/LoadingHelper';
 import { getPlayerSettings } from '../../services/api/playerSettings';
 import { setSetings } from '../../store/slice/settingsSlice';
 
-export function useFetchSettings() {
+function useFetchSettings() {
     const dispatch = useAppDispatch();
 
     const [finish, setFinish] = useState(false);
@@ -38,3 +38,5 @@ export function useFetchSettings() {
 
     return { finish };
 }
+
+export { useFetchSettings };
