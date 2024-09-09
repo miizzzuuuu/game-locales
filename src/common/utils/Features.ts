@@ -11,5 +11,5 @@ export const Features: FeaturesType = {
     BUTTON_PATTERN: true,
     MINI_HOW_TO_PLAY: true,
     SHUFFLE_THE_CARDS: true,
-    LETTER_BOX: false,
+    LETTER_BOX: true,
 };
