@@ -177,7 +177,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                 opacity={1}
                                 value={scanNumber ? scanNumber.tiger : ''}
                                 appear={
-                                    scanNumber && scanNumber.tiger && scanNumber.tiger == 'x' ? false : true
+                                    scanNumber && scanNumber.dragon && scanNumber.dragon == 'x' ? false : true
                                 }
                                 disappear={!scanNumber}
                                 submit={scanNumber && scanNumber.submit}
