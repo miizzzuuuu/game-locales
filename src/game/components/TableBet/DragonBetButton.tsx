@@ -120,25 +120,57 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                 <div className={styles['slot-chip']} style={{ left: '30%' }}>
                     {chip > 0 && <ChipBet value={chip} color={color} />}
                 </div>
+                {
+                    DisplayHelper.getOrientation() == "landscape" ?
+                        <div className={styles.cardContainerDragon}>
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    marginLeft: "-6rem",
+                                    marginTop: "-1rem"
+                                }}
+                            >
+                                <RenderCard
+                                    top="0px"
+                                    left="0px"
+                                    right="0px"
+                                    position={{ x: '5px', y: '5px' }}
+                                    rotation={{ z: '0deg' }}
+                                    opacity={1}
+                                    value={scanNumber ? scanNumber.dragon : ''}
+                                    appear={
+                                        scanNumber && scanNumber.dragon && scanNumber.dragon == 'x'
+                                            ? false
+                                            : true
+                                    }
+                                    disappear={!scanNumber}
+                                    submit={scanNumber && scanNumber.submit}
+                                />
+                            </div>
+                        </div> :
+                        <div className={styles.cardContainerDragon}>
 
-                <div className={styles.cardContainerDragon}>
-                    <RenderCard
-                        top="0px"
-                        left="0px"
-                        right="0px"
-                        position={{ x: '5px', y: '5px' }}
-                        rotation={{ z: '0deg' }}
-                        opacity={1}
-                        value={scanNumber ? scanNumber.dragon : ''}
-                        appear={
-                            scanNumber && scanNumber.dragon && scanNumber.dragon == 'x'
-                                ? false
-                                : true
-                        }
-                        disappear={!scanNumber}
-                        submit={scanNumber && scanNumber.submit}
-                    />
-                </div>
+                            <RenderCard
+                                top="0px"
+                                left="0px"
+                                right="0px"
+                                position={{ x: '5px', y: '5px' }}
+                                rotation={{ z: '0deg' }}
+                                opacity={1}
+                                value={scanNumber ? scanNumber.dragon : ''}
+                                appear={
+                                    scanNumber && scanNumber.dragon && scanNumber.dragon == 'x'
+                                        ? false
+                                        : true
+                                }
+                                disappear={!scanNumber}
+                                submit={scanNumber && scanNumber.submit}
+                            />
+                        </div>
+                }
+
             </div>
             {scrollSvg}
             <svg

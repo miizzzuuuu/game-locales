@@ -29,6 +29,7 @@ function ResultNumber(props: { value: number | undefined }) {
             viewBox="0 0 51 28"
             className={stylesLandscape['result-number-slide-right']}
             style={{
+                float: 'left',
                 marginTop: '-20%',
                 marginLeft: '-15%',
                 zIndex: 1,
@@ -134,23 +135,59 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                 <div className={styles['slot-chip']} style={{ right: '-20%', left: 'auto' }}>
                     {chip > 0 && <ChipBet value={chip} color={color} />}
                 </div>
+                {
 
-                <div className={styles.cardContainerTiger}>
-                    <RenderCard
-                        top="0px"
-                        left="0px"
-                        right="0px"
-                        position={{ x: '5px', y: '5px' }}
-                        rotation={{ z: '0deg' }}
-                        opacity={1}
-                        value={scanNumber ? scanNumber.tiger : ''}
-                        appear={
-                            scanNumber && scanNumber.tiger && scanNumber.tiger == 'x' ? false : true
-                        }
-                        disappear={!scanNumber}
-                        submit={scanNumber && scanNumber.submit}
-                    />
-                </div>
+                    DisplayHelper.getOrientation() == "landscape" ?
+                        <div className={styles.cardContainerTiger}>
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    marginLeft: "2rem",
+                                    marginTop: "-1rem"
+                                }}
+                            >
+                                <RenderCard
+                                    top="0px"
+                                    left="0px"
+                                    right="0px"
+                                    position={{ x: '5px', y: '5px' }}
+                                    rotation={{ z: '0deg' }}
+                                    opacity={1}
+                                    value={scanNumber ? scanNumber.tiger : ''}
+                                    appear={
+                                        scanNumber && scanNumber.dragon && scanNumber.dragon == 'x' ? false : true
+                                    }
+                                    disappear={!scanNumber}
+                                    submit={scanNumber && scanNumber.submit}
+                                />
+
+                            </div>
+                        </div> :
+
+                        <div className={styles.cardContainerTiger}>
+
+                            <RenderCard
+                                top="0px"
+                                left="0px"
+                                right="0px"
+                                position={{ x: '5px', y: '5px' }}
+                                rotation={{ z: '0deg' }}
+                                opacity={1}
+                                value={scanNumber ? scanNumber.tiger : ''}
+                                appear={
+                                    scanNumber && scanNumber.tiger && scanNumber.tiger == 'x' ? false : true
+                                }
+                                disappear={!scanNumber}
+                                submit={scanNumber && scanNumber.submit}
+                            />
+
+                        </div>
+                }
+
+
+
             </div>
 
             <svg

@@ -69,24 +69,59 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                 <div className={styles['slot-chip']} style={{ left: '20%' }}>
                     {chip > 0 && <ChipBet value={chip} color={color} />}
                 </div>
-                <div
-                    className={styles.cardContainerWild}
-                >
-                    <RenderCard
-                        top={DisplayHelper.getOrientation() !== "landscape" ? "calc(100%/2)" : "calc(100%/2)"}
-                        left="0px"
-                        right="0px"
-                        opacity={!isSuperWildLose ? 1 : 0.5}
-                        position={{ x: "3px", y: "10px" }}
-                        rotation={{ z: "0deg" }}
-                        value={scanNumber ? scanNumber.wild : ""}
+                {
+                    DisplayHelper.getOrientation() == "landscape" ?
+                        <div
+                            className={styles.cardContainerWild}
+                        ><div
+                            style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "325%",
+                                marginLeft: "-10rem",
+                                marginTop: "-0.5rem"
+                            }}
+                        >
 
-                        appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
-                        disappear={!scanNumber}
-                        submit={scanNumber && scanNumber.submit}
-                    />
+                                <RenderCard
+                                    top={"80%"}
+                                    marginTop={"-80%"}
+                                    notAbsolute={false}
+                                    left="35%"
+                                    right="0px"
+                                    opacity={!isSuperWildLose ? 1 : 0.5}
+                                    position={{ x: "3px", y: "10px" }}
+                                    rotation={{ z: "0deg" }}
+                                    value={scanNumber ? scanNumber.wild : ""}
+
+                                    appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
+                                    disappear={!scanNumber}
+                                    submit={scanNumber && scanNumber.submit}
+                                />
+                            </div>
+
+                        </div>:<div
+                            className={styles.cardContainerWild}
+                        >
+
+                                <RenderCard
+                                    top={"calc(100%/2)"}
+                                    left="0px"
+                                    right="0px"
+                                    opacity={!isSuperWildLose ? 1 : 0.5}
+                                    position={{ x: "3px", y: "10px" }}
+                                    rotation={{ z: "0deg" }}
+                                    value={scanNumber ? scanNumber.wild : ""}
+
+                                    appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
+                                    disappear={!scanNumber}
+                                    submit={scanNumber && scanNumber.submit}
+                                />
+                            </div>
+
+                }
+                
                 </div>
-            </div>
 
             <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,3 +1,4 @@
+import { DisplayHelper } from "../../../../common/utils/DisplayHelper";
 import { RenderSymbol } from "../cardsymbol";
 import { StringUtility } from "./StringUtility";
 // import { RenderSymbol } from "./cardsymbol";
@@ -12,14 +13,15 @@ export function RenderCard(props: any) {
   return (
     <div
       style={{
-        position: "absolute",
+        position:  props.notAbsolute?"unset":"absolute",
         top: `${props.top}`,
         opacity: `${props.opacity}`,
         left: `${props.left}`,
         right: `${props.right}`,
         transform: `perspective(1000px) translate(${props.position.x}, ${props.position.y})`,
-        width: "24px",
-        height: "31.68px",
+        marginTop: `${props.marginTop}`,
+        width: DisplayHelper.getOrientation() !== "landscape" ? "24px" :"24%",
+        height: DisplayHelper.getOrientation() !== "landscape" ? "31.68px" :"31.68%",
       }}
     >
       <div

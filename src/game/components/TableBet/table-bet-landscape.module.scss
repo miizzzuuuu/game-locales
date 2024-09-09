@@ -408,33 +408,38 @@ $childBetM23Width : calc(98.5%/2);
 }
 
 .cardContainerDragon {
-    position: absolute;
-    bottom: 9rem;
-    right: auto;
-    left: 50%;
-    transform: perspective(1000px) translate(-5px, 15px);
-    width: 24%;
-    height: 31.68%;
+    display: flex;
+
+    // position: relative;
+    // bottom: 9rem;
+    // right: auto;
+    // left: 50%;
+    // transform: perspective(1000px) translate(-5px, 15px);
+    // width: 24%;
+    // height: 31.68%;
 }
 
 .cardContainerTiger {
-    position: absolute;
-    bottom: 9rem;
-    left: auto;
-    right: 40%;
-    transform: perspective(1000px) translate(-5px, 15px);
-    width: 24%;
-    height: 31.68%;
+    display: flex;
+
+    // position: relative;
+    // bottom: 9rem;
+    // left: auto;
+    // right: 40%;
+    // transform: perspective(1000px) translate(-5px, 15px);
+    // width: 24%;
+    // height: 31.68%;
 }
 
 .cardContainerWild {
-    position: absolute;
-    bottom: 30.5rem;
-    top: -120%;
-    right: auto;
-    left: 43.5%;
-    transform: perspective(1000px) translate(-5px, 15px);
-    width: 24%;
+    // position: relative;
+    // bottom: 30.5rem;
+    // top: -120%;
+    // right: auto;
+    // left: 43.5%;
+    // transform: perspective(1000px) translate(-5px, 15px);
+    display: flex;
+    // width: 100%;
 }
 
 @keyframes chipLight {
