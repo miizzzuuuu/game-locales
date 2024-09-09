@@ -46,6 +46,7 @@ function ResultNumber(props: { value: number | undefined }) {
                 x="25"
                 y="20"
                 fontSize={'1.5rem'}
+                fontWeight={'800'}
                 fontFamily="Manrope"
                 className="small"
             >

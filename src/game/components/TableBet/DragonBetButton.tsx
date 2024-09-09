@@ -44,6 +44,8 @@ function ResultNumber(props: { value: number | undefined }) {
                 fontSize={'1.5rem'}
                 fontFamily="Manrope"
                 className="small"
+                fontWeight={'800'}
+
             >
                 {props.value}
             </text>
