@@ -144,8 +144,8 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                                         !betIsOpen
                                     }
                                     disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.dragon !=="x"}
-                                />
+                                    submit={scanNumber && scanNumber.submit == true }
+                                    />
                             </div>
                         </div> :
                         <div className={styles.cardContainerDragon}>
@@ -162,7 +162,7 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                                     !betIsOpen
                                 }
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.dragon !=="x"}
+                                submit={scanNumber && scanNumber.submit == true }
                             />
                         </div>
                 }

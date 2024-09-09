@@ -56,6 +56,18 @@ const ChildBetButton = ({
         >
             {children}
             <div className={[styles.childLabel, styles.betButtonLabel].join(' ')}>
+                <div
+                    style={{
+                        position: "absolute",
+                        display: "flex",
+                        top: DisplayHelper.getOrientation()=="landscape"? "1rem" :"2rem",
+                        marginInline: bet.button.includes("tiger") ?"2rem":"1.5rem"
+                    }}
+                >
+                    <div className={styles['slot-chip']}>
+                        {chip > 0 && <ChipBet value={chip} color={color} />}
+                    </div>
+                </div>
                 <span className={styles.text_lg}>
                     <LabelTranslate
                         value={bet.button.toLowerCase()}
@@ -64,14 +76,13 @@ const ChildBetButton = ({
                 </span>
                 <span>
                     <span>
-                    {ratio}
+                        {ratio}
                     </span>
-                    <div className={styles['slot-chip']}>
-                        {chip > 0 && <ChipBet value={chip} color={color} />}
-                    </div>
+
                 </span>
             </div>
             {bgSvg(isWin)}
+
         </div>
     );
 };

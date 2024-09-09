@@ -160,7 +160,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                         !betIsOpen
                                     }
                                     disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.tiger !== "x" }
+                                    submit={scanNumber && scanNumber.submit == true }
                                     />
 
                             </div>
@@ -180,7 +180,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                     !betIsOpen
                                 }
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.tiger !== "x" }
+                                submit={scanNumber && scanNumber.submit == true }
                             />
 
                         </div>

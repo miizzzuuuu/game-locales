@@ -2,7 +2,8 @@ import { DisplayHelper } from "../../../../common/utils/DisplayHelper";
 import { RenderSymbol } from "../cardsymbol";
 import { StringUtility } from "./StringUtility";
 // import { RenderSymbol } from "./cardsymbol";
-import "./style.css"
+import "./style.css";
+
 export function RenderCard(props: any) {
   let displayValue = StringUtility.splitCharStringToArray(props.value);
   if (displayValue.length < 2) {

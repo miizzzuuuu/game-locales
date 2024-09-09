@@ -97,8 +97,8 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                                         !betIsOpen
                                     }
                                     disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.wild !== "x"}
-                                />
+                                    submit={scanNumber && scanNumber.submit == true }
+                                    />
                             </div>
 
                         </div> : <div
@@ -117,7 +117,7 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                                     !betIsOpen
                                 }
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.wild !== "x"}
+                                submit={scanNumber && scanNumber.submit == true }
                             />
                         </div>
 
