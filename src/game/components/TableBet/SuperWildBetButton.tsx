@@ -92,36 +92,38 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                                     opacity={!isSuperWildLose ? 1 : 0.5}
                                     position={{ x: "3px", y: "10px" }}
                                     rotation={{ z: "0deg" }}
-                                    value={scanNumber ? scanNumber.wild : ""}
-
-                                    appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
+                                    value={scanNumber ? scanNumber.wild : ''}
+                                    appear={
+                                        !betIsOpen
+                                    }
                                     disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit}
+                                    submit={scanNumber && scanNumber.wild !== "x"}
                                 />
                             </div>
 
-                        </div>:<div
+                        </div> : <div
                             className={styles.cardContainerWild}
                         >
 
-                                <RenderCard
-                                    top={"calc(100%/2)"}
-                                    left="0px"
-                                    right="0px"
-                                    opacity={!isSuperWildLose ? 1 : 0.5}
-                                    position={{ x: "3px", y: "10px" }}
-                                    rotation={{ z: "0deg" }}
-                                    value={scanNumber ? scanNumber.wild : ""}
-
-                                    appear={scanNumber && scanNumber.wild && scanNumber.wild == "x" ? false : true}
-                                    disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit}
-                                />
-                            </div>
+                            <RenderCard
+                                top={"calc(100%/2)"}
+                                left="0px"
+                                right="0px"
+                                opacity={!isSuperWildLose ? 1 : 0.5}
+                                position={{ x: "3px", y: "10px" }}
+                                rotation={{ z: "0deg" }}
+                                value={scanNumber ? scanNumber.wild : ''}
+                                appear={
+                                    !betIsOpen
+                                }
+                                disappear={!scanNumber}
+                                submit={scanNumber && scanNumber.wild !== "x"}
+                            />
+                        </div>
 
                 }
-                
-                </div>
+
+            </div>
 
             <svg
                 xmlns="http://www.w3.org/2000/svg"

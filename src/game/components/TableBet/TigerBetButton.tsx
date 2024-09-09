@@ -157,11 +157,11 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                     opacity={1}
                                     value={scanNumber ? scanNumber.tiger : ''}
                                     appear={
-                                        scanNumber && scanNumber.dragon && scanNumber.dragon == 'x' ? false : true
+                                        !betIsOpen
                                     }
                                     disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit}
-                                />
+                                    submit={scanNumber && scanNumber.tiger !== "x" }
+                                    />
 
                             </div>
                         </div> :
@@ -177,10 +177,10 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                 opacity={1}
                                 value={scanNumber ? scanNumber.tiger : ''}
                                 appear={
-                                    scanNumber && scanNumber.dragon && scanNumber.dragon == 'x' ? false : true
+                                    !betIsOpen
                                 }
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.submit}
+                                submit={scanNumber && scanNumber.tiger !== "x" }
                             />
 
                         </div>
