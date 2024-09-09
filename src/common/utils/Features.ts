@@ -10,6 +10,6 @@ export const Features: FeaturesType = {
     LAYOUT_VERSION: 1,
     BUTTON_PATTERN: true,
     MINI_HOW_TO_PLAY: true,
-    SHUFFLE_THE_CARDS: false,
+    SHUFFLE_THE_CARDS: true,
     LETTER_BOX: false,
 };
