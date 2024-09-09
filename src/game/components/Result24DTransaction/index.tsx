@@ -1,10 +1,10 @@
-import { Pcode24D, Transaction } from '../../../types';
+import { Pcode24DJackpot, Transaction } from '../../../types';
 import SVGResult24D from '../SVG/SVG24DResult';
 
 import styles from './styles.module.scss';
 
 interface IProps {
-    data: Transaction<Pcode24D>;
+    data: Transaction<Pcode24DJackpot>;
 }
 
 const Result24DTransaction = ({ data }: IProps) => {
@@ -18,13 +18,13 @@ const Result24DTransaction = ({ data }: IProps) => {
         <div className={styles.result}>
             <SVGResult24D value={Number(detail_result.angka)} />
 
-            {detail_result.thunder?.data_thunder?.prize_thunder && (
+            {detail_result.thunder?.data_thunder?.prize_thunder ? (
                 <div className={styles.multiplier}>
                     <span className={styles['multiplier-text']}>
                         {detail_result.thunder.data_thunder.prize_thunder}x
                     </span>
                 </div>
-            )}
+            ) : null}
         </div>
     );
 };

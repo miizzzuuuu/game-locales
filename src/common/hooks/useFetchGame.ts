@@ -4,9 +4,9 @@ import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { getGameData } from '../../services/api/gameData';
 import { setGame } from '../../store/slice/gameSlice';
-import { getHistory } from './useFetchPlayer';
+import { fetchResultHistory } from '../../game/hooks/useFetchResults';
 
-export function useFetchGame() {
+function useFetchGame() {
     const dispatch = useAppDispatch();
 
     const [finish, setFinish] = useState(false);
@@ -22,9 +22,7 @@ export function useFetchGame() {
                 if (!ignore) {
                     dispatch(setGame(data));
 
-                    const gameSet = data.shoePeriode.split('-')[0];
-
-                    await getHistory(dispatch, gameSet);
+                    await fetchResultHistory(dispatch);
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load settings completed');
@@ -43,3 +41,5 @@ export function useFetchGame() {
 
     return { finish };
 }
+
+export { useFetchGame };

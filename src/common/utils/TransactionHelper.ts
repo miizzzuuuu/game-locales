@@ -1,4 +1,15 @@
-import { Pcode, Pcode24D, PcodeBaccarat, PcodeDragonTigerWild, PcodeRoulette, Transaction } from '../../types';
+import {
+    Pcode,
+    Pcode24D,
+    Pcode24DJackpot,
+    Pcode48D,
+    PcodeBaccarat,
+    PcodeDragonTigerWild,
+    PcodeRoulette,
+    PcodeShioFight,
+    PcodeSicboDice,
+    Transaction,
+} from '../../types';
 
 export class TransactionHelper {
     static groupTransactionsByDate(transactions: Transaction<Pcode>[]): {
@@ -19,7 +30,13 @@ export class TransactionHelper {
     }
 
     static is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
-        return /^p6/.test(item.pcode);
+        return /^p6(?![b]$)/.test(item.pcode);
+    };
+
+    static is24DJackpot = (item: Transaction<string>): item is Transaction<Pcode24DJackpot> => {
+        // return /^p6[bc]$/.test(item.pcode);
+        // return item.pcode === 'p6b' || item.pcode === 'p6c';
+        return /^p6[b]$/.test(item.pcode);
     };
 
     static isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
@@ -30,7 +47,21 @@ export class TransactionHelper {
         return /^m22/.test(item.pcode);
     };
 
-    static isDragonTigerWild = (item: Transaction<string>): item is Transaction<PcodeDragonTigerWild> => {
-        return /^m23b/.test(item.pcode);
+    static isDragonTigerWild = (
+        item: Transaction<string>,
+    ): item is Transaction<PcodeDragonTigerWild> => {
+        return /^m23[bc]$/.test(item.pcode);
+    };
+
+    static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
+        return /^p12/.test(item.pcode);
+    };
+
+    static isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
+        return /^m27/.test(item.pcode);
+    };
+
+    static is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
+        return /^m35/.test(item.pcode);
     };
 }

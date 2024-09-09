@@ -1,0 +1,225 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T16:44:50.000Z",
+            "periode": "999785",
+            "pcode": "m35b",
+            "detail_betting": [
+                {
+                    "tebak": "18",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 45,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 999818,
+                "tanggal": "2024-09-04T16:46:40.000Z",
+                "periode": 999785,
+                "hitung": "1",
+                "gamekey": "999785",
+                "angka": "45"
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        },
+        {
+            "tglbel": "2024-09-04T07:41:10.000Z",
+            "periode": "999539",
+            "pcode": "m35b",
+            "detail_betting": [
+                {
+                    "tebak": "3rd Column",
+                    "type": "n4",
+                    "taruhan": 1000,
+                    "prize": 11,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 999572,
+                "tanggal": "2024-09-04T07:42:54.000Z",
+                "periode": 999539,
+                "hitung": "1",
+                "gamekey": "999539",
+                "angka": "48"
+            },
+            "total_debit": 1000,
+            "total_credit": 0,
+            "total_transaction": -1000
+        },
+        {
+            "tglbel": "2024-09-02T17:17:09.000Z",
+            "periode": "998373",
+            "pcode": "m35b",
+            "detail_betting": [
+                {
+                    "tebak": "Black",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Even",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Big",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 998406,
+                "tanggal": "2024-09-02T17:18:56.000Z",
+                "periode": 998373,
+                "hitung": "1",
+                "gamekey": "998373",
+                "angka": "17"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-02T17:10:37.000Z",
+            "periode": "998370",
+            "pcode": "m35b",
+            "detail_betting": [
+                {
+                    "tebak": "Red",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Odd",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Small",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 998403,
+                "tanggal": "2024-09-02T17:13:05.000Z",
+                "periode": 998370,
+                "hitung": "1",
+                "gamekey": "998370",
+                "angka": "28"
+            },
+            "total_debit": 15000,
+            "total_credit": 9750,
+            "total_transaction": -5250
+        },
+        {
+            "tglbel": "2024-09-02T16:57:15.000Z",
+            "periode": "998363",
+            "pcode": "m35b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 998396,
+                "tanggal": "2024-09-02T16:58:42.000Z",
+                "periode": 998363,
+                "hitung": "1",
+                "gamekey": "998363",
+                "angka": "16"
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-02T16:46:23.000Z",
+            "periode": "998358",
+            "pcode": "m35b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 998391,
+                "tanggal": "2024-09-02T16:48:12.000Z",
+                "periode": 998358,
+                "hitung": "1",
+                "gamekey": "998358",
+                "angka": "34"
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-02T16:33:56.000Z",
+            "periode": "998352",
+            "pcode": "m35b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 998385,
+                "tanggal": "2024-09-02T16:35:40.000Z",
+                "periode": 998352,
+                "hitung": "1",
+                "gamekey": "998352",
+                "angka": "12"
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-02T16:31:42.000Z",
+            "periode": "998351",
+            "pcode": "m35b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 998384,
+                "tanggal": "2024-09-02T16:33:24.000Z",
+                "periode": 998351,
+                "hitung": "1",
+                "gamekey": "998351",
+                "angka": "32"
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-02T16:29:46.000Z",
+            "periode": "998350",
+            "pcode": "m35b",
+            "detail_betting": [],
+            "detail_result": {
+                "idnomor": 998383,
+                "tanggal": "2024-09-02T16:31:27.000Z",
+                "periode": 998350,
+                "hitung": "1",
+                "gamekey": "998350",
+                "angka": "28"
+            },
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        }
+    ]
+}

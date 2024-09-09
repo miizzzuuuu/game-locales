@@ -15,8 +15,6 @@ export class GameHelper {
         return import.meta.env.MODE === 'development';
     }
 
-    static activeLetterBox: boolean = false;
-
     static GAME_CODE: Record<string, string> = {
         p6: '24D',
         p7: 'RL',
@@ -73,8 +71,10 @@ export class GameHelper {
         m8b: 'Dice 6 Fever',
         m10: 'Head Tail',
         m11: 'Red White',
+        m11b: 'Europe Red White',
         m13: 'Billiards',
         m14: 'Poker Dice',
+        m14b: 'Europe Poker Dice',
         m16: 'Gong Ball',
         m19: 'Suwit',
         m20: 'Monopoly',
@@ -83,8 +83,10 @@ export class GameHelper {
         m22b: 'Baccarat B',
         m22c: 'Baccarat C',
         m22d: 'Europe Baccarat 1',
+        m22e: 'Europe Baccarat 2',
         m23: 'Dragon Tiger',
         m23b: 'Dragon Tiger Wild',
+        m23c: 'Dragon Tiger Wild',
         m24: 'Niuniu',
         m25: 'Fantan',
         m26: 'Race Ball',
@@ -98,6 +100,7 @@ export class GameHelper {
         m33: 'Gong Ball Jitu',
         m34: 'HILO',
         m35: '48D',
+        m35b: 'Europe 48D',
         m36: '36D',
         m37: 'Bingo Sicbo',
         m38: 'Bingo Baccarat',

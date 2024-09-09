@@ -1,6 +1,56 @@
 {
     "data": [
         {
+            "di": "dog",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:51",
+            "periode": "16",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146706
+        },
+        {
+            "di": "snake",
+            "tian": "horse",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:35",
+            "periode": "15",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146705
+        },
+        {
+            "di": "rat",
+            "tian": "dragon",
+            "result": "di",
+            "tanggal": "2024-07-16 10:54:45",
+            "periode": "14",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146704
+        },
+        {
+            "di": "horse",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 02:17:03",
+            "periode": "13",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146703
+        },
+        {
+            "di": "pig",
+            "tian": "dog",
+            "result": "tian",
+            "tanggal": "2024-07-16 02:14:34",
+            "periode": "11",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146702
+        },
+        {
             "di": "monkey",
             "tian": "monkey",
             "result": "tie",
@@ -52,58 +102,203 @@
         },
         {
             "di": "dog",
-            "tian": "dog",
-            "result": "tie",
-            "tanggal": "2022-01-04 13:25:43",
-            "periode": "9",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:51",
+            "periode": "16",
             "hitung": "1",
-            "gamekey": "21990",
-            "idnomor": 1047606
+            "gamekey": "5",
+            "idnomor": 146706
+        },
+        {
+            "di": "snake",
+            "tian": "horse",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:35",
+            "periode": "15",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146705
         },
         {
             "di": "rat",
-            "tian": "ox",
-            "result": "di",
-            "tanggal": "2022-01-04 13:24:54",
-            "periode": "8",
-            "hitung": "1",
-            "gamekey": "21990",
-            "idnomor": 1047605
-        },
-        {
-            "di": "dog",
             "tian": "dragon",
-            "result": "tian",
-            "tanggal": "2022-01-04 13:24:03",
-            "periode": "7",
+            "result": "di",
+            "tanggal": "2024-07-16 10:54:45",
+            "periode": "14",
             "hitung": "1",
-            "gamekey": "21990",
-            "idnomor": 1047604
+            "gamekey": "5",
+            "idnomor": 146704
         },
         {
-            "di": "rooster",
-            "tian": "ox",
-            "result": "tian",
-            "tanggal": "2022-01-04 13:23:14",
-            "periode": "6",
+            "di": "horse",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 02:17:03",
+            "periode": "13",
             "hitung": "1",
-            "gamekey": "21990",
-            "idnomor": 1047603
+            "gamekey": "5",
+            "idnomor": 146703
         },
         {
             "di": "pig",
-            "tian": "pig",
+            "tian": "dog",
+            "result": "tian",
+            "tanggal": "2024-07-16 02:14:34",
+            "periode": "11",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146702
+        },
+        {
+            "di": "monkey",
+            "tian": "monkey",
             "result": "tie",
-            "tanggal": "2022-01-04 13:22:25",
-            "periode": "5",
+            "tanggal": "2022-01-04 13:30:02",
+            "periode": "14",
             "hitung": "1",
             "gamekey": "21990",
-            "idnomor": 1047602
+            "idnomor": 1047611
+        },
+        {
+            "di": "pig",
+            "tian": "tiger",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:29:03",
+            "periode": "13",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047610
+        },
+        {
+            "di": "dog",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2022-01-04 13:28:12",
+            "periode": "12",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047609
+        },
+        {
+            "di": "pig",
+            "tian": "dog",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:27:23",
+            "periode": "11",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047608
+        },
+        {
+            "di": "dog",
+            "tian": "rooster",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:26:35",
+            "periode": "10",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047607
+        },
+        {
+            "di": "dog",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:51",
+            "periode": "16",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146706
+        },
+        {
+            "di": "snake",
+            "tian": "horse",
+            "result": "di",
+            "tanggal": "2024-07-16 10:55:35",
+            "periode": "15",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146705
+        },
+        {
+            "di": "rat",
+            "tian": "dragon",
+            "result": "di",
+            "tanggal": "2024-07-16 10:54:45",
+            "periode": "14",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146704
+        },
+        {
+            "di": "horse",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2024-07-16 02:17:03",
+            "periode": "13",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146703
+        },
+        {
+            "di": "pig",
+            "tian": "dog",
+            "result": "tian",
+            "tanggal": "2024-07-16 02:14:34",
+            "periode": "11",
+            "hitung": "1",
+            "gamekey": "5",
+            "idnomor": 146702
+        },
+        {
+            "di": "monkey",
+            "tian": "monkey",
+            "result": "tie",
+            "tanggal": "2022-01-04 13:30:02",
+            "periode": "14",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047611
+        },
+        {
+            "di": "pig",
+            "tian": "tiger",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:29:03",
+            "periode": "13",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047610
+        },
+        {
+            "di": "dog",
+            "tian": "pig",
+            "result": "di",
+            "tanggal": "2022-01-04 13:28:12",
+            "periode": "12",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047609
+        },
+        {
+            "di": "pig",
+            "tian": "dog",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:27:23",
+            "periode": "11",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047608
+        },
+        {
+            "di": "dog",
+            "tian": "rooster",
+            "result": "tian",
+            "tanggal": "2022-01-04 13:26:35",
+            "periode": "10",
+            "hitung": "1",
+            "gamekey": "21990",
+            "idnomor": 1047607
         }
-    ],
-    "pagination": {
-        "total_datas": 40315,
-        "current_page": 1,
-        "total_pages": 10
-    }
+    ]
 }

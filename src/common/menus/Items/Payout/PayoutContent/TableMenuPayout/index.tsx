@@ -27,13 +27,13 @@ const TableMenuPayout = ({ data }: IProps) => {
                 <thead>
                     <tr>
                         <th className="text-left">
-                            <LabelTranslate value="bet" />
+                            <LabelTranslate value="bet" className="text-nowrap" />
                         </th>
                         <th>
-                            <LabelTranslate value="limit-bet" />
+                            <LabelTranslate value="limit-bet" className="text-nowrap" />
                         </th>
                         <th>
-                            <LabelTranslate value="payout" />
+                            <LabelTranslate value="payout" className="text-nowrap" />
                         </th>
                     </tr>
                 </thead>
@@ -45,10 +45,10 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     <LabelTranslate
                                         value={item.name}
                                         keyLang={basePcode}
-                                        style={{ textTransform: 'capitalize' }}
+                                        className="text-nowrap text-capitalize"
                                     />
                                 </td>
-                                <td className="text-center text-cyan">
+                                <td className="text-center text-cyan text-nowrap">
                                     {StringHelper.formatCurrency(item.min, currency)} -{' '}
                                     {StringHelper.formatNumber(item.max)}
                                 </td>
@@ -67,7 +67,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                             <LabelTranslate
                                                 value={child.name}
                                                 keyLang={basePcode}
-                                                style={{ textTransform: 'capitalize' }}
+                                                className="text-nowrap text-capitalize"
                                             />
                                         </td>
                                         <td className="text-center text-cyan"></td>

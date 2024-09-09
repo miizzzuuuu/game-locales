@@ -9,7 +9,7 @@ const ButtonMenu = () => {
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="menu" />}
+            label={<LabelTranslate value="menu" option={{ lng: 'en' }} />}
             icon={<SVGIconMenu />}
             onClick={() => dispatch(toggleMenuMain())}
         />

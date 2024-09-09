@@ -1,0 +1,94 @@
+{
+    "data": [
+        {
+            "angka": "19",
+            "tanggal": "2024-09-04 15:02:24",
+            "periode": 27345,
+            "hitung": "1",
+            "gamekey": 27345,
+            "thunder": "[{\"id\":15,\"mtp\":75},{\"id\":2,\"mtp\":25}]",
+            "idnomor": 27347
+        },
+        {
+            "angka": "04",
+            "tanggal": "2024-09-04 15:01:06",
+            "periode": 27344,
+            "hitung": "1",
+            "gamekey": 27344,
+            "thunder": "[{\"id\":20,\"mtp\":25},{\"id\":13,\"mtp\":75},{\"id\":19,\"mtp\":25}]",
+            "idnomor": 27346
+        },
+        {
+            "angka": "15",
+            "tanggal": "2024-09-04 14:59:13",
+            "periode": 27343,
+            "hitung": "1",
+            "gamekey": 27343,
+            "thunder": "[{\"id\":15,\"mtp\":75},{\"id\":9,\"mtp\":75},{\"id\":5,\"mtp\":25}]",
+            "idnomor": 27345
+        },
+        {
+            "angka": "01",
+            "tanggal": "2024-09-04 14:58:02",
+            "periode": 27342,
+            "hitung": "1",
+            "gamekey": 27342,
+            "thunder": "[{\"id\":5,\"mtp\":100},{\"id\":1,\"mtp\":75}]",
+            "idnomor": 27344
+        },
+        {
+            "angka": "08",
+            "tanggal": "2024-09-04 14:56:21",
+            "periode": 27341,
+            "hitung": "1",
+            "gamekey": 27341,
+            "thunder": "[{\"id\":19,\"mtp\":25},{\"id\":1,\"mtp\":25},{\"id\":14,\"mtp\":25}]",
+            "idnomor": 27343
+        },
+        {
+            "angka": "05",
+            "tanggal": "2024-09-04 14:55:05",
+            "periode": 27340,
+            "hitung": "1",
+            "gamekey": 27340,
+            "thunder": "[{\"id\":2,\"mtp\":75},{\"id\":18,\"mtp\":50}]",
+            "idnomor": 27342
+        },
+        {
+            "angka": "10",
+            "tanggal": "2024-09-04 14:53:12",
+            "periode": 27339,
+            "hitung": "1",
+            "gamekey": 27339,
+            "thunder": "[{\"id\":17,\"mtp\":25},{\"id\":18,\"mtp\":25},{\"id\":15,\"mtp\":25}]",
+            "idnomor": 27341
+        },
+        {
+            "angka": "12",
+            "tanggal": "2024-09-04 14:51:46",
+            "periode": 27338,
+            "hitung": "1",
+            "gamekey": 27338,
+            "thunder": "[{\"id\":20,\"mtp\":50},{\"id\":18,\"mtp\":25}]",
+            "idnomor": 27340
+        },
+        {
+            "angka": "05",
+            "tanggal": "2024-09-04 14:49:57",
+            "periode": 27337,
+            "hitung": "1",
+            "gamekey": 27337,
+            "thunder": "[{\"id\":8,\"mtp\":25},{\"id\":1,\"mtp\":25},{\"id\":19,\"mtp\":50}]",
+            "idnomor": 27339
+        },
+        {
+            "angka": "07",
+            "tanggal": "2024-09-04 14:48:38",
+            "periode": 27336,
+            "hitung": "1",
+            "gamekey": 27336,
+            "thunder": "[{\"id\":13,\"mtp\":25},{\"id\":7,\"mtp\":50}]",
+            "idnomor": 27338
+        }
+    ]
+}

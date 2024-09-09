@@ -4,7 +4,7 @@ type Handler = (event: KeyboardEvent) => void;
 
 const isDev = import.meta.env.DEV;
 
-export const useKeyboard = (handler: Handler) => {
+function useKeyboard(handler: Handler) {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (!isDev) {
@@ -20,4 +20,6 @@ export const useKeyboard = (handler: Handler) => {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [handler]);
-};
+}
+
+export { useKeyboard };

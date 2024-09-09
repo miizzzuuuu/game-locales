@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T15:28:10.000Z",
+            "periode": "2689124",
+            "pcode": "m22b",
+            "detail_betting": [
+                {
+                    "tebak": "eitherpair",
+                    "type": "eitherpair",
+                    "taruhan": 5000,
+                    "prize": 6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "tie1",
+                    "type": "tie1",
+                    "taruhan": 5000,
+                    "prize": 216,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "playerpair",
+                    "type": "playerpair",
+                    "taruhan": 5000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2689124,
+                "tanggal": "2024-09-04T15:28:28.000Z",
+                "periode": 2,
+                "hitung": "1",
+                "banker": "3s-2s-x",
+                "player": "9h-Js-x",
+                "result": "player",
+                "gamekey": "48508",
+                "value": 9,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 9,
+                "bankerValue": 5
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        }
+    ]
+}

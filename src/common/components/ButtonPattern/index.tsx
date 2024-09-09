@@ -12,7 +12,7 @@ const ButtonPattern = () => {
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="pattern" />}
+            label={<LabelTranslate value="pattern" option={{ lng: 'en' }} />}
             icon={<SVGIconPattern strokeColor={color} />}
             borderColor={!showPatternUI ? undefined : '#00C3D8'}
             onClick={() => dispatch(togglePatternUI())}

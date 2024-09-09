@@ -8,21 +8,20 @@ import thCommon from '../../locales/th/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
-// spesific game
-import enP6 from '../../locales/en/p6.json';
-import idP6 from '../../locales/id/p6.json';
-import koP6 from '../../locales/ko/p6.json';
-import thP6 from '../../locales/th/p6.json';
-import vnP6 from '../../locales/vn/p6.json';
-import zhP6 from '../../locales/zh/p6.json';
+import enFeatures from '../../locales/en/features.json';
+import idFeatures from '../../locales/id/features.json';
+import koFeatures from '../../locales/ko/features.json';
+import thFeatures from '../../locales/th/features.json';
+import vnFeatures from '../../locales/vn/features.json';
+import zhFeatures from '../../locales/zh/features.json';
 
 // spesific game
-import enm23 from '../../locales/en/m23.json';
-import idm23 from '../../locales/id/m23.json';
-import kom23 from '../../locales/ko/m23.json';
-import thm23 from '../../locales/th/m23.json';
-import vnm23 from '../../locales/vn/m23.json';
-import zhm23 from '../../locales/zh/m23.json';
+import enM23 from '../../locales/en/m23.json';
+import idM23 from '../../locales/id/m23.json';
+import koM23 from '../../locales/ko/m23.json';
+import thM23 from '../../locales/th/m23.json';
+import vnM23 from '../../locales/vn/m23.json';
+import zhM23 from '../../locales/zh/m23.json';
 
 // how to play
 import enHTP from '../../locales/en/htp.json';
@@ -34,22 +33,22 @@ import zhHTP from '../../locales/zh/htp.json';
 
 const resources: Resource = {
     en: {
-        translation: { common: enCommon, p6: enP6, m23: enm23, htp: enHTP },
+        translation: { common: { ...enCommon, ...enFeatures }, m23: enM23, htp: enHTP },
     },
     id: {
-        translation: { common: idCommon, p6: idP6, m23: idm23, htp: idHTP },
+        translation: { common: { ...idCommon, ...idFeatures }, m23: idM23, htp: idHTP },
     },
     ko: {
-        translation: { common: koCommon, p6: koP6, m23: kom23, htp: koHTP },
+        translation: { common: { ...koCommon, ...koFeatures }, m23: koM23, htp: koHTP },
     },
     th: {
-        translation: { common: thCommon, p6: thP6, m23: thm23, htp: thHTP },
+        translation: { common: { ...thCommon, ...thFeatures }, m23: thM23, htp: thHTP },
     },
     vn: {
-        translation: { common: vnCommon, p6: vnP6, m23: vnm23, htp: vnHTP },
+        translation: { common: { ...vnCommon, ...vnFeatures }, m23: vnM23, htp: vnHTP },
     },
     zh: {
-        translation: { common: zhCommon, p6: zhP6, m23: zhm23, htp: zhHTP },
+        translation: { common: { ...zhCommon, ...zhFeatures }, m23: zhM23, htp: zhHTP },
     },
 };
 

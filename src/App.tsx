@@ -15,7 +15,7 @@ import { useFetchTimer } from './common/hooks/useFetchTimer';
 import { useLanguage } from './common/hooks/useLanguage';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
-import useFullscreen from './common/hooks/useFullscreen';
+import { useFullscreen } from './common/hooks/useFullscreen';
 import MiniHowToPlay from './common/components/MiniHowToPlay';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { Features } from './common/utils/Features';

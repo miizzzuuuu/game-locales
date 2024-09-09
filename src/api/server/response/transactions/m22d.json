@@ -1,0 +1,45 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-04T15:42:06.000Z",
+            "periode": "1070999",
+            "pcode": "m22d",
+            "detail_betting": [
+                {
+                    "tebak": "player",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "bankerpair",
+                    "type": "bankerpair",
+                    "taruhan": 1000,
+                    "prize": 12,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1070999,
+                "tanggal": "2024-09-04T15:42:49.000Z",
+                "periode": 73,
+                "hitung": "1",
+                "banker": "Td-Qs-6d",
+                "player": "5d-6d-7c",
+                "result": "player",
+                "gamekey": "15701",
+                "value": 8,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 8,
+                "bankerValue": 6
+            },
+            "total_debit": 6000,
+            "total_credit": 10000,
+            "total_transaction": 4000
+        }
+    ]
+}

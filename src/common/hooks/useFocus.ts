@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { selectFocus, setFocus } from '../../store/slice/windowSlice';
 
-export const useFocus = () => {
+function useFocus() {
     const dispatch = useAppDispatch();
 
     const isFocus = useAppSelector(selectFocus);
@@ -26,4 +26,6 @@ export const useFocus = () => {
     }, [dispatch]);
 
     return { isFocus };
-};
+}
+
+export { useFocus };

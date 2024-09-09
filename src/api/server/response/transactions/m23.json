@@ -702,10 +702,5 @@
             "total_credit": 822500,
             "total_transaction": 787500
         }
-    ],
-    "pagination": {
-        "total_datas": 9,
-        "current_page": 1,
-        "total_pages": 1
-    }
+    ]
 }

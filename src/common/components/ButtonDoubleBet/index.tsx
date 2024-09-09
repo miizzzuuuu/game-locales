@@ -89,7 +89,7 @@ const ButtonDoubleBet = ({ show, styles }: IProps) => {
     return (
         <ButtonAction
             show={show}
-            label={<LabelTranslate value="double" />}
+            label={<LabelTranslate value="double" option={{ lng: 'en' }} />}
             icon={<SVGIconDoubleBet />}
             style={styles}
             disabled={!isActive}

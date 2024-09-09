@@ -1,84 +1,84 @@
 {
     "data": [
         {
-            "angka": "08",
-            "tanggal": "2022-01-04 13:29:04",
-            "periode": 1610981,
+            "angka": "13",
+            "tanggal": "2024-09-06 20:33:02",
+            "periode": 2498956,
             "hitung": "1",
-            "gamekey": 1610981,
-            "idnomor": 912492
-        },
-        {
-            "angka": "10",
-            "tanggal": "2022-01-04 13:27:45",
-            "periode": 1610980,
-            "hitung": "1",
-            "gamekey": 1610980,
-            "idnomor": 912491
-        },
-        {
-            "angka": "07",
-            "tanggal": "2022-01-04 13:26:29",
-            "periode": 1610979,
-            "hitung": "1",
-            "gamekey": 1610979,
-            "idnomor": 912490
+            "gamekey": 2498956,
+            "idnomor": 1800467
         },
         {
             "angka": "06",
-            "tanggal": "2022-01-04 13:25:08",
-            "periode": 1610978,
+            "tanggal": "2024-09-06 20:31:38",
+            "periode": 2498955,
             "hitung": "1",
-            "gamekey": 1610978,
-            "idnomor": 912489
+            "gamekey": 2498955,
+            "idnomor": 1800466
         },
         {
-            "angka": "05",
-            "tanggal": "2022-01-04 13:23:47",
-            "periode": 1610977,
+            "angka": "19",
+            "tanggal": "2024-09-06 20:30:11",
+            "periode": 2498954,
             "hitung": "1",
-            "gamekey": 1610977,
-            "idnomor": 912488
+            "gamekey": 2498954,
+            "idnomor": 1800465
         },
         {
-            "angka": "12",
-            "tanggal": "2022-01-04 13:22:19",
-            "periode": 1610976,
+            "angka": "16",
+            "tanggal": "2024-09-06 20:28:27",
+            "periode": 2498953,
             "hitung": "1",
-            "gamekey": 1610976,
-            "idnomor": 912487
+            "gamekey": 2498953,
+            "idnomor": 1800464
         },
         {
-            "angka": "23",
-            "tanggal": "2022-01-04 13:20:58",
-            "periode": 1610975,
+            "angka": "22",
+            "tanggal": "2024-09-06 20:26:53",
+            "periode": 2498952,
             "hitung": "1",
-            "gamekey": 1610975,
-            "idnomor": 912486
+            "gamekey": 2498952,
+            "idnomor": 1800463
+        },
+        {
+            "angka": "21",
+            "tanggal": "2024-09-06 20:25:08",
+            "periode": 2498951,
+            "hitung": "1",
+            "gamekey": 2498951,
+            "idnomor": 1800462
+        },
+        {
+            "angka": "13",
+            "tanggal": "2024-09-06 20:23:44",
+            "periode": 2498950,
+            "hitung": "1",
+            "gamekey": 2498950,
+            "idnomor": 1800461
         },
         {
             "angka": "03",
-            "tanggal": "2022-01-04 13:19:18",
-            "periode": 1610974,
+            "tanggal": "2024-09-06 20:22:10",
+            "periode": 2498949,
             "hitung": "1",
-            "gamekey": 1610974,
-            "idnomor": 912485
+            "gamekey": 2498949,
+            "idnomor": 1800460
         },
         {
-            "angka": "14",
-            "tanggal": "2022-01-04 13:17:41",
-            "periode": 1610973,
+            "angka": "11",
+            "tanggal": "2024-09-06 20:20:47",
+            "periode": 2498948,
             "hitung": "1",
-            "gamekey": 1610973,
-            "idnomor": 912484
+            "gamekey": 2498948,
+            "idnomor": 1800459
         },
         {
-            "angka": "17",
-            "tanggal": "2022-01-04 13:16:09",
-            "periode": 1610972,
+            "angka": "11",
+            "tanggal": "2024-09-06 20:19:01",
+            "periode": 2498947,
             "hitung": "1",
-            "gamekey": 1610972,
-            "idnomor": 912483
+            "gamekey": 2498947,
+            "idnomor": 1800458
         }
     ]
 }

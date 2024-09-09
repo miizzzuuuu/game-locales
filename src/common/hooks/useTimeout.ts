@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect';
 
-export function useTimeout(callback: () => void, delay: number | null): void {
+function useTimeout(callback: () => void, delay: number | null): void {
     const savedCallback = useRef(callback);
 
     // Remember the latest callback if it changes.
@@ -26,3 +26,5 @@ export function useTimeout(callback: () => void, delay: number | null): void {
         };
     }, [delay]);
 }
+
+export { useTimeout };

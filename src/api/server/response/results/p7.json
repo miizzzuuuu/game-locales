@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "angka": "12",
+            "tanggal": "2024-09-04 14:49:08",
+            "periode": 2095328,
+            "hitung": "1",
+            "gamekey": 2095328,
+            "idnomor": 1285396
+        },
+        {
+            "angka": "14",
+            "tanggal": "2024-09-04 14:46:47",
+            "periode": 2095327,
+            "hitung": "1",
+            "gamekey": 2095327,
+            "idnomor": 1285395
+        },
+        {
+            "angka": "27",
+            "tanggal": "2024-09-04 14:44:09",
+            "periode": 2095326,
+            "hitung": "1",
+            "gamekey": 2095326,
+            "idnomor": 1285394
+        },
+        {
+            "angka": "03",
+            "tanggal": "2024-09-04 14:41:51",
+            "periode": 2095325,
+            "hitung": "1",
+            "gamekey": 2095325,
+            "idnomor": 1285393
+        },
+        {
+            "angka": "12",
+            "tanggal": "2024-09-04 14:39:33",
+            "periode": 2095324,
+            "hitung": "1",
+            "gamekey": 2095324,
+            "idnomor": 1285392
+        },
+        {
+            "angka": "15",
+            "tanggal": "2024-09-04 14:37:08",
+            "periode": 2095323,
+            "hitung": "1",
+            "gamekey": 2095323,
+            "idnomor": 1285391
+        },
+        {
+            "angka": "21",
+            "tanggal": "2024-09-04 14:34:54",
+            "periode": 2095322,
+            "hitung": "1",
+            "gamekey": 2095322,
+            "idnomor": 1285390
+        },
+        {
+            "angka": "03",
+            "tanggal": "2024-09-04 14:32:45",
+            "periode": 2095321,
+            "hitung": "1",
+            "gamekey": 2095321,
+            "idnomor": 1285389
+        },
+        {
+            "angka": "09",
+            "tanggal": "2024-09-04 14:30:31",
+            "periode": 2095320,
+            "hitung": "1",
+            "gamekey": 2095320,
+            "idnomor": 1285388
+        },
+        {
+            "angka": "21",
+            "tanggal": "2024-09-04 14:28:14",
+            "periode": 2095319,
+            "hitung": "1",
+            "gamekey": 2095319,
+            "idnomor": 1285387
+        }
+    ]
+}
