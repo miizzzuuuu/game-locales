@@ -69,7 +69,7 @@ export type ResultM8Fever = ResultM8 & {
     };
 };
 
-export type ResultM11 = {
+export type ResultM11 = CommonResult & {
     angka: string; // '1,2,3' 1 = red, 2 = white, 3 = jp
 };
 
