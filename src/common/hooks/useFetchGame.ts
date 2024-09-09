@@ -22,7 +22,9 @@ function useFetchGame() {
                 if (!ignore) {
                     dispatch(setGame(data));
 
-                    await fetchResultHistory(dispatch);
+                    const gameSet = data.shoePeriode.split('-')[0];
+
+                    await fetchResultHistory(dispatch, gameSet);
 
                     setFinish(true);
                     LoadingHelper.update(10, 'Load settings completed');

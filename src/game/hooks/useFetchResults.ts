@@ -3,6 +3,7 @@ import { useAppDispatch } from '../../store/hooks';
 import { getResultHistory } from '../../services/api/results';
 import { Pagination } from '../../types';
 import { AppDispatch } from '../../store/store';
+import { HistoryItem, setHistory } from '../../store/slice/historySlice';
 
 function useFetchResults() {
     const dispatch = useAppDispatch();
@@ -55,14 +56,14 @@ export const fetchResultHistory = async (
         const perPage: number = 10;
 
         const data = await getResultHistory<{
-            data: any; // change to type data your game
+            data: HistoryItem[]; // change to type data your game
             pagination: Pagination;
         }>(page, perPage, gameSet);
 
         console.log(data);
 
         // run action to save history result to redux
-        // dispatch(setHistory(data));
+        dispatch(setHistory(data.data));
     } catch (error) {
         console.log('get history error', error);
     }

@@ -63,46 +63,130 @@ export default class M22 extends BaseV2Roadmap {
                 ele = (
                     <>
                         <rect
-                            className={alternatingStyleClass || ""}
-
-                            x={baseStarting + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={baseStarting + (spacing * this.currentRow!)} width={baseStarting * 2} height={baseStarting * 2} rx={baseStarting} fill={this.blueColor} />
+                            className={alternatingStyleClass || ''}
+                            x={
+                                baseStarting +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + spacing * this.currentRow!}
+                            width={baseStarting * 2}
+                            height={baseStarting * 2}
+                            rx={baseStarting}
+                            fill={this.blueColor}
+                        />
                         <text
-                            className={alternatingStyleClass || ""}
-
-                            x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
-                            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
-                            fill="white">B</text>
-                        {
-                            GameHelper.pcode == "m22" ? <>
-                                {bankerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-                                {playerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+                            className={alternatingStyleClass || ''}
+                            x={
+                                (baseStarting + baseStarting * 2) / 1.95 +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + baseStarting * 2 - 3 + spacing * this.currentRow!}
+                            style={{ fontFamily: 'Manrope', fontWeight: 'bold', fontSize: 7 }}
+                            fill="white"
+                        >
+                            B
+                        </text>
+                        {GameHelper.pcode == 'm22' ? (
+                            <>
+                                {bankerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            6.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={6.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.redColor}
+                                    />
+                                )}
+                                {playerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            14.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={14.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.blueColor}
+                                    />
+                                )}
                             </>
-                                : <></>
-                        }
-
-
+                        ) : (
+                            <></>
+                        )}
                     </>
                 );
             } else if (item.result === 'player') {
                 ele = (
                     <>
                         <rect
-                            className={alternatingStyleClass || ""}
-
-                            x={baseStarting + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={baseStarting + (spacing * this.currentRow!)} width={baseStarting * 2} height={baseStarting * 2} rx={baseStarting} fill={this.redColor} />
+                            className={alternatingStyleClass || ''}
+                            x={
+                                baseStarting +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + spacing * this.currentRow!}
+                            width={baseStarting * 2}
+                            height={baseStarting * 2}
+                            rx={baseStarting}
+                            fill={this.redColor}
+                        />
                         <text
-                            className={alternatingStyleClass || ""}
-
-                            x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
-                            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
-                            fill="white">D</text>
-                        {
-                            GameHelper.pcode == "m22" ? <>
-                                {bankerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-                                {playerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+                            className={alternatingStyleClass || ''}
+                            x={
+                                (baseStarting + baseStarting * 2) / 1.95 +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + baseStarting * 2 - 3 + spacing * this.currentRow!}
+                            style={{ fontFamily: 'Manrope', fontWeight: 'bold', fontSize: 7 }}
+                            fill="white"
+                        >
+                            D
+                        </text>
+                        {GameHelper.pcode == 'm22' ? (
+                            <>
+                                {bankerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            6.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={6.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.redColor}
+                                    />
+                                )}
+                                {playerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            14.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={14.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.blueColor}
+                                    />
+                                )}
                             </>
-                                : <></>
-                        }
+                        ) : (
+                            <></>
+                        )}
                     </>
                 );
             } else {
@@ -110,23 +194,66 @@ export default class M22 extends BaseV2Roadmap {
                 ele = (
                     <>
                         <rect
-                            className={alternatingStyleClass || ""}
-
-                            x={baseStarting + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={baseStarting + (spacing * this.currentRow!)} width={baseStarting * 2} height={baseStarting * 2} rx={baseStarting} fill={this.greenColor} />
+                            className={alternatingStyleClass || ''}
+                            x={
+                                baseStarting +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + spacing * this.currentRow!}
+                            width={baseStarting * 2}
+                            height={baseStarting * 2}
+                            rx={baseStarting}
+                            fill={this.greenColor}
+                        />
                         <text
-                            className={alternatingStyleClass || ""}
+                            className={alternatingStyleClass || ''}
+                            x={
+                                (baseStarting + baseStarting * 2) / 1.95 +
+                                spacing * this.currentCol! -
+                                (this.firstDisplayedCol || 0) * spacing
+                            }
+                            y={baseStarting + baseStarting * 2 - 3 + spacing * this.currentRow!}
+                            style={{ fontFamily: 'Manrope', fontWeight: 'bold', fontSize: 7 }}
+                            fill="white"
+                        >
+                            T
+                        </text>
 
-                            x={(baseStarting + baseStarting * 2) / 1.95 + (spacing * this.currentCol!) - ((this.firstDisplayedCol || 0) * spacing)} y={(baseStarting + baseStarting * 2) - 3 + (spacing * this.currentRow!)}
-                            style={{ fontFamily: "Manrope", fontWeight: "bold", fontSize: 7 }}
-                            fill="white">T</text>
-
-                        {
-                            GameHelper.pcode == "m23b" ? <>
-                                {bankerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={6.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (this.currentRow! * spacing)} r="1.5" fill={this.redColor} />}
-                                {playerPair && <circle stroke="white" className={alternatingStyleClass || ""} cx={14.5 + (this.currentCol! * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (this.currentRow! * spacing)} r="1.5" fill={this.blueColor} />}
+                        {GameHelper.pcode == 'm23b' ? (
+                            <>
+                                {bankerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            6.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={6.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.redColor}
+                                    />
+                                )}
+                                {playerPair && (
+                                    <circle
+                                        stroke="white"
+                                        className={alternatingStyleClass || ''}
+                                        cx={
+                                            14.5 +
+                                            this.currentCol! * spacing -
+                                            (this.firstDisplayedCol || 0) * spacing
+                                        }
+                                        cy={14.5 + this.currentRow! * spacing}
+                                        r="1.5"
+                                        fill={this.blueColor}
+                                    />
+                                )}
                             </>
-                                : <></>
-                        }
+                        ) : (
+                            <></>
+                        )}
                     </>
                 );
             }
@@ -183,11 +310,9 @@ export default class M22 extends BaseV2Roadmap {
             }
         });
 
-
         // console.log('roadmapTypes: ' + this.roadmapTypes![0].filter((x) => x));
         // console.log('roadmapTypes length: ' + this.roadmapTypes![0].filter((x) => x).length);
         // console.log('firstDisplayCol: ' + this.firstDisplayedCol);
-
 
         // Banker & Player Pairs
         this.resetDisplayPointer();
@@ -196,26 +321,56 @@ export default class M22 extends BaseV2Roadmap {
             try {
                 this.simpleBigRoadPairs!.forEach((item, idx) => {
                     const pos = this.bigRoadSequence![idx];
-                    if (this.bigRoadSequence!.length && Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >= (this.props.totalColumns || 24))
-                        this.firstDisplayedCol = Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) - (this.props.totalColumns || 24) + 1;
+                    if (
+                        this.bigRoadSequence!.length &&
+                        Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >=
+                            (this.props.totalColumns || 24)
+                    )
+                        this.firstDisplayedCol =
+                            Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) -
+                            (this.props.totalColumns || 24) +
+                            1;
 
                     if (this.roadmapPairsDisplay![0].length - 1 < pos[1])
                         for (const b in this.roadmapPairsDisplay) // @ts-ignore
                             this.roadmapPairsDisplay[b].push(...[]);
 
-                    const alternatingStyle = checkLastIdx(
-                        this.simpleBigRoadPairs!,
-                        idx,
-                    ) ? this.alternatingStyle : '';
+                    const alternatingStyle = checkLastIdx(this.simpleBigRoadPairs!, idx)
+                        ? this.alternatingStyle
+                        : '';
                     const spacing = 14.1176;
 
                     this.roadmapPairsDisplay![pos[0]][pos[1]] = [
                         <>
-                            {(item === 'D' || item === 'B') &&
-                                <circle stroke="white" className={alternatingStyle || ""} cx={6.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={6.5 + (pos[0] * spacing)} r="1.5" fill={this.redColor} />}
-                            {(item === 'D' || item === 'P') &&
-                                <circle stroke="white" className={alternatingStyle || ""} cx={14.5 + (pos[1] * spacing) - ((this.firstDisplayedCol || 0) * spacing)} cy={14.5 + (pos[0] * spacing)} r="1.5" fill={this.blueColor} />}
-                        </>
+                            {(item === 'D' || item === 'B') && (
+                                <circle
+                                    stroke="white"
+                                    className={alternatingStyle || ''}
+                                    cx={
+                                        6.5 +
+                                        pos[1] * spacing -
+                                        (this.firstDisplayedCol || 0) * spacing
+                                    }
+                                    cy={6.5 + pos[0] * spacing}
+                                    r="1.5"
+                                    fill={this.redColor}
+                                />
+                            )}
+                            {(item === 'D' || item === 'P') && (
+                                <circle
+                                    stroke="white"
+                                    className={alternatingStyle || ''}
+                                    cx={
+                                        14.5 +
+                                        pos[1] * spacing -
+                                        (this.firstDisplayedCol || 0) * spacing
+                                    }
+                                    cy={14.5 + pos[0] * spacing}
+                                    r="1.5"
+                                    fill={this.blueColor}
+                                />
+                            )}
+                        </>,
                     ];
                 });
             } catch (err) {
@@ -236,12 +391,12 @@ export default class M22 extends BaseV2Roadmap {
                     {...{ ...props }}
                     r="2.70455"
                     stroke={this.redColor}
-                    stroke-width="0.954546"
+                    strokeWidth="0.954546"
                 />
             ),
             (props: any) => <circle {...{ ...props }} r="3.18182" fill={this.redColor} />,
             (props: any) => (
-                <path {...{ ...props }} stroke={this.redColor} stroke-width="0.954546" />
+                <path {...{ ...props }} stroke={this.redColor} strokeWidth="0.954546" />
             ),
         ];
         const blueElements = [
@@ -507,123 +662,201 @@ export default class M22 extends BaseV2Roadmap {
         const startYCoach = 79.6469;
 
         switch (this.props.type) {
-            case "big-eye-road":
+            case 'big-eye-road':
                 startingX = 7.05873;
-                redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.redColor} {...{ ...props }} ></circle>;
-                blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.blueColor}  {...{ ...props }}></circle>;
+                redElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.redColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
+                blueElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.blueColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
 
-                redBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.redColor} {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
-                blueBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.blueColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
+                redBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.redColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                blueBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.blueColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
                 startingCol = 1;
                 break;
-            case "small-road":
+            case 'small-road':
                 startingX = 7.05873 * (this.props.totalColumns! + 2) + 7.05873;
-                if (this.props.full == this.props.type)
-                    startingX = 7.05873;
+                if (this.props.full == this.props.type) startingX = 7.05873;
 
-                redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} ></circle>;
-                blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} ></circle>;
+                redElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.redColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
+                blueElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.blueColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
 
-                redBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}  ></circle>;
-                blueBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
+                redBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.redColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                blueBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.blueColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
                 startingCol = 2;
                 break;
-            case "cockroach-road":
-                startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + (6.05873);
-                if (this.props.full == this.props.type)
-                    startingX = 7.05873;
+            case 'cockroach-road':
+                startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + 6.05873;
+                if (this.props.full == this.props.type) startingX = 7.05873;
                 const startXCoach = startingX;
-                redElement = (props) => <path
-                    stroke={this.redColor}
-                    strokeLinecap="round"
-                    strokeWidth="1.2"
-                    d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                ></path>;
-                blueElement = (props) => <path
-                    stroke={this.blueColor}
-                    strokeLinecap="round"
-                    strokeWidth="1.2"
-                    d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                ></path>;
+                redElement = (props) => (
+                    <path
+                        stroke={this.redColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                    ></path>
+                );
+                blueElement = (props) => (
+                    <path
+                        stroke={this.blueColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                    ></path>
+                );
 
-                redBlinkElement = (props) => <path
-                    stroke={this.redColor}
-                    strokeLinecap="round"
-                    strokeWidth="1.2"
-                    d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                    {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}
-                ></path>;
-                blueBlinkElement = (props) => <path
-                    stroke={this.blueColor}
-                    strokeLinecap="round"
-                    strokeWidth="1.2"
-                    d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                    {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}
-                ></path>;
+                redBlinkElement = (props) => (
+                    <path
+                        stroke={this.redColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></path>
+                );
+                blueBlinkElement = (props) => (
+                    <path
+                        stroke={this.blueColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></path>
+                );
 
                 startingCol = 3;
                 break;
-            default: break;
+            default:
+                break;
         }
 
         let a = 0;
 
-        let lengthLeft = 0, lengthRight = 0;
+        let lengthLeft = 0,
+            lengthRight = 0;
 
         switch (this.props.type) {
-            case "big-eye-road":
-            case "small-road":
-            case "cockroach-road":
+            case 'big-eye-road':
+            case 'small-road':
+            case 'cockroach-road':
                 this.currentRow = 1;
                 this.currentCol = startingCol!; //1 //for big-eye-road
 
-
                 for (a = 0; a < 9; a++)
-                    this.roadmapDisplay![a] = "123456789".split("").map(
-                        item => item ? null : null
-                    );
+                    this.roadmapDisplay![a] = '123456789'
+                        .split('')
+                        .map((item) => (item ? null : null));
 
                 //Evaluate the same column, first column
                 if (this.roadmapTypes![1][this.currentCol]) {
                     for (a = 1; a < this.roadmapTypes!.length; a++) {
-                        if (!this.roadmapTypes![a][this.currentCol])
-                            break;
+                        if (!this.roadmapTypes![a][this.currentCol]) break;
 
                         //Evaluate the same column
                         //startingCol = 1 for big-eye-road
-                        if (this.roadmapTypes![a][this.currentCol - startingCol!] ===
-                            this.roadmapTypes![a - 1][this.currentCol - startingCol!])
+                        if (
+                            this.roadmapTypes![a][this.currentCol - startingCol!] ===
+                            this.roadmapTypes![a - 1][this.currentCol - startingCol!]
+                        )
                             // @ts-ignore
-                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
+                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, 'red');
                         // @ts-ignore
-                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
+                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, 'blue');
                     }
                 }
 
                 this.currentRow = 0;
                 this.currentCol++;
 
-                for (; this.currentCol < this.roadmapTypes![0].length;) {
+                for (; this.currentCol < this.roadmapTypes![0].length; ) {
                     //Evaluate the next column
                     if (this.roadmapTypes![0][this.currentCol]) {
                         //Count filled cells
-                        lengthLeft = 0; lengthRight = 0;
+                        lengthLeft = 0;
+                        lengthRight = 0;
 
                         //startingCol = 1 for big-eye-road
                         for (a = 0; a < this.roadmapTypes!.length; a++) {
                             if (this.roadmapTypes![a][this.currentCol - startingCol! - 1])
                                 lengthLeft++;
-                            if (this.roadmapTypes![a][this.currentCol - 1])
-                                lengthRight++;
+                            if (this.roadmapTypes![a][this.currentCol - 1]) lengthRight++;
                         }
 
                         // console.log("left:" + lengthLeft, "right:" + lengthRight);
                         //Compare column lengths
                         if (lengthLeft === lengthRight)
                             // @ts-ignore
-                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
+                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, 'red');
                         // @ts-ignore
-                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
+                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, 'blue');
                     }
 
                     this.currentRow++;
@@ -636,12 +869,27 @@ export default class M22 extends BaseV2Roadmap {
                             //Checks empty cell
                             if (this.roadmapTypes![this.currentRow][this.currentCol]) {
                                 //Checks adjacent cells
-                                if (this.roadmapTypes![this.currentRow][this.currentCol - startingCol!] === //1
-                                    this.roadmapTypes![this.currentRow - 1][this.currentCol - startingCol!])
+                                if (
+                                    this.roadmapTypes![this.currentRow][
+                                        this.currentCol - startingCol!
+                                    ] === //1
+                                    this.roadmapTypes![this.currentRow - 1][
+                                        this.currentCol - startingCol!
+                                    ]
+                                )
                                     // @ts-ignore
-                                    this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
-                                // @ts-ignore 
-                                else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
+                                    this.addDisplayTileLegacy(
+                                        this.roadmapDisplay!,
+                                        redElement!,
+                                        'red',
+                                    );
+                                // @ts-ignore
+                                else
+                                    this.addDisplayTileLegacy(
+                                        this.roadmapDisplay!,
+                                        blueElement!,
+                                        'blue',
+                                    );
                             } else break;
                         }
 
@@ -650,16 +898,19 @@ export default class M22 extends BaseV2Roadmap {
                 }
 
                 // console.log("cR cC", this.currentDisplayRow, this.currentDisplayCol);
-                if (this.props.historyBlink &&
-                    this.simpleBigRoad![this.simpleBigRoad!.length - 1] !== "t")
-                    if (this.currentType === "red")
-                        // @ts-ignore 
-                        this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] = redBlinkElement!;
-                    // @ts-ignore 
-                    else this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] = blueBlinkElement!;
+                if (
+                    this.props.historyBlink &&
+                    this.simpleBigRoad![this.simpleBigRoad!.length - 1] !== 't'
+                )
+                    if (this.currentType === 'red')
+                        // @ts-ignore
+                        this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            redBlinkElement!;
+                    // @ts-ignore
+                    else
+                        this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            blueBlinkElement!;
                 break;
-
-
 
             case 'predictions':
                 this.processRenderPredictions();
