@@ -5,6 +5,7 @@ import resultsP7B from './response/results/p7b.json';
 import resultsP7C from './response/results/p7c.json';
 import resultsP7D from './response/results/p7d.json';
 import resultsP7E from './response/results/p7e.json';
+import resultsP7G from './response/results/p7g.json';
 import resultsP9 from './response/results/p9.json';
 import resultsP9B from './response/results/p9b.json';
 import resultsP12 from './response/results/p12.json';
@@ -39,6 +40,7 @@ const resultData: Record<string, { data: any[] }> = {
     p7c: resultsP7C,
     p7d: resultsP7D,
     p7e: resultsP7E,
+    p7g: resultsP7G,
     p9: resultsP9,
     p9b: resultsP9B,
     p12: resultsP12,

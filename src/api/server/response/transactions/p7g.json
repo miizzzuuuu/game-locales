@@ -1,0 +1,307 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-09-10T09:22:07.000Z",
+            "periode": "1068412",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "red",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "00",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 36,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "11",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 36,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068412,
+                "tanggal": "2024-09-10T09:22:49.000Z",
+                "periode": 1068412,
+                "hitung": "1",
+                "gamekey": "1068412",
+                "angka": "18"
+            },
+            "total_debit": 20000,
+            "total_credit": 0,
+            "total_transaction": -20000
+        },
+        {
+            "tglbel": "2024-09-10T08:16:23.000Z",
+            "periode": "1068352",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "3rd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068352,
+                "tanggal": "2024-09-10T08:17:25.000Z",
+                "periode": 1068352,
+                "hitung": "1",
+                "gamekey": "1068352",
+                "angka": "02"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-10T08:13:28.000Z",
+            "periode": "1068349",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "3rd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068349,
+                "tanggal": "2024-09-10T08:14:06.000Z",
+                "periode": 1068349,
+                "hitung": "1",
+                "gamekey": "1068349",
+                "angka": "23"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-10T08:12:23.000Z",
+            "periode": "1068348",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "3rd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068348,
+                "tanggal": "2024-09-10T08:13:01.000Z",
+                "periode": 1068348,
+                "hitung": "1",
+                "gamekey": "1068348",
+                "angka": "33"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-10T08:11:18.000Z",
+            "periode": "1068347",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "3rd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068347,
+                "tanggal": "2024-09-10T08:11:55.000Z",
+                "periode": 1068347,
+                "hitung": "1",
+                "gamekey": "1068347",
+                "angka": "10"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-10T08:10:11.000Z",
+            "periode": "1068346",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "3rd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068346,
+                "tanggal": "2024-09-10T08:10:50.000Z",
+                "periode": 1068346,
+                "hitung": "1",
+                "gamekey": "1068346",
+                "angka": "07"
+            },
+            "total_debit": 15000,
+            "total_credit": 0,
+            "total_transaction": -15000
+        },
+        {
+            "tglbel": "2024-09-10T08:09:04.000Z",
+            "periode": "1068345",
+            "pcode": "p7g",
+            "detail_betting": [
+                {
+                    "tebak": "2nd 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                },
+                {
+                    "tebak": "1st 12",
+                    "type": "n12",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 0
+                }
+            ],
+            "detail_result": {
+                "idnomor": 1068345,
+                "tanggal": "2024-09-10T08:09:43.000Z",
+                "periode": 1068345,
+                "hitung": "1",
+                "gamekey": "1068345",
+                "angka": "25"
+            },
+            "total_debit": 10000,
+            "total_credit": 0,
+            "total_transaction": -10000
+        },
+        {
+            "tglbel": "2024-09-04T12:47:21.000Z",
+            "periode": "1061109",
+            "pcode": "p7g",
+            "detail_betting": [],
+            "detail_result": [],
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-03T02:52:03.000Z",
+            "periode": "1059378",
+            "pcode": "p7g",
+            "detail_betting": [],
+            "detail_result": [],
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        },
+        {
+            "tglbel": "2024-09-03T02:50:56.000Z",
+            "periode": "1059377",
+            "pcode": "p7g",
+            "detail_betting": [],
+            "detail_result": [],
+            "total_debit": 0,
+            "total_credit": 0,
+            "total_transaction": 0
+        }
+    ]
+}

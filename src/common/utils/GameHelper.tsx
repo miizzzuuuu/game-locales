@@ -117,6 +117,7 @@ export class GameHelper {
         p7d: 'Europe Roulette',
         p7e: 'Soccer Roulette',
         p7f: 'Bounce Roulette',
+        p7g: 'EU Roulette 2',
         p9: '12D',
         p9b: '12D Thunder',
         p12: 'Sicbo[Dice]',

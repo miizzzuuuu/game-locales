@@ -5,6 +5,7 @@ import transactionsP7B from './response/transactions/p7b.json';
 import transactionsP7C from './response/transactions/p7c.json';
 import transactionsP7D from './response/transactions/p7d.json';
 import transactionsP7E from './response/transactions/p7e.json';
+import transactionsP7G from './response/transactions/p7g.json';
 import transactionsP9 from './response/transactions/p9.json';
 import transactionsP9B from './response/transactions/p9b.json';
 import transactionsP12 from './response/transactions/p12.json';
@@ -37,6 +38,7 @@ const transactionData: Record<string, object> = {
     p7c: transactionsP7C,
     p7d: transactionsP7D,
     p7e: transactionsP7E,
+    p7g: transactionsP7G,
     p9: transactionsP9,
     p9b: transactionsP9B,
     p12: transactionsP12,
