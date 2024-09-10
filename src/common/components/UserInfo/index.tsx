@@ -13,7 +13,7 @@ const UserInfo = ({ label, labelSecond, value, isRight }: IProps) => {
 
     return (
         <div
-            className={`${styles['user-info']}${deviceClassName}${isRight ? ` ${styles.right}` : ''}`}
+            className={`${styles['user-info']}${deviceClassName} ${isRight ? styles.right : styles.left}`}
         >
             <div className={styles['label-wrapper']}>
                 <span className={styles.label}>{label}</span>

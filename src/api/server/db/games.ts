@@ -180,7 +180,7 @@ export const games = [
     },
     {
         name: 'Roulette G',
-        displayName: 'Europe Roulette',
+        displayName: 'Europe Roulette 2',
         periode: 985143,
         pcode: 'p7g',
         stream: 'https://eu.idnstreams.com/?app=HDMI&name=T1_720P',
