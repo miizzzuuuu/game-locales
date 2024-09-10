@@ -7,10 +7,14 @@
 
     &.right {
         padding-right: 0.8rem;
-        align-items: flex-end;
+        // align-items: flex-end;
 
         .label-wrapper {
-            justify-content: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .value {
+            text-align: right;
         }
     }
 
@@ -45,6 +49,7 @@
 .label-second {
     color: var(--white);
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .value {
@@ -56,7 +61,7 @@
 .mobile-portrait {
     &.user-info {
         flex-shrink: 0;
-        width: calc((36rem - var(--width-total-bet)) * 50 / 100 + 1.5rem);
+        width: calc((36rem - var(--width-total-bet)) * 50 / 100 + 1.25rem);
     }
 }
 
