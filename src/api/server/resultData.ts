@@ -29,6 +29,7 @@ import resultM27 from './response/results/m27.json';
 import resultM35 from './response/results/m35.json';
 import resultM35B from './response/results/m35b.json';
 import resultM41 from './response/results/m41.json';
+import resultM41B from './response/results/m41b.json';
 
 import resultsM7 from './response/results/m7.json';
 
@@ -64,6 +65,7 @@ const resultData: Record<string, { data: any[] }> = {
     m35: resultM35,
     m35b: resultM35B,
     m41: resultM41,
+    m41b: resultM41B,
 
     m7: resultsM7,
 };

@@ -29,6 +29,7 @@ import transactionsM27 from './response/transactions/m27.json';
 import transactionsM35 from './response/transactions/m35.json';
 import transactionsM35B from './response/transactions/m35b.json';
 import transactionsM41 from './response/transactions/m41.json';
+import transactionsM41B from './response/transactions/m41b.json';
 
 const transactionData: Record<string, object> = {
     p6: transactionsP6,
@@ -62,6 +63,7 @@ const transactionData: Record<string, object> = {
     m35: transactionsM35,
     m35b: transactionsM35B,
     m41: transactionsM41,
+    m41b: transactionsM41B,
 };
 
 export default transactionData;
