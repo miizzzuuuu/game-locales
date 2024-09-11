@@ -107,6 +107,7 @@ export class GameHelper {
         m39: 'Duel Dice',
         m40: 'Xoc Dia',
         m41: 'Domino',
+        m41b: 'Europe Domino',
         m42: 'Grandprix Number',
         m43: '6D Color',
         p6: '24D',
