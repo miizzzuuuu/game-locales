@@ -27,6 +27,7 @@ import {
     ResultM23Wild,
     ResultM27,
     ResultM35,
+    ResultM41,
     ResultM6,
     ResultM8,
     ResultM8Fever,
@@ -181,7 +182,7 @@ export type DetailResultM35 = {
 };
 
 export type DetailResultM41 = {
-    detail_result: ResultM27 | [];
+    detail_result: ResultM41 | [];
 };
 
 // TODO: add another game result type
