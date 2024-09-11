@@ -4,6 +4,7 @@ import {
     Pcode24DJackpot,
     Pcode48D,
     PcodeBaccarat,
+    PcodeDomino,
     PcodeRedWhite,
     PcodeRoulette,
     PcodeShioFight,
@@ -61,5 +62,9 @@ export class TransactionHelper {
 
     static is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
         return /^m35/.test(item.pcode);
+    };
+
+    static isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {
+        return /^m41/.test(item.pcode);
     };
 }
