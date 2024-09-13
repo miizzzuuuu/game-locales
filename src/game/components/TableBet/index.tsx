@@ -12,6 +12,7 @@ import styles from './styles.module.scss';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { selectWinBets } from '../../../store/slice/resultSlice';
 import { GameHelper } from '../../../common/utils/GameHelper';
+import { useGetChips } from '../../../common/hooks/useGetChips';
 
 const TableBet = () => {
     const tableBetRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ const TableBet = () => {
     const winBets = useAppSelector(selectWinBets);
 
     const { placeBetHandler } = usePlaceBet({ useLowerCase: true });
+    const { chipBet, chipBetSend } = useGetChips();
 
     useEffect(() => {
         if (!betIsOpen) {
@@ -49,10 +51,12 @@ const TableBet = () => {
                 const className = `slot-${key} bet-number`;
                 const isWin = winBets?.includes(bet.button);
 
+                const chip = chipBet(bet) + chipBetSend(bet);
+
                 return (
                     <ButtonBet
                         key={key}
-                        bet={bet}
+                        chip={chip}
                         className={className}
                         isWin={isWin}
                         onClick={() => placeBetHandler(bet)}
@@ -68,10 +72,12 @@ const TableBet = () => {
                 const className = `slot-${key} bet-col-row`;
                 const isWin = winBets?.includes(bet.button);
 
+                const chip = chipBet(bet) + chipBetSend(bet);
+
                 return (
                     <ButtonBet
                         key={key}
-                        bet={bet}
+                        chip={chip}
                         className={className}
                         isWin={isWin}
                         onClick={() => placeBetHandler(bet)}
@@ -94,10 +100,12 @@ const TableBet = () => {
                 }
                 const isWin = winBets?.includes(bet.button);
 
+                const chip = chipBet(bet) + chipBetSend(bet);
+
                 return (
                     <ButtonBet
                         key={key}
-                        bet={bet}
+                        chip={chip}
                         className={className}
                         isWin={isWin}
                         onClick={() => placeBetHandler(bet)}
@@ -119,10 +127,12 @@ const TableBet = () => {
 
                 const className = `slot-${key}`;
 
+                const chip = chipBet(bet) + chipBetSend(bet);
+
                 return (
                     <ButtonBet
                         key={key}
-                        bet={bet}
+                        chip={chip}
                         className={className}
                         onClick={() => placeBetHandler(bet)}
                     />

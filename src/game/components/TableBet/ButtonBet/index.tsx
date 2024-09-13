@@ -1,22 +1,25 @@
 import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import { useGetChipBet } from '../../../../common/hooks/useGetChipBet';
-import { Bet } from '../../../../types';
 import ChipBet from '../../../../common/components/ChipBet';
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
+import { useAppSelector } from '../../../../store/hooks';
+import { selectChipBase } from '../../../../store/slice/chipSlice';
+import { ChipHelper } from '../../../../common/utils/ChipHelper';
 
 interface IProps {
     className?: string;
     children?: ReactNode;
-    bet: Bet;
+    chip: number;
 
     isWin?: boolean;
     onClick?: () => void;
 }
 
-const ButtonBet = ({ children, isWin, className, bet, onClick }: IProps) => {
+const ButtonBet = ({ children, isWin, className, chip, onClick }: IProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-    const { chip, color } = useGetChipBet(bet);
+
+    const chipBase = useAppSelector(selectChipBase);
+    const color = ChipHelper.getChipColorByAmount(chip, chipBase);
 
     className = className
         ?.split(' ')
