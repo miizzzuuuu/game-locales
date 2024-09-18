@@ -220,7 +220,7 @@ export default class M22 extends BaseV2Roadmap {
                             T
                         </text>
 
-                        {GameHelper.pcode == 'm23b' ? (
+                        {GameHelper.pcode == 'm22' ? (
                             <>
                                 {bankerPair && (
                                     <circle
