@@ -224,7 +224,7 @@ export default class M23 extends BaseV2Roadmap {
                     } else this.currentRow! += 1;
                     if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
                     let tigerPair, dragonPair;
-                    if (GameHelper.pcode == 'm23b') {
+                    if ( ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild))) {
                         tigerPair = item.tiger[0] == item.wild[0];
                         dragonPair = item.dragon[0] == item.wild[0];
                     }
@@ -269,7 +269,7 @@ export default class M23 extends BaseV2Roadmap {
                                 >
                                     T
                                 </text>
-                                {GameHelper.pcode == 'm23b' ? (
+                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
                                     <>
                                         {dragonPair && (
                                             <circle
@@ -343,7 +343,7 @@ export default class M23 extends BaseV2Roadmap {
                                 >
                                     D
                                 </text>
-                                {GameHelper.pcode == 'm23b' ? (
+                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
                                     <>
                                         {dragonPair && (
                                             <circle
@@ -419,7 +419,7 @@ export default class M23 extends BaseV2Roadmap {
                                     T
                                 </text>
 
-                                {GameHelper.pcode == 'm23b' ? (
+                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
                                     <>
                                         {dragonPair && (
                                             <circle

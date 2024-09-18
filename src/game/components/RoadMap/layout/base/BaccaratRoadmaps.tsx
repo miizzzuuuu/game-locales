@@ -355,7 +355,7 @@ export function prepareV3Render(this: BaseV2Roadmap) {
     this.roadmapTiesDisplay = [];
 
     // Todo: use clonePcode later
-    if (basePcode === "m22" || GameHelper.pcode === "m23b" || basePcode === "m28" || basePcode === "m38")
+    if (basePcode === "m22" ||  ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) || basePcode === "m28" || basePcode === "m38")
         this.roadmapPairsDisplay = [];
 
     for (let a = 0; a < 9; a++) {
@@ -364,7 +364,7 @@ export function prepareV3Render(this: BaseV2Roadmap) {
         this.roadmapTiesDisplay[a] = [...Array(9).keys()].map(() => null);
 
         // Todo: use clonePcode later
-        if (basePcode === "m22" ||  GameHelper.pcode === "m23b" ||  basePcode === "m28" || basePcode === "m38")
+        if (basePcode === "m22" ||   ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ||  basePcode === "m28" || basePcode === "m38")
             this.roadmapPairsDisplay![a] = "1".split("").map(() => []);
     }
 
@@ -379,7 +379,7 @@ export function prepareV3Render(this: BaseV2Roadmap) {
 
         case "m23":
             this.simpleBigRoad = getSimpleDragonTigerResultArray(this.props.history);
-            if(GameHelper.pcode=="m23b")
+            if(  ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) )
             this.simpleBigRoadPairs = getSimpleDragonTigerResultPairArray(this.props.history);
             break;
 
