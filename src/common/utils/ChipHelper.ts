@@ -16,8 +16,8 @@ export class ChipHelper {
         return this.chipColors[index % this.chipColors.length];
     }
 
-    static getChipColorByAmount(amount: number, chipBase: number[]): string | undefined {
-        if (chipBase.length === 0) return undefined;
+    static getChipColorByAmount(amount: number, chipBase: number[]): string {
+        if (chipBase.length === 0) return this.chipColors[0];
 
         const n = this.chipColors.length;
         let index: number = n - 1;
