@@ -7,8 +7,21 @@ export const getLastbets = async () => {
         const response = await APIManager.get<LastBetsGameResponse>(
             ENDPOINTS.playerLastbets + `/${GameHelper.pcode}`,
         );
+
         return response.data;
     } catch (error) {
         throw error;
+    }
+};
+
+export const fetchLastbets = async (callback?: (data: LastBetsGameResponse) => void) => {
+    try {
+        const response = await APIManager.get<LastBetsGameResponse>(
+            ENDPOINTS.playerLastbets + `/${GameHelper.pcode}`,
+        );
+
+        callback?.(response.data);
+    } catch (error) {
+        console.error('get lastbet error', error);
     }
 };

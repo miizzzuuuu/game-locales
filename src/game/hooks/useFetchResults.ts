@@ -64,6 +64,6 @@ export const fetchResultHistory = async (
         // run action to save history result to redux
         // dispatch(setHistory(data));
     } catch (error) {
-        console.log('get history error', error);
+        console.error('get history error', error);
     }
 };

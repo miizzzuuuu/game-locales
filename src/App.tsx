@@ -6,7 +6,7 @@ import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
-import { useFetchLastbets } from './common/hooks/useFetchLastbets';
+// import { useFetchLastbets } from './common/hooks/useFetchLastbets';
 import { useFetchGame } from './common/hooks/useFetchGame';
 
 import ResizeOverlay from './common/components/ResizeOverlay';
@@ -30,7 +30,7 @@ function App() {
 
     const { finish: finishGetPlayer } = useFetchPlayer();
     const { finish: finishGetSettings } = useFetchSettings();
-    const { finish: finishGetLastbets } = useFetchLastbets();
+    // const { finish: finishGetLastbets } = useFetchLastbets();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
 
@@ -38,7 +38,7 @@ function App() {
         if (
             finishGetPlayer &&
             finishGetSettings &&
-            finishGetLastbets &&
+            // finishGetLastbets &&
             finishGetGame &&
             finishGetTimer
         ) {
@@ -46,7 +46,7 @@ function App() {
 
             LoadingHelper.finish();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetLastbets, finishGetGame, finishGetTimer]);
+    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
 
     const { deviceType, orientation } = useAutoResize();
 
