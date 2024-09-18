@@ -8,7 +8,7 @@ import { AppDispatch, RootState } from './store';
 
 import { gameResultListener, loadNewValueListener } from './listener/socketListener';
 import { closeTimeListener, openTimeListener } from './listener/timerListener';
-import { confirmBetFullfiledListener } from './listener/betAddListener';
+import { confirmBetFullfiledListener } from './listener/betsListener';
 import { updateSettingsListener } from './listener/settingsListener';
 import { endWinAnimationListener } from './listener/resultListener';
 

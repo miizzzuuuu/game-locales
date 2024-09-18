@@ -1,45 +1,41 @@
-import { ReactNode } from 'react';
+import { memo, ReactNode } from 'react';
 import styles from './styles.module.scss';
-import ChipBet from '../../../../common/components/ChipBet';
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
+import ChipBet from '../../../../common/components/ChipBet';
+import { selectChip } from '../../../../store/slice/bets';
 import { useAppSelector } from '../../../../store/hooks';
-import { selectChipBase } from '../../../../store/slice/chipSlice';
-import { ChipHelper } from '../../../../common/utils/ChipHelper';
 
 interface IProps {
+    button: string;
+    group: string;
+
     className?: string;
     children?: ReactNode;
-    chip: number;
-
     isWin?: boolean;
-    onClick?: () => void;
+
+    onClick: (button: string, group: string, value: number) => void;
 }
 
-const ButtonBet = ({ children, isWin, className, chip, onClick }: IProps) => {
+const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
-    const chipBase = useAppSelector(selectChipBase);
-    const color = ChipHelper.getChipColorByAmount(chip, chipBase);
 
     className = className
         ?.split(' ')
         .map((cn) => styles[cn])
         .join(' ');
 
+    const chip = useAppSelector((state) => selectChip(state, `${button}-${group}`));
+
     return (
         <div
             className={`${styles['button-bet']}${deviceClassName}${className ? ` ${className}` : ''}${isWin ? ` ${styles.win}` : ''}`}
-            onClick={onClick}
+            onClick={() => onClick(button, group, 1000)}
         >
             {children && children}
 
-            <div className={styles['slot-chip']}>
-                {chip > 0 && (
-                    <ChipBet value={chip} color={color} style={{ width: '100%', height: '100%' }} />
-                )}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 ? <ChipBet value={chip} /> : null}</div>
         </div>
     );
 };
 
-export default ButtonBet;
+export default memo(ButtonBet);

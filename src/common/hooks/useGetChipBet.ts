@@ -1,27 +1,11 @@
 import { useAppSelector } from '../../store/hooks';
-import { selectEntitiesBetAdd } from '../../store/slice/betAddSlice';
-import { selectEntitiesBetSend } from '../../store/slice/betSendSlice';
-import { selectChipBase } from '../../store/slice/chipSlice';
-import { Bet } from '../../types';
-import { ChipHelper } from '../utils/ChipHelper';
+import { selectChip } from '../../store/slice/bets';
 
-function useGetChipBet(bet: Bet) {
-    const { button, group } = bet;
-    const keyBet = `${button}-${group}`;
-
-    const entitiesBetAdd = useAppSelector(selectEntitiesBetAdd);
-    const entitiesBetSend = useAppSelector(selectEntitiesBetSend);
-
-    const chipBase = useAppSelector(selectChipBase);
-
-    const chipPlace = entitiesBetAdd[keyBet]?.value ?? 0;
-    const chipSend = entitiesBetSend[keyBet]?.value ?? 0;
-
-    const chip = chipPlace + chipSend;
+function useGetChipBet({ button, group }: { button: string; group: string }) {
+    const chip = useAppSelector((state) => selectChip(state, `${button}-${group}`));
 
     return {
         chip,
-        color: ChipHelper.getChipColorByAmount(chip, chipBase),
     };
 }
 

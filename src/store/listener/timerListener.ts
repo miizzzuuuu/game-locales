@@ -1,8 +1,10 @@
 import { Features } from '../../common/utils/Features';
 import { GameHelper } from '../../common/utils/GameHelper';
 import { confirmBet } from '../../services/api/sendBet';
+import { BetSend } from '../../types';
 import { AppStartListening } from '../listenerMiddleware';
-import { resetBetAdd, selectAllBetAdd, selectTotalBetAdd } from '../slice/betAddSlice';
+import { resetBetAdd, selectBetAdd, selectTotalBetAdd } from '../slice/bets';
+// import { resetBetAdd, selectAllBetAdd, selectTotalBetAdd } from '../slice/betAddSlice';
 import { selectPeriod } from '../slice/gameSlice';
 import { setShowPatternBeforeClose, togglePatternUI } from '../slice/gameStateSlice';
 import { selectBalance } from '../slice/playerSlice';
@@ -11,7 +13,7 @@ import { AppDispatch, RootState } from '../store';
 
 const actionClose = (dispatch: AppDispatch, state?: RootState) => {
     if (state) {
-        const betAdd = selectAllBetAdd(state);
+        const betAdd = selectBetAdd(state);
 
         if (Features.BUTTON_PATTERN) {
             const showPatternUI = state.gameState.showPatternUI;
@@ -23,23 +25,30 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
             }
         }
 
-        if (betAdd.length > 0) {
-            const totalBetAdd = selectTotalBetAdd(state);
-            const balance = selectBalance(state);
-            const period = selectPeriod(state);
-
-            const param = {
-                button_bet: betAdd,
-                total_bet: totalBetAdd,
-                game: GameHelper.pcode,
-                transId: '',
-            };
-            console.log('send bet param', param);
-
-            confirmBet(dispatch, param, period, balance);
-        } else {
+        const betAddEntries = Object.entries(betAdd);
+        if (betAddEntries.length === 0) {
             dispatch(resetBetAdd());
+            return;
         }
+
+        const totalBetAdd = selectTotalBetAdd(state);
+        const balance = selectBalance(state);
+        const period = selectPeriod(state);
+
+        const betAddToSend: BetSend[] = betAddEntries.map(([key, value]) => {
+            const [button, group] = key.split('-');
+
+            return { button, group, value };
+        });
+
+        const params = {
+            button_bet: betAddToSend,
+            total_bet: totalBetAdd,
+            game: GameHelper.pcode,
+            transId: '',
+        };
+
+        confirmBet(dispatch, params, period, balance);
     }
 };
 

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -14,4 +15,4 @@ const BetNumber = ({ button }: IProps) => {
     );
 };
 
-export default BetNumber;
+export default memo(BetNumber);

@@ -1,9 +1,5 @@
 import APIManager from '../../common/utils/APIManager';
-import {
-    confirmBetFullfiled,
-    confirmBetPending,
-    confirmBetRejected,
-} from '../../store/slice/betAddSlice';
+import { confirmBetFullfiled, confirmBetPending, confirmBetRejected } from '../../store/slice/bets';
 import { AppDispatch } from '../../store/store';
 import { SendBetParam, SendBetResponse } from '../../types';
 

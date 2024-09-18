@@ -1,24 +1,27 @@
-import { CSSProperties, useEffect, useRef } from 'react';
+import { memo, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import { StringHelper } from '../../utils/StringHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectShowChip } from '../../../store/slice/gameStateSlice';
 import SVGChip from '../SVG/SVGChip';
+import { selectChipBase } from '../../../store/slice/chipSlice';
+import { ChipHelper } from '../../utils/ChipHelper';
 
 interface IProps {
     value: number;
-    color?: string;
-    style?: CSSProperties;
     ignoreTransparent?: boolean;
 }
 
-const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
+const ChipBet = ({ value, ignoreTransparent }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);
 
     const stringValue = StringHelper.formatChipText(value);
+
+    const chipBase = useAppSelector(selectChipBase);
+    const color = ChipHelper.getChipColorByAmount(value, chipBase);
 
     const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 
@@ -42,11 +45,7 @@ const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
     }, [value]);
 
     return (
-        <div
-            className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`}
-            style={style}
-            ref={chipRef}
-        >
+        <div className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`} ref={chipRef}>
             <SVGChip color={color} value={stringValue} />
 
             <div ref={lightRef} className={styles['chip-light']} />
@@ -54,4 +53,4 @@ const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
     );
 };
 
-export default ChipBet;
+export default memo(ChipBet);

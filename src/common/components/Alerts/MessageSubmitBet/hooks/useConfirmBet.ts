@@ -5,7 +5,7 @@ import {
     resetConfirmBet,
     selectConfirmBetError,
     selectConfirmBetStatus,
-} from '../../../../../store/slice/betAddSlice';
+} from '../../../../../store/slice/bets';
 
 function useConfirmBet() {
     const dispatch = useAppDispatch();

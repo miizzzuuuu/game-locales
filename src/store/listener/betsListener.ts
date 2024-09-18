@@ -1,14 +1,12 @@
 import { AppStartListening } from '../listenerMiddleware';
-import { confirmBetFullfiled } from '../slice/betAddSlice';
-import { addBetSend } from '../slice/betSendSlice';
+import { addBetSend, confirmBetFullfiled } from '../slice/bets';
+
 import { updateBalance } from '../slice/playerSlice';
 
 export const confirmBetFullfiledListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: confirmBetFullfiled,
         effect: async (action, listenerApi) => {
-            console.log('middleware: confirmBetFullfiled');
-
             const newBalance = action.payload.balance - action.payload.total_bet;
 
             listenerApi.dispatch(

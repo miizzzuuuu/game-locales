@@ -1,8 +1,6 @@
 import { Sound } from '../../services/sound';
 import { gameResultAction, loadNewValueAction } from '../actions/socketAction';
 import { AppStartListening } from '../listenerMiddleware';
-import { newAddBetPeriod, placeMultiBet } from '../slice/betAddSlice';
-import { resetBetSend, selectAllBetSend } from '../slice/betSendSlice';
 import { setMessage } from '../slice/gameStateSlice';
 import { LastBetState, setLastBetData } from '../slice/lastBetsSlice';
 import { selectBalance } from '../slice/playerSlice';
@@ -11,6 +9,8 @@ import { openTime } from '../slice/timerSlice';
 
 import i18n from '../../services/i18next/index';
 import { setNewSet, updateGamePeriod, updateGameSet } from '../slice/gameSlice';
+import { newAddBetPeriod, placeMultiBet, resetBetSend, selectBetSend } from '../slice/bets';
+import { BetSend } from '../../types';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -34,11 +34,19 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
             }
             dispatch(newAddBetPeriod());
 
-            const betSend = selectAllBetSend(state);
-            if (betSend.length > 0) {
+            const betSend = selectBetSend(state);
+            const betSendEntries = Object.entries(betSend);
+
+            if (betSendEntries.length > 0) {
+                const betSendFormated: BetSend[] = betSendEntries.map(([key, value]) => {
+                    const [button, group] = key.split('-');
+
+                    return { button, group, value };
+                });
+
                 const dataLastBet: LastBetState = {
-                    data: [...betSend],
-                    periode: state.betSend.periode,
+                    data: betSendFormated,
+                    periode: 0,
                 };
 
                 dispatch(resetBetSend());
@@ -50,7 +58,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
                     const balance = selectBalance(state);
 
                     let totalLastBet = 0;
-                    dataLastBet.data.forEach((bet) => {
+                    betSendFormated.forEach((bet) => {
                         totalLastBet += bet.value;
                     });
 
@@ -64,7 +72,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
                         return;
                     }
 
-                    dispatch(placeMultiBet(dataLastBet.data));
+                    dispatch(placeMultiBet(betSendFormated));
                 }
             }
 

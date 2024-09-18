@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
 import ButtonAction from '../ButtonAction';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectHistoryBetAdd, undoBet } from '../../../store/slice/betAddSlice';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconCancelBet from './SVG/SVGIconCancelBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { selectHistoryBetAdd, undoBet } from '../../../store/slice/bets';
 
 interface IProps {
     styles?: CSSProperties;
@@ -14,14 +14,12 @@ interface IProps {
 const ButtonCancelBet = ({ styles, show }: IProps) => {
     const dispatch = useAppDispatch();
 
-    const historyBetAdd = useAppSelector(selectHistoryBetAdd);
     const betIsOpen = useAppSelector(selectBetIsOpen);
+    const historyBetAdd = useAppSelector(selectHistoryBetAdd);
 
     const isActive = historyBetAdd.length > 0 && betIsOpen;
 
     const handleClick = () => {
-        console.log('cancel bet');
-
         dispatch(undoBet());
     };
 
