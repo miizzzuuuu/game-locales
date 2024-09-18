@@ -1,4 +1,3 @@
-import MainArea from '../../../game/components/MainArea';
 import LayoutV1 from '../../layouts/v1';
 import LayoutV2 from '../../layouts/v2';
 import LayoutV3 from '../../layouts/v3';
@@ -19,12 +18,7 @@ const GameUI = () => {
         return null;
     }
 
-    return (
-        <Layout>
-            {/* main area */}
-            <MainArea />
-        </Layout>
-    );
+    return <Layout>{/* main area */}</Layout>;
 };
 
 export default GameUI;
