@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef } from 'react';
+import { memo } from 'react';
 
 import styles from './styles.module.scss';
 import { StringHelper } from '../../utils/StringHelper';
@@ -14,10 +14,6 @@ interface IProps {
 }
 
 const ChipBet = ({ value, ignoreTransparent }: IProps) => {
-    const chipRef = useRef<HTMLDivElement>(null);
-    const lightRef = useRef<HTMLDivElement>(null);
-    const lastValue = useRef<number>(0);
-
     const stringValue = StringHelper.formatChipText(value);
 
     const chipBase = useAppSelector(selectChipBase);
@@ -25,30 +21,11 @@ const ChipBet = ({ value, ignoreTransparent }: IProps) => {
 
     const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 
-    useEffect(() => {
-        if (value !== lastValue.current) {
-            console.log('run animation');
-
-            if (lightRef.current?.classList.contains(styles['run-chip-light'])) {
-                lightRef.current?.classList.remove(styles['run-chip-light']);
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        lightRef.current?.classList.add(styles['run-chip-light']);
-                    });
-                });
-            } else {
-                lightRef.current?.classList.add(styles['run-chip-light']);
-            }
-
-            lastValue.current = value;
-        }
-    }, [value]);
-
     return (
-        <div className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`} ref={chipRef}>
+        <div className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`}>
             <SVGChip color={color} value={stringValue} />
 
-            <div ref={lightRef} className={styles['chip-light']} />
+            <div className={styles['chip-light']} />
         </div>
     );
 };
