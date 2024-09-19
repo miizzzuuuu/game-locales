@@ -1,14 +1,16 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-import SVGBet from '../assets/SVGBet';
+
+import SLIDE_2 from '../assets/slide-2.json';
+import Lottie from 'lottie-react';
 
 export const title = 'Taruhan';
 
 export const GraphicComponent = () => {
     return (
         <Graphic>
-            <SVGBet style={{ width: '100%', height: '100%' }} />
+            <Lottie animationData={SLIDE_2} loop />
         </Graphic>
     );
 };

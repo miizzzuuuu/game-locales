@@ -1,14 +1,16 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-import SVGWheel from '../assets/SVGWheel';
+
+import SLIDE_1 from '../assets/slide-1.json';
+import Lottie from 'lottie-react';
 
 export const title = 'Cara Bermain';
 
 export const GraphicComponent = () => {
     return (
         <Graphic>
-            <SVGWheel style={{ width: '100%', height: '100%' }} />
+            <Lottie animationData={SLIDE_1} loop />
         </Graphic>
     );
 };
