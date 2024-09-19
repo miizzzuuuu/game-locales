@@ -1,4 +1,4 @@
-import { memo, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import styles from './styles.module.scss';
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
 import ChipBet from '../../../../common/components/ChipBet';
@@ -38,4 +38,4 @@ const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProp
     );
 };
 
-export default memo(ButtonBet);
+export default ButtonBet;

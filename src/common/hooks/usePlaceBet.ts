@@ -1,13 +1,7 @@
-import { useCallback } from 'react';
 import { useAppTranslate } from '../../services/i18next/hooks';
 import { Sound } from '../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import {
-    placeSingleBet,
-    selectBetAdd,
-    selectIdsBetAdd,
-    selectTotalBetAdd,
-} from '../../store/slice/bets';
+import { placeSingleBet, selectBetAdd, selectTotalBetAdd } from '../../store/slice/bets';
 import { selectActiveChip } from '../../store/slice/chipSlice';
 import { selectMax, selectMax50, selectMin, selectMin50 } from '../../store/slice/gameSlice';
 import { setMessage } from '../../store/slice/gameStateSlice';
@@ -36,83 +30,28 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
     const max50Bet = useAppSelector(selectMax50);
 
     const betAdd = useAppSelector(selectBetAdd);
-    const idsBetAdd = useAppSelector(selectIdsBetAdd);
 
-    const basePcode = GameHelper.getBasePcode();
+    const placeBetHandler = (button: string, group: string) => {
+        if (activeChip === 0 || !betIsOpen) return;
 
-    const getChip = useCallback(
-        (button: string, group: string) => {
-            const keyBet = `${button}-${group}`;
+        const isGroup50 = BetHelper.game?.GroupBet50.includes(group);
 
-            const chipPlace = betAdd[keyBet] ?? 0;
+        if (isGroup50) {
+            const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
 
-            return chipPlace;
-        },
-        [betAdd],
-    );
+            if (oppositeBetKey && betAdd[oppositeBetKey] > 0) {
+                const opposite = oppositeBetKey.split('-')[0];
 
-    const placeBetHandler = useCallback(
-        (button: string, group: string) => {
-            if (activeChip === 0 || !betIsOpen) return;
-
-            const isGroup50 = BetHelper.game?.GroupBet50.includes(group);
-
-            if (isGroup50) {
-                const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
-
-                if (oppositeBetKey && idsBetAdd.includes(oppositeBetKey)) {
-                    const opposite = oppositeBetKey.split('-')[0];
-
-                    const buttonOpposite = t(
-                        `${basePcode}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
-                    );
-                    const buttonName = t(
-                        `${basePcode}.${useLowerCase ? button.toLowerCase() : button}`,
-                    );
-
-                    const message = t('common.bet-error-n50', {
-                        button: buttonOpposite,
-                        other: buttonName,
-                    });
-
-                    console.log('bet error', message);
-                    dispatch(
-                        setMessage({
-                            value: message,
-                            type: 'danger',
-                        }),
-                    );
-
-                    return;
-                }
-            }
-
-            const curBalance = balance - totalBetAdd;
-
-            // cek balance
-            if (curBalance - activeChip < 0) {
-                const message = t('common.insuffix-balance');
-
-                console.log('bet error', message);
-                dispatch(
-                    setMessage({
-                        value: message,
-                        type: 'danger',
-                    }),
+                const buttonOpposite = t(
+                    `${GameHelper.getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
+                );
+                const buttonName = t(
+                    `${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`,
                 );
 
-                return;
-            }
-
-            const chipAfterBet = getChip(button, group) + activeChip;
-            const min = isGroup50 ? min50Bet : minBet;
-            if (chipAfterBet < min) {
-                const buttonName = isGroup50
-                    ? t(`${basePcode}.${useLowerCase ? button.toLowerCase() : button}`)
-                    : button;
-                const message = t('common.bet-error-min', {
-                    button: buttonName,
-                    value: min,
+                const message = t('common.bet-error-n50', {
+                    button: buttonOpposite,
+                    other: buttonName,
                 });
 
                 console.log('bet error', message);
@@ -125,44 +64,71 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
 
                 return;
             }
+        }
 
-            const max = isGroup50 ? max50Bet : maxBet;
-            if (chipAfterBet > max) {
-                const buttonName = isGroup50
-                    ? t(`${basePcode}.${useLowerCase ? button.toLowerCase() : button}`)
-                    : button;
-                const message = t('common.bet-error-max', {
-                    button: buttonName,
-                    value: max,
-                });
+        const curBalance = balance - totalBetAdd;
 
-                console.log('bet error', message);
-                dispatch(
-                    setMessage({
-                        value: message,
-                        type: 'danger',
-                    }),
-                );
+        // cek balance
+        if (curBalance - activeChip < 0) {
+            const message = t('common.insuffix-balance');
 
-                return;
-            }
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
 
-            dispatch(placeSingleBet({ button, group, value: activeChip }));
-            Sound.playPlaceBet();
-        },
-        [
-            idsBetAdd,
-            balance,
-            totalBetAdd,
-            activeChip,
-            getChip,
-            minBet,
-            maxBet,
-            min50Bet,
-            max50Bet,
-            betIsOpen,
-        ],
-    );
+            return;
+        }
+
+        const chipAfterBet = (betAdd[`${button}-${group}`] ?? 0) + activeChip;
+        const min = isGroup50 ? min50Bet : minBet;
+        if (chipAfterBet < min) {
+            const buttonName = isGroup50
+                ? t(`${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                : button;
+            const message = t('common.bet-error-min', {
+                button: buttonName,
+                value: min,
+            });
+
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
+
+            return;
+        }
+
+        const max = isGroup50 ? max50Bet : maxBet;
+        if (chipAfterBet > max) {
+            const buttonName = isGroup50
+                ? t(`${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                : button;
+            const message = t('common.bet-error-max', {
+                button: buttonName,
+                value: max,
+            });
+
+            console.log('bet error', message);
+            dispatch(
+                setMessage({
+                    value: message,
+                    type: 'danger',
+                }),
+            );
+
+            return;
+        }
+
+        dispatch(placeSingleBet({ button, group, value: activeChip }));
+        Sound.playPlaceBet();
+    };
 
     return {
         placeBetHandler,

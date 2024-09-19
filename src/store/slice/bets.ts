@@ -4,9 +4,15 @@ import { BetSend, FetchStatus } from '../../types';
 
 export interface State {
     add: Record<string, number>;
-    send: Record<string, number>;
+    addTotal: number;
 
-    history: Record<string, number>[];
+    send: Record<string, number>;
+    sendTotal: number;
+
+    history: {
+        add: Record<string, number>;
+        addTotal: number;
+    }[];
 
     confirmStatus: FetchStatus | 'end';
     confirmError: null | string;
@@ -27,7 +33,11 @@ type ConfirmBetFullfiledAction = {
 
 const initialState: State = {
     add: {},
+    addTotal: 0,
+
     send: {},
+    sendTotal: 0,
+
     history: [],
 
     confirmStatus: 'idle',
@@ -39,10 +49,12 @@ const betsSlice = createSlice({
     initialState,
     reducers: {
         placeSingleBet: (state, action: PayloadAction<BetSend>) => {
-            state.history.push({ ...state.add });
+            state.history.push({ add: { ...state.add }, addTotal: state.addTotal });
 
             const { button, group, value } = action.payload;
             const key = `${button}-${group}`;
+
+            state.addTotal += value;
 
             if (state.add[key]) {
                 state.add[key] += value;
@@ -52,13 +64,15 @@ const betsSlice = createSlice({
             state.add[key] = value;
         },
         placeMultiBet: (state, action: PayloadAction<BetSend[]>) => {
-            state.history.push({ ...state.add });
+            state.history.push({ add: { ...state.add }, addTotal: state.addTotal });
 
             const betArray = action.payload;
 
             betArray.forEach((bet) => {
                 const { button, group, value } = bet;
                 const key = `${button}-${group}`;
+
+                state.addTotal += value;
 
                 if (state.add[key]) {
                     state.add[key] += value;
@@ -72,16 +86,17 @@ const betsSlice = createSlice({
             const lastHistory = state.history.pop();
 
             if (lastHistory) {
-                state.add = lastHistory;
+                state.add = lastHistory.add;
+                state.addTotal = lastHistory.addTotal;
             }
         },
         clearBet: (state) => {
-            state.history.push({ ...state.add });
+            state.history.push({ add: { ...state.add }, addTotal: state.addTotal });
 
             state.add = {};
         },
         doubleBet: (state) => {
-            state.history.push({ ...state.add });
+            state.history.push({ add: { ...state.add }, addTotal: state.addTotal });
 
             for (const property in state.add) {
                 const bet = state.add[property];
@@ -89,8 +104,9 @@ const betsSlice = createSlice({
             }
         },
         resetBetAdd: (state) => {
-            state.history = [];
             state.add = {};
+            state.addTotal = 0;
+            state.history = [];
         },
 
         // submit bet
@@ -101,6 +117,7 @@ const betsSlice = createSlice({
             state.confirmStatus = 'fulfilled';
 
             state.add = {};
+            state.addTotal = 0;
             state.history = [];
         },
         confirmBetRejected: (state, action: PayloadAction<string>) => {
@@ -108,6 +125,7 @@ const betsSlice = createSlice({
             state.confirmError = action.payload;
 
             state.add = {};
+            state.addTotal = 0;
             state.history = [];
         },
         resetConfirmBet: (state) => {
@@ -126,10 +144,12 @@ const betsSlice = createSlice({
                 const { button, group, value } = data;
 
                 state.send[`${button}-${group}`] = value;
+                state.sendTotal += value;
             });
         },
         resetBetSend: (state) => {
             state.send = {};
+            state.sendTotal = 0;
         },
     },
 });
@@ -165,23 +185,9 @@ export const selectChip = (state: RootState, key: string): number => {
     return (state.bets.add[key] ?? 0) + (state.bets.send[key] ?? 0);
 };
 
-export const selectTotalBetAdd = createSelector([selectBetAdd], (add) => {
-    let totalAdd = 0;
-    for (const [_, value] of Object.entries(add)) {
-        totalAdd += value;
-    }
+export const selectTotalBetAdd = (state: RootState) => state.bets.addTotal;
 
-    return totalAdd;
-});
-
-export const selectTotalBetSend = createSelector([selectBetSend], (send) => {
-    let totalSend = 0;
-    for (const [_, value] of Object.entries(send)) {
-        totalSend += value;
-    }
-
-    return totalSend;
-});
+export const selectTotalBetSend = (state: RootState) => state.bets.sendTotal;
 
 export const selectTotalBet = createSelector(
     [selectTotalBetAdd, selectTotalBetSend],
