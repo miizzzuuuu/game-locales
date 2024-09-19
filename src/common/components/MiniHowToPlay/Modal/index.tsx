@@ -41,15 +41,15 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
         useRef<{ el: HTMLDivElement; bounds?: DOMRect; offsetY?: number; offsetX?: number }[]>();
 
     const handleSlideClick = (direction: 'prev' | 'next') => {
-        if (!sliderRef.current) return;
+        if (!sliderRef.current || !items.current || items.current.length === 0) return;
 
-        const containerWidth = sliderRef.current.getBoundingClientRect().width;
+        const itemWidth = items.current[0].bounds?.width || 0;
 
         sliderRef.current.scrollTo({
             left:
                 direction === 'prev'
-                    ? sliderRef.current.scrollLeft - containerWidth
-                    : sliderRef.current.scrollLeft + containerWidth,
+                    ? sliderRef.current.scrollLeft - itemWidth
+                    : sliderRef.current.scrollLeft + itemWidth,
             behavior: 'smooth',
         });
     };
@@ -119,15 +119,16 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
 
             detectCurrent();
 
-            sliderRef.current?.addEventListener('scroll', () => detectCurrent());
+            sliderRef.current?.addEventListener('scroll', detectCurrent);
+
             modalRef.current?.addEventListener('animationend', handleModalAnimationEnd);
-            document.addEventListener('resize', () => storeBounds());
+            document.addEventListener('resize', storeBounds);
 
             return () => {
-                sliderRef.current?.removeEventListener('scroll', () => detectCurrent());
+                sliderRef.current?.removeEventListener('scroll', detectCurrent);
 
                 modalRef.current?.removeEventListener('animationend', handleModalAnimationEnd);
-                document.removeEventListener('resize', () => storeBounds());
+                document.removeEventListener('resize', storeBounds);
             };
         }
     }, []);
