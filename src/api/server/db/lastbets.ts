@@ -1,6 +1,6 @@
 export const lastbets: Record<string, { periode: number; data: any[] }> = {
     p6b: {
-        periode: 9273,
+        periode: 9272,
         data: [
             {
                 button: '05',
