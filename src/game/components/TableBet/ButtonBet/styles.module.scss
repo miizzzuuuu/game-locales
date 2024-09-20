@@ -9,55 +9,55 @@
     align-items: center;
     z-index: 1;
     transition: all 1s linear;
+}
 
-    &.win {
-        border: 0.1rem solid #83ff48 !important;
-        animation: win-glow 1s infinite ease-in-out;
-        z-index: 2;
-    }
+.win {
+    border: 0.1rem solid #83ff48 !important;
+    animation: win-glow 1s infinite ease-in-out;
+    z-index: 2;
+}
 
-    &.bet-number,
-    &.bet-col-row,
-    &.bet-red,
-    &.bet-yellow {
-        border-radius: 0.1rem;
-    }
+.bet-number,
+.bet-col-row,
+.bet-red,
+.bet-yellow {
+    border-radius: 0.1rem;
+}
 
-    &.bet-number {
-        border: 0.1rem solid #f3d8a4;
-        background: linear-gradient(180deg, #fff 0%, #ffe5b2 100%);
-    }
+.bet-number {
+    border: 0.1rem solid #f3d8a4;
+    background: linear-gradient(180deg, #fff 0%, #ffe5b2 100%);
+}
 
-    &.bet-col-row {
-        border: 0.1rem solid #e0b869;
-        background: linear-gradient(180deg, #ffe6b2 0%, #e0b869 100%);
-    }
+.bet-col-row {
+    border: 0.1rem solid #e0b869;
+    background: linear-gradient(180deg, #ffe6b2 0%, #e0b869 100%);
+}
 
-    &.bet-red {
-        border: 0.1rem solid #f30049;
-        background: linear-gradient(0deg, #59001b 0.33%, #f30049 99.67%);
-    }
+.bet-red {
+    border: 0.1rem solid #f30049;
+    background: linear-gradient(0deg, #59001b 0.33%, #f30049 99.67%);
+}
 
-    &.bet-yellow {
-        border: 0.1rem solid #ffb01c;
-        background: linear-gradient(0deg, #8c5400 0%, #ffb01c 100%);
-    }
+.bet-yellow {
+    border: 0.1rem solid #ffb01c;
+    background: linear-gradient(0deg, #8c5400 0%, #ffb01c 100%);
+}
 
-    &.slot-small {
-        border-top-left-radius: 0.4rem;
-    }
+.slot-small {
+    border-top-left-radius: 0.4rem;
+}
 
-    &.slot-big {
-        border-top-right-radius: 0.4rem;
-    }
+.slot-big {
+    border-top-right-radius: 0.4rem;
+}
 
-    &.slot-odd {
-        border-bottom-left-radius: 0.4rem;
-    }
+.slot-odd {
+    border-bottom-left-radius: 0.4rem;
+}
 
-    &.slot-black {
-        border-bottom-right-radius: 0.4rem;
-    }
+.slot-black {
+    border-bottom-right-radius: 0.4rem;
 }
 
 .slot-chip {
