@@ -13,6 +13,12 @@ import './styles/main.scss';
 import { BetHelper } from './common/utils/BetHelper.ts';
 import { TwentyFourDBet } from './game/utils/TwentyFourDBet.ts';
 
+declare global {
+    interface Window {
+        isIOS: any;
+    }
+}
+
 const main = async () => {
     if (import.meta.env.DEV) {
         makeServer({ environment: 'development' });

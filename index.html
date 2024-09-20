@@ -49,8 +49,10 @@
             }
 
             if (isIOS()) {
-                console.log('is ios');
                 document.body.classList.add('ios');
+                window.isIOS = true;
+            } else {
+                window.isIOS = false;
             }
         </script>
         <script type="module" src="/src/main.tsx"></script>
