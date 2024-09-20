@@ -46,7 +46,7 @@ export function RenderCardV2(props: any) {
               style={{
                 position: "absolute",
                 width: "100%",
-                height: "100%",
+                height: "fit-content",
               }}
             >
               <svg

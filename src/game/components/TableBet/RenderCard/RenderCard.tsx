@@ -54,7 +54,7 @@ export function RenderCard(props: any) {
             <div
               className="card-cover"
               style={{
-                position: "absolute", width: "100%", height: "100%",
+                position: "absolute", width: "100%", height: "fit-content",
                 boxShadow: "0px 0px 0.64px 0px rgba(0, 0, 0, 0.4) 0px 0.64px 0.64px 0px rgba(0, 0, 0, 0.2)"
               }}
             >
