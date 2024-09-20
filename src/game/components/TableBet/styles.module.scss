@@ -12,78 +12,84 @@
     container: table-bet / size;
 }
 
-.mobile-portrait {
-    --translate-x: 0;
-    --translate-y: 0;
-    --scale: 1;
-    --opacity: 1;
-
-    --scale-close: 0.85;
-    --opacity-close: 0.75;
-
-    height: 100%;
-
-    grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
-
-    transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
-    opacity: var(--opacity);
-    transform-origin: bottom;
-    transition: all 0.75s;
-
-    &.opened {
+:global(.mobile-portrait) {
+    .table-bet {
         --translate-x: 0;
         --translate-y: 0;
         --scale: 1;
         --opacity: 1;
-    }
 
-    &.closed {
-        --translate-x: 0;
-        --translate-y: 0;
-        --scale: 0.85;
-        --opacity: 0.75;
+        --scale-close: 0.85;
+        --opacity-close: 0.75;
+
+        height: 100%;
+
+        grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale));
+        opacity: var(--opacity);
+        transform-origin: bottom;
+        transition: all 0.75s;
+
+        &.opened {
+            --translate-x: 0;
+            --translate-y: 0;
+            --scale: 1;
+            --opacity: 1;
+        }
+
+        &.closed {
+            --translate-x: 0;
+            --translate-y: 0;
+            --scale: 0.85;
+            --opacity: 0.75;
+        }
     }
 }
 
-.desktop,
-.mobile-landscape {
-    --perspective: 100rem;
+:global(.desktop),
+:global(.mobile-landscape) {
+    .table-bet {
+        --perspective: 100rem;
 
-    --translate-x: 0;
-    --translate-y: 2rem;
-    --scale: 1;
-    --opacity: 1;
-    --rotate-x: 0;
-
-    --scale-close: 0.5;
-    --opacity-close: 0.5;
-    --translate-x-close: 0;
-    --translate-y-close: 7rem;
-    --rotate-x-close: 46deg;
-
-    height: calc(100% - 2rem);
-
-    grid-template-rows: repeat(7, 1fr);
-
-    transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
-        perspective(var(--perspective)) rotateX(var(--rotate-x));
-    opacity: var(--opacity);
-
-    transform-origin: bottom;
-
-    &.opened {
         --translate-x: 0;
         --translate-y: 2rem;
         --scale: 1;
         --opacity: 1;
         --rotate-x: 0;
-    }
 
-    &.closed {
-        --translate-x: 0;
-        --translate-y: 7rem;
-        --scale: 0.5;
-        --opacity: 0.5;
-        --rotate-x: 46deg;
+        height: 100%;
+        padding-top: 2rem;
+
+        grid-template-rows: repeat(7, 1fr);
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+
+        transform-origin: bottom;
+        transition: all 0.75s;
+
+        --scale-close: 0.7;
+        --opacity-close: 0.9;
+        --translate-x-close: 0;
+        --translate-y-close: 4.2rem;
+        --rotate-x-close: 45deg;
+
+        &.opened {
+            --translate-x: 0;
+            --translate-y: 0;
+            --scale: 1;
+            --opacity: 1;
+            --rotate-x: 0;
+        }
+
+        &.closed {
+            --translate-x: 0;
+            --translate-y: 4.2rem;
+            --scale: 0.5;
+            --opacity: 0.5;
+            --rotate-x: 46deg;
+        }
     }
 }

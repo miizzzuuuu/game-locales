@@ -1,4 +1,3 @@
-import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { TwentyFourDHelper } from '../../utils/TwentyFourDHelper';
@@ -11,17 +10,13 @@ import { selectWinBets } from '../../../store/slice/resultSlice';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 
 const TableBet = () => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const winBets = useAppSelector(selectWinBets);
 
     const { placeBetHandler } = usePlaceBet({ useLowerCase: true, betIsOpen });
 
     return (
-        <div
-            className={`${styles['table-bet']}${deviceClassName} ${betIsOpen ? styles.opened : styles.closed}`}
-        >
+        <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
             {TwentyFourDHelper.getBetKeys.map((key) => {
                 const bet = TwentyFourDHelper.bets[key];
 

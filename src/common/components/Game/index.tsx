@@ -23,7 +23,6 @@ import { Features } from '../../utils/Features';
 import { useNewSet } from '../../hooks/useNewSet';
 
 function Game() {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const isLetterOrPillarBoxActive = DisplayHelper.getLetterOrPillarBoxActive();
 
     const dispatch = useAppDispatch();
@@ -98,7 +97,7 @@ function Game() {
 
     return (
         <div
-            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
+            className={`${styles['game-area']}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
             <Timer />

@@ -1,11 +1,11 @@
 .chip-deck {
     opacity: 1;
     transition: opacity 0.3s linear;
+}
 
-    &.disapear {
-        opacity: 0.2;
-        transition: opacity 0.3s linear;
-    }
+.disapear {
+    opacity: 0.2;
+    transition: opacity 0.3s linear;
 }
 
 .overlay {
@@ -19,19 +19,15 @@
 @import './v1';
 @import './v2';
 
-.mobile-portrait {
-    &.chip-deck {
-        &.disapear {
-            opacity: 0.2;
-        }
+:global(.mobile-portrait) {
+    .disapear {
+        opacity: 0.2;
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.chip-deck {
-        &.disapear {
-            opacity: 0;
-        }
+:global(.desktop),
+:global(.mobile-landscape) {
+    .disapear {
+        opacity: 0;
     }
 }

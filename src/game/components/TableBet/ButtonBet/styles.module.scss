@@ -74,7 +74,7 @@
     align-items: center;
 }
 
-.mobile-portrait {
+:global(.mobile-portrait) {
     .slot-chip {
         width: calc(100cqw / 8 * 65 / 100);
         height: calc(100cqw / 8 * 65 / 100);
@@ -82,8 +82,8 @@
     }
 }
 
-.desktop,
-.mobile-landscape {
+:global(.desktop),
+:global(.mobile-landscape) {
     .slot-chipx {
         width: calc(100cqh / 7 * 65 / 100);
         height: calc(100cqh / 7 * 65 / 100);

@@ -12,8 +12,8 @@
     aspect-ratio: 16 / 9;
 }
 
-.mobile-portrait {
-    &.streaming {
+:global(.mobile-portrait) {
+    .streaming {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -53,8 +53,8 @@
     }
 }
 
-.desktop,
-.mobile-landscape {
+:global(.desktop),
+:global(.mobile-landscape) {
     .video-container {
         position: absolute;
         left: 50%;

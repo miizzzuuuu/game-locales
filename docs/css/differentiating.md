@@ -14,18 +14,14 @@ First, import the CSS module:
 import styles from './styles.module.scss';
 ```
 
-Get the prefix className for the device:
-
-```tsx
-const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-```
+Get the prefix className with `:global`:
 
 Add the className to the component.
 
 **Example:**
 
 ```tsx
-<div className={`${styles['chip-deck']}${deviceClassName}`}>...</div>
+<div className={styles['chip-deck']}>...</div>
 ```
 
 In the CSS module, use the following prefixes:
@@ -37,19 +33,19 @@ In the CSS module, use the following prefixes:
     // global styles for all devices
 }
 
-.mobile-portrait {
+:global(.mobile-portrait) {
     &.chip-deck {
         // styles for mobile portrait
     }
 }
 
-.mobile-landscape {
+:global(.mobile-landscape) {
     &.chip-deck {
         // styles for mobile landscape
     }
 }
 
-.desktop {
+:global(.desktop) {
     &.chip-deck {
         // styles for desktop
     }

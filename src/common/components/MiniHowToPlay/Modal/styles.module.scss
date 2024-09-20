@@ -18,13 +18,17 @@
     flex: 1;
 }
 
-.mobile-portrait {
-    --width-modal-mini-htp: 34rem;
+:global(.mobile-portrait) {
+    .modal {
+        --width-modal-mini-htp: 34rem;
+    }
 }
 
-.desktop,
-.mobile-landscape {
-    --width-modal-mini-htp: 42rem;
+:global(.desktop),
+:global(.mobile-landscape) {
+    .modal {
+        --width-modal-mini-htp: 42rem;
+    }
 }
 
 @keyframes open-modal {

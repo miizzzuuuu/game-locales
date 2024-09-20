@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
 import ChipBet from '../../../../common/components/ChipBet';
 import { selectChip } from '../../../../store/slice/bets';
 import { useAppSelector } from '../../../../store/hooks';
@@ -17,8 +16,6 @@ interface IProps {
 }
 
 const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     className = className
         ?.split(' ')
         .map((cn) => styles[cn])
@@ -28,7 +25,7 @@ const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProp
 
     return (
         <div
-            className={`${styles['button-bet']}${deviceClassName}${className ? ` ${className}` : ''}${isWin ? ` ${styles.win}` : ''}`}
+            className={`${styles['button-bet']}${className ? ` ${className}` : ''}${isWin ? ` ${styles.win}` : ''}`}
             onClick={() => onClick(button, group, 1000)}
         >
             {children && children}

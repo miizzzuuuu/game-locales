@@ -5,7 +5,6 @@ import ButtonDetails from './ButtonDetails';
 import DontShowAgain from './DontShowAgain';
 import Indicators from './Indicators';
 import styles from './styles.module.scss';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
 import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
 import { useAppDispatch } from '../../../../store/hooks';
 import { GameHelper } from '../../../utils/GameHelper';
@@ -28,8 +27,6 @@ export interface IProps extends ModalProps {
 
 const Modal = ({ data, showUI, setShowUI }: IProps) => {
     const dispatch = useAppDispatch();
-
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const modalRef = useRef<HTMLDivElement>(null);
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -133,10 +130,7 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
     }, []);
 
     return (
-        <div
-            className={`${styles.modal}${deviceClassName}${!showUI ? ` ${styles.close}` : ''}`}
-            ref={modalRef}
-        >
+        <div className={`${styles.modal}${!showUI ? ` ${styles.close}` : ''}`} ref={modalRef}>
             <ButtonClose handleClose={handleClose} />
 
             <div className={styles.body}>

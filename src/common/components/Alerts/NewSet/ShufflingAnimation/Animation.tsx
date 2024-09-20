@@ -2,15 +2,12 @@ import Lottie, { LottieRef } from 'lottie-react';
 import shufflingAnimation from '../../../../../assets/json/shuffle-animation.json';
 import styles from './styles.module.scss';
 import { AnimationEventHandler, useEffect, useRef } from 'react';
-import { DisplayHelper } from '../../../../utils/DisplayHelper';
 
 interface IProps {
     close?: boolean;
 }
 
 const ShufflingAnimation = ({ close }: IProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     const containerRef = useRef<HTMLDivElement>(null);
     const lottieRef: LottieRef = useRef(null);
 
@@ -30,7 +27,7 @@ const ShufflingAnimation = ({ close }: IProps) => {
 
     return (
         <div
-            className={`${styles.container}${deviceClassName}`}
+            className={`${styles.container}`}
             ref={containerRef}
             onAnimationEnd={handleAnimationEnd}
         >

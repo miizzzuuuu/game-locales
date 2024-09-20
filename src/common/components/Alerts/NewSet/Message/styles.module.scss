@@ -30,17 +30,17 @@
     }
 }
 
-.mobile-portrait {
-    &.message {
+:global(.mobile-portrait) {
+    .message {
         --translate-y: -2rem;
 
         top: calc(var(--height-streaming) * 1px);
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.message {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .message {
         top: 0.4rem;
     }
 }

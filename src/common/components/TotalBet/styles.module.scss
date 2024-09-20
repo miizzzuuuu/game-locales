@@ -40,8 +40,8 @@
     letter-spacing: -0.024rem;
 }
 
-.desktop,
-.mobile-landscape {
+:global(.desktop),
+:global(.mobile-landscape) {
     .background {
         transform: translateY(0.6rem);
     }
