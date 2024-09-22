@@ -161,6 +161,20 @@ export type PcodeDomino =
     | 'm41j'
     | 'm41k';
 
+// pcode Ceme
+export type PcodeCeme =
+    | 'm46'
+    | 'm46b'
+    | 'm46c'
+    | 'm46d'
+    | 'm46e'
+    | 'm46f'
+    | 'm46g'
+    | 'm46h'
+    | 'm46i'
+    | 'm46j'
+    | 'm46k';
+
 export type Pcode =
     | Pcode24D
     | Pcode24DJackpot
@@ -179,7 +193,8 @@ export type Pcode =
     | PcodeDragonTigerWild
     | PcodeShioFight
     | Pcode48D
-    | PcodeDomino;
+    | PcodeDomino
+    | PcodeCeme;
 
 export type ShioName =
     | 'dog'
