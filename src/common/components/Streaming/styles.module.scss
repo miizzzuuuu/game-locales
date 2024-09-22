@@ -8,7 +8,6 @@
 }
 
 .video-container {
-    width: 100%;
     aspect-ratio: 16 / 9;
 }
 
@@ -55,6 +54,20 @@
 
 :global(.desktop),
 :global(.mobile-landscape) {
+    .letter-box {
+        background-color: var(--streaming-background);
+
+        .video-container {
+            height: 100%;
+        }
+    }
+
+    .non-letter-box {
+        .video-container {
+            width: 100%;
+        }
+    }
+
     .video-container {
         position: absolute;
         left: 50%;

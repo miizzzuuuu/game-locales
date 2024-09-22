@@ -4,6 +4,7 @@ export type FeaturesType = {
     MINI_HOW_TO_PLAY: boolean;
     SHUFFLE_THE_CARDS: boolean;
     LETTER_BOX: boolean;
+    STREAMING_LANDSCAPE_LETTER_BOX: boolean;
 };
 
 export const Features: FeaturesType = {
@@ -12,4 +13,5 @@ export const Features: FeaturesType = {
     MINI_HOW_TO_PLAY: false,
     SHUFFLE_THE_CARDS: false,
     LETTER_BOX: false,
+    STREAMING_LANDSCAPE_LETTER_BOX: false,
 };
