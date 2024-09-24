@@ -2,7 +2,6 @@ import { DeviceType, GameSize, Orientation, Platform } from '../../types';
 
 export class DisplayHelper {
     private static currentDeviceType: DeviceType = 'desktop';
-    private static deviceClassCache: Record<string, string> = {};
 
     static size: Record<string, GameSize> = {
         desktop: {
@@ -232,17 +231,7 @@ export class DisplayHelper {
 
     static getDeviceClassName(styles: CSSModuleClasses) {
         const device = this.currentDeviceType;
-        const stylesHash = this.hashStyles(styles);
-
-        const cacheKey = `${device}-${stylesHash}`;
-
-        // check cache first
-        if (this.deviceClassCache[cacheKey]) {
-            return this.deviceClassCache[cacheKey];
-        }
-
         const className = styles[device] === undefined ? '' : ` ${styles[device]}`;
-        this.deviceClassCache[cacheKey] = className;
 
         return className;
     }

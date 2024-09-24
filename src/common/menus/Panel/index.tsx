@@ -2,7 +2,6 @@ import { AnimationEventHandler, ReactNode, useState } from 'react';
 
 import styles from './styles.module.scss';
 import Footer from './Footer';
-import { DisplayHelper } from '../../utils/DisplayHelper';
 import SliderUp from './SliderUp';
 import Header from './Header/Header';
 import { Features } from '../../utils/Features';
@@ -31,7 +30,6 @@ const Panel = ({
     handleBack,
 }: IProps) => {
     const layoutVersion = Features.LAYOUT_VERSION;
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const [hiddenUI, setVisibleUI] = useState(true);
 
@@ -53,7 +51,7 @@ const Panel = ({
 
     return (
         <div
-            className={`${styles['menu-content']}${deviceClassName} ${styles[`layout-${layoutVersion}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
+            className={`${styles['menu-content']} ${styles[`layout-${layoutVersion}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >

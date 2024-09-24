@@ -2,7 +2,6 @@ import { AnimationEventHandler, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import SVGBackground from './SVG/SVGBackground';
-import { DisplayHelper } from '../../../../utils/DisplayHelper';
 import LabelTranslate from '../../../LabelTranslate';
 
 interface IProps {
@@ -12,8 +11,6 @@ interface IProps {
 }
 
 const Message = ({ value, close, handleClose }: IProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     const messageRef = useRef<HTMLDivElement>(null);
     const prevMessage = useRef<string | undefined>();
 
@@ -38,11 +35,7 @@ const Message = ({ value, close, handleClose }: IProps) => {
     };
 
     return (
-        <div
-            className={`${styles.message}${deviceClassName}`}
-            ref={messageRef}
-            onAnimationEnd={handleAnimationEnd}
-        >
+        <div className={`${styles.message}`} ref={messageRef} onAnimationEnd={handleAnimationEnd}>
             <SVGBackground className={styles.background} type="new-set" />
 
             <div className={styles.content}>

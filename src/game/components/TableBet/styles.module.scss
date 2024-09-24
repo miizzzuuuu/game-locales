@@ -6,15 +6,14 @@
     align-items: center;
 
     grid-template-columns: repeat(40, minmax(0, 1fr));
-    // grid-template-rows: repeat(5, 7fr) repeat(2, 6fr);
 
     gap: 0.1rem;
 
     container: table-bet / size;
 }
 
-.mobile-portrait {
-    &.table-bet {
+:global(.mobile-portrait) {
+    .table-bet {
         --translate-x: 0;
         --translate-y: 0;
         --scale: 1;
@@ -37,8 +36,6 @@
             --translate-y: 0;
             --scale: 1;
             --opacity: 1;
-
-            // animation: table-bet-opened-animation-portrait 0.75s forwards;
         }
 
         &.closed {
@@ -46,15 +43,13 @@
             --translate-y: 0;
             --scale: 0.85;
             --opacity: 0.75;
-
-            // animation: table-bet-closed-animation-portrait 0.75s forwards;
         }
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.table-bet {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .table-bet {
         --perspective: 100rem;
 
         --translate-x: 0;
@@ -63,13 +58,8 @@
         --opacity: 1;
         --rotate-x: 0;
 
-        --scale-close: 0.5;
-        --opacity-close: 0.5;
-        --translate-x-close: 0;
-        --translate-y-close: 7rem;
-        --rotate-x-close: 46deg;
-
-        height: calc(100% - 2rem);
+        height: 100%;
+        padding-top: 2rem;
 
         grid-template-rows: repeat(7, 1fr);
 
@@ -78,25 +68,28 @@
         opacity: var(--opacity);
 
         transform-origin: bottom;
+        transition: all 0.75s;
+
+        --scale-close: 0.7;
+        --opacity-close: 0.9;
+        --translate-x-close: 0;
+        --translate-y-close: 4.2rem;
+        --rotate-x-close: 45deg;
 
         &.opened {
             --translate-x: 0;
-            --translate-y: 2rem;
+            --translate-y: 0;
             --scale: 1;
             --opacity: 1;
             --rotate-x: 0;
-
-            // animation: table-bet-opened-animation-landscape 1s forwards;
         }
 
         &.closed {
             --translate-x: 0;
-            --translate-y: 7rem;
+            --translate-y: 4.2rem;
             --scale: 0.5;
             --opacity: 0.5;
             --rotate-x: 46deg;
-
-            // animation: table-bet-closed-animation-landscape 1s forwards;
         }
     }
 }

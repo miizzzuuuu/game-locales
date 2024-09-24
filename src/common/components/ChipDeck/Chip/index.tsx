@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import SVGChip from '../../SVG/SVGChip';
 import { StringHelper } from '../../../utils/StringHelper';
 import styles from './styles.module.scss';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
 
 interface IProps {
     version?: number;
@@ -15,8 +14,6 @@ interface IProps {
 const Chip = ({ value, onClick, color, isActive }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
 
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     const stringValue = StringHelper.formatChipText(value);
 
     const handleClick = () => {
@@ -26,10 +23,7 @@ const Chip = ({ value, onClick, color, isActive }: IProps) => {
     };
 
     return (
-        <div
-            // className={`chip-item${deviceClassName} ${styles[`v${version}`]}`}
-            className={`chip-item${deviceClassName}`}
-        >
+        <div className="chip-item">
             <div
                 className={`${styles.chip}${isActive ? ` ${styles.active}` : ''}`}
                 data-value={value}

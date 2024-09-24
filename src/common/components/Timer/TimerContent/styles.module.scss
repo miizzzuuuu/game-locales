@@ -26,8 +26,8 @@
     letter-spacing: -0.1rem;
 }
 
-.mobile-portrait {
-    &.timer {
+:global(.mobile-portrait) {
+    .timer {
         top: var(--timer-portrait-top);
         left: var(--timer-portrait-left);
 
@@ -35,17 +35,17 @@
             translateY(var(--timer-portrait-trans-y)) scale(var(--scale));
 
         animation: time-popup 0.35s linear forwards;
+    }
 
-        &.disappear {
-            --scale: 0;
-            animation: time-hide 0.35s linear forwards;
-        }
+    .disappear {
+        --scale: 0;
+        animation: time-hide 0.35s linear forwards;
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.timer {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .timer {
         top: var(--timer-landscape-top);
         left: var(--timer-landscape-left);
 
@@ -53,10 +53,10 @@
             translateY(var(--timer-landscape-trans-y));
 
         animation: time-popup-2 0.35s linear forwards;
+    }
 
-        &.disappear {
-            animation: time-hide-2 0.35s linear forwards;
-        }
+    .disappear {
+        animation: time-hide-2 0.35s linear forwards;
     }
 }
 

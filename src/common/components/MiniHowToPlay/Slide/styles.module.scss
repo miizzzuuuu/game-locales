@@ -28,15 +28,15 @@
     grid-row: 3;
 }
 
-.mobile-portrait {
-    &.graphic {
+:global(.mobile-portrait) {
+    .graphic {
         max-height: 18rem;
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.graphic {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .graphic {
         height: 9rem;
     }
 }

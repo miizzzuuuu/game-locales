@@ -22,8 +22,8 @@
     flex-direction: column;
 }
 
-.mobile-portrait {
-    &.menu-content {
+:global(.mobile-portrait) {
+    .menu-content {
         width: 100%;
         max-height: 90%;
         left: 0;
@@ -38,9 +38,9 @@
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.menu-content {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .menu-content {
         height: 100%;
         width: 36rem;
         top: 0;

@@ -2,7 +2,7 @@ import { PropsWithChildren, useState } from 'react';
 import styles from './styles.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
-import { DisplayHelper } from '../../utils/DisplayHelper';
+
 import Footer from '../../components/Footer';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
@@ -11,13 +11,12 @@ import PanelTop from './PanelTop';
 
 const LayoutV1 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const [offsetStreaming] = useState(true);
 
     return (
         <div
-            className={`${styles['layout']}${deviceClassName}${offsetStreaming ? ` ${styles['offset-streaming']}` : ''}`}
+            className={`${styles['layout']}${offsetStreaming ? ` ${styles['offset-streaming']}` : ''}`}
         >
             {device === 'mobile-portrait' && (
                 <>

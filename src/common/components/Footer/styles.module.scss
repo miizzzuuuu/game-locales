@@ -4,18 +4,17 @@
     background: var(--bg-footer);
 
     display: flex;
-    // gap: var(--width-total-bet);
 }
 
-.mobile-portrait {
-    &.footer {
+:global(.mobile-portrait) {
+    .footer {
         justify-content: space-between;
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.footer {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .footer {
         gap: var(--width-total-bet);
     }
 }

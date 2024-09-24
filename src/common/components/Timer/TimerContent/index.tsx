@@ -9,14 +9,11 @@ import {
     selectTimerIsClose,
 } from '../../../../store/slice/timerSlice';
 import { Sound } from '../../../../services/sound';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
 
 export const length = 138.23;
 
 const TimerContent = () => {
     const dispatch = useAppDispatch();
-
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const time = useAppSelector(selectTime);
     const timer = useAppSelector(selectTimer);
@@ -80,9 +77,7 @@ const TimerContent = () => {
     }, [time]);
 
     return (
-        <div
-            className={`${styles.timer}${deviceClassName}${showTimer ? '' : ` ${styles.disappear}`}`}
-        >
+        <div className={`${styles.timer}${showTimer ? '' : ` ${styles.disappear}`}`}>
             <SVGTimer
                 state={currentTime <= 5 ? 'danger' : 'normal'}
                 length={length}

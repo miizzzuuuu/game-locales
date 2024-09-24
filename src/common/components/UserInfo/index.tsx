@@ -1,4 +1,3 @@
-import { DisplayHelper } from '../../utils/DisplayHelper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -9,12 +8,8 @@ interface IProps {
 }
 
 const UserInfo = ({ label, labelSecond, value, isRight }: IProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     return (
-        <div
-            className={`${styles['user-info']}${deviceClassName} ${isRight ? styles.right : styles.left}`}
-        >
+        <div className={`${styles['user-info']} ${isRight ? styles.right : styles.left}`}>
             <div className={styles['label-wrapper']}>
                 {isRight ? (
                     <>

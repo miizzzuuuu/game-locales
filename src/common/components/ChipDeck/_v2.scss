@@ -5,8 +5,8 @@
     }
 }
 
-.mobile-portrait {
-    &.v2 {
+:global(.mobile-portrait) {
+    .v2 {
         &.chip-deck {
             --gap: 0.5rem;
             --offset: 0.25rem;
@@ -42,9 +42,9 @@
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.v2 {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .v2 {
         &.chip-deck {
             --gap: 0.5rem;
             --offset: 0.25rem;

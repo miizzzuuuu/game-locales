@@ -249,4 +249,9 @@ export const timers = [
         time: '9',
         timer: 20,
     },
+    {
+        pcode: 'm46',
+        time: '9',
+        timer: 20,
+    },
 ];

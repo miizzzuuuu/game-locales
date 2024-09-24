@@ -58,16 +58,16 @@
     letter-spacing: -0.02rem;
 }
 
-.mobile-portrait {
-    &.user-info {
+:global(.mobile-portrait) {
+    .user-info {
         flex-shrink: 0;
         width: calc((36rem - var(--width-total-bet)) * 50 / 100 + 1.25rem);
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.user-info {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .user-info {
         flex: 1;
     }
 }

@@ -110,6 +110,7 @@ export class GameHelper {
         m41b: 'Europe Domino',
         m42: 'Grandprix Number',
         m43: '6D Color',
+        m46: 'Ceme',
         p6: '24D',
         p6b: '24D Jackpot',
         p7: 'Roulette',
