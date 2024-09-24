@@ -4,14 +4,22 @@
     background: rgba(0, 0, 0, 0.8);
     padding: 2.4rem 0.8rem 2rem;
     border-radius: 1.6rem;
-    animation: open-modal 0.45s forwards;
 
     display: flex;
     flex-direction: column;
+}
 
-    &.close {
-        animation: close-modal 0.4s forwards;
-    }
+.overlay {
+    position: absolute;
+    inset: 0;
+}
+
+:global :local(.modal) {
+    animation: zoomIn 0.3s both;
+}
+
+:global :local(.modal.close) {
+    animation: zoomOut 0.3s both;
 }
 
 .body {

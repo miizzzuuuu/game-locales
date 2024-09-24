@@ -9,7 +9,8 @@ const MiniHowToPlay = () => {
     const [showUI, setShowUI] = useState(true);
 
     const handleModalAnimationEnd: AnimationEventHandler = (e) => {
-        if (e.animationName.indexOf('close-background-modal') >= 0) {
+        // if (e.animationName.indexOf('close-background-modal') >= 0) {
+        if (e.animationName === 'fadeOut') {
             dispatch(setShowMiniHowToPlay(false));
         }
     };

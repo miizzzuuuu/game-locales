@@ -10,12 +10,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    animation: open-background-modal 0.3s forwards;
+:global :local(.mini-how-to-play) {
+    animation: fadeIn 0.3s both;
+}
 
-    &.close {
-        animation: close-background-modal 0.4s forwards;
-    }
+:global :local(.mini-how-to-play.close) {
+    animation: fadeOut 0.3s both;
 }
 
 @keyframes open-background-modal {

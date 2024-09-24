@@ -50,17 +50,21 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
     };
 
     return (
-        <div className={`${styles.modal}${!showUI ? ` ${styles.close}` : ''}`}>
-            <ButtonClose handleClose={handleClose} />
+        <>
+            <div className={styles.overlay} onClick={handleClose} />
 
-            <div className={styles.body}>
-                <Slider data={data} index={index} setIndex={setIndex} />
+            <div className={`${styles.modal}${!showUI ? ` ${styles.close}` : ''}`}>
+                <ButtonClose handleClose={handleClose} />
+
+                <div className={styles.body}>
+                    <Slider data={data} index={index} setIndex={setIndex} />
+                </div>
+
+                <ButtonDetails show={index === data.length - 1} openHTPDetail={openHTPDetail} />
+                <Indicators data={data} index={index} setIndex={setIndex} />
+                <DontShowAgain checked={dontShowAgain} setChecked={setDontShowAgain} />
             </div>
-
-            <ButtonDetails show={index === data.length - 1} openHTPDetail={openHTPDetail} />
-            <Indicators data={data} index={index} setIndex={setIndex} />
-            <DontShowAgain checked={dontShowAgain} setChecked={setDontShowAgain} />
-        </div>
+        </>
     );
 };
 
