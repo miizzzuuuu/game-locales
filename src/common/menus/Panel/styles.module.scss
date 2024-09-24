@@ -36,7 +36,7 @@
 
         &.disappear {
             :global {
-                animation: slideOutDown 0.5s both;
+                animation: slideOutDown 0.4s both;
             }
         }
     }
@@ -60,7 +60,7 @@
 
             &.disappear {
                 :global {
-                    animation: slideOutLeft 0.5s both;
+                    animation: slideOutLeft 0.4s both;
                 }
             }
         }
@@ -76,7 +76,7 @@
 
             &.disappear {
                 :global {
-                    animation: slideOutRight 0.5s both;
+                    animation: slideOutRight 0.4s both;
                 }
             }
         }
