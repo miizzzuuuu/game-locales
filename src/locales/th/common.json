@@ -55,5 +55,7 @@
     "payout-includes-initial-bet": "การจ่ายเงินรวมถึงเงินเดิมพันเริ่มต้น",
     "game": "เกม",
     "features": "คุณสมบัติ",
-    "shuffling-cards": "สับไพ่"
+    "shuffling-cards": "สับไพ่",
+    "complete-how-to-play": "คู่มือการเล่นแบบสมบูรณ์",
+    "dont-show-again": "อย่าแสดงอีก"
 }

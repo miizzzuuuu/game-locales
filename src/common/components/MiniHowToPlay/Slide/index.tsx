@@ -13,9 +13,7 @@ const Slide = ({ title, graphic, content, index }: IProps) => {
     return (
         <div className={styles.slide}>
             <div className={styles.wrapper}>
-                <div className={`${styles.title}`}>
-                    <h1>{title}</h1>
-                </div>
+                <div className={`${styles.title}`}>{title}</div>
 
                 <div className={`${styles.graphic}`}>{graphic(index)}</div>
 

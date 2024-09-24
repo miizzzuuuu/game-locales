@@ -1,0 +1,20 @@
+{
+    "slide-1": {
+        "title": "Cách Chơi",
+        "content": [
+            "Trò chơi này ném một quả bóng nhỏ vào bánh xe quay có 37 khe được đánh số từ 0 đến 36."
+        ]
+    },
+    "slide-2": {
+        "title": "Đặt Cược",
+        "content": [
+            "Bạn có thể đặt cược vào con số, khoảng số, màu sắc hoặc số chẵn/lẻ. Sau khi bạn đặt cược, bánh xe sẽ quay và một quả bóng sẽ được ném vào."
+        ]
+    },
+    "slide-3": {
+        "title": "Kết Quả Trò Chơi",
+        "content": [
+            "Quả bóng sẽ dừng lại ở một trong các khe và các cược phù hợp với kết quả sẽ thắng."
+        ]
+    }
+}

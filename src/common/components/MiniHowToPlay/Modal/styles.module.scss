@@ -28,6 +28,8 @@
 :global(.mobile-landscape) {
     .modal {
         --width-modal-mini-htp: 42rem;
+
+        height: calc(100% - 2rem);
     }
 }
 

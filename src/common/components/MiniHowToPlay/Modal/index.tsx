@@ -11,7 +11,7 @@ import { GameHelper } from '../../../utils/GameHelper';
 import { updateMiniHowToPlay } from '../../../../services/api/miniHowToPlay';
 
 export type ModalItem = {
-    title: string;
+    title: ReactNode;
     graphic: (index: number) => ReactNode;
     content: ReactNode;
 };

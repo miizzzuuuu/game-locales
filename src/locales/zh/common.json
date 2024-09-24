@@ -55,5 +55,7 @@
     "payout-includes-initial-bet": "支付包括初始投注。",
     "game": "游戏",
     "features": "功能",
-    "shuffling-cards": "洗牌"
+    "shuffling-cards": "洗牌",
+    "complete-how-to-play": "完整的游戏指南",
+    "dont-show-again": "不再显示"
 }

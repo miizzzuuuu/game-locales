@@ -1,31 +1,21 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
-import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
+import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 
 import SLIDE_3 from '../assets/slide-3.json';
 
-export const title = 'Hasil Permainan';
+const keySlide = 'slide-3';
 
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => {
     return <Graphic isActive={isActive} animationData={SLIDE_3} />;
 };
 
-export const ContentComponent = () => {
-    return (
-        <Content>
-            <p>
-                Bola akan berhenti disalah satu slot, dan taruhan yang sesuai dengan hasil tersebut
-                akan menang.
-            </p>
-        </Content>
-    );
-};
-
 const Slide3: ModalItem = {
-    title,
+    title: <Title keySlide={keySlide} />,
     graphic: (index: number) => <GraphicComponent isActive={index === 2} />,
-    content: <ContentComponent />,
+    content: <Content keySlide={keySlide} />,
 };
 
 export default Slide3;

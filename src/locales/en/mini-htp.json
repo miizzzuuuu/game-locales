@@ -1,0 +1,20 @@
+{
+    "slide-1": {
+        "title": "How to Play",
+        "content": [
+            "This is a game where a small ball is thrown into a spinning wheel that has 37 slots numbered from 0 to 36."
+        ]
+    },
+    "slide-2": {
+        "title": "Betting",
+        "content": [
+            "You can bet on numbers, number ranges, colors, or whether the outcome is odd or even. Once your bet is placed, the wheel is spun and a ball is thrown in."
+        ]
+    },
+    "slide-3": {
+        "title": "Game Outcome",
+        "content": [
+            "The ball will stop in one of the slots, and any bets that match the result will win."
+        ]
+    }
+}
