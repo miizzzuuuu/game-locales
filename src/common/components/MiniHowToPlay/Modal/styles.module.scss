@@ -59,31 +59,3 @@
         max-height: calc(var(--height-game-px) - 2rem);
     }
 }
-
-@keyframes open-modal {
-    0% {
-        opacity: 0;
-        scale: 0.5;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes close-modal {
-    0% {
-        opacity: 1;
-        scale: 1;
-    }
-
-    100% {
-        opacity: 0;
-        scale: 0.5;
-    }
-}

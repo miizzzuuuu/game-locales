@@ -1,21 +1,14 @@
 .top-winner {
+    --top-winner-height: 1.6rem;
+
     position: absolute;
     width: 100%;
-    height: 1.6rem;
+    height: var(--top-winner-height);
     background: rgba(15, 16, 29, 0.7);
     z-index: var(--layer-top-winner);
     pointer-events: none;
 
     transform: translateY(-100%);
-    opacity: 0;
-
-    &.show {
-        animation: top-winner-show 0.4s forwards;
-    }
-
-    &.hide {
-        animation: top-winner-hide 0.4s forwards;
-    }
 
     &::after {
         content: '';
@@ -26,6 +19,14 @@
         height: 100%;
         background: linear-gradient(90deg, rgba(255, 199, 28, 0.32) 0%, rgba(255, 199, 28, 0) 100%);
     }
+}
+
+:global :local(.top-winner.show) {
+    animation: slideInDown 0.4s both;
+}
+
+:global :local(.top-winner.hide) {
+    animation: slideOutUp 0.4s both;
 }
 
 .wrapper {
@@ -46,30 +47,30 @@
     opacity: 0.8;
 }
 
-@keyframes top-winner-show {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+// @keyframes top-winner-show {
+//     0% {
+//         transform: translateY(-100%);
+//         opacity: 0;
+//     }
 
-    80% {
-        opacity: 1;
-    }
+//     80% {
+//         opacity: 1;
+//     }
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+//     100% {
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
 
-@keyframes top-winner-hide {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+// @keyframes top-winner-hide {
+//     0% {
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
 
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
+//     100% {
+//         transform: translateY(-100%);
+//         opacity: 0;
+//     }
+// }

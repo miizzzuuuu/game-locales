@@ -1,8 +1,9 @@
 .item {
-    height: 1.6rem;
+    height: var(--top-winner-height);
     display: inline-flex;
     align-items: center;
     gap: 0.2rem;
+    margin-right: 0.6rem;
 
     &:first-child {
         .label {
@@ -15,6 +16,7 @@
 .value {
     font-size: 0.8rem;
     letter-spacing: -0.016rem;
+    line-height: var(--top-winner-height);
 }
 
 .label {

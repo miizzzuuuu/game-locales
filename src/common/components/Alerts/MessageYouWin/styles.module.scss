@@ -13,13 +13,17 @@
 
 :global :local(.you-win) {
     animation: fadeIn 0.3s linear both;
+
+    :local(.content) {
+        animation: zoomIn 0.3s both;
+    }
 }
 
 :global :local(.you-win.disapear) {
     animation: fadeOut 0.3s linear both;
 
-    :local .content {
-        animation: hide-message-content 0.3s linear both;
+    :local(.content) {
+        animation: zoomOut 0.3s both;
     }
 }
 
@@ -40,8 +44,6 @@
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-
-    animation: show-message-content 0.3s linear forwards;
 }
 
 .label {
@@ -57,32 +59,4 @@
     font-size: 1.9rem;
     font-weight: 700;
     letter-spacing: -0.038rem;
-}
-
-@keyframes show-message-content {
-    0% {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-
-@keyframes hide-message-content {
-    0% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: scaleX(0);
-    }
 }

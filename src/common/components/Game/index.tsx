@@ -16,7 +16,7 @@ import { FunctionHelper } from '../../utils/FunctionHelper';
 import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 import TopWinner from '../TopWinner';
-import { setTopWinner } from '../../../store/slice/topWinnerSlice';
+import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
@@ -30,6 +30,7 @@ function Game() {
     const nickname = useAppSelector(selectNickname);
     const operatorId = useAppSelector(selectOperatorId);
     const time = useAppSelector(selectTime);
+    const winnerData = useAppSelector(selectTopWinner);
 
     const handleKeyboardTest = useCallback((e: KeyboardEvent) => {
         if (e.key === 'l') {
@@ -102,7 +103,9 @@ function Game() {
             <Streaming />
             <Timer />
             <GameUI />
-            <TopWinner />
+
+            {winnerData.length > 0 && <TopWinner />}
+
             <AlertUI />
             <Menu />
         </div>

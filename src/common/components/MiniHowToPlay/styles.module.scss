@@ -19,23 +19,3 @@
 :global :local(.mini-how-to-play.close) {
     animation: fadeOut 0.3s both;
 }
-
-@keyframes open-background-modal {
-    from {
-        background: rgba(0, 0, 0, 0);
-    }
-
-    to {
-        background: rgba(0, 0, 0, 0.7);
-    }
-}
-
-@keyframes close-background-modal {
-    from {
-        background: rgba(0, 0, 0, 0.7);
-    }
-
-    to {
-        background: rgba(0, 0, 0, 0);
-    }
-}

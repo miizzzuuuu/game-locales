@@ -1,4 +1,4 @@
-import { AnimationEventHandler, useRef } from 'react';
+import { useRef } from 'react';
 import Content from './Content';
 import styles from './styles.module.scss';
 import { useTopWinner } from './hooks/useTopWinner';
@@ -7,15 +7,9 @@ import LabelTranslate from '../LabelTranslate';
 const TopWinner = () => {
     const winnerContentRef = useRef<HTMLDivElement>(null);
 
-    const { winnerData, isFinish, resetWinnerData } = useTopWinner({
+    const { winnerData, index, isFinish, animationEndHandler } = useTopWinner({
         ref: winnerContentRef,
     });
-
-    const animationEndHandler: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('top-winner-hide') >= 0) {
-            resetWinnerData();
-        }
-    };
 
     return (
         <div
@@ -27,7 +21,7 @@ const TopWinner = () => {
                     <LabelTranslate value="winner" />:
                 </div>
 
-                <Content ref={winnerContentRef} data={winnerData} />
+                <Content ref={winnerContentRef} data={winnerData} index={index} />
             </div>
         </div>
     );
