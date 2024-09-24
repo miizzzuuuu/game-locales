@@ -9,15 +9,17 @@ interface IProps {
 
 const Slide = ({ title, graphic, content }: IProps) => {
     return (
-        <>
-            <div className={`${styles.slide} ${styles.title}`}>
-                <h1>{title}</h1>
+        <div className={styles.slide}>
+            <div className={styles.wrapper}>
+                <div className={`${styles.title}`}>
+                    <h1>{title}</h1>
+                </div>
+
+                <div className={`${styles.graphic}`}>{graphic}</div>
+
+                <div className={`${styles.content}`}>{content}</div>
             </div>
-
-            <div className={`${styles.slide} ${styles.graphic}`}>{graphic}</div>
-
-            <div className={`${styles.slide} ${styles.content} mini-htp-slider`}>{content}</div>
-        </>
+        </div>
     );
 };
 

@@ -5,7 +5,6 @@ const colors = ['#0088FE', '#00C49F', '#FFBB28'];
 
 const Slideshow = () => {
     const [index, setIndex] = useState(0);
-    const sliderRef = useRef<HTMLDivElement>(null);
     const startXRef = useRef(0);
     const isDraggingRef = useRef(false);
 
@@ -33,41 +32,38 @@ const Slideshow = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <div
+            className={styles.slideshow}
+            onMouseDown={(e) => handleStart(e.clientX)}
+            onMouseMove={(e) => handleMove(e.clientX)}
+            onMouseUp={handleEnd}
+            onMouseLeave={handleEnd}
+            onTouchStart={(e) => handleStart(e.touches[0].clientX)}
+            onTouchMove={(e) => handleMove(e.touches[0].clientX)}
+            onTouchEnd={handleEnd}
+        >
             <div
-                className={styles.slideshow}
-                onMouseDown={(e) => handleStart(e.clientX)}
-                onMouseMove={(e) => handleMove(e.clientX)}
-                onMouseUp={handleEnd}
-                onMouseLeave={handleEnd}
-                onTouchStart={(e) => handleStart(e.touches[0].clientX)}
-                onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-                onTouchEnd={handleEnd}
+                className={styles['slideshow-slider']}
+                style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
-                <div
-                    className={styles['slideshow-slider']}
-                    style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-                    ref={sliderRef}
-                >
-                    {colors.map((backgroundColor, idx) => (
-                        <div
-                            className={styles.slide}
-                            key={idx}
-                            style={{ backgroundColor }}
-                            draggable={false}
-                        />
-                    ))}
-                </div>
+                {colors.map((backgroundColor, idx) => (
+                    <div
+                        className={styles.slide}
+                        key={idx}
+                        style={{ backgroundColor }}
+                        draggable={false}
+                    />
+                ))}
+            </div>
 
-                <div className={styles['slideshow-dots']}>
-                    {colors.map((_, idx) => (
-                        <div
-                            key={idx}
-                            className={`${styles['slideshow-dot']}${index === idx ? ` ${styles.active}` : ''}`}
-                            onClick={() => setIndex(idx)}
-                        ></div>
-                    ))}
-                </div>
+            <div className={styles['slideshow-dots']}>
+                {colors.map((_, idx) => (
+                    <div
+                        key={idx}
+                        className={`${styles['slideshow-dot']}${index === idx ? ` ${styles.active}` : ''}`}
+                        onClick={() => setIndex(idx)}
+                    ></div>
+                ))}
             </div>
         </div>
     );

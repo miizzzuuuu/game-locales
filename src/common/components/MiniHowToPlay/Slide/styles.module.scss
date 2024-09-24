@@ -1,36 +1,36 @@
 .slide {
-    scroll-snap-align: center;
-    width: calc(var(--width-modal-mini-htp) - 1.6rem);
-    min-height: fit-content;
+    display: inline-block;
+
+    width: 100%;
     height: 100%;
-    padding-inline: 0.8rem;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .title {
-    grid-row: 1;
-
     h1 {
         text-align: center;
         font-size: 1.4rem;
         font-style: normal;
         font-weight: 700;
         line-height: 1.6rem;
-        // letter-spacing: 0.28px;
         text-transform: uppercase;
     }
 }
 
-.graphic {
-    grid-row: 2;
-}
-
 .content {
-    grid-row: 3;
+    white-space: break-spaces;
 }
 
 :global(.mobile-portrait) {
     .graphic {
-        max-height: 18rem;
+        height: 18rem;
     }
 }
 
