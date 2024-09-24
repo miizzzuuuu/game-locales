@@ -10,7 +10,7 @@ export enum TypeGroup {
     Number50 = 'n50',
 }
 
-export class TwentyFourDHelper {
+export class _24DHelper {
     static RED = [1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20];
     static BLACK = [5, 6, 7, 8, 13, 14, 15, 16, 21, 22, 23, 24];
 

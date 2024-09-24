@@ -11,7 +11,7 @@ import APIManager from './common/utils/APIManager.ts';
 import './services/i18next/index.ts';
 import './styles/main.scss';
 import { BetHelper } from './common/utils/BetHelper.ts';
-import { TwentyFourDBet } from './game/utils/TwentyFourDBet.ts';
+import { _24DBet } from './game/utils/_24DBet.ts';
 
 declare global {
     interface Window {
@@ -38,7 +38,7 @@ const main = async () => {
     GameHelper.pcode = pcode;
 
     // modify for spesifik
-    BetHelper.game = new TwentyFourDBet();
+    BetHelper.game = new _24DBet();
 
     ReactDOM.createRoot(document.getElementById('root')!).render(
         <React.StrictMode>

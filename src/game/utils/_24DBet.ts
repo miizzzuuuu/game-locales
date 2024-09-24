@@ -1,7 +1,7 @@
 import { GameBetHelper } from '../../common/utils/BetHelper';
-import { TypeGroup } from './TwentyFourDHelper';
+import { TypeGroup } from './_24DHelper';
 
-export class TwentyFourDBet implements GameBetHelper {
+export class _24DBet implements GameBetHelper {
     GroupBet50 = ['n50'];
 
     oppositeBet50: Record<string, string> = {

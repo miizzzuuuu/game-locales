@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { TwentyFourDHelper } from '../../utils/TwentyFourDHelper';
+import { _24DHelper } from '../../utils/_24DHelper';
 import ButtonBet from './ButtonBet';
 import BetColRow from './ButtonBet/BetColRow';
 import BetNumber from './ButtonBet/BetNumber';
@@ -17,8 +17,8 @@ const TableBet = () => {
 
     return (
         <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
-            {TwentyFourDHelper.getBetKeys.map((key) => {
-                const bet = TwentyFourDHelper.bets[key];
+            {_24DHelper.getBetKeys.map((key) => {
+                const bet = _24DHelper.bets[key];
 
                 const className = `slot-${key} bet-number`;
                 const isWin = winBets?.includes(bet.button);
@@ -37,8 +37,8 @@ const TableBet = () => {
                 );
             })}
 
-            {TwentyFourDHelper.getBetColRowKeys.map((key) => {
-                const bet = TwentyFourDHelper.betsColRow[key];
+            {_24DHelper.getBetColRowKeys.map((key) => {
+                const bet = _24DHelper.betsColRow[key];
 
                 const className = `slot-${key} bet-col-row`;
                 const isWin = winBets?.includes(bet.button);
@@ -57,8 +57,8 @@ const TableBet = () => {
                 );
             })}
 
-            {TwentyFourDHelper.getBet50Keys.map((key) => {
-                const bet = TwentyFourDHelper.bets50[key];
+            {_24DHelper.getBet50Keys.map((key) => {
+                const bet = _24DHelper.bets50[key];
 
                 let className = `slot-${key}`;
                 if (['Small', 'Odd', 'Red'].includes(bet.button)) {
@@ -82,8 +82,8 @@ const TableBet = () => {
                 );
             })}
 
-            {TwentyFourDHelper.getBetMultiNumberKeys.map((key) => {
-                const bet = TwentyFourDHelper.betMultiNumber[key];
+            {_24DHelper.getBetMultiNumberKeys.map((key) => {
+                const bet = _24DHelper.betMultiNumber[key];
 
                 const className = `slot-${key}`;
 

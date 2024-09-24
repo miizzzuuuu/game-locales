@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { TwentyFourDHelper } from '../../game/utils/TwentyFourDHelper';
+import { _24DHelper } from '../../game/utils/_24DHelper';
 
 export interface ResultState {
     periode: number | null;
@@ -27,7 +27,7 @@ const baseSlice = createSlice({
     reducers: {
         setResult: (state, action: PayloadAction<number>) => {
             const resultNumber = action.payload;
-            const winBet = TwentyFourDHelper.getWinResult(resultNumber);
+            const winBet = _24DHelper.getWinResult(resultNumber);
 
             state.resultNumber = resultNumber;
             state.winBets = winBet;
