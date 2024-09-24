@@ -31,7 +31,7 @@ const SettingLanguage = ({ label, icon }: IProps) => {
                     height: '3rem',
                     borderRadius: '0.8rem',
                     border: '0.1rem solid rgba(94, 95, 115, 0.15)',
-                    background: '#2C2D3F',
+                    backgroundColor: '#2C2D3F',
                 }}
                 onChange={(value) => dispatch(updateSetings({ language: value }))}
             />
