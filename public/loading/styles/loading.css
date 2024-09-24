@@ -13,7 +13,7 @@
 }
 
 .loading-hide {
-    animation-name: fadeOut;
+    animation-name: loadingFadeOut;
     animation-fill-mode: forwards;
     animation-duration: 0.45s;
 }
@@ -127,7 +127,7 @@
     }
 }
 
-@keyframes fadeOut {
+@keyframes loadingFadeOut {
     0% {
         opacity: 1;
     }

@@ -34,13 +34,23 @@ const Panel = ({
     const [hiddenUI, setVisibleUI] = useState(true);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('menu-open') >= 0) {
+        // if (
+        //     e.animationName === 'slideInUp' ||
+        //     e.animationName === 'slideInRight' ||
+        //     e.animationName === 'slideInLeft'
+        // ) {
+        if (/slideIn/.test(e.animationName)) {
             setVisibleUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('menu-close') >= 0) {
+        // if (
+        //     e.animationName === 'slideOutDown' ||
+        //     e.animationName === 'slideOutLeft' ||
+        //     e.animationName === 'slideOutRight'
+        // ) {
+        if (/slideOut/.test(e.animationName)) {
             setVisibleUI(true);
         }
     };
