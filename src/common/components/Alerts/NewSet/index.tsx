@@ -4,8 +4,13 @@ import { selectGameNewSet } from '../../../../store/slice/gameSlice';
 import Message from './Message';
 import ShufflingAnimation from './ShufflingAnimation/Animation';
 import styles from './styles.module.scss';
+import { Features } from '../../../utils/Features';
 
 const NewSet = () => {
+    if (!Features.SHUFFLE_THE_CARDS) return null;
+
+    console.log('new set');
+
     const newSet = useAppSelector(selectGameNewSet);
 
     const [renderUI, setRenderUI] = useState(false);
