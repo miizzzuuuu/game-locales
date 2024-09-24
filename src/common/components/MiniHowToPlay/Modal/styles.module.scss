@@ -38,6 +38,20 @@
     }
 }
 
+:global(.mobile-landscape) {
+    .modal {
+        height: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+    }
+}
+
+:global(.desktop) {
+    .modal {
+        height: calc(var(--height-game-px) - 2rem);
+        max-height: calc(var(--height-game-px) - 2rem);
+    }
+}
+
 @keyframes open-modal {
     0% {
         opacity: 0;
