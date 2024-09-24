@@ -55,7 +55,7 @@
             box-shadow: 0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
             &:global {
-                animation: slideInRight 0.5s both;
+                animation: slideInLeft 0.5s both;
             }
 
             &.disappear {
@@ -71,7 +71,7 @@
             box-shadow: -0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
             &:global {
-                animation: slideInLeft 0.5s both;
+                animation: slideInRight 0.5s both;
             }
 
             &.disappear {
