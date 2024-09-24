@@ -1,13 +1,15 @@
-import { ReactNode } from 'react';
 import styles from './styles.module.scss';
+import { ModalItem } from '../Modal';
 
-interface IProps {
-    title: string;
-    graphic: ReactNode;
-    content: ReactNode;
+export interface GraphicComponentProps {
+    isActive: boolean;
 }
 
-const Slide = ({ title, graphic, content }: IProps) => {
+interface IProps extends ModalItem {
+    index: number;
+}
+
+const Slide = ({ title, graphic, content, index }: IProps) => {
     return (
         <div className={styles.slide}>
             <div className={styles.wrapper}>
@@ -15,7 +17,7 @@ const Slide = ({ title, graphic, content }: IProps) => {
                     <h1>{title}</h1>
                 </div>
 
-                <div className={`${styles.graphic}`}>{graphic}</div>
+                <div className={`${styles.graphic}`}>{graphic(index)}</div>
 
                 <div className={`${styles.content}`}>{content}</div>
             </div>

@@ -51,7 +51,13 @@ const Slider = ({ data, index, setIndex }: IProps) => {
                 style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
                 {data.map(({ title, graphic, content }, idx) => (
-                    <Slide key={idx} title={title} graphic={graphic} content={content} />
+                    <Slide
+                        key={idx}
+                        title={title}
+                        graphic={graphic}
+                        content={content}
+                        index={index}
+                    />
                 ))}
             </div>
         </div>

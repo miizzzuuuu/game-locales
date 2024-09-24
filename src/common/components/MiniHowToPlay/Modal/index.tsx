@@ -12,7 +12,7 @@ import { updateMiniHowToPlay } from '../../../../services/api/miniHowToPlay';
 
 export type ModalItem = {
     title: string;
-    graphic: ReactNode;
+    graphic: (index: number) => ReactNode;
     content: ReactNode;
 };
 

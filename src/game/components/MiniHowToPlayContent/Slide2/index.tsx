@@ -3,16 +3,13 @@ import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
 
 import SLIDE_2 from '../assets/slide-2.json';
-import Lottie from 'lottie-react';
+
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 
 export const title = 'Taruhan';
 
-export const GraphicComponent = () => {
-    return (
-        <Graphic>
-            <Lottie animationData={SLIDE_2} loop />
-        </Graphic>
-    );
+export const GraphicComponent = ({ isActive }: GraphicComponentProps) => {
+    return <Graphic isActive={isActive} animationData={SLIDE_2} />;
 };
 
 export const ContentComponent = () => {
@@ -28,7 +25,7 @@ export const ContentComponent = () => {
 
 const Slide2: ModalItem = {
     title,
-    graphic: <GraphicComponent />,
+    graphic: (index: number) => <GraphicComponent isActive={index === 1} />,
     content: <ContentComponent />,
 };
 

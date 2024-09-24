@@ -1,18 +1,14 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
 
 import SLIDE_1 from '../assets/slide-1.json';
-import Lottie from 'lottie-react';
 
 export const title = 'Cara Bermain';
 
-export const GraphicComponent = () => {
-    return (
-        <Graphic>
-            <Lottie animationData={SLIDE_1} loop />
-        </Graphic>
-    );
+export const GraphicComponent = ({ isActive }: GraphicComponentProps) => {
+    return <Graphic isActive={isActive} animationData={SLIDE_1} />;
 };
 
 export const ContentComponent = () => {
@@ -28,7 +24,7 @@ export const ContentComponent = () => {
 
 const Slide1: ModalItem = {
     title,
-    graphic: <GraphicComponent />,
+    graphic: (index: number) => <GraphicComponent isActive={index === 0} />,
     content: <ContentComponent />,
 };
 
