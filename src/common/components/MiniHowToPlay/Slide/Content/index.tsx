@@ -11,11 +11,13 @@ const Content = ({ keySlide }: IProps) => {
     const contents = t('content', {}, true) as string[];
 
     return (
-        <div className={styles.content}>
+        <>
             {contents.map((content, idx) => (
-                <p key={idx}>{content}</p>
+                <p key={idx} className={styles.paragraf}>
+                    {content}
+                </p>
             ))}
-        </div>
+        </>
     );
 };
 
