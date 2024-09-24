@@ -1,13 +1,14 @@
-import { useEffect, useRef } from 'react';
+import { CSSProperties, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 
 interface IProps {
     isActive: boolean;
     animationData: unknown;
+    style?: CSSProperties;
 }
 
-const Graphic = ({ isActive, animationData }: IProps) => {
+const Graphic = ({ isActive, animationData, style }: IProps) => {
     const lottieRef = useRef<LottieRefCurrentProps>(null);
 
     useEffect(() => {
@@ -20,7 +21,13 @@ const Graphic = ({ isActive, animationData }: IProps) => {
 
     return (
         <div className={styles.container}>
-            <Lottie animationData={animationData} loop autoplay={false} lottieRef={lottieRef} />
+            <Lottie
+                animationData={animationData}
+                loop
+                autoplay={false}
+                lottieRef={lottieRef}
+                style={style}
+            />
         </div>
     );
 };

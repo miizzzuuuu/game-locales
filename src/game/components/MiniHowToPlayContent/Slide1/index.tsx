@@ -9,7 +9,7 @@ import SLIDE_1 from '../assets/slide-1.json';
 const keySlide = 'slide-1';
 
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
-    <Graphic isActive={isActive} animationData={SLIDE_1} />
+    <Graphic isActive={isActive} animationData={SLIDE_1} style={{ width: '28rem' }} />
 );
 
 const Slide1: ModalItem = {
