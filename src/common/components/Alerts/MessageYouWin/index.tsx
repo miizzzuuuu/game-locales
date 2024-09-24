@@ -114,7 +114,7 @@ const MessageYouWin = () => {
     // }, [resultStatus]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('message-fadeout') >= 0) {
+        if (e.animationName === 'fadeOut') {
             // setRenderUI(false);
             setDisplayValue(0);
             dispatch(endWinAnimation());

@@ -23,13 +23,13 @@ const Menu = () => {
     const menuOpened = useAppSelector(selectMenuOpened);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('panel-fadein') >= 0) {
+        if (e.animationName === 'fadeIn') {
             setHiddenUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('panel-fadeout') && menuOpened.length === 0) {
+        if (e.animationName === 'fadeOut' && menuOpened.length === 0) {
             setHiddenUI(true);
         }
     };

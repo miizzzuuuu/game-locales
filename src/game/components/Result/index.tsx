@@ -19,11 +19,11 @@ const Result = () => {
     const resultNumber = useAppSelector(selectResultNumber);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('result-fadein') >= 0) {
+        if (e.animationName === 'fadeIn') {
             dispatch(doneResult());
         }
 
-        if (e.animationName.indexOf('result-fadeout') >= 0) {
+        if (e.animationName === 'fadeOut') {
             dispatch(resetResult());
         }
     };

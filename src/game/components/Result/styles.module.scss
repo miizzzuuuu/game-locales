@@ -4,14 +4,18 @@
     top: 9rem;
     transform: translateX(-50%);
 
-    animation: result-fadein 0.4s forwards;
-
     &.disapear {
-        animation: result-fadeout 0.4s linear forwards;
-
         .image {
             animation: hide-ball 0.3s linear forwards;
         }
+    }
+}
+
+:global :local(.result) {
+    animation: fadeIn 0.3s both;
+
+    &:local(.disapear) {
+        animation: fadeOut 0.3s linear forwards;
     }
 }
 
@@ -19,26 +23,6 @@
     width: 9rem;
 
     animation: show-ball 0.3s linear forwards;
-}
-
-@keyframes result-fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes result-fadeout {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
 }
 
 @keyframes show-ball {

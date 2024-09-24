@@ -12,7 +12,7 @@ const ShufflingAnimation = ({ close }: IProps) => {
     const lottieRef: LottieRef = useRef(null);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('fadein') >= 0) {
+        if (e.animationName === 'zoomIn') {
             lottieRef.current?.play();
         }
     };

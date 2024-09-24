@@ -11,7 +11,7 @@ export const Features: FeaturesType = {
     LAYOUT_VERSION: 1,
     BUTTON_PATTERN: false,
     MINI_HOW_TO_PLAY: false,
-    SHUFFLE_THE_CARDS: false,
+    SHUFFLE_THE_CARDS: true,
     LETTER_BOX: false,
     STREAMING_LANDSCAPE_LETTER_BOX: false,
 };

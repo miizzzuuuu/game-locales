@@ -3,12 +3,14 @@
 
     width: 10rem;
     height: 10rem;
-
-    animation: fadein 0.45s linear forwards;
 }
 
-.disapear {
-    animation: fadeout 0.45s linear forwards;
+:global :local(.container) {
+    animation: zoomIn 0.5s both;
+
+    &:local(.disapear) {
+        animation: zoomOut 0.3s both;
+    }
 }
 
 :global(.mobile-portrait) {
@@ -25,37 +27,5 @@
         left: 50%;
         top: 50%;
         translate: -50% -50%;
-    }
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-        scale: 0;
-    }
-
-    80% {
-        scale: 1;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes fadeout {
-    0% {
-        opacity: 1;
-        scale: 1;
-    }
-
-    80% {
-        scale: 0;
-    }
-
-    100% {
-        opacity: 0;
-        scale: 0;
     }
 }
