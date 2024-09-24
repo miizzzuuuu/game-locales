@@ -8,9 +8,9 @@ import SLIDE_3 from '../assets/slide-3.json';
 
 const keySlide = 'slide-3';
 
-export const GraphicComponent = ({ isActive }: GraphicComponentProps) => {
-    return <Graphic isActive={isActive} animationData={SLIDE_3} />;
-};
+export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
+    <Graphic isActive={isActive} animationData={SLIDE_3} />
+);
 
 const Slide3: ModalItem = {
     title: <Title keySlide={keySlide} />,
