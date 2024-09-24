@@ -25,9 +25,16 @@ function useFetchGame() {
                 if (!ignore) {
                     dispatch(setGame(data));
 
-                    await fetchResultHistory(dispatch);
-                    await fetchLastbets((lastbet) => {
-                        if (lastbet.periode === data.periode) {
+                    await Promise.all([
+                        fetchResultHistory(dispatch),
+                        fetchLastbets((lastbet) => {
+                            if (lastbet.periode !== data.periode) {
+                                console.log('current bet');
+
+                                dispatch(setLastBetData(lastbet));
+                                return;
+                            }
+
                             console.log('current bet');
 
                             let totalBet = 0;
@@ -42,15 +49,11 @@ function useFetchGame() {
                                     periode: lastbet.periode,
                                 }),
                             );
-
-                            return;
-                        }
-
-                        dispatch(setLastBetData(lastbet));
-                    });
+                        }),
+                    ]);
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load settings completed');
+                    LoadingHelper.update(10, 'Load game completed');
                 }
             } catch (error) {
                 APIManager.handleErrorApi(error);

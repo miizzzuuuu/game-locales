@@ -6,7 +6,6 @@ import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
-// import { useFetchLastbets } from './common/hooks/useFetchLastbets';
 import { useFetchGame } from './common/hooks/useFetchGame';
 
 import ResizeOverlay from './common/components/ResizeOverlay';
@@ -30,18 +29,11 @@ function App() {
 
     const { finish: finishGetPlayer } = useFetchPlayer();
     const { finish: finishGetSettings } = useFetchSettings();
-    // const { finish: finishGetLastbets } = useFetchLastbets();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
 
     useEffect(() => {
-        if (
-            finishGetPlayer &&
-            finishGetSettings &&
-            // finishGetLastbets &&
-            finishGetGame &&
-            finishGetTimer
-        ) {
+        if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
             setShowGame(true);
 
             LoadingHelper.finish();
