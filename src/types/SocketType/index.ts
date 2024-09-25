@@ -84,4 +84,4 @@ export type ThunderM8B = {
     jackpot: string | null; // "4";
 };
 
-export type NewSetData = { pcode: string; gameSet: 13494; status: boolean };
+export type NewSetData = { pcode: string; gameSet: number; status: boolean };
