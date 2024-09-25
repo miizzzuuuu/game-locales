@@ -347,4 +347,80 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 5000000,
         },
     ],
+    p9b: [
+        {
+            name: 'jackpot',
+            payout: 40,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'one number',
+            payout: 9,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'two numbers',
+            payout: 4,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'four numbers',
+            payout: 1.5,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'row bet',
+            payout: 1.5,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'column bet',
+            payout: 2.3,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                {
+                    name: 'big',
+                    payout: 0.95,
+                },
+                {
+                    name: 'small',
+                    payout: 0.95,
+                },
+                {
+                    name: 'odd',
+                    payout: 0.95,
+                },
+                {
+                    name: 'even',
+                    payout: 0.95,
+                },
+                {
+                    name: 'red',
+                    payout: 0.95,
+                },
+                {
+                    name: 'black',
+                    payout: 0.95,
+                },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
 };
