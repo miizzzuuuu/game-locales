@@ -14,6 +14,10 @@ export default defineConfig(({ mode }) => {
                             return 'i18next';
                         }
 
+                        if (id.indexOf('lottie') >= 0) {
+                            return 'lottie';
+                        }
+
                         if (id.indexOf('react') >= 0) {
                             return 'react';
                         }

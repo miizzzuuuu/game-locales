@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { lazy, Suspense, useCallback } from 'react';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
@@ -11,7 +11,6 @@ import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
-import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
 import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
@@ -21,6 +20,9 @@ import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
 import { useNewSet } from '../../hooks/useNewSet';
+
+// import Menu from '../../menus/Menu';
+const Menu = lazy(() => import('../../menus/Menu'));
 
 function Game() {
     const isLetterOrPillarBoxActive = DisplayHelper.getLetterOrPillarBoxActive();
@@ -107,7 +109,10 @@ function Game() {
             {winnerData.length > 0 && <TopWinner />}
 
             <AlertUI />
-            <Menu />
+
+            <Suspense>
+                <Menu />
+            </Suspense>
         </div>
     );
 }
