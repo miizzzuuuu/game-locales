@@ -1,5 +1,5 @@
 import APIManager, { ENDPOINTS } from '../../common/utils/APIManager';
-import { GameHelper, getPcode } from '../../common/utils/GameHelper';
+import { getPcode, isDev } from '../../common/utils/GameHelper';
 import { MiniHowToPlay } from '../../types';
 
 export const getMiniHowToPlay = async () => {
@@ -14,7 +14,7 @@ export const getMiniHowToPlay = async () => {
 };
 
 export const updateMiniHowToPlay = async (params: MiniHowToPlay) => {
-    if (GameHelper.isDev()) {
+    if (isDev()) {
         throw new Error('avoid update mini how to play in dev');
     }
 

@@ -8,11 +8,9 @@ export const setPcode = (value: string) => {
 
 export const getPcode = () => _pcode;
 
-export class GameHelper {
-    static isDev() {
-        return import.meta.env.MODE === 'development';
-    }
+export const isDev = () => import.meta.env.MODE === 'development';
 
+export class GameHelper {
     static GAME_CODE: Record<string, string> = {
         p6: '24D',
         p7: 'RL',
@@ -130,7 +128,7 @@ export class GameHelper {
     }
 
     static getMiniHowToPlayLocalStorage() {
-        if (this.isDev()) {
+        if (isDev()) {
             console.log('is dev');
             return true;
         }
@@ -144,7 +142,7 @@ export class GameHelper {
     }
 
     static hideMiniHowToPlayLocalStorage() {
-        if (this.isDev()) {
+        if (isDev()) {
             console.log('is dev');
             return;
         }
