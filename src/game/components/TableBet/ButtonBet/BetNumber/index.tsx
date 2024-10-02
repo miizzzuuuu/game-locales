@@ -15,6 +15,4 @@ const BetNumber = ({ button }: IProps) => {
     );
 };
 
-const MemoizedBetNumber = memo(BetNumber);
-
-export default MemoizedBetNumber;
+export default memo(BetNumber);

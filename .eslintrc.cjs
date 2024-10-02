@@ -15,27 +15,12 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: ['./tsconfig.app.json', './tsconfig.node.json'],
+        project: ['./tsconfig.json', './tsconfig.node.json'],
         tsconfigRootDir: __dirname,
     },
 
     plugins: ['react-refresh'],
     rules: {
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': [
-            'error',
-            {
-                args: 'all',
-                argsIgnorePattern: '^_',
-                caughtErrors: 'all',
-                caughtErrorsIgnorePattern: '^_',
-                destructuredArrayIgnorePattern: '^_',
-                varsIgnorePattern: '^_',
-                ignoreRestSiblings: true,
-            },
-        ],
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-        '@typescript-eslint/consistent-type-definitions': ['off'],
-        '@typescript-eslint/no-explicit-any': ['warn'],
     },
 };

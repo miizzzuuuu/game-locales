@@ -11,7 +11,7 @@ function useFullscreen() {
                 return;
             }
 
-            void document.documentElement.requestFullscreen();
+            document.documentElement.requestFullscreen();
         };
 
         document.addEventListener('click', toggleFullScreen);

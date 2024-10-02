@@ -24,6 +24,4 @@ const Card = forwardRef<HTMLDivElement, ITransactionCardProps>(({ data }, cardRe
     );
 });
 
-Card.displayName = 'Card';
-
 export default Card;

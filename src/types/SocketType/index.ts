@@ -38,10 +38,10 @@ export type CameraSequence = {
 export type TopWinnerData = {
     pcode: string;
     periode: number;
-    data: {
+    data: Array<{
         username: string;
         totalWin: number;
-    }[];
+    }>;
 };
 
 export type BaseThunder = { pcode: string };
@@ -56,7 +56,7 @@ export type Thunder<PCode extends string> = PCode extends 'p6b'
           }
         : PCode extends 'm8b'
           ? BaseThunder & ThunderM8B
-          : BaseThunder & { data: unknown };
+          : BaseThunder & { data: any };
 
 export type ThunderP6B = {
     lucky_number: { data: string[]; prize: number };

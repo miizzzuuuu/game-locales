@@ -17,7 +17,7 @@ function useFetchResults() {
             try {
                 setLoading(true);
                 const data = await getResultHistory<{
-                    data: unknown;
+                    data: any;
                     pagination: Pagination;
                 }>();
 
@@ -33,7 +33,7 @@ function useFetchResults() {
             }
         };
 
-        void fetchPlayerSettings();
+        fetchPlayerSettings();
 
         return () => {
             ignore = true;
@@ -45,20 +45,24 @@ function useFetchResults() {
 
 export { useFetchResults };
 
-export const fetchResultHistory = async (_dispatch: AppDispatch, gameSet?: number | string) => {
+export const fetchResultHistory = async (
+    // @ts-ignore
+    dispatch: AppDispatch,
+    gameSet?: number | string,
+) => {
     try {
-        const page = 1;
-        const perPage = 10;
+        const page: number = 1;
+        const perPage: number = 10;
 
         const data = await getResultHistory<{
-            data: unknown; // change to type data your game
+            data: any; // change to type data your game
             pagination: Pagination;
         }>(page, perPage, gameSet);
 
         console.log(data);
 
         // run action to save history result to redux
-        // _dispatch(setHistory(data));
+        // dispatch(setHistory(data));
     } catch (error) {
         console.error('get history error', error);
     }

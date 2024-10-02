@@ -14,9 +14,9 @@ import {
 } from '../../types';
 
 export class TransactionHelper {
-    static groupTransactionsByDate(
-        transactions: Transaction<Pcode>[],
-    ): Record<string, Transaction<Pcode>[]> {
+    static groupTransactionsByDate(transactions: Transaction<Pcode>[]): {
+        [key: string]: Transaction<Pcode>[];
+    } {
         return transactions.reduce(
             (acc, transaction) => {
                 const date = transaction.tglbel.split('T')[0];
@@ -27,47 +27,49 @@ export class TransactionHelper {
                 acc[date].push(transaction);
                 return acc;
             },
-            {} as Record<string, Transaction<Pcode>[]>,
+            {} as { [key: string]: Transaction<Pcode>[] },
         );
     }
 
     static is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
-        return item.pcode.startsWith('p6') && !item.pcode.startsWith('p6b');
+        return /^p6(?![b]$)/.test(item.pcode);
     };
 
     static is24DJackpot = (item: Transaction<string>): item is Transaction<Pcode24DJackpot> => {
-        return item.pcode.startsWith('p6b');
+        // return /^p6[bc]$/.test(item.pcode);
+        // return item.pcode === 'p6b' || item.pcode === 'p6c';
+        return /^p6[b]$/.test(item.pcode);
     };
 
     static isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
-        return item.pcode.startsWith('p7');
+        return /^p7/.test(item.pcode);
     };
 
     static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
-        return item.pcode.startsWith('m22');
+        return /^m22/.test(item.pcode);
     };
 
     static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
-        return item.pcode.startsWith('p12');
+        return /^p12/.test(item.pcode);
     };
 
     static isRedWhite = (item: Transaction<string>): item is Transaction<PcodeRedWhite> => {
-        return item.pcode.startsWith('m11');
+        return /^m11/.test(item.pcode);
     };
 
     static isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
-        return item.pcode.startsWith('m27');
+        return /^m27/.test(item.pcode);
     };
 
     static is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
-        return item.pcode.startsWith('m35');
+        return /^m35/.test(item.pcode);
     };
 
     static isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {
-        return item.pcode.startsWith('m41');
+        return /^m41/.test(item.pcode);
     };
 
     static isCeme = (item: Transaction<string>): item is Transaction<PcodeCeme> => {
-        return item.pcode.startsWith('m46');
+        return /^m46/.test(item.pcode);
     };
 }

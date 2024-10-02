@@ -21,6 +21,4 @@ const BetColRow = ({ label }: IProps) => {
     );
 };
 
-const MemoizedBetColRow = memo(BetColRow);
-
-export default MemoizedBetColRow;
+export default memo(BetColRow);

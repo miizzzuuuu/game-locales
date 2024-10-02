@@ -18,7 +18,7 @@ function useNewSet({ handleNewSet }: Params) {
         if (gameNewSet) {
             handleNewSet();
         }
-    }, [gameNewSet, handleNewSet]);
+    }, [gameNewSet]);
 }
 
 export { useNewSet };

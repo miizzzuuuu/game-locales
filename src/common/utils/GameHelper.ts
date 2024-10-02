@@ -1,6 +1,6 @@
 const OFFSET_TIME = 5;
 
-let _pcode = '';
+let _pcode: string = '';
 
 const GAME_CODE: Record<string, string> = {
     p6: '24D',
@@ -119,7 +119,7 @@ const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 export const WIN_NOTIFICATION_DURATION = 3000;
 
 export const normalizeTime = (time: number) => {
-    const result = time - OFFSET_TIME;
+    let result = time - OFFSET_TIME;
     return result < 0 ? 0 : result;
 };
 
@@ -176,21 +176,21 @@ export const getEventNewSet = () => {
 
     const variant = getVariant();
 
-    if (_pcode.startsWith('m22')) {
+    if (/^m22/.test(_pcode)) {
         baseNewSet = 'baccaratNewSet';
-    } else if (_pcode.startsWith('m23')) {
+    } else if (/^m23/.test(_pcode)) {
         baseNewSet = 'dragonTigerNewSet';
-    } else if (_pcode.startsWith('m24')) {
+    } else if (/^m24/.test(_pcode)) {
         baseNewSet = 'niuniuNewSet';
-    } else if (_pcode.startsWith('m27')) {
+    } else if (/^m27/.test(_pcode)) {
         baseNewSet = 'shioFightNewSet';
-    } else if (_pcode.startsWith('m28')) {
+    } else if (/^m28/.test(_pcode)) {
         baseNewSet = 'idn4standNewSet';
-    } else if (_pcode.startsWith('m38')) {
+    } else if (/^m38/.test(_pcode)) {
         baseNewSet = 'baccaratmachineNewSet';
-    } else if (_pcode.startsWith('m41')) {
+    } else if (/^m41/.test(_pcode)) {
         baseNewSet = 'dominoNewSet';
-    } else if (_pcode.startsWith('m46')) {
+    } else if (/^m46/.test(_pcode)) {
         baseNewSet = 'cemeNewSet';
     } else {
         return baseNewSet;

@@ -60,7 +60,7 @@ function useFetchGame() {
             }
         };
 
-        void fetchPlayerSettings();
+        fetchPlayerSettings();
 
         return () => {
             ignore = true;

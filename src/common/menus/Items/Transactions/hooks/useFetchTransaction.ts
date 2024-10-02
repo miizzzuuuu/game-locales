@@ -7,7 +7,7 @@ interface Params {
 }
 
 export const useFetchTransaction = ({ date }: Params) => {
-    const [transactionData, setTransactionData] = useState<Transaction<Pcode>[]>([]);
+    const [transactionData, setTransactionData] = useState<Array<Transaction<Pcode>>>([]);
     const [totalPage, setTotalPage] = useState(0);
 
     const [page, setPage] = useState(1);
@@ -53,13 +53,13 @@ export const useFetchTransaction = ({ date }: Params) => {
                         );
                     }
                 }
-            } catch (error) {
+            } catch (error: any) {
                 console.log(error);
                 setIsLoading(false);
             }
         };
 
-        void fetchTransaction(page, date);
+        fetchTransaction(page, date);
 
         return () => {
             ignore = true;

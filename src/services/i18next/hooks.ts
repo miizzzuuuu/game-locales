@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 export const useAppTranslate = (prefix?: string) => {
     const { t: translate } = useTranslation();
 
-    const t = <T = string>(key: string, options?: TOptions, returnObjects?: boolean): T => {
-        const mergedOptions: TOptions = { ...options, returnObjects };
+    const t = <T = string>(key: string, options?: TOptions, returnObjects: boolean = false): T => {
+        const mergedOptions = { ...options, returnObjects };
 
         if (prefix === undefined) {
             return translate(`common.${key}`, mergedOptions) as T;

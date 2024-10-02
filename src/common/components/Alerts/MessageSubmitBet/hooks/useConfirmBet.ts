@@ -42,12 +42,12 @@ function useConfirmBet() {
 
         if (confirmBetStatus === 'rejected') {
             setMessage({
-                value: confirmBetError ?? t('bet-error'),
+                value: confirmBetError || t('bet-error'),
                 type: 'danger',
             });
             return;
         }
-    }, [t, confirmBetStatus, confirmBetError]);
+    }, [confirmBetStatus, confirmBetError]);
 
     const handleClose = () => {
         dispatch(resetConfirmBet());

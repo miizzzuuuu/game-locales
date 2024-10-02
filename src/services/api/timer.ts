@@ -3,7 +3,10 @@ import { getPcode } from '../../common/utils/GameHelper';
 import { Timer } from '../../types';
 
 export const getTimer = async () => {
-    const response = await APIManager.get<Timer>(ENDPOINTS.timers + `/${getPcode()}`);
-
-    return response.data;
+    try {
+        const response = await APIManager.get<Timer>(ENDPOINTS.timers + `/${getPcode()}`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
 };

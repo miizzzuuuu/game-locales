@@ -11,7 +11,7 @@ import { StringHelper } from '../../../utils/StringHelper';
 import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
 import styles from './styles.module.scss';
-import { AnimationEventHandler, useCallback, useEffect, useRef, useState } from 'react';
+import { AnimationEventHandler, useEffect, useRef, useState } from 'react';
 
 const MessageYouWin = () => {
     const currency = useAppSelector(selectCurrency);
@@ -52,68 +52,61 @@ const MessageYouWin = () => {
         };
     }, [winAmount]);
 
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number | undefined>(undefined);
     const previousTimeRef = useRef<number | undefined>(undefined);
     const startTimeRef = useRef<number | undefined>(undefined);
 
-    const animate = useCallback(
-        (time: number) => {
-            if (startTimeRef.current === undefined) {
-                startTimeRef.current = time;
-            }
+    const animate = (time: number) => {
+        if (startTimeRef.current === undefined) {
+            startTimeRef.current = time;
+        }
 
-            const elapsedTime = time - startTimeRef.current;
+        const elapsedTime = time - startTimeRef.current;
 
-            if (previousTimeRef.current !== undefined) {
-                const deltaTime = time - previousTimeRef.current;
+        if (previousTimeRef.current !== undefined) {
+            const deltaTime = time - previousTimeRef.current;
 
-                // Only update if enough time has passed for 60fps (approx. 16.67ms per frame)
-                if (deltaTime >= 16.67) {
-                    const currentWin = Array(String(winAmount).length);
-                    for (let i = 0; i < currentWin.length; i++) {
-                        currentWin[i] = Math.floor(Math.random() * 9);
-                    }
-                    setDisplayValue(Number(currentWin.join('')));
-
-                    previousTimeRef.current = time;
+            // Only update if enough time has passed for 60fps (approx. 16.67ms per frame)
+            if (deltaTime >= 16.67) {
+                const currentWin = Array(String(winAmount).length);
+                for (let i = 0; i < currentWin.length; i++) {
+                    currentWin[i] = Math.floor(Math.random() * 9);
                 }
-            } else {
+                setDisplayValue(Number(currentWin.join('')));
+
                 previousTimeRef.current = time;
             }
+        } else {
+            previousTimeRef.current = time;
+        }
 
-            // Stop the animation after 3 seconds
-            if (elapsedTime < 1000) {
-                requestRef.current = requestAnimationFrame(animate);
-            } else {
-                setDisplayValue(winAmount);
+        // Stop the animation after 3 seconds
+        if (elapsedTime < 1000) {
+            requestRef.current = requestAnimationFrame(animate);
+        } else {
+            setDisplayValue(winAmount);
 
-                if (requestRef.current) {
-                    cancelAnimationFrame(requestRef.current);
-                    requestRef.current = undefined;
-                }
-
-                startTimeRef.current = undefined;
-            }
-        },
-        [winAmount],
-    );
+            cancelAnimationFrame(requestRef.current as number);
+            startTimeRef.current = undefined;
+        }
+    };
 
     useEffect(() => {
         if (winAmount > 0) {
             requestRef.current = requestAnimationFrame(animate);
         } else {
             setDisplayValue(0);
-            if (requestRef.current) {
+            if (requestRef.current !== undefined) {
                 cancelAnimationFrame(requestRef.current);
             }
         }
 
         return () => {
-            if (requestRef.current) {
+            if (requestRef.current !== undefined) {
                 cancelAnimationFrame(requestRef.current);
             }
         };
-    }, [winAmount, animate]);
+    }, [winAmount]);
 
     // useEffect(() => {
     //     if (resultStatus === 'done') {

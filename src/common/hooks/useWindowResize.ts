@@ -2,7 +2,7 @@ import { useLayoutEffect } from 'react';
 
 type Handler = () => void | (() => void)[];
 
-function useWindowResize<T extends Handler>(handler: T, delay = true) {
+function useWindowResize<T extends Handler>(handler: T, delay: boolean = true) {
     useLayoutEffect(() => {
         const handleResize = () => {
             if (delay) {
@@ -28,7 +28,7 @@ function useWindowResize<T extends Handler>(handler: T, delay = true) {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [handler, delay]);
+    }, [handler]);
 }
 
 export { useWindowResize };

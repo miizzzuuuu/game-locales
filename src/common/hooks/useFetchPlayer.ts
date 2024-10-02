@@ -41,7 +41,7 @@ function useFetchPlayer() {
             }
         };
 
-        void fetchPlayerData();
+        fetchPlayerData();
 
         return () => {
             ignore = true;

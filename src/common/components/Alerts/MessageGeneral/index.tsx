@@ -45,7 +45,7 @@ const MessageGeneral = () => {
                 );
             }
         },
-        [t, dispatch],
+        [t],
     );
 
     useKeyboard(handleKeyboard);

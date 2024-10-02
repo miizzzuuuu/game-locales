@@ -10,7 +10,7 @@ import SVGLangKr from '../components/SVG/languages/SVGLangKr';
 export type SupportLang = (typeof LangHelper.supportLang)[number];
 
 export class LangHelper {
-    private static _activeLang = 'en';
+    private static _activeLang: string = 'en';
 
     static get activeLang() {
         return this._activeLang;
@@ -39,6 +39,8 @@ export class LangHelper {
         vn: 'Tiếng Việt',
         ko: '한국어',
     };
+
+    static getDisplayName() {}
 
     static countryLanguageCodes: Record<string, string> = {
         en: 'en-US',

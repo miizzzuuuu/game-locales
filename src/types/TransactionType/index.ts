@@ -60,11 +60,11 @@ export type BaseTransaction = {
     total_debit: number;
     total_credit: number;
     total_transaction: number;
-    detail_betting: BettingDetail[];
+    detail_betting: Array<BettingDetail>;
 };
 
 type DefaultDetailResult = {
-    detail_result: unknown;
+    detail_result: {} | [];
 };
 
 export type Transaction<PCode extends string> = PCode extends Pcode24D

@@ -4,19 +4,23 @@ import SVGIconLobby from '../SVG/SVGIconLobby';
 const BackToLobby = () => {
     const handleBackToLobby = () => {
         const changeMainGame = async () => {
-            await fetch('/auth/maingame/change?game=""');
+            try {
+                await fetch('/auth/maingame/change?game=""');
 
-            const origin = window.location.origin;
+                const origin = window.location.origin;
 
-            const parent = window === window.parent ? window : window.parent;
-            if (parent.top?.opener) {
-                parent.close();
-            } else {
-                parent.location.href = origin;
+                const parent = window === window.parent ? window : window.parent;
+                if (parent.top?.opener) {
+                    parent.close();
+                } else {
+                    parent.location.href = origin;
+                }
+            } catch (error) {
+                throw error;
             }
         };
 
-        void changeMainGame();
+        changeMainGame();
     };
 
     return <Item icon={<SVGIconLobby />} text="lobby" onClick={handleBackToLobby} />;

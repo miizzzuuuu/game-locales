@@ -21,7 +21,7 @@ const Message = ({ value, close, handleClose }: IProps) => {
                 messageRef.current.classList.add(styles.disapear);
             }
         }
-    }, [close, value]);
+    }, [close]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (e.animationName === 'fadeOut') {

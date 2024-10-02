@@ -6,7 +6,7 @@ import { updateBalance } from '../slice/playerSlice';
 export const confirmBetFullfiledListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: confirmBetFullfiled,
-        effect: (action, listenerApi) => {
+        effect: async (action, listenerApi) => {
             const newBalance = action.payload.balance - action.payload.total_bet;
 
             listenerApi.dispatch(

@@ -9,7 +9,7 @@ export interface Player {
     table: string;
     operatorId: string;
     sessionToken: string;
-    currentBet: unknown[];
+    currentBet: any[];
     dateTime: string;
     operatorLogo: string | null;
     apiKey: string;
@@ -38,12 +38,14 @@ export interface BetSend extends Bet {
 
 export type LastBets = BetSend[];
 
-export type LastBetsGameResponse = {
+export interface LastBetsGameResponse {
     periode: number;
     data: LastBets;
-};
+}
 
-export type LastBetsResponse = Record<string, LastBetsGameResponse>;
+export interface LastBetsResponse {
+    [key: string]: LastBetsGameResponse;
+}
 
 export interface Game {
     name: string;
@@ -56,7 +58,7 @@ export interface Game {
     stream_4k: string;
     stream_8k: string;
     bet: Record<string, unknown>;
-    betHistory: unknown[];
+    betHistory: any[];
     newgame: string;
     maintenance: string;
     maintenance_text: string;

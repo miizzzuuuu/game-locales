@@ -15,7 +15,7 @@ import { BetSend } from '../../types';
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: loadNewValueAction,
-        effect: (action, listenerApi) => {
+        effect: async (action, listenerApi) => {
             console.log('middleware: loadNewValue', { action, listenerApi });
 
             const data = action.payload;
@@ -85,7 +85,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
 export const gameResultListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: gameResultAction,
-        effect: (action, listenerApi) => {
+        effect: async (action, listenerApi) => {
             console.log('middleware: gameResult', {
                 action,
                 listenerApi,

@@ -1,5 +1,5 @@
 export class FunctionHelper {
-    static debounce<T extends (...args: unknown[]) => void>(
+    static debounce<T extends (...args: any[]) => void>(
         func: T,
         wait: number,
     ): (...args: Parameters<T>) => void {

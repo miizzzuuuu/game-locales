@@ -3,10 +3,14 @@ import { getPcode, isDev } from '../../common/utils/GameHelper';
 import { MiniHowToPlay } from '../../types';
 
 export const getMiniHowToPlay = async () => {
-    const response = await APIManager.get<MiniHowToPlay>(
-        ENDPOINTS.miniHowToPlay + `/${getPcode()}`,
-    );
-    return response.data;
+    try {
+        const response = await APIManager.get<MiniHowToPlay>(
+            ENDPOINTS.miniHowToPlay + `/${getPcode()}`,
+        );
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
 };
 
 export const updateMiniHowToPlay = async (params: MiniHowToPlay) => {
@@ -14,9 +18,13 @@ export const updateMiniHowToPlay = async (params: MiniHowToPlay) => {
         throw new Error('avoid update mini how to play in dev');
     }
 
-    const response = await APIManager.put<MiniHowToPlay>(
-        ENDPOINTS.miniHowToPlay + `/${getPcode()}`,
-        params,
-    );
-    return response.data;
+    try {
+        const response = await APIManager.put<MiniHowToPlay>(
+            ENDPOINTS.miniHowToPlay + `/${getPcode()}`,
+            params,
+        );
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
 };

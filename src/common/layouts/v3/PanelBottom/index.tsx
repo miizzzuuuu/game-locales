@@ -19,7 +19,7 @@ const PanelBottom = () => {
                 <ButtonSatatistic />
             </div>
 
-            <div className={styles.middle}>
+            <div className={styles['middle']}>
                 <ChipDeck show={betIsOpen} version={2} />
 
                 <div className={styles['middle-left']}>

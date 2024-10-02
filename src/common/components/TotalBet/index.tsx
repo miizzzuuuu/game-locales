@@ -12,12 +12,12 @@ const TotalBet = () => {
 
     return (
         <div className={`${styles['total-bet']}`}>
-            <SVGBackgroundTotalBet className={styles.background} />
+            <SVGBackgroundTotalBet className={styles['background']} />
 
-            <div className={styles.content}>
-                <LabelTranslate value="total-bet" className={styles.desc} />
+            <div className={styles['content']}>
+                <LabelTranslate value="total-bet" className={styles['desc']} />
 
-                <span className={styles.value}>{StringHelper.formatNumber(totaBet)}</span>
+                <span className={styles['value']}>{StringHelper.formatNumber(totaBet)}</span>
             </div>
         </div>
     );
