@@ -142,36 +142,27 @@ export const GAME_DISPLAY_NAME: Record<string, string> = {
 
 export const getGameDisplayName = (pcode: string) => GAME_DISPLAY_NAME[pcode] || pcode;
 
+export const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
+
+export const getKeyMiniHowToPlay = () => `${KEY_MINI_HOW_TO_PLAY}-${_pcode}`;
+
+export const getMiniHowToPlayLocalStorage = () => {
+    if (isDev()) {
+        return true;
+    }
+
+    const item = localStorage.getItem(getKeyMiniHowToPlay());
+    return !item || item === 'true';
+};
+
+export const hideMiniHowToPlayLocalStorage = () => {
+    if (isDev()) {
+        return;
+    }
+    localStorage.setItem(getKeyMiniHowToPlay(), 'false');
+};
+
 export class GameHelper {
-    static KEY_MINI_HOW_TO_PLAY = 'mini-htp';
-
-    static getKeyMiniHowToPlay() {
-        return `${this.KEY_MINI_HOW_TO_PLAY}-${_pcode}`;
-    }
-
-    static getMiniHowToPlayLocalStorage() {
-        if (isDev()) {
-            console.log('is dev');
-            return true;
-        }
-
-        const item = localStorage.getItem(this.getKeyMiniHowToPlay());
-        if (!item) {
-            return true;
-        }
-
-        return !!(item === 'true');
-    }
-
-    static hideMiniHowToPlayLocalStorage() {
-        if (isDev()) {
-            console.log('is dev');
-            return;
-        }
-
-        localStorage.setItem(this.getKeyMiniHowToPlay(), 'false');
-    }
-
     static getEventNewSet() {
         let baseNewSet: string = '';
 
