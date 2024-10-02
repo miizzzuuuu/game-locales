@@ -13,7 +13,7 @@ const TopWinner = () => {
 
     return (
         <div
-            className={`${styles['top-winner']}${isFinish ? ` ${styles.hide}` : ` ${styles.show}`}`}
+            className={`${styles['top-winner']}${isFinish ? ` ${styles.hide}` : ''}`}
             onAnimationEnd={animationEndHandler}
         >
             <div className={styles.wrapper}>

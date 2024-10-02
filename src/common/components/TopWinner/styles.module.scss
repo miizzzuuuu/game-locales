@@ -8,8 +8,6 @@
     z-index: var(--layer-top-winner);
     pointer-events: none;
 
-    transform: translateY(-100%);
-
     &::after {
         content: '';
         position: absolute;
@@ -21,7 +19,7 @@
     }
 }
 
-:global :local(.top-winner.show) {
+:global :local(.top-winner) {
     animation: slideInDown 0.4s both;
 }
 
