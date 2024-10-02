@@ -19,6 +19,11 @@ module.exports = {
         tsconfigRootDir: __dirname,
     },
 
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
     plugins: ['react-refresh'],
     rules: {
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
