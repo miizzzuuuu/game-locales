@@ -7,16 +7,16 @@ const MessageSubmitBet = () => {
         messageConfirmBetHandleClose,
     } = useConfirmBet();
 
+    if (!messageConfirmBetValue) {
+        return null;
+    }
+
     return (
-        <>
-            {messageConfirmBetValue && (
-                <Message
-                    value={messageConfirmBetValue}
-                    type={messageConfirmBetType}
-                    handleClose={messageConfirmBetHandleClose}
-                />
-            )}
-        </>
+        <Message
+            value={messageConfirmBetValue}
+            type={messageConfirmBetType}
+            handleClose={messageConfirmBetHandleClose}
+        />
     );
 };
 

@@ -9,15 +9,8 @@ import { Features } from '../../../utils/Features';
 const NewSet = () => {
     if (!Features.SHUFFLE_THE_CARDS) return null;
 
-    console.log('new set');
-
     const newSet = useAppSelector(selectGameNewSet);
-
     const [renderUI, setRenderUI] = useState(false);
-
-    const handleClose = () => {
-        setRenderUI(false);
-    };
 
     useEffect(() => {
         if (newSet) {
@@ -28,6 +21,10 @@ const NewSet = () => {
     if (!newSet && !renderUI) {
         return null;
     }
+
+    const handleClose = () => {
+        setRenderUI(false);
+    };
 
     return (
         <div className={styles['new-set']}>

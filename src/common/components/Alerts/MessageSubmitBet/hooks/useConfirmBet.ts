@@ -12,8 +12,11 @@ function useConfirmBet() {
 
     const { t } = useAppTranslate();
 
-    const [message, setMessage] = useState<{ value: string; type: 'danger' | 'warning' | 'none' }>({
-        value: '',
+    const [message, setMessage] = useState<{
+        value: null | string;
+        type: 'danger' | 'warning' | 'none';
+    }>({
+        value: null,
         type: 'none',
     });
 
@@ -50,7 +53,7 @@ function useConfirmBet() {
         dispatch(resetConfirmBet());
 
         setMessage({
-            value: '',
+            value: null,
             type: 'none',
         });
     };
