@@ -116,6 +116,8 @@ const GAME_DISPLAY_NAME: Record<string, string> = {
 
 const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 
+export const WIN_NOTIFICATION_DURATION = 3000;
+
 export const normalizeTime = (time: number) => {
     let result = time - OFFSET_TIME;
     return result < 0 ? 0 : result;

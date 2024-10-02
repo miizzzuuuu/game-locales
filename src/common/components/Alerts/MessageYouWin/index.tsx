@@ -6,6 +6,7 @@ import {
     selectWinAmount,
     selectWinStatus,
 } from '../../../../store/slice/resultSlice';
+import { WIN_NOTIFICATION_DURATION } from '../../../utils/GameHelper';
 import { StringHelper } from '../../../utils/StringHelper';
 import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
@@ -40,7 +41,7 @@ const MessageYouWin = () => {
                 if (messageYouWinRef.current) {
                     messageYouWinRef.current.classList.add(styles.disapear);
                 }
-            }, 4000);
+            }, WIN_NOTIFICATION_DURATION);
         }
 
         return () => {

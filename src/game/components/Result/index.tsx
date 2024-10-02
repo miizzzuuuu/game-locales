@@ -8,6 +8,7 @@ import {
     selectResultNumber,
     selectResultStatus,
 } from '../../../store/slice/resultSlice';
+import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 
 const Result = () => {
     const resultRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ const Result = () => {
                 if (resultRef.current) {
                     resultRef.current.classList.add(styles.disapear);
                 }
-            }, 4000);
+            }, WIN_NOTIFICATION_DURATION);
         }
 
         return () => {
