@@ -65,16 +65,18 @@ export const getGameCode = () => {
         : 'unknown game: pcode ' + _pcode;
 };
 
-export class GameHelper {
-    static GAME_NAME: Record<string, string> = {
-        p7: 'roulette',
-        p7b: 'rouletteb',
-        p7c: 'roulettec',
-        p7d: 'rouletted',
-        p7e: 'roulettee',
-        p7f: 'roulettef',
-    };
+export const GAME_NAME: Record<string, string> = {
+    p7: 'roulette',
+    p7b: 'rouletteb',
+    p7c: 'roulettec',
+    p7d: 'rouletted',
+    p7e: 'roulettee',
+    p7f: 'roulettef',
+};
 
+export const getGameName = () => GAME_NAME[_pcode];
+
+export class GameHelper {
     static GAME_DISPLAY_NAME: Record<string, string> = {
         m6: '24D Spin',
         m7: 'Oglok',
@@ -193,10 +195,6 @@ export class GameHelper {
         }
 
         return baseNewSet + variant.toUpperCase();
-    }
-
-    static getGameName() {
-        return this.GAME_NAME[_pcode];
     }
 
     static getGameDisplayName(pcode: string) {

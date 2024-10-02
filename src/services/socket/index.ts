@@ -10,7 +10,7 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-import { GameHelper, getGameCode, getPcode } from '../../common/utils/GameHelper';
+import { GameHelper, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
@@ -223,7 +223,7 @@ export class SocketComponent {
             //rememberTransport: false,
             transports: ['websocket'],
             upgrade: false,
-            query: `user=${nickname}&agent=${operatorId}&game=${GameHelper.getGameName()}`,
+            query: `user=${nickname}&agent=${operatorId}&game=${getGameName()}`,
         };
     };
 
