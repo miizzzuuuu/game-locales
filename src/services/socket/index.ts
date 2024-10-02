@@ -10,7 +10,7 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-import { GameHelper, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
+import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
@@ -183,7 +183,7 @@ export class SocketComponent {
             return;
         }
 
-        const eventName = GameHelper.getEventNewSet();
+        const eventName = getEventNewSet();
         console.log('event new set', eventName);
 
         if (!eventName) {
@@ -240,7 +240,7 @@ export class SocketComponent {
                 this._socket.off(eventName);
             });
 
-            const eventNewSet = GameHelper.getEventNewSet();
+            const eventNewSet = getEventNewSet();
             if (eventNewSet) {
                 this._socket.off(eventNewSet);
             }

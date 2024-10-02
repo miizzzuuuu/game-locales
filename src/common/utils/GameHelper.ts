@@ -2,20 +2,7 @@ const OFFSET_TIME = 5;
 
 let _pcode: string = '';
 
-export const setPcode = (value: string) => {
-    _pcode = value;
-};
-
-export const getPcode = () => _pcode;
-
-export const getBasePcode = () => {
-    if (!_pcode.trim()) throw new Error('mixedPcode is empty!');
-    return _pcode.replace(/\D+$/, '');
-};
-
-export const isDev = () => import.meta.env.MODE === 'development';
-
-export const GAME_CODE: Record<string, string> = {
+const GAME_CODE: Record<string, string> = {
     p6: '24D',
     p7: 'RL',
     p9: '12D',
@@ -54,18 +41,7 @@ export const GAME_CODE: Record<string, string> = {
     m42: 'GPX',
 };
 
-export const getGameCode = () => {
-    const basePcode = getBasePcode();
-    const lastLetter = isNaN(Number(_pcode[_pcode.length - 1]))
-        ? _pcode[_pcode.length - 1].toUpperCase()
-        : '';
-
-    return GAME_CODE[basePcode]
-        ? GAME_CODE[basePcode] + lastLetter
-        : 'unknown game: pcode ' + _pcode;
-};
-
-export const GAME_NAME: Record<string, string> = {
+const GAME_NAME: Record<string, string> = {
     p7: 'roulette',
     p7b: 'rouletteb',
     p7c: 'roulettec',
@@ -74,9 +50,7 @@ export const GAME_NAME: Record<string, string> = {
     p7f: 'roulettef',
 };
 
-export const getGameName = () => GAME_NAME[_pcode];
-
-export const GAME_DISPLAY_NAME: Record<string, string> = {
+const GAME_DISPLAY_NAME: Record<string, string> = {
     m6: '24D Spin',
     m7: 'Oglok',
     m8: 'Dice 6',
@@ -140,9 +114,40 @@ export const GAME_DISPLAY_NAME: Record<string, string> = {
     p12: 'Sicbo[Dice]',
 };
 
-export const getGameDisplayName = (pcode: string) => GAME_DISPLAY_NAME[pcode] || pcode;
+const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 
-export const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
+export const normalizeTime = (time: number) => {
+    let result = time - OFFSET_TIME;
+    return result < 0 ? 0 : result;
+};
+
+export const setPcode = (value: string) => {
+    _pcode = value;
+};
+
+export const getPcode = () => _pcode;
+
+export const getBasePcode = () => {
+    if (!_pcode.trim()) throw new Error('mixedPcode is empty!');
+    return _pcode.replace(/\D+$/, '');
+};
+
+export const isDev = () => import.meta.env.MODE === 'development';
+
+export const getGameCode = () => {
+    const basePcode = getBasePcode();
+    const lastLetter = isNaN(Number(_pcode[_pcode.length - 1]))
+        ? _pcode[_pcode.length - 1].toUpperCase()
+        : '';
+
+    return GAME_CODE[basePcode]
+        ? GAME_CODE[basePcode] + lastLetter
+        : 'unknown game: pcode ' + _pcode;
+};
+
+export const getGameName = () => GAME_NAME[_pcode];
+
+export const getGameDisplayName = (pcode: string) => GAME_DISPLAY_NAME[pcode] || pcode;
 
 export const getKeyMiniHowToPlay = () => `${KEY_MINI_HOW_TO_PLAY}-${_pcode}`;
 
@@ -162,54 +167,32 @@ export const hideMiniHowToPlayLocalStorage = () => {
     localStorage.setItem(getKeyMiniHowToPlay(), 'false');
 };
 
-export class GameHelper {
-    static getEventNewSet() {
-        let baseNewSet: string = '';
+export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
 
-        const variant = this.getVariant();
-        const pcode = _pcode;
+export const getEventNewSet = () => {
+    let baseNewSet = '';
 
-        if (/^m22/.test(pcode)) {
-            baseNewSet = 'baccaratNewSet';
-        } else if (/^m23/.test(pcode)) {
-            baseNewSet = 'dragonTigerNewSet';
-        } else if (/^m24/.test(pcode)) {
-            baseNewSet = 'niuniuNewSet';
-        } else if (/^m27/.test(pcode)) {
-            baseNewSet = 'shioFightNewSet';
-        } else if (/^m28/.test(pcode)) {
-            baseNewSet = 'idn4standNewSet';
-        } else if (/^m38/.test(pcode)) {
-            baseNewSet = 'baccaratmachineNewSet';
-        } else if (/^m41/.test(pcode)) {
-            baseNewSet = 'dominoNewSet';
-        }
+    const variant = getVariant();
 
-        if (!variant) {
-            return baseNewSet;
-        }
-
-        return baseNewSet + variant.toUpperCase();
+    if (/^m22/.test(_pcode)) {
+        baseNewSet = 'baccaratNewSet';
+    } else if (/^m23/.test(_pcode)) {
+        baseNewSet = 'dragonTigerNewSet';
+    } else if (/^m24/.test(_pcode)) {
+        baseNewSet = 'niuniuNewSet';
+    } else if (/^m27/.test(_pcode)) {
+        baseNewSet = 'shioFightNewSet';
+    } else if (/^m28/.test(_pcode)) {
+        baseNewSet = 'idn4standNewSet';
+    } else if (/^m38/.test(_pcode)) {
+        baseNewSet = 'baccaratmachineNewSet';
+    } else if (/^m41/.test(_pcode)) {
+        baseNewSet = 'dominoNewSet';
+    } else if (/^m46/.test(_pcode)) {
+        baseNewSet = 'cemeNewSet';
+    } else {
+        return baseNewSet;
     }
 
-    static normalizeTime(time: number) {
-        let result = time - OFFSET_TIME;
-
-        if (result < 0) {
-            result = 0;
-        }
-
-        return result;
-    }
-
-    static getVariant(): string {
-        const pcode = _pcode;
-
-        if (pcode.length === 3) {
-            return '';
-        }
-
-        const variant = pcode.charAt(pcode.length - 1);
-        return variant;
-    }
-}
+    return variant ? baseNewSet + variant.toUpperCase() : baseNewSet;
+};

@@ -5,7 +5,7 @@ import App from './App.tsx';
 
 import { makeServer } from './api/server/server.ts';
 
-import { setPcode } from './common/utils/GameHelper.tsx';
+import { setPcode } from './common/utils/GameHelper.ts';
 import APIManager from './common/utils/APIManager.ts';
 
 import './services/i18next/index.ts';
