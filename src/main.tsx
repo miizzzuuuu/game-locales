@@ -36,6 +36,7 @@ const main = async () => {
     }
 
     setPcode(pcode);
+    document.body.classList.add(pcode);
 
     // modify for spesifik
     BetHelper.game = new _24DBet();
