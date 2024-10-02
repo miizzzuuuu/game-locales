@@ -7,7 +7,7 @@
     // setting streaming scale in portrait
     --streaming-scale-portrait: 1.1;
     --height-overlay-streaming-portrait: 4.8rem;
-    --width-overlay-streaming-landscape: 12rem;
+    --width-overlay-streaming-landscape: 8rem;
     --height-overlay-streaming-landscape: 11rem;
 
     --streaming-background: #1c1303;
@@ -24,17 +24,16 @@
     --streaming-color-3: linear-gradient(180deg, rgba(133, 76, 7, 0) 0%, #854c07 100%);
 
     // landscape, kiri
-    --streaming-color-4: linear-gradient(to right, #1c1303 0%, #1c1303 28%, transparent 100%);
+    --streaming-color-4: linear-gradient(to right, #1c1303 0%, transparent 100%);
     // landscape, kanan
-    --streaming-color-5: linear-gradient(to left, #1c1303 0%, #1c1303 28%, transparent 100%);
+    --streaming-color-5: linear-gradient(to left, #1c1303 0%, transparent 100%);
     // landscape, bawah
     --streaming-color-6: linear-gradient(
-            180deg,
-            rgba(28, 19, 3, 0) 0%,
-            rgba(28, 19, 3, 0.83) 47.34%,
-            #0d0800 100%
-        ),
-        linear-gradient(180deg, rgba(28, 19, 3, 0) 0%, rgba(28, 19, 3, 0.83) 47.34%, #0d0800 100%);
+        180deg,
+        rgba(28, 19, 3, 0) 0%,
+        rgba(28, 19, 3, 0.83) 47.34%,
+        #0d0800 100%
+    );
 
     --bg-footer: transparent; // rgba(2, 10, 20, 0.5);
 
