@@ -7,7 +7,7 @@ import { selectMax, selectMax50, selectMin, selectMin50 } from '../../store/slic
 import { setMessage } from '../../store/slice/gameStateSlice';
 import { selectBalance } from '../../store/slice/playerSlice';
 import { BetHelper } from '../utils/BetHelper';
-import { GameHelper } from '../utils/GameHelper';
+import { getBasePcode } from '../utils/GameHelper';
 
 interface Params {
     useLowerCase?: boolean | undefined;
@@ -43,10 +43,10 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
                 const opposite = oppositeBetKey.split('-')[0];
 
                 const buttonOpposite = t(
-                    `${GameHelper.getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
+                    `${getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
                 );
                 const buttonName = t(
-                    `${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`,
+                    `${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`,
                 );
 
                 const message = t('common.bet-error-n50', {
@@ -87,7 +87,7 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
             const buttonName = isGroup50
-                ? t(`${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
                 : button;
             const message = t('common.bet-error-min', {
                 button: buttonName,
@@ -108,7 +108,7 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
             const buttonName = isGroup50
-                ? t(`${GameHelper.getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
                 : button;
             const message = t('common.bet-error-max', {
                 button: buttonName,

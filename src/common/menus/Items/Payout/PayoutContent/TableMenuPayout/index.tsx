@@ -6,7 +6,7 @@ import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 import { PayoutData } from '../../../../../../types';
 
 import styles from './styles.module.scss';
-import { GameHelper } from '../../../../../utils/GameHelper';
+import { getBasePcode } from '../../../../../utils/GameHelper';
 
 interface IProps {
     data: PayoutData[];
@@ -15,7 +15,7 @@ interface IProps {
 const TableMenuPayout = ({ data }: IProps) => {
     const currency = useAppSelector(selectCurrency);
 
-    const basePcode = GameHelper.getBasePcode();
+    const basePcode = getBasePcode();
 
     const formatPayout = (value: number) => {
         return StringHelper.formatNumber(value);

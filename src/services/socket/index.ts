@@ -10,7 +10,7 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-import { GameHelper, getPcode } from '../../common/utils/GameHelper';
+import { GameHelper, getGameCode, getPcode } from '../../common/utils/GameHelper';
 import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
@@ -64,7 +64,7 @@ export class SocketComponent {
                 SocketComponent.instance.emitLobbyConnect(data);
                 SocketComponent.instance.emitGameConnect({
                     user: data.user,
-                    game: GameHelper.getGameCode(),
+                    game: getGameCode(),
                     pcode: getPcode(),
                 });
             });
@@ -87,7 +87,7 @@ export class SocketComponent {
         if (this._socket) {
             const dataSend: GameConnect = {
                 user: data.user,
-                game: GameHelper.getGameCode(),
+                game: getGameCode(),
                 pcode: getPcode(),
             };
 
@@ -98,8 +98,6 @@ export class SocketComponent {
     listenGameResult(callback?: (data: LoadNewValueData) => void): void {
         if (this._socket) {
             this._socket.on(SocketComponent.SOCKET_EVENT.gameResult, (data: LoadNewValueData) => {
-                // console.log('socket gameResult:', data);
-
                 this.validationDataWithPcode(data, () => {
                     if (this._lastGameResultPeriod === data.periode) {
                         return;
@@ -206,7 +204,7 @@ export class SocketComponent {
     }
 
     validationDataWithGameCode<T extends { game: string }>(data: T, callback?: () => void) {
-        if (data.game === GameHelper.getGameCode()) {
+        if (data.game === getGameCode()) {
             callback?.();
         }
     }
@@ -215,7 +213,7 @@ export class SocketComponent {
         data: T,
         callback?: () => void,
     ) {
-        if (data.pcode === getPcode() || data.pcode === GameHelper.getGameCode()) {
+        if (data.pcode === getPcode() || data.pcode === getGameCode()) {
             callback?.();
         }
     }

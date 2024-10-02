@@ -8,48 +8,64 @@ export const setPcode = (value: string) => {
 
 export const getPcode = () => _pcode;
 
+export const getBasePcode = () => {
+    if (!_pcode.trim()) throw new Error('mixedPcode is empty!');
+    return _pcode.replace(/\D+$/, '');
+};
+
 export const isDev = () => import.meta.env.MODE === 'development';
 
-export class GameHelper {
-    static GAME_CODE: Record<string, string> = {
-        p6: '24D',
-        p7: 'RL',
-        p9: '12D',
-        p12: 'SD',
-        m6: '24DSPIN',
-        m7: 'OG',
-        m8: 'D6',
-        m10: 'HNT',
-        m11: 'RW',
-        m13: 'BL',
-        m14: 'PD',
-        m16: 'GB',
-        m19: 'SW',
-        m20: 'MP',
-        m21: 'MPW',
-        m22: 'BC',
-        m23: 'DT',
-        m24: 'NN',
-        m25: 'FT',
-        m26: 'LG',
-        m27: 'SF',
-        m28: 'IFS',
-        m29: 'SB',
-        m30: '5D',
-        m31: '3D',
-        m32: 'SG',
-        m33: 'GBJ',
-        m34: 'HILO',
-        m35: '48D',
-        m36: '36D',
-        m37: 'BINGOSICBO',
-        m38: 'BM',
-        m39: 'DUELDICE',
-        m40: 'XD',
-        m41: 'DMN',
-        m42: 'GPX',
-    };
+export const GAME_CODE: Record<string, string> = {
+    p6: '24D',
+    p7: 'RL',
+    p9: '12D',
+    p12: 'SD',
+    m6: '24DSPIN',
+    m7: 'OG',
+    m8: 'D6',
+    m10: 'HNT',
+    m11: 'RW',
+    m13: 'BL',
+    m14: 'PD',
+    m16: 'GB',
+    m19: 'SW',
+    m20: 'MP',
+    m21: 'MPW',
+    m22: 'BC',
+    m23: 'DT',
+    m24: 'NN',
+    m25: 'FT',
+    m26: 'LG',
+    m27: 'SF',
+    m28: 'IFS',
+    m29: 'SB',
+    m30: '5D',
+    m31: '3D',
+    m32: 'SG',
+    m33: 'GBJ',
+    m34: 'HILO',
+    m35: '48D',
+    m36: '36D',
+    m37: 'BINGOSICBO',
+    m38: 'BM',
+    m39: 'DUELDICE',
+    m40: 'XD',
+    m41: 'DMN',
+    m42: 'GPX',
+};
 
+export const getGameCode = () => {
+    const basePcode = getBasePcode();
+    const lastLetter = isNaN(Number(_pcode[_pcode.length - 1]))
+        ? _pcode[_pcode.length - 1].toUpperCase()
+        : '';
+
+    return GAME_CODE[basePcode]
+        ? GAME_CODE[basePcode] + lastLetter
+        : 'unknown game: pcode ' + _pcode;
+};
+
+export class GameHelper {
     static GAME_NAME: Record<string, string> = {
         p7: 'roulette',
         p7b: 'rouletteb',
@@ -177,25 +193,6 @@ export class GameHelper {
         }
 
         return baseNewSet + variant.toUpperCase();
-    }
-
-    static getBasePcode() {
-        const mixedPcode = _pcode;
-
-        if (!mixedPcode || !mixedPcode.trim()) throw new Error('mixedPcode is empty!');
-
-        return mixedPcode.replace(/\D+$/, '');
-    }
-
-    static getGameCode(): string {
-        const pcode = _pcode;
-
-        const basePcode = this.getBasePcode();
-        const lastLetter = !isNaN(+pcode[pcode.length - 1]) ? '' : pcode[pcode.length - 1];
-
-        return basePcode in this.GAME_CODE
-            ? this.GAME_CODE[basePcode] + lastLetter.toUpperCase()
-            : 'unknown game: pcode ' + pcode;
     }
 
     static getGameName() {

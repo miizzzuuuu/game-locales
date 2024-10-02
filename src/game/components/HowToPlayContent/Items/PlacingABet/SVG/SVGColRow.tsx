@@ -1,12 +1,12 @@
 import { SVGProps } from 'react';
 import { useAppTranslate } from '../../../../../../services/i18next/hooks';
-import { GameHelper } from '../../../../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../../../../common/utils/GameHelper';
 // import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
 const SVGColRow = ({ className, style }: IProps) => {
-    const { t } = useAppTranslate(GameHelper.getBasePcode());
+    const { t } = useAppTranslate(getBasePcode());
 
     return (
         <svg

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import styles from './styles.module.scss';
-import { GameHelper } from '../../../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../../../common/utils/GameHelper';
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
 
 interface IProps {
@@ -13,7 +13,7 @@ const BetColRow = ({ label }: IProps) => {
             <LabelTranslate
                 className={styles['button-name']}
                 value={label}
-                keyLang={GameHelper.getBasePcode()}
+                keyLang={getBasePcode()}
             />
 
             <span className={styles.payout}>6:1</span>
