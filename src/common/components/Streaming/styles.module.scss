@@ -58,7 +58,7 @@
         background-color: var(--streaming-background);
 
         .video-container {
-            height: 100%;
+            height: calc(100% - var(--height-footer));
         }
     }
 
