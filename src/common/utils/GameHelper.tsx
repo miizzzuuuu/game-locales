@@ -1,16 +1,14 @@
+const OFFSET_TIME = 5;
+
+let _pcode: string = '';
+
+export const setPcode = (value: string) => {
+    _pcode = value;
+};
+
+export const getPcode = () => _pcode;
+
 export class GameHelper {
-    static OFFSET_TIME = 5;
-
-    private static _pcode = '';
-
-    static set pcode(value: string) {
-        this._pcode = value;
-    }
-
-    static get pcode(): string {
-        return this._pcode;
-    }
-
     static isDev() {
         return import.meta.env.MODE === 'development';
     }
@@ -128,7 +126,7 @@ export class GameHelper {
     static KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 
     static getKeyMiniHowToPlay() {
-        return `${this.KEY_MINI_HOW_TO_PLAY}-${this.pcode}`;
+        return `${this.KEY_MINI_HOW_TO_PLAY}-${_pcode}`;
     }
 
     static getMiniHowToPlayLocalStorage() {
@@ -158,7 +156,7 @@ export class GameHelper {
         let baseNewSet: string = '';
 
         const variant = this.getVariant();
-        const pcode = this.pcode;
+        const pcode = _pcode;
 
         if (/^m22/.test(pcode)) {
             baseNewSet = 'baccaratNewSet';
@@ -184,7 +182,7 @@ export class GameHelper {
     }
 
     static getBasePcode() {
-        const mixedPcode = this.pcode;
+        const mixedPcode = _pcode;
 
         if (!mixedPcode || !mixedPcode.trim()) throw new Error('mixedPcode is empty!');
 
@@ -192,7 +190,7 @@ export class GameHelper {
     }
 
     static getGameCode(): string {
-        const pcode = this.pcode;
+        const pcode = _pcode;
 
         const basePcode = this.getBasePcode();
         const lastLetter = !isNaN(+pcode[pcode.length - 1]) ? '' : pcode[pcode.length - 1];
@@ -203,7 +201,7 @@ export class GameHelper {
     }
 
     static getGameName() {
-        return this.GAME_NAME[this._pcode];
+        return this.GAME_NAME[_pcode];
     }
 
     static getGameDisplayName(pcode: string) {
@@ -216,7 +214,7 @@ export class GameHelper {
     }
 
     static normalizeTime(time: number) {
-        let result = time - this.OFFSET_TIME;
+        let result = time - OFFSET_TIME;
 
         if (result < 0) {
             result = 0;
@@ -226,7 +224,7 @@ export class GameHelper {
     }
 
     static getVariant(): string {
-        const pcode = this.pcode;
+        const pcode = _pcode;
 
         if (pcode.length === 3) {
             return '';

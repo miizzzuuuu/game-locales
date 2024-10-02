@@ -5,7 +5,7 @@ import App from './App.tsx';
 
 import { makeServer } from './api/server/server.ts';
 
-import { GameHelper } from './common/utils/GameHelper.tsx';
+import { setPcode } from './common/utils/GameHelper.tsx';
 import APIManager from './common/utils/APIManager.ts';
 
 import './services/i18next/index.ts';
@@ -35,7 +35,7 @@ const main = async () => {
         return;
     }
 
-    GameHelper.pcode = pcode;
+    setPcode(pcode);
 
     // modify for spesifik
     BetHelper.game = new _24DBet();

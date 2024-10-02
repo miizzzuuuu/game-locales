@@ -1,5 +1,5 @@
 import { Features } from '../../common/utils/Features';
-import { GameHelper } from '../../common/utils/GameHelper';
+import { getPcode } from '../../common/utils/GameHelper';
 import { confirmBet } from '../../services/api/sendBet';
 import { BetSend } from '../../types';
 import { AppStartListening } from '../listenerMiddleware';
@@ -44,7 +44,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
         const params = {
             button_bet: betAddToSend,
             total_bet: totalBetAdd,
-            game: GameHelper.pcode,
+            game: getPcode(),
             transId: '',
         };
 

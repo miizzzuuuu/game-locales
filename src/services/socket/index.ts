@@ -10,7 +10,7 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-import { GameHelper } from '../../common/utils/GameHelper';
+import { GameHelper, getPcode } from '../../common/utils/GameHelper';
 import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
@@ -65,7 +65,7 @@ export class SocketComponent {
                 SocketComponent.instance.emitGameConnect({
                     user: data.user,
                     game: GameHelper.getGameCode(),
-                    pcode: GameHelper.pcode,
+                    pcode: getPcode(),
                 });
             });
         }
@@ -88,7 +88,7 @@ export class SocketComponent {
             const dataSend: GameConnect = {
                 user: data.user,
                 game: GameHelper.getGameCode(),
-                pcode: GameHelper.pcode,
+                pcode: getPcode(),
             };
 
             this._socket.emit('gameDisconnect', JSON.stringify(dataSend));
@@ -200,7 +200,7 @@ export class SocketComponent {
     }
 
     validationDataWithPcode<T extends { pcode: string }>(data: T, callback?: () => void) {
-        if (data.pcode === GameHelper.pcode) {
+        if (data.pcode === getPcode()) {
             callback?.();
         }
     }
@@ -215,7 +215,7 @@ export class SocketComponent {
         data: T,
         callback?: () => void,
     ) {
-        if (data.pcode === GameHelper.pcode || data.pcode === GameHelper.getGameCode()) {
+        if (data.pcode === getPcode() || data.pcode === GameHelper.getGameCode()) {
             callback?.();
         }
     }

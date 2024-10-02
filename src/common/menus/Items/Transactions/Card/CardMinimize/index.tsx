@@ -3,7 +3,7 @@ import { useAppSelector } from '../../../../../../store/hooks';
 import { selectGameName } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
-import { GameHelper } from '../../../../../utils/GameHelper';
+import { GameHelper, getPcode } from '../../../../../utils/GameHelper';
 import { StringHelper } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
@@ -17,7 +17,7 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
         <div className={styles['card-top']}>
             <div className={`${styles['col-2']}`}>
                 <span className={styles['game-name']}>
-                    {pcode === GameHelper.pcode ? gameName : GameHelper.getGameDisplayName(pcode)}
+                    {pcode === getPcode() ? gameName : GameHelper.getGameDisplayName(pcode)}
                 </span>
 
                 <span
