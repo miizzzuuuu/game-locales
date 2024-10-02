@@ -6,7 +6,7 @@ import { RootState } from '../store';
 export const endWinAnimationListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: endWinAnimation,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: endWinAnimation');
 
             const state = listenerApi.getState() as RootState;

@@ -64,7 +64,7 @@ const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
 export const closeTimeListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: closeTime,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: closeTime');
 
             const dispatch = listenerApi.dispatch as AppDispatch;
@@ -78,7 +78,7 @@ export const closeTimeListener = (startListening: AppStartListening) => {
 export const openTimeListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: openTime,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: openTime');
 
             const dispatch = listenerApi.dispatch as AppDispatch;

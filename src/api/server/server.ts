@@ -27,24 +27,24 @@ export function makeServer({ environment = 'test' } = {}) {
             // player
             this.get(
                 ENDPOINTS.player,
-                async () => {
+                () => {
                     return player;
                 },
                 { timing: 400 },
             );
 
             // player properties
-            this.get(ENDPOINTS.playerProperties, async (scheme) => {
+            this.get(ENDPOINTS.playerProperties, (scheme) => {
                 const properties = scheme.db.properties;
                 return properties;
             });
 
             // player settings
-            this.get(ENDPOINTS.playerSettings, async () => {
+            this.get(ENDPOINTS.playerSettings, () => {
                 return settings;
             });
 
-            this.put(ENDPOINTS.playerSettings, async (_, request) => {
+            this.put(ENDPOINTS.playerSettings, (_, request) => {
                 const settings = JSON.parse(request.requestBody);
 
                 return settings;
@@ -52,11 +52,11 @@ export function makeServer({ environment = 'test' } = {}) {
             // end player settings
 
             // lastbets
-            this.get(ENDPOINTS.playerLastbets, async () => {
+            this.get(ENDPOINTS.playerLastbets, () => {
                 return lastbets;
             });
 
-            this.get(ENDPOINTS.playerLastbets + '/:pcode', async (_, request) => {
+            this.get(ENDPOINTS.playerLastbets + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
                 let lastbet: { periode: number; data: any[] } | { message: string } | undefined =
@@ -76,13 +76,13 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // games
-            this.get(ENDPOINTS.games, async (schema) => {
+            this.get(ENDPOINTS.games, (schema) => {
                 const games = schema.db.games;
 
                 return games;
             });
 
-            this.get(ENDPOINTS.games + '/:pcode', async (schema, request) => {
+            this.get(ENDPOINTS.games + '/:pcode', (schema, request) => {
                 const pcode = request.params.pcode;
 
                 const game = schema.db.games.findBy({ pcode });
@@ -91,7 +91,7 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // payout
-            this.get(ENDPOINTS.games + '/:pcode/payout', async (_, request) => {
+            this.get(ENDPOINTS.games + '/:pcode/payout', (_, request) => {
                 const pcode = request.params.pcode;
 
                 let payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
@@ -104,13 +104,13 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // timers
-            this.get(ENDPOINTS.timers, async (schema) => {
+            this.get(ENDPOINTS.timers, (schema) => {
                 const timers = schema.db.timers;
 
                 return timers;
             });
 
-            this.get(ENDPOINTS.timers + '/:pcode', async (schema, request) => {
+            this.get(ENDPOINTS.timers + '/:pcode', (schema, request) => {
                 const pcode = request.params.pcode;
 
                 const timer = schema.db.timers.findBy({ pcode });
@@ -119,12 +119,12 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // send bet
-            this.post(ENDPOINTS.sendBet, async () => {
+            this.post(ENDPOINTS.sendBet, () => {
                 return sendBetData;
             });
 
             // result
-            this.get(ENDPOINTS.result + '/:pcode', async (_, request) => {
+            this.get(ENDPOINTS.result + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
                 const page = Number(request.params.page);
@@ -152,7 +152,7 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // transaction
-            this.get(ENDPOINTS.transaction + '/:pcode', async (_, request) => {
+            this.get(ENDPOINTS.transaction + '/:pcode', (_, request) => {
                 const page = Number(request.params.page);
                 const pcode = request.params.pcode;
                 // const per_page = Number(request.params['per_page']);
