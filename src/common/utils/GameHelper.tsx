@@ -76,69 +76,73 @@ export const GAME_NAME: Record<string, string> = {
 
 export const getGameName = () => GAME_NAME[_pcode];
 
-export class GameHelper {
-    static GAME_DISPLAY_NAME: Record<string, string> = {
-        m6: '24D Spin',
-        m7: 'Oglok',
-        m8: 'Dice 6',
-        m8b: 'Dice 6 Fever',
-        m10: 'Head Tail',
-        m11: 'Red White',
-        m11b: 'Europe Red White',
-        m13: 'Billiards',
-        m14: 'Poker Dice',
-        m14b: 'Europe Poker Dice',
-        m16: 'Gong Ball',
-        m19: 'Suwit',
-        m20: 'Monopoly',
-        m21: 'Monopoly World Cup',
-        m22: 'Baccarat',
-        m22b: 'Baccarat B',
-        m22c: 'Baccarat C',
-        m22d: 'Europe Baccarat 1',
-        m22e: 'Europe Baccarat 2',
-        m23: 'Dragon Tiger',
-        m23b: 'Dragon Tiger Wild',
-        m23c: 'Dragon Tiger Wild',
-        m24: 'Niuniu',
-        m25: 'Fantan',
-        m26: 'Race Ball',
-        m27: 'Shio Fights',
-        m28: 'IDN 4 Stand',
-        m28b: 'IDN 4 Stand B',
-        m29: '3D Shio',
-        m30: '5D',
-        m31: 'Sicbo Ball - Fast',
-        m32: 'SamGong',
-        m33: 'Gong Ball Jitu',
-        m34: 'HILO',
-        m35: '48D',
-        m35b: 'Europe 48D',
-        m36: '36D',
-        m37: 'Bingo Sicbo',
-        m38: 'Bingo Baccarat',
-        m38b: 'Bingo Baccarat 2',
-        m39: 'Duel Dice',
-        m40: 'Xoc Dia',
-        m41: 'Domino',
-        m41b: 'Europe Domino',
-        m42: 'Grandprix Number',
-        m43: '6D Color',
-        m46: 'Ceme',
-        p6: '24D',
-        p6b: '24D Jackpot',
-        p7: 'Roulette',
-        p7b: 'Roulette - Fast Table',
-        p7c: 'Bingo Roulette',
-        p7d: 'Europe Roulette',
-        p7e: 'Soccer Roulette',
-        p7f: 'Bounce Roulette',
-        p7g: 'EU Roulette 2',
-        p9: '12D',
-        p9b: '12D Thunder',
-        p12: 'Sicbo[Dice]',
-    };
+export const GAME_DISPLAY_NAME: Record<string, string> = {
+    m6: '24D Spin',
+    m7: 'Oglok',
+    m8: 'Dice 6',
+    m8b: 'Dice 6 Fever',
+    m10: 'Head Tail',
+    m11: 'Red White',
+    m11b: 'Europe Red White',
+    m13: 'Billiards',
+    m14: 'Poker Dice',
+    m14b: 'Europe Poker Dice',
+    m16: 'Gong Ball',
+    m19: 'Suwit',
+    m20: 'Monopoly',
+    m21: 'Monopoly World Cup',
+    m22: 'Baccarat',
+    m22b: 'Baccarat B',
+    m22c: 'Baccarat C',
+    m22d: 'Europe Baccarat 1',
+    m22e: 'Europe Baccarat 1',
+    m22f: 'Europe Baccarat 2',
+    m23: 'Dragon Tiger',
+    m23b: 'Dragon Tiger Wild',
+    m23c: 'Dragon Tiger Wild 2',
+    m23d: 'Europe Dragon Tiger',
+    m24: 'Niuniu',
+    m25: 'Fantan',
+    m26: 'Race Ball',
+    m27: 'Shio Fights',
+    m28: 'IDN 4 Stand',
+    m28b: 'IDN 4 Stand B',
+    m29: '3D Shio',
+    m30: '5D',
+    m31: 'Sicbo Ball - Fast',
+    m32: 'SamGong',
+    m33: 'Gong Ball Jitu',
+    m34: 'HILO',
+    m35: '48D',
+    m35b: 'Europe 48D',
+    m36: '36D',
+    m37: 'Bingo Sicbo',
+    m38: 'Bingo Baccarat',
+    m38b: 'Bingo Baccarat 2',
+    m39: 'Duel Dice',
+    m40: 'Xoc Dia',
+    m41: 'Domino',
+    m41b: 'Europe Domino',
+    m42: 'Grandprix Number',
+    m43: '6D Color',
+    m46: 'Ceme',
+    p6: '24D',
+    p6b: '24D Jackpot',
+    p7: 'Roulette',
+    p7b: 'Roulette - Fast Table',
+    p7c: 'Bingo Roulette',
+    p7d: 'Europe Roulette',
+    p7e: 'Soccer Roulette',
+    p7f: 'Bounce Roulette',
+    p7g: 'EU Roulette 2',
+    p9: '12D',
+    p9b: '12D Thunder',
+    p12: 'Sicbo[Dice]',
+};
 
+export const getGameDisplayName = (pcode: string) => GAME_DISPLAY_NAME[pcode] || pcode;
+
+export class GameHelper {
     static KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 
     static getKeyMiniHowToPlay() {
@@ -195,15 +199,6 @@ export class GameHelper {
         }
 
         return baseNewSet + variant.toUpperCase();
-    }
-
-    static getGameDisplayName(pcode: string) {
-        if (!(pcode in this.GAME_DISPLAY_NAME)) {
-            return pcode;
-        }
-
-        const name = this.GAME_DISPLAY_NAME[pcode];
-        return name;
     }
 
     static normalizeTime(time: number) {

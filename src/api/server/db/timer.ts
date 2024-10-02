@@ -210,7 +210,22 @@ export const timers = [
         timer: 20,
     },
     {
+        pcode: 'm22f',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
         pcode: 'm23b',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
+        pcode: 'm23c',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
+        pcode: 'm23d',
         time: 'BET CLOSED',
         timer: 20,
     },
