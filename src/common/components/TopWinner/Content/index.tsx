@@ -29,4 +29,6 @@ const Content = forwardRef<HTMLDivElement, IProps>(({ data, index }, ref) => {
     );
 });
 
+Content.displayName = 'Content';
+
 export default Content;

@@ -7,7 +7,7 @@ export const postSendBet = async (params: SendBetParam): Promise<SendBetResponse
     const response = await APIManager.post<SendBetResponse>('/games/send/send', params);
 
     if ('status' in response.data && 'message' in response.data) {
-        return response.data as SendBetResponse;
+        return response.data;
     } else {
         throw new Error("Invalid response format: 'status' or 'message' property is missing");
     }

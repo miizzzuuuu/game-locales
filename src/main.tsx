@@ -15,11 +15,11 @@ import { _24DBet } from './game/utils/_24DBet.ts';
 
 declare global {
     interface Window {
-        isIOS: any;
+        isIOS: boolean;
     }
 }
 
-const main = async () => {
+const main = () => {
     if (import.meta.env.DEV) {
         makeServer({ environment: 'development' });
     }

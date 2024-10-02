@@ -24,6 +24,10 @@ export default defineConfig(({ mode }) => {
                             return 'lottie';
                         }
 
+                        if (id.indexOf('redux') >= 0) {
+                            return 'redux';
+                        }
+
                         if (id.indexOf('react') >= 0) {
                             return 'react';
                         }

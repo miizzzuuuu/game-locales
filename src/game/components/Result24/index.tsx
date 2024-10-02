@@ -52,7 +52,7 @@ const Result24 = () => {
 
     return (
         <div className={styles.Result24} onAnimationEnd={handleAnimationEnd} ref={resultRef}>
-            <SVG24DResult value={resultNumber} className={styles['image']} />
+            <SVG24DResult value={resultNumber} className={styles.image} />
         </div>
     );
 };

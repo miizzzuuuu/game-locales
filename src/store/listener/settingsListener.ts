@@ -5,14 +5,14 @@ import { updateSetings } from '../slice/settingsSlice';
 export const updateSettingsListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: updateSetings,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: updateSettings');
 
             const state = listenerApi.getState();
 
             const settings = state.settings;
 
-            updatePlayerSettings(settings);
+            void updatePlayerSettings(settings);
         },
     });
 };

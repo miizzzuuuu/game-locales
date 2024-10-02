@@ -29,7 +29,7 @@ function useFetchSettings() {
             }
         };
 
-        fetchPlayerSettings();
+        void fetchPlayerSettings();
 
         return () => {
             ignore = true;

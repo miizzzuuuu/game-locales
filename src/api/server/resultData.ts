@@ -34,7 +34,7 @@ import resultM46 from './response/results/m46.json';
 
 import resultsM7 from './response/results/m7.json';
 
-const resultData: Record<string, { data: any[] }> = {
+const resultData: Record<string, { data: object[] }> = {
     p6: resultP6,
     p6b: resultP6B,
     p7: resultsP7,

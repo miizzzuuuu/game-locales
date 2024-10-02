@@ -1,4 +1,6 @@
-export const lastbets: Record<string, { periode: number; data: any[] }> = {
+import { BetSend } from '../../../types';
+
+export const lastbets: Record<string, { periode: number; data: BetSend[] }> = {
     p6b: {
         periode: 9272,
         data: [

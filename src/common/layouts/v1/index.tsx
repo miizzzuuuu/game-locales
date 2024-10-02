@@ -16,7 +16,7 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
 
     return (
         <div
-            className={`${styles['layout']}${offsetStreaming ? ` ${styles['offset-streaming']}` : ''}`}
+            className={`${styles.layout}${offsetStreaming ? ` ${styles['offset-streaming']}` : ''}`}
         >
             {device === 'mobile-portrait' && (
                 <>

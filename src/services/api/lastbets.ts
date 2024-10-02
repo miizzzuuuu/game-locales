@@ -3,15 +3,11 @@ import { getPcode } from '../../common/utils/GameHelper';
 import { LastBetsGameResponse } from '../../types';
 
 export const getLastbets = async () => {
-    try {
-        const response = await APIManager.get<LastBetsGameResponse>(
-            ENDPOINTS.playerLastbets + `/${getPcode()}`,
-        );
+    const response = await APIManager.get<LastBetsGameResponse>(
+        ENDPOINTS.playerLastbets + `/${getPcode()}`,
+    );
 
-        return response.data;
-    } catch (error) {
-        throw error;
-    }
+    return response.data;
 };
 
 export const fetchLastbets = async (callback?: (data: LastBetsGameResponse) => void) => {

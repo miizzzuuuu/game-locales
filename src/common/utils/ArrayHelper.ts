@@ -3,13 +3,13 @@ export class ArrayHelper {
         return [...Array(size).keys()].map((i) => i + startAt);
     };
 
-    static newArray2D = (col: number, row: number, fill: any = null) => {
+    static newArray2D = <T>(col: number, row: number, fill?: T): T[][] => {
         return Array(row)
             .fill(undefined)
             .map(() => Array(col).fill(fill));
     };
 
-    static newArray = (length: number, fill: any = null) => {
+    static newArray = <T>(length: number, fill?: T): T[] => {
         return Array(length).fill(fill);
     };
 

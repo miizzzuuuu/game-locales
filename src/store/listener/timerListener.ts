@@ -48,7 +48,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
             transId: '',
         };
 
-        confirmBet(dispatch, params, period, balance);
+        void confirmBet(dispatch, params, period, balance);
     }
 };
 
@@ -64,10 +64,10 @@ const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
 export const closeTimeListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: closeTime,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: closeTime');
 
-            const dispatch = listenerApi.dispatch as AppDispatch;
+            const dispatch = listenerApi.dispatch;
             const curState = listenerApi.getState();
 
             actionClose(dispatch, curState);
@@ -78,10 +78,10 @@ export const closeTimeListener = (startListening: AppStartListening) => {
 export const openTimeListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: openTime,
-        effect: async (_, listenerApi) => {
+        effect: (_, listenerApi) => {
             console.log('middleware: openTime');
 
-            const dispatch = listenerApi.dispatch as AppDispatch;
+            const dispatch = listenerApi.dispatch;
             const curState = listenerApi.getState();
 
             actionOpen(dispatch, curState);

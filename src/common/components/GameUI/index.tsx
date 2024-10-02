@@ -6,14 +6,16 @@ import { Features } from '../../utils/Features';
 
 const GameUI = () => {
     const layoutVersion = Features.LAYOUT_VERSION;
-    const Layout =
-        layoutVersion === 1
-            ? LayoutV1
-            : layoutVersion === 2
-              ? LayoutV2
-              : layoutVersion === 3
-                ? LayoutV3
-                : null;
+
+    let Layout = null;
+
+    if (layoutVersion === 1) {
+        Layout = LayoutV1;
+    } else if (layoutVersion === 2) {
+        Layout = LayoutV2;
+    } else if (layoutVersion === 3) {
+        Layout = LayoutV3;
+    }
 
     if (!Layout) {
         return null;
@@ -21,7 +23,6 @@ const GameUI = () => {
 
     return (
         <Layout>
-            {/* main area */}
             <MainArea />
         </Layout>
     );

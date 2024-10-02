@@ -1,8 +1,8 @@
 interface Params extends Omit<RequestInit, 'body'> {
-    body?: Record<string, any>;
+    body?: Record<string, unknown>;
 }
 
-export interface Client<T = any> {
+export interface Client<T> {
     status: number;
     headers: Headers;
     url: string;
@@ -68,7 +68,7 @@ class APIManager {
 
         const response = await fetch(this.BASE_API + endpoint, config);
 
-        const data: T = await response.json();
+        const data = (await response.json()) as T;
 
         if (!response.ok) {
             throw new Error(response.statusText);
