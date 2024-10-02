@@ -29,3 +29,8 @@
         height: 100dvh;
     }
 }
+
+.button-win-blink {
+    animation: buttonWinBlink 1s reverse ease-in-out;
+    animation-iteration-count: infinite;
+}

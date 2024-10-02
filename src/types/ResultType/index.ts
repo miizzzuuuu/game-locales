@@ -122,15 +122,15 @@ export type ResultM41 = CommonResult & {
 };
 
 export type ResultM46 = CommonResult & {
-    dealer: string; // '4,5-4,5';
+    banker: string; // '4,5-4,5';
     player1: string; // '0,3-0,6';
     player2: string; // '2,6-1,1';
     player3: string; // '1,5-0,2';
-    result: string; // 'player1';
-    valuedealer: string | number; // '8';
-    valueplayer1: string | number; // '9';
-    valueplayer2: string | number; // '0';
-    valueplayer3: string | number; // '8';
+    valueBanker: string | number; // '8';
+    valuePlayer1: string | number; // '9';
+    valuePlayer2: string | number; // '0';
+    valuePlayer3: string | number; // '8';
+    result: string; // "player1,player2,player3";
 };
 
 // not done
