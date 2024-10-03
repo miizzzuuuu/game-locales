@@ -5,6 +5,7 @@ export type FeaturesType = {
     SHUFFLE_THE_CARDS: boolean;
     LETTER_BOX: boolean;
     STREAMING_LANDSCAPE_LETTER_BOX: boolean;
+    CHIP_ANIMATION: boolean;
 };
 
 export const Features: FeaturesType = {
@@ -14,4 +15,5 @@ export const Features: FeaturesType = {
     SHUFFLE_THE_CARDS: false,
     LETTER_BOX: false,
     STREAMING_LANDSCAPE_LETTER_BOX: true,
+    CHIP_ANIMATION: false,
 };

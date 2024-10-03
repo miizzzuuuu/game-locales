@@ -8,7 +8,7 @@
     --streaming-scale-portrait: 1.1;
     --height-overlay-streaming-portrait: 2rem;
     --width-overlay-streaming-landscape: 12rem;
-    --height-overlay-streaming-landscape: 11rem;
+    --height-overlay-streaming-landscape: 10rem;
 
     --streaming-background: #1c1303;
 
@@ -20,9 +20,9 @@
     --streaming-color-3: linear-gradient(180deg, transparent 0%, #854c07 100%);
 
     // landscape, kiri
-    --streaming-color-4: linear-gradient(to right, #1c1303 0%, #1c1303 28%, transparent 100%);
+    --streaming-color-4: linear-gradient(to right, #1c1303 0%, transparent 100%);
     // landscape, kanan
-    --streaming-color-5: linear-gradient(to left, #1c1303 0%, #1c1303 28%, transparent 100%);
+    --streaming-color-5: linear-gradient(to left, #1c1303 0%, transparent 100%);
     // landscape, bawah
     --streaming-color-6: linear-gradient(0deg, #1c1303 0%, #1c1303 4rem, transparent 100%);
 

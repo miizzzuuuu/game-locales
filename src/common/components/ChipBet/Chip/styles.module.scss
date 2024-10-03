@@ -10,12 +10,10 @@
     overflow: hidden;
     opacity: var(--opacity);
     transition: opacity 0.4s linear;
+}
 
-    &.show {
-        --opacity: 0.3;
-
-        transition: opacity 0.4s linear;
-    }
+.hide {
+    --opacity: 0.3;
 }
 
 .bg {
