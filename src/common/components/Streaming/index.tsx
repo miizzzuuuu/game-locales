@@ -9,7 +9,7 @@ const Streaming = () => {
 
     return (
         <div
-            className={`${styles['streaming']} ${Features.STREAMING_LANDSCAPE_LETTER_BOX ? styles['letter-box'] : styles['non-letter-box']}`}
+            className={`${styles.streaming} ${Features.STREAMING_LANDSCAPE_LETTER_BOX ? styles['letter-box'] : styles['non-letter-box']}`}
         >
             <div className={styles['video-container']}>
                 <Video />

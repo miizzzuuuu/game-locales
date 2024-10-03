@@ -16,6 +16,12 @@ function useDragToScroll<T extends HTMLElement>({
             return;
         }
 
+        const currentSlider = slider.current;
+
+        if (!currentSlider) {
+            return;
+        }
+
         let mouseDown = false;
         let startX: number;
         let scrollLeft: number;
@@ -27,14 +33,14 @@ function useDragToScroll<T extends HTMLElement>({
             mouseDown = true;
 
             if (direction === 'vertical') {
-                startY = e.pageY - (slider.current?.offsetTop ?? 0);
-                scrollTop = slider.current?.scrollTop ?? 0;
+                startY = e.pageY - (currentSlider.offsetTop ?? 0);
+                scrollTop = currentSlider.scrollTop ?? 0;
                 return;
             }
 
             if (direction === 'horizontal') {
-                startX = e.pageX - (slider.current?.offsetLeft ?? 0);
-                scrollLeft = slider.current?.scrollLeft ?? 0;
+                startX = e.pageX - (currentSlider.offsetLeft ?? 0);
+                scrollLeft = currentSlider.scrollLeft ?? 0;
             }
         };
 
@@ -49,33 +55,32 @@ function useDragToScroll<T extends HTMLElement>({
             }
 
             if (direction === 'vertical') {
-                const y = e.pageY - (slider.current?.offsetTop ?? 0);
+                const y = e.pageY - (currentSlider.offsetTop ?? 0);
                 const scroll = y - startY;
-                if (slider.current) {
-                    slider.current.scrollTop = scrollTop - scroll;
-                }
+
+                currentSlider.scrollTop = scrollTop - scroll;
+
                 return;
             }
 
             if (direction === 'horizontal') {
-                const x = e.pageX - (slider.current?.offsetLeft ?? 0);
+                const x = e.pageX - (currentSlider.offsetLeft ?? 0);
                 const scroll = x - startX;
-                if (slider.current) {
-                    slider.current.scrollLeft = scrollLeft - scroll;
-                }
+
+                currentSlider.scrollLeft = scrollLeft - scroll;
             }
         };
 
-        slider.current?.addEventListener('mousemove', move, false);
-        slider.current?.addEventListener('mousedown', startDragging, false);
-        slider.current?.addEventListener('mouseup', stopDragging, false);
-        slider.current?.addEventListener('mouseleave', stopDragging, false);
+        currentSlider.addEventListener('mousemove', move, false);
+        currentSlider.addEventListener('mousedown', startDragging, false);
+        currentSlider.addEventListener('mouseup', stopDragging, false);
+        currentSlider.addEventListener('mouseleave', stopDragging, false);
 
         return () => {
-            slider.current?.removeEventListener('mousemove', move);
-            slider.current?.removeEventListener('mousedown', startDragging);
-            slider.current?.removeEventListener('mouseup', stopDragging);
-            slider.current?.removeEventListener('mouseleave', stopDragging);
+            currentSlider.removeEventListener('mousemove', move);
+            currentSlider.removeEventListener('mousedown', startDragging);
+            currentSlider.removeEventListener('mouseup', stopDragging);
+            currentSlider.removeEventListener('mouseleave', stopDragging);
         };
     }, [device, direction]);
 }

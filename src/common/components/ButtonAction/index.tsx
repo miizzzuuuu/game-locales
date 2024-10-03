@@ -46,7 +46,7 @@ const ButtonAction = ({
             ref={buttonRef}
         >
             <div
-                className={`${styles['icon']}${circle ? ` ${styles.circle}` : ''}`}
+                className={`${styles.icon}${circle ? ` ${styles.circle}` : ''}`}
                 style={{
                     borderColor: borderColor,
                     backgroundColor: background,
@@ -55,7 +55,7 @@ const ButtonAction = ({
                 {icon}
             </div>
 
-            {label && <div className={styles['text']}>{label}</div>}
+            {label && <div className={styles.text}>{label}</div>}
         </Button>
     );
 };

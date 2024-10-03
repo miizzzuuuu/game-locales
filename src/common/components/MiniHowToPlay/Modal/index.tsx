@@ -38,7 +38,7 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
             hideMiniHowToPlayLocalStorage();
 
             if (dontShowAgain) {
-                updateMiniHowToPlay({ show: false });
+                void updateMiniHowToPlay({ show: false });
             }
         }
     };

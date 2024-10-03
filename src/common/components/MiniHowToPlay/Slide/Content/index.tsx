@@ -8,7 +8,7 @@ interface IProps {
 const Content = ({ keySlide }: IProps) => {
     const { t } = useAppTranslate(`miniHtp.${keySlide}`);
 
-    const contents = t('content', {}, true) as string[];
+    const contents = t<string[]>('content', {}, true);
 
     return (
         <>

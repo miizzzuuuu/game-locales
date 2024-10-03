@@ -31,9 +31,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
         (index: number) => {
             if (!slider.current) return;
 
-            const circles = slider.current.querySelectorAll(
-                '.chip-item',
-            ) as NodeListOf<HTMLElement>;
+            const circles = slider.current.querySelectorAll('.chip-item');
 
             const circleClicked = circles[index];
             const containerRect = slider.current.getBoundingClientRect();

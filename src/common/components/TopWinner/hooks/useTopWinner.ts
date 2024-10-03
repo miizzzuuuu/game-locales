@@ -44,7 +44,7 @@ function useTopWinner({ ref: winnerContentRef }: Params) {
         setIsFinish(false);
 
         let currentTop = children[0].getBoundingClientRect().top;
-        let wraps = [[children[0]]];
+        const wraps = [[children[0]]];
 
         for (let i = 1; i < children.length; i++) {
             const childTop = children[i].getBoundingClientRect().top;

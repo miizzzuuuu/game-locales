@@ -10,7 +10,7 @@ function useLanguage() {
     const { i18n } = useTranslation();
 
     useEffect(() => {
-        i18n.changeLanguage(lang);
+        void i18n.changeLanguage(lang);
         LangHelper.activeLang = lang;
     }, [lang]);
 }

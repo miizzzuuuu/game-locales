@@ -4,6 +4,7 @@ import MessageGeneral from '../Alerts/MessageGeneral';
 import MessageSubmitBet from '../Alerts/MessageSubmitBet';
 import Result from '../../../game/components/Result';
 import NewSet from '../Alerts/NewSet';
+import { Features } from '../../utils/Features';
 
 const AlertUI = () => {
     return (
@@ -12,7 +13,7 @@ const AlertUI = () => {
             <MessageSubmitBet />
             <Result />
             <MessageYouWin />
-            <NewSet />
+            {Features.SHUFFLE_THE_CARDS && <NewSet />}
         </div>
     );
 };

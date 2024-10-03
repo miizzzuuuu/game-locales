@@ -23,7 +23,7 @@ const ChipBet = ({ value, ignoreTransparent }: IProps) => {
     const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 
     return (
-        <div className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`}>
+        <div className={`${styles.chip}${showChip ? '' : ` ${styles.show}`}`}>
             {/* <img className={styles.bg} src={image} />
 
             <div className={styles.text} data-value={stringValue}>

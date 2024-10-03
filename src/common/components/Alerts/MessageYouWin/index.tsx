@@ -52,7 +52,7 @@ const MessageYouWin = () => {
         };
     }, [winAmount]);
 
-    const requestRef = useRef<number | undefined>(undefined);
+    const requestRef = useRef<number>();
     const previousTimeRef = useRef<number | undefined>(undefined);
     const startTimeRef = useRef<number | undefined>(undefined);
 
@@ -86,7 +86,9 @@ const MessageYouWin = () => {
         } else {
             setDisplayValue(winAmount);
 
-            cancelAnimationFrame(requestRef.current as number);
+            if (requestRef.current) {
+                cancelAnimationFrame(requestRef.current);
+            }
             startTimeRef.current = undefined;
         }
     };
