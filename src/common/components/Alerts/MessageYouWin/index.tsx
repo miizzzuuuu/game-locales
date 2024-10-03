@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectCurrency } from '../../../../store/slice/playerSlice';
@@ -27,6 +28,8 @@ const MessageYouWin = () => {
     const winAmount = useAppSelector(selectWinAmount);
     const winStatus = useAppSelector(selectWinStatus);
     // const resultStatus = useAppSelector(selectResultStatus);
+
+    const { i18n } = useTranslation();
 
     useEffect(() => {
         if (currentTimeOut.current) {
@@ -140,7 +143,7 @@ const MessageYouWin = () => {
                 <LabelTranslate value="you-win" className={styles.label} />
 
                 <div className={styles.value}>
-                    {StringHelper.formatCurrency(displayValue, currency)}
+                    {StringHelper.formatCurrency(displayValue, currency, i18n.language)}
                 </div>
             </div>
         </div>

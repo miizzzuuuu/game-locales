@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { Dropdown } from '../Dropdown';
 import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import { selectLanguage, updateSetings } from '../../../../../store/slice/settingsSlice';
-import { LangHelper } from '../../../../utils/LangHelper';
+import { langMap } from '../../../../utils/LangHelper';
 
 import styles from '../Item/styles.module.scss';
 
@@ -26,14 +26,16 @@ const SettingLanguage = ({ label, icon }: IProps) => {
 
             <Dropdown
                 initialValue={lang}
-                options={Object.keys(LangHelper.langMap)}
+                options={Object.keys(langMap)}
                 style={{
                     height: '3rem',
                     borderRadius: '0.8rem',
                     border: '0.1rem solid rgba(94, 95, 115, 0.15)',
                     backgroundColor: '#2C2D3F',
                 }}
-                onChange={(value) => dispatch(updateSetings({ language: value }))}
+                onChange={(value) => {
+                    dispatch(updateSetings({ language: value }));
+                }}
             />
         </div>
     );

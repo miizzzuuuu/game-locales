@@ -8,8 +8,11 @@ import ContentEmpty from '../ContentEmpty';
 import { TransactionHelper } from '../../../../utils/TransactionHelper';
 import LabelTranslate from '../../../../components/LabelTranslate';
 import { StringHelper } from '../../../../utils/StringHelper';
+import { useTranslation } from 'react-i18next';
 
 const Previous = () => {
+    const { i18n } = useTranslation();
+
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'before' });
     const groupTransaction = TransactionHelper.groupTransactionsByDate(transactionData);
 
@@ -24,7 +27,12 @@ const Previous = () => {
                     return (
                         <div key={key} className={styles.wrapper}>
                             <div className={styles.date}>
-                                {StringHelper.formatDateByLocale(key, 'long')}
+                                {StringHelper.formatDateByLocale(
+                                    key,
+                                    'long',
+                                    undefined,
+                                    i18n.language,
+                                )}
                             </div>
 
                             <CardContainer>

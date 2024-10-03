@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../../store/hooks';
 import {
     selectGameName,
@@ -10,6 +11,8 @@ import { StringHelper } from '../../../utils/StringHelper';
 import UserInfo from '../../UserInfo';
 
 const Game = () => {
+    const { i18n } = useTranslation();
+
     const gameName = useAppSelector(selectGameName);
     const period = useAppSelector(selectPeriod);
     const min = useAppSelector(selectMin);
@@ -20,7 +23,7 @@ const Game = () => {
         <UserInfo
             label={`#${period}`}
             labelSecond={gameName}
-            value={`${StringHelper.formatCurrency(min, currency)}-${StringHelper.formatNumber(max50)}`}
+            value={`${StringHelper.formatCurrency(min, currency, i18n.language)}-${StringHelper.formatNumber(max50, i18n.language)}`}
             isRight
         />
     );

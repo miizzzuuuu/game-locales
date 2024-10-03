@@ -1,7 +1,8 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { Settings } from '../../types';
-import { LangHelper } from '../../common/utils/LangHelper';
+import { formatedLanguage } from '../../common/utils/LangHelper';
+import i18next from 'i18next';
 
 const initialState: Settings = {
     language: '',
@@ -30,7 +31,10 @@ const playerSlice = createSlice({
                 volumeGameSound,
             } = action.payload;
 
-            state.language = LangHelper.formatedLanguage(language);
+            const lang = formatedLanguage(language);
+            void i18next.changeLanguage(lang);
+
+            state.language = lang;
             state.autoRebet = autoRebet;
             state.enableGameSound = enableGameSound;
             state.enableStreamingSound = enableStreamingSound;
@@ -52,7 +56,10 @@ const playerSlice = createSlice({
             } = action.payload;
 
             if (language !== undefined) {
-                state.language = LangHelper.formatedLanguage(language);
+                const lang = formatedLanguage(language);
+
+                state.language = lang;
+                void i18next.changeLanguage(lang);
             }
 
             if (autoRebet !== undefined) {

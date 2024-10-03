@@ -7,78 +7,66 @@ import SVGLangVn from '../components/SVG/languages/SVGLangVn';
 import SVGLangTh from '../components/SVG/languages/SVGLangTh';
 import SVGLangKr from '../components/SVG/languages/SVGLangKr';
 
-export type SupportLang = (typeof LangHelper.supportLang)[number];
+export type SupportLang = (typeof supportLang)[number];
 
-export class LangHelper {
-    private static _activeLang: string = 'en';
+const supportLang = ['en', 'id', 'vn', 'th', 'zh', 'ko'] as const;
 
-    static get activeLang() {
-        return this._activeLang;
+const countryLanguageCodes: Record<string, string> = {
+    en: 'en-US',
+    id: 'id-ID',
+    vn: 'vn-VN',
+    th: 'th-TH',
+    zh: 'zh-CN',
+    ko: 'ko-KR',
+};
+
+export const langMap: Record<string, string> = {
+    en: 'en',
+    id: 'id',
+    vn: 'vn',
+    th: 'th',
+    zh: 'zh',
+    ko: 'ko',
+};
+
+export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
+    zh: SVGLangCn,
+    en: SVGLangUk,
+    id: SVGLangId,
+    th: SVGLangTh,
+    vn: SVGLangVn,
+    ko: SVGLangKr,
+};
+
+export const langName: Record<string, string> = {
+    zh: '中文',
+    en: 'English',
+    id: 'Bahasa Indonesia',
+    th: 'ภาษาไทย',
+    vn: 'Tiếng Việt',
+    ko: '한국어',
+};
+
+export const getLoacale = (lang: string) => {
+    return countryLanguageCodes[lang];
+};
+
+export const formatedLanguage = (lang: string) => {
+    if (lang === '') {
+        lang = 'id';
     }
 
-    static set activeLang(lang: string) {
-        this._activeLang = this.formatedLanguage(lang);
+    if (lang === 'cn') {
+        lang = 'zh';
     }
 
-    static readonly supportLang = ['en', 'id', 'vn', 'th', 'zh', 'ko'] as const;
+    const validLang = langMap[lang.toLowerCase()];
 
-    static logo: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
-        zh: SVGLangCn,
-        en: SVGLangUk,
-        id: SVGLangId,
-        th: SVGLangTh,
-        vn: SVGLangVn,
-        ko: SVGLangKr,
-    };
-
-    static langName: Record<string, string> = {
-        zh: '中文',
-        en: 'English',
-        id: 'Bahasa Indonesia',
-        th: 'ภาษาไทย',
-        vn: 'Tiếng Việt',
-        ko: '한국어',
-    };
-
-    static getDisplayName() {}
-
-    static countryLanguageCodes: Record<string, string> = {
-        en: 'en-US',
-        id: 'id-ID',
-        vn: 'vn-VN',
-        th: 'th-TH',
-        zh: 'zh-CN',
-        ko: 'ko-KR',
-    };
-
-    static getLoacale() {
-        return this.countryLanguageCodes[this.activeLang];
+    if ((supportLang as readonly string[]).includes(lang)) {
+        return validLang;
     }
 
-    static langMap: Record<string, string> = {
-        en: 'en',
-        id: 'id',
-        vn: 'vn',
-        th: 'th',
-        zh: 'zh',
-        ko: 'ko',
-    };
+    return supportLang[0];
+};
 
-    static formatedLanguage = (lang: string) => {
-        if (lang === '') {
-            lang = 'id';
-        }
-
-        if (lang === 'cn') {
-            lang = 'zh';
-        }
-
-        const validLang = this.langMap[lang.toLowerCase()];
-
-        if ((this.supportLang as readonly string[]).includes(lang)) {
-            return validLang;
-        }
-
-        return this.supportLang[0];
-    };
-}
+export class LangHelper {}
