@@ -60,7 +60,7 @@ export type BaseTransaction = {
     total_debit: number;
     total_credit: number;
     total_transaction: number;
-    detail_betting: Array<BettingDetail>;
+    detail_betting: BettingDetail[];
 };
 
 type DefaultDetailResult = {

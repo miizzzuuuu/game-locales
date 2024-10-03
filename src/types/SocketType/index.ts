@@ -38,10 +38,10 @@ export type CameraSequence = {
 export type TopWinnerData = {
     pcode: string;
     periode: number;
-    data: Array<{
+    data: {
         username: string;
         totalWin: number;
-    }>;
+    }[];
 };
 
 export type BaseThunder = { pcode: string };
