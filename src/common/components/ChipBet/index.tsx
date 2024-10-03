@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Features } from '../../utils/Features';
 import Chip from './Chip';
 import ChipAnimation from './ChipAnimation';
@@ -11,4 +12,5 @@ const ChipBet = (props: IProps) => {
     return Features.CHIP_ANIMATION ? <ChipAnimation {...props} /> : <Chip {...props} />;
 };
 
-export default ChipBet;
+const MemoizedChipBet = memo(ChipBet);
+export default MemoizedChipBet;

@@ -15,5 +15,5 @@ export const Features: FeaturesType = {
     SHUFFLE_THE_CARDS: false,
     LETTER_BOX: false,
     STREAMING_LANDSCAPE_LETTER_BOX: true,
-    CHIP_ANIMATION: false,
+    CHIP_ANIMATION: true,
 };

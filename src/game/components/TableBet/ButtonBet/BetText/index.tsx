@@ -20,4 +20,5 @@ const BetText = ({ label }: IProps) => {
     );
 };
 
-export default memo(BetText);
+const MemoizedBetText = memo(BetText);
+export default MemoizedBetText;

@@ -1,12 +1,10 @@
-import { memo } from 'react';
-
-import styles from './styles.module.scss';
 import { StringHelper } from '../../../utils/StringHelper';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectChipBase } from '../../../../store/slice/chipSlice';
 import { ChipHelper } from '../../../utils/ChipHelper';
 import { selectShowChip } from '../../../../store/slice/gameStateSlice';
 import SVGChip from '../../SVG/SVGChip';
+import styles from './styles.module.scss';
 
 interface IProps {
     value: number;
@@ -30,4 +28,4 @@ const ChipBet = ({ value, ignoreTransparent }: IProps) => {
     );
 };
 
-export default memo(ChipBet);
+export default ChipBet;
