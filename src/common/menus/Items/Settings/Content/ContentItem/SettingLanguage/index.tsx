@@ -1,27 +1,24 @@
-import { ReactNode } from 'react';
+import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
+import { selectLanguage, updateSetings } from '../../../../../../../store/slice/settingsSlice';
+import { Dropdown } from '../../../Dropdown';
+import { langMap } from '../../../../../../utils/LangHelper';
+import LabelTranslate from '../../../../../../components/LabelTranslate';
+import SVGIconLanguage from '../../../SVG/SVGIconLanguage';
 
-import { Dropdown } from '../Dropdown';
-import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
-import { selectLanguage, updateSetings } from '../../../../../store/slice/settingsSlice';
-import { langMap } from '../../../../utils/LangHelper';
+import styles from '../../../Item/styles.module.scss';
 
-import styles from '../Item/styles.module.scss';
-
-interface IProps {
-    label: ReactNode | undefined;
-    icon: ReactNode;
-}
-
-const SettingLanguage = ({ label, icon }: IProps) => {
+const SettingLanguage = () => {
     const dispatch = useAppDispatch();
     const lang = useAppSelector(selectLanguage);
 
     return (
         <div className={styles.item}>
             <div className={styles.left}>
-                {icon}
+                <SVGIconLanguage />
 
-                <span className={styles.text}>{label}</span>
+                <span className={styles.text}>
+                    <LabelTranslate value="language" />
+                </span>
             </div>
 
             <Dropdown

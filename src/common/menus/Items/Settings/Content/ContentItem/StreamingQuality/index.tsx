@@ -1,7 +1,10 @@
-import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
-import { selectStreamingQuality, updateSetings } from '../../../../../store/slice/settingsSlice';
-import Button from '../../../../components/Button';
-import LabelTranslate from '../../../../components/LabelTranslate';
+import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
+import {
+    selectStreamingQuality,
+    updateSetings,
+} from '../../../../../../../store/slice/settingsSlice';
+import Button from '../../../../../../components/Button';
+import LabelTranslate from '../../../../../../components/LabelTranslate';
 import styles from './styles.module.scss';
 
 interface IQualityButtonProps {

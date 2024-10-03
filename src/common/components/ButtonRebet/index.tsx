@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import ButtonAction from '../ButtonAction';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectSettings, updateSetings } from '../../../store/slice/settingsSlice';
+import { selectAutoRebet, updateSetings } from '../../../store/slice/settingsSlice';
 import { selectLastBetData } from '../../../store/slice/lastBetsSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../LabelTranslate';
@@ -23,8 +23,7 @@ const ButtonRebet = ({ show, styles }: IProps) => {
 
     const { t } = useAppTranslate();
 
-    const settings = useAppSelector(selectSettings);
-    const autoRebet = settings.autoRebet;
+    const autoRebet = useAppSelector(selectAutoRebet);
 
     const lastBetData = useAppSelector(selectLastBetData);
 
@@ -39,7 +38,6 @@ const ButtonRebet = ({ show, styles }: IProps) => {
         if (autoRebet) {
             dispatch(
                 updateSetings({
-                    ...settings,
                     autoRebet: false,
                 }),
             );
