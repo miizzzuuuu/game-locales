@@ -45,7 +45,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -103,7 +103,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -160,7 +160,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -217,7 +217,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -274,7 +274,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -315,7 +315,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -357,7 +357,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -415,7 +415,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -472,7 +472,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -529,7 +529,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -586,7 +586,7 @@ const SVGCorner = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -627,7 +627,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -660,7 +660,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M50.0732 17.3758C47.6552 17.3758 45.6932 19.3378 45.6932 21.7558C45.6932 24.1738 47.6552 26.1358 50.0732 26.1358C52.4912 26.1358 54.4532 24.1738 54.4532 21.7558C54.4532 19.3378 52.4912 17.3758 50.0732 17.3758ZM50.0732 25.8718C47.7992 25.8718 45.9572 24.0298 45.9572 21.7558C45.9572 19.4818 47.7992 17.6398 50.0732 17.6398C52.3472 17.6398 54.1892 19.4818 54.1892 21.7558C54.1892 24.0298 52.3472 25.8718 50.0732 25.8718Z"
                             fill="url(#paint29_radial_356_460)"
                         />
@@ -710,7 +710,7 @@ const SVGCorner = ({ className, style }: IProps) => {
                             fill="#FA3E3E"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M99.9999 17.3758C97.5819 17.3758 95.6199 19.3378 95.6199 21.7558C95.6199 24.1738 97.5819 26.1358 99.9999 26.1358C102.418 26.1358 104.38 24.1738 104.38 21.7558C104.38 19.3378 102.418 17.3758 99.9999 17.3758ZM99.9999 25.8718C97.7259 25.8718 95.8839 24.0298 95.8839 21.7558C95.8839 19.4818 97.7259 17.6398 99.9999 17.6398C102.274 17.6398 104.116 19.4818 104.116 21.7558C104.116 24.0298 102.274 25.8718 99.9999 25.8718Z"
                             fill="url(#paint33_radial_356_460)"
                         />

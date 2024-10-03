@@ -89,7 +89,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -121,7 +121,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M36.9985 7.08051C34.9835 7.08051 33.3485 8.71551 33.3485 10.7305C33.3485 12.7455 34.9835 14.3805 36.9985 14.3805C39.0135 14.3805 40.6485 12.7455 40.6485 10.7305C40.6485 8.71551 39.0135 7.08051 36.9985 7.08051ZM36.9985 14.1605C35.1035 14.1605 33.5685 12.6255 33.5685 10.7305C33.5685 8.83551 35.1035 7.30051 36.9985 7.30051C38.8935 7.30051 40.4285 8.83551 40.4285 10.7305C40.4285 12.6255 38.8935 14.1605 36.9985 14.1605Z"
                             fill="url(#paint4_radial_356_525)"
                         />
@@ -187,7 +187,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -219,7 +219,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M61.9985 7.08051C59.9835 7.08051 58.3485 8.71551 58.3485 10.7305C58.3485 12.7455 59.9835 14.3805 61.9985 14.3805C64.0135 14.3805 65.6485 12.7455 65.6485 10.7305C65.6485 8.71551 64.0135 7.08051 61.9985 7.08051ZM61.9985 14.1605C60.1035 14.1605 58.5685 12.6255 58.5685 10.7305C58.5685 8.83551 60.1035 7.30051 61.9985 7.30051C63.8935 7.30051 65.4285 8.83551 65.4285 10.7305C65.4285 12.6255 63.8935 14.1605 61.9985 14.1605Z"
                             fill="url(#paint10_radial_356_525)"
                         />
@@ -285,7 +285,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -317,7 +317,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M86.9985 7.08051C84.9835 7.08051 83.3485 8.71551 83.3485 10.7305C83.3485 12.7455 84.9835 14.3805 86.9985 14.3805C89.0135 14.3805 90.6485 12.7455 90.6485 10.7305C90.6485 8.71551 89.0135 7.08051 86.9985 7.08051ZM86.9985 14.1605C85.1035 14.1605 83.5685 12.6255 83.5685 10.7305C83.5685 8.83551 85.1035 7.30051 86.9985 7.30051C88.8935 7.30051 90.4285 8.83551 90.4285 10.7305C90.4285 12.6255 88.8935 14.1605 86.9985 14.1605Z"
                             fill="url(#paint16_radial_356_525)"
                         />
@@ -383,7 +383,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -415,7 +415,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M112.999 7.08051C110.984 7.08051 109.349 8.71551 109.349 10.7305C109.349 12.7455 110.984 14.3805 112.999 14.3805C115.014 14.3805 116.649 12.7455 116.649 10.7305C116.649 8.71551 115.014 7.08051 112.999 7.08051ZM112.999 14.1605C111.104 14.1605 109.569 12.6255 109.569 10.7305C109.569 8.83551 111.104 7.30051 112.999 7.30051C114.894 7.30051 116.429 8.83551 116.429 10.7305C116.429 12.6255 114.894 14.1605 112.999 14.1605Z"
                             fill="url(#paint22_radial_356_525)"
                         />
@@ -481,7 +481,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -513,7 +513,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M137.998 7.08051C135.983 7.08051 134.348 8.71551 134.348 10.7305C134.348 12.7455 135.983 14.3805 137.998 14.3805C140.013 14.3805 141.648 12.7455 141.648 10.7305C141.648 8.71551 140.013 7.08051 137.998 7.08051ZM137.998 14.1605C136.103 14.1605 134.568 12.6255 134.568 10.7305C134.568 8.83551 136.103 7.30051 137.998 7.30051C139.893 7.30051 141.428 8.83551 141.428 10.7305C141.428 12.6255 139.893 14.1605 137.998 14.1605Z"
                             fill="url(#paint28_radial_356_525)"
                         />
@@ -579,7 +579,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -611,7 +611,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M162.998 7.08051C160.983 7.08051 159.348 8.71551 159.348 10.7305C159.348 12.7455 160.983 14.3805 162.998 14.3805C165.013 14.3805 166.648 12.7455 166.648 10.7305C166.648 8.71551 165.013 7.08051 162.998 7.08051ZM162.998 14.1605C161.103 14.1605 159.568 12.6255 159.568 10.7305C159.568 8.83551 161.103 7.30051 162.998 7.30051C164.893 7.30051 166.428 8.83551 166.428 10.7305C166.428 12.6255 164.893 14.1605 162.998 14.1605Z"
                             fill="url(#paint34_radial_356_525)"
                         />
@@ -710,7 +710,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -742,7 +742,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M11.9985 30.0805C9.98351 30.0805 8.34851 31.7155 8.34851 33.7305C8.34851 35.7455 9.98351 37.3805 11.9985 37.3805C14.0135 37.3805 15.6485 35.7455 15.6485 33.7305C15.6485 31.7155 14.0135 30.0805 11.9985 30.0805ZM11.9985 37.1605C10.1035 37.1605 8.56851 35.6255 8.56851 33.7305C8.56851 31.8355 10.1035 30.3005 11.9985 30.3005C13.8935 30.3005 15.4285 31.8355 15.4285 33.7305C15.4285 35.6255 13.8935 37.1605 11.9985 37.1605Z"
                             fill="url(#paint41_radial_356_525)"
                         />
@@ -801,7 +801,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -843,7 +843,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -885,7 +885,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -927,7 +927,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -969,7 +969,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1011,7 +1011,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1060,7 +1060,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -1092,7 +1092,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M11.9985 53.0805C9.98351 53.0805 8.34851 54.7155 8.34851 56.7305C8.34851 58.7455 9.98351 60.3805 11.9985 60.3805C14.0135 60.3805 15.6485 58.7455 15.6485 56.7305C15.6485 54.7155 14.0135 53.0805 11.9985 53.0805ZM11.9985 60.1605C10.1035 60.1605 8.56851 58.6255 8.56851 56.7305C8.56851 54.8355 10.1035 53.3005 11.9985 53.3005C13.8935 53.3005 15.4285 54.8355 15.4285 56.7305C15.4285 58.6255 13.8935 60.1605 11.9985 60.1605Z"
                             fill="url(#paint53_radial_356_525)"
                         />
@@ -1151,7 +1151,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1193,7 +1193,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1235,7 +1235,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1277,7 +1277,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1319,7 +1319,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1361,7 +1361,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1410,7 +1410,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -1442,7 +1442,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M187.999 41.0805C185.984 41.0805 184.349 42.7155 184.349 44.7305C184.349 46.7455 185.984 48.3805 187.999 48.3805C190.014 48.3805 191.649 46.7455 191.649 44.7305C191.649 42.7155 190.014 41.0805 187.999 41.0805ZM187.999 48.1605C186.104 48.1605 184.569 46.6255 184.569 44.7305C184.569 42.8355 186.104 41.3005 187.999 41.3005C189.894 41.3005 191.429 42.8355 191.429 44.7305C191.429 46.6255 189.894 48.1605 187.999 48.1605Z"
                             fill="url(#paint65_radial_356_525)"
                         />
@@ -1508,7 +1508,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -1540,7 +1540,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M11.9985 75.0805C9.98351 75.0805 8.34851 76.7155 8.34851 78.7305C8.34851 80.7455 9.98351 82.3805 11.9985 82.3805C14.0135 82.3805 15.6485 80.7455 15.6485 78.7305C15.6485 76.7155 14.0135 75.0805 11.9985 75.0805ZM11.9985 82.1605C10.1035 82.1605 8.56851 80.6255 8.56851 78.7305C8.56851 76.8355 10.1035 75.3005 11.9985 75.3005C13.8935 75.3005 15.4285 76.8355 15.4285 78.7305C15.4285 80.6255 13.8935 82.1605 11.9985 82.1605Z"
                             fill="url(#paint71_radial_356_525)"
                         />
@@ -1599,7 +1599,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1641,7 +1641,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1683,7 +1683,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1725,7 +1725,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1767,7 +1767,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1809,7 +1809,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1858,7 +1858,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -1890,7 +1890,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M11.9985 98.0805C9.98351 98.0805 8.34851 99.7155 8.34851 101.731C8.34851 103.746 9.98351 105.381 11.9985 105.381C14.0135 105.381 15.6485 103.746 15.6485 101.731C15.6485 99.7155 14.0135 98.0805 11.9985 98.0805ZM11.9985 105.161C10.1035 105.161 8.56851 103.626 8.56851 101.731C8.56851 99.8355 10.1035 98.3005 11.9985 98.3005C13.8935 98.3005 15.4285 99.8355 15.4285 101.731C15.4285 103.626 13.8935 105.161 11.9985 105.161Z"
                             fill="url(#paint83_radial_356_525)"
                         />
@@ -1949,7 +1949,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -1991,7 +1991,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -2033,7 +2033,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -2075,7 +2075,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -2117,7 +2117,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -2159,7 +2159,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -2208,7 +2208,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2240,7 +2240,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M187.999 87.0805C185.984 87.0805 184.349 88.7155 184.349 90.7305C184.349 92.7455 185.984 94.3805 187.999 94.3805C190.014 94.3805 191.649 92.7455 191.649 90.7305C191.649 88.7155 190.014 87.0805 187.999 87.0805ZM187.999 94.1605C186.104 94.1605 184.569 92.6255 184.569 90.7305C184.569 88.8355 186.104 87.3005 187.999 87.3005C189.894 87.3005 191.429 88.8355 191.429 90.7305C191.429 92.6255 189.894 94.1605 187.999 94.1605Z"
                             fill="url(#paint95_radial_356_525)"
                         />
@@ -2306,7 +2306,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2338,7 +2338,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M19.9987 121.08C17.9837 121.08 16.3487 122.715 16.3487 124.73C16.3487 126.745 17.9837 128.38 19.9987 128.38C22.0137 128.38 23.6487 126.745 23.6487 124.73C23.6487 122.715 22.0137 121.08 19.9987 121.08ZM19.9987 128.16C18.1037 128.16 16.5687 126.625 16.5687 124.73C16.5687 122.835 18.1037 121.3 19.9987 121.3C21.8937 121.3 23.4287 122.835 23.4287 124.73C23.4287 126.625 21.8937 128.16 19.9987 128.16Z"
                             fill="url(#paint101_radial_356_525)"
                         />
@@ -2404,7 +2404,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2436,7 +2436,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M59.9984 121.08C57.9834 121.08 56.3484 122.715 56.3484 124.73C56.3484 126.745 57.9834 128.38 59.9984 128.38C62.0134 128.38 63.6484 126.745 63.6484 124.73C63.6484 122.715 62.0134 121.08 59.9984 121.08ZM59.9984 128.16C58.1034 128.16 56.5684 126.625 56.5684 124.73C56.5684 122.835 58.1034 121.3 59.9984 121.3C61.8934 121.3 63.4284 122.835 63.4284 124.73C63.4284 126.625 61.8934 128.16 59.9984 128.16Z"
                             fill="url(#paint107_radial_356_525)"
                         />
@@ -2502,7 +2502,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2534,7 +2534,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M99.9983 121.08C97.9833 121.08 96.3483 122.715 96.3483 124.73C96.3483 126.745 97.9833 128.38 99.9983 128.38C102.013 128.38 103.648 126.745 103.648 124.73C103.648 122.715 102.013 121.08 99.9983 121.08ZM99.9983 128.16C98.1033 128.16 96.5683 126.625 96.5683 124.73C96.5683 122.835 98.1033 121.3 99.9983 121.3C101.893 121.3 103.428 122.835 103.428 124.73C103.428 126.625 101.893 128.16 99.9983 128.16Z"
                             fill="url(#paint113_radial_356_525)"
                         />
@@ -2600,7 +2600,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2632,7 +2632,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M139.999 121.08C137.984 121.08 136.349 122.715 136.349 124.73C136.349 126.745 137.984 128.38 139.999 128.38C142.014 128.38 143.649 126.745 143.649 124.73C143.649 122.715 142.014 121.08 139.999 121.08ZM139.999 128.16C138.104 128.16 136.569 126.625 136.569 124.73C136.569 122.835 138.104 121.3 139.999 121.3C141.894 121.3 143.429 122.835 143.429 124.73C143.429 126.625 141.894 128.16 139.999 128.16Z"
                             fill="url(#paint119_radial_356_525)"
                         />
@@ -2698,7 +2698,7 @@ const SVGColRow = ({ className, style }: IProps) => {
             </text>
             <text
                 fill="white"
-                fillOpacity="0.32"
+                fillOpacity="0.3"
                 fontFamily="Manrope"
                 fontSize="4.65116"
                 fontWeight="bold"
@@ -2730,7 +2730,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M179.999 121.08C177.984 121.08 176.349 122.715 176.349 124.73C176.349 126.745 177.984 128.38 179.999 128.38C182.014 128.38 183.649 126.745 183.649 124.73C183.649 122.715 182.014 121.08 179.999 121.08ZM179.999 128.16C178.104 128.16 176.569 126.625 176.569 124.73C176.569 122.835 178.104 121.3 179.999 121.3C181.894 121.3 183.429 122.835 183.429 124.73C183.429 126.625 181.894 128.16 179.999 128.16Z"
                             fill="url(#paint125_radial_356_525)"
                         />

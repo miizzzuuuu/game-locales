@@ -14,7 +14,7 @@ const TextPayout = ({ group, tSpanAttributes }: TextPayoutProps) => {
     return (
         <text
             fill="white"
-            fillOpacity="0.32"
+            fillOpacity="0.3"
             fontFamily="Manrope"
             fontSize="4.65116"
             fontWeight="bold"

@@ -36,7 +36,7 @@
                 );
 
                 border-radius: var(--button-action-size);
-                background-color: rgba(0, 0, 0, 0.32);
+                background-color: var(--overlay-1);
                 backdrop-filter: blur(0.6rem);
             }
         }
@@ -76,7 +76,7 @@
                 // height: 13.8rem;
 
                 border-radius: var(--button-action-size);
-                background-color: rgba(0, 0, 0, 0.32);
+                background-color: var(--overlay-1);
                 backdrop-filter: blur(0.6rem);
             }
         }
