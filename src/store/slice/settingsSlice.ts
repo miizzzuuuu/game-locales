@@ -33,8 +33,8 @@ const playerSlice = createSlice({
 
             const lang = formatedLanguage(language);
             void i18next.changeLanguage(lang);
-
             state.language = lang;
+
             state.autoRebet = autoRebet;
             state.enableGameSound = enableGameSound;
             state.enableStreamingSound = enableStreamingSound;
@@ -57,7 +57,6 @@ const playerSlice = createSlice({
 
             if (language !== undefined) {
                 const lang = formatedLanguage(language);
-
                 state.language = lang;
                 void i18next.changeLanguage(lang);
             }

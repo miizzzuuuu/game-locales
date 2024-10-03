@@ -11,7 +11,6 @@ import { useFetchGame } from './common/hooks/useFetchGame';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import Game from './common/components/Game';
 import { useFetchTimer } from './common/hooks/useFetchTimer';
-// import { useLanguage } from './common/hooks/useLanguage';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
 import { useFullscreen } from './common/hooks/useFullscreen';
@@ -63,8 +62,6 @@ function App() {
     }, []);
 
     useWindowResize(handleOverlayResize, false);
-
-    // useLanguage();
 
     return (
         <div className={`app ${deviceType}`}>

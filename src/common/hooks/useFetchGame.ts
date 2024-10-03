@@ -4,7 +4,7 @@ import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { getGameData } from '../../services/api/gameData';
 import { setGame } from '../../store/slice/gameSlice';
-import { fetchResultHistory } from '../../game/hooks/useFetchResults';
+import { fetchResultHistory } from '../../game/services/resultHistory';
 import { fetchLastbets } from '../../services/api/lastbets';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
 import { addBetSend } from '../../store/slice/bets';
