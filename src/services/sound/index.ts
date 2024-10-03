@@ -41,7 +41,7 @@ export class Sound {
             this.bgMusicAudio.loop = true;
             this.bgMusicAudio.volume = this._volumeMusic;
 
-            this.bgMusicAudio.play();
+            void this.bgMusicAudio.play();
         } catch (error) {
             console.warn(error);
         }
@@ -102,7 +102,7 @@ export class Sound {
                 audio.loop = loop;
             }
 
-            audio.play();
+            void audio.play();
         } catch (error) {
             console.warn(error);
         }

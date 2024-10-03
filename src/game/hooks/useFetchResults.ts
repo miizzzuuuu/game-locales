@@ -33,7 +33,7 @@ function useFetchResults() {
             }
         };
 
-        fetchPlayerSettings();
+        void fetchPlayerSettings();
 
         return () => {
             ignore = true;

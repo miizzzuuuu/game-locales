@@ -4,8 +4,8 @@ import { Pagination } from '../../types';
 
 export const fetchResultHistory = async (_dispatch: AppDispatch, gameSet?: number | string) => {
     try {
-        const page: number = 1;
-        const perPage: number = 10;
+        const page = 1;
+        const perPage = 10;
 
         const data = await getResultHistory<{
             data: any; // change to type data your game

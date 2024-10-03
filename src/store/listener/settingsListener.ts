@@ -12,7 +12,7 @@ export const updateSettingsListener = (startListening: AppStartListening) => {
 
             const settings = state.settings;
 
-            updatePlayerSettings(settings);
+            void updatePlayerSettings(settings);
         },
     });
 };

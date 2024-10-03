@@ -19,7 +19,7 @@ declare global {
     }
 }
 
-const main = async () => {
+const main = () => {
     if (import.meta.env.DEV) {
         makeServer({ environment: 'development' });
     }
