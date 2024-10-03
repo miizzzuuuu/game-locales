@@ -34,50 +34,53 @@ function Game() {
     const time = useAppSelector(selectTime);
     const winnerData = useAppSelector(selectTopWinner);
 
-    const handleKeyboardTest = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'l') {
-            dispatch(loadNewValueAction(dummyLoadNewValue));
-        }
-        if (e.key === 'r') {
-            dispatch(
-                gameResultAction({
-                    ...dummyLoadNewValue,
-                    win: FunctionHelper.getRandomInt(1, 25).toString().padStart(2, '0'),
-                }),
-            );
-        }
-        if (e.key === 'w') {
-            dispatch(setWinAmount(1000000));
-        }
-        if (e.key === 'c') {
-            dispatch(closeTime());
-        }
-        if (e.key === 't') {
-            dispatch(
-                setTopWinner({
-                    data: topWinnerDummy,
-                    periode: 0,
-                }),
-            );
-        }
-        if (e.key === 'p') {
-            dispatch(setShowMiniHowToPlay(true));
-        }
-        if (e.key === 'n') {
-            if (!Features.SHUFFLE_THE_CARDS) {
-                return;
+    const handleKeyboardTest = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'l') {
+                dispatch(loadNewValueAction(dummyLoadNewValue));
             }
-
-            dispatch(setNewSet(newSetDummy.status));
-        }
-        if (e.key === 'm') {
-            if (!Features.SHUFFLE_THE_CARDS) {
-                return;
+            if (e.key === 'r') {
+                dispatch(
+                    gameResultAction({
+                        ...dummyLoadNewValue,
+                        win: FunctionHelper.getRandomInt(1, 25).toString().padStart(2, '0'),
+                    }),
+                );
             }
+            if (e.key === 'w') {
+                dispatch(setWinAmount(1000000));
+            }
+            if (e.key === 'c') {
+                dispatch(closeTime());
+            }
+            if (e.key === 't') {
+                dispatch(
+                    setTopWinner({
+                        data: topWinnerDummy,
+                        periode: 0,
+                    }),
+                );
+            }
+            if (e.key === 'p') {
+                dispatch(setShowMiniHowToPlay(true));
+            }
+            if (e.key === 'n') {
+                if (!Features.SHUFFLE_THE_CARDS) {
+                    return;
+                }
 
-            dispatch(setNewSet(false));
-        }
-    }, []);
+                dispatch(setNewSet(newSetDummy.status));
+            }
+            if (e.key === 'm') {
+                if (!Features.SHUFFLE_THE_CARDS) {
+                    return;
+                }
+
+                dispatch(setNewSet(false));
+            }
+        },
+        [dispatch],
+    );
 
     useKeyboard(handleKeyboardTest);
 

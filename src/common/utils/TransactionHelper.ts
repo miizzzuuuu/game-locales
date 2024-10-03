@@ -14,9 +14,9 @@ import {
 } from '../../types';
 
 export class TransactionHelper {
-    static groupTransactionsByDate(transactions: Transaction<Pcode>[]): {
-        [key: string]: Transaction<Pcode>[];
-    } {
+    static groupTransactionsByDate(
+        transactions: Transaction<Pcode>[],
+    ): Record<string, Transaction<Pcode>[]> {
         return transactions.reduce(
             (acc, transaction) => {
                 const date = transaction.tglbel.split('T')[0];
@@ -27,7 +27,7 @@ export class TransactionHelper {
                 acc[date].push(transaction);
                 return acc;
             },
-            {} as { [key: string]: Transaction<Pcode>[] },
+            {} as Record<string, Transaction<Pcode>[]>,
         );
     }
 

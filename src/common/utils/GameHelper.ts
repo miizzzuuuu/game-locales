@@ -1,6 +1,6 @@
 const OFFSET_TIME = 5;
 
-let _pcode: string = '';
+let _pcode = '';
 
 const GAME_CODE: Record<string, string> = {
     p6: '24D',
@@ -119,7 +119,7 @@ const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 export const WIN_NOTIFICATION_DURATION = 3000;
 
 export const normalizeTime = (time: number) => {
-    let result = time - OFFSET_TIME;
+    const result = time - OFFSET_TIME;
     return result < 0 ? 0 : result;
 };
 

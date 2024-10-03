@@ -94,7 +94,7 @@ const BonusSystem = () => {
                     const prefix = `example-${idx + 1}`;
 
                     return (
-                        <div className={styles['example']} key={idx}>
+                        <div className={styles.example} key={idx}>
                             <Heading3 keyLang={keyLang} value={`${prefix}.title`} />
 
                             <P keyLang={keyLang} value={`${prefix}.period`} option={example} />
@@ -108,7 +108,7 @@ const BonusSystem = () => {
                                 multiLine
                             />
 
-                            <div className={styles['result']}>
+                            <div className={styles.result}>
                                 <P
                                     keyLang={keyLang}
                                     value={`${prefix}.winnings`}

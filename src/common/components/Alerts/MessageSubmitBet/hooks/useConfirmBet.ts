@@ -42,7 +42,7 @@ function useConfirmBet() {
 
         if (confirmBetStatus === 'rejected') {
             setMessage({
-                value: confirmBetError || t('bet-error'),
+                value: confirmBetError ?? t('bet-error'),
                 type: 'danger',
             });
             return;
