@@ -7,9 +7,11 @@ export const confirmBetFullfiledListener = (startListening: AppStartListening) =
     startListening({
         actionCreator: confirmBetFullfiled,
         effect: (action, listenerApi) => {
+            const dispatch = listenerApi.dispatch;
+
             const newBalance = action.payload.balance - action.payload.total_bet;
 
-            listenerApi.dispatch(
+            dispatch(
                 addBetSend({
                     bet: action.payload.bet,
                     total_bet: action.payload.total_bet,
@@ -17,7 +19,7 @@ export const confirmBetFullfiledListener = (startListening: AppStartListening) =
                 }),
             );
 
-            listenerApi.dispatch(updateBalance(newBalance));
+            dispatch(updateBalance(newBalance));
         },
     });
 };
