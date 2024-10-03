@@ -1,20 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useAppSelector } from '../../store/hooks';
-import { selectEnableGameSound, selectVolumeGameSound } from '../../store/slice/settingsSlice';
 import { Sound } from '../../services/sound';
 import { selectFocus } from '../../store/slice/windowSlice';
 
 function useSettingSound() {
-    const [allowPlayAudio, setAllowPlayAudio] = useState(false);
-    const enableSoundGame = useAppSelector(selectEnableGameSound);
-    const volumeGameSound = useAppSelector(selectVolumeGameSound);
-
     const isFocus = useAppSelector(selectFocus);
 
     // start sound setting
     useEffect(() => {
         const handleEnableSound = () => {
-            setAllowPlayAudio(true);
+            Sound.enablePlay = true;
         };
 
         document.addEventListener('mousedown', handleEnableSound, {
@@ -27,41 +22,12 @@ function useSettingSound() {
     }, []);
 
     useEffect(() => {
-        if (allowPlayAudio) {
-            if (isFocus) {
-                Sound.playMusic();
-                Sound.enablePlay = true;
-            } else {
-                Sound.stopMusic();
-                Sound.enablePlay = false;
-            }
+        if (isFocus) {
+            Sound.isFocus = true;
+        } else {
+            Sound.isFocus = false;
         }
-    }, [isFocus, allowPlayAudio]);
-
-    useEffect(() => {
-        Sound.volumeSound = volumeGameSound;
-        Sound.volumeMusic = volumeGameSound;
-    }, [volumeGameSound]);
-
-    useEffect(() => {
-        Sound.enableSound = enableSoundGame;
-
-        if (!enableSoundGame) {
-            Sound.stopMusic();
-        }
-
-        if (allowPlayAudio) {
-            Sound.enablePlay = allowPlayAudio;
-        }
-
-        if (enableSoundGame && allowPlayAudio) {
-            Sound.playMusic();
-        }
-
-        return () => {
-            Sound.clear();
-        };
-    }, [enableSoundGame, allowPlayAudio]);
+    }, [isFocus]);
     // end sound setting
 }
 

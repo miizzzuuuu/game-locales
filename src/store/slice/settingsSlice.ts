@@ -3,6 +3,7 @@ import { RootState } from '../store';
 import { Settings } from '../../types';
 import { formatedLanguage } from '../../common/utils/LangHelper';
 import i18next from 'i18next';
+import { Sound } from '../../services/sound';
 
 const initialState: Settings = {
     language: '',
@@ -36,12 +37,18 @@ const playerSlice = createSlice({
             state.language = lang;
 
             state.autoRebet = autoRebet;
-            state.enableGameSound = enableGameSound;
+
+            state.volumeStreamingSound = volumeStreamingSound;
             state.enableStreamingSound = enableStreamingSound;
             state.enableStreamingVideo = enableStreamingVideo;
             state.streamingQuality = streamingQuality;
+
             state.volumeGameSound = volumeGameSound;
-            state.volumeStreamingSound = volumeStreamingSound;
+            Sound.volumeSound = volumeGameSound;
+            Sound.volumeMusic = volumeGameSound;
+
+            state.enableGameSound = enableGameSound;
+            Sound.enableSound = enableGameSound;
         },
         updateSetings: (state, action: PayloadAction<Partial<Settings>>) => {
             const {
@@ -58,15 +65,12 @@ const playerSlice = createSlice({
             if (language !== undefined) {
                 const lang = formatedLanguage(language);
                 state.language = lang;
+
                 void i18next.changeLanguage(lang);
             }
 
             if (autoRebet !== undefined) {
                 state.autoRebet = autoRebet;
-            }
-
-            if (enableGameSound !== undefined) {
-                state.enableGameSound = enableGameSound;
             }
 
             if (enableStreamingSound !== undefined) {
@@ -81,12 +85,21 @@ const playerSlice = createSlice({
                 state.streamingQuality = streamingQuality;
             }
 
-            if (volumeGameSound !== undefined) {
-                state.volumeGameSound = volumeGameSound;
-            }
-
             if (volumeStreamingSound !== undefined) {
                 state.volumeStreamingSound = volumeStreamingSound;
+            }
+
+            if (volumeGameSound !== undefined) {
+                state.volumeGameSound = volumeGameSound;
+
+                Sound.volumeSound = volumeGameSound;
+                Sound.volumeMusic = volumeGameSound;
+            }
+
+            if (enableGameSound !== undefined) {
+                state.enableGameSound = enableGameSound;
+
+                Sound.enableSound = enableGameSound;
             }
         },
     },
