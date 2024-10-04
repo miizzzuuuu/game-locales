@@ -5,7 +5,7 @@ import LayoutV3 from '../../layouts/v3';
 import { Features } from '../../utils/Features';
 
 const layoutVersion = Features.LAYOUT_VERSION;
-let Layout =
+const Layout =
     layoutVersion === 1
         ? LayoutV1
         : layoutVersion === 2
