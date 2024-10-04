@@ -1,5 +1,5 @@
 import SVGTimer from '../../../../../../../components/Timer/SVG/SVGTimer';
-import { length as svgTimerLength } from '../../../../../../../components/Timer/TimerContent';
+import { lengthStroke as svgTimerLength } from '../../../../../../../components/Timer/TimerContent';
 
 import styles from './styles.module.scss';
 

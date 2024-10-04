@@ -18,9 +18,6 @@ const timerSlice = createSlice({
     name: 'timer',
     initialState,
     reducers: {
-        // setTime: (state, action: PayloadAction<number>) => {
-        //     state.time = action.payload;
-        // },
         setTimer: (state, action: PayloadAction<number>) => {
             state.timer = normalizeTime(action.payload);
         },
@@ -41,7 +38,7 @@ export const { setTimer, openTime, closeTime } = timerSlice.actions;
 
 export const selectTime = (state: RootState) => state.timer.time;
 export const selectTimer = (state: RootState) => state.timer.timer;
-export const selectBetIsOpen = (state: RootState) => state.timer.time !== 0;
+export const selectBetIsOpen = (state: RootState) => state.timer.time > 0;
 export const selectTimerIsClose = (state: RootState) => state.timer.isClose;
 
 export default timerSlice.reducer;
