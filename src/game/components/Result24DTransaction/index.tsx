@@ -16,15 +16,15 @@ const Result24DTransaction = ({ data }: IProps) => {
 
     return (
         <div className={styles.result}>
-    <SVGResult24D value={Number(detail_result.angka)} />
+            <SVGResult24D value={Number(detail_result.angka)} />
 
-    {detail_result.thunder?.data_thunder?.prize_thunder ? (
-        <div className={styles.multiplier}>
-            <span className={styles['multiplier-text']}>
-                {detail_result.thunder.data_thunder.prize_thunder}x
-            </span>
-        </div>
-    ) : null}
+            {detail_result.thunder?.data_thunder?.prize_thunder ? (
+                <div className={styles.multiplier}>
+                    <span className={styles['multiplier-text']}>
+                        {detail_result.thunder.data_thunder.prize_thunder}x
+                    </span>
+                </div>
+            ) : null}
         </div>
     );
 };
