@@ -4,6 +4,7 @@ import { selectGameNewSet } from '../../../../store/slice/gameSlice';
 import Message from './Message';
 import ShufflingAnimation from './ShufflingAnimation/Animation';
 import styles from './styles.module.scss';
+import { useNewSet } from '../../../../game/hooks/useNewSet';
 
 const NewSet = () => {
     const newSet = useAppSelector(selectGameNewSet);
@@ -12,10 +13,10 @@ const NewSet = () => {
     useEffect(() => {
         if (newSet) {
             setRenderUI(true);
-
-            console.log('new set callback');
         }
     }, [newSet]);
+
+    useNewSet();
 
     if (!newSet && !renderUI) {
         return null;
