@@ -16,7 +16,7 @@ const BetColRow = ({ label }: IProps) => {
                 keyLang={getBasePcode()}
             />
 
-            <span className={styles.payout}>6:1</span>
+            <span className={styles.payout}>1:6</span>
         </div>
     );
 };

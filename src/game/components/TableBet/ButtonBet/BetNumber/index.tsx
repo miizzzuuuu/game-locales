@@ -10,7 +10,7 @@ const BetNumber = ({ button }: IProps) => {
         <div className={styles.container}>
             <span className={styles['button-name']}>{Number(button)}</span>
 
-            <span className={styles.payout}>24:1</span>
+            <span className={styles.payout}>1:24</span>
         </div>
     );
 };
