@@ -32,10 +32,6 @@ const Panel = ({
 
     const [hiddenUI, setVisibleUI] = useState(true);
 
-    if (hiddenUI && !show) {
-        return null;
-    }
-
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
         if (/slideIn/.test(e.animationName)) {
             setVisibleUI(false);
@@ -47,6 +43,10 @@ const Panel = ({
             setVisibleUI(true);
         }
     };
+
+    if (hiddenUI && !show) {
+        return null;
+    }
 
     return (
         <div
