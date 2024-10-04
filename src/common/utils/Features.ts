@@ -12,7 +12,7 @@ export const Features: FeaturesType = {
     LAYOUT_VERSION: 1,
     BUTTON_PATTERN: false,
     MINI_HOW_TO_PLAY: true,
-    SHUFFLE_THE_CARDS: true,
+    SHUFFLE_THE_CARDS: false,
     LETTER_BOX: false,
     STREAMING_LANDSCAPE_LETTER_BOX: true,
     CHIP_ANIMATION: true,
