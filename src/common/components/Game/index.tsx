@@ -19,7 +19,6 @@ import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSli
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
-import { useNewSet } from '../../hooks/useNewSet';
 
 // import Menu from '../../menus/Menu';
 const Menu = lazy(() => import('../../menus/Menu'));
@@ -94,12 +93,6 @@ function Game() {
     }, [time]);
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
-
-    useNewSet({
-        handleNewSet: () => {
-            // callback when new set
-        },
-    });
 
     return (
         <div

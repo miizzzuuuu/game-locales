@@ -3,13 +3,15 @@ import { Features } from '../../utils/Features';
 import Chip from './Chip';
 import ChipAnimation from './ChipAnimation';
 
-interface IProps {
+export interface ChipBetProps {
     value: number;
     ignoreTransparent?: boolean;
 }
 
-const ChipBet = (props: IProps) => {
-    return Features.CHIP_ANIMATION ? <ChipAnimation {...props} /> : <Chip {...props} />;
+const ChipComponent = Features.CHIP_ANIMATION ? ChipAnimation : Chip;
+
+const ChipBet = (props: ChipBetProps) => {
+    return <ChipComponent {...props} />;
 };
 
 const MemoizedChipBet = memo(ChipBet);

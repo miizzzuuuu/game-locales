@@ -1,18 +1,14 @@
 import { useEffect, useRef } from 'react';
-import { StringHelper } from '../../../utils/StringHelper';
+import { ChipBetProps } from '..';
 import { useAppSelector } from '../../../../store/hooks';
-import { selectShowChip } from '../../../../store/slice/gameStateSlice';
 import { selectChipBase } from '../../../../store/slice/chipSlice';
+import { selectShowChip } from '../../../../store/slice/gameStateSlice';
 import { ChipHelper } from '../../../utils/ChipHelper';
+import { StringHelper } from '../../../utils/StringHelper';
 import SVGChip from '../../SVG/SVGChip';
 import styles from './styles.module.scss';
 
-interface IProps {
-    value: number;
-    ignoreTransparent?: boolean;
-}
-
-const ChipAnimation = ({ value, ignoreTransparent }: IProps) => {
+const ChipAnimation = ({ value, ignoreTransparent }: ChipBetProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
     const lightRef = useRef<HTMLDivElement>(null);
     const lastValue = useRef<number>(0);

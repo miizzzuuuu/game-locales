@@ -1,17 +1,13 @@
-import { StringHelper } from '../../../utils/StringHelper';
+import { ChipBetProps } from '..';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectChipBase } from '../../../../store/slice/chipSlice';
-import { ChipHelper } from '../../../utils/ChipHelper';
 import { selectShowChip } from '../../../../store/slice/gameStateSlice';
+import { ChipHelper } from '../../../utils/ChipHelper';
+import { StringHelper } from '../../../utils/StringHelper';
 import SVGChip from '../../SVG/SVGChip';
 import styles from './styles.module.scss';
 
-interface IProps {
-    value: number;
-    ignoreTransparent?: boolean;
-}
-
-const ChipBet = ({ value, ignoreTransparent }: IProps) => {
+const ChipBet = ({ value, ignoreTransparent }: ChipBetProps) => {
     const stringValue = StringHelper.formatChipText(value);
 
     const chipBase = useAppSelector(selectChipBase);

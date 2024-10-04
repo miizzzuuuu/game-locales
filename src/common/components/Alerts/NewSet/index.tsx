@@ -12,6 +12,8 @@ const NewSet = () => {
     useEffect(() => {
         if (newSet) {
             setRenderUI(true);
+
+            console.log('new set callback');
         }
     }, [newSet]);
 
