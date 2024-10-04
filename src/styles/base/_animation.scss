@@ -1,14 +1,24 @@
-@keyframes buttonWinBlink {
+@keyframes buttonWinBlinkBrightness {
     0% {
         filter: brightness(1);
     }
-
     50% {
         filter: brightness(1.5);
     }
-
     100% {
         filter: brightness(1);
+    }
+}
+
+@keyframes buttonWinBlinkSaturate {
+    0% {
+        filter: saturate(1);
+    }
+    50% {
+        filter: saturate(1.5);
+    }
+    100% {
+        filter: saturate(1);
     }
 }
 

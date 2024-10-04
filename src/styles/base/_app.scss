@@ -31,6 +31,11 @@
 }
 
 .button-win-blink {
-    animation: buttonWinBlink 1s reverse ease-in-out;
+    animation: buttonWinBlinkBrightness 1s reverse ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.button-win-blink-2 {
+    animation: buttonWinBlinkSaturate 1s reverse ease-in-out;
     animation-iteration-count: infinite;
 }
