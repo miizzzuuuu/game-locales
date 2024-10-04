@@ -506,8 +506,6 @@ export default class M27 extends BaseV2Roadmap {
             break;
         case "small-road":
             startingX = 7.05873 * (this.props.totalColumns! + 2) + 7.05873;
-            if(this.props.full==this.props.type)
-            startingX = 7.05873;
 
             redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} ></circle>;
             blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} ></circle>;
@@ -518,8 +516,7 @@ export default class M27 extends BaseV2Roadmap {
             break;
         case "cockroach-road":
             startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + (6.05873);
-            if(this.props.full==this.props.type)
-                startingX = 7.05873;
+
             const startXCoach = startingX;
             redElement = (props) => <path
                 stroke={this.redColor}
