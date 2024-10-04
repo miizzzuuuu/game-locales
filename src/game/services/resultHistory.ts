@@ -8,7 +8,7 @@ export const fetchResultHistory = async (_dispatch: AppDispatch, gameSet?: numbe
         const perPage = 10;
 
         const data = await getResultHistory<{
-            data: any; // change to type data your game
+            data: any[]; // change to type data your game
             pagination: Pagination;
         }>(page, perPage, gameSet);
 

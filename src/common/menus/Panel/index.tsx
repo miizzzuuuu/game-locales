@@ -1,10 +1,9 @@
 import { AnimationEventHandler, ReactNode, useState } from 'react';
-
-import styles from './styles.module.scss';
-import Footer from './Footer';
-import SliderUp from './SliderUp';
-import Header from './Header/Header';
 import { Features } from '../../utils/Features';
+import Footer from './Footer';
+import Header from './Header/Header';
+import SliderUp from './SliderUp';
+import styles from './styles.module.scss';
 
 interface IProps {
     show: boolean;
@@ -33,31 +32,21 @@ const Panel = ({
 
     const [hiddenUI, setVisibleUI] = useState(true);
 
+    if (hiddenUI && !show) {
+        return null;
+    }
+
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
-        // if (
-        //     e.animationName === 'slideInUp' ||
-        //     e.animationName === 'slideInRight' ||
-        //     e.animationName === 'slideInLeft'
-        // ) {
         if (/slideIn/.test(e.animationName)) {
             setVisibleUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        // if (
-        //     e.animationName === 'slideOutDown' ||
-        //     e.animationName === 'slideOutLeft' ||
-        //     e.animationName === 'slideOutRight'
-        // ) {
         if (/slideOut/.test(e.animationName)) {
             setVisibleUI(true);
         }
     };
-
-    if (hiddenUI && !show) {
-        return null;
-    }
 
     return (
         <div

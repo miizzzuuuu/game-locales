@@ -20,7 +20,6 @@ import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
 
-// import Menu from '../../menus/Menu';
 const Menu = lazy(() => import('../../menus/Menu'));
 
 function Game() {
