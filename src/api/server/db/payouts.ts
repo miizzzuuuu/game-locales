@@ -423,4 +423,48 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 5000000,
         },
     ],
+    p12: [
+        {
+            name: 'single dice',
+            payout: null,
+            items: [
+                { name: 'on one dice', payout: 1 },
+                { name: 'on two dice', payout: 2 },
+                { name: 'on three dice', payout: 3 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        { name: 'dice combination', payout: 5, items: [], min: 1000, max: 1000000 },
+        { name: 'specific double', payout: 10, items: [], min: 1000, max: 1000000 },
+        { name: 'specific triple', payout: 180, items: [], min: 1000, max: 1000000 },
+        { name: 'any triple', payout: 30, items: [], min: 1000, max: 1000000 },
+        {
+            name: 'sum three dice',
+            payout: null,
+            items: [
+                { name: '4 or 17', payout: 50 },
+                { name: '5 or 16', payout: 30 },
+                { name: '6 or 15', payout: 18 },
+                { name: '7 or 14', payout: 12 },
+                { name: '8 or 13', payout: 8 },
+                { name: '9 or 12', payout: 6 },
+                { name: '10 or 11', payout: 6 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                { name: 'big', payout: 1 },
+                { name: 'small', payout: 1 },
+                { name: 'odd', payout: 1 },
+                { name: 'even', payout: 1 },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
 };
