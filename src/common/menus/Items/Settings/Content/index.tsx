@@ -1,4 +1,4 @@
-import Separator from '../Separator';
+import Separator from '../../../../components/Separator';
 import AutoRebet from './ContentItem/AutoRebet';
 import GameSound from './ContentItem/GameSound';
 import GameVolume from './ContentItem/GameVolume';
