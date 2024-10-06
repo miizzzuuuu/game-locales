@@ -65,6 +65,11 @@ export const timers = [
         timer: 40,
     },
     {
+        pcode: 'p12b',
+        time: 'BET CLOSED',
+        timer: 40,
+    },
+    {
         pcode: 'm30',
         time: '33',
         timer: 90,
