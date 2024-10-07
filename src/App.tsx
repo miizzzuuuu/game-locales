@@ -1,22 +1,24 @@
 import { useCallback, useEffect, useState } from 'react';
-import { LoadingHelper } from './common/utils/LoadingHelper';
-import { useWindowResize } from './common/hooks/useWindowResize';
 import { useAutoResize } from './common/hooks/useAutoResize';
-import { setDeviceType, setOrientation } from './store/slice/windowSlice';
-import { useAppDispatch, useAppSelector } from './store/hooks';
+import { useFetchGame } from './common/hooks/useFetchGame';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
-import { useFetchGame } from './common/hooks/useFetchGame';
+import { useWindowResize } from './common/hooks/useWindowResize';
+import { LoadingHelper } from './common/utils/LoadingHelper';
+import { useAppDispatch, useAppSelector } from './store/hooks';
+import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 
-import ResizeOverlay from './common/components/ResizeOverlay';
 import Game from './common/components/Game';
+import MiniHowToPlay from './common/components/MiniHowToPlay';
+import ResizeOverlay from './common/components/ResizeOverlay';
 import { useFetchTimer } from './common/hooks/useFetchTimer';
-import { useSettingSound } from './common/hooks/useSettingSound';
 import { useFocus } from './common/hooks/useFocus';
 import { useFullscreen } from './common/hooks/useFullscreen';
-import MiniHowToPlay from './common/components/MiniHowToPlay';
-import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { useSettingSound } from './common/hooks/useSettingSound';
 import { Features } from './common/utils/Features';
+import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+
+const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
 function App() {
     const dispatch = useAppDispatch();
@@ -67,7 +69,7 @@ function App() {
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
 
-            {showGame && showMiniHowToPlay && Features.MINI_HOW_TO_PLAY && <MiniHowToPlay />}
+            {showGame && showMiniHowToPlay ? MiniHowToPlayComponents : null}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>
