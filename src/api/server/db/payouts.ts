@@ -467,4 +467,60 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 5000000,
         },
     ],
+    m46: [
+        {
+            name: 'player bet',
+            payout: null,
+            items: [
+                { name: 'win with points 1 to 8', payout: 0.95 },
+                { name: 'win with points 9', payout: 2 },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: '7,8,9 bet',
+            payout: null,
+            items: [
+                { name: 'win with points 7', payout: 1 },
+                { name: 'win with points 8', payout: 2.5 },
+                { name: 'win with points 9', payout: 5 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: '7,8,9 bet 2x bonus',
+            payout: null,
+            items: [
+                { name: 'win with points 7', payout: 3 },
+                { name: 'win with points 8', payout: 6 },
+                { name: 'win with points 9', payout: 11 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'specific bet',
+            payout: null,
+            items: [
+                { name: '7', payout: 13 },
+                { name: '8', payout: 10.5 },
+                { name: '9', payout: 9.5 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'specific bet 2x bonus',
+            payout: null,
+            items: [
+                { name: '7', payout: 27 },
+                { name: '8', payout: 22 },
+                { name: '9', payout: 20 },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+    ],
 };
