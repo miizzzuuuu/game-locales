@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Pcode, Transaction } from '../../../../../types';
 import { getTransaction } from '../../../../../services/api/transaction';
+import { Pcode, Transaction } from '../../../../../types';
 
 interface Params {
     date: 'all' | 'today' | 'before';

@@ -1,7 +1,6 @@
 import LabelTranslate from '../../../../components/LabelTranslate';
 import MenuTabs from '../../../MenuTabs';
 import TabItem from '../../../MenuTabs/TabItem';
-
 import { TabTransactions } from '../Content';
 
 interface IProps {

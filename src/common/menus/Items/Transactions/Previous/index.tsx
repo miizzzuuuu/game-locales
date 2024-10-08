@@ -1,14 +1,12 @@
-import CardContainer from '../CardContainer';
-import Card from '../Card';
-
-import styles from './styles.module.scss';
-
-import { useFetchTransaction } from '../hooks/useFetchTransaction';
-import ContentEmpty from '../ContentEmpty';
-import { TransactionHelper } from '../../../../utils/TransactionHelper';
+import { useTranslation } from 'react-i18next';
 import LabelTranslate from '../../../../components/LabelTranslate';
 import { StringHelper } from '../../../../utils/StringHelper';
-import { useTranslation } from 'react-i18next';
+import { TransactionHelper } from '../../../../utils/TransactionHelper';
+import Card from '../Card';
+import CardContainer from '../CardContainer';
+import ContentEmpty from '../ContentEmpty';
+import { useFetchTransaction } from '../hooks/useFetchTransaction';
+import styles from './styles.module.scss';
 
 const Previous = () => {
     const { i18n } = useTranslation();

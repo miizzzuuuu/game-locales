@@ -1,8 +1,8 @@
-import CardContainer from '../CardContainer';
+import LabelTranslate from '../../../../components/LabelTranslate';
 import Card from '../Card';
+import CardContainer from '../CardContainer';
 import ContentEmpty from '../ContentEmpty';
 import { useFetchTransaction } from '../hooks/useFetchTransaction';
-import LabelTranslate from '../../../../components/LabelTranslate';
 
 const Today = () => {
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'today' });
