@@ -45,5 +45,10 @@ html {
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+}
+
+@-moz-document url-prefix() {
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
 }
