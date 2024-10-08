@@ -11,52 +11,63 @@
     transition: all 1s linear;
 }
 
-.win {
-    border: 0.1rem solid #83ff48 !important;
-    animation: win-glow 1s infinite ease-in-out;
-    z-index: 2;
+.lose {
+    opacity: 0.6;
 }
 
-.bet-number,
+:global :local(.win .background) {
+    animation: buttonWinBlinkOpacity 0.75s reverse ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+}
+
+.bet-number-red,
+.bet-number-black,
 .bet-col-row,
 .bet-red,
-.bet-yellow {
-    border-radius: 0.1rem;
+.bet-black {
+    .background {
+        border-radius: 0.2rem;
+    }
 }
 
-.bet-number {
+.bet-number .background {
     border: 0.1rem solid #f3d8a4;
     background: linear-gradient(180deg, #fff 0%, #ffe5b2 100%);
 }
 
-.bet-col-row {
+.bet-col-row .background {
     border: 0.1rem solid #e0b869;
     background: linear-gradient(180deg, #ffe6b2 0%, #e0b869 100%);
 }
 
-.bet-red {
+.bet-red .background {
     border: 0.1rem solid #f30049;
     background: linear-gradient(0deg, #59001b 0.33%, #f30049 99.67%);
 }
 
-.bet-yellow {
+.bet-yellow .background {
     border: 0.1rem solid #ffb01c;
     background: linear-gradient(0deg, #8c5400 0%, #ffb01c 100%);
 }
 
-.slot-small {
+.slot-small .background {
     border-top-left-radius: 0.4rem;
 }
 
-.slot-big {
+.slot-big .background {
     border-top-right-radius: 0.4rem;
 }
 
-.slot-odd {
+.slot-odd .background {
     border-bottom-left-radius: 0.4rem;
 }
 
-.slot-black {
+.slot-black .background {
     border-bottom-right-radius: 0.4rem;
 }
 
@@ -76,18 +87,22 @@
 
 :global(.mobile-portrait) {
     .slot-chip {
-        width: calc(100cqw / 8 * 65 / 100);
-        height: calc(100cqw / 8 * 65 / 100);
-        font-size: calc(100cqw / 8 * 65 / 100);
+        --percent-chip: 56;
+
+        width: calc(100cqw / 8 * var(--percent-chip) / 100);
+        height: calc(100cqw / 8 * var(--percent-chip) / 100);
+        font-size: calc(100cqw / 8 * var(--percent-chip) / 100);
     }
 }
 
 :global(.desktop),
 :global(.mobile-landscape) {
     .slot-chip {
-        width: calc(100cqh / 7 * 65 / 100);
-        height: calc(100cqh / 7 * 65 / 100);
-        font-size: calc(100cqh / 7 * 65 / 100);
+        --percent-chip: 35;
+
+        width: calc(100cqw / 8 * var(--percent-chip) / 100);
+        height: calc(100cqw / 8 * var(--percent-chip) / 100);
+        font-size: calc(100cqw / 8 * var(--percent-chip) / 100);
     }
 }
 

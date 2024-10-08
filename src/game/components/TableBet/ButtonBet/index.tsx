@@ -10,12 +10,11 @@ interface IProps {
 
     className?: string;
     children?: ReactNode;
-    isWin?: boolean;
 
     onClick: (button: string, group: string) => void;
 }
 
-const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProps) => {
+const ButtonBet = ({ button, group, children, className, onClick }: IProps) => {
     className = className
         ?.split(' ')
         .map((cn) => styles[cn])
@@ -25,9 +24,10 @@ const ButtonBet = ({ button, group, children, isWin, className, onClick }: IProp
 
     return (
         <div
-            className={`${styles['button-bet']}${className ? ` ${className}` : ''}${isWin ? ` ${styles.win}` : ''}`}
+            className={`${styles['button-bet']}${className ? ` ${className}` : ''}`}
             onClick={() => onClick(button, group)}
         >
+            <div className={styles.background}></div>
             {children && children}
 
             <div className={styles['slot-chip']}>{chip > 0 ? <ChipBet value={chip} /> : null}</div>

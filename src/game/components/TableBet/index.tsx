@@ -20,8 +20,11 @@ const TableBet = () => {
             {_24DHelper.getBetKeys.map((key) => {
                 const bet = _24DHelper.bets[key];
 
-                const className = `slot-${key} bet-number`;
-                const isWin = winBets?.includes(bet.button);
+                let className = `slot-${key} bet-number`;
+
+                if (winBets.length > 0) {
+                    className += winBets?.includes(bet.button) ? ' win' : ' lose';
+                }
 
                 return (
                     <ButtonBet
@@ -29,7 +32,6 @@ const TableBet = () => {
                         button={bet.button}
                         group={bet.group}
                         className={className}
-                        isWin={isWin}
                         onClick={placeBetHandler}
                     >
                         <BetNumber button={bet.button} />
@@ -40,8 +42,11 @@ const TableBet = () => {
             {_24DHelper.getBetColRowKeys.map((key) => {
                 const bet = _24DHelper.betsColRow[key];
 
-                const className = `slot-${key} bet-col-row`;
-                const isWin = winBets?.includes(bet.button);
+                let className = `slot-${key} bet-col-row`;
+
+                if (winBets.length > 0) {
+                    className += winBets?.includes(bet.button) ? ' win' : ' lose';
+                }
 
                 return (
                     <ButtonBet
@@ -49,7 +54,6 @@ const TableBet = () => {
                         button={bet.button}
                         group={bet.group}
                         className={className}
-                        isWin={isWin}
                         onClick={placeBetHandler}
                     >
                         <BetColRow label={bet.button} />
@@ -66,7 +70,10 @@ const TableBet = () => {
                 } else {
                     className += ' bet-yellow';
                 }
-                const isWin = winBets?.includes(bet.button);
+
+                if (winBets.length > 0) {
+                    className += winBets?.includes(bet.button) ? ' win' : ' lose';
+                }
 
                 return (
                     <ButtonBet
@@ -74,7 +81,6 @@ const TableBet = () => {
                         button={bet.button}
                         group={bet.group}
                         className={className}
-                        isWin={isWin}
                         onClick={placeBetHandler}
                     >
                         <BetText label={bet.button.toLocaleLowerCase()} />
