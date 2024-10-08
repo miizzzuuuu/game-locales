@@ -11,23 +11,31 @@ const gameNewSet = useAppSelector(selectGameNewSet);
 
 ### Perform actions when a new shoe/set occurs
 
-edit in the `src/common/Game/index.tsx` file:
+edit in the `src/game/hooks/useNewSet.ts` file:
 
 ```ts
-useNewSet({
-    handleNewSet: () => {
-        // callback when new set
-    },
-});
+...
+
+function useNewSet() {
+    const newSet = useAppSelector(selectGameNewSet);
+
+    useEffect(() => {
+        if (newSet) {
+            {/* place callback in here */}
+            console.log('new set callback');
+        }
+    }, [newSet]);
+}
+
+...
 ```
 
 Example, reset the history result when a new shoe/set occurs:
 
 ```ts
-useNewSet({
-    handleNewSet: () => {
-        // callback when new set
+useEffect(() => {
+    if (newSet) {
         dispatch(resetHistory());
-    },
-});
+    }
+}, [newSet]);
 ```

@@ -211,30 +211,26 @@ To add a response result for the game you are developing, create a file named `{
 { data: <DATA_RESULT> }
 ```
 
-Then edit the file `src/api/server/server.ts`. Add the import file.
+Then edit the file `src/api/server/resultData.ts`. Add the import file.
 
 **Example:**
 
 Import result data for the `24D Spin` game with `pcode=m6`:
 
 ```ts
-import resultsM6 from './response/results/m6.json';
+import resultP6 from './response/results/p6.json';
 ```
 
-Then edit the result route. Add the response to the route:
+Add an item to the object `resultData` with the format:
+
+```
+{ [pcode]: [response] }
+```
 
 ```ts
-this.get(ENDPOINTS.result + '/:pcode', async (_, request) => {
-  ...
-  switch (pcode) {
+const resultData: Record<string, { data: any[] }> = {
+    p6: resultP6,
     ...
-    case 'm6':
-      data = resultsM6;
-      break;
-    default:
-      data = { data: [] };
-  }
-  ...
 }
 ```
 

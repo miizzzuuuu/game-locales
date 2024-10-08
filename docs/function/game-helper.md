@@ -17,6 +17,12 @@ value: `number`
 getPcode();
 ```
 
+### Get Base Pcode
+
+```ts
+getBasePcode();
+```
+
 return `string`
 
 ### Get Pcode Variant

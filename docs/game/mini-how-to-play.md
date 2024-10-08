@@ -37,38 +37,55 @@ example slide:
 
 ```ts
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
+import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-import SVGWheel from '../assets/SVGWheel';
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 
-export const title = 'Cara Bermain';
+import SLIDE_1 from '../assets/slide-1.json';
 
-export const GraphicComponent = () => {
-    return (
-        <Graphic>
-            <div>
-                <SVGWheel />
-            </div>
-        </Graphic>
-    );
-};
+const keySlide = 'slide-1';
 
-export const ContentComponent = () => {
-    return (
-        <Content>
-            <p>
-                Permainan dimana 1 bola kecil dilemparkan kedalam Roda berputar yang memiliki 37
-                slot dengan angka dari 0 hingga 36 Angka.
-            </p>
-        </Content>
-    );
-};
+export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
+    <Graphic isActive={isActive} animationData={SLIDE_1} style={{ width: '28rem' }} />
+);
 
 const Slide1: ModalItem = {
-    title,
-    graphic: <GraphicComponent />,
-    content: <ContentComponent />,
+    title: <Title keySlide={keySlide} />,
+    graphic: (index: number) => <GraphicComponent isActive={index === 0} />,
+    content: <Content keySlide={keySlide} />,
 };
 
 export default Slide1;
+```
+
+## Add or Edit Content
+
+`src/locales/{lang}/mini-htp.json`
+
+_Example:_
+
+`src/locales/en/mini-htp.json`
+
+```json
+{
+    "slide-1": {
+        "title": "How to Play",
+        "content": [
+            "This is a game where a small ball is thrown into a spinning wheel that has 37 slots numbered from 0 to 36."
+        ]
+    },
+    "slide-2": {
+        "title": "Betting",
+        "content": [
+            "You can bet on numbers, number ranges, colors, or whether the outcome is odd or even. Once your bet is placed, the wheel is spun and a ball is thrown in."
+        ]
+    },
+    "slide-3": {
+        "title": "Game Outcome",
+        "content": [
+            "The ball will stop in one of the slots, and any bets that match the result will win."
+        ]
+    }
+}
 ```

@@ -34,20 +34,22 @@ In the CSS module, use the following prefixes:
 }
 
 :global(.mobile-portrait) {
-    &.chip-deck {
+    .chip-deck {
         // styles for mobile portrait
     }
 }
 
 :global(.mobile-landscape) {
-    &.chip-deck {
+    .chip-deck {
         // styles for mobile landscape
     }
 }
 
 :global(.desktop) {
-    &.chip-deck {
+    .chip-deck {
         // styles for desktop
     }
 }
 ```
+
+> no need to use `const deviceClassName = DisplayHelper.getDeviceClassName(styles)` anymore
