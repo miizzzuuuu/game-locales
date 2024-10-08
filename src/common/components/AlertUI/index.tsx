@@ -6,6 +6,8 @@ import MessageYouWin from '../Alerts/MessageYouWin';
 import NewSet from '../Alerts/NewSet';
 import styles from './styles.module.scss';
 
+const NewSetComponent = Features.SHUFFLE_THE_CARDS ? <NewSet /> : null;
+
 const AlertUI = () => {
     return (
         <div className={styles['alert-ui']}>
@@ -14,7 +16,7 @@ const AlertUI = () => {
             <Result />
             <MessageYouWin />
 
-            {Features.SHUFFLE_THE_CARDS && <NewSet />}
+            {NewSetComponent}
         </div>
     );
 };
