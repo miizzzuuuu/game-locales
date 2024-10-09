@@ -16,7 +16,9 @@ const TableBet = () => {
     const { placeBetHandler } = usePlaceBet({ useLowerCase: true, betIsOpen });
 
     return (
-        <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
+        <div
+            className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}${winBets.length > 0 ? ` ${styles['win-state']}` : ''}`}
+        >
             {_24DHelper.getBetKeys.map((key) => {
                 const bet = _24DHelper.bets[key];
 
