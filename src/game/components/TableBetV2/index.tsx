@@ -1,0 +1,89 @@
+import { usePlaceBet } from "../../../common/hooks/usePlaceBet"
+import { DisplayHelper } from "../../../common/utils/DisplayHelper"
+import { useAppSelector } from "../../../store/hooks"
+import { selectBetIsOpen } from "../../../store/slice/timerSlice"
+import { DragonTigerBHelper } from "../../utils/DragonTigerBHelper"
+import BetDragon from "./ButtonBet/BetDragon"
+import BetDragonPair from "./ButtonBet/BetDragonPair"
+import BetDragonWild from "./ButtonBet/BetDragonWild"
+import BetSuperWild from "./ButtonBet/BetSuperWild"
+import BetTie from "./ButtonBet/BetTie"
+import BetTiger from "./ButtonBet/BetTiger"
+import BetTigerPair from "./ButtonBet/BetTigerPair"
+import BetTigerWild from "./ButtonBet/BetTigerWild"
+import styles from "./index.module.scss"
+
+
+
+const TableBet = () => {
+    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+    const betIsOpen = useAppSelector(selectBetIsOpen);
+    const { placeBetHandler } = usePlaceBet();
+
+    return <div className={`${styles["table-bet"]} ${deviceClassName} ${betIsOpen ? styles.opened : styles.closed}`}>
+
+        <BetDragonWild
+            bet={DragonTigerBHelper.betsTop["dragon-wild"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsTop["dragon-wild"])}
+        />
+
+        <BetTigerWild
+            bet={DragonTigerBHelper.betsTop["tiger-wild"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsTop["tiger-wild"])}
+        />
+        <BetDragon
+            bet={DragonTigerBHelper.betsMid["dragon"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsMid["dragon"])}
+        />
+        <BetTiger
+            bet={DragonTigerBHelper.betsMid["tiger"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsMid["tiger"])}
+        />
+        <BetDragonPair
+            bet={DragonTigerBHelper.betsBottom["dragon-pair"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsBottom["dragon-pair"])}
+        />
+
+        <BetTigerPair
+            bet={DragonTigerBHelper.betsBottom["tiger-pair"]}
+            onClick={() => placeBetHandler(DragonTigerBHelper.betsBottom["tiger-pair"])}
+        />
+
+        <div className={styles["center"]}>
+            <BetSuperWild
+                bet={DragonTigerBHelper.betsCenter["superwild"]}
+                onClick={() => placeBetHandler(DragonTigerBHelper.betsCenter["superwild"])} />
+
+            <BetTie
+                bet={DragonTigerBHelper.betsCenter["tie"]}
+                onClick={() => placeBetHandler(DragonTigerBHelper.betsCenter["tie"])} />
+        </div>
+
+        <div className={`${styles["stick"]} ${styles["left"]}`}>
+            <div className={styles["long"]}></div>
+            <div className={styles["stick-top"]}></div>
+            <div className={styles["stick-bottom"]}></div>
+            <div className={styles["top-ornamen"]}>
+                <div className={styles["top-ornamen-circle"]}></div>
+            </div>
+            <div className={styles["bottom-ornamen"]}>
+                <div className={styles["bottom-ornamen-circle"]}></div>
+            </div>
+        </div>
+
+        <div className={`${styles["stick"]} ${styles["right"]}`}>
+            <div className={`${styles["long"]}`}></div>
+            <div className={`${styles["stick-top"]}`}></div>
+            <div className={`${styles["stick-bottom"]}`}></div>
+            <div className={`${styles["top-ornamen"]}`}>
+                <div className={`${styles["top-ornamen-circle"]}`}></div>
+            </div>
+            <div className={`${styles["bottom-ornamen"]}`}>
+                <div className={`${styles["bottom-ornamen-circle"]}`}></div>
+            </div>
+        </div>
+
+    </div>
+}
+
+export default TableBet;

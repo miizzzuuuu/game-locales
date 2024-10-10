@@ -369,7 +369,7 @@ const TableBetWild = () => {
                                 <TieBetButton
                                     bet={{ button: "tie", group: "tie" }}
                                 />
-                              
+
                             </div>
                             <TigerBetButton
                                 bet={{ button: "tiger", group: "tiger" }}

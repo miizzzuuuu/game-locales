@@ -8,6 +8,7 @@ import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetWild from '../TableBet/TableBetWild';
 import { selectGameNewSet } from '../../../store/slice/gameSlice';
 import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
+import TableBet from '../TableBetV2';
 
 const MainArea = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
@@ -40,7 +41,7 @@ const MainArea = () => {
         <div className={`${styles['main-area']}${deviceClassName}`}>
           
             <div className={styles['panel-bet']}>
-                <TableBetWild />
+                <TableBet />
             </div>
 
             <div style={{ height: '100%', maxHeight: '17rem', opacity: gameNewSet ? '0.6' : '1' }}>

@@ -1,0 +1,240 @@
+.content {
+    width: 100%;
+    height: 100%;
+}
+
+.dragon-wild .content,
+.dragon-pair .content,
+.dragon .content {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.tiger-wild .content,
+.tiger-pair .content,
+.tiger .content {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+.dragon .content,
+.tiger .content {
+    align-items: flex-end;
+}
+
+.super-wild .content,
+.tie .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.top.left,
+.middle.left,
+.bottom.left {
+    background: linear-gradient(270deg, #f30049 -0.72%, #69001f 100%);
+    /* border: 0.1rem solid #f30049; */
+}
+
+.top.right,
+.middle.right,
+.bottom.right {
+    background: linear-gradient(270deg, #8c5400 0%, #ffc65b 100%);
+    /* border: 0.1rem solid #ffb72c; */
+}
+
+.top,
+.middle,
+.bottom {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.4rem;
+}
+
+.shadow-center {
+    position: absolute;
+    inset: 0;
+}
+
+.shadow-center::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.4rem;
+    border: 0.1rem solid #f30049;
+}
+
+.right .shadow-center::before {
+    border-color: #ffb72c;
+}
+
+.right .shadow-center::after {
+    background: #d69729;
+}
+
+.left .shadow-center::after {
+    background: #bc0038;
+}
+
+.middle.left {
+    width: calc((var(--width) - 0.2rem) / 2 - var(--center-half));
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.middle.right {
+    margin-left: var(--center-half);
+    width: calc((var(--width) - 0.2rem) / 2 - var(--center-half));
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.shadow-center::after {
+    content: '';
+    position: absolute;
+    height: 14.4rem;
+    width: 14.4rem;
+    border-radius: 50%;
+}
+
+.top.left .shadow-center::after {
+    top: 100%;
+    left: 100%;
+    translate: -7.1rem -2rem;
+}
+
+.bottom.left .shadow-center::after {
+    bottom: 100%;
+    left: 100%;
+    translate: -7.1rem 2rem;
+}
+
+.middle.left .shadow-center::after {
+    top: 50%;
+    left: 100%;
+    translate: -2.8rem -50%;
+}
+
+.top.right .shadow-center::after {
+    top: 100%;
+    right: 100%;
+    translate: 7.1rem -2rem;
+}
+
+.bottom.right .shadow-center::after {
+    bottom: 100%;
+    right: 100%;
+    translate: 7.1rem 2rem;
+}
+
+.middle.right .shadow-center::after {
+    top: 50%;
+    right: 100%;
+    translate: 2.8rem -50%;
+}
+
+
+
+.super-wild {
+    position: relative;
+    height: 100%;
+    width: 13rem;
+}
+
+.super-wild svg,
+.tie svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tie {
+    position: relative;
+    height: 100%;
+    width: 13rem;
+}
+
+.dragon-back,
+.tiger-back {
+    position: absolute;
+    bottom: 0;
+
+    width: 7.2rem;
+    height: 8rem;
+}
+
+.dragon-back {
+    left: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.tiger-back {
+    right: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dragon-wild,
+.tiger-wild,
+.dragon-pair,
+.tiger-pair,
+.dragon,
+.tiger {
+    padding: 0.8rem 1rem;
+}
+
+.bet-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bet-payout {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+
+.slot-chip {
+    $percentChip: 70;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.mobile-portrait {
+    .slot-chip {
+        $size: calc(100cqw / 5 * 50 / 100);
+        width: $size;
+        height: $size;
+        font-size: $size;
+    }
+}
+
+.desktop,
+.mobile-landscape {
+    .slot-chip {
+        $size: calc(100cqh / 2 * 50 / 100);
+        width: $size;
+        height: $size;
+        font-size: $size;
+    }
+}
