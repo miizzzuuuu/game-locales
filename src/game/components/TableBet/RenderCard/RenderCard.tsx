@@ -21,6 +21,7 @@ export function RenderCard(props: any) {
         right: `${props.right}`,
         transform: `perspective(1000px) translate(${props.position.x}, ${props.position.y})`,
         marginTop: `${props.marginTop}`,
+        transformOrigin: "center",
         width: DisplayHelper.getOrientation() !== "landscape" ? "24px" :"24%",
         height: DisplayHelper.getOrientation() !== "landscape" ? "31.68px" :"31.68%",
       }}

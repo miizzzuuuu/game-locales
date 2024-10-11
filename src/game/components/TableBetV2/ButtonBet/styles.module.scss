@@ -222,7 +222,7 @@
 
 .mobile-portrait {
     .slot-chip {
-        $size: calc(100cqw / 5 * 50 / 100);
+        $size: calc(100cqw / 7.5 * 50 / 100);
         width: $size;
         height: $size;
         font-size: $size;
@@ -232,7 +232,7 @@
 .desktop,
 .mobile-landscape {
     .slot-chip {
-        $size: calc(100cqh / 2 * 50 / 100);
+        $size: calc(100cqh / 7.5 * 50 / 100);
         width: $size;
         height: $size;
         font-size: $size;

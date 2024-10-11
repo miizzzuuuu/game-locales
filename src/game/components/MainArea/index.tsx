@@ -26,10 +26,11 @@ const MainArea = () => {
                         className={`landscape-top-board ${showPatternUI == true ? 'open' : 'close'}`}
                     >
                         <RoadMap activeColumns={18} isLandscape={true} />
+                        
                     </Panel>
                  
                     <div className={styles['panel-bet']}>
-                        <TableBetWild />
+                        <TableBet />
                     </div>
                     <Panel className="landscape-bottom-board">{/* <BoardInfoFooter /> */}</Panel>
                 </Panel>
@@ -38,7 +39,7 @@ const MainArea = () => {
     }
 
     return (
-        <div className={`${styles['main-area']}${deviceClassName}`}>
+        <div className={`${styles['main-area']} ${deviceClassName}`}>
           
             <div className={styles['panel-bet']}>
                 <TableBet />

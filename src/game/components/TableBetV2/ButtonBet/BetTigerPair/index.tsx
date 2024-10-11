@@ -17,7 +17,12 @@ const BetTigerPair = ({ bet, onClick }: BetButtonIProps) => {
             <div  className={styles["bet-payout"]}>25:1</div>
         </div>
 
-        <div className={styles['slot-chip']}>
+        <div className={styles['slot-chip']}
+        style={{
+            left: "30%"
+
+        }}
+        >
             {chip > 0 && (
                 <ChipBet value={chip} color={color} style={{ width: '100%', height: '100%' }} />
             )}

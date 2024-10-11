@@ -19,7 +19,8 @@ const BetDragonPair = ({ bet, onClick }: BetButtonIProps) => {
 
         <div className={styles['slot-chip']}
         style={{
-          
+            left: "70%"
+
         }}
         >
             {chip > 0 && (

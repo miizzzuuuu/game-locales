@@ -3,6 +3,7 @@ import { DisplayHelper } from "../../../common/utils/DisplayHelper"
 import { useAppSelector } from "../../../store/hooks"
 import { selectBetIsOpen } from "../../../store/slice/timerSlice"
 import { DragonTigerBHelper } from "../../utils/DragonTigerBHelper"
+import { RenderCard } from "../TableBet/RenderCard/RenderCard"
 import BetDragon from "./ButtonBet/BetDragon"
 import BetDragonPair from "./ButtonBet/BetDragonPair"
 import BetDragonWild from "./ButtonBet/BetDragonWild"
@@ -19,6 +20,7 @@ const TableBet = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet();
+    const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
     return <div className={`${styles["table-bet"]} ${deviceClassName} ${betIsOpen ? styles.opened : styles.closed}`}>
 
@@ -57,6 +59,25 @@ const TableBet = () => {
             <BetTie
                 bet={DragonTigerBHelper.betsCenter["tie"]}
                 onClick={() => placeBetHandler(DragonTigerBHelper.betsCenter["tie"])} />
+
+            <div className={`${styles['slot-card']}`} style={{}}>
+
+                <RenderCard
+                    top="0px"
+                    right="unset"
+                    left={DisplayHelper.getOrientation() == "portrait"? "37%": "35%"}
+                    position={{ x: '5px', y: '5px' }}
+                    rotation={{ z: '0deg' }}
+                    opacity={1}
+                    value={scanNumber ? scanNumber.wild : ''}
+                    appear={
+                        !betIsOpen
+                    }
+                    disappear={!scanNumber}
+                    submit={scanNumber && scanNumber.submit == true}
+                />
+
+            </div>
         </div>
 
         <div className={`${styles["stick"]} ${styles["left"]}`}>

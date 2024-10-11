@@ -4,13 +4,13 @@ import { useGetChipBet } from "../../../../../common/hooks/useGetChipBet";
 import { DisplayHelper } from "../../../../../common/utils/DisplayHelper";
 import styles from "./../styles.module.scss";
 
-const BetDragonWild =({ bet, onClick }: BetButtonIProps) => {
+const BetDragonWild = ({ bet, onClick }: BetButtonIProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip, color } = useGetChipBet(bet);
 
     return <div onClick={onClick}
-    
-    className={`${styles["top"]} ${styles["left"]} ${styles["dragon-wild"]} ${deviceClassName}`}>
+
+        className={`${styles["top"]} ${styles["left"]} ${styles["dragon-wild"]} ${deviceClassName}`}>
         <div className={`${styles["shadow-center"]}`}></div>
 
         <div className={styles["content"]}>
@@ -18,7 +18,11 @@ const BetDragonWild =({ bet, onClick }: BetButtonIProps) => {
             <div className={styles["bet-payout"]}>25:1</div>
         </div>
 
-        <div className={styles['slot-chip']}>
+        <div className={styles['slot-chip']}
+            style={{
+                left: "70%"
+            }}
+        >
             {chip > 0 && (
                 <ChipBet value={chip} color={color} style={{ width: '100%', height: '100%' }} />
             )}
