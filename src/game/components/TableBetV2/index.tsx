@@ -63,9 +63,9 @@ const TableBet = () => {
             <div className={`${styles['slot-card']}`} style={{}}>
 
                 <RenderCard
-                    top="0px"
+                    top="0%"
                     right="unset"
-                    left={DisplayHelper.getOrientation() == "portrait"? "37%": "35%"}
+                    left={DisplayHelper.getOrientation() == "portrait"? "40%": "35%"}
                     position={{ x: '5px', y: '5px' }}
                     rotation={{ z: '0deg' }}
                     opacity={1}
