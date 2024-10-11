@@ -19,7 +19,7 @@ const BetDragon = ({ bet, onClick }: BetButtonIProps) => {
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'dragon';
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
-    return <div className={`${styles["middle"]} ${styles["left"]} ${styles["dragon"]} ${deviceClassName}`}
+    return <div className={`${styles["middle"]} ${styles["left"]} ${styles["dragon"]} ${deviceClassName} ${isWin?styles["table-win-blink"]:""} ${isLose?styles["table-lose-opacity"]:""}`}
         onClick={onClick}
     >
         <div className={`${styles["shadow-center"]}`}></div>
@@ -33,7 +33,7 @@ const BetDragon = ({ bet, onClick }: BetButtonIProps) => {
         </div>
 
         <div className={`${styles['slot-chip']}`} style={{
-            left: "10%"
+            left: "20%"
         }}>
             {chip > 0 && (
                 <ChipBet value={chip} color={color} style={{ width: '100%', height: '100%' }} />

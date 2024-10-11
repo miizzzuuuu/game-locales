@@ -21,6 +21,7 @@ const TableBet = () => {
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet();
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
+    const isSuperWildLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
 
     return <div className={`${styles["table-bet"]} ${deviceClassName} ${betIsOpen ? styles.opened : styles.closed}`}>
 
@@ -68,7 +69,7 @@ const TableBet = () => {
                     left={DisplayHelper.getOrientation() == "portrait"? "40%": "35%"}
                     position={{ x: '5px', y: '5px' }}
                     rotation={{ z: '0deg' }}
-                    opacity={1}
+                    opacity={isSuperWildLose?0.6:1}
                     value={scanNumber ? scanNumber.wild : ''}
                     appear={
                         !betIsOpen

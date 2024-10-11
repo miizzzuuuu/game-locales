@@ -247,3 +247,27 @@
         font-size: $size;
     }
 }
+
+
+.table-win-blink {
+    animation: tableWinBlink 2s reverse ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tableWinBlink {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.2);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.table-lose-opacity {
+    opacity: 0.6;
+} 

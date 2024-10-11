@@ -16,11 +16,11 @@ const BetTiger = ({ bet, onClick }: BetButtonIProps) => {
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'dragon';
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'tiger';
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
 
-    return <div onClick={onClick} className={`${styles["middle"]} ${styles["right"]} ${styles["tiger"]} ${deviceClassName}`}>
+    return <div onClick={onClick} className={`${styles["middle"]} ${styles["right"]} ${styles["tiger"]} ${deviceClassName} ${isWin?styles["table-win-blink"]:""} ${isLose?styles["table-lose-opacity"]:""}`}>
         <div className={styles["shadow-center"]}></div>
         <div className={styles["tiger-back"]}>
             <SvgTiger />

@@ -12,12 +12,20 @@ const BetSuperWild = ({ bet, onClick }: BetButtonIProps) => {
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip, color } = useGetChipBet(bet);
-    const betIsOpen = useAppSelector(selectBetIsOpen);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
-    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'dragon';
+    const betIsOpen = useAppSelector(selectBetIsOpen);
+
+    const isLose =
+        !betIsOpen &&
+        scanNumber &&
+        scanNumber.submit &&
+        !(
+            scanNumber.dragon_value == scanNumber.tiger_value &&
+            scanNumber.dragon_value == scanNumber.wild_value
+        );
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
-    return <div onClick={onClick} className={`${styles["super-wild"]} ${deviceClassName}`}>
+    return <div onClick={onClick} className={`${styles["super-wild"]} ${deviceClassName} ${isWin?styles["table-win-blink"]:""} ${isLose?styles["table-lose-opacity"]:""}`}>
         <SvgSuperWild />
         <div className={`${styles["content"]}`}>
             <div className={`${styles["bet-name"]}`}>SUPER WILD</div>

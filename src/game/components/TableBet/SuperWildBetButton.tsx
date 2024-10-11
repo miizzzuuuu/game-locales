@@ -82,7 +82,6 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                                 marginTop: "-0.5rem"
                             }}
                         >
-
                                 <RenderCard
                                     top={"80%"}
                                     marginTop={"-80%"}
