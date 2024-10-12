@@ -9,7 +9,7 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
-import { GameHelper } from '../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../common/utils/GameHelper';
 import { RenderCard } from './RenderCard/RenderCard';
 // import LevelStat from '../MobilePortrait/Content/LevelStat';
 
@@ -20,13 +20,14 @@ interface IProps extends PropsWithChildren {
 }
 
 const SuperWildBetButton = ({ bet, children }: IProps) => {
-    const { chip, color } = useGetChipBet(bet);
-    const { placeBetHandler: handleClick } = usePlaceBet();
+    const { chip } = useGetChipBet(bet);
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
     const ratio = '127:1';
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
+
+    const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
 
     const isLose =
         !betIsOpen &&
@@ -37,7 +38,14 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
             scanNumber.dragon_value == scanNumber.wild_value
         );
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
-    const isSuperWildLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.tiger_value && scanNumber.dragon_value == scanNumber.wild_value)
+    const isSuperWildLose =
+        !betIsOpen &&
+        scanNumber &&
+        scanNumber.submit &&
+        !(
+            scanNumber.dragon_value == scanNumber.tiger_value &&
+            scanNumber.dragon_value == scanNumber.wild_value
+        );
 
     return (
         <>
@@ -46,7 +54,7 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                 style={{
                     opacity: isLose ? 0.6 : 1,
                 }}
-                onClick={() => handleClick(bet)}
+                onClick={() => handleClick(bet.button, bet.group)}
                 className={styles.domainContentTie}
             >
                 <div className={styles.tieLabel}>
@@ -60,68 +68,58 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                         <span className={styles.text_lg}>
                             <LabelTranslate
                                 value={bet.button.toLowerCase()}
-                                keyLang={GameHelper.getBasePcode()}
+                                keyLang={getBasePcode()}
                             />
                         </span>
                         <span>{ratio}</span>
                     </div>
                 </div>
                 <div className={styles['slot-chip']} style={{ left: '20%' }}>
-                    {chip > 0 && <ChipBet value={chip} color={color} />}
+                    {chip > 0 && <ChipBet value={chip} />}
                 </div>
-                {
-                    DisplayHelper.getOrientation() == "landscape" ?
+                {DisplayHelper.getOrientation() == 'landscape' ? (
+                    <div className={styles.cardContainerWild}>
                         <div
-                            className={styles.cardContainerWild}
-                        ><div
                             style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "325%",
-                                marginLeft: "-10rem",
-                                marginTop: "-0.5rem"
+                                position: 'absolute',
+                                width: '100%',
+                                height: '325%',
+                                marginLeft: '-10rem',
+                                marginTop: '-0.5rem',
                             }}
                         >
-                                <RenderCard
-                                    top={"80%"}
-                                    marginTop={"-80%"}
-                                    notAbsolute={false}
-                                    left="35%"
-                                    right="0px"
-                                    opacity={!isSuperWildLose ? 1 : 0.5}
-                                    position={{ x: "3px", y: "10px" }}
-                                    rotation={{ z: "0deg" }}
-                                    value={scanNumber ? scanNumber.wild : ''}
-                                    appear={
-                                        !betIsOpen
-                                    }
-                                    disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit == true }
-                                    />
-                            </div>
-
-                        </div> : <div
-                            className={styles.cardContainerWild}
-                        >
-
                             <RenderCard
-                                top={"calc(100%/2)"}
-                                left="0px"
+                                top={'80%'}
+                                marginTop={'-80%'}
+                                notAbsolute={false}
+                                left="35%"
                                 right="0px"
                                 opacity={!isSuperWildLose ? 1 : 0.5}
-                                position={{ x: "3px", y: "10px" }}
-                                rotation={{ z: "0deg" }}
+                                position={{ x: '3px', y: '10px' }}
+                                rotation={{ z: '0deg' }}
                                 value={scanNumber ? scanNumber.wild : ''}
-                                appear={
-                                    !betIsOpen
-                                }
+                                appear={!betIsOpen}
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.submit == true }
+                                submit={scanNumber && scanNumber.submit == true}
                             />
                         </div>
-
-                }
-
+                    </div>
+                ) : (
+                    <div className={styles.cardContainerWild}>
+                        <RenderCard
+                            top={'calc(100%/2)'}
+                            left="0px"
+                            right="0px"
+                            opacity={!isSuperWildLose ? 1 : 0.5}
+                            position={{ x: '3px', y: '10px' }}
+                            rotation={{ z: '0deg' }}
+                            value={scanNumber ? scanNumber.wild : ''}
+                            appear={!betIsOpen}
+                            disappear={!scanNumber}
+                            submit={scanNumber && scanNumber.submit == true}
+                        />
+                    </div>
+                )}
             </div>
 
             <svg
@@ -130,7 +128,7 @@ const SuperWildBetButton = ({ bet, children }: IProps) => {
                 //   height="65"
                 fill="none"
                 viewBox="0 0 130 65"
-                onClick={() => handleClick(bet)}
+                onClick={() => handleClick(bet.button, bet.group)}
                 style={{
                     zIndex: 3,
                     opacity: isLose ? 0.6 : 1,

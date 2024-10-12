@@ -11,7 +11,7 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
-import { GameHelper } from '../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../common/utils/GameHelper';
 
 interface IProps extends PropsWithChildren {
     bet: Bet;
@@ -45,7 +45,6 @@ function ResultNumber(props: { value: number | undefined }) {
                 fontFamily="Manrope"
                 className="small"
                 fontWeight={'800'}
-
             >
                 {props.value}
             </text>
@@ -81,8 +80,7 @@ const DragonBetButton = ({ bet, children }: IProps) => {
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-    const { chip, color } = useGetChipBet(bet);
-    const { placeBetHandler: handleClick } = usePlaceBet();
+    const { chip } = useGetChipBet(bet);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const ratio = '1:1';
@@ -91,10 +89,12 @@ const DragonBetButton = ({ bet, children }: IProps) => {
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'dragon';
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
+    const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
+
     return (
         <div
             className={[styles.domain, deviceClassName].join(' ')}
-            onClick={() => handleClick(bet)}
+            onClick={() => handleClick(bet.button, bet.group)}
         >
             {children}
 
@@ -109,7 +109,7 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                         <span className={styles.text_lg}>
                             <LabelTranslate
                                 value={bet.button.toLowerCase()}
-                                keyLang={GameHelper.getBasePcode()}
+                                keyLang={getBasePcode()}
                             />
                         </span>
                         <span>{ratio}</span>
@@ -120,38 +120,19 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                 )}
 
                 <div className={styles['slot-chip']} style={{ left: '30%' }}>
-                    {chip > 0 && <ChipBet value={chip} color={color} />}
+                    {chip > 0 && <ChipBet value={chip} />}
                 </div>
-                {
-                    DisplayHelper.getOrientation() == "landscape" ?
-                        <div className={styles.cardContainerDragon}>
-                            <div
-                                style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    marginLeft: "-6rem",
-                                    marginTop: "-1rem"
-                                }}
-                            >
-                                <RenderCard
-                                    top="0px"
-                                    left="0px"
-                                    right="0px"
-                                    position={{ x: '5px', y: '5px' }}
-                                    rotation={{ z: '0deg' }}
-                                    opacity={1}
-                                    value={scanNumber ? scanNumber.dragon : ''}
-                                    appear={
-                                        !betIsOpen
-                                    }
-                                    disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit == true }
-                                    />
-                            </div>
-                        </div> :
-                        <div className={styles.cardContainerDragon}>
-
+                {DisplayHelper.getOrientation() == 'landscape' ? (
+                    <div className={styles.cardContainerDragon}>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                width: '100%',
+                                height: '100%',
+                                marginLeft: '-6rem',
+                                marginTop: '-1rem',
+                            }}
+                        >
                             <RenderCard
                                 top="0px"
                                 left="0px"
@@ -160,15 +141,28 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                                 rotation={{ z: '0deg' }}
                                 opacity={1}
                                 value={scanNumber ? scanNumber.dragon : ''}
-                                appear={
-                                    !betIsOpen
-                                }
+                                appear={!betIsOpen}
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.submit == true }
+                                submit={scanNumber && scanNumber.submit == true}
                             />
                         </div>
-                }
-
+                    </div>
+                ) : (
+                    <div className={styles.cardContainerDragon}>
+                        <RenderCard
+                            top="0px"
+                            left="0px"
+                            right="0px"
+                            position={{ x: '5px', y: '5px' }}
+                            rotation={{ z: '0deg' }}
+                            opacity={1}
+                            value={scanNumber ? scanNumber.dragon : ''}
+                            appear={!betIsOpen}
+                            disappear={!scanNumber}
+                            submit={scanNumber && scanNumber.submit == true}
+                        />
+                    </div>
+                )}
             </div>
             {scrollSvg}
             <svg
@@ -180,7 +174,7 @@ const DragonBetButton = ({ bet, children }: IProps) => {
                     opacity:
                         scanNumber && scanNumber.submit && scanNumber.win !== 'dragon' ? 0.6 : 1,
                 }}
-                onClick={() => handleClick(bet)}
+                onClick={() => handleClick(bet.button, bet.group)}
             >
                 <path
                     className={isWin ? 'table-win-blink' : ''}

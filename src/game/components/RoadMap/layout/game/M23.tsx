@@ -1,5 +1,5 @@
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
-import { GameHelper } from '../../../../../common/utils/GameHelper';
+import { getPcode } from '../../../../../common/utils/GameHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { checkLastIdx } from '../base/BaccaratRoadmaps';
 import { BaseV2Roadmap, ResultHaveResultString } from '../base/V2Roadmap';
@@ -34,8 +34,8 @@ function getDragonVal(win: DragonTigerWinType): number {
     return letter in specialCardLetters
         ? specialCardLetters[letter]
         : isNaN(+letter)
-            ? 0
-            : Number(letter);
+          ? 0
+          : Number(letter);
 }
 
 function getTigerVal(win: DragonTigerWinType): number {
@@ -46,8 +46,8 @@ function getTigerVal(win: DragonTigerWinType): number {
     return letter in specialCardLetters
         ? specialCardLetters[letter]
         : isNaN(+letter)
-            ? 0
-            : Number(letter);
+          ? 0
+          : Number(letter);
 }
 
 export default class M23 extends BaseV2Roadmap {
@@ -224,7 +224,7 @@ export default class M23 extends BaseV2Roadmap {
                     } else this.currentRow! += 1;
                     if (this.currentCol! < (this.firstDisplayedCol || 0)) return;
                     let tigerPair, dragonPair;
-                    if ( ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild))) {
+                    if (['m23b', 'm23c'].some((m23wild) => getPcode().includes(m23wild))) {
                         tigerPair = item.tiger[0] == item.wild[0];
                         dragonPair = item.dragon[0] == item.wild[0];
                     }
@@ -269,7 +269,9 @@ export default class M23 extends BaseV2Roadmap {
                                 >
                                     T
                                 </text>
-                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
+                                {['m23b', 'm23c'].some((m23wild) =>
+                                    getPcode().includes(m23wild),
+                                ) ? (
                                     <>
                                         {dragonPair && (
                                             <circle
@@ -343,7 +345,9 @@ export default class M23 extends BaseV2Roadmap {
                                 >
                                     D
                                 </text>
-                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
+                                {['m23b', 'm23c'].some((m23wild) =>
+                                    getPcode().includes(m23wild),
+                                ) ? (
                                     <>
                                         {dragonPair && (
                                             <circle
@@ -419,7 +423,9 @@ export default class M23 extends BaseV2Roadmap {
                                     T
                                 </text>
 
-                                { ["m23b", "m23c"].some((m23wild)=>GameHelper.pcode.includes(m23wild)) ? (
+                                {['m23b', 'm23c'].some((m23wild) =>
+                                    getPcode().includes(m23wild),
+                                ) ? (
                                     <>
                                         {dragonPair && (
                                             <circle
@@ -776,7 +782,7 @@ export default class M23 extends BaseV2Roadmap {
                 this.currentRow = 0;
                 this.currentCol++;
 
-                for (; this.currentCol < this.roadmapTypes![0].length;) {
+                for (; this.currentCol < this.roadmapTypes![0].length; ) {
                     //Evaluate the next column
                     if (this.roadmapTypes![0][this.currentCol]) {
                         //Count filled cells
@@ -811,10 +817,10 @@ export default class M23 extends BaseV2Roadmap {
                                 //Checks adjacent cells
                                 if (
                                     this.roadmapTypes![this.currentRow][
-                                    this.currentCol - startingCol!
+                                        this.currentCol - startingCol!
                                     ] === //1
                                     this.roadmapTypes![this.currentRow - 1][
-                                    this.currentCol - startingCol!
+                                        this.currentCol - startingCol!
                                     ]
                                 )
                                     // @ts-ignore
@@ -847,12 +853,12 @@ export default class M23 extends BaseV2Roadmap {
                     if (this.currentType === 'red')
                         // @ts-ignore
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
-                            // @ts-ignore  
+                            // @ts-ignore
                             redBlinkElement!;
                     // @ts-ignore
                     else
                         this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
-                            // @ts-ignore   
+                            // @ts-ignore
                             blueBlinkElement!;
                 break;
 
@@ -916,8 +922,8 @@ export default class M23 extends BaseV2Roadmap {
                     this.currentType === 'T'
                         ? 'tiger'
                         : this.currentType === 'D'
-                            ? 'dragon'
-                            : 'tie';
+                          ? 'dragon'
+                          : 'tie';
 
                 if (currentPlayer == 'tie') {
                 }

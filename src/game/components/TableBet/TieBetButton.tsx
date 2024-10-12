@@ -9,7 +9,7 @@ import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { GameHelper } from '../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../common/utils/GameHelper';
 import LabelTranslate from '../../../common/components/LabelTranslate';
 // import CardHelper from '../../../utils/CardHelper';
 
@@ -20,8 +20,7 @@ interface IProps extends PropsWithChildren {
 const TieBetButton = ({ bet, children }: IProps) => {
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
-    const { chip, color } = useGetChipBet(bet);
-    const { placeBetHandler: handleClick } = usePlaceBet();
+    const { chip } = useGetChipBet(bet);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
@@ -31,11 +30,13 @@ const TieBetButton = ({ bet, children }: IProps) => {
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'tie';
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
+    const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
+
     return (
         <>
             {children}
             <div
-                onClick={() => handleClick(bet)}
+                onClick={() => handleClick(bet.button, bet.group)}
                 style={{ opacity: isLose ? 0.6 : 1 }}
                 className={[styles.domainContentTie, deviceClassName, 'notSuperWild'].join(' ')}
             >
@@ -51,14 +52,14 @@ const TieBetButton = ({ bet, children }: IProps) => {
                         <span className={styles.text_lg}>
                             <LabelTranslate
                                 value={bet.button.toLowerCase()}
-                                keyLang={GameHelper.getBasePcode()}
+                                keyLang={getBasePcode()}
                             />
                         </span>
                         <span>{ratio}</span>
                     </div>
                 </div>
                 <div className={styles['slot-chip']} style={{ left: '80%', top: '15%' }}>
-                    {chip > 0 && <ChipBet value={chip} color={color} />}
+                    {chip > 0 && <ChipBet value={chip} />}
                 </div>
             </div>
 
@@ -72,7 +73,7 @@ const TieBetButton = ({ bet, children }: IProps) => {
                     zIndex: 3,
                     opacity: isLose ? 0.6 : 1,
                 }}
-                onClick={() => handleClick(bet)}
+                onClick={() => handleClick(bet.button, bet.group)}
             >
                 <path
                     className={[isWin ? 'table-win-blink' : ''].join(' ')}
