@@ -1,4 +1,5 @@
 import { getResultHistory } from '../../services/api/results';
+import { HistoryItem, setHistory } from '../../store/slice/historySlice';
 import { AppDispatch } from '../../store/store';
 import { Pagination } from '../../types';
 
@@ -8,14 +9,14 @@ export const fetchResultHistory = async (_dispatch: AppDispatch, gameSet?: numbe
         const perPage = 10;
 
         const data = await getResultHistory<{
-            data: any[]; // change to type data your game
+            data: HistoryItem[]; // change to type data your game
             pagination: Pagination;
         }>(page, perPage, gameSet);
 
         console.log(data);
 
         // run action to save history result to redux
-        // dispatch(setHistory(data));
+        _dispatch(setHistory(data.data));
     } catch (error) {
         console.error('get history error', error);
     }
