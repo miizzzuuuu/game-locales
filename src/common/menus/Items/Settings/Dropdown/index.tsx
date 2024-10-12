@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import styles from './styles.module.scss';
 import Button from '../../../../components/Button';
-import { LangHelper } from '../../../../utils/LangHelper';
+import { langLogo, langName } from '../../../../utils/LangHelper';
 import { SVGIconChevronDown } from '../../../../components/SVG/SVGIconChevronDown';
 
 interface DropdownProps {
@@ -43,7 +43,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
         };
     }, []);
 
-    const IconSelected = selectedValue && LangHelper.logo[selectedValue];
+    const IconSelected = selectedValue && langLogo[selectedValue];
 
     return (
         <div ref={dropdownRef} className={styles.dropdown} style={style}>
@@ -54,7 +54,8 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
                     border: 'none',
                     background: 'none',
                     display: 'flex',
-                    padding: '0px 0.6rem',
+                    paddingLeft: '0.6rem',
+                    paddingRight: '0.6rem',
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     gap: '0.8rem',
@@ -83,7 +84,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
                             padding: '0px',
                         }}
                     >
-                        {selectedValue && LangHelper.langName[selectedValue]}
+                        {selectedValue && langName[selectedValue]}
                     </p>
                 </div>
 
@@ -93,7 +94,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
             {isOpen && (
                 <div className={styles['dropdown-menu']}>
                     {options?.map((option) => {
-                        const Icon = LangHelper.logo[option];
+                        const Icon = langLogo[option];
 
                         return (
                             <div
@@ -120,7 +121,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
                                         letterSpacing: '0.026rem',
                                     }}
                                 >
-                                    {LangHelper.langName[option]}
+                                    {langName[option]}
                                 </p>
                             </div>
                         );

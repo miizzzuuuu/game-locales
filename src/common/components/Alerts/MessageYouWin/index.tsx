@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectCurrency } from '../../../../store/slice/playerSlice';
@@ -6,6 +7,7 @@ import {
     selectWinAmount,
     selectWinStatus,
 } from '../../../../store/slice/resultSlice';
+import { WIN_NOTIFICATION_DURATION } from '../../../utils/GameHelper';
 import { StringHelper } from '../../../utils/StringHelper';
 import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
@@ -27,6 +29,8 @@ const MessageYouWin = () => {
     const winStatus = useAppSelector(selectWinStatus);
     // const resultStatus = useAppSelector(selectResultStatus);
 
+    const { i18n } = useTranslation();
+
     useEffect(() => {
         if (currentTimeOut.current) {
             clearTimeout(currentTimeOut.current);
@@ -40,7 +44,7 @@ const MessageYouWin = () => {
                 if (messageYouWinRef.current) {
                     messageYouWinRef.current.classList.add(styles.disapear);
                 }
-            }, 4000);
+            }, WIN_NOTIFICATION_DURATION);
         }
 
         return () => {
@@ -51,7 +55,7 @@ const MessageYouWin = () => {
         };
     }, [winAmount]);
 
-    const requestRef = useRef<number | undefined>(undefined);
+    const requestRef = useRef<number>();
     const previousTimeRef = useRef<number | undefined>(undefined);
     const startTimeRef = useRef<number | undefined>(undefined);
 
@@ -85,7 +89,9 @@ const MessageYouWin = () => {
         } else {
             setDisplayValue(winAmount);
 
-            cancelAnimationFrame(requestRef.current as number);
+            if (requestRef.current) {
+                cancelAnimationFrame(requestRef.current);
+            }
             startTimeRef.current = undefined;
         }
     };
@@ -114,7 +120,7 @@ const MessageYouWin = () => {
     // }, [resultStatus]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('message-fadeout') >= 0) {
+        if (e.animationName === 'fadeOut') {
             // setRenderUI(false);
             setDisplayValue(0);
             dispatch(endWinAnimation());
@@ -137,7 +143,7 @@ const MessageYouWin = () => {
                 <LabelTranslate value="you-win" className={styles.label} />
 
                 <div className={styles.value}>
-                    {StringHelper.formatCurrency(displayValue, currency)}
+                    {StringHelper.formatCurrency(displayValue, currency, i18n.language)}
                 </div>
             </div>
         </div>

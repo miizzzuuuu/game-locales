@@ -55,5 +55,7 @@
     "payout-includes-initial-bet": "Payout includes initial bet.",
     "game": "game",
     "features": "features",
-    "shuffling-cards": "shuffling cards"
+    "shuffling-cards": "shuffling cards",
+    "complete-how-to-play": "Complete how to play",
+    "dont-show-again": "Don't show again"
 }

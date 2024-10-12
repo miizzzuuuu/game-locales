@@ -1,10 +1,18 @@
 # Start Game
 
+Start new game from branch 'dev/main/revision/1'
+
 ## Branch Game
 
-Create a new branch named `dev/<GAME-NAME>`
+Create a new branch named `dev/<GAME-NAME>/<suffix>/<version>`
 
-example: `dev/europe-roulette`
+example: `dev/europe-roulette/mizu/1`
+
+Merge from branch `origin/dev/main/revision/1`. run:
+
+```sh
+git merge origin/dev/main/revision/1
+```
 
 then continue developing the game
 
@@ -31,13 +39,22 @@ To differentiate styles with different orientations, use [this guide](docs/css/d
 To edit the main area of the game, go to `common/components/GameUI`.
 
 ```tsx
-import LayoutV1 from '../../layouts/v1';
+import MainArea from '../../../game/components/MainArea';
+...
 
 const GameUI = () => {
-    return <LayoutV1>{/* Edit here */}</LayoutV1>;
+    ...
+
+    return (
+        <Layout>
+            {/* place the main area here */}
+            <MainArea />
+        </Layout>
+    );
 };
 
 export default GameUI;
+
 ```
 
 ### Organizing Game Components
@@ -78,6 +95,8 @@ How to enable and disable features for the game, use [this guide](features.md).
 -   Mini How To Play
 -   Animation Shuffling Cards
 -   Letter Box
+-   Streaming Letter Box
+-   Animation Chip
 
 ## Enable Letterbox
 
@@ -86,6 +105,10 @@ to enable letterbox, use [this guide](enable-letterbox.md)
 ## Mini How To Play
 
 To custumize mini how to play, use [this guide](mini-how-to-play.md).
+
+## Enable Suffle Card
+
+To enable animation suffling card, use [this guide](shuffle-the-card.md).
 
 ## Build and Upload to Dev
 

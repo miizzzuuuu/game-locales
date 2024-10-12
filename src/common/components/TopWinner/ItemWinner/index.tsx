@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { StringHelper } from '../../../utils/StringHelper';
 import SVGWinner from '../SVG/SVGWinner';
 
@@ -10,12 +11,14 @@ interface IProps {
 }
 
 const ItemWinner = ({ isFirst, name, value }: IProps) => {
+    const { i18n } = useTranslation();
+
     return (
         <div className={styles.item}>
             {isFirst && <SVGWinner style={{ width: '1.2rem', height: '1.2rem' }} />}
 
             <span className={styles.label}>{name}</span>
-            <span className={styles.value}>{StringHelper.formatNumber(value)}</span>
+            <span className={styles.value}>{StringHelper.formatNumber(value, i18n.language)}</span>
         </div>
     );
 };

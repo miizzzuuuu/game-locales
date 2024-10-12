@@ -35,7 +35,7 @@ function useFetchTimer() {
             }
         };
 
-        fetchPlayerSettings();
+        void fetchPlayerSettings();
 
         return () => {
             ignore = true;

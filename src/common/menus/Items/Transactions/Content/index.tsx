@@ -1,8 +1,8 @@
 import { useState, useTransition } from 'react';
-import styles from './styles.module.scss';
+import Previous from '../Previous';
 import Tabs from '../Tabs';
 import Today from '../Today';
-import Previous from '../Previous';
+import styles from './styles.module.scss';
 
 export type TabTransactions = 'today' | 'previous';
 

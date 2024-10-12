@@ -8,7 +8,9 @@
     --streaming-scale-portrait: 1.4;
     --height-overlay-streaming-portrait: 4.8rem;
     --width-overlay-streaming-landscape: 12rem;
-    --height-overlay-streaming-landscape: 11rem;
+    --height-overlay-streaming-landscape: 10rem;
+
+    --streaming-background: #1c1303;
 
     // portrait, streaming ke bawah
     --streaming-color-1: linear-gradient(180deg, #ff7401 0%, #452204 40.22%, #0b0500 100%);
@@ -64,4 +66,12 @@
     );
 
     --button-action-size: 3.8rem;
+
+    --overlay-1: rgba(0, 0, 0, 0.3);
+
+    --background-total-bet-bg-1: rgb(29, 30, 47, 0.2); // rgba(0, 0, 0, 0.1);
+    --background-total-bet-bg-2: rgb(29, 30, 47, 0.6); // rgba(52, 54, 80, 0.56);
+
+    --border-total-bet-bg-1: #26273c;
+    --border-total-bet-bg-2: #26273c;
 }

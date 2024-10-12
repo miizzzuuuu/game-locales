@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
 import { ChipHelper } from '../../utils/ChipHelper';
-import { DisplayHelper } from '../../utils/DisplayHelper';
 import Chip from './Chip';
 import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
@@ -21,7 +20,6 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     const dispatch = useAppDispatch();
 
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const chipBase = useAppSelector(selectChipBase);
@@ -33,9 +31,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
         (index: number) => {
             if (!slider.current) return;
 
-            const circles = slider.current.querySelectorAll(
-                '.chip-item',
-            ) as NodeListOf<HTMLElement>;
+            const circles = slider.current.querySelectorAll('.chip-item');
 
             const circleClicked = circles[index];
             const containerRect = slider.current.getBoundingClientRect();
@@ -79,7 +75,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
 
     return (
         <div
-            className={`${styles['chip-deck']}${deviceClassName} ${styles[`v${version}`]}${show ? '' : ` ${styles.disapear}`}`}
+            className={`${styles['chip-deck']} ${styles[`v${version}`]}${show ? '' : ` ${styles.disapear}`}`}
         >
             <div className={`${styles.wrapper} no-scrollbar`} ref={slider}>
                 {chipBase.map((chip, idx) => (

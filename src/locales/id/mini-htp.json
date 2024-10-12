@@ -1,0 +1,20 @@
+{
+    "slide-1": {
+        "title": "Cara Bermain",
+        "content": [
+            "Permainan dimana 1 bola kecil dilemparkan kedalam Roda berputar yang memiliki 37 slot dengan angka dari 0 hingga 36 Angka."
+        ]
+    },
+    "slide-2": {
+        "title": "Taruhan",
+        "content": [
+            "Anda dapat bertaruh pada angka, rentang angka, warna atau apakah ganjil / genap. Setelah Anda memasang taruhan, Roda akan diputar dan 1 bola dilemparkan."
+        ]
+    },
+    "slide-3": {
+        "title": "Hasil Permainan",
+        "content": [
+            "Bola akan berhenti disalah satu slot, dan taruhan yang sesuai dengan hasil tersebut akan menang."
+        ]
+    }
+}

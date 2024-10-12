@@ -80,7 +80,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint1_linear_6_63097"
@@ -91,7 +91,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint2_linear_6_63097"
@@ -102,7 +102,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint3_linear_6_63097"
@@ -113,7 +113,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint4_linear_6_63097"
@@ -124,7 +124,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint5_linear_6_63097"
@@ -135,7 +135,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint6_linear_6_63097"
@@ -146,7 +146,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint7_linear_6_63097"
@@ -157,7 +157,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint8_linear_6_63097"
@@ -168,7 +168,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
             <linearGradient
                 id="paint9_linear_6_63097"
@@ -179,7 +179,7 @@ const SVGLogoFooter = (props: SVGProps<SVGSVGElement>) => (
                 gradientUnits="userSpaceOnUse"
             >
                 <stop stopColor="#343546" />
-                <stop offset={1} stopColor="#343546" stopOpacity={0.32} />
+                <stop offset={1} stopColor="#343546" stopOpacity={0.3} />
             </linearGradient>
         </defs>
     </svg>

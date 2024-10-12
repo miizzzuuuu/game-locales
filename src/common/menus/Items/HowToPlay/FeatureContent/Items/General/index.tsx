@@ -4,13 +4,13 @@ import HowToPlayCard from '../../../HowToPlayCard';
 import LimitBet from './LimitBet';
 import ChipHorizontal from './SVG/ChipHorizontal';
 import SVGTotalBet from './SVG/SVGTotalBet';
-import SVGUsername from './SVG/SVGUsername';
 import Timer from './Timer';
+import Username from './Username';
 
 import styles from './styles.module.scss';
 
 const paragraphArr = [
-    { icon: <SVGUsername /> },
+    { icon: <Username /> },
     { icon: <SVGTotalBet /> },
     { icon: <LimitBet /> },
     { icon: <Timer /> },

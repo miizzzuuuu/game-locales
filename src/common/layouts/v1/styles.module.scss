@@ -39,10 +39,8 @@
     padding-bottom: 1.5rem;
 }
 
-.mobile-portrait {
-    &.layout {
-        &.offset-streaming {
-            padding-top: calc(var(--height-streaming) * 1px);
-        }
+:global(.mobile-portrait) {
+    .offset-streaming {
+        padding-top: calc(var(--height-streaming) * 1px);
     }
 }

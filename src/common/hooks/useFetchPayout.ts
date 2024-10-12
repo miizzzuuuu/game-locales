@@ -26,7 +26,7 @@ function useFetchPayout() {
             }
         };
 
-        fetchPlayerSettings();
+        void fetchPlayerSettings();
 
         return () => {
             ignore = true;

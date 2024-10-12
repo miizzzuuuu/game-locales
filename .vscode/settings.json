@@ -1,0 +1,8 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "workbench.editor.customLabels.patterns": {
+        "**/src/**/index.tsx": "${dirname}/index.tsx",
+        "**/src/**/styles.module.scss": "${dirname}/styles.module.scss"
+    }
+}

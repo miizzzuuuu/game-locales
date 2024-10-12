@@ -11,8 +11,9 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-import { GameHelper } from '../../common/utils/GameHelper';
+
 import { StringUtility } from '../../game/components/External/managers/StringUtility';
+import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
@@ -69,8 +70,8 @@ export class SocketComponent {
                 SocketComponent.instance.emitLobbyConnect(data);
                 SocketComponent.instance.emitGameConnect({
                     user: data.user,
-                    game: GameHelper.getGameCode(),
-                    pcode: GameHelper.pcode,
+                    game: getGameCode(),
+                    pcode: getPcode(),
                 });
             });
         }
@@ -92,8 +93,8 @@ export class SocketComponent {
         if (this._socket) {
             const dataSend: GameConnect = {
                 user: data.user,
-                game: GameHelper.getGameCode(),
-                pcode: GameHelper.pcode,
+                game: getGameCode(),
+                pcode: getPcode(),
             };
 
             this._socket.emit('gameDisconnect', JSON.stringify(dataSend));
@@ -103,8 +104,6 @@ export class SocketComponent {
     listenGameResult(callback?: (data: LoadNewValueData) => void): void {
         if (this._socket) {
             this._socket.on(SocketComponent.SOCKET_EVENT.gameResult, (data: LoadNewValueData) => {
-                // console.log('socket gameResult:', data);
-
                 this.validationDataWithPcode(data, () => {
                     if (this._lastGameResultPeriod === data.periode) {
                         return;
@@ -138,8 +137,8 @@ export class SocketComponent {
 
     listenNewShoe(callback: (data: LoadNewValueData) => void): void {
         if (this._socket) {
-            const variantUpper = Number.isNaN(GameHelper.pcode[GameHelper.pcode.length - 1])
-                ? GameHelper.pcode[GameHelper.pcode.length - 1].toUpperCase()
+            const variantUpper = Number.isNaN(getPcode()[getPcode().length - 1])
+                ? getPcode()[getPcode().length - 1].toUpperCase()
                 : '';
             this._socket.on(
                 SocketComponent.SOCKET_EVENT.newDragonTigerShoe.concat(variantUpper),
@@ -204,12 +203,12 @@ export class SocketComponent {
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {
             const eventName = SocketComponent.scanNumber.concat(
-                StringUtility.convertGameCodeToGameName(GameHelper.pcode),
+                StringUtility.convertGameCodeToGameName(getPcode()),
             );
 
             this._socket.on(eventName, (data: ScanNumberData) => {
                 console.log('socket scanNumber:', data);
-                if (data && data.pcode === GameHelper.pcode) {
+                if (data && data.pcode === getPcode()) {
                     callback(data);
                 }
             });
@@ -230,7 +229,7 @@ export class SocketComponent {
             return;
         }
 
-        const eventName = GameHelper.getEventNewSet();
+        const eventName = getEventNewSet();
         console.log('event new set', eventName);
 
         if (!eventName) {
@@ -245,13 +244,13 @@ export class SocketComponent {
     }
 
     validationDataWithPcode<T extends { pcode: string }>(data: T, callback?: () => void) {
-        if (data.pcode === GameHelper.pcode) {
+        if (data.pcode === getPcode()) {
             callback?.();
         }
     }
 
     validationDataWithGameCode<T extends { game: string }>(data: T, callback?: () => void) {
-        if (data.game === GameHelper.getGameCode()) {
+        if (data.game === getGameCode()) {
             callback?.();
         }
     }
@@ -260,7 +259,7 @@ export class SocketComponent {
         data: T,
         callback?: () => void,
     ) {
-        if (data.pcode === GameHelper.pcode || data.pcode === GameHelper.getGameCode()) {
+        if (data.pcode === getPcode() || data.pcode === getGameCode()) {
             callback?.();
         }
     }
@@ -270,7 +269,7 @@ export class SocketComponent {
             //rememberTransport: false,
             transports: ['websocket'],
             upgrade: false,
-            query: `user=${nickname}&agent=${operatorId}&game=${GameHelper.getGameName()}`,
+            query: `user=${nickname}&agent=${operatorId}&game=${getGameName()}`,
         };
     };
 
@@ -287,13 +286,13 @@ export class SocketComponent {
                 this._socket.off(eventName);
             });
 
-            const eventNewSet = GameHelper.getEventNewSet();
+            const eventNewSet = getEventNewSet();
             if (eventNewSet) {
                 this._socket.off(eventNewSet);
             }
 
             const eventScan = SocketComponent.scanNumber.concat(
-                StringUtility.convertGameCodeToGameName(GameHelper.pcode),
+                StringUtility.convertGameCodeToGameName(getPcode()),
             );
             if (eventScan) {
                 this._socket.off(eventScan);

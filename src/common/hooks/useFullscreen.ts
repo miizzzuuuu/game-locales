@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { DisplayHelper } from '../utils/DisplayHelper';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
 
@@ -8,15 +7,11 @@ function useFullscreen() {
 
     useEffect(() => {
         const toggleFullScreen = () => {
-            if (device === 'desktop') {
+            if (device === 'desktop' || window.isIOS || document.fullscreenElement) {
                 return;
             }
 
-            const isIOS = DisplayHelper.checkIOS();
-
-            if (!document.fullscreenElement && !isIOS) {
-                document.documentElement.requestFullscreen();
-            }
+            void document.documentElement.requestFullscreen();
         };
 
         document.addEventListener('click', toggleFullScreen);

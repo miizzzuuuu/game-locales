@@ -2,7 +2,6 @@ import { CSSProperties, ReactNode, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import Button from '../Button';
-import { DisplayHelper } from '../../utils/DisplayHelper';
 
 interface IProps {
     show?: boolean;
@@ -31,8 +30,6 @@ const ButtonAction = ({
 }: IProps) => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
     const handleClick = () => {
         console.log('click action button');
 
@@ -41,7 +38,7 @@ const ButtonAction = ({
 
     return (
         <Button
-            className={`${styles['button-action']}${deviceClassName}${show ? '' : ` ${styles.disapear}`}`}
+            className={`${styles['button-action']}${show ? '' : ` ${styles.disapear}`}`}
             style={style}
             onClick={handleClick}
             disabled={disabled}
@@ -49,7 +46,7 @@ const ButtonAction = ({
             ref={buttonRef}
         >
             <div
-                className={`${styles['icon']}${circle ? ` ${styles.circle}` : ''}`}
+                className={`${styles.icon}${circle ? ` ${styles.circle}` : ''}`}
                 style={{
                     borderColor: borderColor,
                     backgroundColor: background,
@@ -58,7 +55,7 @@ const ButtonAction = ({
                 {icon}
             </div>
 
-            {label && <div className={styles['text']}>{label}</div>}
+            {label && <div className={styles.text}>{label}</div>}
         </Button>
     );
 };

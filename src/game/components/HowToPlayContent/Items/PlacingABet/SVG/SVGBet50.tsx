@@ -1,12 +1,12 @@
 import { SVGProps } from 'react';
 import { useAppTranslate } from '../../../../../../services/i18next/hooks';
-import { GameHelper } from '../../../../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../../../../common/utils/GameHelper';
 // import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
 const SVGBet50 = ({ className, style }: IProps) => {
-    const { t } = useAppTranslate(GameHelper.getBasePcode());
+    const { t } = useAppTranslate(getBasePcode());
 
     return (
         <svg
@@ -79,7 +79,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M12.0722 7.64062C10.0572 7.64062 8.42224 9.27562 8.42224 11.2906C8.42224 13.3056 10.0572 14.9406 12.0722 14.9406C14.0872 14.9406 15.7222 13.3056 15.7222 11.2906C15.7222 9.27562 14.0872 7.64062 12.0722 7.64062ZM12.0722 14.7206C10.1772 14.7206 8.64224 13.1856 8.64224 11.2906C8.64224 9.39563 10.1772 7.86063 12.0722 7.86063C13.9672 7.86063 15.5022 9.39563 15.5022 11.2906C15.5022 13.1856 13.9672 14.7206 12.0722 14.7206Z"
                             fill="url(#paint3_radial_356_884)"
                         />
@@ -138,7 +138,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -180,7 +180,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -222,7 +222,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -264,7 +264,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -306,7 +306,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -348,7 +348,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 </text>
                 <text
                     fill="white"
-                    fillOpacity="0.32"
+                    fillOpacity="0.3"
                     fontFamily="Manrope"
                     fontSize="4.65116"
                     fontWeight="bold"
@@ -390,7 +390,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
             >
                 {t('big')}
             </text>
-            <g opacity="0.32">
+            <g opacity="0.3">
                 <g clipPath="url(#clip3_356_884)">
                     <path
                         d="M57.0904 -63.4068L-9.8606 52.5557"
@@ -615,7 +615,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M25.0724 62.6407C23.0574 62.6407 21.4224 64.2757 21.4224 66.2907C21.4224 68.3057 23.0574 69.9407 25.0724 69.9407C27.0874 69.9407 28.7224 68.3057 28.7224 66.2907C28.7224 64.2757 27.0874 62.6407 25.0724 62.6407ZM25.0724 69.7207C23.1774 69.7207 21.6424 68.1857 21.6424 66.2907C21.6424 64.3957 23.1774 62.8607 25.0724 62.8607C26.9674 62.8607 28.5024 64.3957 28.5024 66.2907C28.5024 68.1857 26.9674 69.7207 25.0724 69.7207Z"
                             fill="url(#paint16_radial_356_884)"
                         />
@@ -735,7 +735,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                             fill="#266EE9"
                         />
                         <path
-                            opacity="0.32"
+                            opacity="0.3"
                             d="M125.072 62.6407C123.057 62.6407 121.422 64.2757 121.422 66.2907C121.422 68.3057 123.057 69.9407 125.072 69.9407C127.087 69.9407 128.722 68.3057 128.722 66.2907C128.722 64.2757 127.087 62.6407 125.072 62.6407ZM125.072 69.7207C123.177 69.7207 121.642 68.1857 121.642 66.2907C121.642 64.3957 123.177 62.8607 125.072 62.8607C126.967 62.8607 128.502 64.3957 128.502 66.2907C128.502 68.1857 126.967 69.7207 125.072 69.7207Z"
                             fill="url(#paint23_radial_356_884)"
                         />

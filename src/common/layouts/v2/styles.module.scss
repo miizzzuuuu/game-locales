@@ -37,14 +37,14 @@
     padding-top: 1.5rem;
 }
 
-.mobile-portrait {
+:global(.mobile-portrait) {
     .main-area {
         grid-template-columns: 5.8rem 1fr 5.8rem;
     }
 }
 
-.desktop,
-.mobile-landscape {
+:global(.desktop),
+:global(.mobile-landscape) {
     .main-area {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 7rem;

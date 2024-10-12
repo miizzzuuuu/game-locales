@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { lazy, Suspense, useCallback } from 'react';
 import { DisplayHelper } from '../../utils/DisplayHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
@@ -11,20 +11,18 @@ import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
-import Menu from '../../menus/Menu';
 import { FunctionHelper } from '../../utils/FunctionHelper';
 import { useSocket } from '../../../services/socket/hooks';
 import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 import TopWinner from '../TopWinner';
-import { setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { resetHistory } from '../../../store/slice/historySlice';
+import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { Features } from '../../utils/Features';
-import { useNewSet } from '../../hooks/useNewSet';
+
+const Menu = lazy(() => import('../../menus/Menu'));
 
 function Game() {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const isLetterOrPillarBoxActive = DisplayHelper.getLetterOrPillarBoxActive();
 
     const dispatch = useAppDispatch();
@@ -32,51 +30,55 @@ function Game() {
     const nickname = useAppSelector(selectNickname);
     const operatorId = useAppSelector(selectOperatorId);
     const time = useAppSelector(selectTime);
+    const winnerData = useAppSelector(selectTopWinner);
 
-    const handleKeyboardTest = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'l') {
-            dispatch(loadNewValueAction(dummyLoadNewValue));
-        }
-        if (e.key === 'r') {
-            dispatch(
-                gameResultAction({
-                    ...dummyLoadNewValue,
-                    win: FunctionHelper.getRandomInt(1, 25).toString().padStart(2, '0'),
-                }),
-            );
-        }
-        if (e.key === 'w') {
-            dispatch(setWinAmount(1000000));
-        }
-        if (e.key === 'c') {
-            dispatch(closeTime());
-        }
-        if (e.key === 't') {
-            dispatch(
-                setTopWinner({
-                    data: topWinnerDummy,
-                    periode: 0,
-                }),
-            );
-        }
-        if (e.key === 'p') {
-            dispatch(setShowMiniHowToPlay(true));
-        }
-        if (e.key === 'n') {
-            if (!Features.SHUFFLE_THE_CARDS) {
-                return;
+    const handleKeyboardTest = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'l') {
+                dispatch(loadNewValueAction(dummyLoadNewValue));
             }
-
-            dispatch(setNewSet(newSetDummy.status));
-        }
-        if (e.key === 'm') {
-            if (!Features.SHUFFLE_THE_CARDS) {
-                return;
+            if (e.key === 'r') {
+                dispatch(
+                    gameResultAction({
+                        ...dummyLoadNewValue,
+                        win: FunctionHelper.getRandomInt(1, 25).toString().padStart(2, '0'),
+                    }),
+                );
             }
+            if (e.key === 'w') {
+                dispatch(setWinAmount(1000000));
+            }
+            if (e.key === 'c') {
+                dispatch(closeTime());
+            }
+            if (e.key === 't') {
+                dispatch(
+                    setTopWinner({
+                        data: topWinnerDummy,
+                        periode: 0,
+                    }),
+                );
+            }
+            if (e.key === 'p') {
+                dispatch(setShowMiniHowToPlay(true));
+            }
+            if (e.key === 'n') {
+                if (!Features.SHUFFLE_THE_CARDS) {
+                    return;
+                }
 
-            dispatch(setNewSet(false));
-        }
-    }, []);
+                dispatch(setNewSet(newSetDummy.status));
+            }
+            if (e.key === 'm') {
+                if (!Features.SHUFFLE_THE_CARDS) {
+                    return;
+                }
+
+                dispatch(setNewSet(false));
+            }
+        },
+        [dispatch],
+    );
 
     useKeyboard(handleKeyboardTest);
 
@@ -91,23 +93,21 @@ function Game() {
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
-    useNewSet({
-        handleNewSet: () => {
-            // callback when new set
-            dispatch(resetHistory());
-        },
-    });
-
     return (
         <div
-            className={`${styles['game-area']}${deviceClassName}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
+            className={`${styles['game-area']}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
             <Timer />
             <GameUI />
-            <TopWinner />
+
+            {winnerData.length > 0 && <TopWinner />}
+
             <AlertUI />
-            <Menu />
+
+            <Suspense>
+                <Menu />
+            </Suspense>
         </div>
     );
 }

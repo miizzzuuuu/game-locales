@@ -9,23 +9,21 @@
 
     // width: 22rem;
     height: 3rem;
+}
 
-    animation: message-fadein 0.3s linear forwards;
+:global :local(.message) {
+    animation: fadeIn 0.3s linear both;
 
-    &.disapear {
-        animation: message-fadeout 0.3s linear forwards;
-
-        .content {
-            animation: hide-message-content 0.3s linear forwards;
-        }
+    :local(.content) {
+        animation: zoomIn 0.3s both;
     }
+}
 
-    &.apear {
-        animation: message-fadein 0.3s linear forwards;
+:global :local(.message.disapear) {
+    animation: fadeOut 0.3s linear both;
 
-        .content {
-            animation: show-message-content 0.3s linear forwards;
-        }
+    :local(.content) {
+        animation: zoomOut 0.3s both;
     }
 }
 
@@ -43,8 +41,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: show-message-content 0.3s linear forwards;
 }
 
 .text {
@@ -54,53 +50,5 @@
     font-weight: 600;
     letter-spacing: 0.052rem;
     text-transform: uppercase;
-    text-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.32);
-}
-
-@keyframes message-fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes message-fadeout {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes show-message-content {
-    0% {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-}
-
-@keyframes hide-message-content {
-    0% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: scaleX(0);
-    }
+    text-shadow: 0px 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
 }

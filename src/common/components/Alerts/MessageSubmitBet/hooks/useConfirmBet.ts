@@ -5,15 +5,18 @@ import {
     resetConfirmBet,
     selectConfirmBetError,
     selectConfirmBetStatus,
-} from '../../../../../store/slice/betAddSlice';
+} from '../../../../../store/slice/bets';
 
 function useConfirmBet() {
     const dispatch = useAppDispatch();
 
     const { t } = useAppTranslate();
 
-    const [message, setMessage] = useState<{ value: string; type: 'danger' | 'warning' | 'none' }>({
-        value: '',
+    const [message, setMessage] = useState<{
+        value: null | string;
+        type: 'danger' | 'warning' | 'none';
+    }>({
+        value: null,
         type: 'none',
     });
 
@@ -39,7 +42,7 @@ function useConfirmBet() {
 
         if (confirmBetStatus === 'rejected') {
             setMessage({
-                value: confirmBetError || t('bet-error'),
+                value: confirmBetError ?? t('bet-error'),
                 type: 'danger',
             });
             return;
@@ -50,7 +53,7 @@ function useConfirmBet() {
         dispatch(resetConfirmBet());
 
         setMessage({
-            value: '',
+            value: null,
             type: 'none',
         });
     };

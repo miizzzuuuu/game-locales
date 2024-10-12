@@ -9,8 +9,11 @@ import {
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 
 import './styles.scss';
+import { useTranslation } from 'react-i18next';
 
 const MenuPayoutTop = () => {
+    const { i18n } = useTranslation();
+
     const currency = useAppSelector(selectCurrency);
 
     const gameName = useAppSelector(selectGameName);
@@ -26,7 +29,8 @@ const MenuPayoutTop = () => {
             </div>
 
             <span className="menu-payout-top-bottom">
-                {StringHelper.formatCurrency(min, currency)} - {StringHelper.formatNumber(max50)}
+                {StringHelper.formatCurrency(min, currency, i18n.language)} -{' '}
+                {StringHelper.formatNumber(max50, i18n.language)}
             </span>
         </div>
     );

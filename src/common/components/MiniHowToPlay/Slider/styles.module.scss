@@ -1,10 +1,13 @@
-.slider {
-    width: calc(var(--width-modal-mini-htp) - 1.6rem);
-    display: grid;
-    grid-template-columns: repeat(var(--column), calc(var(--width-modal-mini-htp) - 1.6rem));
-    grid-template-rows: repeat(3, auto);
-    row-gap: 1.6rem;
-    // column-gap: 1.6rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+.slideshow {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    max-width: var(--width-modal-mini-htp);
+    height: 100%;
+}
+
+.slideshow-slider {
+    height: 100%;
+    white-space: nowrap;
+    transition: ease 700ms;
 }

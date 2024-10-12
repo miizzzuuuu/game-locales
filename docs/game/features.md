@@ -5,7 +5,7 @@ Edit file `src/common/utils/Features.ts`
 ### Set Layout Game
 
 ```ts
-LAYOUT_VERSION: 1 | 2,
+LAYOUT_VERSION: 1 | 2 | 3,
 ```
 
 ### Enable Button Pattern in Landscape
@@ -30,4 +30,16 @@ SHUFFLE_THE_CARDS: boolen;
 
 ```ts
 LETTER_BOX: boolen;
+```
+
+## Enable Streaming Letter Box in Landscape Mode
+
+```ts
+STREAMING_LANDSCAPE_LETTER_BOX: true,
+```
+
+## Enable Animation Place Chip
+
+```ts
+CHIP_ANIMATION: true,
 ```

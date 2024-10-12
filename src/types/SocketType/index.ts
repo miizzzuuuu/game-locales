@@ -14,7 +14,7 @@ export type LoadNewValueData = {
     game: string; // "game": "6dcolor",
     win: string; // "win": "1r,2b,3y",
     pcode: string; // "pcode":"m43",
-    timer: string; // "timer":"30",
+    timer: string | number; // "timer":"30",
     periode: number; // "periode":7011
     shoePeriode?: string;
 };
@@ -60,10 +60,10 @@ export type CameraSequence = {
 export type TopWinnerData = {
     pcode: string;
     periode: number;
-    data: Array<{
+    data: {
         username: string;
         totalWin: number;
-    }>;
+    }[];
 };
 
 export type BaseThunder = { pcode: string };
@@ -106,4 +106,4 @@ export type ThunderM8B = {
     jackpot: string | null; // "4";
 };
 
-export type NewSetData = { pcode: string; gameSet: 13494; status: boolean };
+export type NewSetData = { pcode: string; gameSet: number; status: boolean };

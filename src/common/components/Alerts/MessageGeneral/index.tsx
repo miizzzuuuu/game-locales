@@ -50,23 +50,23 @@ const MessageGeneral = () => {
 
     useKeyboard(handleKeyboard);
 
+    if (!message) {
+        return null;
+    }
+
     return (
-        <>
-            {message && (
-                <Message
-                    value={message}
-                    type={messageType}
-                    handleClose={() =>
-                        dispatch(
-                            setMessage({
-                                value: '',
-                                type: 'none',
-                            }),
-                        )
-                    }
-                />
-            )}
-        </>
+        <Message
+            value={message}
+            type={messageType}
+            handleClose={() =>
+                dispatch(
+                    setMessage({
+                        value: '',
+                        type: 'none',
+                    }),
+                )
+            }
+        />
     );
 };
 

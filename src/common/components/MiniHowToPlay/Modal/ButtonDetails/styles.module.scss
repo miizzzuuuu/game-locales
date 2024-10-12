@@ -1,6 +1,6 @@
 .container {
     flex-shrink: 0;
-    margin-block-start: 0.8rem;
+    margin-top: 0.8rem;
     display: flex;
     justify-content: center;
 }
@@ -12,15 +12,16 @@
     gap: 0.4rem;
 
     opacity: 0;
-    visibility: hidden;
+}
 
-    &.show {
-        animation: showAnimation 0.2s forwards;
-    }
+.show {
+    pointer-events: default;
+    animation: showAnimation 0.2s both;
+}
 
-    &.hide {
-        animation: hideAnimation 0.2s forwards;
-    }
+.hide {
+    pointer-events: none;
+    animation: hideAnimation 0.2s both;
 }
 
 .button svg {
@@ -28,35 +29,29 @@
     height: 1.4rem;
 }
 
-.button span {
+.text {
     color: #00c3d8;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.012rem;
+    text-transform: capitalize;
 }
 
 @keyframes showAnimation {
-    0% {
-        visibility: hidden;
+    from {
         opacity: 0;
     }
-    1% {
-        visibility: visible;
-    }
-    100% {
+    to {
         opacity: 1;
-        visibility: visible;
     }
 }
 
 @keyframes hideAnimation {
     0% {
-        visibility: visible;
         opacity: 1;
     }
     100% {
         opacity: 0;
-        visibility: hidden;
     }
 }

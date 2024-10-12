@@ -4,17 +4,11 @@ import { selectGameNewSet } from '../../../../store/slice/gameSlice';
 import Message from './Message';
 import ShufflingAnimation from './ShufflingAnimation/Animation';
 import styles from './styles.module.scss';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
+import { useNewSet } from '../../../../game/hooks/useNewSet';
 
 const NewSet = () => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const newSet = useAppSelector(selectGameNewSet);
-
     const [renderUI, setRenderUI] = useState(false);
-
-    const handleClose = () => {
-        setRenderUI(false);
-    };
 
     useEffect(() => {
         if (newSet) {
@@ -22,12 +16,18 @@ const NewSet = () => {
         }
     }, [newSet]);
 
+    useNewSet();
+
     if (!newSet && !renderUI) {
         return null;
     }
 
+    const handleClose = () => {
+        setRenderUI(false);
+    };
+
     return (
-        <div className={`${styles['new-set']}${deviceClassName}`}>
+        <div className={styles['new-set']}>
             <Message value="shuffling-cards" handleClose={handleClose} close={!newSet} />
 
             <ShufflingAnimation close={!newSet} />
