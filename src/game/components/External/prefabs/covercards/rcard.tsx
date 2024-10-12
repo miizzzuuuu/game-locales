@@ -133,8 +133,8 @@ export function RenderCard(props: any) {
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(50 12.0741) rotate(90) scale(132.741 379.898)"
                                     >
-                                        <stop stop-color="#4C5378" />
-                                        <stop offset="1" stop-color="#121524" />
+                                        <stop stopColor="#4C5378" />
+                                        <stop offset="1" stopColor="#121524" />
                                     </radialGradient>
                                     <linearGradient
                                         id="paint1_linear_1_3949"
@@ -144,8 +144,8 @@ export function RenderCard(props: any) {
                                         y2="54.7533"
                                         gradientUnits="userSpaceOnUse"
                                     >
-                                        <stop stop-color="#15B586" />
-                                        <stop offset="1" stop-color="#009FD1" />
+                                        <stop stopColor="#15B586" />
+                                        <stop offset="1" stopColor="#009FD1" />
                                     </linearGradient>
                                     <linearGradient
                                         id="paint2_linear_1_3949"
@@ -155,8 +155,8 @@ export function RenderCard(props: any) {
                                         y2="74.163"
                                         gradientUnits="userSpaceOnUse"
                                     >
-                                        <stop stop-color="#0367DC" />
-                                        <stop offset="1" stop-color="#894B92" />
+                                        <stop stopColor="#0367DC" />
+                                        <stop offset="1" stopColor="#894B92" />
                                     </linearGradient>
                                     <linearGradient
                                         id="paint3_linear_1_3949"
@@ -166,8 +166,8 @@ export function RenderCard(props: any) {
                                         y2="88.5787"
                                         gradientUnits="userSpaceOnUse"
                                     >
-                                        <stop stop-color="#0C4B92" />
-                                        <stop offset="1" stop-color="#0395DE" />
+                                        <stop stopColor="#0C4B92" />
+                                        <stop offset="1" stopColor="#0395DE" />
                                     </linearGradient>
                                 </defs>
                             </svg>
