@@ -35,64 +35,37 @@ const TableBetV2 = () => {
         >
             <BetDragonWild
                 bet={DragonTigerBHelper.betsTop['dragon-wild']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsTop['dragon-wild'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
+                placeBetHandler={placeBetHandler}
             />
 
             <BetTigerWild
                 bet={DragonTigerBHelper.betsTop['tiger-wild']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsTop['tiger-wild'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
+                placeBetHandler={placeBetHandler}
             />
             <BetDragon
                 bet={DragonTigerBHelper.betsMid['dragon']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsMid['dragon'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
+                placeBetHandler={placeBetHandler}
             />
-            <BetTiger
-                bet={DragonTigerBHelper.betsMid['tiger']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsMid['tiger'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
-            />
+            <BetTiger bet={DragonTigerBHelper.betsMid['tiger']} placeBetHandler={placeBetHandler} />
             <BetDragonPair
                 bet={DragonTigerBHelper.betsBottom['dragon-pair']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsBottom['dragon-pair'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
+                placeBetHandler={placeBetHandler}
             />
 
             <BetTigerPair
                 bet={DragonTigerBHelper.betsBottom['tiger-pair']}
-                onClick={() => {
-                    const bet = DragonTigerBHelper.betsBottom['tiger-pair'];
-                    placeBetHandler(bet.button, bet.group);
-                }}
+                placeBetHandler={placeBetHandler}
             />
 
             <div className={styles['center']}>
                 <BetSuperWild
                     bet={DragonTigerBHelper.betsCenter['superwild']}
-                    onClick={() => {
-                        const bet = DragonTigerBHelper.betsCenter['superwild'];
-                        placeBetHandler(bet.button, bet.group);
-                    }}
+                    placeBetHandler={placeBetHandler}
                 />
 
                 <BetTie
                     bet={DragonTigerBHelper.betsCenter['tie']}
-                    onClick={() => {
-                        const bet = DragonTigerBHelper.betsCenter['tie'];
-                        placeBetHandler(bet.button, bet.group);
-                    }}
+                    placeBetHandler={placeBetHandler}
                 />
 
                 <div className={`${styles['slot-card']}`} style={{}}>

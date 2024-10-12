@@ -10,38 +10,39 @@ export enum TypeGroup {
 }
 
 export class DragonTigerBHelper {
-    
     static betsTop = {
-        'dragon-wild': { button: "dragonwild", group: "wild" },
-        'tiger-wild': { button: "tigerwild", group: "wild" }
+        'dragon-wild': { button: 'dragonwild', group: 'wild' },
+        'tiger-wild': { button: 'tigerwild', group: 'wild' },
     };
     static betsMid = {
-        'dragon': { button: "dragon", group: "dragon" },
-        'tiger': { button: "tiger", group: "tiger" }
-        
+        dragon: { button: 'dragon', group: 'dragon' },
+        tiger: { button: 'tiger', group: 'tiger' },
     };
     static betsBottom = {
-        'dragon-pair': { button: "dragonpair", group: "pair" },
-        'tiger-pair': { button: "tigerpair", group: "pair" }
+        'dragon-pair': { button: 'dragonpair', group: 'pair' },
+        'tiger-pair': { button: 'tigerpair', group: 'pair' },
     };
 
     static betsCenter = {
-        "superwild": { button: "superwild", group: "superwild" },
-        "tie": { button: "tie", group: "tie" }
+        superwild: { button: 'superwild', group: 'superwild' },
+        tie: { button: 'tie', group: 'tie' },
     };
 
-    static bets:  Record<string, Bet> = {
+    static bets: Record<string, Bet> = {
         ...this.betsTop,
         ...this.betsMid,
         ...this.betsBottom,
-        ...this.betsCenter
-    }
+        ...this.betsCenter,
+    };
 
-    static payoutGroup: { [group: Bet['group']]: { normal: string; hot?: string; cold?: string } } =
-        {
-            // [TypeGroup.Number1]: { normal: '4:1', cold: '2:1', hot: '7:1' },
-            // [TypeGroup.Number2]: { normal: '1.5:1' },
-            // [TypeGroup.Number4]: { normal: '0.25:1' },
-            // [TypeGroup.Number50]: { normal: '0.95:1', cold: '0.5:1', hot: '1.5:1' },
-        };
+    static payoutGroup: Record<string, number> = {
+        'dragon-dragon': 1,
+        'tiger-tiger': 1,
+        'tie-tie': 11,
+        'dragonwild-wild': 24,
+        'tigerwild-wild': 24,
+        'superwild-superwild': 127,
+        'dragonpair-pair': 11,
+        'tigerpair-pair': 11,
+    };
 }

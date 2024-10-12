@@ -4,10 +4,11 @@ import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
+import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import SvgTie from '../../SVG/SvgTie';
 import styles from './../styles.module.scss';
 
-const BetTie = ({ bet, onClick }: BetButtonIProps) => {
+const BetTie = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const { chip } = useGetChipBet(bet);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
@@ -19,13 +20,15 @@ const BetTie = ({ bet, onClick }: BetButtonIProps) => {
 
     return (
         <div
-            onClick={onClick}
             className={`${styles['tie']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <SvgTie />
             <div className={styles['content']}>
                 <div className={styles['bet-name']}>TIE</div>
-                <div className={styles['bet-payout']}>25:1</div>
+                <div className={styles['bet-payout']}>
+                    {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
+                </div>
             </div>
 
             <div

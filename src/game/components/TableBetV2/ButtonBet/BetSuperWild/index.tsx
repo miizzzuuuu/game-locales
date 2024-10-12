@@ -4,10 +4,11 @@ import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
+import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import SvgSuperWild from '../../SVG/SvgSuperWild';
 import styles from './../styles.module.scss';
 
-const BetSuperWild = ({ bet, onClick }: BetButtonIProps) => {
+const BetSuperWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip } = useGetChipBet(bet);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -25,13 +26,15 @@ const BetSuperWild = ({ bet, onClick }: BetButtonIProps) => {
 
     return (
         <div
-            onClick={onClick}
             className={`${styles['super-wild']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <SvgSuperWild />
             <div className={`${styles['content']}`}>
                 <div className={`${styles['bet-name']}`}>SUPER WILD</div>
-                <div className={`${styles['bet-payout']}`}>25:1</div>
+                <div className={`${styles['bet-payout']}`}>
+                    {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
+                </div>
             </div>
             <div
                 className={styles['slot-chip']}

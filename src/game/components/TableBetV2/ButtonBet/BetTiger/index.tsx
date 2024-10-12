@@ -4,11 +4,12 @@ import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
+import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import { RenderCard } from '../../RenderCard/RenderCard';
 import SvgTiger from '../../SVG/SvgTiger';
 import styles from './../styles.module.scss';
 
-const BetTiger = ({ bet, onClick }: BetButtonIProps) => {
+const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const { chip } = useGetChipBet(bet);
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
@@ -20,8 +21,8 @@ const BetTiger = ({ bet, onClick }: BetButtonIProps) => {
 
     return (
         <div
-            onClick={onClick}
             className={`${styles['middle']} ${styles['right']} ${styles['tiger']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={styles['shadow-center']}></div>
             <div className={styles['tiger-back']}>
@@ -30,7 +31,9 @@ const BetTiger = ({ bet, onClick }: BetButtonIProps) => {
 
             <div className={styles['content']}>
                 <div className={styles['bet-name']}>TIGER</div>
-                <div className={styles['bet-payout']}>25:1</div>
+                <div className={styles['bet-payout']}>
+                    {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
+                </div>
             </div>
 
             <div

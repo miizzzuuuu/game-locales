@@ -4,9 +4,10 @@ import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
+import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import styles from './../styles.module.scss';
 
-const BetDragonPair = ({ bet, onClick }: BetButtonIProps) => {
+const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip } = useGetChipBet(bet);
 
@@ -18,13 +19,15 @@ const BetDragonPair = ({ bet, onClick }: BetButtonIProps) => {
 
     return (
         <div
-            onClick={onClick}
             className={`${styles['bottom']} ${styles['left']} ${styles['dragon-pair']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={styles['shadow-center']}></div>
             <div className={styles['content']}>
                 <div className={styles['bet-name']}>DRAGON PAIR</div>
-                <div className={styles['bet-payout']}>25:1</div>
+                <div className={styles['bet-payout']}>
+                    {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
+                </div>
             </div>
 
             <div
