@@ -6,7 +6,6 @@ import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetV2 from '../TableBetV2';
 import './../External/components/css/animation.css';
 import './../External/components/css/styles.css';
-import { Panel } from './panel';
 import styles from './styles.module.scss';
 
 const MainArea = () => {
@@ -18,18 +17,17 @@ const MainArea = () => {
     if (isLandscape) {
         return (
             <div className={styles['main-area']}>
-                <Panel className={`container-center-board`}>
-                    <Panel
+                <div className={`container-center-board`}>
+                    <div
                         className={`landscape-top-board ${showPatternUI == true ? 'open' : 'close'}`}
                     >
                         <RoadMap activeColumns={18} isLandscape={true} />
-                    </Panel>
+                    </div>
 
                     <div className={styles['panel-bet']}>
                         <TableBetV2 />
                     </div>
-                    <Panel className="landscape-bottom-board">{/* <BoardInfoFooter /> */}</Panel>
-                </Panel>
+                </div>
             </div>
         );
     }
