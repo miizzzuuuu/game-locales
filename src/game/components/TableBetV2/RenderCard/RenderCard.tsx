@@ -29,8 +29,6 @@ export function RenderCard(props: IProps) {
 
     const displayColor = displayValue[1] == 'd' || displayValue[1] == 'h' ? '#FF0415' : '#121524';
 
-    console.log('props', props);
-
     return (
         <div
             style={{
@@ -42,8 +40,6 @@ export function RenderCard(props: IProps) {
                 transform: `perspective(100rem) translate(${props.position.x}, ${props.position.y})`,
                 marginTop: `${props.marginTop}`,
                 transformOrigin: 'center',
-                // width: DisplayHelper.getOrientation() !== 'landscape' ? '2.4rem' : '24%',
-                // height: DisplayHelper.getOrientation() !== 'landscape' ? '3.1rem' : '31.68%',
                 width: '2.4rem',
                 height: '3.1rem',
             }}
