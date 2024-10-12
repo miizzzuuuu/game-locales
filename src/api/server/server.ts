@@ -196,6 +196,9 @@ export function makeServer({ environment = 'test' } = {}) {
                     show: false,
                 };
             });
+
+            this.passthrough();
+            this.passthrough('https://cdn.lottielab.com/*');
         },
     });
 

@@ -1,33 +1,31 @@
+import Lottie, { ILottie } from '@lottielab/lottie-player/react';
 import { CSSProperties, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
-import Lottie, { LottieRefCurrentProps } from 'lottie-react';
 
 interface IProps {
     isActive: boolean;
-    animationData: unknown;
+    animationSrc: string;
     style?: CSSProperties;
 }
 
-const Graphic = ({ isActive, animationData, style }: IProps) => {
-    const lottieRef = useRef<LottieRefCurrentProps>(null);
+const Graphic = ({ isActive, animationSrc, style }: IProps) => {
+    const lottieRef = useRef<ILottie>(null);
 
     useEffect(() => {
         if (isActive) {
-            lottieRef.current?.play();
+            if (lottieRef.current) {
+                lottieRef.current.play();
+            }
         } else {
-            lottieRef.current?.stop();
+            if (lottieRef.current) {
+                lottieRef.current.stop();
+            }
         }
     }, [isActive]);
 
     return (
         <div className={styles.container}>
-            <Lottie
-                animationData={animationData}
-                loop
-                autoplay={false}
-                lottieRef={lottieRef}
-                style={style}
-            />
+            <Lottie src={animationSrc} loop autoplay style={style} ref={lottieRef} />
         </div>
     );
 };

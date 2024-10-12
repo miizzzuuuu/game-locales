@@ -1,15 +1,17 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
-import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
-
-import SLIDE_3 from '../assets/slide-3.json';
+import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
 
 const keySlide = 'slide-3';
 
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
-    <Graphic isActive={isActive} animationData={SLIDE_3} style={{ width: '28rem' }} />
+    <Graphic
+        isActive={isActive}
+        animationSrc="https://cdn.lottielab.com/l/ADvMgqJwyXB7Q4.json"
+        style={{ width: '28rem' }}
+    />
 );
 
 const Slide3: ModalItem = {
