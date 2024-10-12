@@ -364,9 +364,23 @@ export class BaseV2Roadmap extends React.Component<Props> {
         // @ts-ignore
         const roadmapColumns = nary(this.totalColumns);
         const maxRow = 5;
+
+        const startingHitAreaX: {
+            [index: string]: number
+        } = {
+            "big-eye-road": 14.12 * 1,
+            "small-road": 14.12 * this.totalColumns!,
+            "cockroach-road": 14.12 * 2 * this.totalColumns!
+        }
+        const hitArea = <rect y={5! * 14.12} x={this.totalColumns! * startingHitAreaX[this.props.type]} width={14.12 * this.totalColumns! / 4} height={14.12 * (this.props.full === this.props.type ? 8 : 3)} />
+
+
         // const maxIdxRow = maxRow - 1;
         return nary(maxRow + 1).map((row, rowIdx) => (
             <Fragment key={`brd_${row}-${rowIdx}`}>
+                {
+                    hitArea
+                }
                 {roadmapColumns.map((col, colIdx) => {
                     // @ts-ignore
                     const Element = this.roadmapDisplay[row - 1][
