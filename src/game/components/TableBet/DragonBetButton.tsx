@@ -3,7 +3,7 @@ import stylesPortrait from './table-bet-portrait.module.scss';
 import stylesLandscape from './table-bet-landscape.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import PlacementStat from './Content/PlacementStat';
-import { RenderCard } from './RenderCard/RenderCard';
+
 import { Bet } from '../../../types';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
@@ -12,6 +12,7 @@ import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
 import { getBasePcode } from '../../../common/utils/GameHelper';
+import { RenderCard } from '../TableBetV2/RenderCard/RenderCard';
 
 interface IProps extends PropsWithChildren {
     bet: Bet;

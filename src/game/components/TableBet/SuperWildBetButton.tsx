@@ -10,7 +10,8 @@ import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
 import { getBasePcode } from '../../../common/utils/GameHelper';
-import { RenderCard } from './RenderCard/RenderCard';
+import { RenderCard } from '../TableBetV2/RenderCard/RenderCard';
+
 // import LevelStat from '../MobilePortrait/Content/LevelStat';
 
 interface IProps extends PropsWithChildren {

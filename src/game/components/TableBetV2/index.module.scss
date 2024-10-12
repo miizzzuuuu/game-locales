@@ -20,9 +20,41 @@
 :global(.desktop),
 :global(.mobile-landscape) {
     .table-bet {
+        --perspective: 100rem;
+
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 1;
+        --opacity: 1;
+        --rotate-x: 0;
+
         height: calc(100% - 0.8rem);
         width: 100%;
         max-width: 45rem;
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+
+        transform-origin: bottom;
+        transition-duration: 0.75s;
+        transition-property: transform, opacity;
+    }
+
+    .opened {
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 1;
+        --opacity: 1;
+        --rotate-x: 0;
+    }
+
+    .closed {
+        --translate-x: 0;
+        --translate-y: 1rem;
+        --scale: 0.8;
+        --opacity: 0.6;
+        --rotate-x: 46deg;
     }
 }
 

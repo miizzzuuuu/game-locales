@@ -1,4 +1,3 @@
-import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
 import { RenderSymbol } from './cardsymbol';
 import styles from './styles.module.scss';
 
@@ -40,11 +39,13 @@ export function RenderCard(props: IProps) {
                 opacity: `${props.opacity}`,
                 left: `${props.left}`,
                 right: `${props.right}`,
-                transform: `perspective(1000px) translate(${props.position.x}, ${props.position.y})`,
+                transform: `perspective(100rem) translate(${props.position.x}, ${props.position.y})`,
                 marginTop: `${props.marginTop}`,
                 transformOrigin: 'center',
-                width: DisplayHelper.getOrientation() !== 'landscape' ? '24px' : '24%',
-                height: DisplayHelper.getOrientation() !== 'landscape' ? '31.68px' : '31.68%',
+                // width: DisplayHelper.getOrientation() !== 'landscape' ? '2.4rem' : '24%',
+                // height: DisplayHelper.getOrientation() !== 'landscape' ? '3.1rem' : '31.68%',
+                width: '2.4rem',
+                height: '3.1rem',
             }}
         >
             <div
@@ -61,7 +62,7 @@ export function RenderCard(props: IProps) {
                         position: 'absolute',
                         width: '100%',
                         height: '100%',
-                        transform: `perspective(1000px)`,
+                        transform: `perspective(100rem)`,
                     }}
                 >
                     <div
@@ -70,7 +71,7 @@ export function RenderCard(props: IProps) {
                             position: 'absolute',
                             width: '100%',
                             height: '100%',
-                            transform: `perspective(1000px) rotateZ(${props.rotation.z}) `,
+                            transform: `perspective(100rem) rotateZ(${props.rotation.z}) `,
                         }}
                     >
                         <div
@@ -80,7 +81,7 @@ export function RenderCard(props: IProps) {
                                 width: '100%',
                                 height: 'fit-content',
                                 boxShadow:
-                                    '0px 0px 0.64px 0px rgba(0, 0, 0, 0.4) 0px 0.64px 0.64px 0px rgba(0, 0, 0, 0.2)',
+                                    '0 0 0.064rem 0 rgba(0, 0, 0, 0.4) 0 0.064rem 0.064rem 0 rgba(0, 0, 0, 0.2)',
                             }}
                         >
                             <svg
@@ -218,11 +219,11 @@ export function RenderCard(props: IProps) {
                             <p
                                 style={{
                                     position: 'absolute',
-                                    top: '0px',
-                                    left: '0px',
-                                    margin: '-2px 0px 0px 2px',
+                                    top: '0',
+                                    left: '0',
+                                    margin: '-0.2rem 0 0 0.2rem',
                                     fontFamily: 'Manrope',
-                                    fontSize: '14.4px',
+                                    fontSize: '1.44rem',
                                     fontStyle: 'normal',
                                     fontWeight: '700',
                                     lineHeight: 'normal',

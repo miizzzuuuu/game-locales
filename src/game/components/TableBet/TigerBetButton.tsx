@@ -5,7 +5,6 @@ import { useAppSelector } from '../../../store/hooks';
 
 import PlacementStat from './Content/PlacementStat';
 
-import { RenderCard } from './RenderCard/RenderCard';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { Bet } from '../../../types';
@@ -14,6 +13,7 @@ import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
 import { getBasePcode } from '../../../common/utils/GameHelper';
+import { RenderCard } from '../TableBetV2/RenderCard/RenderCard';
 // import { RenderCard } from './RenderCard';
 
 interface IProps extends PropsWithChildren {
