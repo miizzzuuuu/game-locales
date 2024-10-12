@@ -252,14 +252,13 @@ body {
     gap: 2px;
     justify-content: space-between;
     width: 100%;
-    height: 95%;
-    /* aspect-ratio: 25/9; */
-    position: absolute;
+    height: 100%;
+    /* position: absolute;
     left: 50%;
     bottom: -30%;
     transform: translate(-50%, -30%);
     padding-left: 5.5rem;
-    padding-right: 5.5rem;
+    padding-right: 5.5rem; */
 }
 
 .landscape-center-board {
@@ -269,18 +268,17 @@ body {
     gap: 3px;
     justify-content: space-between;
     flex: 3;
-    
 }
 
 .landscape-top-board {
     flex-basis: 1;
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    /* align-items: center; */
+    gap: 0.2rem;
+    align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 11.7rem 1rem;
+    padding-bottom: 0.8rem;
 }
 
 .landscape-bottom-board {
