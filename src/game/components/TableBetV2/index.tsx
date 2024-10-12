@@ -3,7 +3,7 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../utils/DragonTigerBHelper';
-import { RenderCard } from '../TableBet/RenderCard/RenderCard';
+
 import BetDragon from './ButtonBet/BetDragon';
 import BetDragonPair from './ButtonBet/BetDragonPair';
 import BetDragonWild from './ButtonBet/BetDragonWild';
@@ -13,8 +13,9 @@ import BetTiger from './ButtonBet/BetTiger';
 import BetTigerPair from './ButtonBet/BetTigerPair';
 import BetTigerWild from './ButtonBet/BetTigerWild';
 import styles from './index.module.scss';
+import { RenderCard } from './RenderCard/RenderCard';
 
-const TableBet = () => {
+const TableBetV2 = () => {
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet({ betIsOpen });
@@ -137,4 +138,4 @@ const TableBet = () => {
     );
 };
 
-export default TableBet;
+export default TableBetV2;

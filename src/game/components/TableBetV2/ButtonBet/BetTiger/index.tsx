@@ -4,7 +4,7 @@ import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
-import { RenderCard } from '../../../TableBet/RenderCard/RenderCard';
+import { RenderCard } from '../../RenderCard/RenderCard';
 import SvgTiger from '../../SVG/SvgTiger';
 import styles from './../styles.module.scss';
 

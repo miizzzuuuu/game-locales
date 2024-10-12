@@ -3,7 +3,7 @@ import { useAppSelector } from '../../../store/hooks';
 import { selectGameNewSet } from '../../../store/slice/gameSlice';
 import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
-import TableBet from '../TableBetV2';
+import TableBetV2 from '../TableBetV2';
 import './../External/components/css/animation.css';
 import './../External/components/css/styles.css';
 import { Panel } from './panel';
@@ -26,7 +26,7 @@ const MainArea = () => {
                     </Panel>
 
                     <div className={styles['panel-bet']}>
-                        <TableBet />
+                        <TableBetV2 />
                     </div>
                     <Panel className="landscape-bottom-board">{/* <BoardInfoFooter /> */}</Panel>
                 </Panel>
@@ -37,7 +37,7 @@ const MainArea = () => {
     return (
         <div className={styles['main-area']}>
             <div className={styles['panel-bet']}>
-                <TableBet />
+                <TableBetV2 />
             </div>
 
             <div style={{ height: '100%', maxHeight: '17rem', opacity: gameNewSet ? '0.6' : '1' }}>

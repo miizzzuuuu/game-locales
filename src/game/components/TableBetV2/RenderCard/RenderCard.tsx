@@ -1,15 +1,36 @@
 import { DisplayHelper } from '../../../../common/utils/DisplayHelper';
-import { RenderSymbol } from '../cardsymbol';
-import { StringUtility } from './StringUtility';
-// import { RenderSymbol } from "./cardsymbol";
-import './style.css';
+import { RenderSymbol } from './cardsymbol';
+import styles from './styles.module.scss';
 
-export function RenderCard(props: any) {
-    let displayValue = StringUtility.splitCharStringToArray(props.value);
+export function splitCharStringToArray(input: string): string[] {
+    return input.split('');
+}
+
+interface IProps {
+    top: string;
+    right: string;
+    left: string;
+    position: { x: string; y: string };
+    rotation: { z: string };
+    opacity: number;
+    value: string;
+    appear: boolean;
+    disappear: boolean;
+    submit?: boolean;
+    notAbsolute?: boolean;
+    marginTop?: string;
+}
+
+export function RenderCard(props: IProps) {
+    let displayValue = splitCharStringToArray(props.value);
+
     if (displayValue.length < 2) {
         displayValue = ['', ''];
     }
+
     const displayColor = displayValue[1] == 'd' || displayValue[1] == 'h' ? '#FF0415' : '#121524';
+
+    console.log('props', props);
 
     return (
         <div
@@ -27,7 +48,7 @@ export function RenderCard(props: any) {
             }}
         >
             <div
-                className={`card-slot ${!props.disappear && props.appear == true ? 'appear' : ''}  ${props.disappear == true ? 'disappear' : ''}`}
+                className={`${styles['card-slot']}${!props.disappear && props.appear == true ? ` ${styles.appear}` : ''}${props.disappear == true ? ` ${styles.disappear}` : ''}`}
                 style={{
                     position: 'absolute',
                     width: '100%',
@@ -35,7 +56,7 @@ export function RenderCard(props: any) {
                 }}
             >
                 <div
-                    className={`card-core ${props.submit == true ? 'flipup' : ''}`}
+                    className={`${styles['card-core']}${props.submit == true ? ` ${styles.flipup}` : ''}`}
                     style={{
                         position: 'absolute',
                         width: '100%',
@@ -44,7 +65,7 @@ export function RenderCard(props: any) {
                     }}
                 >
                     <div
-                        className={`card-core-detail`}
+                        className={styles['card-core-detail']}
                         style={{
                             position: 'absolute',
                             width: '100%',
@@ -53,7 +74,7 @@ export function RenderCard(props: any) {
                         }}
                     >
                         <div
-                            className="card-cover"
+                            className={styles['card-cover']}
                             style={{
                                 position: 'absolute',
                                 width: '100%',
@@ -191,9 +212,9 @@ export function RenderCard(props: any) {
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <rect width="100" height="132" rx="14" fill="white" />
-                                {/* @ts-ignore */}
                                 <RenderSymbol symbol={displayValue[1]} />
                             </svg>
+
                             <p
                                 style={{
                                     position: 'absolute',
