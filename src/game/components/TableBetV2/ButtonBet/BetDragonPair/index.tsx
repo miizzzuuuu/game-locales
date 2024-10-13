@@ -14,7 +14,7 @@ const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'dragon';
+    const isLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.wild_value);
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
     return (

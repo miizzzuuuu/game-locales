@@ -14,7 +14,7 @@ const BetTigerWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const isLose =
-        scanNumber && scanNumber.submit && !(scanNumber.tiger_value == scanNumber.wild_value);
+        scanNumber && scanNumber.submit && !(scanNumber.tiger_value == scanNumber.wild_value && scanNumber.wild_value > scanNumber.dragon_value);
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
     return (
