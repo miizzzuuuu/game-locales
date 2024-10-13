@@ -8,7 +8,7 @@ $transformOpen: translate(0%, 0%) scale($scaleOpen);
 $transformClose: translate(0%, 0%) scale(1);
 $transformCloseZoom: translate(-50%, calc(-50%)) scale(0.6);
 
-$childBetM23Width : calc(98%/2);
+$childBetM23Width: calc(98% / 2);
 
 .tableBet {
     // transform: translate(0, 0%);
@@ -16,7 +16,6 @@ $childBetM23Width : calc(98%/2);
 
     height: calc(100% - 1rem);
     // width: calc(100% - 0.5rem);
-
 
     border-radius: 1rem;
     // backdrop-filter: blur(0.6rem);
@@ -56,7 +55,6 @@ $childBetM23Width : calc(98%/2);
 }
 
 .container {
-
     width: 94%;
     // margin-left: 5%;
     display: flex;
@@ -73,8 +71,6 @@ $childBetM23Width : calc(98%/2);
     }
 }
 
-
-
 .buttonMore {
     float: right;
     margin: 1.5vw 0.5vw;
@@ -82,7 +78,7 @@ $childBetM23Width : calc(98%/2);
     width: 16vw;
     height: 5vw;
 
-    &>svg {
+    & > svg {
         position: absolute;
         width: 16vw;
         height: 5vw;
@@ -107,7 +103,6 @@ $childBetM23Width : calc(98%/2);
         // height: 5vw;
         margin-top: -1.5vw;
         // margin-right: 1.5vw;
-
     }
 
     // padding-left: 2.5vw;
@@ -156,7 +151,6 @@ $childBetM23Width : calc(98%/2);
     margin-inline: 5%;
     margin-top: 3%;
     transform: translate(-50%, -50%) scale(0.7);
-
 }
 
 .mobile-portrait {
@@ -176,42 +170,35 @@ $childBetM23Width : calc(98%/2);
     }
 }
 
-
-
-
 .domain {
-    width: calc(99.5%/3);
-    margin: 0 calc(0.5%/3);
-
+    width: calc(99.5% / 3);
+    margin: 0 calc(0.5% / 3);
 }
 
-
 .domainTie {
-    width: calc(99.5%/3);
-    margin: 0 calc(0.5%/3);
+    width: calc(99.5% / 3);
+    margin: 0 calc(0.5% / 3);
     text-align: center;
     // margin-top: -4%;
     margin-top: -4.5%;
 }
 
 .domainContent {
-    width: calc(99.5%/3);
-    margin: 0 calc(0.5%/3);
+    width: calc(99.5% / 3);
+    margin: 0 calc(0.5% / 3);
     position: absolute;
     padding-inline: 1rem 1rem;
     padding-block: 0.5rem;
     height: 9rem;
 
-    &>div:nth-child(1) {
+    & > div:nth-child(1) {
         margin-top: 0 !important;
     }
 }
 
 .domainContent:nth-child(2) {
     padding-right: 0rem;
-
 }
-
 
 .domainLabel {
     display: flex;
@@ -232,7 +219,6 @@ $childBetM23Width : calc(98%/2);
         padding-right: 1rem;
         padding-left: 1rem;
         opacity: 1;
-
     }
 
     span {
@@ -252,19 +238,17 @@ $childBetM23Width : calc(98%/2);
         padding-right: 1rem;
         padding-left: 1rem;
         opacity: 1;
-
     }
 
     span {
         opacity: 0.75;
         text-transform: uppercase;
     }
-
 }
 
 .domainContentTie {
-    width: calc(99.5%/3);
-    margin: 0 calc(0.5%/3);
+    width: calc(99.5% / 3);
+    margin: 0 calc(0.5% / 3);
     position: absolute;
     padding-inline: 0.5rem;
     padding-block: 0.5rem;
@@ -275,12 +259,9 @@ $childBetM23Width : calc(98%/2);
     z-index: 3;
     height: 16vw;
     padding-left: 5vw;
-
-
 }
 
 .cardContainerDragon {
-
     position: absolute;
     top: -25px;
     right: 25px;
@@ -308,8 +289,6 @@ $childBetM23Width : calc(98%/2);
     // height: 100%;
 }
 
-
-
 .childContainer,
 .childContainerBottom {
     width: 100%;
@@ -329,24 +308,19 @@ $childBetM23Width : calc(98%/2);
 .childContainer {
     margin-top: -1.5rem;
     // width: 103%;
-
 }
-
 
 .child {
     width: $childBetM23Width;
-    margin: 0 calc(0.5%/4);
+    margin: 0 calc(0.5% / 4);
     height: fit-content;
 
-    &>svg {
+    & > svg {
         z-index: 0;
 
         // position: absolute;
         transform: scaleY(-1);
-
     }
-
-
 }
 
 .child:nth-child(even) {
@@ -357,9 +331,7 @@ $childBetM23Width : calc(98%/2);
         padding-right: 0rem;
 
         span {
-
-
-            &>div {
+            & > div {
                 margin-left: 3% !important;
             }
         }
@@ -384,14 +356,13 @@ $childBetM23Width : calc(98%/2);
     letter-spacing: 0.09px;
     text-transform: uppercase;
 
-    &>span.text_lg {
+    & > span.text_lg {
         opacity: 1;
     }
 
-    &>span {
-        &>span{
+    & > span {
+        & > span {
             opacity: 0.75;
-
         }
 
         padding-left: 0.5rem;
@@ -399,11 +370,7 @@ $childBetM23Width : calc(98%/2);
         padding-top: 1rem;
         text-transform: uppercase;
     }
-
-
-
 }
-
 
 @keyframes chipLight {
     0% {
@@ -461,8 +428,6 @@ $childBetM23Width : calc(98%/2);
     }
 }
 
-
-
 @keyframes closeTable {
     from {
         transform: $transformOpen;
@@ -493,8 +458,6 @@ $childBetM23Width : calc(98%/2);
     }
 }
 
-
-
 .card-slot {
     animation: cardpush 0.65s linear forwards;
 }
@@ -515,10 +478,12 @@ $childBetM23Width : calc(98%/2);
 
     65% {
         transform: translate(0px, 120%);
+        opacity: 1;
     }
 
     100% {
         transform: translate(0px, 120%);
+        opacity: 1;
     }
 }
 

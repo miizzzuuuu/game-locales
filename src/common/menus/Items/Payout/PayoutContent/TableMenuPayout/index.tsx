@@ -6,19 +6,22 @@ import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 import { PayoutData } from '../../../../../../types';
 
 import styles from './styles.module.scss';
-import { GameHelper } from '../../../../../utils/GameHelper';
+import { getBasePcode } from '../../../../../utils/GameHelper';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
     data: PayoutData[];
 }
 
 const TableMenuPayout = ({ data }: IProps) => {
+    const { i18n } = useTranslation();
+
     const currency = useAppSelector(selectCurrency);
 
-    const basePcode = GameHelper.getBasePcode();
+    const basePcode = getBasePcode();
 
-    const formatPayout = (value: number) => {
-        return StringHelper.formatNumber(value);
+    const formatNumber = (value: number) => {
+        return StringHelper.formatNumber(value, i18n.language);
     };
 
     return (
@@ -49,14 +52,14 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     />
                                 </td>
                                 <td className="text-center text-cyan text-nowrap">
-                                    {StringHelper.formatCurrency(item.min, currency)} -{' '}
-                                    {StringHelper.formatNumber(item.max)}
+                                    {StringHelper.formatCurrency(item.min, currency, i18n.language)}{' '}
+                                    - {formatNumber(item.max)}
                                 </td>
                                 <td
                                     className={`${'text-center'}${item.payout ? '' : ' ' + styles.shading}`}
                                 >
                                     {typeof item.payout === 'number'
-                                        ? `${formatPayout(item.payout)}:1`
+                                        ? `${formatNumber(item.payout)}:1`
                                         : item.payout}
                                 </td>
                             </tr>
@@ -73,7 +76,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                         <td className="text-center text-cyan"></td>
                                         <td className="text-center">
                                             {typeof child.payout === 'number'
-                                                ? `${formatPayout(child.payout)}:1`
+                                                ? `${formatNumber(child.payout)}:1`
                                                 : child.payout}
                                         </td>
                                     </tr>

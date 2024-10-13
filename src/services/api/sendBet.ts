@@ -1,9 +1,5 @@
 import APIManager from '../../common/utils/APIManager';
-import {
-    confirmBetFullfiled,
-    confirmBetPending,
-    confirmBetRejected,
-} from '../../store/slice/betAddSlice';
+import { confirmBetFullfiled, confirmBetPending, confirmBetRejected } from '../../store/slice/bets';
 import { AppDispatch } from '../../store/store';
 import { SendBetParam, SendBetResponse } from '../../types';
 
@@ -11,7 +7,7 @@ export const postSendBet = async (params: SendBetParam): Promise<SendBetResponse
     const response = await APIManager.post<SendBetResponse>('/games/send/send', params);
 
     if ('status' in response.data && 'message' in response.data) {
-        return response.data as SendBetResponse;
+        return response.data;
     } else {
         throw new Error("Invalid response format: 'status' or 'message' property is missing");
     }

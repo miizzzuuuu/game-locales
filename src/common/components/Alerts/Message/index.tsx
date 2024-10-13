@@ -32,7 +32,7 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
     }, [value]);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('message-fadeout') >= 0) {
+        if (e.animationName === 'fadeOut') {
             if (prevMessage.current === value) {
                 handleClose();
                 prevMessage.current = undefined;

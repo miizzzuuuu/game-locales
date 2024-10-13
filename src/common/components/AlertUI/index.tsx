@@ -1,9 +1,12 @@
-import styles from './styles.module.scss';
-import MessageYouWin from '../Alerts/MessageYouWin';
+import Result from '../../../game/components/Result';
+import { Features } from '../../utils/Features';
 import MessageGeneral from '../Alerts/MessageGeneral';
 import MessageSubmitBet from '../Alerts/MessageSubmitBet';
-import Result from '../../../game/components/Result';
+import MessageYouWin from '../Alerts/MessageYouWin';
 import NewSet from '../Alerts/NewSet';
+import styles from './styles.module.scss';
+
+const NewSetComponent = Features.SHUFFLE_THE_CARDS ? <NewSet /> : null;
 
 const AlertUI = () => {
     return (
@@ -12,7 +15,8 @@ const AlertUI = () => {
             <MessageSubmitBet />
             <Result />
             <MessageYouWin />
-            <NewSet />
+
+            {NewSetComponent}
         </div>
     );
 };

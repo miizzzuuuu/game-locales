@@ -1,11 +1,10 @@
-import styles from './styles.module.scss';
-
-import Panel from '../../Panel';
-import Content from './Content';
-import LabelTranslate from '../../../components/LabelTranslate';
-import { MenuPageProps } from '../../Menu';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { selectOpenMenuHistory, toggleMenuHistory } from '../../../../store/slice/menuSlice';
+import LabelTranslate from '../../../components/LabelTranslate';
+import { MenuPageProps } from '../../Menu';
+import Panel from '../../Panel';
+import Content from './Content';
+import styles from './styles.module.scss';
 
 const Transactions = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();

@@ -1,6 +1,6 @@
-import { Bet } from "../../../../types";
+import { Bet } from '../../../../types';
 
 export interface BetButtonIProps {
     bet: Bet;
-    onClick?: () => void;
+    placeBetHandler: (button: string, group: string) => void;
 }

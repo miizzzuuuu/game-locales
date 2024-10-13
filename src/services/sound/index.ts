@@ -11,6 +11,7 @@ import SELECT_CHIP_SFX from '../../assets/audio/sfx/select-chip.mp3';
 
 export class Sound {
     private static _enablePlay = false;
+    private static _isFocus = false;
 
     private static _volumeMusic = 0.15;
     private static _volumeSound = 1;
@@ -29,7 +30,8 @@ export class Sound {
     static selectChipAudio = new Audio(SELECT_CHIP_SFX);
 
     static playMusic(): void {
-        if (!this._enableSound) {
+        if (!this._enableSound || !this._enablePlay || !this._isFocus) {
+            this.stopMusic();
             return;
         }
 
@@ -41,7 +43,7 @@ export class Sound {
             this.bgMusicAudio.loop = true;
             this.bgMusicAudio.volume = this._volumeMusic;
 
-            this.bgMusicAudio.play();
+            void this.bgMusicAudio.play();
         } catch (error) {
             console.warn(error);
         }
@@ -102,7 +104,7 @@ export class Sound {
                 audio.loop = loop;
             }
 
-            audio.play();
+            void audio.play();
         } catch (error) {
             console.warn(error);
         }
@@ -119,10 +121,17 @@ export class Sound {
 
     static set enablePlay(value: boolean) {
         this._enablePlay = value;
+        this.playMusic();
+    }
+
+    static set isFocus(value: boolean) {
+        this._isFocus = value;
+        this.playMusic();
     }
 
     static set enableSound(value: boolean) {
         this._enableSound = value;
+        this.playMusic();
     }
 
     static set volumeMusic(value: number) {

@@ -1,5 +1,5 @@
 import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
-import { GameHelper } from '../../../../../common/utils/GameHelper';
+import { getPcode } from '../../../../../common/utils/GameHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { checkLastIdx } from '../base/BaccaratRoadmaps';
 import { BaseV2Roadmap, ResultHaveResultString } from '../base/V2Roadmap';
@@ -88,7 +88,7 @@ export default class M22 extends BaseV2Roadmap {
                         >
                             B
                         </text>
-                        {GameHelper.pcode == 'm22' ? (
+                        {getPcode() == 'm22' ? (
                             <>
                                 {bankerPair && (
                                     <circle
@@ -153,7 +153,7 @@ export default class M22 extends BaseV2Roadmap {
                         >
                             D
                         </text>
-                        {GameHelper.pcode == 'm22' ? (
+                        {getPcode() == 'm22' ? (
                             <>
                                 {bankerPair && (
                                     <circle
@@ -220,7 +220,7 @@ export default class M22 extends BaseV2Roadmap {
                             T
                         </text>
 
-                        {GameHelper.pcode == 'm22' ? (
+                        {getPcode() == 'm22' ? (
                             <>
                                 {bankerPair && (
                                     <circle
@@ -324,7 +324,7 @@ export default class M22 extends BaseV2Roadmap {
                     if (
                         this.bigRoadSequence!.length &&
                         Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) >=
-                        (this.props.totalColumns || 24)
+                            (this.props.totalColumns || 24)
                     )
                         this.firstDisplayedCol =
                             Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) -
@@ -836,7 +836,7 @@ export default class M22 extends BaseV2Roadmap {
                 this.currentRow = 0;
                 this.currentCol++;
 
-                for (; this.currentCol < this.roadmapTypes![0].length;) {
+                for (; this.currentCol < this.roadmapTypes![0].length; ) {
                     //Evaluate the next column
                     if (this.roadmapTypes![0][this.currentCol]) {
                         //Count filled cells
@@ -871,10 +871,10 @@ export default class M22 extends BaseV2Roadmap {
                                 //Checks adjacent cells
                                 if (
                                     this.roadmapTypes![this.currentRow][
-                                    this.currentCol - startingCol!
+                                        this.currentCol - startingCol!
                                     ] === //1
                                     this.roadmapTypes![this.currentRow - 1][
-                                    this.currentCol - startingCol!
+                                        this.currentCol - startingCol!
                                     ]
                                 )
                                     // @ts-ignore

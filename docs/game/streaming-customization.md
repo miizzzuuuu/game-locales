@@ -34,6 +34,12 @@ Update the background color for streaming to match the design in Figma.
 
 ### Landscape Mode
 
+-   **Background**
+
+    ```css
+    --streaming-background: #1c1303;
+    ```
+
 -   **Left Side:**
 
     ```css
@@ -78,4 +84,11 @@ example:
 
 ```css
 --height-overlay-streaming-portrait: 5.3rem;
+```
+
+## Custom Height and Width Overlay Streaming Landscape
+
+```css
+--width-overlay-streaming-landscape: 12rem;
+--height-overlay-streaming-landscape: 10rem;
 ```

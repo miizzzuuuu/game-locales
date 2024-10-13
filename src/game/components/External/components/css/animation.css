@@ -184,7 +184,7 @@
 
 @keyframes cardpush {
     0% {
-        transform: translate(0px, 0px);
+        transform: translate(0);
         opacity: 0;
     }
 
@@ -193,17 +193,19 @@
     }
 
     65% {
-        transform: translate(0px, 120%);
+        transform: translateY(120%);
+        opacity: 1;
     }
 
-    100% {
-        transform: translate(0px, 120%);
+    to {
+        transform: translateY(120%);
+        opacity: 1;
     }
 }
 
 @keyframes cardpull {
     0% {
-        transform: translate(0px, 120%);
+        transform: translateY(120%);
         opacity: 1;
     }
 
@@ -213,12 +215,12 @@
 
     65% {
         opacity: 0;
-        transform: translate(0px, 0px);
+        transform: translate(0);
     }
 
-    100% {
+    to {
         opacity: 0;
-        transform: translate(0px, 0px);
+        transform: translate(0);
     }
 }
 

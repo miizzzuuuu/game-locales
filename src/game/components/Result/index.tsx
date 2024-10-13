@@ -8,6 +8,7 @@ import {
     selectResultNumber,
     selectResultStatus,
 } from '../../../store/slice/resultSlice';
+import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 
 const Result = () => {
     const resultRef = useRef<HTMLDivElement>(null);
@@ -19,11 +20,11 @@ const Result = () => {
     const resultNumber = useAppSelector(selectResultNumber);
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (e.animationName.indexOf('result-fadein') >= 0) {
+        if (e.animationName === 'fadeIn') {
             dispatch(doneResult());
         }
 
-        if (e.animationName.indexOf('result-fadeout') >= 0) {
+        if (e.animationName === 'fadeOut') {
             dispatch(resetResult());
         }
     };
@@ -34,7 +35,7 @@ const Result = () => {
                 if (resultRef.current) {
                     resultRef.current.classList.add(styles.disapear);
                 }
-            }, 4000);
+            }, WIN_NOTIFICATION_DURATION);
         }
 
         return () => {
@@ -51,7 +52,7 @@ const Result = () => {
 
     return (
         <div className={styles.result} onAnimationEnd={handleAnimationEnd} ref={resultRef}>
-            <SVG24DResult value={resultNumber} className={styles['image']} />
+            <SVG24DResult value={resultNumber} className={styles.image} />
         </div>
     );
 };

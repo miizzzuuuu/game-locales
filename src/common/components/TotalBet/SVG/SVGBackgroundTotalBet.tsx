@@ -16,8 +16,12 @@ const SVGBackgroundTotalBet = (props: SVGProps<SVGSVGElement>) => (
                 y2={1}
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stopColor="#343650" stopOpacity={0} />
-                <stop offset={1} stopColor="#343650" stopOpacity={0.56} />
+                <stop stopColor="var(--background-total-bet-bg-1, transparent)" stopOpacity={1} />
+                <stop
+                    offset={1}
+                    stopColor="var(--background-total-bet-bg-2, rgba(52, 54, 80, 0.56))"
+                    stopOpacity={1}
+                />
             </linearGradient>
             <linearGradient
                 id="paint1_linear_49_1060"
@@ -27,8 +31,12 @@ const SVGBackgroundTotalBet = (props: SVGProps<SVGSVGElement>) => (
                 y2={1}
                 gradientUnits="userSpaceOnUse"
             >
-                <stop stopColor="#343650" stopOpacity={0.22} />
-                <stop offset={1} stopColor="#343650" stopOpacity={0.7} />
+                <stop stopColor="var(--border-total-bet-bg-1, #343650)" stopOpacity={1} />
+                <stop
+                    offset={1}
+                    stopColor="var(--border-total-bet-bg-2, #343650)"
+                    stopOpacity={1}
+                />
             </linearGradient>
         </defs>
     </svg>

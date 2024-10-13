@@ -4,7 +4,10 @@ import APIManager from '../utils/APIManager';
 import { LoadingHelper } from '../utils/LoadingHelper';
 import { getGameData } from '../../services/api/gameData';
 import { setGame } from '../../store/slice/gameSlice';
-import { fetchResultHistory } from '../../game/hooks/useFetchResults';
+import { fetchResultHistory } from '../../game/services/resultHistory';
+import { fetchLastbets } from '../../services/api/lastbets';
+import { setLastBetData } from '../../store/slice/lastBetsSlice';
+import { addBetSend } from '../../store/slice/bets';
 
 function useFetchGame() {
     const dispatch = useAppDispatch();
@@ -24,17 +27,42 @@ function useFetchGame() {
 
                     const gameSet = data.shoePeriode.split('-')[0];
 
-                    await fetchResultHistory(dispatch, gameSet);
+                    await Promise.all([
+                        await fetchResultHistory(dispatch, gameSet),
+                        fetchLastbets((lastbet) => {
+                            if (lastbet.periode !== data.periode) {
+                                console.log('current bet');
+
+                                dispatch(setLastBetData(lastbet));
+                                return;
+                            }
+
+                            console.log('current bet');
+
+                            let totalBet = 0;
+                            for (const i of lastbet.data) {
+                                totalBet += i.value;
+                            }
+
+                            dispatch(
+                                addBetSend({
+                                    bet: lastbet.data,
+                                    total_bet: totalBet,
+                                    periode: lastbet.periode,
+                                }),
+                            );
+                        }),
+                    ]);
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load settings completed');
+                    LoadingHelper.update(10, 'Load game completed');
                 }
             } catch (error) {
                 APIManager.handleErrorApi(error);
             }
         };
 
-        fetchPlayerSettings();
+        void fetchPlayerSettings();
 
         return () => {
             ignore = true;

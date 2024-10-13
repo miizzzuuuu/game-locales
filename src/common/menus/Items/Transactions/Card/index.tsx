@@ -1,9 +1,8 @@
 import { forwardRef, useState } from 'react';
+import { Pcode, Transaction } from '../../../../../types';
 import CardMaximize from './CardMaximize';
 import CardMinimize from './CardMinimize';
-
 import styles from './styles.module.scss';
-import { Pcode, Transaction } from '../../../../../types';
 
 export interface ITransactionCardProps {
     data: Transaction<Pcode>;

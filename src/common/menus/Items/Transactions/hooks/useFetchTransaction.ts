@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Pcode, Transaction } from '../../../../../types';
 import { getTransaction } from '../../../../../services/api/transaction';
+import { Pcode, Transaction } from '../../../../../types';
 
 interface Params {
     date: 'all' | 'today' | 'before';
 }
 
 export const useFetchTransaction = ({ date }: Params) => {
-    const [transactionData, setTransactionData] = useState<Array<Transaction<Pcode>>>([]);
+    const [transactionData, setTransactionData] = useState<Transaction<Pcode>[]>([]);
     const [totalPage, setTotalPage] = useState(0);
 
     const [page, setPage] = useState(1);

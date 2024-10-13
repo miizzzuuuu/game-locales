@@ -7,7 +7,7 @@ import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import LabelTranslate from '../../../common/components/LabelTranslate';
-import { GameHelper } from '../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../common/utils/GameHelper';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { useAppSelector } from '../../../store/hooks';
 
@@ -35,14 +35,12 @@ const ChildBetButton = ({
     //  rounded, startColor, endColor, borderColor
 }: IProps) => {
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
-
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
-
-    const { chip, color } = useGetChipBet(bet);
-    const { placeBetHandler: handleClick } = usePlaceBet();
+    const { chip } = useGetChipBet(bet);
     const betIsOpen = useAppSelector(selectBetIsOpen);
-
     const isWin = !!(!betIsOpen && isSubmit && !isLose);
+
+    const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
 
     return (
         <div
@@ -52,37 +50,30 @@ const ChildBetButton = ({
             className={[styles.child.concat(' '.concat(className || '')), deviceClassName].join(
                 ' ',
             )}
-            onClick={() => handleClick(bet)}
+            onClick={() => handleClick(bet.button, bet.group)}
         >
             {children}
             <div className={[styles.childLabel, styles.betButtonLabel].join(' ')}>
                 <div
                     style={{
-                        position: "absolute",
-                        display: "flex",
-                        top: DisplayHelper.getOrientation()=="landscape"? "1rem" :"2rem",
-                        marginInline: bet.button.includes("tiger") ?"2rem":"1.5rem"
+                        position: 'absolute',
+                        display: 'flex',
+                        top: DisplayHelper.getOrientation() == 'landscape' ? '1rem' : '2rem',
+                        marginInline: bet.button.includes('tiger') ? '2rem' : '1.5rem',
                     }}
                 >
                     <div className={styles['slot-chip']}>
-                        {chip > 0 && <ChipBet value={chip} color={color} />}
+                        {chip > 0 && <ChipBet value={chip} />}
                     </div>
                 </div>
                 <span className={styles.text_lg}>
-                    <LabelTranslate
-                        value={bet.button.toLowerCase()}
-                        keyLang={GameHelper.getBasePcode()}
-                    />
+                    <LabelTranslate value={bet.button.toLowerCase()} keyLang={getBasePcode()} />
                 </span>
                 <span>
-                    <span>
-                        {ratio}
-                    </span>
-
+                    <span>{ratio}</span>
                 </span>
             </div>
             {bgSvg(isWin)}
-
         </div>
     );
 };

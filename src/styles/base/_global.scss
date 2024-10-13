@@ -17,26 +17,38 @@ html {
 }
 
 :not(.no-scrollbar)::-webkit-scrollbar-track {
-    background: #2e2f4b;
+    background-color: #2e2f4b;
 }
 
 :not(.no-scrollbar)::-webkit-scrollbar-thumb {
-    background: #41527e;
+    background-color: #41527e;
 }
 
 :not(.no-scrollbar)::-webkit-scrollbar-thumb:hover {
-    background: #ccc;
+    background-color: #ccc;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
     display: none;
+    width: 0;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
     -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+}
+
+@-moz-document url-prefix() {
+    .no-scrollbar {
+        scrollbar-width: none;
+    }
 }

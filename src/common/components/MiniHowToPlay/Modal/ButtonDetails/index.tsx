@@ -1,4 +1,5 @@
 import Button from '../../../Button';
+import LabelTranslate from '../../../LabelTranslate';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -34,7 +35,7 @@ const ButtonDetails = ({ show, openHTPDetail }: IProps) => {
                     </defs>
                 </svg>
 
-                <span>Cara bermain lengkap</span>
+                <LabelTranslate type="span" className={styles.text} value="complete-how-to-play" />
             </Button>
         </div>
     );

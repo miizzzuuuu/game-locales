@@ -1,0 +1,1421 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-10-02T09:34:46.000Z",
+            "periode": "7822",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "player1": "2,2-3,6",
+                "player2": "2,2-2,5",
+                "player3": "0,1-0,1",
+                "result": "banker",
+                "tanggal": "2024-10-03 14:47:43",
+                "periode": "3",
+                "hitung": "1",
+                "gamekey": "246",
+                "idnomor": 7824,
+                "banker": "3,4-3,5",
+                "valueBanker": "5",
+                "valuePlayer1": "3",
+                "valuePlayer2": "1",
+                "valuePlayer3": "2"
+            },
+            "total_debit": 27000,
+            "total_credit": 0,
+            "total_transaction": -27000
+        },
+        {
+            "tglbel": "2024-10-02T09:34:10.000Z",
+            "periode": "7821",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "player1": "0,6-2,6",
+                "player2": "1,6-1,4",
+                "player3": "2,2-1,6",
+                "result": "player1",
+                "tanggal": "2024-10-03 14:45:48",
+                "periode": "2",
+                "hitung": "1",
+                "gamekey": "246",
+                "idnomor": 7823,
+                "banker": "1,2-4,6",
+                "valueBanker": "3",
+                "valuePlayer1": "4",
+                "valuePlayer2": "2",
+                "valuePlayer3": "1"
+            },
+            "total_debit": 27000,
+            "total_credit": 0,
+            "total_transaction": -27000
+        },
+        {
+            "tglbel": "2024-10-02T09:30:22.000Z",
+            "periode": "7820",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 11.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "player1": "3,3-2,2",
+                "player2": "1,2-0,1",
+                "player3": "2,5-1,4",
+                "result": "player2",
+                "tanggal": "2024-10-02 16:18:48",
+                "periode": "62",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7819,
+                "banker": "5,6-6,6",
+                "valueBanker": "3",
+                "valuePlayer1": "0",
+                "valuePlayer2": "4",
+                "valuePlayer3": "2"
+            },
+            "total_debit": 27000,
+            "total_credit": 94500,
+            "total_transaction": 67500
+        },
+        {
+            "tglbel": "2024-10-02T06:00:20.000Z",
+            "periode": "7806",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "player1": "4,5-2,2",
+                "player2": "2,3-1,2",
+                "player3": "2,4-3,5",
+                "result": "player2",
+                "tanggal": "2024-10-02 16:18:24",
+                "periode": "61",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7818,
+                "banker": "0,1-1,2",
+                "valueBanker": "4",
+                "valuePlayer1": "3",
+                "valuePlayer2": "8",
+                "valuePlayer3": "4"
+            },
+            "total_debit": 27000,
+            "total_credit": 0,
+            "total_transaction": -27000
+        },
+        {
+            "tglbel": "2024-10-02T05:59:05.000Z",
+            "periode": "7805",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 10.5,
+                    "win_amount": 10500,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 6000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 3,
+                    "win_amount": 15000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "player1": "3,4-2,3",
+                "player2": "2,4-1,3",
+                "player3": "1,4-0,3",
+                "result": "player3",
+                "tanggal": "2024-10-02 16:10:57",
+                "periode": "60",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7817,
+                "banker": "0,0-1,1",
+                "valueBanker": "2",
+                "valuePlayer1": "2",
+                "valuePlayer2": "0",
+                "valuePlayer3": "8"
+            },
+            "total_debit": 27000,
+            "total_credit": 94500,
+            "total_transaction": 67500
+        },
+        {
+            "tglbel": "2024-10-02T05:57:33.000Z",
+            "periode": "7804",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 28,
+                    "win_amount": 28000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "player1": "3,3-2,2",
+                "player2": "4,5-2,3",
+                "player3": "2,4-1,2",
+                "result": "player2,player3",
+                "tanggal": "2024-10-02 16:08:02",
+                "periode": "59",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7816,
+                "banker": "0,1-5,6",
+                "valueBanker": "2",
+                "valuePlayer1": "0",
+                "valuePlayer2": "4",
+                "valuePlayer3": "9"
+            },
+            "total_debit": 27000,
+            "total_credit": 91250,
+            "total_transaction": 64250
+        },
+        {
+            "tglbel": "2024-10-02T05:55:58.000Z",
+            "periode": "7803",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 28,
+                    "win_amount": 28000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "player1": "2,3-3,4",
+                "player2": "2,2-4,4",
+                "player3": "1,4-0,3",
+                "result": "player3",
+                "tanggal": "2024-10-02 16:04:54",
+                "periode": "58",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7815,
+                "banker": "2,6-4,5",
+                "valueBanker": "7",
+                "valuePlayer1": "2",
+                "valuePlayer2": "2",
+                "valuePlayer3": "8"
+            },
+            "total_debit": 27000,
+            "total_credit": 91250,
+            "total_transaction": 64250
+        },
+        {
+            "tglbel": "2024-10-02T05:39:16.000Z",
+            "periode": "7802",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "player1": "3,3-3,4",
+                "player2": "4,6-2,5",
+                "player3": "1,4-2,4",
+                "result": "player2",
+                "tanggal": "2024-10-02 15:05:03",
+                "periode": "57",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7814,
+                "banker": "1,2-1,1",
+                "valueBanker": "5",
+                "valuePlayer1": "3",
+                "valuePlayer2": "7",
+                "valuePlayer3": "1"
+            },
+            "total_debit": 27000,
+            "total_credit": 0,
+            "total_transaction": -27000
+        },
+        {
+            "tglbel": "2024-10-02T05:38:20.000Z",
+            "periode": "7801",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player3_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player3_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player2_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player2_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "8",
+                    "type": "player1_8",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "9",
+                    "type": "player1_9",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "player1": "4,4-1,1",
+                "player2": "3,4-0,0",
+                "player3": "1,3-3,6",
+                "result": "player2",
+                "tanggal": "2024-10-02 14:55:29",
+                "periode": "56",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7813,
+                "banker": "1,1-1,2",
+                "valueBanker": "5",
+                "valuePlayer1": "0",
+                "valuePlayer2": "7",
+                "valuePlayer3": "3"
+            },
+            "total_debit": 27000,
+            "total_credit": 0,
+            "total_transaction": -27000
+        },
+        {
+            "tglbel": "2024-10-02T05:36:51.000Z",
+            "periode": "7800",
+            "pcode": "m46",
+            "detail_betting": [
+                {
+                    "tebak": "player3",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player2",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "player1",
+                    "type": "player",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player3_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player2_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7",
+                    "type": "player1_7",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player3",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player2",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "7,8,9",
+                    "type": "sidebet_player1",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "player1": "1,1-2,2",
+                "player2": "2,3-3,4",
+                "player3": "0,1-0,2",
+                "result": "",
+                "tanggal": "2024-10-02 14:53:56",
+                "periode": "55",
+                "hitung": "1",
+                "gamekey": "245",
+                "idnomor": 7812,
+                "banker": "0,3-1,4",
+                "valueBanker": "8",
+                "valuePlayer1": "6",
+                "valuePlayer2": "2",
+                "valuePlayer3": "3"
+            },
+            "total_debit": 21000,
+            "total_credit": 77250,
+            "total_transaction": 56250
+        }
+    ],
+    "pagination": {
+        "total_datas": 34,
+        "current_page": 1,
+        "total_pages": 4
+    }
+}

@@ -28,7 +28,7 @@ function useFetchLastbets() {
             }
         };
 
-        fetchLastbets();
+        void fetchLastbets();
 
         return () => {
             ignore = true;

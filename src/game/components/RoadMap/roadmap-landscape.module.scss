@@ -1,13 +1,15 @@
-
 .container {
     display: flex;
     flex-direction: column;
-    padding-right: 1rem;
+    align-items: center;
+    // padding-right: 1rem;
+    height: 12rem;
+    width: 42.8rem;
 }
 
 .scrolledYRoadmap {
     position: relative;
-    height: 22vh;
+    height: 100%;
     // padding-bottom: 1%;
     width: 100%;
     overflow-x: scroll;
@@ -17,7 +19,6 @@
 
 .scrolledYRoadmap.zoom {
     height: 30vw;
-
 }
 
 .scrolledYRoadmap::-webkit-scrollbar {
@@ -30,7 +31,6 @@
     background: rgba(0, 0, 0, 0);
     opacity: 0;
     display: none;
-
 }
 
 .roadmapContent {
@@ -48,7 +48,7 @@
     transform-origin: top left;
     // margin-left: -14px;
 
-    &>div {
+    & > div {
         display: flex;
         height: 100%;
         width: auto;
@@ -57,12 +57,8 @@
         svg {
             padding-right: 4px;
             // padding-bottom: 8px;
-
         }
     }
-
-
-
 }
 
 .roadmapContent.zoom {
@@ -71,7 +67,6 @@
 }
 
 @keyframes blink {
-
     100%,
     0% {
         opacity: 0;

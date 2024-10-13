@@ -1,56 +1,61 @@
 .modal {
     position: relative;
     width: var(--width-modal-mini-htp);
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 2.4rem 0.8rem 2rem;
     border-radius: 1.6rem;
-    animation: open-modal 0.45s forwards;
 
     display: flex;
     flex-direction: column;
+}
 
-    &.close {
-        animation: close-modal 0.4s forwards;
-    }
+.overlay {
+    position: absolute;
+    inset: 0;
+}
+
+:global :local(.modal) {
+    animation: zoomIn 0.3s both;
+}
+
+:global :local(.modal.close) {
+    animation: zoomOut 0.3s both;
 }
 
 .body {
     flex: 1;
+    overflow: hidden;
 }
 
-.mobile-portrait {
-    --width-modal-mini-htp: 34rem;
-}
+:global(.mobile-portrait) {
+    .modal {
+        --width-modal-mini-htp: 34rem;
 
-.desktop,
-.mobile-landscape {
-    --width-modal-mini-htp: 42rem;
-}
-
-@keyframes open-modal {
-    0% {
-        opacity: 0;
-        scale: 0.5;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
+        // height: 100%;
+        // max-height: 50rem;
     }
 }
 
-@keyframes close-modal {
-    0% {
-        opacity: 1;
-        scale: 1;
-    }
+:global(.desktop),
+:global(.mobile-landscape) {
+    .modal {
+        --width-modal-mini-htp: 42rem;
 
-    100% {
-        opacity: 0;
-        scale: 0.5;
+        height: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+    }
+}
+
+:global(.mobile-landscape) {
+    .modal {
+        height: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+    }
+}
+
+:global(.desktop) {
+    .modal {
+        height: calc(var(--height-game-px) - 2rem);
+        max-height: calc(var(--height-game-px) - 2rem);
     }
 }

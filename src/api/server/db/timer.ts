@@ -20,6 +20,11 @@ export const timers = [
         timer: 30,
     },
     {
+        pcode: 'm19b',
+        time: 'BET CLOSED',
+        timer: 30,
+    },
+    {
         pcode: 'm11',
         time: 'BET CLOSED',
         timer: 25,
@@ -56,6 +61,11 @@ export const timers = [
     },
     {
         pcode: 'p12',
+        time: 'BET CLOSED',
+        timer: 40,
+    },
+    {
+        pcode: 'p12b',
         time: 'BET CLOSED',
         timer: 40,
     },
@@ -175,12 +185,22 @@ export const timers = [
         timer: 20,
     },
     {
+        pcode: 'p7g',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
         pcode: 'm39',
         time: 'BET CLOSED',
         timer: 40,
     },
     {
         pcode: 'm41',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
+        pcode: 'm41b',
         time: 'BET CLOSED',
         timer: 20,
     },
@@ -200,7 +220,22 @@ export const timers = [
         timer: 20,
     },
     {
+        pcode: 'm22f',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
         pcode: 'm23b',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
+        pcode: 'm23c',
+        time: 'BET CLOSED',
+        timer: 20,
+    },
+    {
+        pcode: 'm23d',
         time: 'BET CLOSED',
         timer: 20,
     },
@@ -236,6 +271,11 @@ export const timers = [
     },
     {
         pcode: 'm43',
+        time: '9',
+        timer: 20,
+    },
+    {
+        pcode: 'm46',
         time: '9',
         timer: 20,
     },

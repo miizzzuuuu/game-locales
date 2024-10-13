@@ -22,25 +22,29 @@
     flex-direction: column;
 }
 
-.mobile-portrait {
-    &.menu-content {
+:global(.mobile-portrait) {
+    .menu-content {
         width: 100%;
         max-height: 90%;
         left: 0;
 
         box-shadow: 0 -0.4rem 1.2rem rgba(0, 0, 0, 0.3);
 
-        animation: menu-open-up 0.5s forwards;
+        &:global {
+            animation: slideInUp 0.5s both;
+        }
 
         &.disappear {
-            animation: menu-close-down 0.65s forwards;
+            :global {
+                animation: slideOutDown 0.4s both;
+            }
         }
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.menu-content {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .menu-content {
         height: 100%;
         width: 36rem;
         top: 0;
@@ -50,77 +54,32 @@
 
             box-shadow: 0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
-            animation: menu-open-right 0.4s forwards;
+            &:global {
+                animation: slideInLeft 0.5s both;
+            }
 
             &.disappear {
-                animation: menu-close-left 0.4s forwards;
+                :global {
+                    animation: slideOutLeft 0.4s both;
+                }
             }
         }
 
-        &.layout-2 {
+        &.layout-2,
+        &.layout-3 {
             right: 0;
 
             box-shadow: -0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
-            animation: menu-open-left 0.4s forwards;
+            &:global {
+                animation: slideInRight 0.5s both;
+            }
 
             &.disappear {
-                animation: menu-close-right 0.4s forwards;
+                :global {
+                    animation: slideOutRight 0.4s both;
+                }
             }
         }
-    }
-}
-
-@keyframes menu-open-up {
-    0% {
-        transform: translateY(50rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes menu-close-down {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(100rem);
-    }
-}
-
-@keyframes menu-close-right {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes menu-open-left {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes menu-close-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes menu-open-right {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
     }
 }

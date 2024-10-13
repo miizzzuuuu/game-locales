@@ -1,25 +1,67 @@
-import { CSSProperties, forwardRef, RefObject } from 'react';
+import { Dispatch, SetStateAction, useRef } from 'react';
 import Slide from '../Slide';
 import styles from './styles.module.scss';
 import { ModalProps } from '../Modal';
-import { useDragToScroll } from '../../../hooks/useDragToScroll';
 
-const Slider = forwardRef<HTMLDivElement, ModalProps>(({ data }, sliderRef) => {
-    useDragToScroll({ slider: sliderRef as RefObject<HTMLDivElement> });
+interface IProps extends ModalProps {
+    index: number;
+    setIndex: Dispatch<SetStateAction<number>>;
+}
+
+const Slider = ({ data, index, setIndex }: IProps) => {
+    const startXRef = useRef(0);
+    const isDraggingRef = useRef(false);
+
+    const handleStart = (clientX: number) => {
+        startXRef.current = clientX;
+        isDraggingRef.current = true;
+    };
+
+    const handleMove = (clientX: number) => {
+        if (!isDraggingRef.current) return;
+
+        const diff = clientX - startXRef.current;
+
+        if (diff > 50 && index > 0) {
+            setIndex((prev) => prev - 1);
+            isDraggingRef.current = false;
+        } else if (diff < -50 && index < data.length - 1) {
+            setIndex((prev) => prev + 1);
+            isDraggingRef.current = false;
+        }
+    };
+
+    const handleEnd = () => {
+        isDraggingRef.current = false;
+    };
 
     return (
         <div
-            className={`${styles.slider} no-scrollbar`}
-            style={{ '--column': 3 } as CSSProperties}
-            ref={sliderRef}
+            className={styles.slideshow}
+            onMouseDown={(e) => handleStart(e.clientX)}
+            onMouseMove={(e) => handleMove(e.clientX)}
+            onMouseUp={handleEnd}
+            onMouseLeave={handleEnd}
+            onTouchStart={(e) => handleStart(e.touches[0].clientX)}
+            onTouchMove={(e) => handleMove(e.touches[0].clientX)}
+            onTouchEnd={handleEnd}
         >
-            {data.map((value, idx) => {
-                const { title, graphic, content } = value;
-
-                return <Slide key={idx} title={title} graphic={graphic} content={content} />;
-            })}
+            <div
+                className={styles['slideshow-slider']}
+                style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+            >
+                {data.map(({ title, graphic, content }, idx) => (
+                    <Slide
+                        key={idx}
+                        title={title}
+                        graphic={graphic}
+                        content={content}
+                        index={index}
+                    />
+                ))}
+            </div>
         </div>
     );
-});
+};
 
 export default Slider;

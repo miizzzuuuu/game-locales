@@ -1,6 +1,4 @@
 .timer {
-    --scale: 1;
-
     position: absolute;
 
     width: 5.5rem;
@@ -9,7 +7,15 @@
     overflow: visible;
 }
 
-.timer-text {
+:global :local(.timer) {
+    animation: zoomIn 0.3s both;
+
+    &:local(.disappear) {
+        animation: zoomOut 0.3s both;
+    }
+}
+
+.text {
     position: absolute;
     left: 0;
     top: 0;
@@ -26,91 +32,21 @@
     letter-spacing: -0.1rem;
 }
 
-.mobile-portrait {
-    &.timer {
+:global(.mobile-portrait) {
+    .timer {
         top: var(--timer-portrait-top);
         left: var(--timer-portrait-left);
 
-        transform: translateX(var(--timer-portrait-trans-x))
-            translateY(var(--timer-portrait-trans-y)) scale(var(--scale));
-
-        animation: time-popup 0.35s linear forwards;
-
-        &.disappear {
-            --scale: 0;
-            animation: time-hide 0.35s linear forwards;
-        }
+        translate: var(--timer-portrait-trans-x) var(--timer-portrait-trans-y);
     }
 }
 
-.desktop,
-.mobile-landscape {
-    &.timer {
+:global(.desktop),
+:global(.mobile-landscape) {
+    .timer {
         top: var(--timer-landscape-top);
         left: var(--timer-landscape-left);
 
-        transform: translateX(var(--timer-landscape-trans-x))
-            translateY(var(--timer-landscape-trans-y));
-
-        animation: time-popup-2 0.35s linear forwards;
-
-        &.disappear {
-            animation: time-hide-2 0.35s linear forwards;
-        }
-    }
-}
-
-@keyframes time-popup {
-    0% {
-        transform-origin: center;
-        transform: translateX(var(--timer-portrait-trans-x))
-            translateY(var(--timer-portrait-trans-y)) scale(0);
-    }
-
-    100% {
-        transform-origin: center;
-        transform: translateX(var(--timer-portrait-trans-x))
-            translateY(var(--timer-portrait-trans-y)) scale(1);
-    }
-}
-
-@keyframes time-hide {
-    0% {
-        transform-origin: center;
-        transform: translateX(var(--timer-portrait-trans-x))
-            translateY(var(--timer-portrait-trans-y)) scale(1);
-    }
-
-    100% {
-        transform-origin: center;
-        transform: translateX(var(--timer-portrait-trans-x))
-            translateY(var(--timer-portrait-trans-y)) scale(0);
-    }
-}
-
-@keyframes time-popup-2 {
-    0% {
-        transform-origin: center;
-        transform: scale(0);
-    }
-
-    100% {
-        transform-origin: center;
-        transform: translateX(var(--timer-landscape-trans-x))
-            translateY(var(--timer-landscape-trans-y)) scale(1);
-    }
-}
-
-@keyframes time-hide-2 {
-    0% {
-        transform-origin: center;
-        transform: translateX(var(--timer-landscape-trans-x))
-            translateY(var(--timer-landscape-trans-y)) scale(1);
-    }
-
-    100% {
-        transform-origin: center;
-        transform: translateX(var(--timer-landscape-trans-x))
-            translateY(var(--timer-landscape-trans-y)) scale(0);
+        translate: var(--timer-landscape-trans-x) var(--timer-landscape-trans-y);
     }
 }

@@ -7,7 +7,7 @@ import { setPlayerData } from '../../store/slice/playerSlice';
 import { setChipBase } from '../../store/slice/chipSlice';
 import { getMiniHowToPlay } from '../../services/api/miniHowToPlay';
 import { setShowMiniHowToPlay } from '../../store/slice/gameStateSlice';
-import { GameHelper } from '../utils/GameHelper';
+import { getMiniHowToPlayLocalStorage } from '../utils/GameHelper';
 
 function useFetchPlayer() {
     const dispatch = useAppDispatch();
@@ -27,7 +27,7 @@ function useFetchPlayer() {
 
                     // fetch mini how to play
                     const dataMiniHTP = await getMiniHowToPlay();
-                    const showMiniHowToPlayLS = GameHelper.getMiniHowToPlayLocalStorage();
+                    const showMiniHowToPlayLS = getMiniHowToPlayLocalStorage();
 
                     console.log('showMiniHowToPlayLS', showMiniHowToPlayLS);
 
@@ -41,7 +41,8 @@ function useFetchPlayer() {
             }
         };
 
-        fetchPlayerData();
+        void fetchPlayerData();
+
         return () => {
             ignore = true;
         };

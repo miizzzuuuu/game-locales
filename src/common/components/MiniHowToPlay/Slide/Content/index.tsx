@@ -1,8 +1,24 @@
-import { PropsWithChildren } from 'react';
 import styles from './styles.module.scss';
+import { useAppTranslate } from '../../../../../services/i18next/hooks';
 
-const Content = ({ children }: PropsWithChildren) => {
-    return <div className={styles.content}>{children}</div>;
+interface IProps {
+    keySlide: string;
+}
+
+const Content = ({ keySlide }: IProps) => {
+    const { t } = useAppTranslate(`miniHtp.${keySlide}`);
+
+    const contents = t<string[]>('content', {}, true);
+
+    return (
+        <>
+            {contents.map((content, idx) => (
+                <p key={idx} className={styles.paragraf}>
+                    {content}
+                </p>
+            ))}
+        </>
+    );
 };
 
 export default Content;

@@ -1,18 +1,61 @@
-
-
 .table-bet {
-    margin-left: 0.25rem;
-    margin-top: 1rem;
-    --width: 34rem;
     --center-half: 4.3rem;
+
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     position: relative;
-    height: fit-content;
-    min-height: 17rem;
-    width: var(--width);
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 10rem 1fr;
     gap: 0.2rem;
+}
+
+:global(.mobile-portrait) {
+    .table-bet {
+        height: calc(100% - 1.8rem);
+    }
+}
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .table-bet {
+        --perspective: 100rem;
+
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 1;
+        --opacity: 1;
+        --rotate-x: 0;
+
+        height: calc(100% - 0.8rem);
+        width: 100%;
+        max-width: 45rem;
+
+        transform: translateX(var(--translate-x)) translateY(var(--translate-y)) scale(var(--scale))
+            perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+
+        transform-origin: bottom;
+        transition-duration: 0.75s;
+        transition-property: transform, opacity;
+    }
+
+    .opened {
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 1;
+        --opacity: 1;
+        --rotate-x: 0;
+    }
+
+    .closed {
+        --translate-x: 0;
+        --translate-y: 0;
+        --scale: 0.75;
+        --opacity: 0.6;
+        --rotate-x: 46deg;
+    }
 }
 
 .center {
@@ -32,8 +75,6 @@
     justify-content: space-between;
     padding: 0.2rem 0;
 }
-
-
 
 .stick {
     position: absolute;
@@ -60,12 +101,7 @@
     .long,
     .stick-top,
     .stick-bottom {
-        background: linear-gradient(
-            90deg,
-            rgb(110, 1, 21),
-            rgb(209, 8, 45),
-            rgb(110, 1, 21)
-        );
+        background: linear-gradient(90deg, rgb(110, 1, 21), rgb(209, 8, 45), rgb(110, 1, 21));
     }
 }
 
@@ -87,12 +123,7 @@
     .long,
     .stick-top,
     .stick-bottom {
-        background: linear-gradient(
-            90deg,
-            rgb(141, 79, 4),
-            rgb(230, 130, 8),
-            rgb(141, 79, 4)
-        );
+        background: linear-gradient(90deg, rgb(141, 79, 4), rgb(230, 130, 8), rgb(141, 79, 4));
     }
 }
 
@@ -116,12 +147,7 @@
 
 .stick-top::before,
 .stick-bottom::before {
-    background: linear-gradient(
-        90deg,
-        rgb(148, 106, 7),
-        #fbca53,
-        rgb(148, 106, 7)
-    );
+    background: linear-gradient(90deg, rgb(148, 106, 7), #fbca53, rgb(148, 106, 7));
 }
 
 .stick-top,
@@ -166,7 +192,8 @@
     position: absolute;
     left: 50%;
     translate: -50% 0;
-    box-shadow: inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
+    box-shadow:
+        inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
         inset 0.15rem 0.05rem 0.2rem rgb(0, 0, 0, 0.3),
         0 0 0.2rem rgba(0, 0, 0, 0.3),
         inset -0.1rem -0.1rem 0.2rem rgba(100, 100, 100, 0.3);
@@ -189,7 +216,8 @@
     left: 50%;
     translate: -50% 0;
     border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
-    box-shadow: inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
+    box-shadow:
+        inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
         0 0 0.2rem rgba(0, 0, 0, 0.3),
         inset -0.1rem -0.1rem 0.2rem rgba(255, 255, 255, 0.2);
 
@@ -201,7 +229,8 @@
         height: 0.15rem;
         width: 0.4rem;
         background: #fbca53;
-        box-shadow: inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
+        box-shadow:
+            inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
             inset 0.15rem 0.05rem 0.2rem rgb(0, 0, 0, 0.3),
             0 0 0.2rem rgba(0, 0, 0, 0.3),
             inset -0.1rem -0.1rem 0.2rem rgba(100, 100, 100, 0.3);
@@ -216,7 +245,8 @@
         width: 0.6rem;
 
         background: #fbca53;
-        box-shadow: inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
+        box-shadow:
+            inset 0.15rem 0.05rem 0.2rem rgb(148, 106, 7, 0.8),
             0 0 0.2rem rgba(0, 0, 0, 0.3),
             inset -0.1rem -0.1rem 0.2rem rgba(255, 255, 255, 0.2);
     }
@@ -246,4 +276,14 @@
         top: calc(100% + 0.15rem);
         border-radius: 0.1rem 0.1rem 0.4rem 0.4rem;
     }
+}
+
+.slot-card {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
 }

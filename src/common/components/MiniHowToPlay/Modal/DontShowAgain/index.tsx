@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
 import SVGCheck from './SVG/check.svg';
 import styles from './style.module.scss';
+import LabelTranslate from '../../../LabelTranslate';
 
 interface IProps {
     checked: boolean;
@@ -19,9 +20,8 @@ const DontShowAgain = ({ checked, setChecked }: IProps) => {
                     checked={checked}
                     onChange={() => setChecked(!checked)}
                 />
-                <label className={styles.label} htmlFor="dsa">
-                    Don't show again
-                </label>
+
+                <LabelTranslate type="span" className={styles.label} value="dont-show-again" />
             </div>
         </div>
     );

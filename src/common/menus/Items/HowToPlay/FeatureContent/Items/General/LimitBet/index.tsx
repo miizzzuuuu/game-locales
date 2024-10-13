@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../../../../../../store/hooks';
 import { selectMax50, selectMin } from '../../../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../../../store/slice/playerSlice';
@@ -6,11 +7,13 @@ import { StringHelper } from '../../../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const LimitBet = () => {
+    const { i18n } = useTranslation();
+
     const currency = useAppSelector(selectCurrency);
     const min = useAppSelector(selectMin);
     const max50 = useAppSelector(selectMax50);
 
-    const value = `${StringHelper.formatCurrency(min, currency)}-${StringHelper.formatNumber(max50)}`;
+    const value = `${StringHelper.formatCurrency(min, currency, i18n.language)}-${StringHelper.formatNumber(max50, i18n.language)}`;
 
     return (
         <div className={`${styles['user-info']} ${styles.right}`}>

@@ -7,6 +7,7 @@ import {
     Pcode24DSpin,
     Pcode48D,
     PcodeBaccarat,
+    PcodeCeme,
     PcodeDice6,
     PcodeDice6Fever,
     PcodeDomino,
@@ -27,6 +28,8 @@ import {
     ResultM23Wild,
     ResultM27,
     ResultM35,
+    ResultM41,
+    ResultM46,
     ResultM6,
     ResultM8,
     ResultM8Fever,
@@ -57,7 +60,7 @@ export type BaseTransaction = {
     total_debit: number;
     total_credit: number;
     total_transaction: number;
-    detail_betting: Array<BettingDetail>;
+    detail_betting: BettingDetail[];
 };
 
 type DefaultDetailResult = {
@@ -100,7 +103,9 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                                     ? BaseTransaction & DetailResultM35
                                     : PCode extends PcodeDomino
                                       ? BaseTransaction & DetailResultM41
-                                      : BaseTransaction & DefaultDetailResult;
+                                      : PCode extends PcodeCeme
+                                        ? BaseTransaction & DetailResultM46
+                                        : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -181,7 +186,11 @@ export type DetailResultM35 = {
 };
 
 export type DetailResultM41 = {
-    detail_result: ResultM27 | [];
+    detail_result: ResultM41 | [];
+};
+
+export type DetailResultM46 = {
+    detail_result: ResultM46 | [];
 };
 
 // TODO: add another game result type

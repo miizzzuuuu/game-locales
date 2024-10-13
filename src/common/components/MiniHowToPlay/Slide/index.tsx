@@ -1,26 +1,25 @@
-import { ReactNode } from 'react';
 import styles from './styles.module.scss';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
+import { ModalItem } from '../Modal';
 
-interface IProps {
-    title: string;
-    graphic: ReactNode;
-    content: ReactNode;
+export interface GraphicComponentProps {
+    isActive: boolean;
 }
 
-const Slide = ({ title, graphic, content }: IProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+interface IProps extends ModalItem {
+    index: number;
+}
 
+const Slide = ({ title, graphic, content, index }: IProps) => {
     return (
-        <>
-            <div className={`${styles.slide} ${styles.title} ${deviceClassName}`}>
-                <h1>{title}</h1>
+        <div className={styles.slide}>
+            <div className={styles.wrapper}>
+                <div className={`${styles.title}`}>{title}</div>
+
+                <div className={`${styles.graphic}`}>{graphic(index)}</div>
+
+                <div className={`${styles.content}`}>{content}</div>
             </div>
-
-            <div className={`${styles.slide} ${styles.graphic} ${deviceClassName}`}>{graphic}</div>
-
-            <div className={`${styles.slide} ${styles.content} mini-htp-slider`}>{content}</div>
-        </>
+        </div>
     );
 };
 

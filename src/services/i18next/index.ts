@@ -31,24 +31,62 @@ import thHTP from '../../locales/th/htp.json';
 import vnHTP from '../../locales/vn/htp.json';
 import zhHTP from '../../locales/zh/htp.json';
 
+// mini how to play
+import enMiniHTP from '../../locales/en/mini-htp.json';
+import idMiniHTP from '../../locales/id/mini-htp.json';
+import koMiniHTP from '../../locales/ko/mini-htp.json';
+import thMiniHTP from '../../locales/th/mini-htp.json';
+import vnMiniHTP from '../../locales/vn/mini-htp.json';
+import zhMiniHTP from '../../locales/zh/mini-htp.json';
+
 const resources: Resource = {
     en: {
-        translation: { common: { ...enCommon, ...enFeatures }, m23: enM23, htp: enHTP },
+        translation: {
+            common: { ...enCommon, ...enFeatures },
+            m23: enM23,
+            htp: enHTP,
+            miniHtp: enMiniHTP,
+        },
     },
     id: {
-        translation: { common: { ...idCommon, ...idFeatures }, m23: idM23, htp: idHTP },
+        translation: {
+            common: { ...idCommon, ...idFeatures },
+            m23: idM23,
+            htp: idHTP,
+            miniHtp: idMiniHTP,
+        },
     },
     ko: {
-        translation: { common: { ...koCommon, ...koFeatures }, m23: koM23, htp: koHTP },
+        translation: {
+            common: { ...koCommon, ...koFeatures },
+            m23: koM23,
+            htp: koHTP,
+            miniHtp: koMiniHTP,
+        },
     },
     th: {
-        translation: { common: { ...thCommon, ...thFeatures }, m23: thM23, htp: thHTP },
+        translation: {
+            common: { ...thCommon, ...thFeatures },
+            m23: thM23,
+            htp: thHTP,
+            miniHtp: thMiniHTP,
+        },
     },
     vn: {
-        translation: { common: { ...vnCommon, ...vnFeatures }, m23: vnM23, htp: vnHTP },
+        translation: {
+            common: { ...vnCommon, ...vnFeatures },
+            m23: vnM23,
+            htp: vnHTP,
+            miniHtp: vnMiniHTP,
+        },
     },
     zh: {
-        translation: { common: { ...zhCommon, ...zhFeatures }, m23: zhM23, htp: zhHTP },
+        translation: {
+            common: { ...zhCommon, ...zhFeatures },
+            m23: zhM23,
+            htp: zhHTP,
+            miniHtp: zhMiniHTP,
+        },
     },
 };
 

@@ -5,8 +5,7 @@
 
     scale: 1;
     transition: scale 0.3s;
-    padding-block: 0;
-    padding-inline: 0;
+    padding: 0;
     border: 0;
 
     &.animate:active:not(:disabled) {

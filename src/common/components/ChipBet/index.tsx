@@ -1,57 +1,18 @@
-import { CSSProperties, useEffect, useRef } from 'react';
+import { memo } from 'react';
+import { Features } from '../../utils/Features';
+import Chip from './Chip';
+import ChipAnimation from './ChipAnimation';
 
-import styles from './styles.module.scss';
-import { StringHelper } from '../../utils/StringHelper';
-import { useAppSelector } from '../../../store/hooks';
-import { selectShowChip } from '../../../store/slice/gameStateSlice';
-import SVGChip from '../SVG/SVGChip';
-
-interface IProps {
+export interface ChipBetProps {
     value: number;
-    color?: string;
-    style?: CSSProperties;
     ignoreTransparent?: boolean;
 }
 
-const ChipBet = ({ value, color, style, ignoreTransparent }: IProps) => {
-    const chipRef = useRef<HTMLDivElement>(null);
-    const lightRef = useRef<HTMLDivElement>(null);
-    const lastValue = useRef<number>(0);
+const ChipComponent = Features.CHIP_ANIMATION ? ChipAnimation : Chip;
 
-    const stringValue = StringHelper.formatChipText(value);
-
-    const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
-
-    useEffect(() => {
-        if (value !== lastValue.current) {
-            console.log('run animation');
-
-            if (lightRef.current?.classList.contains(styles['run-chip-light'])) {
-                lightRef.current?.classList.remove(styles['run-chip-light']);
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        lightRef.current?.classList.add(styles['run-chip-light']);
-                    });
-                });
-            } else {
-                lightRef.current?.classList.add(styles['run-chip-light']);
-            }
-
-            lastValue.current = value;
-        }
-    }, [value]);
-
-    return (
-        <div
-            className={`${styles['chip']}${showChip ? '' : ` ${styles.show}`}`}
-            style={style}
-            ref={chipRef}
-        >
-            <SVGChip color={color} value={stringValue} />
-
-            <div ref={lightRef} className={styles['chip-light']} />
-        </div>
-    );
+const ChipBet = (props: ChipBetProps) => {
+    return <ChipComponent {...props} />;
 };
 
-export default ChipBet;
+const MemoizedChipBet = memo(ChipBet);
+export default MemoizedChipBet;

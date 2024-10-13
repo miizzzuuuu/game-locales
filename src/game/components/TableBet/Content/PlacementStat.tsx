@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { StringHelper } from '../../../../common/utils/StringHelper';
 
 interface IProps {
@@ -9,6 +10,9 @@ interface IProps {
 function PlacementStat({ totalChip, float, totalUser }: IProps) {
     totalChip;
     totalUser;
+
+    const { i18n } = useTranslation();
+
     return (
         <>
             <div
@@ -37,7 +41,7 @@ function PlacementStat({ totalChip, float, totalUser }: IProps) {
                                 justifyContent: 'flex-end',
                             }}
                         >
-                            {StringHelper.formatNumber(1123123)}
+                            {StringHelper.formatNumber(1123123, i18n.language)}
                         </div>
                         <div
                             style={{
@@ -67,7 +71,7 @@ function PlacementStat({ totalChip, float, totalUser }: IProps) {
                                         d="M4 1.08c-.846 0-1.534.688-1.534 1.534 0 .846.688 1.534 1.534 1.534.846 0 1.534-.688 1.534-1.534 0-.846-.688-1.534-1.534-1.534zM5.909 5.173A2.187 2.187 0 004.34 4.51h-.682c-.591 0-1.148.235-1.568.662a2.236 2.236 0 00-.648 1.577c0 .094.076.17.17.17h4.773a.17.17 0 00.17-.17c0-.593-.23-1.153-.647-1.577z"
                                     ></path>
                                 </svg>
-                                {StringHelper.formatNumber(1230)}
+                                {StringHelper.formatNumber(1230, i18n.language)}
                             </div>
                         </div>
                     </>
@@ -80,7 +84,7 @@ function PlacementStat({ totalChip, float, totalUser }: IProps) {
                                 justifyContent: 'flex-start',
                             }}
                         >
-                            {StringHelper.formatNumber(1123123)}
+                            {StringHelper.formatNumber(1123123, i18n.language)}
                         </div>
                         <div
                             style={{
@@ -110,7 +114,7 @@ function PlacementStat({ totalChip, float, totalUser }: IProps) {
                                         d="M4 1.08c-.846 0-1.534.688-1.534 1.534 0 .846.688 1.534 1.534 1.534.846 0 1.534-.688 1.534-1.534 0-.846-.688-1.534-1.534-1.534zM5.909 5.173A2.187 2.187 0 004.34 4.51h-.682c-.591 0-1.148.235-1.568.662a2.236 2.236 0 00-.648 1.577c0 .094.076.17.17.17h4.773a.17.17 0 00.17-.17c0-.593-.23-1.153-.647-1.577z"
                                     ></path>
                                 </svg>
-                                {StringHelper.formatNumber(1300)}
+                                {StringHelper.formatNumber(1300, i18n.language)}
                             </div>
                         </div>
                     </>

@@ -1,5 +1,4 @@
 import LabelTranslate from '../../../../../components/LabelTranslate';
-
 import styles from './styles.module.scss';
 
 const NoResult = () => {

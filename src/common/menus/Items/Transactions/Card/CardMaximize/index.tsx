@@ -1,9 +1,9 @@
-import BettingTable from '../BettingTable';
-import styles from './styles.module.scss';
 import { ITransactionCardProps } from '..';
-import NoResult from '../NoResult';
-import { TransactionHelper } from '../../../../../utils/TransactionHelper';
 import ResultDTWildTransaction from '../../../../../../game/components/ResultDTWildTransaction';
+import { TransactionHelper } from '../../../../../utils/TransactionHelper';
+import BettingTable from '../BettingTable';
+import NoResult from '../NoResult';
+import styles from './styles.module.scss';
 
 interface IProps extends ITransactionCardProps {
     expand: boolean;
@@ -20,7 +20,7 @@ const CardMaximize = ({ data, expand }: IProps) => {
     return (
         <div className={`${styles.maximize}${expand ? ` ${styles.open}` : ''}`}>
             <div className={styles['maximize-content']}>
-                <div className={styles['result-wrapper']}>{element}</div>
+                {expand && <div className={styles['result-wrapper']}>{element}</div>}
 
                 <BettingTable data={data} />
             </div>

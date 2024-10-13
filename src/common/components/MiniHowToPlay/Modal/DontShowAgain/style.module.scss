@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-block-start: 1rem;
+    margin-top: 1rem;
 }
 
 .input-bottom {
@@ -15,13 +15,12 @@
 
 .checkbox {
     appearance: none;
-    -webkit-appearance: none;
     position: relative;
     width: 1.6rem;
     height: 1.6rem;
     border: 0.1rem solid rgba(255, 255, 255, 0.12);
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.06);
     overflow: hidden;
 }
 

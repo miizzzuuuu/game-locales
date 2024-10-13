@@ -1,22 +1,14 @@
 .content {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1.2rem;
-    padding-right: 0.6rem;
-
-    overflow-y: auto;
-
-    animation: show-content 0.5s forwards;
+    height: var(--top-winner-height);
+    width: 100%;
+    overflow: hidden;
 }
 
-@keyframes show-content {
-    from {
-        transform: translateX(100%);
-    }
+.wrapper {
+    height: var(--top-winner-height);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-    to {
-        transform: translateX(0);
-    }
+    transition: ease 400ms;
 }

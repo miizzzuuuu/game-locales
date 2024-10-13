@@ -11,6 +11,7 @@ Here's a curated list of packages that you should be at least familiar with befo
 -   [ ] [Redux Toolkit](https://redux-toolkit.js.org/)
 -   [ ] [i18next](https://www.i18next.com)
 -   [ ] [React i18next](https://react.i18next.com)
+-   [ ] [CSS Module](https://github.com/css-modules/css-modules)
 
 ### API Mocking
 

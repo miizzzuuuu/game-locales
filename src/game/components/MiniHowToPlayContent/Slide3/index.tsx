@@ -1,30 +1,23 @@
 import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
+import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-// import SVGResult from '../assets/SVGResult';
+import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
 
-export const title = 'Bonus Dragon & Tiger Wild';
+const keySlide = 'slide-3';
 
-export const GraphicComponent = () => {
-    return <Graphic>{/* <SVGResult style={{ width: '16rem' }} /> */}</Graphic>;
-};
-
-export const ContentComponent = () => {
-    return (
-        <Content>
-            <p>
-                Dapatkan bonus dengan bertaruh pada Dragon atau Tiger. Ketika pihak yang Anda
-                pertaruhkan menang dan nilai kartu Anda sama dengan kartu wild card, Anda dapat
-                memenangkan bonus wild.
-            </p>
-        </Content>
-    );
-};
+export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
+    <Graphic
+        isActive={isActive}
+        animationSrc="https://cdn.lottielab.com/l/ADvMgqJwyXB7Q4.json"
+        style={{ width: '28rem' }}
+    />
+);
 
 const Slide3: ModalItem = {
-    title,
-    graphic: <GraphicComponent />,
-    content: <ContentComponent />,
+    title: <Title keySlide={keySlide} />,
+    graphic: (index: number) => <GraphicComponent isActive={index === 2} />,
+    content: <Content keySlide={keySlide} />,
 };
 
 export default Slide3;

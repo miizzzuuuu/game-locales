@@ -14,7 +14,7 @@ import {
     resetDisplayPointer,
     resetTieCount,
 } from './BaccaratRoadmaps';
-import { GameHelper } from '../../../../../common/utils/GameHelper';
+import { getBasePcode, getPcode } from '../../../../../common/utils/GameHelper';
 
 export interface ResultHaveResultString {
     result: string;
@@ -135,7 +135,7 @@ export class BaseV2Roadmap extends React.Component<Props> {
     beadRoadFragment() {
         // @ts-ignore
         const roadmapColumns = nary(this.totalColumns);
-        const basePcode = GameHelper.getBasePcode();
+        const basePcode = getBasePcode();
 
         return nary(8).map((row, rowIdx) => (
             <Fragment key={`${row}-${rowIdx}`}>
@@ -144,9 +144,9 @@ export class BaseV2Roadmap extends React.Component<Props> {
                         {
                             // @ts-ignore
                             this.roadmapDisplay[rowIdx][colIdx + this.firstDisplayedCol] !==
-                                undefined
+                            undefined
                                 ? // @ts-ignore
-                                this.roadmapDisplay[rowIdx][colIdx + this.firstDisplayedCol]
+                                  this.roadmapDisplay[rowIdx][colIdx + this.firstDisplayedCol]
                                 : null
                         }
 
@@ -163,12 +163,12 @@ export class BaseV2Roadmap extends React.Component<Props> {
         // @ts-ignore
         const roadmapColumns = nary(this.totalColumns);
         const maxRow = 5;
-        const basePcode = GameHelper.getBasePcode();
+        const basePcode = getBasePcode();
 
         if (
             this.bigRoadSequence!.length &&
             Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) + 1 >=
-            (this.props.totalColumns || 24)
+                (this.props.totalColumns || 24)
         ) {
             this.firstDisplayedCol =
                 Math.ceil(this.bigRoadSequence![this.bigRoadSequence!.length - 1][1]) -
@@ -191,165 +191,165 @@ export class BaseV2Roadmap extends React.Component<Props> {
                                         col - 1 + this.firstRoadmapDisplayedCol
                                     ]
                                         ? [
-                                            // Base Circle Element
-                                            // @ts-ignore
-                                            this.roadmapDisplay[row - 1][
-                                                // @ts-ignore
+                                              // Base Circle Element
+                                              // @ts-ignore
+                                              this.roadmapDisplay[row - 1][
+                                                  // @ts-ignore
 
-                                                col - 1 + this.firstRoadmapDisplayedCol
-                                            ] ? (
-                                                <>
-                                                    <rect
-                                                        width="10.5882"
-                                                        height="10.5882"
+                                                  col - 1 + this.firstRoadmapDisplayedCol
+                                              ] ? (
+                                                  <>
+                                                      <rect
+                                                          width="10.5882"
+                                                          height="10.5882"
+                                                          // @ts-ignore
+
+                                                          x={5.29382 + baseSpace * (col - 1)}
+                                                          y={5.29382 + baseSpace * (row - 1)}
+                                                          stroke={
+                                                              // @ts-ignore
+                                                              this.roadmapDisplay[row - 1][
+                                                                  col -
+                                                                      1 +
+                                                                      // @ts-ignore
+                                                                      this.firstRoadmapDisplayedCol
+                                                                  // @ts-ignore
+                                                              ].color
+                                                          }
+                                                          className={
+                                                              // @ts-ignore
+                                                              this.roadmapDisplay[row - 1][
+                                                                  col -
+                                                                      1 +
+                                                                      // @ts-ignore
+                                                                      this.firstRoadmapDisplayedCol
+                                                                  // @ts-ignore
+                                                              ].blink
+                                                          }
+                                                          strokeWidth="1.41176"
+                                                          rx="5.29412"
+                                                      ></rect>
+                                                  </>
+                                              ) : null,
+
+                                              // Ties
+                                              // @ts-ignore
+                                              this.roadmapTiesDisplay[row - 1][
+                                                  // @ts-ignore
+                                                  col - 1 + this.firstRoadmapDisplayedCol
+                                              ] ? (
+                                                  <>
+                                                      <path
+                                                          id={`${idKey}`}
+                                                          className={
+                                                              // @ts-ignore
+                                                              this.roadmapDisplay[row - 1][
+                                                                  col -
+                                                                      1 +
+                                                                      // @ts-ignore
+                                                                      this.firstRoadmapDisplayedCol
+                                                                  // @ts-ignore
+                                                              ].blink
+                                                          }
+                                                          stroke={this.greenColor!}
+                                                          strokeLinecap="round"
+                                                          // @ts-ignore
+                                                          d={`M${4.79382 + baseSpace * (col - 1)} ${15.79382 + baseSpace * (row - 1)}l11-11`}
+                                                      ></path>
+                                                      <defs>
+                                                          <filter
+                                                              id="whiteOutlineEffect"
+                                                              colorInterpolationFilters="sRGB"
+                                                          >
+                                                              <feMorphology
+                                                                  in="SourceAlpha"
+                                                                  result="MORPH"
+                                                                  operator="dilate"
+                                                                  radius="0.5"
+                                                              />
+                                                              <feColorMatrix
+                                                                  in="MORPH"
+                                                                  result="WHITENED"
+                                                                  type="matrix"
+                                                                  values="-1 0 0 0 1, 0 -1 0 0 1, 0 0 -1 0 1, 0 0 0 1 0"
+                                                              />
+                                                              <feMerge>
+                                                                  <feMergeNode in="WHITENED" />
+                                                                  <feMergeNode in="SourceGraphic" />
+                                                              </feMerge>
+                                                          </filter>
+                                                      </defs>
+
+                                                      <text
+                                                          filter="url(#whiteOutlineEffect)"
+                                                          fill={
+                                                              this.props.darkMode ? '#fff' : '#000'
+                                                          }
+                                                          fontFamily="Manrope"
+                                                          stroke="white"
+                                                          strokeWidth="0.1px"
+                                                          className={
+                                                              // @ts-ignore
+                                                              this.roadmapDisplay[row - 1][
+                                                                  col -
+                                                                      1 +
+                                                                      // @ts-ignore
+                                                                      this.firstRoadmapDisplayedCol
+                                                                  // @ts-ignore
+                                                              ].blink
+                                                          }
+                                                          fontSize="9px"
+                                                          fontWeight={800}
+                                                          x={
+                                                              6.5 +
+                                                              baseSpace * (col - 1) +
+                                                              baseSpace / 4
+                                                          }
+                                                          y={
+                                                              7 +
+                                                              baseSpace * (row - 1) +
+                                                              baseSpace / 2
+                                                          }
+                                                          textAnchor="middle"
+                                                          style={{
+                                                              color: 'black',
+                                                          }}
+                                                      >
+                                                          {
+                                                              /* @ts-ignore */
+                                                              this.roadmapTiesDisplay![row - 1][
+                                                                  col -
+                                                                      1 +
+                                                                      this.firstRoadmapDisplayedCol!
+                                                                  // @ts-ignore
+                                                              ]!.num > 1
+                                                                  ? this.roadmapTiesDisplay![
+                                                                        row - 1
+                                                                    ][
+                                                                        col -
+                                                                            1 +
+                                                                            this
+                                                                                .firstRoadmapDisplayedCol!
+                                                                        // @ts-ignore
+                                                                    ]!.num
+                                                                  : ''
+                                                          }
+                                                      </text>
+                                                  </>
+                                              ) : null,
+
+                                              // Pairs
+                                              // @ts-ignore
+                                              basePcode === 'm22' ||
+                                              getPcode() === 'm23b' ||
+                                              basePcode === 'm38'
+                                                  ? // @ts-ignore
+                                                    this.roadmapPairsDisplay[row - 1][
                                                         // @ts-ignore
-
-                                                        x={5.29382 + baseSpace * (col - 1)}
-                                                        y={5.29382 + baseSpace * (row - 1)}
-                                                        stroke={
-                                                            // @ts-ignore
-                                                            this.roadmapDisplay[row - 1][
-                                                                col -
-                                                                1 +
-                                                                // @ts-ignore
-                                                                this.firstRoadmapDisplayedCol
-                                                                // @ts-ignore
-                                                            ].color
-                                                        }
-                                                        className={
-                                                            // @ts-ignore
-                                                            this.roadmapDisplay[row - 1][
-                                                                col -
-                                                                1 +
-                                                                // @ts-ignore
-                                                                this.firstRoadmapDisplayedCol
-                                                                // @ts-ignore
-                                                            ].blink
-                                                        }
-                                                        strokeWidth="1.41176"
-                                                        rx="5.29412"
-                                                    ></rect>
-                                                </>
-                                            ) : null,
-
-                                            // Ties
-                                            // @ts-ignore
-                                            this.roadmapTiesDisplay[row - 1][
-                                                // @ts-ignore
-                                                col - 1 + this.firstRoadmapDisplayedCol
-                                            ] ? (
-                                                <>
-                                                    <path
-                                                        id={`${idKey}`}
-                                                        className={
-                                                            // @ts-ignore
-                                                            this.roadmapDisplay[row - 1][
-                                                                col -
-                                                                1 +
-                                                                // @ts-ignore
-                                                                this.firstRoadmapDisplayedCol
-                                                                // @ts-ignore
-                                                            ].blink
-                                                        }
-                                                        stroke={this.greenColor!}
-                                                        strokeLinecap="round"
-                                                        // @ts-ignore
-                                                        d={`M${4.79382 + baseSpace * (col - 1)} ${15.79382 + baseSpace * (row - 1)}l11-11`}
-                                                    ></path>
-                                                    <defs>
-                                                        <filter
-                                                            id="whiteOutlineEffect"
-                                                            colorInterpolationFilters="sRGB"
-                                                        >
-                                                            <feMorphology
-                                                                in="SourceAlpha"
-                                                                result="MORPH"
-                                                                operator="dilate"
-                                                                radius="0.5"
-                                                            />
-                                                            <feColorMatrix
-                                                                in="MORPH"
-                                                                result="WHITENED"
-                                                                type="matrix"
-                                                                values="-1 0 0 0 1, 0 -1 0 0 1, 0 0 -1 0 1, 0 0 0 1 0"
-                                                            />
-                                                            <feMerge>
-                                                                <feMergeNode in="WHITENED" />
-                                                                <feMergeNode in="SourceGraphic" />
-                                                            </feMerge>
-                                                        </filter>
-                                                    </defs>
-
-                                                    <text
-                                                        filter="url(#whiteOutlineEffect)"
-                                                        fill={
-                                                            this.props.darkMode ? '#fff' : '#000'
-                                                        }
-                                                        fontFamily="Manrope"
-                                                        stroke="white"
-                                                        strokeWidth="0.1px"
-                                                        className={
-                                                            // @ts-ignore
-                                                            this.roadmapDisplay[row - 1][
-                                                                col -
-                                                                1 +
-                                                                // @ts-ignore
-                                                                this.firstRoadmapDisplayedCol
-                                                                // @ts-ignore
-                                                            ].blink
-                                                        }
-                                                        fontSize="9px"
-                                                        fontWeight={800}
-                                                        x={
-                                                            6.5 +
-                                                            baseSpace * (col - 1) +
-                                                            baseSpace / 4
-                                                        }
-                                                        y={
-                                                            7 +
-                                                            baseSpace * (row - 1) +
-                                                            baseSpace / 2
-                                                        }
-                                                        textAnchor="middle"
-                                                        style={{
-                                                            color: 'black',
-                                                        }}
-                                                    >
-                                                        {
-                                                            /* @ts-ignore */
-                                                            this.roadmapTiesDisplay![row - 1][
-                                                                col -
-                                                                1 +
-                                                                this.firstRoadmapDisplayedCol!
-                                                                // @ts-ignore
-                                                            ]!.num > 1
-                                                                ? this.roadmapTiesDisplay![
-                                                                    row - 1
-                                                                ][
-                                                                    col -
-                                                                    1 +
-                                                                    this
-                                                                        .firstRoadmapDisplayedCol!
-                                                                    // @ts-ignore
-                                                                ]!.num
-                                                                : ''
-                                                        }
-                                                    </text>
-                                                </>
-                                            ) : null,
-
-                                            // Pairs
-                                            // @ts-ignore
-                                            basePcode === 'm22' ||
-                                                GameHelper.pcode === 'm23b' ||
-                                                basePcode === 'm38'
-                                                ? // @ts-ignore
-                                                this.roadmapPairsDisplay[row - 1][
-                                                // @ts-ignore
-                                                col - 1 + this.firstRoadmapDisplayedCol
-                                                ]
-                                                : null,
-                                        ]
+                                                        col - 1 + this.firstRoadmapDisplayedCol
+                                                    ]
+                                                  : null,
+                                          ]
                                         : null
                                 }
                             </Fragment>
@@ -366,21 +366,25 @@ export class BaseV2Roadmap extends React.Component<Props> {
         const maxRow = 5;
 
         const startingHitAreaX: {
-            [index: string]: number
+            [index: string]: number;
         } = {
-            "big-eye-road": 14.12 * 1,
-            "small-road": 14.12 * this.totalColumns!,
-            "cockroach-road": 14.12 * 2 * this.totalColumns!
-        }
-        const hitArea = <rect y={5! * 14.12} x={this.totalColumns! * startingHitAreaX[this.props.type]} width={14.12 * this.totalColumns! / 4} height={14.12 * (this.props.full === this.props.type ? 8 : 3)} />
-
+            'big-eye-road': 14.12 * 1,
+            'small-road': 14.12 * this.totalColumns!,
+            'cockroach-road': 14.12 * 2 * this.totalColumns!,
+        };
+        const hitArea = (
+            <rect
+                y={5! * 14.12}
+                x={this.totalColumns! * startingHitAreaX[this.props.type]}
+                width={(14.12 * this.totalColumns!) / 4}
+                height={14.12 * (this.props.full === this.props.type ? 8 : 3)}
+            />
+        );
 
         // const maxIdxRow = maxRow - 1;
         return nary(maxRow + 1).map((row, rowIdx) => (
             <Fragment key={`brd_${row}-${rowIdx}`}>
-                {
-                    hitArea
-                }
+                {hitArea}
                 {roadmapColumns.map((col, colIdx) => {
                     // @ts-ignore
                     const Element = this.roadmapDisplay[row - 1][
@@ -388,10 +392,10 @@ export class BaseV2Roadmap extends React.Component<Props> {
                         col - 1 + this.firstDisplayedCol
                     ]
                         ? // @ts-ignore
-                        this.roadmapDisplay[row - 1][
-                        // @ts-ignore
-                        col - 1 + this.firstDisplayedCol
-                        ]
+                          this.roadmapDisplay[row - 1][
+                              // @ts-ignore
+                              col - 1 + this.firstDisplayedCol
+                          ]
                         : null;
                     return (
                         <Fragment key={`brd_${row}-${rowIdx}-${col}-${colIdx}`}>

@@ -5,7 +5,6 @@ import { useAppSelector } from '../../../store/hooks';
 
 import PlacementStat from './Content/PlacementStat';
 
-import { RenderCard } from './RenderCard/RenderCard';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { Bet } from '../../../types';
@@ -13,7 +12,8 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
-import { GameHelper } from '../../../common/utils/GameHelper';
+import { getBasePcode } from '../../../common/utils/GameHelper';
+import { RenderCard } from '../TableBetV2/RenderCard/RenderCard';
 // import { RenderCard } from './RenderCard';
 
 interface IProps extends PropsWithChildren {
@@ -81,14 +81,13 @@ function ResultNumber(props: { value: number | undefined }) {
 }
 
 const TigerBetButton = ({ bet, children }: IProps) => {
-
     const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
     const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const { chip, color } = useGetChipBet(bet);
-    const { placeBetHandler: handleClick } = usePlaceBet();
+    const { chip } = useGetChipBet(bet);
+    const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
     const ratio = '1:1';
@@ -98,7 +97,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
     return (
         <div
             className={[styles.domain, deviceClassName].join(' ')}
-            onClick={() => handleClick(bet)}
+            onClick={() => handleClick(bet.button, bet.group)}
         >
             {scrollSvg}
 
@@ -106,7 +105,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
             <div
                 style={{
                     opacity: isLose ? 0.6 : 1,
-                    marginLeft: "0.5rem"
+                    marginLeft: '0.5rem',
                 }}
                 className={[styles.domainContent, isWin ? 'table-win-blink' : ''].join(' ')}
             >
@@ -124,7 +123,7 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                         <span className={styles.text_lg}>
                             <LabelTranslate
                                 value={bet.button.toLowerCase()}
-                                keyLang={GameHelper.getBasePcode()}
+                                keyLang={getBasePcode()}
                             />
                         </span>
                     </div>
@@ -134,41 +133,19 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                 )}
 
                 <div className={styles['slot-chip']} style={{ right: '-20%', left: 'auto' }}>
-                    {chip > 0 && <ChipBet value={chip} color={color} />}
+                    {chip > 0 && <ChipBet value={chip} />}
                 </div>
-                {
-
-                    DisplayHelper.getOrientation() == "landscape" ?
-                        <div className={styles.cardContainerTiger}>
-                            <div
-                                style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    marginLeft: "2rem",
-                                    marginTop: "-1rem"
-                                }}
-                            >
-                                <RenderCard
-                                    top="0px"
-                                    left="0px"
-                                    right="0px"
-                                    position={{ x: '5px', y: '5px' }}
-                                    rotation={{ z: '0deg' }}
-                                    opacity={1}
-                                    value={scanNumber ? scanNumber.tiger : ''}
-                                    appear={
-                                        !betIsOpen
-                                    }
-                                    disappear={!scanNumber}
-                                    submit={scanNumber && scanNumber.submit == true }
-                                    />
-
-                            </div>
-                        </div> :
-
-                        <div className={styles.cardContainerTiger}>
-
+                {DisplayHelper.getOrientation() == 'landscape' ? (
+                    <div className={styles.cardContainerTiger}>
+                        <div
+                            style={{
+                                position: 'absolute',
+                                width: '100%',
+                                height: '100%',
+                                marginLeft: '2rem',
+                                marginTop: '-1rem',
+                            }}
+                        >
                             <RenderCard
                                 top="0px"
                                 left="0px"
@@ -177,18 +154,28 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                                 rotation={{ z: '0deg' }}
                                 opacity={1}
                                 value={scanNumber ? scanNumber.tiger : ''}
-                                appear={
-                                    !betIsOpen
-                                }
+                                appear={!betIsOpen}
                                 disappear={!scanNumber}
-                                submit={scanNumber && scanNumber.submit == true }
+                                submit={scanNumber && scanNumber.submit == true}
                             />
-
                         </div>
-                }
-
-
-
+                    </div>
+                ) : (
+                    <div className={styles.cardContainerTiger}>
+                        <RenderCard
+                            top="0px"
+                            left="0px"
+                            right="0px"
+                            position={{ x: '5px', y: '5px' }}
+                            rotation={{ z: '0deg' }}
+                            opacity={1}
+                            value={scanNumber ? scanNumber.tiger : ''}
+                            appear={!betIsOpen}
+                            disappear={!scanNumber}
+                            submit={scanNumber && scanNumber.submit == true}
+                        />
+                    </div>
+                )}
             </div>
 
             <svg

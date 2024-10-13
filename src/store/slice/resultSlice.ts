@@ -1,9 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
-import { TwentyFourDHelper } from '../../game/utils/TwentyFourDHelper';
+import { _24DHelper } from '../../game/utils/_24DHelper';
 import { ScanNumberData } from '../../types';
-
-
+import { RootState } from '../store';
 
 export interface ResultState {
     periode: number | null;
@@ -14,7 +12,6 @@ export interface ResultState {
     winAmount: number;
     winStatus: 'idle' | 'running' | 'show';
 }
-
 
 const initialState: ResultState = {
     periode: null,
@@ -32,7 +29,7 @@ const baseSlice = createSlice({
     reducers: {
         setResult: (state, action: PayloadAction<number>) => {
             const resultNumber = action.payload;
-            const winBet = TwentyFourDHelper.getWinResult(resultNumber);
+            const winBet = _24DHelper.getWinResult(resultNumber);
 
             state.resultNumber = resultNumber;
             state.winBets = winBet;
@@ -42,9 +39,9 @@ const baseSlice = createSlice({
         doneResult: (state) => {
             state.status = 'done';
         },
-        setScanNumber: (state, action: PayloadAction<ScanNumberData|undefined>) => {
-            console.log("setScannumber", action.payload);
-            state.scanNumber = action.payload
+        setScanNumber: (state, action: PayloadAction<ScanNumberData | undefined>) => {
+            console.log('setScannumber', action.payload);
+            state.scanNumber = action.payload;
         },
         resetResult: (state) => {
             state.resultNumber = null;
@@ -68,8 +65,15 @@ const baseSlice = createSlice({
     },
 });
 
-export const {setScanNumber, setResult, doneResult, resetResult, setWinAmount, endWinAnimation, clearWinAmount } =
-    baseSlice.actions;
+export const {
+    setScanNumber,
+    setResult,
+    doneResult,
+    resetResult,
+    setWinAmount,
+    endWinAnimation,
+    clearWinAmount,
+} = baseSlice.actions;
 
 export const selectResultNumber = (state: RootState) => state.result.resultNumber;
 export const selectResultStatus = (state: RootState) => state.result.status;

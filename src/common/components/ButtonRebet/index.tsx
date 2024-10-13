@@ -1,9 +1,8 @@
 import { CSSProperties } from 'react';
 import ButtonAction from '../ButtonAction';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectSettings, updateSetings } from '../../../store/slice/settingsSlice';
+import { selectAutoRebet, updateSetings } from '../../../store/slice/settingsSlice';
 import { selectLastBetData } from '../../../store/slice/lastBetsSlice';
-import { placeMultiBet, selectIdsBetAdd } from '../../../store/slice/betAddSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../LabelTranslate';
 import { Sound } from '../../../services/sound';
@@ -12,6 +11,8 @@ import SVGIconRebet from './SVG/SVGIconRebet';
 import { selectBalance } from '../../../store/slice/playerSlice';
 import { useAppTranslate } from '../../../services/i18next/hooks';
 import { setMessage } from '../../../store/slice/gameStateSlice';
+import { placeMultiBet, selectIdsBetAdd } from '../../../store/slice/bets';
+
 interface IProps {
     styles?: CSSProperties;
     show?: boolean;
@@ -22,11 +23,12 @@ const ButtonRebet = ({ show, styles }: IProps) => {
 
     const { t } = useAppTranslate();
 
-    const settings = useAppSelector(selectSettings);
-    const autoRebet = settings.autoRebet;
+    const autoRebet = useAppSelector(selectAutoRebet);
 
     const lastBetData = useAppSelector(selectLastBetData);
+
     const idsBetAdd = useAppSelector(selectIdsBetAdd);
+
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const balance = useAppSelector(selectBalance);
 
@@ -36,7 +38,6 @@ const ButtonRebet = ({ show, styles }: IProps) => {
         if (autoRebet) {
             dispatch(
                 updateSetings({
-                    ...settings,
                     autoRebet: false,
                 }),
             );

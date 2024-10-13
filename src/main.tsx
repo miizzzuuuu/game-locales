@@ -5,7 +5,7 @@ import App from './App.tsx';
 
 import { makeServer } from './api/server/server.ts';
 
-import { GameHelper } from './common/utils/GameHelper.tsx';
+import { setPcode } from './common/utils/GameHelper.ts';
 import APIManager from './common/utils/APIManager.ts';
 
 import './services/i18next/index.ts';
@@ -13,7 +13,13 @@ import './styles/main.scss';
 import { BetHelper } from './common/utils/BetHelper.ts';
 import { DragonTigerBBet } from './game/utils/DragonTigerBBet.ts';
 
-const main = async () => {
+declare global {
+    interface Window {
+        isIOS: any;
+    }
+}
+
+const main = () => {
     if (import.meta.env.DEV) {
         makeServer({ environment: 'development' });
     }
@@ -29,7 +35,8 @@ const main = async () => {
         return;
     }
 
-    GameHelper.pcode = pcode;
+    setPcode(pcode);
+    document.body.classList.add(pcode);
 
     // modify for spesifik
     BetHelper.game = new DragonTigerBBet();
