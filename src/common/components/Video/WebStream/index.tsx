@@ -1,13 +1,13 @@
 import { useCallback, useRef, useState } from 'react';
-import styles from './styles.module.scss';
 import { useAppSelector } from '../../../../store/hooks';
-import { selectFocus } from '../../../../store/slice/windowSlice';
 import { selectStream, selectStreamHD } from '../../../../store/slice/gameSlice';
 import {
     selectEnableStreamingSound,
     selectStreamingQuality,
     selectVolumeStreamingSound,
 } from '../../../../store/slice/settingsSlice';
+import { selectFocus } from '../../../../store/slice/windowSlice';
+import styles from './styles.module.scss';
 
 const WebStream = () => {
     const videoRef = useRef<HTMLIFrameElement>(null);
@@ -37,7 +37,7 @@ const WebStream = () => {
             setIsLoading(!isFocus ? true : false);
 
             videoRef.current?.click();
-        }, 300);
+        }, 500);
     }, [isFocus]);
 
     return (
