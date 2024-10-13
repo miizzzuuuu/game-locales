@@ -1,19 +1,19 @@
 import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
-import BetDescription from './Items/BetDescription';
-import BonusSystem from './Items/BonusSystem';
+import GameObjective from './Items/GameObjective';
 import Introduction from './Items/Introduction';
+import SideBet from './Items/SideBet';
 import Payout from './Items/Payout';
-import PlacingABet from './Items/PlacingABet';
 import Rules from './Items/Rules';
+import WildcardBet from './Items/WildcardBet';
 
 const HowToPlayContent = () => {
     return (
         <MenuContentContainer>
             <Introduction />
+            <GameObjective />
+            <WildcardBet />
+            <SideBet />
             <Rules />
-            <BetDescription />
-            <PlacingABet />
-            <BonusSystem />
             <Payout />
         </MenuContentContainer>
     );
