@@ -1,84 +1,82 @@
 {
     "introduction": {
-        "title": "INTRODUCTION",
-        "content": "Dragon Tiger Wild is the latest game from IDNLIVE Europe. If you are familiar with the Dragon Tiger game, you will find a new, exciting, and fun experience in playing this game. In this new game, we add new elements to the dragon tiger game with wild cards, and you will get much higher prizes in this game. Let's get wild!!!"
+        "title": "소개",
+        "content": "Dragon Tiger Wild는 IDNLIVE Europe의 최신 게임으로, Dragon Tiger에 익숙한 사람이라면 새로운 흥미롭고 재미있는 경험을 제공할 것입니다. 이 새로운 게임에서는 wild 카드 요소가 추가되어 보상이 훨씬 더 커집니다. Let's get wild!!!"
     },
     "game-objective": {
-        "title": "Game Objective",
-        "content": "The goal in the Dragon Tiger Wild game is to guess the highest card and also think of the wild card correctly so that your prize is even more significant."
+        "title": "게임 목표",
+        "content": "Dragon Tiger Wild의 목표는 가장 높은 카드를 맞추고 wild 카드를 정확하게 예측하여 보상을 더욱 크게 만드는 것입니다."
     },
     "rules": {
-        "title": "GENERAL RULES",
+        "title": "일반 규칙",
         "steps": [
-            "A Dealer or game guide will host this game.",
-            "This game uses eight sets of cards in one “Shoe”.",
-            "At the beginning of each new “Shoe,” the Dealer will issue one card that will determine how many cards will be “Burned” or discarded for that “Shoe.” Ace cards are worth 1, cards 2 to 10 are worth according to the card, and picture cards are worth 10, so each “Shoe” will discard ten cards at most.",
-            "Card values ​​in Dragon Tiger Wild",
+            "이 게임은 딜러가 진행합니다.",
+            "이 게임은 8개의 카드 덱을 사용합니다.",
+            "새로운 'Shoe'가 시작될 때, 딜러가 1장을 뽑아 얼마나 많은 카드가 'Burn' 또는 폐기될지 결정합니다. Ace는 1로, 2에서 10까지는 카드에 적힌 값으로, 얼굴 카드(Jack, Queen, King)는 10으로 계산됩니다. 따라서 각 'Shoe'는 최대 10장의 카드만 폐기됩니다.",
+            "Dragon Tiger Wild에서 카드 값:",
             "- Ace = 1",
-            "- 2 to 10 = according to card",
-            "- Jack, Queen, King = 11, 12. 13",
-            "When the betting time runs out, all bets will be accepted automatically.",
-            "The dealer will issue one card as a Wild Card, then give each card to the Dragon and Tiger sides.",
-            "The party with the highest score will be the winner. The highest score is K, which is worth 13.",
-            "If there is a tie, half of the bets on Dragon and Tiger will be returned. Tie bets win only when the Dragon and Tiger values ​​are the same."
+            "- 2에서 10 = 카드 값",
+            "- Jack, Queen, King = 11, 12, 13",
+            "베팅 시간이 끝나면 모든 베팅이 자동으로 수락됩니다.",
+            "딜러는 1장을 Wild 카드로 뽑고, 드래곤과 타이거에 각각 1장씩 카드를 줍니다.",
+            "높은 값을 가진 쪽이 승자가 됩니다. 가장 높은 값은 King (13)입니다.",
+            "비기거나 Tie가 되면 드래곤과 타이거의 베팅이 반으로 반환됩니다. Tie 베팅은 드래곤과 타이거 카드가 동일할 때만 승리합니다."
         ]
     },
     "wild-card-bet": {
-        "title": "WILD CARD BET",
-        "description": "As the Introduction mentions, this game has new gameplay elements and exciting bonuses. Here's the explanation.",
-        "description-2": "Wild cards will determine victory, with a prize value greater than regular bets. There are five wild bets, which will be explained next.",
+        "title": "WILD 카드 베팅",
+        "description": "소개에서 언급했듯이, 이 게임은 새로운 게임 플레이와 흥미로운 보너스를 도입했습니다. 아래는 그 설명입니다.",
+        "description-2": "Wild 카드는 일반 베팅보다 훨씬 더 큰 보상을 결정하는 중요한 역할을 합니다. 다음은 5가지 wild 베팅에 대한 설명입니다.",
         "dragon-wild": {
-            "title": "Dragon Wild",
-            "content": "This Dragon Wild bet is basically like betting on the Dragon bet, but if the Dragon side wins and the value of its card and the Wild card is the same, you will win."
+            "title": "드래곤 Wild",
+            "content": "드래곤 Wild 베팅은 기본적으로 드래곤 베팅과 같지만, 드래곤이 이기고 카드 값이 Wild 카드와 일치하면 이 베팅에 승리합니다."
         },
         "tiger-wild": {
-            "title": "Tiger Wild",
-            "content": "This Tiger Wild bet is basically like betting on the Tiger bet, but if the Tiger wins and the value of its card and the Wild card is the same, you will win."
+            "title": "타이거 Wild",
+            "content": "타이거 Wild 베팅은 기본적으로 타이거 베팅과 같지만, 타이거가 이기고 카드 값이 Wild 카드와 일치하면 이 베팅에 승리합니다."
         },
         "super-wild": {
-            "title": "Super Wild",
-            "content": "This Super Wild bet is basically like betting on a Tie bet, but if the result is a Tie and the Wild card value matches the Dragon and Tiger card value, you will win."
+            "title": "슈퍼 Wild",
+            "content": "슈퍼 Wild 베팅은 기본적으로 Tie 베팅과 같지만, 결과가 Tie이고 Wild 카드가 드래곤과 타이거 카드 값과 일치하면 이 베팅에 승리합니다."
         },
         "dragon-pair": {
-            "title": "Dragon Pair",
-            "content": "Dragon Pair bet is basically a regular Pair bet, so if the Dragon card value and the wild card value are the same, then you will win this bet."
+            "title": "드래곤 페어",
+            "content": "드래곤 페어 베팅은 일반 페어 베팅과 같지만, 드래곤 카드 값과 Wild 카드가 일치하면 이 베팅에 승리합니다."
         },
         "tiger-pair": {
-            "title": "Tiger Pair",
-            "content": "Tiger Pair bet is basically a regular Pair bet, so if the Tiger card value and the wild card value are the same, then you will win this bet."
+            "title": "타이거 페어",
+            "content": "타이거 페어 베팅은 일반 페어 베팅과 같지만, 타이거 카드 값과 Wild 카드가 일치하면 이 베팅에 승리합니다."
         }
     },
     "side-bet": {
-        "title": "Side Bets",
-        "examples": "Example",
-        "description": "Deskripsi",
+        "title": "사이드 베팅",
+        "examples": "예시",
+        "description": "설명",
         "table": {
             "dragon-wild": {
-                "title": "Dragon Wild",
-                "description": "Paid if the Dragon side wins, and also the value of the Dragon card and the Wild card are the same"
-  
+                "title": "드래곤 Wild",
+                "description": "드래곤이 이기고 드래곤 카드 값과 Wild 카드가 일치하면 지불됩니다."
             },
             "tiger-wild": {
-                "title": "Tiger Wild",
-                "description": "Paid if the Tiger side wins, and also the value of the The Tiger card and the Wild card are the same"
-               
+                "title": "타이거 Wild",
+                "description": "타이거가 이기고 타이거 카드 값과 Wild 카드가 일치하면 지불됩니다."
             },
             "super-wild": {
-                "title": "Super Wild",
-                "description": "Paid if the value of Dragon, Tiger, and Wild cards are the same"
+                "title": "슈퍼 Wild",
+                "description": "드래곤, 타이거, Wild 카드 값이 모두 일치하면 지불됩니다."
             },
             "dragon-pair": {
-                "title": "Dragon Pair",
-                "description": "Paid if the value of the Dragon Card and the Wild Card are the same"
+                "title": "드래곤 페어",
+                "description": "드래곤 카드 값과 Wild 카드가 일치하면 지불됩니다."
             },
             "tiger-pair": {
-                "title": "Tiger Pair",
-                "description": "Paid if the value of the Tiger Card and the Wild Card are the same"
+                "title": "타이거 페어",
+                "description": "타이거 카드 값과 Wild 카드가 일치하면 지불됩니다."
             }
         }
     },
     "payout": {
-        "title": "Payout",
-        "content": "Corresponds to what is in the Payments and Limits menu"
+        "title": "지급",
+        "content": "보상은 보상 테이블과 한도 메뉴에 따라 다릅니다."
     }
 }

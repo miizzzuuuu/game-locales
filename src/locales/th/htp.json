@@ -1,82 +1,82 @@
 {
     "introduction": {
-        "title": "INTRODUCTION",
-        "content": "Dragon Tiger Wild is the latest game from IDNLIVE Europe. If you are familiar with the Dragon Tiger game, you will find a new, exciting, and fun experience in playing this game. In this new game, we add new elements to the dragon tiger game with wild cards, and you will get much higher prizes in this game. Let's get wild!!!"
+        "title": "แนะนำเกม",
+        "content": "Dragon Tiger Wild เป็นเกมล่าสุดจาก IDNLIVE Europe ที่คุณจะได้สัมผัสประสบการณ์ใหม่ที่สนุกและตื่นเต้น หากคุณคุ้นเคยกับเกม Dragon Tiger แล้ว ในเกมใหม่นี้ เราได้เพิ่มส่วนประกอบใหม่ด้วย wild card ที่จะทำให้คุณได้รับรางวัลที่สูงขึ้นอย่างมาก มาเล่นให้ wild กันเถอะ!!!"
     },
     "game-objective": {
-        "title": "Game Objective",
-        "content": "The goal in the Dragon Tiger Wild game is to guess the highest card and also think of the wild card correctly so that your prize is even more significant."
+        "title": "วัตถุประสงค์ของเกม",
+        "content": "วัตถุประสงค์ใน Dragon Tiger Wild คือการทายไพ่ที่สูงที่สุดและทาย wild card ให้ถูกต้องเพื่อให้รางวัลของคุณสูงขึ้น"
     },
     "rules": {
-        "title": "GENERAL RULES",
+        "title": "กฎทั่วไป",
         "steps": [
-            "A Dealer or game guide will host this game.",
-            "This game uses eight sets of cards in one “Shoe”.",
-            "At the beginning of each new “Shoe,” the Dealer will issue one card that will determine how many cards will be “Burned” or discarded for that “Shoe.” Ace cards are worth 1, cards 2 to 10 are worth according to the card, and picture cards are worth 10, so each “Shoe” will discard ten cards at most.",
-            "Card values ​​in Dragon Tiger Wild",
+            "เกมนี้จะถูกดำเนินการโดยดีลเลอร์หรือผู้ดูแลเกม",
+            "เกมนี้ใช้ไพ่ทั้งหมด 8 สำรับใน 1 'Shoe'",
+            "เมื่อเริ่มต้น 'Shoe' ใหม่ ดีลเลอร์จะจั่วไพ่ 1 ใบเพื่อกำหนดจำนวนไพ่ที่ต้อง 'Burn' หรือทิ้งใน 'Shoe' นั้น ไพ่ Ace มีค่าเท่ากับ 1 ไพ่ 2 ถึง 10 มีค่าเท่ากับตัวเลขบนไพ่ และไพ่รูป (Jack, Queen, King) มีค่าเท่ากับ 10 ดังนั้น 'Shoe' จะทิ้งไพ่ได้สูงสุด 10 ใบ",
+            "ค่าไพ่ใน Dragon Tiger Wild:",
             "- Ace = 1",
-            "- 2 to 10 = according to card",
-            "- Jack, Queen, King = 11, 12. 13",
-            "When the betting time runs out, all bets will be accepted automatically.",
-            "The dealer will issue one card as a Wild Card, then give each card to the Dragon and Tiger sides.",
-            "The party with the highest score will be the winner. The highest score is K, which is worth 13.",
-            "If there is a tie, half of the bets on Dragon and Tiger will be returned. Tie bets win only when the Dragon and Tiger values ​​are the same."
+            "- 2 ถึง 10 = ตามหน้าไพ่",
+            "- Jack, Queen, King = 11, 12, 13",
+            "เมื่อเวลาวางเดิมพันหมดลง ทุกการเดิมพันจะถูกยอมรับโดยอัตโนมัติ",
+            "ดีลเลอร์จะจั่วไพ่ 1 ใบเป็น Wild Card แล้วแจกไพ่ให้ทั้งฝั่งมังกรและเสือ 1 ใบ",
+            "ฝั่งที่มีค่าไพ่สูงสุดจะเป็นผู้ชนะ ค่าที่สูงสุดคือ King (13)",
+            "หากเกิดผลเสมอ หรือ Tie การเดิมพันที่มังกรและเสือจะได้รับเงินคืนครึ่งหนึ่ง การเดิมพัน Tie จะชนะก็ต่อเมื่อค่าไพ่ของมังกรและเสือเท่ากัน"
         ]
     },
     "wild-card-bet": {
-        "title": "WILD CARD BET",
-        "description": "As the Introduction mentions, this game has new gameplay elements and exciting bonuses. Here's the explanation.",
-        "description-2": "Wild cards will determine victory, with a prize value greater than regular bets. There are five wild bets, which will be explained next.",
+        "title": "การเดิมพัน Wild Card",
+        "description": "ตามที่กล่าวในบทนำ เกมนี้มีการเพิ่มองค์ประกอบใหม่และโบนัสที่น่าตื่นเต้น โดยมีรายละเอียดดังนี้",
+        "description-2": "Wild card จะเป็นตัวกำหนดผลชนะโดยให้รางวัลที่สูงกว่าเดิมพันปกติ โดยมีการเดิมพัน Wild ทั้ง 5 รูปแบบที่อธิบายต่อไปนี้",
         "dragon-wild": {
-            "title": "Dragon Wild",
-            "content": "This Dragon Wild bet is basically like betting on the Dragon bet, but if the Dragon side wins and the value of its card and the Wild card is the same, you will win."
+            "title": "มังกร Wild",
+            "content": "การเดิมพันมังกร Wild คือการเดิมพันมังกร แต่ถ้าฝั่งมังกรชนะและค่าไพ่ตรงกับ Wild card คุณจะชนะเดิมพันนี้"
         },
         "tiger-wild": {
-            "title": "Tiger Wild",
-            "content": "This Tiger Wild bet is basically like betting on the Tiger bet, but if the Tiger wins and the value of its card and the Wild card is the same, you will win."
+            "title": "เสือ Wild",
+            "content": "การเดิมพันเสือ Wild คือการเดิมพันเสือ แต่ถ้าฝั่งเสือชนะและค่าไพ่ตรงกับ Wild card คุณจะชนะเดิมพันนี้"
         },
         "super-wild": {
             "title": "Super Wild",
-            "content": "This Super Wild bet is basically like betting on a Tie bet, but if the result is a Tie and the Wild card value matches the Dragon and Tiger card value, you will win."
+            "content": "การเดิมพัน Super Wild คือการเดิมพัน Tie แต่ถ้าผลออกมาเสมอและค่าไพ่ของ Wild card ตรงกับค่าไพ่ของมังกรและเสือ คุณจะชนะเดิมพันนี้"
         },
         "dragon-pair": {
-            "title": "Dragon Pair",
-            "content": "Dragon Pair bet is basically a regular Pair bet, so if the Dragon card value and the wild card value are the same, then you will win this bet."
+            "title": "Pair มังกร",
+            "content": "การเดิมพัน Pair มังกร คือการเดิมพันแบบคู่ปกติ แต่ถ้าค่าไพ่ของมังกรและ Wild card ตรงกัน คุณจะชนะเดิมพันนี้"
         },
         "tiger-pair": {
-            "title": "Tiger Pair",
-            "content": "Tiger Pair bet is basically a regular Pair bet, so if the Tiger card value and the wild card value are the same, then you will win this bet."
+            "title": "Pair เสือ",
+            "content": "การเดิมพัน Pair เสือ คือการเดิมพันแบบคู่ปกติ แต่ถ้าค่าไพ่ของเสือและ Wild card ตรงกัน คุณจะชนะเดิมพันนี้"
         }
     },
     "side-bet": {
-        "title": "Side Bets",
-        "examples": "Example",
-        "description": "Deskripsi",
+        "title": "การเดิมพันข้างเคียง",
+        "examples": "ตัวอย่าง",
+        "description": "คำอธิบาย",
         "table": {
             "dragon-wild": {
-                "title": "Dragon Wild",
-                "description": "Paid if the Dragon side wins, and also the value of the Dragon card and the Wild card are the same"
+                "title": "มังกร Wild",
+                "description": "จ่ายเมื่อฝั่งมังกรชนะและค่าไพ่ของมังกรและ Wild card ตรงกัน"
             },
             "tiger-wild": {
-                "title": "Tiger Wild",
-                "description": "Paid if the Tiger side wins, and also the value of the The Tiger card and the Wild card are the same"
+                "title": "เสือ Wild",
+                "description": "จ่ายเมื่อฝั่งเสือชนะและค่าไพ่ของเสือและ Wild card ตรงกัน"
             },
             "super-wild": {
                 "title": "Super Wild",
-                "description": "Paid if the value of Dragon, Tiger, and Wild cards are the same"
+                "description": "จ่ายเมื่อค่าไพ่ของมังกร เสือ และ Wild card ตรงกัน"
             },
             "dragon-pair": {
-                "title": "Dragon Pair",
-                "description": "Paid if the value of the Dragon Card and the Wild Card are the same"
+                "title": "Pair มังกร",
+                "description": "จ่ายเมื่อค่าไพ่ของมังกรและ Wild card ตรงกัน"
             },
             "tiger-pair": {
-                "title": "Tiger Pair",
-                "description": "Paid if the value of the Tiger Card and the Wild Card are the same"
+                "title": "Pair เสือ",
+                "description": "จ่ายเมื่อค่าไพ่ของเสือและ Wild card ตรงกัน"
             }
         }
     },
     "payout": {
-        "title": "Payout",
-        "content": "Corresponds to what is in the Payments and Limits menu"
+        "title": "การจ่ายเงิน",
+        "content": "ตามที่แสดงในเมนูตารางจ่ายเงินและข้อกำหนด"
     }
 }

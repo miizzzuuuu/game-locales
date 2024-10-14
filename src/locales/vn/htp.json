@@ -1,82 +1,82 @@
 {
     "introduction": {
-        "title": "INTRODUCTION",
-        "content": "Dragon Tiger Wild is the latest game from IDNLIVE Europe. If you are familiar with the Dragon Tiger game, you will find a new, exciting, and fun experience in playing this game. In this new game, we add new elements to the dragon tiger game with wild cards, and you will get much higher prizes in this game. Let's get wild!!!"
+        "title": "Giới thiệu",
+        "content": "Dragon Tiger Wild là trò chơi mới nhất từ IDNLIVE Europe, bạn sẽ có cơ hội trải nghiệm một trò chơi thú vị và vui nhộn nếu đã quen với trò chơi Dragon Tiger. Trong trò chơi này, chúng tôi đã thêm yếu tố wild card, mang lại cơ hội nhận thưởng lớn hơn rất nhiều. Hãy cùng chơi để trở nên wild nào!!!"
     },
     "game-objective": {
-        "title": "Game Objective",
-        "content": "The goal in the Dragon Tiger Wild game is to guess the highest card and also think of the wild card correctly so that your prize is even more significant."
+        "title": "MỤC TIÊU TRÒ CHƠI",
+        "content": "Mục tiêu của Dragon Tiger Wild là đoán thẻ cao nhất và đúng thẻ wild để nhận thưởng cao hơn."
     },
     "rules": {
-        "title": "GENERAL RULES",
+        "title": "QUY TẮC CHUNG",
         "steps": [
-            "A Dealer or game guide will host this game.",
-            "This game uses eight sets of cards in one “Shoe”.",
-            "At the beginning of each new “Shoe,” the Dealer will issue one card that will determine how many cards will be “Burned” or discarded for that “Shoe.” Ace cards are worth 1, cards 2 to 10 are worth according to the card, and picture cards are worth 10, so each “Shoe” will discard ten cards at most.",
-            "Card values ​​in Dragon Tiger Wild",
+            "Trò chơi này được dẫn dắt bởi một Dealer hoặc người điều khiển trò chơi.",
+            "Trò chơi sử dụng 8 bộ bài trong một 'Shoe'.",
+            "Vào đầu mỗi 'Shoe' mới, Dealer sẽ rút 1 lá bài để xác định số lượng bài sẽ bị 'Burn' (loại bỏ). Lá Ace có giá trị 1, bài từ 2 đến 10 có giá trị theo số trên bài, và các lá bài hình (Jack, Queen, King) có giá trị 10. Do đó, mỗi 'Shoe' có thể loại bỏ tối đa 10 lá bài.",
+            "Giá trị các lá bài trong Dragon Tiger Wild:",
             "- Ace = 1",
-            "- 2 to 10 = according to card",
-            "- Jack, Queen, King = 11, 12. 13",
-            "When the betting time runs out, all bets will be accepted automatically.",
-            "The dealer will issue one card as a Wild Card, then give each card to the Dragon and Tiger sides.",
-            "The party with the highest score will be the winner. The highest score is K, which is worth 13.",
-            "If there is a tie, half of the bets on Dragon and Tiger will be returned. Tie bets win only when the Dragon and Tiger values ​​are the same."
+            "- 2 đến 10 = theo số trên bài",
+            "- Jack, Queen, King = 11, 12, 13",
+            "Khi hết thời gian đặt cược, tất cả cược sẽ được chấp nhận tự động.",
+            "Dealer sẽ rút một lá bài làm Wild Card, sau đó phát mỗi bên (Rồng và Hổ) một lá bài.",
+            "Bên có giá trị cao nhất sẽ là người chiến thắng. Giá trị cao nhất là King (13).",
+            "Nếu kết quả là hòa, cược trên Rồng và Hổ sẽ được trả lại một nửa. Cược hòa chỉ thắng khi giá trị của Rồng và Hổ là giống nhau."
         ]
     },
     "wild-card-bet": {
-        "title": "WILD CARD BET",
-        "description": "As the Introduction mentions, this game has new gameplay elements and exciting bonuses. Here's the explanation.",
-        "description-2": "Wild cards will determine victory, with a prize value greater than regular bets. There are five wild bets, which will be explained next.",
+        "title": "CƯỢC WILD CARD",
+        "description": "Như đã đề cập trong phần Giới thiệu, trò chơi này có yếu tố gameplay mới và các phần thưởng thú vị. Dưới đây là chi tiết về các cược Wild.",
+        "description-2": "Thẻ Wild sẽ là yếu tố quyết định chiến thắng với phần thưởng lớn hơn so với cược bình thường. Có 5 loại cược wild, chi tiết như sau.",
         "dragon-wild": {
-            "title": "Dragon Wild",
-            "content": "This Dragon Wild bet is basically like betting on the Dragon bet, but if the Dragon side wins and the value of its card and the Wild card is the same, you will win."
+            "title": "Rồng Wild",
+            "content": "Cược Rồng Wild cơ bản giống như cược vào Rồng, nhưng nếu Rồng thắng và giá trị lá bài của Rồng và Wild card trùng khớp, bạn sẽ thắng cược này."
         },
         "tiger-wild": {
-            "title": "Tiger Wild",
-            "content": "This Tiger Wild bet is basically like betting on the Tiger bet, but if the Tiger wins and the value of its card and the Wild card is the same, you will win."
+            "title": "Hổ Wild",
+            "content": "Cược Hổ Wild cơ bản giống như cược vào Hổ, nhưng nếu Hổ thắng và giá trị lá bài của Hổ và Wild card trùng khớp, bạn sẽ thắng cược này."
         },
         "super-wild": {
             "title": "Super Wild",
-            "content": "This Super Wild bet is basically like betting on a Tie bet, but if the result is a Tie and the Wild card value matches the Dragon and Tiger card value, you will win."
+            "content": "Cược Super Wild cơ bản giống như cược Hòa, nhưng nếu kết quả là hòa và giá trị của Wild card trùng với giá trị của cả Rồng và Hổ, bạn sẽ thắng cược này."
         },
         "dragon-pair": {
-            "title": "Dragon Pair",
-            "content": "Dragon Pair bet is basically a regular Pair bet, so if the Dragon card value and the wild card value are the same, then you will win this bet."
+            "title": "Cặp Rồng",
+            "content": "Cược Cặp Rồng cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Rồng và Wild card trùng nhau, bạn sẽ thắng cược này."
         },
         "tiger-pair": {
-            "title": "Tiger Pair",
-            "content": "Tiger Pair bet is basically a regular Pair bet, so if the Tiger card value and the wild card value are the same, then you will win this bet."
+            "title": "Cặp Hổ",
+            "content": "Cược Cặp Hổ cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Hổ và Wild card trùng nhau, bạn sẽ thắng cược này."
         }
     },
     "side-bet": {
-        "title": "Side Bets",
-        "examples": "Example",
-        "description": "Deskripsi",
+        "title": "CƯỢC BÊN",
+        "examples": "Ví dụ",
+        "description": "Mô tả",
         "table": {
             "dragon-wild": {
-                "title": "Dragon Wild",
-                "description": "Paid if the Dragon side wins, and also the value of the Dragon card and the Wild card are the same"
+                "title": "Rồng Wild",
+                "description": "Trả tiền nếu Rồng thắng và giá trị của thẻ Rồng và Wild card trùng nhau"
             },
             "tiger-wild": {
-                "title": "Tiger Wild",
-                "description": "Paid if the Tiger side wins, and also the value of the The Tiger card and the Wild card are the same"
+                "title": "Hổ Wild",
+                "description": "Trả tiền nếu Hổ thắng và giá trị của thẻ Hổ và Wild card trùng nhau"
             },
             "super-wild": {
                 "title": "Super Wild",
-                "description": "Paid if the value of Dragon, Tiger, and Wild cards are the same"
+                "description": "Trả tiền nếu giá trị của Rồng, Hổ và Wild card trùng nhau"
             },
             "dragon-pair": {
-                "title": "Dragon Pair",
-                "description": "Paid if the value of the Dragon Card and the Wild Card are the same"
+                "title": "Cặp Rồng",
+                "description": "Trả tiền nếu giá trị của thẻ Rồng và Wild card trùng nhau"
             },
             "tiger-pair": {
-                "title": "Tiger Pair",
-                "description": "Paid if the value of the Tiger Card and the Wild Card are the same"
+                "title": "Cặp Hổ",
+                "description": "Trả tiền nếu giá trị của thẻ Hổ và Wild card trùng nhau"
             }
         }
     },
     "payout": {
-        "title": "Payout",
-        "content": "Corresponds to what is in the Payments and Limits menu"
+        "title": "Trả Thưởng",
+        "content": "Theo như bảng trả thưởng và giới hạn."
     }
 }
