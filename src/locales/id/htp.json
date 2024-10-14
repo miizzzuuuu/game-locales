@@ -40,11 +40,11 @@
             "content": "Taruhan Super Wild ini pada dasarnya seperti bertaruh pada taruhan Seri namun apabila hasilnya Seri dan juga nilai kartu Wild juga sesuai dengan nilai kartu Naga dan Harimau, maka anda akan memenangkan taruhan ini."
         },
         "dragon-pair": {
-            "title": "Dragon Pair",
+            "title": "Pair Naga",
             "content": "Taruhan Pair Naga pada dasarnya adalah taruhan Pair biasa, jadi apabila Nilai kartu Naga dan nilai kartu wild sama, maka anda akan memenangkan taruhan ini."
         },
         "tiger-pair": {
-            "title": "Tiger Pair",
+            "title": "Pair Harimau",
             "content": "Taruhan Pair Harimau pada dasarnya adalah taruhan Pair biasa, jadi apabila Nilai kartu Harimau dan nilai kartu wild sama, maka anda akan memenangkan taruhan ini."
         }
     },

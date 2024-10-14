@@ -1,6 +1,6 @@
 import LabelTranslate from '../../../../../../common/components/LabelTranslate';
 import { P } from '../../../../../../common/menus/Items/HowToPlay/Components';
-import CardExample from '../CardTable';
+import CardExample, { ICardExample } from '../CardTable';
 import styles from './styles.module.scss';
 
 
@@ -9,37 +9,41 @@ interface IHowtoplayTablebet {
     
 }
 
+export const exampleData: {
+    [key: string]: ICardExample["data"]
+} = {
+    "dragon-wild": {
+        "dragon": "K",
+        "wild": "K",
+        "tiger": "8"
+    },
+    "tiger-wild": 
+    {
+        "dragon": "8",
+        "wild": "K",
+        "tiger": "K"
+    },
+    "super-wild": {
+        "dragon": "K",
+        "wild": "K",
+        "tiger": "K"
+    },
+    "dragon-pair": {
+        "dragon": "K",
+        "wild": "K",
+        "tiger": ""
+    },
+    "tiger-pair": {
+        "dragon": "",
+        "wild": "K",
+        "tiger": "K"
+    }
+    
+}
+
 const SideBetTable = ({ data }: IHowtoplayTablebet) => {
     const keyLang = 'htp.side-bet';
-    const exampleData = {
-        "dragon-wild": {
-            "dragon": "K",
-            "wild": "K",
-            "tiger": "8"
-        },
-        "tiger-wild": 
-        {
-            "dragon": "8",
-            "wild": "K",
-            "tiger": "K"
-        },
-        "super-wild": {
-            "dragon": "K",
-            "wild": "K",
-            "tiger": "K"
-        },
-        "dragon-pair": {
-            "dragon": "K",
-            "wild": "K",
-            "tiger": ""
-        },
-        "tiger-pair": {
-            "dragon": "",
-            "wild": "K",
-            "tiger": "K"
-        }
-        
-    }
+
     return (
         <div className={styles['table-wrapper']}>
             <table className={styles.table}>
