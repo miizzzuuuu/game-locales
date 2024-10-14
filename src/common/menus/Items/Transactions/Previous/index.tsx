@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import LabelTranslate from '../../../../components/LabelTranslate';
 import { StringHelper } from '../../../../utils/StringHelper';
-import { TransactionHelper } from '../../../../utils/TransactionHelper';
+import { groupTransactionsByDate } from '../../../../utils/TransactionHelper';
 import Card from '../Card';
 import CardContainer from '../CardContainer';
 import ContentEmpty from '../ContentEmpty';
@@ -12,7 +12,7 @@ const Previous = () => {
     const { i18n } = useTranslation();
 
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'before' });
-    const groupTransaction = TransactionHelper.groupTransactionsByDate(transactionData);
+    const groupTransaction = groupTransactionsByDate(transactionData);
 
     return (
         <div className={styles.container}>
