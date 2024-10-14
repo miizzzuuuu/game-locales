@@ -84,6 +84,7 @@
 }
 
 .middle.left {
+    margin-right: var(--center-half);
     width: calc((var(--width) - 0.2rem) / 2 - var(--center-half));
     border-radius: 0.4rem 0 0 0.4rem;
 }
