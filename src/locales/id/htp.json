@@ -55,53 +55,24 @@
         "table": {
             "dragon-wild": {
                 "title": "Naga Wild",
-                "description": "Dibayar jika Pihak Naga menang dan juga nilai kartu Naga dan kartu Wild sama",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": "8"
-                    }
+                "description": "Dibayar jika Pihak Naga menang dan juga nilai kartu Naga dan kartu Wild sama"
             },
             "tiger-wild": {
                 "title": "Harimau Wild",
-                "description": "Dibayar jika Pihak Harimau menang dan juga nilai kartu Harimau dan kartu Wild sama",
-                "examples": 
-                    {
-                        "dragon": "8",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Dibayar jika Pihak Harimau menang dan juga nilai kartu Harimau dan kartu Wild sama"
+
             },
             "super-wild": {
                 "title": "Super Wild",
-                "description": "Dibayar jika nilai kartu Naga, Harimau dan Wild sama",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Dibayar jika nilai kartu Naga, Harimau dan Wild sama"
             },
             "dragon-pair": {
                 "title": "Pair Naga",
-                "description": "Dibayar jika nilai Kartu Naga dan kartu Wild sama",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": ""
-                    }
+                "description": "Dibayar jika nilai Kartu Naga dan kartu Wild sama"
             },
             "tiger-pair": {
                 "title": "Pair Harimau",
-                "description": "Dibayar jika nilai Kartu Harimau dan kartu Wild sama",
-                "examples": 
-                    {
-                        "dragon": "",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Dibayar jika nilai Kartu Harimau dan kartu Wild sama"
             }
         }
     },

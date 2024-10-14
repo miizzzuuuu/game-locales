@@ -1,15 +1,45 @@
 import LabelTranslate from '../../../../../../common/components/LabelTranslate';
 import { P } from '../../../../../../common/menus/Items/HowToPlay/Components';
+import CardExample from '../CardTable';
 import styles from './styles.module.scss';
 
 
 interface IHowtoplayTablebet {
     data: string[]
+    
 }
 
 const SideBetTable = ({ data }: IHowtoplayTablebet) => {
     const keyLang = 'htp.side-bet';
-
+    const exampleData = {
+        "dragon-wild": {
+            "dragon": "K",
+            "wild": "K",
+            "tiger": "8"
+        },
+        "tiger-wild": 
+        {
+            "dragon": "8",
+            "wild": "K",
+            "tiger": "K"
+        },
+        "super-wild": {
+            "dragon": "K",
+            "wild": "K",
+            "tiger": "K"
+        },
+        "dragon-pair": {
+            "dragon": "K",
+            "wild": "K",
+            "tiger": ""
+        },
+        "tiger-pair": {
+            "dragon": "",
+            "wild": "K",
+            "tiger": "K"
+        }
+        
+    }
     return (
         <div className={styles['table-wrapper']}>
             <table className={styles.table}>
@@ -34,14 +64,11 @@ const SideBetTable = ({ data }: IHowtoplayTablebet) => {
                             <td>
                                 <P keyLang={'htp.side-bet.table.'.concat(tableKeyLang)} value='description' className={`${styles['text-center']}`}></P>
                             </td>
-                            <td>
-                                <LabelTranslate value="dragon" keyLang={'htp.side-bet.table.'.concat(tableKeyLang).concat('.examples')} />
-                                <LabelTranslate value="tiger" keyLang={'htp.side-bet.table.'.concat(tableKeyLang).concat('.examples')} />
-                                <LabelTranslate value="wild" keyLang={'htp.side-bet.table.'.concat(tableKeyLang).concat('.examples')} />
+                            <td className={styles['card']}>
+                                <CardExample data={exampleData[tableKeyLang]} />
                             </td>
                         </tr>
                     ))}
-
                 </tbody>
             </table>
         </div>

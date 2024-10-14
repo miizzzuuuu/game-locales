@@ -55,53 +55,25 @@
         "table": {
             "dragon-wild": {
                 "title": "Dragon Wild",
-                "description": "Paid if the Dragon side wins, and also the value of the Dragon card and the Wild card are the same",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": "8"
-                    }
+                "description": "Paid if the Dragon side wins, and also the value of the Dragon card and the Wild card are the same"
+  
             },
             "tiger-wild": {
                 "title": "Tiger Wild",
-                "description": "Paid if the Tiger side wins, and also the value of the The Tiger card and the Wild card are the same",
-                "examples": 
-                    {
-                        "dragon": "8",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Paid if the Tiger side wins, and also the value of the The Tiger card and the Wild card are the same"
+               
             },
             "super-wild": {
                 "title": "Super Wild",
-                "description": "Paid if the value of Dragon, Tiger, and Wild cards are the same",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Paid if the value of Dragon, Tiger, and Wild cards are the same"
             },
             "dragon-pair": {
                 "title": "Dragon Pair",
-                "description": "Paid if the value of the Dragon Card and the Wild Card are the same",
-                "examples": 
-                    {
-                        "dragon": "K",
-                        "wild": "K",
-                        "tiger": ""
-                    }
+                "description": "Paid if the value of the Dragon Card and the Wild Card are the same"
             },
             "tiger-pair": {
                 "title": "Tiger Pair",
-                "description": "Paid if the value of the Tiger Card and the Wild Card are the same",
-                "examples": 
-                    {
-                        "dragon": "",
-                        "wild": "K",
-                        "tiger": "K"
-                    }
+                "description": "Paid if the value of the Tiger Card and the Wild Card are the same"
             }
         }
     },

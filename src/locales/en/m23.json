@@ -4,6 +4,7 @@
     "dragonwild": "dragon wild",
     "tigerwild": "tiger wild",
     "dragon": "dragon",
+    "wild": "wild",
     "superwild": "super wild",
     "tie": "tie",
     "tiger": "tiger",
@@ -13,7 +14,6 @@
     "even": "even",
     "red": "red",
     "black": "black",
-
     "wild bet": "Wild Bet",
     "dragon wild": "dragon wild",
     "tiger wild": "tiger wild",
