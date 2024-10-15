@@ -37,14 +37,7 @@ const BetDragonWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 </div>
             </div>
 
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    left: '70%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
         </div>
     );
 };

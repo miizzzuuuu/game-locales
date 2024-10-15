@@ -36,14 +36,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 </div>
             </div>
 
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    left: '80%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
 
             <div className={`${styles['slot-card']}`} style={{}}>
                 <RenderCard

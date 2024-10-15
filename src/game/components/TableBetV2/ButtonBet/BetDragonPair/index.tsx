@@ -14,7 +14,11 @@ const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const isLose = !betIsOpen && scanNumber && scanNumber.submit && !(scanNumber.dragon_value == scanNumber.wild_value);
+    const isLose =
+        !betIsOpen &&
+        scanNumber &&
+        scanNumber.submit &&
+        !(scanNumber.dragon_value == scanNumber.wild_value);
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
     return (
@@ -30,14 +34,7 @@ const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 </div>
             </div>
 
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    left: '70%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
         </div>
     );
 };

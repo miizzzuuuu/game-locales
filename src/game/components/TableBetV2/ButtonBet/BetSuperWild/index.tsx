@@ -36,15 +36,7 @@ const BetSuperWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
                 </div>
             </div>
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    top: '65%',
-                    left: '20%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
         </div>
     );
 };

@@ -14,7 +14,12 @@ const BetTigerWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const isLose =
-        scanNumber && scanNumber.submit && !(scanNumber.tiger_value == scanNumber.wild_value && scanNumber.wild_value > scanNumber.dragon_value);
+        scanNumber &&
+        scanNumber.submit &&
+        !(
+            scanNumber.tiger_value == scanNumber.wild_value &&
+            scanNumber.wild_value > scanNumber.dragon_value
+        );
     const isWin = !betIsOpen && scanNumber && scanNumber.submit && !isLose;
 
     return (
@@ -31,14 +36,7 @@ const BetTigerWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 </div>
             </div>
 
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    left: '30%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
         </div>
     );
 };

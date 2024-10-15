@@ -31,15 +31,7 @@ const BetTie = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 </div>
             </div>
 
-            <div
-                className={styles['slot-chip']}
-                style={{
-                    top: '35%',
-                    left: '80%',
-                }}
-            >
-                {chip > 0 && <ChipBet value={chip} />}
-            </div>
+            <div className={styles['slot-chip']}>{chip > 0 && <ChipBet value={chip} />}</div>
         </div>
     );
 };
