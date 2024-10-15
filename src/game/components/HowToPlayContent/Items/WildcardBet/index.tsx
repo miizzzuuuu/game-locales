@@ -1,3 +1,4 @@
+import { Fragment } from 'react/jsx-runtime';
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
 import { Container, P, Ul } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
@@ -17,9 +18,9 @@ const WildcardBet = () => {
                     <li key={'description-2'}>
                         <P keyLang={keyLang} value="description-2" />
                     </li>
-                    {
-                        wildcardkeys.map((key) => {
-                            return <>
+                    {wildcardkeys.map((key) => {
+                        return (
+                            <Fragment key={'wildcardkeys-'.concat(key)}>
                                 <Ul>
                                     <li key={key}>
                                         <P keyLang={keyLang} value={key.concat('.title')} />
@@ -29,10 +30,9 @@ const WildcardBet = () => {
                                 <li key={key}>
                                     <P keyLang={keyLang} value={key.concat('.content')} />
                                 </li>
-
-                            </>
-                        })
-                    }
+                            </Fragment>
+                        );
+                    })}
                 </Ul>
             </Container>
         </HowToPlayCard>
