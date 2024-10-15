@@ -6,9 +6,10 @@ interface IProps {
     isActive: boolean;
     animationSrc: string;
     style?: CSSProperties;
+    className?: string;
 }
 
-const Graphic = ({ isActive, animationSrc, style }: IProps) => {
+const Graphic = ({ isActive, animationSrc, style, className }: IProps) => {
     const lottieRef = useRef<ILottie>(null);
 
     useEffect(() => {
@@ -25,7 +26,14 @@ const Graphic = ({ isActive, animationSrc, style }: IProps) => {
 
     return (
         <div className={styles.container}>
-            <Lottie src={animationSrc} loop autoplay style={style} ref={lottieRef} />
+            <Lottie
+                src={animationSrc}
+                loop
+                autoplay
+                style={style}
+                className={className}
+                ref={lottieRef}
+            />
         </div>
     );
 };
