@@ -56,12 +56,6 @@ export class TransactionHelper {
         return item.pcode.startsWith('p9b');
     };
 
-    static isDragonTigerWild = (
-        item: Transaction<string>,
-    ): item is Transaction<PcodeDragonTigerWild> => {
-        return /^m23[bc]$/.test(item.pcode);
-    };
-
     static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
         return item.pcode.startsWith('p12');
     };
