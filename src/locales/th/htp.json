@@ -48,49 +48,54 @@
             "content": "การเดิมพัน Pair เสือ คือการเดิมพันแบบคู่ปกติ แต่ถ้าค่าไพ่ของเสือและ Wild card ตรงกัน คุณจะชนะเดิมพันนี้"
         }
     },
-    "main-bet": {
-        "title": "เดิมพันหลัก",
-        "examples": "ตัวอย่าง",
+    "bet-description-and-example": {
+        "title": "คำอธิบายการเดิมพันและตัวอย่าง",
         "description": "คำอธิบาย",
-        "table": {
-            "dragon": {
-                "title": "มังกร",
-                "description": "จ่ายเมื่อค่าของมังกรสูงกว่าค่าของเสือ"
-            },
-            "tiger": {
-                "title": "เสือ",
-                "description": "จ่ายเมื่อค่าของเสือสูงกว่าค่าของมังกร"
-            },
-            "tie": {
-                "title": "เสมอ",
-                "description": "จ่ายเมื่อการ์ดของมังกรและเสือมีค่าเท่ากัน"
+        "examples": "ตัวอย่าง",
+        "main-bet": {
+            "title": "เดิมพันหลัก",
+            "examples": "ตัวอย่าง",
+            "description": "คำอธิบาย",
+            "table": {
+                "dragon": {
+                    "title": "มังกร",
+                    "description": "จ่ายเมื่อค่าของมังกรสูงกว่าค่าของเสือ"
+                },
+                "tiger": {
+                    "title": "เสือ",
+                    "description": "จ่ายเมื่อค่าของเสือสูงกว่าค่าของมังกร"
+                },
+                "tie": {
+                    "title": "เสมอ",
+                    "description": "จ่ายเมื่อการ์ดของมังกรและเสือมีค่าเท่ากัน"
+                }
             }
-        }
-    },
-    "side-bet": {
-        "title": "การเดิมพันข้างเคียง",
-        "examples": "ตัวอย่าง",
-        "description": "คำอธิบาย",
-        "table": {
-            "dragon-wild": {
-                "title": "มังกร Wild",
-                "description": "จ่ายเมื่อฝั่งมังกรชนะและค่าไพ่ของมังกรและ Wild card ตรงกัน"
-            },
-            "tiger-wild": {
-                "title": "เสือ Wild",
-                "description": "จ่ายเมื่อฝั่งเสือชนะและค่าไพ่ของเสือและ Wild card ตรงกัน"
-            },
-            "super-wild": {
-                "title": "Super Wild",
-                "description": "จ่ายเมื่อค่าไพ่ของมังกร เสือ และ Wild card ตรงกัน"
-            },
-            "dragon-pair": {
-                "title": "Pair มังกร",
-                "description": "จ่ายเมื่อค่าไพ่ของมังกรและ Wild card ตรงกัน"
-            },
-            "tiger-pair": {
-                "title": "Pair เสือ",
-                "description": "จ่ายเมื่อค่าไพ่ของเสือและ Wild card ตรงกัน"
+        },
+        "side-bet": {
+            "title": "การเดิมพันข้างเคียง",
+            "examples": "ตัวอย่าง",
+            "description": "คำอธิบาย",
+            "table": {
+                "dragon-wild": {
+                    "title": "มังกร Wild",
+                    "description": "จ่ายเมื่อฝั่งมังกรชนะและค่าไพ่ของมังกรและ Wild card ตรงกัน"
+                },
+                "tiger-wild": {
+                    "title": "เสือ Wild",
+                    "description": "จ่ายเมื่อฝั่งเสือชนะและค่าไพ่ของเสือและ Wild card ตรงกัน"
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "จ่ายเมื่อค่าไพ่ของมังกร เสือ และ Wild card ตรงกัน"
+                },
+                "dragon-pair": {
+                    "title": "Pair มังกร",
+                    "description": "จ่ายเมื่อค่าไพ่ของมังกรและ Wild card ตรงกัน"
+                },
+                "tiger-pair": {
+                    "title": "Pair เสือ",
+                    "description": "จ่ายเมื่อค่าไพ่ของเสือและ Wild card ตรงกัน"
+                }
             }
         }
     },

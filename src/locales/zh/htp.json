@@ -48,49 +48,54 @@
             "content": "虎对子投注基本上是普通对子投注，但如果虎的点数与 Wild card 相同，你将赢得这项投注。"
         }
     },
-    "main-bet": {
-        "title": "主要投注",
-        "examples": "示例",
+    "bet-description-and-example": {
+        "title": "投注描述和示例",
         "description": "描述",
-        "table": {
-            "dragon": {
-                "title": "龙",
-                "description": "当龙的点数大于虎的点数时支付。"
-            },
-            "tiger": {
-                "title": "虎",
-                "description": "当虎的点数大于龙的点数时支付。"
-            },
-            "tie": {
-                "title": "平局",
-                "description": "当龙和虎的点数相同时支付。"
+        "examples": "示例",
+        "main-bet": {
+            "title": "主要投注",
+            "examples": "示例",
+            "description": "描述",
+            "table": {
+                "dragon": {
+                    "title": "龙",
+                    "description": "当龙的点数大于虎的点数时支付。"
+                },
+                "tiger": {
+                    "title": "虎",
+                    "description": "当虎的点数大于龙的点数时支付。"
+                },
+                "tie": {
+                    "title": "平局",
+                    "description": "当龙和虎的点数相同时支付。"
+                }
             }
-        }
-    },
-    "side-bet": {
-        "title": "边注",
-        "examples": "示例",
-        "description": "描述",
-        "table": {
-            "dragon-wild": {
-                "title": "龙 Wild",
-                "description": "当龙获胜并且龙的卡牌点数与 Wild card 相同时，支付奖励。"
-            },
-            "tiger-wild": {
-                "title": "虎 Wild",
-                "description": "当虎获胜并且虎的卡牌点数与 Wild card 相同时，支付奖励。"
-            },
-            "super-wild": {
-                "title": "Super Wild",
-                "description": "当龙、虎和 Wild card 的点数相同时，支付奖励。"
-            },
-            "dragon-pair": {
-                "title": "龙对子",
-                "description": "当龙的卡牌点数与 Wild card 相同时，支付奖励。"
-            },
-            "tiger-pair": {
-                "title": "虎对子",
-                "description": "当虎的卡牌点数与 Wild card 相同时，支付奖励。"
+        },
+        "side-bet": {
+            "title": "边注",
+            "examples": "示例",
+            "description": "描述",
+            "table": {
+                "dragon-wild": {
+                    "title": "龙 Wild",
+                    "description": "当龙获胜并且龙的卡牌点数与 Wild card 相同时，支付奖励。"
+                },
+                "tiger-wild": {
+                    "title": "虎 Wild",
+                    "description": "当虎获胜并且虎的卡牌点数与 Wild card 相同时，支付奖励。"
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "当龙、虎和 Wild card 的点数相同时，支付奖励。"
+                },
+                "dragon-pair": {
+                    "title": "龙对子",
+                    "description": "当龙的卡牌点数与 Wild card 相同时，支付奖励。"
+                },
+                "tiger-pair": {
+                    "title": "虎对子",
+                    "description": "当虎的卡牌点数与 Wild card 相同时，支付奖励。"
+                }
             }
         }
     },

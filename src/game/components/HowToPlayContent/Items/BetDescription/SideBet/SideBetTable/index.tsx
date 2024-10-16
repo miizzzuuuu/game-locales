@@ -1,5 +1,5 @@
-import LabelTranslate from '../../../../../../common/components/LabelTranslate';
-import { P } from '../../../../../../common/menus/Items/HowToPlay/Components';
+import LabelTranslate from './../../../../../../../common/components/LabelTranslate';
+import { P } from './../../../../../../../common/menus/Items/HowToPlay/Components';
 import CardExample, { ICardExample } from '../CardTable';
 import styles from './styles.module.scss';
 
@@ -10,22 +10,35 @@ interface IHowtoplayTablebet {
 export const exampleData: {
     [key: string]: ICardExample['data'];
 } = {
-    dragon: {
+    'dragon-wild': {
         dragon: 'K',
-        tiger: '7',
+        wild: 'K',
+        tiger: '8',
     },
-    tiger: {
-        dragon: '7',
+    'tiger-wild': {
+        dragon: '8',
+        wild: 'K',
         tiger: 'K',
     },
-    tie: {
+    'super-wild': {
         dragon: 'K',
+        wild: 'K',
+        tiger: 'K',
+    },
+    'dragon-pair': {
+        dragon: 'K',
+        wild: 'K',
+        tiger: '',
+    },
+    'tiger-pair': {
+        dragon: '',
+        wild: 'K',
         tiger: 'K',
     },
 };
 
-const BetTable = ({ data }: IHowtoplayTablebet) => {
-    const keyLang = 'htp.main-bet';
+const SideBetTable = ({ data }: IHowtoplayTablebet) => {
+    const keyLang = 'htp.bet-description-and-example.side-bet';
 
     return (
         <div className={styles['table-wrapper']}>
@@ -60,14 +73,14 @@ const BetTable = ({ data }: IHowtoplayTablebet) => {
                         <tr key={index} className={``}>
                             <td className="text-nowrap">
                                 <LabelTranslate
-                                    keyLang={'htp.main-bet.table.'.concat(tableKeyLang)}
+                                    keyLang={'htp.side-bet.table.'.concat(tableKeyLang)}
                                     value="title"
                                     className="text-capitalize"
                                 />
                             </td>
                             <td>
                                 <P
-                                    keyLang={'htp.main-bet.table.'.concat(tableKeyLang)}
+                                    keyLang={'htp.side-bet.table.'.concat(tableKeyLang)}
                                     value="description"
                                     className={`${styles['text-center']}`}
                                 ></P>
@@ -83,4 +96,4 @@ const BetTable = ({ data }: IHowtoplayTablebet) => {
     );
 };
 
-export default BetTable;
+export default SideBetTable;

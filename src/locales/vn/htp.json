@@ -48,49 +48,54 @@
             "content": "Cược Cặp Hổ cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Hổ và Wild card trùng nhau, bạn sẽ thắng cược này."
         }
     },
-    "main-bet": {
-        "title": "CÁC CƯỢC CHÍNH",
-        "examples": "Ví dụ",
+    "bet-description-and-example": {
+        "title": "Mô tả cược và ví dụ",
         "description": "Mô tả",
-        "table": {
-            "dragon": {
-                "title": "Rồng",
-                "description": "Thanh toán nếu giá trị của Rồng cao hơn giá trị của Hổ."
-            },
-            "tiger": {
-                "title": "Hổ",
-                "description": "Thanh toán nếu giá trị của Hổ cao hơn giá trị của Rồng."
-            },
-            "tie": {
-                "title": "Hòa",
-                "description": "Thanh toán nếu giá trị của Rồng và Hổ bằng nhau."
+        "examples": "Ví dụ",
+        "main-bet": {
+            "title": "CÁC CƯỢC CHÍNH",
+            "examples": "Ví dụ",
+            "description": "Mô tả",
+            "table": {
+                "dragon": {
+                    "title": "Rồng",
+                    "description": "Thanh toán nếu giá trị của Rồng cao hơn giá trị của Hổ."
+                },
+                "tiger": {
+                    "title": "Hổ",
+                    "description": "Thanh toán nếu giá trị của Hổ cao hơn giá trị của Rồng."
+                },
+                "tie": {
+                    "title": "Hòa",
+                    "description": "Thanh toán nếu giá trị của Rồng và Hổ bằng nhau."
+                }
             }
-        }
-    },
-    "side-bet": {
-        "title": "CƯỢC BÊN",
-        "examples": "Ví dụ",
-        "description": "Mô tả",
-        "table": {
-            "dragon-wild": {
-                "title": "Rồng Wild",
-                "description": "Trả tiền nếu Rồng thắng và giá trị của thẻ Rồng và Wild card trùng nhau"
-            },
-            "tiger-wild": {
-                "title": "Hổ Wild",
-                "description": "Trả tiền nếu Hổ thắng và giá trị của thẻ Hổ và Wild card trùng nhau"
-            },
-            "super-wild": {
-                "title": "Super Wild",
-                "description": "Trả tiền nếu giá trị của Rồng, Hổ và Wild card trùng nhau"
-            },
-            "dragon-pair": {
-                "title": "Cặp Rồng",
-                "description": "Trả tiền nếu giá trị của thẻ Rồng và Wild card trùng nhau"
-            },
-            "tiger-pair": {
-                "title": "Cặp Hổ",
-                "description": "Trả tiền nếu giá trị của thẻ Hổ và Wild card trùng nhau"
+        },
+        "side-bet": {
+            "title": "CƯỢC BÊN",
+            "examples": "Ví dụ",
+            "description": "Mô tả",
+            "table": {
+                "dragon-wild": {
+                    "title": "Rồng Wild",
+                    "description": "Trả tiền nếu Rồng thắng và giá trị của thẻ Rồng và Wild card trùng nhau"
+                },
+                "tiger-wild": {
+                    "title": "Hổ Wild",
+                    "description": "Trả tiền nếu Hổ thắng và giá trị của thẻ Hổ và Wild card trùng nhau"
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Trả tiền nếu giá trị của Rồng, Hổ và Wild card trùng nhau"
+                },
+                "dragon-pair": {
+                    "title": "Cặp Rồng",
+                    "description": "Trả tiền nếu giá trị của thẻ Rồng và Wild card trùng nhau"
+                },
+                "tiger-pair": {
+                    "title": "Cặp Hổ",
+                    "description": "Trả tiền nếu giá trị của thẻ Hổ và Wild card trùng nhau"
+                }
             }
         }
     },
