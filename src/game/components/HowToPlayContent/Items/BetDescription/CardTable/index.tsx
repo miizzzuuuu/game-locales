@@ -1,12 +1,13 @@
-import LabelTranslate from '../../../../../../../common/components/LabelTranslate';
-import { getBasePcode } from '../../../../../../../common/utils/GameHelper';
-import { RenderCardV2 } from '../../../../../ResultDTWildTransaction/base/rcard-v2';
+import LabelTranslate from '../../../../../../common/components/LabelTranslate';
+import { getBasePcode } from '../../../../../../common/utils/GameHelper';
+import { RenderCardV2 } from '../../../../ResultDTWildTransaction/base/rcard-v2';
 import styles from './style.module.scss';
 
 export interface ICardExample {
     data: {
-        dragon: string;
-        tiger: string;
+        dragon?: string;
+        tiger?: string;
+        wild?: string;
     };
 }
 

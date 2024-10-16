@@ -1,6 +1,6 @@
 import LabelTranslate from '../../../../../../../common/components/LabelTranslate';
 import { P } from '../../../../../../../common/menus/Items/HowToPlay/Components';
-import CardExample, { ICardExample } from '../CardTable';
+import CardExample, { ICardExample } from '../../CardTable';
 import styles from './styles.module.scss';
 
 interface IHowtoplayTablebet {
@@ -11,20 +11,20 @@ export const exampleData: {
     [key: string]: ICardExample['data'];
 } = {
     dragon: {
-        dragon: 'K',
-        tiger: '7',
+        dragon: 'Ks',
+        tiger: '7h',
     },
     tiger: {
-        dragon: '7',
-        tiger: 'K',
+        dragon: '7c',
+        tiger: 'Kd',
     },
     tie: {
-        dragon: 'K',
-        tiger: 'K',
+        dragon: 'Kd',
+        tiger: 'Ks',
     },
 };
 
-const BetTable = ({ data }: IHowtoplayTablebet) => {
+const MainBetTable = ({ data }: IHowtoplayTablebet) => {
     const keyLang = 'htp.bet-description-and-example.main-bet';
 
     return (
@@ -60,14 +60,18 @@ const BetTable = ({ data }: IHowtoplayTablebet) => {
                         <tr key={index} className={``}>
                             <td className="text-nowrap">
                                 <LabelTranslate
-                                    keyLang={'htp.main-bet.table.'.concat(tableKeyLang)}
+                                    keyLang={'htp.bet-description-and-example.main-bet.table.'.concat(
+                                        tableKeyLang,
+                                    )}
                                     value="title"
                                     className="text-capitalize"
                                 />
                             </td>
                             <td>
                                 <P
-                                    keyLang={'htp.main-bet.table.'.concat(tableKeyLang)}
+                                    keyLang={'htp.bet-description-and-example.main-bet.table.'.concat(
+                                        tableKeyLang,
+                                    )}
                                     value="description"
                                     className={`${styles['text-center']}`}
                                 ></P>
@@ -83,4 +87,4 @@ const BetTable = ({ data }: IHowtoplayTablebet) => {
     );
 };
 
-export default BetTable;
+export default MainBetTable;

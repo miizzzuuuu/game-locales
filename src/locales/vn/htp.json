@@ -54,6 +54,7 @@
         "examples": "Ví dụ",
         "main-bet": {
             "title": "CÁC CƯỢC CHÍNH",
+            "heading": "CÁC CƯỢC CHÍNH",
             "examples": "Ví dụ",
             "description": "Mô tả",
             "table": {
@@ -73,6 +74,7 @@
         },
         "side-bet": {
             "title": "CƯỢC BÊN",
+            "heading": "CƯỢC BÊN",
             "examples": "Ví dụ",
             "description": "Mô tả",
             "table": {

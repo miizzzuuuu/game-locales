@@ -54,6 +54,7 @@
         "examples": "ตัวอย่าง",
         "main-bet": {
             "title": "เดิมพันหลัก",
+            "heading": "เดิมพันหลัก",
             "examples": "ตัวอย่าง",
             "description": "คำอธิบาย",
             "table": {
@@ -73,6 +74,7 @@
         },
         "side-bet": {
             "title": "การเดิมพันข้างเคียง",
+            "heading": "การเดิมพันข้างเคียง",
             "examples": "ตัวอย่าง",
             "description": "คำอธิบาย",
             "table": {

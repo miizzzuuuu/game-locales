@@ -54,6 +54,7 @@
         "examples": "Contoh",
         "main-bet": {
             "title": "TARUHAN UTAMA",
+            "heading": "TARUHAN UTAMA",
             "examples": "Contoh",
             "description": "Deskripsi",
             "table": {
@@ -73,6 +74,7 @@
         },
         "side-bet": {
             "title": "TARUHAN SAMPINGAN",
+            "heading": "TARUHAN SAMPINGAN",
             "examples": "Contoh",
             "description": "Deskripsi",
             "table": {

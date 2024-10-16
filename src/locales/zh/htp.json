@@ -54,6 +54,7 @@
         "examples": "示例",
         "main-bet": {
             "title": "主要投注",
+            "heading": "主要投注",
             "examples": "示例",
             "description": "描述",
             "table": {
@@ -73,6 +74,7 @@
         },
         "side-bet": {
             "title": "边注",
+            "heading": "边注",
             "examples": "示例",
             "description": "描述",
             "table": {

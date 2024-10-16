@@ -54,6 +54,7 @@
         "examples": "Examples",
         "main-bet": {
             "title": "MAIN BET",
+            "heading": "MAIN BET",
             "examples": "Examples",
             "description": "Description",
             "table": {
@@ -73,6 +74,7 @@
         },
         "side-bet": {
             "title": "Side Bets",
+            "heading": "Side Bets",
             "examples": "Example",
             "description": "Deskripsi",
             "table": {
