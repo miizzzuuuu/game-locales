@@ -10,6 +10,7 @@ import {
     PcodeDice6,
     PcodeDice6Fever,
     PcodeDomino,
+    PcodeDragonTiger,
     PcodeDragonTigerWild,
     PcodeRedWhite,
     PcodeRoulette,
@@ -74,6 +75,14 @@ export class TransactionHelper {
 
     static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
         return item.pcode.startsWith('m22');
+    };
+
+    static isDragonTiger = (item: Transaction<string>): item is Transaction<PcodeDragonTiger> => {
+        return (
+            item.pcode.startsWith('m23') &&
+            !item.pcode.startsWith('m23b') &&
+            !item.pcode.startsWith('m23c')
+        );
     };
 
     static isDragonTigerWild = (
