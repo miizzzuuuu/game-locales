@@ -974,6 +974,234 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 1000000,
         },
     ],
+    m23: [
+        {
+            name: 'dragon',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tiger',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tie',
+            payout: 8,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                {
+                    name: 'big',
+                    payout: 1,
+                },
+                {
+                    name: 'small',
+                    payout: 1,
+                },
+                {
+                    name: 'odd',
+                    payout: 1,
+                },
+                {
+                    name: 'even',
+                    payout: 1,
+                },
+                {
+                    name: 'red',
+                    payout: 1,
+                },
+                {
+                    name: 'black',
+                    payout: 1,
+                },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
+    m23b: [
+        {
+            name: 'dragon',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tiger',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tie',
+            payout: 11,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'wild bet',
+            payout: null,
+            items: [
+                {
+                    name: 'dragon wild',
+                    payout: 24,
+                },
+                {
+                    name: 'tiger wild',
+                    payout: 24,
+                },
+                {
+                    name: 'super wild',
+                    payout: 127,
+                },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'pair bet',
+            payout: null,
+            items: [
+                {
+                    name: 'dragon pair',
+                    payout: 11,
+                },
+                {
+                    name: 'tiger pair',
+                    payout: 11,
+                },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+    ],
+    m23c: [
+        {
+            name: 'dragon',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tiger',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tie',
+            payout: 11,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'wild bet',
+            payout: null,
+            items: [
+                {
+                    name: 'dragon wild',
+                    payout: 24,
+                },
+                {
+                    name: 'tiger wild',
+                    payout: 24,
+                },
+                {
+                    name: 'super wild',
+                    payout: 127,
+                },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'pair bet',
+            payout: null,
+            items: [
+                {
+                    name: 'dragon pair',
+                    payout: 11,
+                },
+                {
+                    name: 'tiger pair',
+                    payout: 11,
+                },
+            ],
+            min: 1000,
+            max: 1000000,
+        },
+    ],
+    m23d: [
+        {
+            name: 'dragon',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tiger',
+            payout: 1,
+            items: [],
+            min: 5000,
+            max: 5000000,
+        },
+        {
+            name: 'tie',
+            payout: 8,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                {
+                    name: 'big',
+                    payout: 1,
+                },
+                {
+                    name: 'small',
+                    payout: 1,
+                },
+                {
+                    name: 'odd',
+                    payout: 1,
+                },
+                {
+                    name: 'even',
+                    payout: 1,
+                },
+                {
+                    name: 'red',
+                    payout: 1,
+                },
+                {
+                    name: 'black',
+                    payout: 1,
+                },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
     m46: [
         {
             name: 'player bet',
