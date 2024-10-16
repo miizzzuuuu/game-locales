@@ -2,6 +2,7 @@ import { MenuContentContainer } from '../../../common/menus/MenuContentContainer
 import GameObjective from './Items/GameObjective';
 import Introduction from './Items/Introduction';
 import SideBet from './Items/SideBet';
+import MainBet from './Items/MainBet';
 import Payout from './Items/Payout';
 import Rules from './Items/Rules';
 import WildcardBet from './Items/WildcardBet';
@@ -12,6 +13,7 @@ const HowToPlayContent = () => {
             <Introduction />
             <GameObjective />
             <WildcardBet />
+            <MainBet />
             <SideBet />
             <Rules />
             <Payout />

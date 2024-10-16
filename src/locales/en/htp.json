@@ -48,6 +48,25 @@
             "content": "Tiger Pair bet is basically a regular Pair bet, so if the Tiger card value and the wild card value are the same, then you will win this bet."
         }
     },
+    "main-bet": {
+        "title": "MAIN BET",
+        "examples": "Examples",
+        "description": "Description",
+        "table": {
+            "dragon": {
+                "title": "Dragon",
+                "description": "Paid if the Dragon's value is higher than the Tiger's value."
+            },
+            "tiger": {
+                "title": "Tiger",
+                "description": "Paid if the Tiger's value is higher than the Dragon's value."
+            },
+            "tie": {
+                "title": "Tie",
+                "description": "Paid if the Dragon and Tiger cards have the same value."
+            }
+        }
+    },
     "side-bet": {
         "title": "Side Bets",
         "examples": "Example",

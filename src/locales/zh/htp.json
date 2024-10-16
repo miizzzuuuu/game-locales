@@ -48,6 +48,25 @@
             "content": "虎对子投注基本上是普通对子投注，但如果虎的点数与 Wild card 相同，你将赢得这项投注。"
         }
     },
+    "main-bet": {
+        "title": "主要投注",
+        "examples": "示例",
+        "description": "描述",
+        "table": {
+            "dragon": {
+                "title": "龙",
+                "description": "当龙的点数大于虎的点数时支付。"
+            },
+            "tiger": {
+                "title": "虎",
+                "description": "当虎的点数大于龙的点数时支付。"
+            },
+            "tie": {
+                "title": "平局",
+                "description": "当龙和虎的点数相同时支付。"
+            }
+        }
+    },
     "side-bet": {
         "title": "边注",
         "examples": "示例",

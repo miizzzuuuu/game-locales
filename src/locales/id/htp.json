@@ -48,6 +48,25 @@
             "content": "Taruhan Pair Harimau pada dasarnya adalah taruhan Pair biasa, jadi apabila Nilai kartu Harimau dan nilai kartu wild sama, maka anda akan memenangkan taruhan ini."
         }
     },
+    "main-bet": {
+        "title": "TARUHAN UTAMA",
+        "examples": "Contoh",
+        "description": "Deskripsi",
+        "table": {
+            "dragon": {
+                "title": "Naga",
+                "description": "Dibayar jika nilai Naga lebih besar dari nilai Harimau"
+            },
+            "tiger": {
+                "title": "Harimau",
+                "description": "Dibayar jika nilai Harimau lebih besar dari nilai Naga"
+            },
+            "tie": {
+                "title": "Tie",
+                "description": "Dibayar jika kartu Naga dan Harimau punya nilai yang sama"
+            }
+        }
+    },
     "side-bet": {
         "title": "TARUHAN SAMPINGAN",
         "examples": "Contoh",
@@ -60,7 +79,6 @@
             "tiger-wild": {
                 "title": "Harimau Wild",
                 "description": "Dibayar jika Pihak Harimau menang dan juga nilai kartu Harimau dan kartu Wild sama"
-
             },
             "super-wild": {
                 "title": "Super Wild",

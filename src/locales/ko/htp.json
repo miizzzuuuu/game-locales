@@ -48,6 +48,25 @@
             "content": "타이거 페어 베팅은 일반 페어 베팅과 같지만, 타이거 카드 값과 Wild 카드가 일치하면 이 베팅에 승리합니다."
         }
     },
+    "main-bet": {
+        "title": "주요 베팅",
+        "examples": "예시",
+        "description": "설명",
+        "table": {
+            "dragon": {
+                "title": "용",
+                "description": "용의 값이 호랑이보다 클 경우 지급됩니다."
+            },
+            "tiger": {
+                "title": "호랑이",
+                "description": "호랑이의 값이 용보다 클 경우 지급됩니다."
+            },
+            "tie": {
+                "title": "무승부",
+                "description": "용과 호랑이 카드의 값이 동일할 경우 지급됩니다."
+            }
+        }
+    },
     "side-bet": {
         "title": "사이드 베팅",
         "examples": "예시",

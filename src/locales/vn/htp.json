@@ -48,6 +48,25 @@
             "content": "Cược Cặp Hổ cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Hổ và Wild card trùng nhau, bạn sẽ thắng cược này."
         }
     },
+    "main-bet": {
+        "title": "CÁC CƯỢC CHÍNH",
+        "examples": "Ví dụ",
+        "description": "Mô tả",
+        "table": {
+            "dragon": {
+                "title": "Rồng",
+                "description": "Thanh toán nếu giá trị của Rồng cao hơn giá trị của Hổ."
+            },
+            "tiger": {
+                "title": "Hổ",
+                "description": "Thanh toán nếu giá trị của Hổ cao hơn giá trị của Rồng."
+            },
+            "tie": {
+                "title": "Hòa",
+                "description": "Thanh toán nếu giá trị của Rồng và Hổ bằng nhau."
+            }
+        }
+    },
     "side-bet": {
         "title": "CƯỢC BÊN",
         "examples": "Ví dụ",
