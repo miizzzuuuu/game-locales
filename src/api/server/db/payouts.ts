@@ -1202,6 +1202,172 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 5000000,
         },
     ],
+    m35: [
+        {
+            name: 'one number',
+            payout: 44,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'two numbers',
+            payout: 22,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'four numbers',
+            payout: 10,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'single row',
+            payout: 2.8,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'single column',
+            payout: 10,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'double row',
+            payout: 0.95,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'double column',
+            payout: 4.5,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                {
+                    name: 'big',
+                    payout: 0.95,
+                },
+                {
+                    name: 'small',
+                    payout: 0.95,
+                },
+                {
+                    name: 'odd',
+                    payout: 0.95,
+                },
+                {
+                    name: 'even',
+                    payout: 0.95,
+                },
+                {
+                    name: 'red',
+                    payout: 0.95,
+                },
+                {
+                    name: 'black',
+                    payout: 0.95,
+                },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
+    m35b: [
+        {
+            name: 'one number',
+            payout: 44,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'two numbers',
+            payout: 22,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'four numbers',
+            payout: 10,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'single row',
+            payout: 2.8,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'single column',
+            payout: 10,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'double row',
+            payout: 0.95,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'double column',
+            payout: 4.5,
+            items: [],
+            min: 1000,
+            max: 1000000,
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            items: [
+                {
+                    name: 'big',
+                    payout: 0.95,
+                },
+                {
+                    name: 'small',
+                    payout: 0.95,
+                },
+                {
+                    name: 'odd',
+                    payout: 0.95,
+                },
+                {
+                    name: 'even',
+                    payout: 0.95,
+                },
+                {
+                    name: 'red',
+                    payout: 0.95,
+                },
+                {
+                    name: 'black',
+                    payout: 0.95,
+                },
+            ],
+            min: 5000,
+            max: 5000000,
+        },
+    ],
     m46: [
         {
             name: 'player bet',
