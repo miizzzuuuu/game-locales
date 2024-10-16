@@ -103,6 +103,6 @@
     },
     "payout": {
         "title": "pembayaran",
-        "content": "Sesuai dengan yang ada di menu Bayaran dan Batasan"
+        "bet-payout": "pembayaran taruhan"
     }
 }

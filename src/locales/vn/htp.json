@@ -103,6 +103,6 @@
     },
     "payout": {
         "title": "Trả Thưởng",
-        "content": "Theo như bảng trả thưởng và giới hạn."
+        "bet-payout": "thanh toán cược"
     }
 }

@@ -103,6 +103,6 @@
     },
     "payout": {
         "title": "Payout",
-        "content": "Corresponds to what is in the Payments and Limits menu"
+        "bet-payout": "bet payout"
     }
 }
