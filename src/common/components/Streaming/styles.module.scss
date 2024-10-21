@@ -73,6 +73,7 @@
     .left,
     .right {
         flex: 1;
+        height: calc(100% - var(--height-footer));
     }
 
     .left {
@@ -96,8 +97,10 @@
         &::before {
             content: '';
             position: absolute;
-            bottom: calc(var(--height-footer) * -1);
-            height: calc(100% + var(--height-footer));
+            top: 0;
+            bottom: 0;
+            // bottom: calc(var(--height-footer) * -1);
+            // height: calc(100% + var(--height-footer));
             width: var(--width-overlay-streaming-landscape);
             z-index: 1;
         }
