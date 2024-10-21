@@ -54,9 +54,11 @@
 
 :global(.desktop),
 :global(.mobile-landscape) {
-    .letter-box {
-        background-color: var(--streaming-background);
+    .streaming {
+        display: flex;
+    }
 
+    .letter-box {
         .video-container {
             height: calc(100% - var(--height-footer));
         }
@@ -68,12 +70,27 @@
         }
     }
 
-    .video-container {
-        position: absolute;
-        left: 50%;
-        bottom: calc(var(--height-footer));
+    .left,
+    .right {
+        flex: 1;
+    }
 
-        transform: translateX(-50%);
+    .left {
+        background: var(--streaming-color-7);
+    }
+
+    .right {
+        background: var(--streaming-color-8);
+    }
+
+    .video-container {
+        flex-shrink: 0;
+
+        position: relative;
+        // position: absolute;
+        // left: 50%;
+        // bottom: calc(var(--height-footer));
+        // transform: translateX(-50%);
 
         &::after,
         &::before {
