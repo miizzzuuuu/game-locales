@@ -73,7 +73,8 @@
     .left,
     .right {
         flex: 1;
-        height: calc(100% - var(--height-footer));
+        z-index: 1;
+        // height: calc(100% - var(--height-footer));
     }
 
     .left {
