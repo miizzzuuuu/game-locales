@@ -1,6 +1,6 @@
 import { useAppSelector } from '../../../store/hooks';
 import { selectEnableStreamingVideo } from '../../../store/slice/settingsSlice';
-import BACKGROUND_STREAMING from '../../../assets/img/streaming/background-streaming.png';
+import BACKGROUND_STREAMING from '../../../assets/img/streaming/background-streaming.webp';
 
 import styles from './styles.module.scss';
 import WebStream from './WebStream';
