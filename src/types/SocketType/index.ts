@@ -77,7 +77,7 @@ export type Thunder<PCode extends string> = PCode extends 'p6b'
               data: ThunderP9B;
           }
         : PCode extends 'm8b'
-          ? BaseThunder & ThunderM8B
+          ? BaseThunder & { data: ThunderM8B }
           : BaseThunder & { data: any };
 
 export type ThunderP6B = {
