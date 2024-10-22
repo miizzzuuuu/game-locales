@@ -73,7 +73,7 @@ export type ResultM11 = CommonResult & {
     angka: string; // '1,2,3' 1 = red, 2 = white, 3 = jp
 };
 
-export type ResultM14 = {
+export type ResultM14 = CommonResult & {
     angka: string; // '1b,1b,1b,1b,1b';
     angka2: string; // '1b,1b,1b,1b,1b';
     angka3: string; // '5 of a Kind';

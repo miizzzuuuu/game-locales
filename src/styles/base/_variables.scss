@@ -10,7 +10,7 @@
     --width-overlay-streaming-landscape: 10rem;
     --height-overlay-streaming-landscape: 8rem;
 
-    --streaming-background: #100c08;
+    --streaming-background: #100b07;
 
     // portrait, streaming ke bawah
     --streaming-color-1: linear-gradient(180deg, #ff7401 0%, #452204 40.22%, #0b0500 100%);
@@ -30,6 +30,9 @@
         var(--streaming-background) 4rem,
         transparent 100%
     );
+
+    --streaming-color-7: linear-gradient(to left, var(--streaming-background) 0%, #0b0500 100%);
+    --streaming-color-8: linear-gradient(to right, var(--streaming-background) 0%, #0b0500 100%);
 
     --bg-footer: transparent; // rgba(2, 10, 20, 0.5);
 
