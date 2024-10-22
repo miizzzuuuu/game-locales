@@ -5,8 +5,8 @@ import {
     doneResult,
     resetResult,
     selectScanNumber,
-    selectWinAmount,
-    selectWinStatus,
+    // selectWinAmount,
+    // selectWinStatus,
 } from '../../../store/slice/resultSlice';
 import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 import { GraphicComponentProps } from '../../../common/components/MiniHowToPlay/Slide';
@@ -124,8 +124,8 @@ const Result = () => {
         return '';
     };
 
-    const winAmount = useAppSelector(selectWinAmount);
-    const winStatus = useAppSelector(selectWinStatus);
+    // const winAmount = useAppSelector(selectWinAmount);
+    // const winStatus = useAppSelector(selectWinStatus);
 
     return (
         <div className={styles.result} onAnimationEnd={handleAnimationEnd} ref={resultRef}>
@@ -136,14 +136,17 @@ const Result = () => {
                 />
             )}
 
-            {!(winStatus === 'idle' || winAmount <= 0) && activeSrc(animationPrizeSrcs) ? (
-                <GraphicComponent
-                    isActive={scanNumber && scanNumber.submit}
-                    animationSrc={activeSrc(animationPrizeSrcs)}
-                />
-            ) : (
-                <></>
-            )}
+            {
+                // !(winStatus === 'idle' || winAmount <= 0) &&
+                activeSrc(animationPrizeSrcs) ? (
+                    <GraphicComponent
+                        isActive={scanNumber && scanNumber.submit}
+                        animationSrc={activeSrc(animationPrizeSrcs)}
+                    />
+                ) : (
+                    <></>
+                )
+            }
         </div>
     );
 };
