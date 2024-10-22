@@ -1,4 +1,4 @@
-import Result from '../../../game/components/Result';
+import Result from '../../../game/components/ResultDTWild';
 import { Features } from '../../utils/Features';
 import MessageGeneral from '../Alerts/MessageGeneral';
 import MessageSubmitBet from '../Alerts/MessageSubmitBet';

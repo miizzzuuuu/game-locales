@@ -76,6 +76,7 @@ export const {
 } = baseSlice.actions;
 
 export const selectResultNumber = (state: RootState) => state.result.resultNumber;
+export const selectScanNumber = (state: RootState) => state.result.scanNumber;
 export const selectResultStatus = (state: RootState) => state.result.status;
 export const selectWinBets = (state: RootState) => state.result.winBets;
 
