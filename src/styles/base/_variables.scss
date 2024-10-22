@@ -10,7 +10,7 @@
     --width-overlay-streaming-landscape: 4rem;
     --height-overlay-streaming-landscape: 8rem;
 
-    --streaming-background: #452204; // #100b07;
+    --streaming-background: #251203; // #100b07;
 
     // portrait, streaming ke bawah
     --streaming-color-1: linear-gradient(180deg, #ff7401 0%, #452204 40.22%, #0b0500 100%);
@@ -31,8 +31,8 @@
         transparent 100%
     );
 
-    --streaming-color-7: linear-gradient(to left, var(--streaming-background) 0%, #0b0500 100%);
-    --streaming-color-8: linear-gradient(to right, var(--streaming-background) 0%, #0b0500 100%);
+    --streaming-color-7: linear-gradient(to left, var(--streaming-background) 0%, #0b0500 14rem);
+    --streaming-color-8: linear-gradient(to right, var(--streaming-background) 0%, #0b0500 14rem);
 
     --bg-footer: transparent; // rgba(2, 10, 20, 0.5);
 
