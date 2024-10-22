@@ -6,6 +6,7 @@ import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetV2 from '../TableBetV2';
 import './../External/components/css/animation.css';
 import './../External/components/css/styles.css';
+import { useDummy } from './hooks/useDummy';
 import styles from './styles.module.scss';
 
 const MainArea = () => {
@@ -13,6 +14,8 @@ const MainArea = () => {
     const showPatternUI = useAppSelector(selectShowPatternUI);
 
     const gameNewSet = useAppSelector(selectGameNewSet);
+
+    useDummy();
 
     if (isLandscape) {
         return (

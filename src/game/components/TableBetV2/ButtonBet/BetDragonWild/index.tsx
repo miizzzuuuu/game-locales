@@ -1,14 +1,12 @@
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import styles from './../styles.module.scss';
 
 const BetDragonWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip } = useGetChipBet(bet);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -25,7 +23,7 @@ const BetDragonWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['top']} ${styles['left']} ${styles['dragon-wild']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles['top']} ${styles['left']} ${styles['dragon-wild']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={`${styles['shadow-center']}`}></div>

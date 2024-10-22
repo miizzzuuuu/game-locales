@@ -1,7 +1,6 @@
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
@@ -10,7 +9,6 @@ import styles from './../styles.module.scss';
 
 const BetTie = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const { chip } = useGetChipBet(bet);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
@@ -20,7 +18,7 @@ const BetTie = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['tie']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles['tie']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <SvgTie />

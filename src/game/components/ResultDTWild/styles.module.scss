@@ -1,8 +1,47 @@
-.result {
+.container1,
+.container2 {
     position: absolute;
     left: 50%;
-    top: 9rem;
     transform: translateX(-50%);
+}
+
+:global(.mobile-portrait) {
+    .container1 {
+        top: 4rem;
+    }
+
+    .image1 {
+        width: 28rem;
+        height: auto;
+    }
+
+    .container2 {
+        top: calc(var(--height-streaming) * 1px - 1.8rem);
+    }
+
+    .image2 {
+        height: 4rem;
+    }
+}
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .container1 {
+        top: 0rem;
+    }
+
+    .image1 {
+        width: 28rem;
+        height: auto;
+    }
+
+    .container2 {
+        top: 22rem;
+    }
+
+    .image2 {
+        height: 4rem;
+    }
 }
 
 :global :local(.result) {
@@ -11,8 +50,4 @@
     &:local(.disapear) {
         animation: fadeOut 0.3s linear forwards;
     }
-}
-
-.image {
-    width: 9rem;
 }

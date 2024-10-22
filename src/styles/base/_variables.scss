@@ -65,9 +65,9 @@
 
     --overlay-1: rgba(0, 0, 0, 0.3);
 
-    --background-total-bet-bg-1: rgb(29, 30, 47, 0.2); // rgba(0, 0, 0, 0.1);
-    --background-total-bet-bg-2: rgb(29, 30, 47, 0.6); // rgba(52, 54, 80, 0.56);
+    --background-total-bet-bg-1: rgba(255, 255, 255, 0); // rgba(0, 0, 0, 0.1);
+    --background-total-bet-bg-2: rgba(255, 255, 255, 0.2); // rgba(52, 54, 80, 0.56);
 
-    --border-total-bet-bg-1: #26273c;
-    --border-total-bet-bg-2: #26273c;
+    --border-total-bet-bg-1: rgba(255, 255, 255, 0);
+    --border-total-bet-bg-2: rgba(255, 255, 255, 0.3);
 }

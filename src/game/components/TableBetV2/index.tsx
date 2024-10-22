@@ -3,7 +3,6 @@ import { DisplayHelper } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../utils/DragonTigerBHelper';
-
 import BetDragon from './ButtonBet/BetDragon';
 import BetDragonPair from './ButtonBet/BetDragonPair';
 import BetDragonWild from './ButtonBet/BetDragonWild';
@@ -16,7 +15,6 @@ import styles from './index.module.scss';
 import { RenderCard } from './RenderCard/RenderCard';
 
 const TableBetV2 = () => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet({ betIsOpen });
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -30,9 +28,7 @@ const TableBetV2 = () => {
         );
 
     return (
-        <div
-            className={`${styles['table-bet']} ${deviceClassName} ${betIsOpen ? styles.opened : styles.closed}`}
-        >
+        <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
             <BetDragonWild
                 bet={DragonTigerBHelper.betsTop['dragon-wild']}
                 placeBetHandler={placeBetHandler}
@@ -70,10 +66,10 @@ const TableBetV2 = () => {
 
                 <div className={`${styles['slot-card']}`} style={{}}>
                     <RenderCard
-                        top="0%"
+                        top="-1rem"
                         right="unset"
-                        left={DisplayHelper.getOrientation() == 'portrait' ? '40%' : '35%'}
-                        position={{ x: '5px', y: '5px' }}
+                        left={DisplayHelper.getOrientation() == 'portrait' ? '50%' : '50%'}
+                        position={{ x: '-50%', y: '5px' }}
                         rotation={{ z: '0deg' }}
                         opacity={isSuperWildLose ? 0.6 : 1}
                         value={scanNumber ? scanNumber.wild : ''}

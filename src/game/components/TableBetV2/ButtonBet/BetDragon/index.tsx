@@ -1,7 +1,6 @@
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
@@ -10,7 +9,6 @@ import SvgDragon from '../../SVG/SvgDragon';
 import styles from './../styles.module.scss';
 
 const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
     const { chip } = useGetChipBet(bet);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -21,7 +19,7 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['middle']} ${styles['left']} ${styles['dragon']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles['middle']} ${styles['left']} ${styles['dragon']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={`${styles['shadow-center']}`}></div>
@@ -40,10 +38,10 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
             <div className={`${styles['slot-card']}`} style={{}}>
                 <RenderCard
-                    top="-5%"
-                    left="40%"
-                    right="0px"
-                    position={{ x: '5px', y: '5px' }}
+                    top="50%"
+                    left="50%"
+                    right="unset"
+                    position={{ x: '0', y: '-170%' }}
                     rotation={{ z: '0deg' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.dragon : ''}

@@ -1,7 +1,6 @@
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
@@ -11,7 +10,6 @@ import styles from './../styles.module.scss';
 
 const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const { chip } = useGetChipBet(bet);
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
@@ -21,7 +19,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['middle']} ${styles['right']} ${styles['tiger']} ${deviceClassName} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles['middle']} ${styles['right']} ${styles['tiger']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={styles['shadow-center']}></div>
@@ -40,10 +38,10 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
             <div className={`${styles['slot-card']}`} style={{}}>
                 <RenderCard
-                    top="-5%"
+                    top="50%"
                     left="unset"
-                    right={DisplayHelper.getOrientation() == 'landscape' ? '45%' : '50%'}
-                    position={{ x: '5px', y: '5px' }}
+                    right="50%"
+                    position={{ x: '0', y: '-170%' }}
                     rotation={{ z: '0deg' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.tiger : ''}

@@ -210,7 +210,6 @@
 }
 
 .slot-card {
-    $percentChip: 70;
     pointer-events: none;
     position: absolute;
     top: 50%;
@@ -221,7 +220,6 @@
 }
 
 .slot-chip {
-    $percentChip: 70;
     pointer-events: none;
     position: absolute;
     top: 50%;
@@ -229,19 +227,21 @@
     transform: translate(-50%, -50%) scale(0.8);
 }
 
-.mobile-portrait {
+:global(.mobile-portrait) {
     .slot-chip {
         $size: calc(100cqw / 7.5 * 50 / 100);
+
         width: $size;
         height: $size;
         font-size: $size;
     }
 }
 
-.desktop,
-.mobile-landscape {
+:global(.desktop),
+:global(.mobile-landscape) {
     .slot-chip {
         $size: calc(100cqh / 7.5 * 50 / 100);
+
         width: $size;
         height: $size;
         font-size: $size;

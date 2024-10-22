@@ -1,26 +1,26 @@
 import { AnimationEventHandler, useEffect, useRef } from 'react';
-import styles from './styles.module.scss';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import {
-    doneResult,
-    resetResult,
-    selectScanNumber,
-    // selectWinAmount,
-    // selectWinStatus,
-} from '../../../store/slice/resultSlice';
-import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 import { GraphicComponentProps } from '../../../common/components/MiniHowToPlay/Slide';
 import Graphic from '../../../common/components/MiniHowToPlay/Slide/Graphic';
+import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { doneResult, resetResult, selectScanNumber } from '../../../store/slice/resultSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import styles from './styles.module.scss';
 
 interface AnimationSrcXGraphicComponentProps extends GraphicComponentProps {
     animationSrc: string;
+    className?: string;
+    classChild?: string;
 }
 export const GraphicComponent = ({
     isActive,
     animationSrc,
+    className,
+    classChild,
 }: AnimationSrcXGraphicComponentProps) => (
-    <Graphic isActive={isActive} animationSrc={animationSrc} />
+    <div className={className}>
+        <Graphic isActive={isActive} animationSrc={animationSrc} className={classChild} />
+    </div>
 );
 
 const Result = () => {
@@ -102,25 +102,25 @@ const Result = () => {
     const animationPopupSrcs = {
         'dragon-wild': 'https://cdn.lottielab.com/l/4uR2BzT712WVNp.json',
         'tiger-wild': 'https://cdn.lottielab.com/l/2DAi4hAoWhYydR.json',
-        'dragon-pair': 'https://cdn.lottielab.com/l/EfsKJ2V7EMiXjY.json',
+        'dragon-pair': 'https://cdn.lottielab.com/l/9JPgLDC7xM1ewq.json',
         'tiger-pair': 'https://cdn.lottielab.com/l/EfsKJ2V7EMiXjY.json',
         'super-wild': 'https://cdn.lottielab.com/l/5BGgqf4uFewdpS.json',
     };
 
     const animationPrizeSrcs = {
         'dragon-wild': 'https://cdn.lottielab.com/l/4Yf6VHmVu13FGR.json',
-        'tiger-wild': 'https://cdn.lottielab.com/l/5MDZsDmdxN7Kmc.json',
-        'dragon-pair': 'https://cdn.lottielab.com/l/2njtKW5UkLHtC4.json',
+        'tiger-wild': 'https://cdn.lottielab.com/l/2aFxrZSsdGtWMm.json',
+        'dragon-pair': 'https://cdn.lottielab.com/l/5MDZsDmdxN7Kmc.json',
         'tiger-pair': 'https://cdn.lottielab.com/l/2njtKW5UkLHtC4.json',
         'super-wild': 'https://cdn.lottielab.com/l/3wHHqdNm53Ax1o.json',
     };
 
     const activeSrc = (animationData: typeof animationPopupSrcs) => {
+        if (isSuperWildWin) return animationData['super-wild'];
         if (isDragonWildWin) return animationData['dragon-wild'];
         if (isTigerWildWin) return animationData['tiger-wild'];
         if (isDragonPairWin) return animationData['dragon-pair'];
         if (isTigerPairWin) return animationData['tiger-pair'];
-        if (isSuperWildWin) return animationData['super-wild'];
         return '';
     };
 
@@ -129,24 +129,23 @@ const Result = () => {
 
     return (
         <div className={styles.result} onAnimationEnd={handleAnimationEnd} ref={resultRef}>
-            {activeSrc(animationPopupSrcs) && (
+            {activeSrc(animationPopupSrcs) ? (
                 <GraphicComponent
                     isActive={scanNumber && scanNumber.submit}
                     animationSrc={activeSrc(animationPopupSrcs)}
+                    className={styles.container1}
+                    classChild={styles.image1}
                 />
-            )}
+            ) : null}
 
-            {
-                // !(winStatus === 'idle' || winAmount <= 0) &&
-                activeSrc(animationPrizeSrcs) ? (
-                    <GraphicComponent
-                        isActive={scanNumber && scanNumber.submit}
-                        animationSrc={activeSrc(animationPrizeSrcs)}
-                    />
-                ) : (
-                    <></>
-                )
-            }
+            {activeSrc(animationPrizeSrcs) ? (
+                <GraphicComponent
+                    isActive={scanNumber && scanNumber.submit}
+                    animationSrc={activeSrc(animationPrizeSrcs)}
+                    className={styles.container2}
+                    classChild={styles.image2}
+                />
+            ) : null}
         </div>
     );
 };
