@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
-import styles from './styles.module.scss';
 import ChipBet from '../../../../common/components/ChipBet';
-import { selectChip } from '../../../../store/slice/bets';
-import { useAppSelector } from '../../../../store/hooks';
+import { useGetChipBet } from '../../../../common/hooks/useGetChipBet';
+import styles from './styles.module.scss';
 
 interface IProps {
     button: string;
@@ -20,7 +19,7 @@ const ButtonBet = ({ button, group, children, className, onClick }: IProps) => {
         .map((cn) => styles[cn])
         .join(' ');
 
-    const chip = useAppSelector((state) => selectChip(state, `${button}-${group}`));
+    const chip = useGetChipBet({ button, group });
 
     return (
         <div

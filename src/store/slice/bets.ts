@@ -52,7 +52,7 @@ const betsSlice = createSlice({
             state.history.push({ add: { ...state.add }, addTotal: state.addTotal });
 
             const { button, group, value } = action.payload;
-            const key = `${button}-${group}`;
+            const key = `${button}@${group}`;
 
             state.addTotal += value;
 
@@ -70,7 +70,7 @@ const betsSlice = createSlice({
 
             betArray.forEach((bet) => {
                 const { button, group, value } = bet;
-                const key = `${button}-${group}`;
+                const key = `${button}@${group}`;
 
                 state.addTotal += value;
 
@@ -143,7 +143,7 @@ const betsSlice = createSlice({
             bet.forEach((data) => {
                 const { button, group, value } = data;
 
-                state.send[`${button}-${group}`] = value;
+                state.send[`${button}@${group}`] = value;
                 state.sendTotal += value;
             });
         },
