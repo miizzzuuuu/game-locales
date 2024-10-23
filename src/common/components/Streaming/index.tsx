@@ -1,14 +1,13 @@
-import { DisplayHelper } from '../../utils/DisplayHelper';
+import { getOrientation } from '../../utils/DisplayHelper';
 import { Features } from '../../utils/Features';
 import Video from '../Video';
 import { useGetStreamingSize } from './hooks/useGetStreamingSize';
-
 import styles from './styles.module.scss';
 
 const streamingClasses = `${styles.streaming} ${Features.STREAMING_LANDSCAPE_LETTER_BOX ? styles['letter-box'] : styles['non-letter-box']}`;
 
 const Streaming = () => {
-    const orientation = DisplayHelper.getOrientation();
+    const orientation = getOrientation();
 
     useGetStreamingSize();
 

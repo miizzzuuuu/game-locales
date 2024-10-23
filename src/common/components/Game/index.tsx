@@ -1,5 +1,5 @@
 import { lazy, Suspense, useCallback } from 'react';
-import { DisplayHelper } from '../../utils/DisplayHelper';
+import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
 import Streaming from '../Streaming';
@@ -23,7 +23,7 @@ import { Features } from '../../utils/Features';
 const Menu = lazy(() => import('../../menus/Menu'));
 
 function Game() {
-    const isLetterOrPillarBoxActive = DisplayHelper.getLetterOrPillarBoxActive();
+    const isLetterOrPillarBoxActive = getLetterOrPillarBoxActive();
 
     const dispatch = useAppDispatch();
 
