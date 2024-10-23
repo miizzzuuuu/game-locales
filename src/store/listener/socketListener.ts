@@ -41,7 +41,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
 
             if (betSendEntries.length > 0) {
                 const betSendFormated: BetSend[] = betSendEntries.map(([key, value]) => {
-                    const [button, group] = key.split('-');
+                    const [button, group] = key.split('@');
 
                     return { button, group, value };
                 });

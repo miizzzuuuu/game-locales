@@ -40,7 +40,7 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
             const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
 
             if (oppositeBetKey && betAdd[oppositeBetKey] > 0) {
-                const opposite = oppositeBetKey.split('-')[0];
+                const opposite = oppositeBetKey.split('@')[0];
 
                 const buttonOpposite = t(
                     `${getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
@@ -83,7 +83,7 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
             return;
         }
 
-        const chipAfterBet = (betAdd[`${button}-${group}`] ?? 0) + activeChip;
+        const chipAfterBet = (betAdd[`${button}@${group}`] ?? 0) + activeChip;
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
             const buttonName = isGroup50

@@ -36,7 +36,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
         const period = selectPeriod(state);
 
         const betAddToSend: BetSend[] = betAddEntries.map(([key, value]) => {
-            const [button, group] = key.split('-');
+            const [button, group] = key.split('@');
 
             return { button, group, value };
         });
