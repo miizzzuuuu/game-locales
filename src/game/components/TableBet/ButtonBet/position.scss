@@ -1,81 +1,83 @@
 @use 'sass:math';
 
-@mixin button-bet-position {
+@mixin button-bet-position-portrait {
     @for $i from 1 through 24 {
         .slot-n-#{$i} {
             @if $i % 4 == 1 {
-                grid-row: 2;
+                grid-column: 2;
             } @else if $i % 4 == 2 {
-                grid-row: 3;
+                grid-column: 3;
             } @else if $i % 4 == 3 {
-                grid-row: 4;
+                grid-column: 4;
             } @else {
-                grid-row: 5;
+                grid-column: 5;
             }
 
-            grid-column: #{(ceil(math.div($i, 4)) - 1) * 5 + 6} / span 5;
+            grid-row: #{ceil(math.div($i, 4)) + 1};
         }
     }
 
     @for $i from 1 through 6 {
         .slot-c-#{$i} {
-            grid-row: 1;
-            grid-column: #{($i - 1) * 5 + 6} / span 5;
+            grid-column: 1;
+            grid-row: #{($i + 1)};
         }
     }
 
     @for $i from 1 through 4 {
         .slot-r-#{$i} {
-            grid-column: 1 / span 5;
-            grid-row: #{$i + 1};
+            grid-row: 1;
+            grid-column: #{($i) + 1};
         }
+    }
+
+    .slot-r-1-2,
+    .slot-r-3-4 {
+        grid-row: 8;
     }
 
     .slot-r-1-2 {
-        grid-column: 36 / span 5;
-        grid-row: 2 / span 2;
+        grid-column: 2 / span 2;
     }
 
     .slot-r-3-4 {
-        grid-column: 36 / span 5;
-        grid-row: 4 / span 2;
+        grid-column: 4 / span 2;
     }
 
-    @for $i from 1 through 5 {
-        .slot-c-#{$i}-#{$i + 1} {
-            grid-row: 6;
-            grid-column: #{($i - 1) * 8 + 1} / span 8;
-        }
+    .slot-small,
+    .slot-big {
+        grid-row: 8;
     }
 
     .slot-small {
-        grid-row: 1;
-        grid-column: 1 / span 5;
+        grid-column: 1;
     }
 
     .slot-big {
-        grid-row: 1;
-        grid-column: 36 / span 5;
+        grid-column: 6;
+    }
+
+    .slot-odd,
+    .slot-red,
+    .slot-black,
+    .slot-even {
+        grid-row: 9;
     }
 
     .slot-odd {
-        grid-row: 7;
-        grid-column: 1 / span 10;
-    }
-
-    .slot-even {
-        grid-row: 7;
-        grid-column: 11 / span 10;
+        grid-column: 2;
     }
 
     .slot-red {
-        grid-row: 7;
-        grid-column: 21 / span 10;
+        grid-column: 3;
     }
 
     .slot-black {
-        grid-row: 7;
-        grid-column: 31 / span 10;
+        grid-column: 4;
+    }
+
+    .slot-even {
+        grid-column: 5;
     }
 
     $size-multi-bet: 0.55rem;
@@ -83,12 +85,12 @@
     @for $row from 1 through 4 {
         @for $col from 1 through 5 {
             .slot-h-#{$row}-#{$col} {
-                width: $size-multi-bet;
-                max-width: $size-multi-bet;
+                height: $size-multi-bet;
+                max-height: $size-multi-bet;
                 z-index: 4;
 
-                grid-row: #{$row + 1};
-                grid-column: #{($col - 1) * 5 + 6} / span 10;
+                grid-column: #{($row) + 1};
+                grid-row: #{($col + 1)} / span 2;
             }
         }
     }
@@ -96,12 +98,12 @@
     @for $row from 1 through 3 {
         @for $col from 1 through 6 {
             .slot-v-#{$row}-#{$col} {
-                height: $size-multi-bet;
-                max-height: $size-multi-bet;
+                width: $size-multi-bet;
+                max-width: $size-multi-bet;
                 z-index: 5;
 
-                grid-row: #{$row + 1} / span 2;
-                grid-column: #{($col - 1) * 5 + 6} / span 5;
+                grid-column: #{$row + 1} / span 2;
+                grid-row: #{$col + 1};
             }
         }
     }
@@ -115,8 +117,132 @@
                 max-height: $size-multi-bet;
                 z-index: 6;
 
+                grid-row: #{$col + 1} / span 2;
+                grid-column: #{($row + 1)} / span 2;
+            }
+        }
+    }
+}
+
+@mixin button-bet-position-landscape {
+    @for $i from 1 through 24 {
+        .slot-n-#{$i} {
+            @if $i % 4 == 1 {
+                grid-row: 2;
+            } @else if $i % 4 == 2 {
+                grid-row: 3;
+            } @else if $i % 4 == 3 {
+                grid-row: 4;
+            } @else {
+                grid-row: 5;
+            }
+
+            grid-column: #{ceil(math.div($i, 4)) + 1};
+        }
+    }
+
+    @for $i from 1 through 6 {
+        .slot-c-#{$i} {
+            grid-row: 1;
+            grid-column: #{($i + 1)};
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .slot-r-#{$i} {
+            grid-column: 1;
+            grid-row: #{($i) + 1};
+        }
+    }
+
+    .slot-r-1-2,
+    .slot-r-3-4 {
+        grid-column: 8;
+    }
+
+    .slot-r-1-2 {
+        grid-row: 2 / span 2;
+    }
+
+    .slot-r-3-4 {
+        grid-row: 4 / span 2;
+    }
+
+    .slot-small,
+    .slot-big {
+        grid-column: 8;
+    }
+
+    .slot-small {
+        grid-row: 1;
+    }
+
+    .slot-big {
+        grid-row: 6;
+    }
+
+    .slot-odd,
+    .slot-red,
+    .slot-black,
+    .slot-even {
+        grid-column: 9;
+    }
+
+    .slot-odd {
+        grid-row: 2;
+    }
+
+    .slot-red {
+        grid-row: 3;
+    }
+
+    .slot-black {
+        grid-row: 4;
+    }
+
+    .slot-even {
+        grid-row: 5;
+    }
+
+    $size-multi-bet: 0.55rem;
+
+    @for $row from 1 through 4 {
+        @for $col from 1 through 5 {
+            .slot-h-#{$row}-#{$col} {
+                width: $size-multi-bet;
+                max-width: $size-multi-bet;
+                z-index: 4;
+
+                grid-row: #{($row) + 1};
+                grid-column: #{($col + 1)} / span 2;
+            }
+        }
+    }
+
+    @for $row from 1 through 3 {
+        @for $col from 1 through 6 {
+            .slot-v-#{$row}-#{$col} {
+                height: $size-multi-bet;
+                max-height: $size-multi-bet;
+                z-index: 5;
+
                 grid-row: #{$row + 1} / span 2;
-                grid-column: #{($col - 1) * 5 + 6} / span 10;
+                grid-column: #{$col + 1};
+            }
+        }
+    }
+
+    @for $row from 1 through 3 {
+        @for $col from 1 through 5 {
+            .slot-v-h-#{$row}-#{$col} {
+                width: $size-multi-bet;
+                max-width: $size-multi-bet;
+                height: $size-multi-bet;
+                max-height: $size-multi-bet;
+                z-index: 6;
+
+                grid-column: #{$col + 1} / span 2;
+                grid-row: #{($row + 1)} / span 2;
             }
         }
     }

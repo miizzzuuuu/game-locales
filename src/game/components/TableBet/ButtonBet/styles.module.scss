@@ -8,11 +8,11 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    transition: all 0.5 linear;
+    transition: all 0.5s linear;
 }
 
 .lose {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 :global :local(.win .background) {
@@ -35,40 +35,49 @@
     }
 }
 
-.bet-number .background {
-    border: 0.1rem solid #f3d8a4;
-    background: linear-gradient(180deg, #fff 0%, #ffe5b2 100%);
+.bet-number-red .background {
+    border: 0.1rem solid var(--bg-button-number-red-1);
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--bg-button-number-red-1) 0%,
+        var(--bg-button-number-red-2) 100%
+    );
+}
+
+.bet-number-black .background {
+    border: 0.1rem solid var(--bg-button-number-black-1);
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--bg-button-number-black-1) 0%,
+        var(--bg-button-number-black-2) 100%
+    );
 }
 
 .bet-col-row .background {
-    border: 0.1rem solid #e0b869;
-    background: linear-gradient(180deg, #ffe6b2 0%, #e0b869 100%);
+    border: 0.1rem solid var(--bg-button-col-row-1);
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--bg-button-col-row-1) 0%,
+        var(--bg-button-col-row-2) 100%
+    );
 }
 
 .bet-red .background {
-    border: 0.1rem solid #f30049;
-    background: linear-gradient(0deg, #59001b 0.33%, #f30049 99.67%);
+    border: 0.1rem solid var(--bg-button-red-1);
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--bg-button-red-1) 0%,
+        var(--bg-button-red-2) 100%
+    );
 }
 
-.bet-yellow .background {
-    border: 0.1rem solid #ffb01c;
-    background: linear-gradient(0deg, #8c5400 0%, #ffb01c 100%);
-}
-
-.slot-small .background {
-    border-top-left-radius: 0.4rem;
-}
-
-.slot-big .background {
-    border-top-right-radius: 0.4rem;
-}
-
-.slot-odd .background {
-    border-bottom-left-radius: 0.4rem;
-}
-
-.slot-black .background {
-    border-bottom-right-radius: 0.4rem;
+.bet-black .background {
+    border: 0.1rem solid var(--bg-button-black-1);
+    background: linear-gradient(
+        var(--gradient-angle),
+        var(--bg-button-black-1) 0%,
+        var(--bg-button-black-2) 100%
+    );
 }
 
 .slot-chip {
@@ -79,10 +88,14 @@
     left: 50%;
     translate: -50% -50%;
 
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.slot-multiplier {
+    position: absolute;
 }
 
 :global(.mobile-portrait) {
@@ -93,6 +106,37 @@
         height: calc(100cqw / 8 * var(--percent-chip) / 100);
         font-size: calc(100cqw / 8 * var(--percent-chip) / 100);
     }
+
+    .bet-number-red .background,
+    .bet-number-black .background,
+    .bet-col-row .background,
+    .bet-red .background,
+    .bet-black .background {
+        --gradient-angle: 180deg;
+    }
+
+    .slot-c-1 .background,
+    .slot-r-1 .background {
+        border-top-left-radius: 0.4rem;
+    }
+
+    .slot-c-1-2 .background,
+    .slot-r-4 .background {
+        border-top-right-radius: 0.4rem;
+    }
+
+    .slot-odd .background,
+    .slot-small .background {
+        border-bottom-left-radius: 0.4rem;
+    }
+
+    .slot-even .background,
+    .slot-big .background {
+        border-bottom-right-radius: 0.4rem;
+    }
+
+    // position
+    @include button-bet-position-portrait;
 }
 
 :global(.desktop),
@@ -104,27 +148,37 @@
         height: calc(100cqw / 8 * var(--percent-chip) / 100);
         font-size: calc(100cqw / 8 * var(--percent-chip) / 100);
     }
-}
 
-// position
-@include button-bet-position;
+    .bet-number-red .background,
+    .bet-number-black .background,
+    .bet-col-row .background,
+    .bet-red .background,
+    .bet-black .background {
+        --gradient-angle: 90deg;
+    }
 
-@keyframes win-glow {
-    0% {
-        box-shadow:
-            0 0 0.1rem #83ff48,
-            0px 0px 0 0px #83ff48 inset;
+    .slot-c-1 .background,
+    .slot-r-1 .background {
+        border-top-left-radius: 0.4rem;
     }
-    50% {
-        box-shadow:
-            0 0 0.1rem #83ff48,
-            0px 0px 0.8rem 0px #83ff48 inset;
+
+    .slot-c-1-2 .background,
+    .slot-r-4 .background {
+        border-bottom-left-radius: 0.4rem;
     }
-    100% {
-        box-shadow:
-            0 0 0.1rem #83ff48,
-            0px 0px 0 0px #83ff48 inset;
+
+    .slot-small .background,
+    .slot-odd .background {
+        border-top-right-radius: 0.4rem;
     }
+
+    .slot-big .background,
+    .slot-even .background {
+        border-bottom-right-radius: 0.4rem;
+    }
+
+    // position
+    @include button-bet-position-landscape;
 }
 
 // .button-bet {

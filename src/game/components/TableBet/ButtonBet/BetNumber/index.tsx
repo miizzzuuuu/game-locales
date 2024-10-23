@@ -1,16 +1,27 @@
 import { memo } from 'react';
+import { StringHelper } from '../../../../../common/utils/StringHelper';
+import { _24DHelper } from '../../../../utils/_24DHelper';
 import styles from './styles.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
     button: string;
 }
 
 const BetNumber = ({ button }: IProps) => {
+    const { i18n } = useTranslation();
+
+    const isRed = _24DHelper.RED.includes(Number(button));
+
     return (
         <div className={styles.container}>
-            <span className={styles['button-name']}>{Number(button)}</span>
+            <span className={`${styles['button-name']}${isRed ? ` ${styles['text-red']}` : ''}`}>
+                {Number(button)}
+            </span>
 
-            <span className={styles.payout}>1:24</span>
+            <span className={styles.payout}>
+                1:{StringHelper.formatNumber(_24DHelper.PAYOUT['n'], i18n.language)}
+            </span>
         </div>
     );
 };
