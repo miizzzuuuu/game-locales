@@ -78,7 +78,9 @@ export type Thunder<PCode extends string> = PCode extends 'p6b'
           }
         : PCode extends 'm8b'
           ? BaseThunder & { data: ThunderM8B }
-          : BaseThunder & { data: any };
+          : PCode extends 'm46'
+            ? BaseThunder & { data: ThunderM46 }
+            : BaseThunder & { data: any };
 
 export type ThunderP6B = {
     lucky_number: { data: string[]; prize: number };
@@ -104,6 +106,12 @@ export type ThunderM8B = {
     hot: string[]; // ['Small', '6', '1', '5'];
     normal: string[]; // ['4', 'Odd', 'Even', '2'];
     jackpot: string | null; // "4";
+};
+
+export type ThunderM46 = {
+    thunder: 'player1' | 'player2' | 'player3'; // 'player2';
+    element: Record<string, string | boolean>;
+    prize: number;
 };
 
 export type NewSetData = { pcode: string; gameSet: number; status: boolean };
