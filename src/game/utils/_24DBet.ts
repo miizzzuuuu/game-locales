@@ -7,7 +7,7 @@ export class _24DBet implements GameBetHelper {
     oppositeBet50: Record<string, string> = {
         Red: `Black@${TypeGroup.Number50}`,
         Black: `Red@${TypeGroup.Number50}`,
-        Objectdd: `Even@${TypeGroup.Number50}`,
+        Odd: `Even@${TypeGroup.Number50}`,
         Even: `Odd@${TypeGroup.Number50}`,
         Small: `Big@${TypeGroup.Number50}`,
         Big: `Small@${TypeGroup.Number50}`,
