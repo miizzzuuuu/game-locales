@@ -1,4 +1,4 @@
-import { Bet } from '../../types';
+import { Bet, Thunder, ThunderP6B } from '../../types';
 
 export enum TypeGroup {
     Number1 = 'n',
@@ -72,14 +72,16 @@ export class _24DHelper {
         'r-3': { button: '3rd Row', group: 'n6' },
         'r-4': { button: '4th Row', group: 'n6' },
 
-        'c-1-2': { button: '1st Column,2nd Column', group: 'n4' },
-        'c-2-3': { button: '2nd Column,3rd Column', group: 'n4' },
-        'c-3-4': { button: '3rd Column,4th Column', group: 'n4' },
-        'c-4-5': { button: '4th Column,5th Column', group: 'n4' },
-        'c-5-6': { button: '5th Column,6th Column', group: 'n4' },
-
         'r-1-2': { button: '1st Row,2nd Row', group: 'n12' },
         'r-3-4': { button: '3rd Row,4th Row', group: 'n12' },
+    };
+
+    static betsMultiCols: Record<string, Bet> = {
+        'c-1-2': { button: '1st Column,2nd Column', group: 'n8' },
+        'c-2-3': { button: '2nd Column,3rd Column', group: 'n8' },
+        'c-3-4': { button: '3rd Column,4th Column', group: 'n8' },
+        'c-4-5': { button: '4th Column,5th Column', group: 'n8' },
+        'c-5-6': { button: '5th Column,6th Column', group: 'n8' },
     };
 
     static betMultiNumber: Record<string, Bet> = {
@@ -155,6 +157,7 @@ export class _24DHelper {
 
     static getBetKeys = Object.keys(this.bets);
     static getBetColRowKeys = Object.keys(this.betsColRow);
+    static getBetsMultiColsKeys = Object.keys(this.betsMultiCols);
     static getBet50Keys = Object.keys(this.bets50);
     static getBetMultiNumberKeys = Object.keys(this.betMultiNumber);
 
@@ -244,4 +247,8 @@ export class _24DHelper {
 
         return winCols;
     }
+
+    static is24DJackpot = (item: Thunder<string>): item is { pcode: string; data: ThunderP6B } => {
+        return item.pcode === 'p6b';
+    };
 }
