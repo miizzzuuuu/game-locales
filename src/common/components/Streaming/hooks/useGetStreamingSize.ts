@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
-import { useWindowResize } from '../../../hooks/useWindowResize';
-import { DisplayHelper } from '../../../utils/DisplayHelper';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectDevice } from '../../../../store/slice/windowSlice';
+import { useWindowResize } from '../../../hooks/useWindowResize';
+import { setGlobalProperty } from '../../../utils/DisplayHelper';
 
 function useGetStreamingSize() {
     const device = useAppSelector(selectDevice);
@@ -23,7 +23,7 @@ function useGetStreamingSize() {
 
             const heightStreaming = (9 / 16) * widthGame * scaleStreaming;
 
-            DisplayHelper.setGlobalProperty('--height-streaming', `${heightStreaming}`);
+            setGlobalProperty('--height-streaming', `${heightStreaming}`);
         }
     }, [device]);
 
