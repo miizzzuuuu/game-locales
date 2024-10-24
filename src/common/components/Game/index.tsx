@@ -1,24 +1,24 @@
 import { lazy, Suspense, useCallback } from 'react';
+import { useSocket } from '../../../services/socket/hooks';
+import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { setNewSet } from '../../../store/slice/gameSlice';
+import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
+import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
+import { setWinAmount } from '../../../store/slice/resultSlice';
+import { closeTime, selectTime } from '../../../store/slice/timerSlice';
+import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
+import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
+import { useKeyboard } from '../../hooks/useKeyboard';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
+import { Features } from '../../utils/Features';
+import { getRandomInt } from '../../utils/FunctionHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
 import Streaming from '../Streaming';
 import Timer from '../Timer';
-import styles from './styles.module.scss';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
-import { setWinAmount } from '../../../store/slice/resultSlice';
-import { closeTime, selectTime } from '../../../store/slice/timerSlice';
-import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
-import { useKeyboard } from '../../hooks/useKeyboard';
-import { FunctionHelper } from '../../utils/FunctionHelper';
-import { useSocket } from '../../../services/socket/hooks';
-import { selectNickname, selectOperatorId } from '../../../store/slice/playerSlice';
 import TopWinner from '../TopWinner';
-import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
-import { setNewSet } from '../../../store/slice/gameSlice';
-import { Features } from '../../utils/Features';
+import styles from './styles.module.scss';
 
 const Menu = lazy(() => import('../../menus/Menu'));
 
@@ -41,7 +41,7 @@ function Game() {
                 dispatch(
                     gameResultAction({
                         ...dummyLoadNewValue,
-                        win: FunctionHelper.getRandomInt(1, 25).toString().padStart(2, '0'),
+                        win: getRandomInt(1, 25).toString().padStart(2, '0'),
                     }),
                 );
             }
