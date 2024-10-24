@@ -102,6 +102,8 @@ const betsSlice = createSlice({
                 const bet = state.add[property];
                 state.add[property] += bet;
             }
+
+            state.addTotal *= 2;
         },
         resetBetAdd: (state) => {
             state.add = {};
