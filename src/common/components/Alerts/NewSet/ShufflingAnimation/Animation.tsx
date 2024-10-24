@@ -19,7 +19,7 @@ const ShufflingAnimation = ({ close }: IProps) => {
 
     return (
         <div className={`${styles.container}`} ref={containerRef}>
-            <Lottie src="https://cdn.lottielab.com/l/3uiMopx48Bwmkc.json" autoplay />
+            <Lottie src="https://cdn.lottielab.com/l/BEpt6mf57S1B5E.json" autoplay />
         </div>
     );
 };
