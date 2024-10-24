@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
-
 import { getTimer } from '../../services/api/timer';
+import { useAppDispatch } from '../../store/hooks';
 import { openTime, setTimer } from '../../store/slice/timerSlice';
+import { handleErrorApi } from '../utils/APIManager';
+import { LoadingHelper } from '../utils/LoadingHelper';
 
 function useFetchTimer() {
     const dispatch = useAppDispatch();
@@ -31,7 +30,7 @@ function useFetchTimer() {
                     LoadingHelper.update(10, 'Load settings completed');
                 }
             } catch (error) {
-                APIManager.handleErrorApi(error);
+                handleErrorApi(error);
             }
         };
 

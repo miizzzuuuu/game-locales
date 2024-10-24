@@ -1,4 +1,4 @@
-import APIManager, { ENDPOINTS } from '../../common/utils/APIManager';
+import { ENDPOINTS, get } from '../../common/utils/APIManager';
 import { getPcode } from '../../common/utils/GameHelper';
 
 export const getResultHistory = async <T extends object>(
@@ -17,6 +17,6 @@ export const getResultHistory = async <T extends object>(
 
     const query = new URLSearchParams(options).toString();
 
-    const response = await APIManager.get<T>(ENDPOINTS.result + `/${getPcode()}/?${query}`);
+    const response = await get<T>(ENDPOINTS.result + `/${getPcode()}/?${query}`);
     return response.data;
 };

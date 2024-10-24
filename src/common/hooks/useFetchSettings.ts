@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
 import { getPlayerSettings } from '../../services/api/playerSettings';
+import { useAppDispatch } from '../../store/hooks';
 import { setSetings } from '../../store/slice/settingsSlice';
+import { handleErrorApi } from '../utils/APIManager';
+import { LoadingHelper } from '../utils/LoadingHelper';
 
 function useFetchSettings() {
     const dispatch = useAppDispatch();
@@ -25,7 +25,7 @@ function useFetchSettings() {
                     LoadingHelper.update(10, 'Load settings completed');
                 }
             } catch (error) {
-                APIManager.handleErrorApi(error);
+                handleErrorApi(error);
             }
         };
 

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
-import { getGameData } from '../../services/api/gameData';
-import { setGame } from '../../store/slice/gameSlice';
 import { fetchResultHistory } from '../../game/services/resultHistory';
+import { getGameData } from '../../services/api/gameData';
 import { fetchLastbets } from '../../services/api/lastbets';
-import { setLastBetData } from '../../store/slice/lastBetsSlice';
+import { useAppDispatch } from '../../store/hooks';
 import { addBetSend } from '../../store/slice/bets';
+import { setGame } from '../../store/slice/gameSlice';
+import { setLastBetData } from '../../store/slice/lastBetsSlice';
+import { handleErrorApi } from '../utils/APIManager';
+import { LoadingHelper } from '../utils/LoadingHelper';
 
 function useFetchGame() {
     const dispatch = useAppDispatch();
@@ -58,7 +58,7 @@ function useFetchGame() {
                     LoadingHelper.update(10, 'Load game completed');
                 }
             } catch (error) {
-                APIManager.handleErrorApi(error);
+                handleErrorApi(error);
             }
         };
 
