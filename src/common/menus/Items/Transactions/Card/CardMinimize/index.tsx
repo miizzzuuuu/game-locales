@@ -5,7 +5,7 @@ import { selectGameName } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { getGameDisplayName, getPcode } from '../../../../../utils/GameHelper';
-import { StringHelper } from '../../../../../utils/StringHelper';
+import { formatCurrency, formatedDate } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const CardMinimize = ({ data }: ITransactionCardProps) => {
@@ -30,16 +30,16 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
                     }}
                 >
                     {total_transaction > 0 ? '+' : ''}
-                    {StringHelper.formatCurrency(total_transaction, currency, i18n.language)}
+                    {formatCurrency(total_transaction, currency, i18n.language)}
                 </span>
             </div>
 
             <div className={`${styles['col-2']}`}>
                 <span className={styles['text-secondary']}>
-                    {StringHelper.formatedDate(tglbel, i18n.language)}
+                    {formatedDate(tglbel, i18n.language)}
                 </span>
                 <span className={styles['text-secondary']}>
-                    {StringHelper.formatCurrency(total_debit, currency, i18n.language)}
+                    {formatCurrency(total_debit, currency, i18n.language)}
                 </span>
             </div>
 

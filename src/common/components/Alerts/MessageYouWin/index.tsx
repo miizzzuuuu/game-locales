@@ -1,3 +1,4 @@
+import { AnimationEventHandler, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
@@ -8,11 +9,10 @@ import {
     selectWinStatus,
 } from '../../../../store/slice/resultSlice';
 import { WIN_NOTIFICATION_DURATION } from '../../../utils/GameHelper';
-import { StringHelper } from '../../../utils/StringHelper';
+import { formatCurrency } from '../../../utils/StringHelper';
 import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
 import styles from './styles.module.scss';
-import { AnimationEventHandler, useEffect, useRef, useState } from 'react';
 
 const MessageYouWin = () => {
     const currency = useAppSelector(selectCurrency);
@@ -143,7 +143,7 @@ const MessageYouWin = () => {
                 <LabelTranslate value="you-win" className={styles.label} />
 
                 <div className={styles.value}>
-                    {StringHelper.formatCurrency(displayValue, currency, i18n.language)}
+                    {formatCurrency(displayValue, currency, i18n.language)}
                 </div>
             </div>
         </div>

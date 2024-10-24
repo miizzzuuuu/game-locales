@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ITransactionCardProps } from '..';
 import BettingItemTransaction from '../../../../../../game/components/BettingItemTransaction';
 import LabelTranslate from '../../../../../components/LabelTranslate';
-import { StringHelper } from '../../../../../utils/StringHelper';
+import { formatNumber } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const BettingTable = ({ data }: ITransactionCardProps) => {
@@ -38,7 +38,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                             </td>
                             <td>
                                 <div className={`${styles['text-center']}`}>
-                                    {StringHelper.formatNumber(betting.taruhan, i18n.language)}
+                                    {formatNumber(betting.taruhan, i18n.language)}
                                 </div>
                             </td>
                             <td>
@@ -50,7 +50,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                                         betting.win_amount <= 0 ? ` ${styles.muted}` : ''
                                     }`}
                                 >
-                                    {StringHelper.formatNumber(betting.win_amount, i18n.language)}
+                                    {formatNumber(betting.win_amount, i18n.language)}
                                 </div>
                             </td>
                         </tr>
@@ -62,7 +62,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                         </td>
                         <td>
                             <div className={`${styles['text-center']}`}>
-                                {StringHelper.formatNumber(total_debit, i18n.language)}
+                                {formatNumber(total_debit, i18n.language)}
                             </div>
                         </td>
                         <td className={`${styles.shading}`}>&nbsp;</td>
@@ -73,7 +73,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                                     color: total_credit >= 0 ? '#3be800' : '#ff2667',
                                 }}
                             >
-                                {StringHelper.formatNumber(total_credit, i18n.language)}
+                                {formatNumber(total_credit, i18n.language)}
                             </div>
                         </td>
                     </tr>

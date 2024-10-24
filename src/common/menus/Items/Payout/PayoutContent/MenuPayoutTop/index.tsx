@@ -1,4 +1,4 @@
-import { StringHelper } from '../../../../../utils/StringHelper';
+import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../../../../store/hooks';
 import {
     selectGameName,
@@ -7,9 +7,8 @@ import {
     selectPeriod,
 } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../../../store/slice/playerSlice';
-
-import './styles.scss';
-import { useTranslation } from 'react-i18next';
+import { formatCurrency, formatNumber } from '../../../../../utils/StringHelper';
+import styles from './styles.module.scss';
 
 const MenuPayoutTop = () => {
     const { i18n } = useTranslation();
@@ -22,15 +21,15 @@ const MenuPayoutTop = () => {
     const max50 = useAppSelector(selectMax50);
 
     return (
-        <div className="menu-payout-top">
-            <div className="menu-payout-info">
-                <span className="menu-payout-info-left">#{period}</span>
+        <div className={styles['menu-payout-top']}>
+            <div className={styles['menu-payout-info']}>
+                <span className={styles['menu-payout-info-left']}>#{period}</span>
                 <span>{gameName}</span>
             </div>
 
-            <span className="menu-payout-top-bottom">
-                {StringHelper.formatCurrency(min, currency, i18n.language)} -{' '}
-                {StringHelper.formatNumber(max50, i18n.language)}
+            <span className={styles['menu-payout-top-bottom']}>
+                {formatCurrency(min, currency, i18n.language)} -{' '}
+                {formatNumber(max50, i18n.language)}
             </span>
         </div>
     );
