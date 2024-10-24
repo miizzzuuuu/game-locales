@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import SVGChip from '../../SVG/SVGChip';
-import { StringHelper } from '../../../utils/StringHelper';
+import { formatChipText } from '../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -14,7 +14,7 @@ interface IProps {
 const Chip = ({ value, onClick, color, isActive }: IProps) => {
     const chipRef = useRef<HTMLDivElement>(null);
 
-    const stringValue = StringHelper.formatChipText(value);
+    const stringValue = formatChipText(value);
 
     const handleClick = () => {
         console.log('handle click');

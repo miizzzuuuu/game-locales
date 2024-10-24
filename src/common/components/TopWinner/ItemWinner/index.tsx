@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { StringHelper } from '../../../utils/StringHelper';
+import { formatNumber } from '../../../utils/StringHelper';
 import SVGWinner from '../SVG/SVGWinner';
 
 import styles from './styles.module.scss';
@@ -18,7 +18,7 @@ const ItemWinner = ({ isFirst, name, value }: IProps) => {
             {isFirst && <SVGWinner style={{ width: '1.2rem', height: '1.2rem' }} />}
 
             <span className={styles.label}>{name}</span>
-            <span className={styles.value}>{StringHelper.formatNumber(value, i18n.language)}</span>
+            <span className={styles.value}>{formatNumber(value, i18n.language)}</span>
         </div>
     );
 };

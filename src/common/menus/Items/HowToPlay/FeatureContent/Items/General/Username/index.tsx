@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../../../../../../store/hooks';
+import { selectTotalBetAdd } from '../../../../../../../../store/slice/bets';
 import {
     selectBalance,
     selectCurrency,
     selectNickname,
 } from '../../../../../../../../store/slice/playerSlice';
-import { StringHelper } from '../../../../../../../utils/StringHelper';
+import { formatCurrency } from '../../../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
-import { selectTotalBetAdd } from '../../../../../../../../store/slice/bets';
 
 const Username = () => {
     const { i18n } = useTranslation();
@@ -24,7 +24,7 @@ const Username = () => {
             </div>
 
             <span className={styles.value}>
-                {StringHelper.formatCurrency(balance - totalBetAdd, currency, i18n.language)}
+                {formatCurrency(balance - totalBetAdd, currency, i18n.language)}
             </span>
         </div>
     );

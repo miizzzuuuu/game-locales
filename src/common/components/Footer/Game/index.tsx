@@ -7,7 +7,7 @@ import {
     selectPeriod,
 } from '../../../../store/slice/gameSlice';
 import { selectCurrency } from '../../../../store/slice/playerSlice';
-import { StringHelper } from '../../../utils/StringHelper';
+import { formatCurrency, formatNumber } from '../../../utils/StringHelper';
 import UserInfo from '../../UserInfo';
 
 const Game = () => {
@@ -23,7 +23,7 @@ const Game = () => {
         <UserInfo
             label={`#${period}`}
             labelSecond={gameName}
-            value={`${StringHelper.formatCurrency(min, currency, i18n.language)}-${StringHelper.formatNumber(max50, i18n.language)}`}
+            value={`${formatCurrency(min, currency, i18n.language)}-${formatNumber(max50, i18n.language)}`}
             isRight
         />
     );

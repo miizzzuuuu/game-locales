@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import { StringHelper } from '../../../../../common/utils/StringHelper';
+import { useTranslation } from 'react-i18next';
+import { formatNumber } from '../../../../../common/utils/StringHelper';
 import { _24DHelper } from '../../../../utils/_24DHelper';
 import styles from './styles.module.scss';
-import { useTranslation } from 'react-i18next';
 
 interface IProps {
     button: string;
@@ -20,7 +20,7 @@ const BetNumber = ({ button }: IProps) => {
             </span>
 
             <span className={styles.payout}>
-                1:{StringHelper.formatNumber(_24DHelper.PAYOUT['n'], i18n.language)}
+                1:{formatNumber(_24DHelper.PAYOUT['n'], i18n.language)}
             </span>
         </div>
     );

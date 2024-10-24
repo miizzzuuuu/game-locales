@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import LabelTranslate from '../../../../components/LabelTranslate';
-import { StringHelper } from '../../../../utils/StringHelper';
+import { formatDateByLocale } from '../../../../utils/StringHelper';
 import { groupTransactionsByDate } from '../../../../utils/TransactionHelper';
 import Card from '../Card';
 import CardContainer from '../CardContainer';
@@ -25,12 +25,7 @@ const Previous = () => {
                     return (
                         <div key={key} className={styles.wrapper}>
                             <div className={styles.date}>
-                                {StringHelper.formatDateByLocale(
-                                    key,
-                                    'long',
-                                    undefined,
-                                    i18n.language,
-                                )}
+                                {formatDateByLocale(key, 'long', undefined, i18n.language)}
                             </div>
 
                             <CardContainer>
