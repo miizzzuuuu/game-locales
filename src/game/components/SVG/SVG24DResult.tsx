@@ -1,12 +1,12 @@
 import { SVGProps } from 'react';
-import { _24DHelper } from '../../utils/_24DHelper';
+import { getColor } from '../../utils/_24DHelper';
 
 interface IProps extends Pick<SVGProps<SVGSVGElement>, 'className' | 'style'> {
     value: number;
 }
 
 const SVG24DResult = ({ className, style, value }: IProps) => {
-    const colorValue = _24DHelper.getColor(value);
+    const colorValue = getColor(value);
     const color = colorValue === 'red' ? '#E40044' : '#131313';
     const colorLight = colorValue === 'red' ? '#FFC5D6' : '#D9D9D9';
 

@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { _24DHelper } from '../../game/utils/_24DHelper';
+import { getWinResult } from '../../game/utils/_24DHelper';
 import { ScanNumberData } from '../../types';
 import { RootState } from '../store';
 
@@ -29,7 +29,7 @@ const baseSlice = createSlice({
     reducers: {
         setResult: (state, action: PayloadAction<number>) => {
             const resultNumber = action.payload;
-            const winBet = _24DHelper.getWinResult(resultNumber);
+            const winBet = getWinResult(resultNumber);
 
             state.resultNumber = resultNumber;
             state.winBets = winBet;
