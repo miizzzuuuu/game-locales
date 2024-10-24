@@ -3,7 +3,7 @@ import { getPlayerSettings } from '../../services/api/playerSettings';
 import { useAppDispatch } from '../../store/hooks';
 import { setSetings } from '../../store/slice/settingsSlice';
 import { handleErrorApi } from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
+import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchSettings() {
     const dispatch = useAppDispatch();
@@ -15,14 +15,14 @@ function useFetchSettings() {
 
         const fetchPlayerSettings = async () => {
             try {
-                LoadingHelper.update(0, 'Load settings');
+                updateLoading(0, 'Load settings');
                 const data = await getPlayerSettings();
 
                 if (!ignore) {
                     dispatch(setSetings(data));
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load settings completed');
+                    updateLoading(10, 'Load settings completed');
                 }
             } catch (error) {
                 handleErrorApi(error);
