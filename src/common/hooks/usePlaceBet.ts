@@ -6,7 +6,7 @@ import { selectActiveChip } from '../../store/slice/chipSlice';
 import { selectMax, selectMax50, selectMin, selectMin50 } from '../../store/slice/gameSlice';
 import { setMessage } from '../../store/slice/gameStateSlice';
 import { selectBalance } from '../../store/slice/playerSlice';
-import { BetHelper } from '../utils/BetHelper';
+import { getGameBetHelper } from '../utils/BetHelper';
 import { getBasePcode } from '../utils/GameHelper';
 
 interface Params {
@@ -34,10 +34,10 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
     const placeBetHandler = (button: string, group: string) => {
         if (activeChip === 0 || !betIsOpen) return;
 
-        const isGroup50 = BetHelper.game?.GroupBet50.includes(group);
+        const isGroup50 = getGameBetHelper()?.GroupBet50.includes(group);
 
         if (isGroup50) {
-            const oppositeBetKey = BetHelper.game?.oppositeBet50[button];
+            const oppositeBetKey = getGameBetHelper()?.oppositeBet50[button];
 
             if (oppositeBetKey && betAdd[oppositeBetKey] > 0) {
                 const opposite = oppositeBetKey.split('@')[0];
