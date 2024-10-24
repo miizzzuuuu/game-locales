@@ -3,7 +3,7 @@ import { ChipBetProps } from '..';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectChipBase } from '../../../../store/slice/chipSlice';
 import { selectShowChip } from '../../../../store/slice/gameStateSlice';
-import { ChipHelper } from '../../../utils/ChipHelper';
+import { getChipColorByAmount } from '../../../utils/ChipHelper';
 import { StringHelper } from '../../../utils/StringHelper';
 import SVGChip from '../../SVG/SVGChip';
 import styles from './styles.module.scss';
@@ -16,7 +16,7 @@ const ChipAnimation = ({ value, ignoreTransparent }: ChipBetProps) => {
     const stringValue = StringHelper.formatChipText(value);
 
     const chipBase = useAppSelector(selectChipBase);
-    const color = ChipHelper.getChipColorByAmount(value, chipBase);
+    const color = getChipColorByAmount(value, chipBase);
 
     const showChip = useAppSelector(selectShowChip) || ignoreTransparent;
 

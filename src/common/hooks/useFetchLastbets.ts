@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../../store/hooks';
-import { LoadingHelper } from '../utils/LoadingHelper';
 import { getLastbets } from '../../services/api/lastbets';
+import { useAppDispatch } from '../../store/hooks';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
+import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchLastbets() {
     const dispatch = useAppDispatch();
@@ -14,7 +14,7 @@ function useFetchLastbets() {
 
         const fetchLastbets = async () => {
             try {
-                LoadingHelper.update(0, 'Load settings');
+                updateLoading(0, 'Load settings');
                 const data = await getLastbets();
 
                 if (!ignore) {
@@ -24,7 +24,7 @@ function useFetchLastbets() {
                 console.log('fetch last bet', error);
             } finally {
                 setFinish(true);
-                LoadingHelper.update(10, 'Load settings completed');
+                updateLoading(10, 'Load settings completed');
             }
         };
 

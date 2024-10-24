@@ -3,7 +3,7 @@ import { getTimer } from '../../services/api/timer';
 import { useAppDispatch } from '../../store/hooks';
 import { openTime, setTimer } from '../../store/slice/timerSlice';
 import { handleErrorApi } from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
+import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchTimer() {
     const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ function useFetchTimer() {
 
         const fetchPlayerSettings = async () => {
             try {
-                LoadingHelper.update(0, 'Load settings');
+                updateLoading(0, 'Load settings');
                 const data = await getTimer();
 
                 if (!ignore) {
@@ -27,7 +27,7 @@ function useFetchTimer() {
                     }
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load settings completed');
+                    updateLoading(10, 'Load settings completed');
                 }
             } catch (error) {
                 handleErrorApi(error);

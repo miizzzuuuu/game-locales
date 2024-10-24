@@ -1,14 +1,13 @@
 import { useCallback, useEffect, useRef } from 'react';
-
-import { ChipHelper } from '../../utils/ChipHelper';
-import Chip from './Chip';
-import styles from './styles.module.scss';
+import { Sound } from '../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
-import { selectOrientation } from '../../../store/slice/windowSlice';
-import { Sound } from '../../../services/sound';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { selectOrientation } from '../../../store/slice/windowSlice';
 import { useDragToScroll } from '../../hooks/useDragToScroll';
+import { getChipColorByIndex } from '../../utils/ChipHelper';
+import Chip from './Chip';
+import styles from './styles.module.scss';
 
 interface IProps {
     version?: number;
@@ -83,7 +82,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                         key={idx}
                         version={version}
                         value={chip}
-                        color={ChipHelper.getChipColorByIndex(idx)}
+                        color={getChipColorByIndex(idx)}
                         isActive={activeChip === chip}
                         onClick={() => {
                             Sound.playSelectChip();

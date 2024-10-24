@@ -1,22 +1,21 @@
 import { useCallback, useEffect, useState } from 'react';
+import Game from './common/components/Game';
+import MiniHowToPlay from './common/components/MiniHowToPlay';
+import ResizeOverlay from './common/components/ResizeOverlay';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { useFetchGame } from './common/hooks/useFetchGame';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
-import { useWindowResize } from './common/hooks/useWindowResize';
-import { LoadingHelper } from './common/utils/LoadingHelper';
-import { useAppDispatch, useAppSelector } from './store/hooks';
-import { setDeviceType, setOrientation } from './store/slice/windowSlice';
-
-import Game from './common/components/Game';
-import MiniHowToPlay from './common/components/MiniHowToPlay';
-import ResizeOverlay from './common/components/ResizeOverlay';
 import { useFetchTimer } from './common/hooks/useFetchTimer';
 import { useFocus } from './common/hooks/useFocus';
 import { useFullscreen } from './common/hooks/useFullscreen';
 import { useSettingSound } from './common/hooks/useSettingSound';
+import { useWindowResize } from './common/hooks/useWindowResize';
 import { Features } from './common/utils/Features';
+import { finishLoading } from './common/utils/LoadingHelper';
+import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
@@ -37,7 +36,7 @@ function App() {
         if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
             setShowGame(true);
 
-            LoadingHelper.finish();
+            finishLoading();
         }
     }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
 

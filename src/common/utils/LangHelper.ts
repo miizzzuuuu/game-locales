@@ -68,5 +68,3 @@ export const formatedLanguage = (lang: string) => {
 
     return supportLang[0];
 };
-
-export class LangHelper {}

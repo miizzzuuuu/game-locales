@@ -7,7 +7,7 @@ import { setShowMiniHowToPlay } from '../../store/slice/gameStateSlice';
 import { setPlayerData } from '../../store/slice/playerSlice';
 import { handleErrorApi } from '../utils/APIManager';
 import { getMiniHowToPlayLocalStorage } from '../utils/GameHelper';
-import { LoadingHelper } from '../utils/LoadingHelper';
+import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchPlayer() {
     const dispatch = useAppDispatch();
@@ -18,7 +18,7 @@ function useFetchPlayer() {
 
         const fetchPlayerData = async () => {
             try {
-                LoadingHelper.update(0, 'Load player data');
+                updateLoading(0, 'Load player data');
                 const data = await getPlayerData();
 
                 if (!ignore) {
@@ -34,7 +34,7 @@ function useFetchPlayer() {
                     dispatch(setShowMiniHowToPlay(dataMiniHTP.show && showMiniHowToPlayLS));
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load player data completed');
+                    updateLoading(10, 'Load player data completed');
                 }
             } catch (error) {
                 handleErrorApi(error);

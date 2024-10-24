@@ -7,7 +7,7 @@ import { addBetSend } from '../../store/slice/bets';
 import { setGame } from '../../store/slice/gameSlice';
 import { setLastBetData } from '../../store/slice/lastBetsSlice';
 import { handleErrorApi } from '../utils/APIManager';
-import { LoadingHelper } from '../utils/LoadingHelper';
+import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchGame() {
     const dispatch = useAppDispatch();
@@ -19,7 +19,7 @@ function useFetchGame() {
 
         const fetchPlayerSettings = async () => {
             try {
-                LoadingHelper.update(0, 'Load settings');
+                updateLoading(0, 'Load settings');
                 const data = await getGameData();
 
                 if (!ignore) {
@@ -53,7 +53,7 @@ function useFetchGame() {
                     ]);
 
                     setFinish(true);
-                    LoadingHelper.update(10, 'Load game completed');
+                    updateLoading(10, 'Load game completed');
                 }
             } catch (error) {
                 handleErrorApi(error);
