@@ -1,17 +1,15 @@
-import APIManager, { ENDPOINTS } from '../../common/utils/APIManager';
+import { ENDPOINTS, get } from '../../common/utils/APIManager';
 import { getPcode } from '../../common/utils/GameHelper';
 import { LastBetsGameResponse } from '../../types';
 
 export const getLastbets = async () => {
-    const response = await APIManager.get<LastBetsGameResponse>(
-        ENDPOINTS.playerLastbets + `/${getPcode()}`,
-    );
+    const response = await get<LastBetsGameResponse>(ENDPOINTS.playerLastbets + `/${getPcode()}`);
     return response.data;
 };
 
 export const fetchLastbets = async (callback?: (data: LastBetsGameResponse) => void) => {
     try {
-        const response = await APIManager.get<LastBetsGameResponse>(
+        const response = await get<LastBetsGameResponse>(
             ENDPOINTS.playerLastbets + `/${getPcode()}`,
         );
 

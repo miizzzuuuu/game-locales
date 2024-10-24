@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import StoreProvider from './store/StoreProvider.tsx';
 import App from './App.tsx';
-
 import { makeServer } from './api/server/server.ts';
-
-import { setPcode } from './common/utils/GameHelper.ts';
-import APIManager from './common/utils/APIManager.ts';
-
-import './services/i18next/index.ts';
-import './styles/main.scss';
+import { handleErrorApi } from './common/utils/APIManager.ts';
 import { BetHelper } from './common/utils/BetHelper.ts';
+import { setPcode } from './common/utils/GameHelper.ts';
 import { _24DBet } from './game/utils/_24DBet.ts';
+import './services/i18next/index.ts';
+import StoreProvider from './store/StoreProvider.tsx';
+import './styles/main.scss';
 
 declare global {
     interface Window {
@@ -31,7 +28,7 @@ const main = () => {
     console.log('game pcode:', pcode);
 
     if (!pcode) {
-        APIManager.handleErrorApi(new Error('pcode empty'));
+        handleErrorApi(new Error('pcode empty'));
         return;
     }
 

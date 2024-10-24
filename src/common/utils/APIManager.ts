@@ -23,7 +23,7 @@ export class SessionError extends ApiError {
     }
 }
 
-export const ENDPOINTS = {
+const ENDPOINTS = {
     player: '/v2/player',
     playerProperties: '/v2/player/properties',
     playerSettings: '/v2/player/settings',
@@ -40,119 +40,122 @@ export const ENDPOINTS = {
     miniHowToPlay: '/v2/player/mini-how-to-play',
 };
 
-class APIManager {
-    static BASE_API = import.meta.env.VITE_URL_API;
+const BASE_API = import.meta.env.VITE_URL_API;
+const TIMEOUT_TIME = 30;
+const SESSION_EMPTY = 'Session Empty';
 
-    static TIMEOUT_TIME = 30;
-    static SESSION_EMPTY = 'Session Empty';
+const timeout = (time: number) => {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), time * 1000);
+    return controller;
+};
 
-    static async request<T = object>(
-        endpoint: string,
-        { body, ...customConfig }: Params = {},
-    ): Promise<Client<T>> {
-        const headers = { 'Content-Type': 'application/json' };
-
-        const config: RequestInit = {
-            method: body ? 'POST' : 'GET',
-            signal: this.timeout(this.TIMEOUT_TIME).signal,
-            ...customConfig,
-            headers: {
-                ...headers,
-                ...customConfig.headers,
-            },
-        };
-
-        if (body) {
-            config.body = JSON.stringify(body);
-        }
-
-        const response = await fetch(this.BASE_API + endpoint, config);
-
-        const data: T = await response.json();
-
-        if (!response.ok) {
-            throw new Error(response.statusText);
-        }
-
-        this.checkApiStatus(data);
-
-        return {
-            status: response.status,
-            headers: response.headers,
-            url: response.url,
-            data,
-        } as Client<T>;
-    }
-
-    static get<T = object>(endpoint: string, customConfig = {}): Promise<Client<T>> {
-        return this.request(endpoint, { ...customConfig, method: 'GET' });
-    }
-
-    static post<T = object>(
-        endpoint: string,
-        body: Record<string, any>,
-        customConfig = {},
-    ): Promise<Client<T>> {
-        return this.request(endpoint, { ...customConfig, body });
-    }
-
-    static put<T = object>(
-        endpoint: string,
-        body: Record<string, any>,
-        customConfig = {},
-    ): Promise<Client<T>> {
-        return this.request(endpoint, { ...customConfig, body, method: 'PUT' });
-    }
-
-    static timeout = (time: number) => {
-        const controller = new AbortController();
-        setTimeout(() => controller.abort(), time * 1000);
-        return controller;
-    };
-
-    static checkApiStatus = (response: any) => {
-        if (response.status === false) {
-            const detail = response.detail;
-            if (detail) {
-                if (/SESSION EMPTY/.test(response.detail)) {
-                    throw new SessionError();
-                }
-
-                throw new ApiError(detail);
+const checkApiStatus = (response: any) => {
+    if (response.status === false) {
+        const detail = response.detail;
+        if (detail) {
+            if (/SESSION EMPTY/.test(response.detail)) {
+                throw new SessionError();
             }
-
-            const message = response.message || 'API Error';
-            throw new ApiError(message);
+            throw new ApiError(detail);
         }
+        const message = response.message || 'API Error';
+        throw new ApiError(message);
+    }
+};
+
+const getErrorMessage = (error: unknown, defaultMessage = 'Error'): string => {
+    if (typeof error === 'string') {
+        return error;
+    }
+    if (error instanceof Error) {
+        return error.message;
+    }
+    return defaultMessage;
+};
+
+const redirectError = (sessionEmpty?: boolean) => {
+    const urlError = sessionEmpty
+        ? 'https://page.idnlive.club/idle.html'
+        : 'https://page.idnlive.club/error.html';
+    window.location.replace(urlError);
+};
+
+const handleErrorApi = (error: unknown) => {
+    const message = getErrorMessage(error);
+    alert(message);
+    redirectError(message === SESSION_EMPTY);
+};
+
+const request = async <T = object>(
+    endpoint: string,
+    { body, ...customConfig }: Params = {},
+): Promise<Client<T>> => {
+    const headers = { 'Content-Type': 'application/json' };
+
+    const config: RequestInit = {
+        method: body ? 'POST' : 'GET',
+        signal: timeout(TIMEOUT_TIME).signal,
+        ...customConfig,
+        headers: {
+            ...headers,
+            ...customConfig.headers,
+        },
     };
 
-    static getErrorMessage(error: unknown, defaultMessage = 'Error'): string {
-        if (typeof error === 'string') {
-            return error;
-        }
-
-        if (error instanceof Error) {
-            return error.message;
-        }
-
-        return defaultMessage;
+    if (body) {
+        config.body = JSON.stringify(body);
     }
 
-    static handleErrorApi(error: unknown) {
-        const message = this.getErrorMessage(error);
+    const response = await fetch(BASE_API + endpoint, config);
+    const data: T = await response.json();
 
-        alert(message);
-
-        this.redirectError(message === this.SESSION_EMPTY);
+    if (!response.ok) {
+        throw new Error(response.statusText);
     }
 
-    static redirectError = (seesionEmpty?: boolean) => {
-        const urlError = seesionEmpty
-            ? 'https://page.idnlive.club/idle.html'
-            : 'https://page.idnlive.club/error.html';
+    checkApiStatus(data);
 
-        window.location.replace(urlError);
+    return {
+        status: response.status,
+        headers: response.headers,
+        url: response.url,
+        data,
     };
-}
+};
 
-export default APIManager;
+const get = <T = object>(endpoint: string, customConfig = {}): Promise<Client<T>> => {
+    return request(endpoint, { ...customConfig, method: 'GET' });
+};
+
+const post = <T = object>(
+    endpoint: string,
+    body: Record<string, any>,
+    customConfig = {},
+): Promise<Client<T>> => {
+    return request(endpoint, { ...customConfig, body });
+};
+
+const put = <T = object>(
+    endpoint: string,
+    body: Record<string, any>,
+    customConfig = {},
+): Promise<Client<T>> => {
+    return request(endpoint, { ...customConfig, body, method: 'PUT' });
+};
+
+export {
+    BASE_API,
+    ENDPOINTS,
+    SESSION_EMPTY,
+    TIMEOUT_TIME,
+    checkApiStatus,
+    get,
+    getErrorMessage,
+    handleErrorApi,
+    post,
+    put,
+    redirectError,
+    request,
+    timeout,
+};

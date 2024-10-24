@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch } from '../../store/hooks';
-import APIManager from '../utils/APIManager';
-import { getPlayerData } from '../../services/api/playerData';
-import { LoadingHelper } from '../utils/LoadingHelper';
-import { setPlayerData } from '../../store/slice/playerSlice';
-import { setChipBase } from '../../store/slice/chipSlice';
 import { getMiniHowToPlay } from '../../services/api/miniHowToPlay';
+import { getPlayerData } from '../../services/api/playerData';
+import { useAppDispatch } from '../../store/hooks';
+import { setChipBase } from '../../store/slice/chipSlice';
 import { setShowMiniHowToPlay } from '../../store/slice/gameStateSlice';
+import { setPlayerData } from '../../store/slice/playerSlice';
+import { handleErrorApi } from '../utils/APIManager';
 import { getMiniHowToPlayLocalStorage } from '../utils/GameHelper';
+import { LoadingHelper } from '../utils/LoadingHelper';
 
 function useFetchPlayer() {
     const dispatch = useAppDispatch();
@@ -37,7 +37,7 @@ function useFetchPlayer() {
                     LoadingHelper.update(10, 'Load player data completed');
                 }
             } catch (error) {
-                APIManager.handleErrorApi(error);
+                handleErrorApi(error);
             }
         };
 
