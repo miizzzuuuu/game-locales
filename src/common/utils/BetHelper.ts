@@ -3,9 +3,6 @@ export interface GameBetHelper {
     oppositeBet50: Record<string, string>;
 }
 
-let gameBet: GameBetHelper | null = null;
-
-export const getGameBetHelper = () => gameBet;
-export const setGameBetHelper = (value: GameBetHelper) => {
-    gameBet = value;
+export const betHelper: { game: GameBetHelper | null } = {
+    game: null,
 };
