@@ -1,51 +1,52 @@
 {
     "introduction": {
         "title": "pengenalan",
-        "content": "Dragon Tiger Wild adalah game terbaru dari IDNLIVE Europe, kamu akan menemukan pengalaman baru yang seru dan menyenangkan dalam memainkan game ini jika kamu sudah familiar dengan game dragon tiger. Dalam permainan baru ini kami menambahkan elemen baru ke permainan dragon tiger dengan wild card, Anda akan mendapatkan hadiah yang jauh lebih tinggi dalam permainan ini. Let’s get wild!!!"
+        "content": "Dragon Tiger Wild adalah game terbaru dari IDNLIVE EUROPE yang menghadirkan keseruan lebih dengan tambahan <b>Kartu Wild</b>. Permainan ini memberikan pengalaman baru bagi para penggemar Dragon Tiger, dengan peluang kemenangan fantastis <b>hingga 127x! LET’S GET WILD!!!</b>"
     },
     "game-objective": {
         "title": "TUJUAN PERMAINAN",
-        "content": "Tujuan dalam permainan Dragon Tiger Wild adalah menebak kartu tertinggi dan juga menebak wild card dengan benar agar hadiah anda semakin lebih besar."
+        "content": "Tujuan dalam permainan ini adalah menebak kartu tertinggi antara Naga dan Harimau, serta memanfaatkan Kartu Wild untuk membentuk kombinasi bonus wild agar meraih hadiah kemenangan yang lebih besar."
     },
     "rules": {
         "title": "PERATURAN UMUM",
         "steps": [
-            "Permainan ini akan dibawakan oleh seorang Dealer atau pemandu permainan.",
-            "Permainan ini menggunakan 8 set kartu dalam satu buah “Shoe”.",
-            "Di setiap awal “Shoe” baru, Dealer akan mengeluarkan satu kartu yang akan jadi penentu berapa kartu yang akan di “Burn” atau dibuang untuk “Shoe” tersebut. Kartu Ace bernilai 1, kartu 2 sampai 10 bernilai sesuai dengan kartu, sedangkan kartu gambar bernilai 10, maka setiap “Shoe” akan membuang total 10 kartu paling banyak.",
-            "Nilai kartu dalam Dragon Tiger Wild",
-            "- Ace = 1",
-            "- 2 sampai 10 = sesuai kartu",
-            "- Jack, Queen, King = 11, 12. 13",
-            "Ketika waktu memasang habis maka semua taruhan akan diterima secara otomatis.",
-            "Dealer akan mengeluarkan satu kartu pertama sebagai Wild Card , kemudian memberikan masing masing satu kartu kepada pihak Naga dan Harimau.",
+            "Permainan akan dipandu oleh Dealer",
+            "Permainan ini menggunakan 8 set kartu dalam satu buah <i>Shoe</i>.",
+            "Pada setiap awal <i>Shoe</i> baru, <i>Dealer</i> akan mengeluarkan satu kartu sebagai penentu berapa kartu yang akan di <i>Burn</i> atau dibuang. Maksimal 10 kartu bisa dibuang.",
+            "Setelah waktu taruhan habis, dealer mengeluarkan satu kartu sebagai Kartu Wild, lalu membagikan masing-masing satu kartu ke Naga dan Harimau.",
             "Pihak dengan nilai tertinggi akan menjadi pemenang. Nilai tertinggi adalah K yaitu bernilai 13.",
-            "Jika terjadi nilai seri atau Tie, maka Taruhan pada Naga dan Harimau akan dikembalikan setengahnya. Taruhan Seri menang hanya ketika nilai  Naga dan Harimau seri."
+            "Jika hasilnya <b>Seri</b>, taruhan Naga dan Harimau dikembalikan setengahnya. Taruhan seri hanya menang jika nilai Naga dan Harimau sama."
         ]
+    },
+    "dragon-tiger-wild-card": {
+        "title": "KARTU DRAGON TIGER WILD",
+        "content": "Dragon Tiger Wild menggunakan satu set kartu standar yang terdiri dari 52 kartu, tanpa joker. Berikut nilai kartu yang digunakan dalam permainan:",
+        "card": "Kartu",
+        "value": "Nilai"
     },
     "wild-card-bet": {
         "title": "TARUHAN WILD CARD",
-        "description": "Seperti yang kami sebutkan di Pengenalan, permainan ini memiliki elemen gameplay baru dan bonus yang menarik. Berikut penjelasannya.",
-        "description-2": "Kartu Wild akan menjadi penentu kemenangan dengan nilai hadiah lebih besar daripada taruhan normal, ada terbagi 5 taruhan wild akan yang dijelaskan selanjutnya.",
+        "description": "Seperti disebutkan di pengenalan, Dragon Tiger Wild memiliki elemen gameplay baru dan bonus menarik, berikut penjelasannya:",
+        "description-2": "Kartu Wild menentukan kemenangan dengan hadiah lebih besar daripada taruhan normal, ada 5 jenis taruhan Wild : ",
         "dragon-wild": {
             "title": "Naga Wild",
-            "content": "Taruhan Naga Wild ini pada dasarnya seperti bertaruh pada taruhan Naga namun apabila Pihak Naga yang menang dan juga nilai kartunya dan kartu Wild sama, maka anda akan memenangkan taruhan ini."
+            "content": "Taruhan ini menang jika Kartu Naga <b>menang</b> dan nilainya <b>sama</b> dengan Kartu Wild"
         },
         "tiger-wild": {
             "title": "Harimau Wild",
-            "content": "Taruhan Harimau Wild ini pada dasarnya seperti bertaruh pada taruhan Harimau namun apabila Pihak Harimau yang menang dan juga nilai kartunya dan kartu Wild sama, maka anda akan memenangkan taruhan ini."
+            "content": "Taruhan ini menang jika Kartu Harimau <b>menang</b> dan nilainya <b>sama</b> dengan Kartu Wild"
         },
         "super-wild": {
             "title": "Super Wild",
-            "content": "Taruhan Super Wild ini pada dasarnya seperti bertaruh pada taruhan Seri namun apabila hasilnya Seri dan juga nilai kartu Wild juga sesuai dengan nilai kartu Naga dan Harimau, maka anda akan memenangkan taruhan ini."
+            "content": "Taruhan ini menang jika hasil ketiga kartu <b>seri</b> yaitu Kartu Wild, Kartu Naga dan Kartu Harimau nilainya <b>sama</b>."
         },
         "dragon-pair": {
             "title": "Pair Naga",
-            "content": "Taruhan Pair Naga pada dasarnya adalah taruhan Pair biasa, jadi apabila Nilai kartu Naga dan nilai kartu wild sama, maka anda akan memenangkan taruhan ini."
+            "content": "Taruhan ini menang jika Kartu Naga dan Kartu Wild nilainnya <b>sama</b>. (Kartu Naga tidak harus menang)"
         },
         "tiger-pair": {
             "title": "Pair Harimau",
-            "content": "Taruhan Pair Harimau pada dasarnya adalah taruhan Pair biasa, jadi apabila Nilai kartu Harimau dan nilai kartu wild sama, maka anda akan memenangkan taruhan ini."
+            "content": "Taruhan ini menang jika Kartu Harimau dan Kartu Wild nilainya <b>sama</b>. (Kartu Harimau tidak harus menang)"
         }
     },
     "bet-description-and-example": {
@@ -60,15 +61,15 @@
             "table": {
                 "dragon": {
                     "title": "Naga",
-                    "description": "Dibayar jika nilai Naga lebih besar dari nilai Harimau"
+                    "description": "Dibayar jika nilai Naga <b>lebih besar dari</b> nilai Harimau"
                 },
                 "tiger": {
                     "title": "Harimau",
-                    "description": "Dibayar jika nilai Harimau lebih besar dari nilai Naga"
+                    "description": "Dibayar jika nilai Harimau <b>lebih besar dari</b> nilai Naga"
                 },
                 "tie": {
                     "title": "Tie",
-                    "description": "Dibayar jika kartu Naga dan Harimau punya nilai yang sama"
+                    "description": "Dibayar jika kartu Naga dan Harimau punya <b>nilai yang sama</b>"
                 }
             }
         },
@@ -80,23 +81,23 @@
             "table": {
                 "dragon-wild": {
                     "title": "Naga Wild",
-                    "description": "Dibayar jika Pihak Naga menang dan juga nilai kartu Naga dan kartu Wild sama"
+                    "description": "Dibayar jika Pihak Naga <b>menang</b> dan juga nilai kartu Naga dan kartu Wild <b>sama</b>"
                 },
                 "tiger-wild": {
                     "title": "Harimau Wild",
-                    "description": "Dibayar jika Pihak Harimau menang dan juga nilai kartu Harimau dan kartu Wild sama"
+                    "description": "Dibayar jika Pihak Harimau <b>menang</b> dan juga nilai kartu Harimau dan kartu Wild <b>sama</b>"
                 },
                 "super-wild": {
                     "title": "Super Wild",
-                    "description": "Dibayar jika nilai kartu Naga, Harimau dan Wild sama"
+                    "description": "Dibayar jika nilai kartu Naga, Harimau dan Wild <b>sama</b>"
                 },
                 "dragon-pair": {
                     "title": "Pair Naga",
-                    "description": "Dibayar jika nilai Kartu Naga dan kartu Wild sama"
+                    "description": "Dibayar jika nilai Kartu Naga dan kartu Wild <b>sama</b>"
                 },
                 "tiger-pair": {
                     "title": "Pair Harimau",
-                    "description": "Dibayar jika nilai Kartu Harimau dan kartu Wild sama"
+                    "description": "Dibayar jika nilai Kartu Harimau dan kartu Wild <b>sama</b>"
                 }
             }
         }
