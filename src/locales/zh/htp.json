@@ -52,6 +52,7 @@
         "title": "投注描述和示例",
         "description": "描述",
         "examples": "示例",
+        "anything": "任何东西",
         "main-bet": {
             "title": "主要投注",
             "heading": "主要投注",

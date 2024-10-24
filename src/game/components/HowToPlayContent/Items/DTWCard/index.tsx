@@ -1,19 +1,18 @@
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
 import { Container, P } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
-import Tablebet from './SVG/Tablebet';
-
-const Introduction = () => {
-    const keyLang = 'htp.introduction';
+import CardValueTable from './CardValueTable';
+const DTWCard = () => {
+    const keyLang = 'htp.dragon-tiger-wild-card';
 
     return (
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
-                <Tablebet />
                 <P keyLang={keyLang} value="content" />
+                <CardValueTable />
             </Container>
         </HowToPlayCard>
     );
 };
 
-export default Introduction;
+export default DTWCard;

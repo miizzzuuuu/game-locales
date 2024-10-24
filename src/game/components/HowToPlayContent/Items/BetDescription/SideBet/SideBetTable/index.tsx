@@ -12,28 +12,58 @@ export const exampleData: {
 } = {
     'dragon-wild': {
         dragon: 'Ks',
-        wild: 'Kd',
         tiger: '8h',
+        wild: 'Kd',
     },
     'tiger-wild': {
         dragon: '8h',
-        wild: 'Kh',
         tiger: 'Ks',
+        wild: 'Kh',
     },
     'super-wild': {
         dragon: 'Kd',
-        wild: 'Kd',
         tiger: 'Ks',
+        wild: 'Kd',
     },
     'dragon-pair': {
         dragon: 'Ks',
-        wild: 'Kh',
         tiger: '',
+        wild: 'Kh',
     },
     'tiger-pair': {
         dragon: '',
-        wild: 'Kc',
         tiger: 'Kc',
+        wild: 'Kc',
+    },
+};
+
+export const exampleDataValue: {
+    [key: string]: ICardExample['data'];
+} = {
+    'dragon-wild': {
+        dragon: '13',
+        tiger: '8',
+        wild: '13',
+    },
+    'tiger-wild': {
+        dragon: '8',
+        tiger: '13',
+        wild: '13',
+    },
+    'super-wild': {
+        dragon: '13',
+        tiger: '13',
+        wild: '13',
+    },
+    'dragon-pair': {
+        dragon: '13',
+        tiger: '',
+        wild: '13',
+    },
+    'tiger-pair': {
+        dragon: '',
+        tiger: '13',
+        wild: '13',
     },
 };
 
@@ -59,7 +89,7 @@ const SideBetTable = ({ data }: IHowtoplayTablebet) => {
                                 className="text-capitalize"
                             />
                         </th>
-                        <th>
+                        <th colSpan={3}>
                             <LabelTranslate
                                 keyLang={keyLang}
                                 value="examples"
@@ -85,13 +115,25 @@ const SideBetTable = ({ data }: IHowtoplayTablebet) => {
                                     keyLang={'htp.bet-description-and-example.side-bet.table.'.concat(
                                         tableKeyLang,
                                     )}
+                                    dangerouslySetInnerHTML
                                     value="description"
                                     className={`${styles['text-center']}`}
                                 ></P>
                             </td>
-                            <td className={styles['card']}>
-                                <CardExample data={exampleData[tableKeyLang]} />
-                            </td>
+                            {Object.keys(exampleData[tableKeyLang]).map((key) => {
+                                return (
+                                    <td className={styles['card']}>
+                                        <CardExample
+                                            // @ts-ignore
+                                            data={{ [key]: exampleData[tableKeyLang][key] }}
+                                            dataValue={{
+                                                // @ts-ignore
+                                                [key]: exampleDataValue[tableKeyLang][key],
+                                            }}
+                                        />
+                                    </td>
+                                );
+                            })}
                         </tr>
                     ))}
                 </tbody>

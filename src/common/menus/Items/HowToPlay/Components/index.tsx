@@ -10,6 +10,7 @@ interface IProps {
     className?: string;
     style?: CSSProperties;
     multiLine?: boolean;
+    dangerouslySetInnerHTML?: boolean;
 }
 
 interface ContainerProps {
@@ -67,7 +68,14 @@ export const Heading3 = ({ keyLang, className, value, option, multiLine }: Headi
     );
 };
 
-export const P = ({ keyLang, className, value, option, multiLine }: IProps) => {
+export const P = ({
+    keyLang,
+    className,
+    value,
+    option,
+    multiLine,
+    dangerouslySetInnerHTML,
+}: IProps) => {
     return (
         <LabelTranslate
             keyLang={keyLang}
@@ -75,6 +83,7 @@ export const P = ({ keyLang, className, value, option, multiLine }: IProps) => {
             value={value}
             option={option}
             multiLine={multiLine}
+            dangerouslySetInnerHTML={dangerouslySetInnerHTML}
         />
     );
 };

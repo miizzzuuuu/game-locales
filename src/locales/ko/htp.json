@@ -52,6 +52,7 @@
         "title": "베팅 설명 및 예시",
         "description": "설명",
         "examples": "예시",
+        "anything": "아무거나",
         "main-bet": {
             "title": "주요 베팅",
             "heading": "주요 베팅",

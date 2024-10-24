@@ -13,14 +13,37 @@ export const exampleData: {
     dragon: {
         dragon: 'Ks',
         tiger: '7h',
+        wild: '',
     },
     tiger: {
         dragon: '7c',
         tiger: 'Kd',
+        wild: '',
     },
     tie: {
         dragon: 'Kd',
         tiger: 'Ks',
+        wild: '',
+    },
+};
+
+export const exampleDataValue: {
+    [key: string]: ICardExample['data'];
+} = {
+    dragon: {
+        dragon: '13',
+        tiger: '7',
+        wild: '',
+    },
+    tiger: {
+        dragon: '7',
+        tiger: '13',
+        wild: '',
+    },
+    tie: {
+        dragon: '13',
+        tiger: '13',
+        wild: '',
     },
 };
 
@@ -46,7 +69,7 @@ const MainBetTable = ({ data }: IHowtoplayTablebet) => {
                                 className="text-capitalize"
                             />
                         </th>
-                        <th>
+                        <th colSpan={3}>
                             <LabelTranslate
                                 keyLang={keyLang}
                                 value="examples"
@@ -72,13 +95,25 @@ const MainBetTable = ({ data }: IHowtoplayTablebet) => {
                                     keyLang={'htp.bet-description-and-example.main-bet.table.'.concat(
                                         tableKeyLang,
                                     )}
+                                    dangerouslySetInnerHTML
                                     value="description"
                                     className={`${styles['text-center']}`}
                                 ></P>
                             </td>
-                            <td className={styles['card']}>
-                                <CardExample data={exampleData[tableKeyLang]} />
-                            </td>
+                            {Object.keys(exampleData[tableKeyLang]).map((key) => {
+                                return (
+                                    <td className={styles['card']}>
+                                        <CardExample
+                                            // @ts-ignore
+                                            data={{ [key]: exampleData[tableKeyLang][key] }}
+                                            dataValue={{
+                                                // @ts-ignore
+                                                [key]: exampleDataValue[tableKeyLang][key],
+                                            }}
+                                        />
+                                    </td>
+                                );
+                            })}
                         </tr>
                     ))}
                 </tbody>

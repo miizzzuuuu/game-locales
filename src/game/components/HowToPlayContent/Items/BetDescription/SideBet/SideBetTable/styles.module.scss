@@ -1,6 +1,9 @@
 .table-wrapper {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
+    border-radius: 0.5rem 0.5rem;
+    background-color: #000;
+    border: 0.06rem solid #4c4d66;
 }
 
 .table {
@@ -19,7 +22,7 @@
     th,
     td {
         border: 0.06rem solid #4c4d66;
-        padding: 0 1.2rem;
+        padding: 0 0.5rem;
         white-space: nowrap;
         height: 2.5rem;
     }
@@ -27,6 +30,27 @@
     th {
         font-size: 1rem;
         font-weight: 600;
+    }
+
+    td:nth-child(1) {
+        max-width: 3%;
+        text-align: center;
+        p {
+            display: block;
+            height: fit-content;
+            word-wrap: break-word;
+            white-space: normal;
+            width: 100%;
+        }
+    }
+    td:nth-child(2) {
+        p {
+            display: block;
+            height: fit-content;
+            word-wrap: break-word;
+            white-space: normal;
+            width: 100%;
+        }
     }
 
     tr.win {
