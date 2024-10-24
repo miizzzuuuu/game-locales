@@ -37,78 +37,76 @@ export function groupTransactionsByDate(
     );
 }
 
-export class TransactionHelper {
-    static is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
-        return item.pcode.startsWith('p6') && !item.pcode.startsWith('p6b');
-    };
+export const is24D = (item: Transaction<string>): item is Transaction<Pcode24D> => {
+    return item.pcode.startsWith('p6') && !item.pcode.startsWith('p6b');
+};
 
-    static is24DJackpot = (item: Transaction<string>): item is Transaction<Pcode24DJackpot> => {
-        return item.pcode.startsWith('p6b');
-    };
+export const is24DJackpot = (item: Transaction<string>): item is Transaction<Pcode24DJackpot> => {
+    return item.pcode.startsWith('p6b');
+};
 
-    static isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
-        return item.pcode.startsWith('p7');
-    };
+export const isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
+    return item.pcode.startsWith('p7');
+};
 
-    static is12D = (item: Transaction<string>): item is Transaction<Pcode12D> => {
-        return item.pcode.startsWith('p9') && !item.pcode.startsWith('p9b');
-    };
+export const is12D = (item: Transaction<string>): item is Transaction<Pcode12D> => {
+    return item.pcode.startsWith('p9') && !item.pcode.startsWith('p9b');
+};
 
-    static is12DThunder = (item: Transaction<string>): item is Transaction<Pcode12DThunder> => {
-        return item.pcode.startsWith('p9b');
-    };
+export const is12DThunder = (item: Transaction<string>): item is Transaction<Pcode12DThunder> => {
+    return item.pcode.startsWith('p9b');
+};
 
-    static isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
-        return item.pcode.startsWith('p12');
-    };
+export const isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
+    return item.pcode.startsWith('p12');
+};
 
-    static isDice6 = (item: Transaction<string>): item is Transaction<PcodeDice6> => {
-        return item.pcode.startsWith('m8') && !item.pcode.startsWith('m8b');
-    };
+export const isDice6 = (item: Transaction<string>): item is Transaction<PcodeDice6> => {
+    return item.pcode.startsWith('m8') && !item.pcode.startsWith('m8b');
+};
 
-    static isDice6Fever = (item: Transaction<string>): item is Transaction<PcodeDice6Fever> => {
-        return item.pcode.startsWith('m8b');
-    };
+export const isDice6Fever = (item: Transaction<string>): item is Transaction<PcodeDice6Fever> => {
+    return item.pcode.startsWith('m8b');
+};
 
-    static isRedWhite = (item: Transaction<string>): item is Transaction<PcodeRedWhite> => {
-        return item.pcode.startsWith('m11');
-    };
+export const isRedWhite = (item: Transaction<string>): item is Transaction<PcodeRedWhite> => {
+    return item.pcode.startsWith('m11');
+};
 
-    static isPokerDice = (item: Transaction<string>): item is Transaction<PcodePokerDice> => {
-        return item.pcode.startsWith('m14');
-    };
+export const isPokerDice = (item: Transaction<string>): item is Transaction<PcodePokerDice> => {
+    return item.pcode.startsWith('m14');
+};
 
-    static isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
-        return item.pcode.startsWith('m22');
-    };
+export const isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {
+    return item.pcode.startsWith('m22');
+};
 
-    static isDragonTiger = (item: Transaction<string>): item is Transaction<PcodeDragonTiger> => {
-        return (
-            item.pcode.startsWith('m23') &&
-            !item.pcode.startsWith('m23b') &&
-            !item.pcode.startsWith('m23c')
-        );
-    };
+export const isDragonTiger = (item: Transaction<string>): item is Transaction<PcodeDragonTiger> => {
+    return (
+        item.pcode.startsWith('m23') &&
+        !item.pcode.startsWith('m23b') &&
+        !item.pcode.startsWith('m23c')
+    );
+};
 
-    static isDragonTigerWild = (
-        item: Transaction<string>,
-    ): item is Transaction<PcodeDragonTigerWild> => {
-        return /^m23[bc]$/.test(item.pcode);
-    };
+export const isDragonTigerWild = (
+    item: Transaction<string>,
+): item is Transaction<PcodeDragonTigerWild> => {
+    return /^m23[bc]$/.test(item.pcode);
+};
 
-    static isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
-        return item.pcode.startsWith('m27');
-    };
+export const isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
+    return item.pcode.startsWith('m27');
+};
 
-    static is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
-        return item.pcode.startsWith('m35');
-    };
+export const is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
+    return item.pcode.startsWith('m35');
+};
 
-    static isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {
-        return item.pcode.startsWith('m41');
-    };
+export const isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {
+    return item.pcode.startsWith('m41');
+};
 
-    static isCeme = (item: Transaction<string>): item is Transaction<PcodeCeme> => {
-        return item.pcode.startsWith('m46');
-    };
-}
+export const isCeme = (item: Transaction<string>): item is Transaction<PcodeCeme> => {
+    return item.pcode.startsWith('m46');
+};

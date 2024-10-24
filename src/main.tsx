@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import { makeServer } from './api/server/server.ts';
 import { handleErrorApi } from './common/utils/APIManager.ts';
-import { BetHelper } from './common/utils/BetHelper.ts';
+import { setGameBetHelper } from './common/utils/BetHelper.ts';
 import { setPcode } from './common/utils/GameHelper.ts';
 import { DragonTigerBBet } from './game/utils/DragonTigerBBet.ts';
 import './services/i18next/index.ts';
@@ -36,7 +36,7 @@ const main = () => {
     document.body.classList.add(pcode);
 
     // modify for spesifik
-    BetHelper.game = new DragonTigerBBet();
+    setGameBetHelper(new DragonTigerBBet());
 
     ReactDOM.createRoot(document.getElementById('root')!).render(
         <React.StrictMode>
