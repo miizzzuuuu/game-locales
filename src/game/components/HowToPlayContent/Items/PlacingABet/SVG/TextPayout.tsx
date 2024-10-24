@@ -1,7 +1,7 @@
 import { SVGProps } from 'react';
 import { useTranslation } from 'react-i18next';
 import { formatNumber } from '../../../../../../common/utils/StringHelper';
-import { _24DHelper } from '../../../../../utils/_24DHelper';
+import { PAYOUT } from '../../../../../utils/_24DHelper';
 
 interface TextPayoutProps {
     tSpanAttributes?: SVGProps<SVGTSpanElement>;
@@ -20,9 +20,7 @@ const TextPayout = ({ group, tSpanAttributes }: TextPayoutProps) => {
             fontWeight="bold"
             letterSpacing="-0.02em"
         >
-            <tspan {...tSpanAttributes}>
-                {formatNumber(_24DHelper.PAYOUT[group], i18n.language)}:1
-            </tspan>
+            <tspan {...tSpanAttributes}>{formatNumber(PAYOUT[group], i18n.language)}:1</tspan>
         </text>
     );
 };

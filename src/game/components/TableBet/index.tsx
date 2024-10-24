@@ -1,14 +1,21 @@
+import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { useAppSelector } from '../../../store/hooks';
+import { selectWinBets } from '../../../store/slice/resultSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { _24DHelper } from '../../utils/_24DHelper';
+import { Bet } from '../../../types';
+import {
+    BETS,
+    BETS_50,
+    BETS_COL_ROW,
+    BETS_MULTI_COLS,
+    BETS_MULTI_NUMBERS,
+    getColor,
+} from '../../utils/_24DHelper';
 import ButtonBet from './ButtonBet';
 import BetColRow from './ButtonBet/BetColRow';
 import BetNumber from './ButtonBet/BetNumber';
 import BetText from './ButtonBet/BetText';
 import styles from './styles.module.scss';
-import { selectWinBets } from '../../../store/slice/resultSlice';
-import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
-import { Bet } from '../../../types';
 
 const TableBet = () => {
     const betIsOpen = useAppSelector(selectBetIsOpen);
@@ -44,30 +51,30 @@ const TableBet = () => {
     };
 
     const renderBets = () => {
-        return _24DHelper.getBetKeys.map((key) => {
-            const bet = _24DHelper.bets[key];
-            const color = _24DHelper.getColor(Number(bet.button));
+        return Object.keys(BETS).map((key) => {
+            const bet = BETS[key];
+            const color = getColor(Number(bet.button));
             return renderButtonBet(key, bet, 'number', `bet-number-${color}`);
         });
     };
 
     const renderColRowBets = () => {
-        return _24DHelper.getBetColRowKeys.map((key) => {
-            const bet = _24DHelper.betsColRow[key];
+        return Object.keys(BETS_COL_ROW).map((key) => {
+            const bet = BETS_COL_ROW[key];
             return renderButtonBet(key, bet, 'col-row', 'bet-col-row');
         });
     };
 
     const renderMultiColBets = () => {
-        return _24DHelper.getBetsMultiColsKeys.map((key) => {
-            const bet = _24DHelper.betsMultiCols[key];
+        return Object.keys(BETS_MULTI_COLS).map((key) => {
+            const bet = BETS_MULTI_COLS[key];
             return renderButtonBet(key, bet, 'col-row', 'bet-col-row');
         });
     };
 
     const render50Bets = () => {
-        return _24DHelper.getBet50Keys.map((key) => {
-            const bet = _24DHelper.bets50[key];
+        return Object.keys(BETS_50).map((key) => {
+            const bet = BETS_50[key];
             const colorClass = ['Small', 'Odd', 'Red'].includes(bet.button)
                 ? 'bet-red'
                 : 'bet-black';
@@ -76,8 +83,8 @@ const TableBet = () => {
     };
 
     const renderMultiNumberBets = () => {
-        return _24DHelper.getBetMultiNumberKeys.map((key) => {
-            const bet = _24DHelper.betMultiNumber[key];
+        return Object.keys(BETS_MULTI_NUMBERS).map((key) => {
+            const bet = BETS_MULTI_NUMBERS[key];
             return renderButtonBet(key, bet, undefined, '');
         });
     };

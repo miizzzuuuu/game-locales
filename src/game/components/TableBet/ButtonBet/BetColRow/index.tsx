@@ -4,7 +4,7 @@ import LabelTranslate from '../../../../../common/components/LabelTranslate';
 import { getBasePcode } from '../../../../../common/utils/GameHelper';
 import { formatNumber } from '../../../../../common/utils/StringHelper';
 import { Bet } from '../../../../../types';
-import { _24DHelper } from '../../../../utils/_24DHelper';
+import { PAYOUT } from '../../../../utils/_24DHelper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -23,9 +23,7 @@ const BetColRow = ({ label, group }: IProps) => {
                 keyLang={getBasePcode()}
             />
 
-            <span className={styles.payout}>
-                1:{formatNumber(_24DHelper.PAYOUT[group], i18n.language)}
-            </span>
+            <span className={styles.payout}>1:{formatNumber(PAYOUT[group], i18n.language)}</span>
         </div>
     );
 };
