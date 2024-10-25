@@ -1,103 +1,104 @@
 {
     "introduction": {
         "title": "介绍",
-        "content": "Dragon Tiger Wild 是 IDNLIVE Europe 的最新游戏，如果你已经熟悉 Dragon Tiger，你将体验到一种新奇而有趣的游戏体验。在这款新游戏中，我们加入了 wild card 元素，让你获得更高的奖励。一起 wild 吧！！！"
+        "content": "Dragon Tiger Wild 是 IDNLIVE EUROPE 的最新游戏，通过添加 <b>百搭牌</b> 增添了更多乐趣。这款游戏为龙虎爱好者带来了全新的体验，具有高达 <b>127 倍的惊人获胜机会! LET’S GET WILD!!!</b>"
     },
     "game-objective": {
         "title": "游戏目标",
-        "content": "Dragon Tiger Wild 的目标是猜中最高的卡牌，并正确猜中 wild card，从而获得更高的奖励。"
+        "content": "这款游戏的目标是猜出龙和虎之间的最高牌，并利用百搭牌形成百搭奖励组合，赢得更大奖励。"
     },
     "rules": {
         "title": "一般规则",
         "steps": [
-            "游戏由一位庄家主持。",
-            "游戏使用 8 副牌，放入一个 'Shoe' 中。",
-            "每当开始新的 'Shoe' 时，庄家会抽出一张牌，决定该 'Shoe' 中需要丢弃多少张牌。A 牌的点数为 1，2 到 10 牌的点数等于其面值，J、Q、K 的点数为 10。因此，每个 'Shoe' 最大丢弃 10 张牌。",
-            "Dragon Tiger Wild 中的卡牌点数如下：",
-            "- Ace = 1",
-            "- 2 到 10 = 根据面值",
-            "- Jack, Queen, King = 11, 12, 13",
-            "当投注时间结束时，所有投注将自动被接受。",
-            "庄家会抽出一张 Wild 卡牌，然后分别发给龙和虎每人一张卡牌。",
-            "点数最高的一方将获胜，最高点数为 K（13）。",
-            "如果发生平局，则龙和虎的投注会退还一半。只有当龙和虎的卡牌点数相同，平局投注才算赢。"
+            "游戏由发牌员主持。",
+            "游戏使用 8 副牌，放置于一个 <i>Shoe</i> 中。",
+            "在每个新的 <i>Shoe</i> 开始时，发牌员会抽出一张牌来决定要 <i>燃烧</i> 或弃用的牌数，最多可以弃用 10 张牌。",
+            "投注时间结束后，发牌员会揭示一张百搭牌，然后为龙和虎各发一张牌。",
+            "得分最高的一方获胜。最高牌是 K，值为 13。",
+            "如果结果是 <b>平局</b>，则退还一半的龙和虎投注额。平局投注仅在龙和虎的牌值相同的情况下获胜。"
         ]
     },
+    "dragon-tiger-wild-card": {
+        "title": "龙虎百搭牌",
+        "content": "Dragon Tiger Wild 使用一副标准的 52 张牌，不含小丑牌。以下是游戏中使用的牌的价值：",
+        "card": "牌",
+        "value": "价值"
+    },
     "wild-card-bet": {
-        "title": "WILD 卡投注",
-        "description": "如前所述，本游戏引入了新的游戏元素和令人兴奋的奖金。以下是具体说明。",
-        "description-2": "Wild card 作为决定胜负的关键，奖励比普通投注更高。接下来我们会解释五种 wild 下注方式。",
+        "title": "百搭牌投注",
+        "description": "正如介绍中提到的，Dragon Tiger Wild 有新的游戏玩法和丰厚的奖励，以下是具体说明：",
+        "description-2": "百搭牌决定胜利，奖励高于普通投注。共有 5 种百搭投注类型：",
         "dragon-wild": {
-            "title": "龙 Wild",
-            "content": "龙 Wild 投注基本上与龙的投注相同，但如果龙获胜并且其点数与 Wild card 相同，你将赢得这项投注。"
+            "title": "龙百搭",
+            "content": "如果龙牌<b>获胜</b>，并且牌值与百搭牌相同，则此投注获胜。"
         },
         "tiger-wild": {
-            "title": "虎 Wild",
-            "content": "虎 Wild 投注基本上与虎的投注相同，但如果虎获胜并且其点数与 Wild card 相同，你将赢得这项投注。"
+            "title": "虎百搭",
+            "content": "如果虎牌<b>获胜</b>，并且牌值与百搭牌相同，则此投注获胜。"
         },
         "super-wild": {
-            "title": "Super Wild",
-            "content": "Super Wild 投注基本上与平局投注相同，但如果结果是平局，并且 Wild card 的点数与龙和虎的点数匹配，你将赢得这项投注。"
+            "title": "超级百搭",
+            "content": "如果龙牌、虎牌和百搭牌的牌值<b>相同</b>，则此投注获胜。"
         },
         "dragon-pair": {
-            "title": "龙对子",
-            "content": "龙对子投注基本上是普通对子投注，但如果龙的点数与 Wild card 相同，你将赢得这项投注。"
+            "title": "龙对",
+            "content": "如果龙牌和百搭牌的牌值<b>相同</b>，则此投注获胜。（龙牌不需要获胜）"
         },
         "tiger-pair": {
-            "title": "虎对子",
-            "content": "虎对子投注基本上是普通对子投注，但如果虎的点数与 Wild card 相同，你将赢得这项投注。"
+            "title": "虎对",
+            "content": "如果虎牌和百搭牌的牌值<b>相同</b>，则此投注获胜。（虎牌不需要获胜）"
         }
     },
     "bet-description-and-example": {
-        "title": "投注描述和示例",
-        "description": "描述",
+        "title": "投注说明和示例",
+        "description": "说明",
         "examples": "示例",
         "anything": "任何东西",
         "main-bet": {
             "title": "主要投注",
             "heading": "主要投注",
             "examples": "示例",
-            "description": "描述",
+            "description": "说明",
             "table": {
                 "dragon": {
                     "title": "龙",
-                    "description": "当龙的点数大于虎的点数时支付。"
+                    "description": "当龙牌的牌值<b>大于</b>虎牌的牌值时支付。"
                 },
                 "tiger": {
                     "title": "虎",
-                    "description": "当虎的点数大于龙的点数时支付。"
+                    "description": "当虎牌的牌值<b>大于</b>龙牌的牌值时支付。"
                 },
                 "tie": {
                     "title": "平局",
-                    "description": "当龙和虎的点数相同时支付。"
+                    "description": "当龙牌和虎牌的牌值<b>相同</b>时支付。"
                 }
             }
         },
         "side-bet": {
-            "title": "边注",
-            "heading": "边注",
+            "title": "附加投注",
+            "heading": "附加投注",
             "examples": "示例",
-            "description": "描述",
+            "description": "说明",
             "table": {
                 "dragon-wild": {
-                    "title": "龙 Wild",
-                    "description": "当龙获胜并且龙的卡牌点数与 Wild card 相同时，支付奖励。"
+                    "title": "龙百搭",
+                    "description": "当龙牌<b>获胜</b>并且龙牌和百搭牌的牌值<b>相同</b>时支付。"
                 },
                 "tiger-wild": {
-                    "title": "虎 Wild",
-                    "description": "当虎获胜并且虎的卡牌点数与 Wild card 相同时，支付奖励。"
+                    "title": "虎百搭",
+                    "description": "当虎牌<b>获胜</b>并且虎牌和百搭牌的牌值<b>相同</b>时支付。"
                 },
                 "super-wild": {
-                    "title": "Super Wild",
-                    "description": "当龙、虎和 Wild card 的点数相同时，支付奖励。"
+                    "title": "超级百搭",
+                    "description": "当龙牌、虎牌和百搭牌的牌值<b>相同</b>时支付。"
                 },
                 "dragon-pair": {
-                    "title": "龙对子",
-                    "description": "当龙的卡牌点数与 Wild card 相同时，支付奖励。"
+                    "title": "龙对",
+                    "description": "当龙牌和百搭牌的牌值<b>相同</b>时支付。"
                 },
                 "tiger-pair": {
-                    "title": "虎对子",
-                    "description": "当虎的卡牌点数与 Wild card 相同时，支付奖励。"
+                    "title": "虎对",
+                    "description": "当虎牌和百搭牌的牌值<b>相同</b>时支付。"
                 }
             }
         }

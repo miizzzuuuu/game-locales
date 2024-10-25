@@ -1,109 +1,110 @@
 {
     "introduction": {
-        "title": "Giới thiệu",
-        "content": "Dragon Tiger Wild là trò chơi mới nhất từ IDNLIVE Europe, bạn sẽ có cơ hội trải nghiệm một trò chơi thú vị và vui nhộn nếu đã quen với trò chơi Dragon Tiger. Trong trò chơi này, chúng tôi đã thêm yếu tố wild card, mang lại cơ hội nhận thưởng lớn hơn rất nhiều. Hãy cùng chơi để trở nên wild nào!!!"
+        "title": "giới thiệu",
+        "content": "Dragon Tiger Wild là trò chơi mới nhất từ IDNLIVE EUROPE, mang đến thêm sự hứng thú với việc bổ sung <b>Thẻ Wild</b>. Trò chơi này mang lại trải nghiệm mới cho người hâm mộ Dragon Tiger, với cơ hội chiến thắng tuyệt vời lên đến <b>127 lần! LET’S GET WILD!!!</b>"
     },
     "game-objective": {
-        "title": "MỤC TIÊU TRÒ CHƠI",
-        "content": "Mục tiêu của Dragon Tiger Wild là đoán thẻ cao nhất và đúng thẻ wild để nhận thưởng cao hơn."
+        "title": "Mục tiêu trò chơi",
+        "content": "Mục tiêu của trò chơi này là đoán thẻ nào cao hơn giữa Rồng và Hổ, đồng thời sử dụng Thẻ Wild để tạo ra các kết hợp bonus wild để nhận phần thưởng lớn hơn"
     },
     "rules": {
-        "title": "QUY TẮC CHUNG",
+        "title": "Quy tắc chung",
         "steps": [
-            "Trò chơi này được dẫn dắt bởi một Dealer hoặc người điều khiển trò chơi.",
-            "Trò chơi sử dụng 8 bộ bài trong một 'Shoe'.",
-            "Vào đầu mỗi 'Shoe' mới, Dealer sẽ rút 1 lá bài để xác định số lượng bài sẽ bị 'Burn' (loại bỏ). Lá Ace có giá trị 1, bài từ 2 đến 10 có giá trị theo số trên bài, và các lá bài hình (Jack, Queen, King) có giá trị 10. Do đó, mỗi 'Shoe' có thể loại bỏ tối đa 10 lá bài.",
-            "Giá trị các lá bài trong Dragon Tiger Wild:",
-            "- Ace = 1",
-            "- 2 đến 10 = theo số trên bài",
-            "- Jack, Queen, King = 11, 12, 13",
-            "Khi hết thời gian đặt cược, tất cả cược sẽ được chấp nhận tự động.",
-            "Dealer sẽ rút một lá bài làm Wild Card, sau đó phát mỗi bên (Rồng và Hổ) một lá bài.",
-            "Bên có giá trị cao nhất sẽ là người chiến thắng. Giá trị cao nhất là King (13).",
-            "Nếu kết quả là hòa, cược trên Rồng và Hổ sẽ được trả lại một nửa. Cược hòa chỉ thắng khi giá trị của Rồng và Hổ là giống nhau."
+            "Trò chơi được dẫn dắt bởi Dealer",
+            "Trò chơi sử dụng 8 bộ bài trong một <i>Shoe</i>",
+            "Ở mỗi đầu <i>Shoe</i> mới, Dealer sẽ rút một thẻ để xác định số thẻ sẽ bị <i>đốt cháy</i> hoặc bỏ đi. Tối đa 10 thẻ có thể bị bỏ",
+            "Sau khi hết thời gian đặt cược, Dealer sẽ tiết lộ một thẻ Wild, sau đó chia một thẻ cho mỗi bên Rồng và Hổ",
+            "Bên có giá trị cao hơn sẽ chiến thắng. Giá trị cao nhất là K tương đương với giá trị 13",
+            "Nếu kết quả là <b>Hòa</b>, cược của Rồng và Hổ sẽ được hoàn trả một nửa. Cược hòa chỉ thắng khi giá trị của Rồng và Hổ bằng nhau"
         ]
     },
+    "dragon-tiger-wild-card": {
+        "title": "Thẻ Dragon Tiger Wild",
+        "content": "Dragon Tiger Wild sử dụng một bộ bài tiêu chuẩn gồm 52 thẻ, không có joker. Đây là giá trị của các thẻ sử dụng trong trò chơi:",
+        "card": "Thẻ",
+        "value": "Giá trị"
+    },
     "wild-card-bet": {
-        "title": "CƯỢC WILD CARD",
-        "description": "Như đã đề cập trong phần Giới thiệu, trò chơi này có yếu tố gameplay mới và các phần thưởng thú vị. Dưới đây là chi tiết về các cược Wild.",
-        "description-2": "Thẻ Wild sẽ là yếu tố quyết định chiến thắng với phần thưởng lớn hơn so với cược bình thường. Có 5 loại cược wild, chi tiết như sau.",
+        "title": "Cược Thẻ Wild",
+        "description": "Như đã đề cập trong phần giới thiệu, Dragon Tiger Wild có yếu tố gameplay mới và những phần thưởng hấp dẫn. Dưới đây là mô tả:",
+        "description-2": "Thẻ Wild xác định chiến thắng với phần thưởng cao hơn cược thông thường. Có 5 loại cược Wild:",
         "dragon-wild": {
             "title": "Rồng Wild",
-            "content": "Cược Rồng Wild cơ bản giống như cược vào Rồng, nhưng nếu Rồng thắng và giá trị lá bài của Rồng và Wild card trùng khớp, bạn sẽ thắng cược này."
+            "content": "Cược này thắng nếu thẻ Rồng <b>thắng</b> và giá trị bằng với Thẻ Wild"
         },
         "tiger-wild": {
             "title": "Hổ Wild",
-            "content": "Cược Hổ Wild cơ bản giống như cược vào Hổ, nhưng nếu Hổ thắng và giá trị lá bài của Hổ và Wild card trùng khớp, bạn sẽ thắng cược này."
+            "content": "Cược này thắng nếu thẻ Hổ <b>thắng</b> và giá trị bằng với Thẻ Wild"
         },
         "super-wild": {
-            "title": "Super Wild",
-            "content": "Cược Super Wild cơ bản giống như cược Hòa, nhưng nếu kết quả là hòa và giá trị của Wild card trùng với giá trị của cả Rồng và Hổ, bạn sẽ thắng cược này."
+            "title": "Siêu Wild",
+            "content": "Cược này thắng nếu cả ba thẻ là Thẻ Wild, thẻ Rồng và thẻ Hổ có giá trị <b>bằng nhau</b>"
         },
         "dragon-pair": {
             "title": "Cặp Rồng",
-            "content": "Cược Cặp Rồng cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Rồng và Wild card trùng nhau, bạn sẽ thắng cược này."
+            "content": "Cược này thắng nếu thẻ Rồng và Thẻ Wild có giá trị <b>bằng nhau</b>. (Thẻ Rồng không cần phải thắng)"
         },
         "tiger-pair": {
             "title": "Cặp Hổ",
-            "content": "Cược Cặp Hổ cơ bản giống như cược Cặp bình thường, nhưng nếu giá trị của thẻ Hổ và Wild card trùng nhau, bạn sẽ thắng cược này."
+            "content": "Cược này thắng nếu thẻ Hổ và Thẻ Wild có giá trị <b>bằng nhau</b>. (Thẻ Hổ không cần phải thắng)"
         }
     },
     "bet-description-and-example": {
-        "title": "Mô tả cược và ví dụ",
+        "title": "Mô tả Cược và Ví dụ",
         "description": "Mô tả",
         "examples": "Ví dụ",
         "anything": "Bất cứ điều gì",
         "main-bet": {
-            "title": "CÁC CƯỢC CHÍNH",
-            "heading": "CÁC CƯỢC CHÍNH",
+            "title": "Cược Chính",
+            "heading": "Cược Chính",
             "examples": "Ví dụ",
             "description": "Mô tả",
             "table": {
                 "dragon": {
                     "title": "Rồng",
-                    "description": "Thanh toán nếu giá trị của Rồng cao hơn giá trị của Hổ."
+                    "description": "Thanh toán khi giá trị thẻ Rồng <b>cao hơn</b> giá trị thẻ Hổ"
                 },
                 "tiger": {
                     "title": "Hổ",
-                    "description": "Thanh toán nếu giá trị của Hổ cao hơn giá trị của Rồng."
+                    "description": "Thanh toán khi giá trị thẻ Hổ <b>cao hơn</b> giá trị thẻ Rồng"
                 },
                 "tie": {
                     "title": "Hòa",
-                    "description": "Thanh toán nếu giá trị của Rồng và Hổ bằng nhau."
+                    "description": "Thanh toán khi thẻ Rồng và thẻ Hổ có <b>giá trị bằng nhau</b>"
                 }
             }
         },
         "side-bet": {
-            "title": "CƯỢC BÊN",
-            "heading": "CƯỢC BÊN",
+            "title": "Cược Phụ",
+            "heading": "Cược Phụ",
             "examples": "Ví dụ",
             "description": "Mô tả",
             "table": {
                 "dragon-wild": {
                     "title": "Rồng Wild",
-                    "description": "Trả tiền nếu Rồng thắng và giá trị của thẻ Rồng và Wild card trùng nhau"
+                    "description": "Thanh toán khi bên Rồng <b>thắng</b> và giá trị của thẻ Rồng và Thẻ Wild <b>bằng nhau</b>"
                 },
                 "tiger-wild": {
                     "title": "Hổ Wild",
-                    "description": "Trả tiền nếu Hổ thắng và giá trị của thẻ Hổ và Wild card trùng nhau"
+                    "description": "Thanh toán khi bên Hổ <b>thắng</b> và giá trị của thẻ Hổ và Thẻ Wild <b>bằng nhau</b>"
                 },
                 "super-wild": {
-                    "title": "Super Wild",
-                    "description": "Trả tiền nếu giá trị của Rồng, Hổ và Wild card trùng nhau"
+                    "title": "Siêu Wild",
+                    "description": "Thanh toán khi giá trị của thẻ Rồng, Hổ và Wild <b>bằng nhau</b>"
                 },
                 "dragon-pair": {
                     "title": "Cặp Rồng",
-                    "description": "Trả tiền nếu giá trị của thẻ Rồng và Wild card trùng nhau"
+                    "description": "Thanh toán khi giá trị của thẻ Rồng và Thẻ Wild <b>bằng nhau</b>"
                 },
                 "tiger-pair": {
                     "title": "Cặp Hổ",
-                    "description": "Trả tiền nếu giá trị của thẻ Hổ và Wild card trùng nhau"
+                    "description": "Thanh toán khi giá trị của thẻ Hổ và Thẻ Wild <b>bằng nhau</b>"
                 }
             }
         }
     },
     "payout": {
-        "title": "Trả Thưởng",
+        "title": "thanh toán",
         "bet-payout": "thanh toán cược"
     }
 }
