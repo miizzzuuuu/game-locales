@@ -5,7 +5,7 @@ export const games = [
         displayName: '24D',
         periode: 2349802,
         pcode: 'p6',
-        stream: 'https://cam4.idnstreams.com/?app=SDI&name=24D_720P',
+        stream: '',
         stream_hd: '',
         stream_uhd: '',
         stream_4k: '',

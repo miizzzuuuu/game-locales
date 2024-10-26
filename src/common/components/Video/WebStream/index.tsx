@@ -1,9 +1,8 @@
 import { useCallback, useRef, useState } from 'react';
 import { useAppSelector } from '../../../../store/hooks';
-import { selectStream, selectStreamHD } from '../../../../store/slice/gameSlice';
+import { selectStreamURL } from '../../../../store/slice/gameSlice';
 import {
     selectEnableStreamingSound,
-    selectStreamingQuality,
     selectVolumeStreamingSound,
 } from '../../../../store/slice/settingsSlice';
 import { selectFocus } from '../../../../store/slice/windowSlice';
@@ -15,17 +14,13 @@ const WebStream = () => {
     const isFocus = useAppSelector(selectFocus);
     const [isLoading, setIsLoading] = useState(true);
 
-    const video_720 = useAppSelector(selectStream);
-    const video_1080 = useAppSelector(selectStreamHD);
-
-    const streamingQuality = useAppSelector(selectStreamingQuality);
-
     const enableSoundStreaming = useAppSelector(selectEnableStreamingSound);
     const volumeStreamingSound = useAppSelector(selectVolumeStreamingSound);
 
     const volume = !enableSoundStreaming ? 0 : volumeStreamingSound / 100;
 
-    const url = new URL(streamingQuality === 'high' && video_1080 ? video_1080 : video_720);
+    const streamURL = useAppSelector(selectStreamURL);
+    const url = new URL(streamURL);
     url.searchParams.append('volume', String(volume));
 
     const urlStreaming = !isFocus ? 'about:blank' : url.href;

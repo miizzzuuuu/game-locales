@@ -1,6 +1,7 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { Game } from '../../types';
+import { selectStreamingQuality } from './settingsSlice';
 
 export type GameState = Game;
 
@@ -85,6 +86,11 @@ export const selectPeriod = (state: RootState) => state.game.periode;
 
 export const selectStream = (state: RootState) => state.game.stream;
 export const selectStreamHD = (state: RootState) => state.game.stream_hd;
+
+export const selectStreamURL = createSelector(
+    [selectStream, selectStreamHD, selectStreamingQuality],
+    (stream, streamHD, quality) => (quality === 'high' && streamHD ? streamHD : stream),
+);
 
 export const selectGameNewSet = (state: RootState) => state.game.newSet;
 export const selectGameSet = (state: RootState) => state.game.shoePeriode.split('-')[0];

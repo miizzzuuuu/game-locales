@@ -57,5 +57,6 @@
     "features": "fitur",
     "shuffling-cards": "mengocok kartu",
     "complete-how-to-play": "Cara bermain lengkap",
-    "dont-show-again": "Jangan tampilkan lagi"
+    "dont-show-again": "Jangan tampilkan lagi",
+    "streaming-error": "terjadi kesalahan pada streaming: url streaming tidak valid"
 }
