@@ -11,6 +11,7 @@ interface IProps {
     className?: string;
     style?: React.CSSProperties;
     multiLine?: boolean;
+    dangerouslySetInnerHTML?: boolean;
 }
 
 function LabelTranslate({
@@ -21,10 +22,17 @@ function LabelTranslate({
     className,
     style,
     multiLine,
+    dangerouslySetInnerHTML = false,
 }: IProps) {
     const { t } = useAppTranslate(keyLang);
 
-    const props = { className, style };
+    const props = {
+        className,
+        style,
+        ...(dangerouslySetInnerHTML
+            ? { dangerouslySetInnerHTML: { __html: t(value, option) } }
+            : {}),
+    };
 
     const childrens = multiLine
         ? t(value, option)
@@ -36,6 +44,14 @@ function LabelTranslate({
                   </Fragment>
               ))
         : [t(value, option)];
+
+    if (dangerouslySetInnerHTML) {
+        if (typeof type === 'string') {
+            return createElement(type, props);
+        }
+
+        return createElement(type, { ...props });
+    }
 
     if (typeof type === 'string') {
         return createElement(type, props, ...childrens);
