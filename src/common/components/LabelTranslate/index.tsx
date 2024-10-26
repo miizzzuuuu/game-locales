@@ -33,6 +33,7 @@ function LabelTranslate({
             ? { dangerouslySetInnerHTML: { __html: t(value, option) } }
             : {}),
     };
+
     const childrens = multiLine
         ? t(value, option)
               .split('\n')
@@ -43,6 +44,7 @@ function LabelTranslate({
                   </Fragment>
               ))
         : [t(value, option)];
+
     if (dangerouslySetInnerHTML) {
         if (typeof type === 'string') {
             return createElement(type, props);
@@ -50,6 +52,7 @@ function LabelTranslate({
 
         return createElement(type, { ...props });
     }
+
     if (typeof type === 'string') {
         return createElement(type, props, ...childrens);
     }
