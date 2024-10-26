@@ -58,5 +58,6 @@
     "features": "기능",
     "shuffling-cards": "카드 셔플링",
     "complete-how-to-play": "전체 게임 방법",
-    "dont-show-again": "다시 표시하지 않기"
+    "dont-show-again": "다시 표시하지 않기",
+    "streaming-error": "스트리밍 오류: 유효하지 않은 스트리밍 url입니다"
 }

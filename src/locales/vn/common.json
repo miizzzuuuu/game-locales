@@ -58,5 +58,6 @@
     "features": "tính năng",
     "shuffling-cards": "xào bài",
     "complete-how-to-play": "Hướng dẫn chơi",
-    "dont-show-again": "Tắt hiển thị"
+    "dont-show-again": "Tắt hiển thị",
+    "streaming-error": "lỗi phát trực tuyến: url phát trực tuyến không hợp lệ"
 }

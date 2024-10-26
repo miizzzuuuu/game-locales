@@ -57,5 +57,6 @@
     "features": "features",
     "shuffling-cards": "shuffling cards",
     "complete-how-to-play": "Complete how to play",
-    "dont-show-again": "Don't show again"
+    "dont-show-again": "Don't show again",
+    "streaming-error": "streaming error: invalid streaming url"
 }
