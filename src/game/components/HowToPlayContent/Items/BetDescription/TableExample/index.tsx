@@ -1,5 +1,5 @@
 import LabelTranslate from '../../../../../../common/components/LabelTranslate';
-import CardExample from '../CardTable';
+import CardExample from '../CardExample';
 
 import styles from './styles.module.scss';
 
