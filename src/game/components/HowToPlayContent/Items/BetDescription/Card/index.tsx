@@ -1,4 +1,4 @@
-import { CardSymbol } from './CardSymbol';
+import { RenderSymbol } from '../../../../TableBetV2/RenderCard/cardsymbol';
 import styles from './syles.module.scss';
 
 interface IProps {
@@ -22,26 +22,9 @@ const Card = ({ value }: IProps) => {
         <div className={styles.container}>
             <svg viewBox="0 0 100 132" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="100" height="132" rx="14" fill="white" />
-                <CardSymbol symbol={displayValue[1]} />
+                <RenderSymbol symbol={displayValue[1]} />
             </svg>
-            <span
-                // style={{
-                //     position: 'absolute',
-                //     top: '0px',
-                //     left: '0px',
-                //     margin: '-2px 0px 0px 2px',
-                //     fontFamily: 'Manrope',
-                //     fontSize: '1.4rem',
-                //     fontStyle: 'normal',
-                //     fontWeight: '700',
-                //     lineHeight: 'normal',
-                //     textTransform: 'uppercase',
-                //     color: displayColor,
-                //     whiteSpace: 'nowrap',
-                // }}
-                style={{ color: displayColor }}
-                className={styles.value}
-            >
+            <span style={{ color: displayColor }} className={styles.value}>
                 {displayValue[0] == 'T' ? '10' : displayValue[0]}
             </span>
         </div>
