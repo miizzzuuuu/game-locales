@@ -1,8 +1,10 @@
-import TableExample, { ICardExample } from '../TableExample';
+import TableExample from '../TableExample';
 
-const data: string[] = ['dragon', 'tiger', 'tie'];
+interface IHowtoplayTablebet {
+    data: string[];
+}
 
-export const exampleData: Record<string, ICardExample> = {
+export const exampleData: Record<string, Record<string, string>> = {
     dragon: {
         dragon: 'Ks',
         tiger: '7h',
@@ -20,7 +22,7 @@ export const exampleData: Record<string, ICardExample> = {
     },
 };
 
-export const exampleDataValue: Record<string, ICardExample> = {
+export const exampleDataValue: Record<string, Record<string, string>> = {
     dragon: {
         dragon: '13',
         tiger: '7',
@@ -38,9 +40,9 @@ export const exampleDataValue: Record<string, ICardExample> = {
     },
 };
 
-const MainBet = () => {
+const MainBetTable = ({ data }: IHowtoplayTablebet) => {
     const keyLang = 'htp.bet-description-and-example.main-bet';
-    const keyLangMain = 'htp.bet-description-and-example.main-bet.table.';
+    const keyLangMain = 'htp.bet-description-and-example.main-bet.table';
 
     return (
         <TableExample
@@ -53,4 +55,4 @@ const MainBet = () => {
     );
 };
 
-export default MainBet;
+export default MainBetTable;

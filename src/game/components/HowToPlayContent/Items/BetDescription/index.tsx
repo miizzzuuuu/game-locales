@@ -1,9 +1,10 @@
 import LabelTranslate from '../../../../../common/components/LabelTranslate';
 import { Container, Heading2 } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
-import MainBetTable from './MainBet/BetTable';
+import MainBetTable from './MainBetTable';
 import Section from './Section';
-import SideBetTable from './SideBet/SideBetTable';
+import SideBetTable from './SideBetTable';
+
 import styles from './styles.module.scss';
 
 const dataMainBet: string[] = ['dragon', 'tiger', 'tie'];
