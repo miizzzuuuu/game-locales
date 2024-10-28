@@ -361,11 +361,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             left: '50%',
                             top: '50%',
                             position: 'absolute',
-                            // ...(getOrientation() == 'landscape'
-                            //     ? { transform: '' }
-                            //     : {
-                            //           transform: 'scale(1.25)',
-                            //       }),
                             transform: 'translate(-50%, -50%)',
                         }}
                     >
