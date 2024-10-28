@@ -11,7 +11,7 @@ const Introduction = () => {
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
             <Container>
                 <Tablebet />
-                <P keyLang={keyLang} value="content" />
+                <P keyLang={keyLang} value="content" dangerouslySetInnerHTML />
                 <Heading2 keyLang={keyLangGoal} value="title" />
                 <P keyLang={keyLangGoal} value="content" />
             </Container>
