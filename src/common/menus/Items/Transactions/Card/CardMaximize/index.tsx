@@ -1,5 +1,6 @@
 import { ITransactionCardProps } from '..';
 import ResultDTWildTransaction from '../../../../../../game/components/ResultDTWildTransaction';
+import { isDragonTigerWild } from '../../../../../utils/TransactionHelper';
 import BettingTable from '../BettingTable';
 import NoResult from '../NoResult';
 import styles from './styles.module.scss';
