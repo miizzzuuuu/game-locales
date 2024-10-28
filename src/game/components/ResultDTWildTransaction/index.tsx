@@ -46,8 +46,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'flex-start',
-                    gap: '3px',
-                    padding: '12px 0px',
+                    gap: '0.3rem',
                 }}
             >
                 <div
@@ -55,12 +54,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     style={{
                         flex: '1',
                         display: 'flex',
-                        height: '64px',
-                        padding: '12px',
+                        height: '6.8rem',
+                        padding: '1.2rem',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        borderRadius: '4px 2px 2px 4px',
-                        border: winner == 'dragon' ? '0.6px solid #F30049' : '0.6px solid #4C4D66',
+                        borderRadius: '0.4rem 0.2rem 0.2rem 0.4rem',
+                        border:
+                            winner == 'dragon' ? '0.06rem solid #F30049' : '0.06rem solid #4C4D66',
                         background:
                             winner == 'dragon'
                                 ? 'linear-gradient(0deg, #F30049 -39.84%, rgba(1, 137, 222, 0.00) 100%)'
@@ -75,17 +75,17 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'flex-start',
-                            gap: '5px',
+                            gap: '0.5rem',
                             position: 'absolute',
-                            left: '7px',
-                            top: '7px',
+                            left: '0.7rem',
+                            top: '0.7rem',
                             width: '80%',
                         }}
                     >
                         <div
                             style={{
                                 display: 'flex',
-                                gap: '2px',
+                                gap: '0.2rem',
                                 alignItems: 'center',
                             }}
                         >
@@ -94,13 +94,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 style={{
                                     color: '#FFF',
                                     textAlign: 'center',
-                                    textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                    textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                     fontFamily: 'Manrope',
                                     fontSize: '1.1rem',
                                     fontStyle: 'normal',
                                     fontWeight: '800',
                                     lineHeight: 'normal',
-                                    letterSpacing: '0.11px',
+                                    letterSpacing: '0.011rem',
                                     textTransform: 'uppercase',
                                     padding: '0px',
                                     margin: '0px',
@@ -123,22 +123,22 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     style={{
                                         color: '#FFF',
                                         textAlign: 'center',
-                                        textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                        textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                         fontFamily: 'Manrope',
-                                        fontSize: '12px',
+                                        fontSize: '1.2rem',
                                         fontStyle: 'normal',
                                         fontWeight: '800',
                                         lineHeight: 'normal',
-                                        letterSpacing: '0.11px',
+                                        letterSpacing: '0.011rem',
                                         textTransform: 'uppercase',
                                         padding: '0px',
                                         margin: '0px',
-                                        borderRadius: '3px',
-                                        border: '0.4px solid #51FF15',
+                                        borderRadius: '0.3rem',
+                                        border: '0.04rem solid #51FF15',
                                         background:
                                             'linear-gradient(108deg, rgba(59, 232, 0, 0.75) 2.97%, rgba(64, 248, 0, 0.75) 49.79%, rgba(59, 232, 0, 0.75) 98.51%)',
-                                        boxShadow: '-2px 4px 6px 0px rgba(0, 0, 0, 0.20)',
-                                        backdropFilter: 'blur(4px)',
+                                        boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
+                                        backdropFilter: 'blur(0.4rem)',
                                     }}
                                 />
                             </div>
@@ -149,13 +149,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
-                                textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                 fontFamily: 'Manrope',
-                                fontSize: '18px',
+                                fontSize: '1.8rem',
                                 fontStyle: 'normal',
                                 fontWeight: '700',
                                 lineHeight: 'normal',
-                                letterSpacing: '0.11px',
+                                letterSpacing: '0.011rem',
                                 textTransform: 'uppercase',
                                 padding: '0px',
                                 margin: '0px',
@@ -171,10 +171,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'flex-start',
-                            gap: '3px',
+                            gap: '0.3rem',
                             position: 'absolute',
-                            right: '10px',
-                            bottom: '5px',
+                            right: '1rem',
+                            bottom: '0.5rem',
                             height: '46%',
                         }}
                     >
@@ -206,9 +206,9 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                         alignItems: 'stretch',
-                        borderRadius: '4px 2px 2px 4px',
+                        borderRadius: '0.4rem 0.2rem 0.2rem 0.4rem',
                         position: 'relative',
-                        height: '64px',
+                        height: '6.8rem',
                         minWidth: 'calc(100%/3)',
                     }}
                 >
@@ -295,22 +295,22 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
-                                textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                 fontFamily: 'Manrope',
-                                fontSize: '12px',
+                                fontSize: '1.2rem',
                                 fontStyle: 'normal',
                                 fontWeight: '800',
                                 lineHeight: 'normal',
-                                letterSpacing: '0.11px',
+                                letterSpacing: '0.011rem',
                                 textTransform: 'uppercase',
                                 padding: '0px',
                                 margin: '0px',
-                                borderRadius: '3px',
-                                border: '0.4px solid #51FF15',
+                                borderRadius: '0.3rem',
+                                border: '0.04rem solid #51FF15',
                                 background:
                                     'linear-gradient(108deg, rgba(59, 232, 0, 0.75) 2.97%, rgba(64, 248, 0, 0.75) 49.79%, rgba(59, 232, 0, 0.75) 98.51%)',
-                                boxShadow: '-2px 4px 6px 0px rgba(0, 0, 0, 0.20)',
-                                backdropFilter: 'blur(4px)',
+                                boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
+                                backdropFilter: 'blur(0.4rem)',
                             }}
                         />
                     </div>
@@ -332,22 +332,22 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
-                                textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                 fontFamily: 'Manrope',
-                                fontSize: '12px',
+                                fontSize: '1.2rem',
                                 fontStyle: 'normal',
                                 fontWeight: '800',
                                 lineHeight: 'normal',
-                                letterSpacing: '0.11px',
+                                letterSpacing: '0.011rem',
                                 textTransform: 'uppercase',
                                 padding: '0px',
                                 margin: '0px',
-                                borderRadius: '3px',
-                                border: '0.4px solid #51FF15',
+                                borderRadius: '0.3rem',
+                                border: '0.04rem solid #51FF15',
                                 background:
                                     'linear-gradient(108deg, rgba(59, 232, 0, 0.75) 2.97%, rgba(64, 248, 0, 0.75) 49.79%, rgba(59, 232, 0, 0.75) 98.51%)',
-                                boxShadow: '-2px 4px 6px 0px rgba(0, 0, 0, 0.20)',
-                                backdropFilter: 'blur(4px)',
+                                boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
+                                backdropFilter: 'blur(0.4rem)',
                             }}
                         />
                     </div>
@@ -358,14 +358,15 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             height: '2.5rem',
                             width: `2rem`,
                             background: 'rgba(255, 255, 255, 0)',
-                            left: '40%',
-                            top: '30%',
+                            left: '50%',
+                            top: '50%',
                             position: 'absolute',
-                            ...(getOrientation() == 'landscape'
-                                ? { transform: '' }
-                                : {
-                                      transform: 'scale(1.25)',
-                                  }),
+                            // ...(getOrientation() == 'landscape'
+                            //     ? { transform: '' }
+                            //     : {
+                            //           transform: 'scale(1.25)',
+                            //       }),
+                            transform: 'translate(-50%, -50%)',
                         }}
                     >
                         <RenderCardV2 value={slotCardWild} visible={true} submit={true} />
@@ -376,12 +377,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     style={{
                         flex: '1',
                         display: 'flex',
-                        height: '64px',
-                        padding: '12px',
+                        height: '6.8rem',
+                        padding: '1.2rem',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        borderRadius: '4px 2px 2px 4px',
-                        border: winner == 'tiger' ? '0.6px solid #FF7A00' : '0.6px solid #4C4D66',
+                        borderRadius: '0.4rem 0.2rem 0.2rem 0.4rem',
+                        border:
+                            winner == 'tiger' ? '0.06rem solid #FF7A00' : '0.06rem solid #4C4D66',
                         background:
                             winner == 'tiger'
                                 ? 'linear-gradient(0deg, #FF7A00 -39.84%, rgba(243, 0, 73, 0.00) 100%)'
@@ -395,16 +397,16 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'flex-end',
-                            gap: '5px',
+                            gap: '0.5rem',
                             position: 'absolute',
-                            right: '7px',
-                            top: '7px',
+                            right: '0.7rem',
+                            top: '0.7rem',
                         }}
                     >
                         <div
                             style={{
                                 display: 'flex',
-                                gap: '2px',
+                                gap: '0.2rem',
                                 alignItems: 'center',
                             }}
                         >
@@ -423,9 +425,9 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     style={{
                                         color: '#FFF',
                                         textAlign: 'center',
-                                        textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                        textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                         fontFamily: 'Manrope',
-                                        fontSize: '12px',
+                                        fontSize: '1.2rem',
                                         fontStyle: 'normal',
                                         fontWeight: '800',
                                         lineHeight: 'normal',
@@ -433,12 +435,12 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                         textTransform: 'uppercase',
                                         padding: '0px',
                                         margin: '0px',
-                                        borderRadius: '3px',
-                                        border: '0.4px solid #51FF15',
+                                        borderRadius: '0.3rem',
+                                        border: '0.04rem solid #51FF15',
                                         background:
                                             'linear-gradient(108deg, rgba(59, 232, 0, 0.75) 2.97%, rgba(64, 248, 0, 0.75) 49.79%, rgba(59, 232, 0, 0.75) 98.51%)',
-                                        boxShadow: '-2px 4px 6px 0px rgba(0, 0, 0, 0.20)',
-                                        backdropFilter: 'blur(4px)',
+                                        boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
+                                        backdropFilter: 'blur(0.4rem)',
                                     }}
                                 />
                             </div>
@@ -447,13 +449,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 style={{
                                     color: '#FFF',
                                     textAlign: 'center',
-                                    textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                    textShadow: '0px 0.1rem 0.2rem rgba(0, 0, 0, 0.20)',
                                     fontFamily: 'Manrope',
                                     fontSize: '1.1rem',
                                     fontStyle: 'normal',
                                     fontWeight: '800',
                                     lineHeight: 'normal',
-                                    letterSpacing: '0.11px',
+                                    letterSpacing: '0.011rem',
                                     textTransform: 'uppercase',
                                     padding: '0px',
                                     margin: '0px',
@@ -466,13 +468,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
-                                textShadow: '0px 1px 2px rgba(0, 0, 0, 0.20)',
+                                textShadow: '0px 1px 0.2rem rgba(0, 0, 0, 0.20)',
                                 fontFamily: 'Manrope',
-                                fontSize: '18px',
+                                fontSize: '1.8rem',
                                 fontStyle: 'normal',
                                 fontWeight: '700',
                                 lineHeight: 'normal',
-                                letterSpacing: '0.11px',
+                                letterSpacing: '0.011rem',
                                 textTransform: 'uppercase',
                                 padding: '0px',
                                 margin: '0px',
@@ -489,10 +491,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'flex-start',
-                            gap: '3px',
+                            gap: '0.3rem',
                             position: 'absolute',
-                            left: '10px',
-                            bottom: '5px',
+                            left: '1rem',
+                            bottom: '0.5rem',
                             height: '46%',
                         }}
                     >

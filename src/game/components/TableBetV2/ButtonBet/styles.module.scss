@@ -229,7 +229,7 @@
 
 :global(.mobile-portrait) {
     .slot-chip {
-        $size: calc(100cqw / 7.5 * 50 / 100);
+        $size: 7cqw;
 
         width: $size;
         height: $size;
@@ -240,7 +240,7 @@
 :global(.desktop),
 :global(.mobile-landscape) {
     .slot-chip {
-        $size: calc(100cqh / 7.5 * 50 / 100);
+        $size: 7.5cqh;
 
         width: $size;
         height: $size;
