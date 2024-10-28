@@ -1,5 +1,4 @@
 import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
-import GameObjective from './Items/GameObjective';
 import Introduction from './Items/Introduction';
 import Payout from './Items/Payout';
 import Rules from './Items/Rules';
@@ -11,7 +10,6 @@ const HowToPlayContent = () => {
     return (
         <MenuContentContainer>
             <Introduction />
-            <GameObjective />
             <Rules />
             <DTWCard />
             <WildcardBet />
