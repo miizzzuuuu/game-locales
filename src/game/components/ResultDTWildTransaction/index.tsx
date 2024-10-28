@@ -376,7 +376,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                         padding: '1.2rem',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        borderRadius: '0.4rem 0.2rem 0.2rem 0.4rem',
+                        borderRadius: '0.2rem 0.4rem 0.4rem 0.2rem',
                         border:
                             winner == 'tiger' ? '0.06rem solid #FF7A00' : '0.06rem solid #4C4D66',
                         background:
