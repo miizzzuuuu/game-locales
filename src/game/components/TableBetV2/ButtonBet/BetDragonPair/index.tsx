@@ -7,7 +7,7 @@ import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
 import styles from './../styles.module.scss';
 
 const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
-    const { chip } = useGetChipBet(bet);
+    const chip = useGetChipBet(bet);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);

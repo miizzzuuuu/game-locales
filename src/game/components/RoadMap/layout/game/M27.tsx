@@ -1,4 +1,4 @@
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
+import { getOrientation } from '../../../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { checkLastIdx } from '../base/BaccaratRoadmaps';
 import '../../style.scss';
@@ -149,9 +149,9 @@ export default class M27 extends BaseV2Roadmap {
                     historyBlink={historyBlink}
                     history={data}
                     full={''}
-                    isLandscape={DisplayHelper.getOrientation() == 'landscape'}
+                    isLandscape={getOrientation() == 'landscape'}
                     onClick={() => console.log('')}
-					totalColumns={0}
+                    totalColumns={0}
                     type="predictions"
                 />
             </div>
@@ -475,176 +475,276 @@ export default class M27 extends BaseV2Roadmap {
                 break;
         }
 
-      
-		//Resets counter for 2nd filter
-		// this.currentRow = 0;
-		// this.currentCol = 0;
+        //Resets counter for 2nd filter
+        // this.currentRow = 0;
+        // this.currentCol = 0;
 
-		let startingCol: number,
-        startingRow: number;
+        let startingCol: number, startingRow: number;
 
-    let redElement: (props: any) => JSX.Element,
-        blueElement: (props: any) => JSX.Element,
-        redBlinkElement: (props: any) => JSX.Element,
-        blueBlinkElement: (props: any) => JSX.Element,
-        startingX: number;
-    const spacing = 7.0587;
-    const startY = 77.6469;
-    const spacingCoch = 5.8824;
-    const spacingCochPerTwo = 2.3526;
-    const startYCoach = 79.6469;
+        let redElement: (props: any) => JSX.Element,
+            blueElement: (props: any) => JSX.Element,
+            redBlinkElement: (props: any) => JSX.Element,
+            blueBlinkElement: (props: any) => JSX.Element,
+            startingX: number;
+        const spacing = 7.0587;
+        const startY = 77.6469;
+        const spacingCoch = 5.8824;
+        const spacingCochPerTwo = 2.3526;
+        const startYCoach = 79.6469;
 
-    switch (this.props.type) {
-        case "big-eye-road":
-            startingX = 7.05873;
-            redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.redColor} {...{ ...props }} ></circle>;
-            blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.blueColor}  {...{ ...props }}></circle>;
-
-            redBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.redColor} {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
-            blueBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2" stroke={this.blueColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
-            startingCol = 1;
-            break;
-        case "small-road":
-            startingX = 7.05873 * (this.props.totalColumns! + 2) + 7.05873;
-
-            redElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} ></circle>;
-            blueElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} ></circle>;
-
-            redBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.redColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}  ></circle>;
-            blueBlinkElement = (props) => <circle cx={startingX + (spacing * props.col)} cy={startY + (spacing * props.row)} r="2.5" fill={this.blueColor}  {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle} ></circle>;
-            startingCol = 2;
-            break;
-        case "cockroach-road":
-            startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + (6.05873);
-
-            const startXCoach = startingX;
-            redElement = (props) => <path
-                stroke={this.redColor}
-                strokeLinecap="round"
-                strokeWidth="1.2"
-                d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-            ></path>;
-            blueElement = (props) => <path
-                stroke={this.blueColor}
-                strokeLinecap="round"
-                strokeWidth="1.2"
-                d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-            ></path>;
-
-            redBlinkElement = (props) => <path
-                stroke={this.redColor}
-                strokeLinecap="round"
-                strokeWidth="1.2"
-                d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}
-            ></path>;
-            blueBlinkElement = (props) => <path
-                stroke={this.blueColor}
-                strokeLinecap="round"
-                strokeWidth="1.2"
-                d={`M${startXCoach + (spacingCoch * props.col) + (spacingCochPerTwo * ((props.col >= 2 ? Math.floor(props.col / 2) : 0)))} ${startYCoach + (spacingCoch * props.row) + (spacingCochPerTwo * ((props.row >= 2 ? Math.floor(props.row / 2) : 0)))}l3.5-3.5`}
-                {...{ ...props }} className={(props.classNames || "") + this.alternatingStyle}
-            ></path>;
-
-            startingCol = 3;
-            break;
-        default: break;
-    }
-
-    let a = 0;
-
-    let lengthLeft = 0, lengthRight = 0;
-
-    switch (this.props.type) {
-        case "big-eye-road":
-        case "small-road":
-        case "cockroach-road":
-            this.currentRow = 1;
-            this.currentCol = startingCol!; //1 //for big-eye-road
-
-
-            for (a = 0; a < 9; a++)
-                this.roadmapDisplay![a] = "123456789".split("").map(
-                    item => item ? null : null
+        switch (this.props.type) {
+            case 'big-eye-road':
+                startingX = 7.05873;
+                redElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.redColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
+                blueElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.blueColor}
+                        {...{ ...props }}
+                    ></circle>
                 );
 
-            //Evaluate the same column, first column
-            if (this.roadmapTypes![1][this.currentCol]) {
-                for (a = 1; a < this.roadmapTypes!.length; a++) {
-                    if (!this.roadmapTypes![a][this.currentCol])
-                        break;
+                redBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.redColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                blueBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2"
+                        stroke={this.blueColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                startingCol = 1;
+                break;
+            case 'small-road':
+                startingX = 7.05873 * (this.props.totalColumns! + 2) + 7.05873;
 
-                    //Evaluate the same column
-                    //startingCol = 1 for big-eye-road
-                    if (this.roadmapTypes![a][this.currentCol - startingCol!] ===
-                        this.roadmapTypes![a - 1][this.currentCol - startingCol!])
-                        // @ts-ignore
-                        this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
-                    // @ts-ignore
-                    else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
-                }
-            }
+                redElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.redColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
+                blueElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.blueColor}
+                        {...{ ...props }}
+                    ></circle>
+                );
 
-            this.currentRow = 0;
-            this.currentCol++;
+                redBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.redColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                blueBlinkElement = (props) => (
+                    <circle
+                        cx={startingX + spacing * props.col}
+                        cy={startY + spacing * props.row}
+                        r="2.5"
+                        fill={this.blueColor}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></circle>
+                );
+                startingCol = 2;
+                break;
+            case 'cockroach-road':
+                startingX = 7.05873 * (this.props.totalColumns! * 2 + 4) + 6.05873;
 
-            for (; this.currentCol < this.roadmapTypes![0].length;) {
-                //Evaluate the next column
-                if (this.roadmapTypes![0][this.currentCol]) {
-                    //Count filled cells
-                    lengthLeft = 0; lengthRight = 0;
+                const startXCoach = startingX;
+                redElement = (props) => (
+                    <path
+                        stroke={this.redColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                    ></path>
+                );
+                blueElement = (props) => (
+                    <path
+                        stroke={this.blueColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                    ></path>
+                );
 
-                    //startingCol = 1 for big-eye-road
-                    for (a = 0; a < this.roadmapTypes!.length; a++) {
-                        if (this.roadmapTypes![a][this.currentCol - startingCol! - 1])
-                            lengthLeft++;
-                        if (this.roadmapTypes![a][this.currentCol - 1])
-                            lengthRight++;
-                    }
+                redBlinkElement = (props) => (
+                    <path
+                        stroke={this.redColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></path>
+                );
+                blueBlinkElement = (props) => (
+                    <path
+                        stroke={this.blueColor}
+                        strokeLinecap="round"
+                        strokeWidth="1.2"
+                        d={`M${startXCoach + spacingCoch * props.col + spacingCochPerTwo * (props.col >= 2 ? Math.floor(props.col / 2) : 0)} ${startYCoach + spacingCoch * props.row + spacingCochPerTwo * (props.row >= 2 ? Math.floor(props.row / 2) : 0)}l3.5-3.5`}
+                        {...{ ...props }}
+                        className={(props.classNames || '') + this.alternatingStyle}
+                    ></path>
+                );
 
-                    // console.log("left:" + lengthLeft, "right:" + lengthRight);
-                    //Compare column lengths
-                    if (lengthLeft === lengthRight)
-                        // @ts-ignore
-                        this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
-                    // @ts-ignore
-                    else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
-                }
+                startingCol = 3;
+                break;
+            default:
+                break;
+        }
 
-                this.currentRow++;
+        let a = 0;
 
-                //Checks empty cell of the next row
-                if (this.roadmapTypes![this.currentRow][this.currentCol])
-                    for (; this.currentRow < this.roadmapTypes!.length; this.currentRow++) {
+        let lengthLeft = 0,
+            lengthRight = 0;
+
+        switch (this.props.type) {
+            case 'big-eye-road':
+            case 'small-road':
+            case 'cockroach-road':
+                this.currentRow = 1;
+                this.currentCol = startingCol!; //1 //for big-eye-road
+
+                for (a = 0; a < 9; a++)
+                    this.roadmapDisplay![a] = '123456789'
+                        .split('')
+                        .map((item) => (item ? null : null));
+
+                //Evaluate the same column, first column
+                if (this.roadmapTypes![1][this.currentCol]) {
+                    for (a = 1; a < this.roadmapTypes!.length; a++) {
+                        if (!this.roadmapTypes![a][this.currentCol]) break;
+
                         //Evaluate the same column
-
-                        //Checks empty cell
-                        if (this.roadmapTypes![this.currentRow][this.currentCol]) {
-                            //Checks adjacent cells
-                            if (this.roadmapTypes![this.currentRow][this.currentCol - startingCol!] === //1
-                                this.roadmapTypes![this.currentRow - 1][this.currentCol - startingCol!])
-                                // @ts-ignore
-                                this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, "red");
-                            // @ts-ignore 
-                            else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, "blue");
-                        } else break;
+                        //startingCol = 1 for big-eye-road
+                        if (
+                            this.roadmapTypes![a][this.currentCol - startingCol!] ===
+                            this.roadmapTypes![a - 1][this.currentCol - startingCol!]
+                        )
+                            // @ts-ignore
+                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, 'red');
+                        // @ts-ignore
+                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, 'blue');
                     }
+                }
 
                 this.currentRow = 0;
                 this.currentCol++;
-            }
 
-            // console.log("cR cC", this.currentDisplayRow, this.currentDisplayCol);
-            if (this.props.historyBlink &&
-                this.simpleBigRoad![this.simpleBigRoad!.length - 1] !== "t")
-                if (this.currentType === "red")
-                    // @ts-ignore 
-                    this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] = redBlinkElement!;
-                // @ts-ignore 
-                else this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] = blueBlinkElement!;
-            break;
+                for (; this.currentCol < this.roadmapTypes![0].length; ) {
+                    //Evaluate the next column
+                    if (this.roadmapTypes![0][this.currentCol]) {
+                        //Count filled cells
+                        lengthLeft = 0;
+                        lengthRight = 0;
 
+                        //startingCol = 1 for big-eye-road
+                        for (a = 0; a < this.roadmapTypes!.length; a++) {
+                            if (this.roadmapTypes![a][this.currentCol - startingCol! - 1])
+                                lengthLeft++;
+                            if (this.roadmapTypes![a][this.currentCol - 1]) lengthRight++;
+                        }
 
+                        // console.log("left:" + lengthLeft, "right:" + lengthRight);
+                        //Compare column lengths
+                        if (lengthLeft === lengthRight)
+                            // @ts-ignore
+                            this.addDisplayTileLegacy(this.roadmapDisplay!, redElement!, 'red');
+                        // @ts-ignore
+                        else this.addDisplayTileLegacy(this.roadmapDisplay!, blueElement!, 'blue');
+                    }
+
+                    this.currentRow++;
+
+                    //Checks empty cell of the next row
+                    if (this.roadmapTypes![this.currentRow][this.currentCol])
+                        for (; this.currentRow < this.roadmapTypes!.length; this.currentRow++) {
+                            //Evaluate the same column
+
+                            //Checks empty cell
+                            if (this.roadmapTypes![this.currentRow][this.currentCol]) {
+                                //Checks adjacent cells
+                                if (
+                                    this.roadmapTypes![this.currentRow][
+                                        this.currentCol - startingCol!
+                                    ] === //1
+                                    this.roadmapTypes![this.currentRow - 1][
+                                        this.currentCol - startingCol!
+                                    ]
+                                )
+                                    // @ts-ignore
+                                    this.addDisplayTileLegacy(
+                                        this.roadmapDisplay!,
+                                        // @ts-ignore
+                                        redElement!,
+                                        'red',
+                                    );
+                                // @ts-ignore
+                                else
+                                    this.addDisplayTileLegacy(
+                                        this.roadmapDisplay!,
+                                        // @ts-ignore
+                                        blueElement!,
+                                        'blue',
+                                    );
+                            } else break;
+                        }
+
+                    this.currentRow = 0;
+                    this.currentCol++;
+                }
+
+                // console.log("cR cC", this.currentDisplayRow, this.currentDisplayCol);
+                if (
+                    this.props.historyBlink &&
+                    this.simpleBigRoad![this.simpleBigRoad!.length - 1] !== 't'
+                )
+                    if (this.currentType === 'red')
+                        // @ts-ignore
+                        this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore
+                            redBlinkElement!;
+                    // @ts-ignore
+                    else
+                        this.roadmapDisplay![this.currentDisplayRow!][this.currentDisplayCol!] =
+                            // @ts-ignore
+                            blueBlinkElement!;
+                break;
 
             case 'predictions':
                 this.diPrediction = [];

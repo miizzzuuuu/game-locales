@@ -8,7 +8,7 @@ import PlacementStat from './Content/PlacementStat';
 import { useGetChipBet } from '../../../common/hooks/useGetChipBet';
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { Bet } from '../../../types';
-import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import { getDeviceClassName, getOrientation } from '../../../common/utils/DisplayHelper';
 import ChipBet from '../../../common/components/ChipBet';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import LabelTranslate from '../../../common/components/LabelTranslate';
@@ -81,12 +81,12 @@ function ResultNumber(props: { value: number | undefined }) {
 }
 
 const TigerBetButton = ({ bet, children }: IProps) => {
-    const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
+    const styles = getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
 
-    const deviceClassName = DisplayHelper.getDeviceClassName(styles);
+    const deviceClassName = getDeviceClassName(styles);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
-    const { chip } = useGetChipBet(bet);
+    const chip = useGetChipBet(bet);
     const { placeBetHandler: handleClick } = usePlaceBet({ betIsOpen });
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
 
@@ -128,14 +128,14 @@ const TigerBetButton = ({ bet, children }: IProps) => {
                         </span>
                     </div>
                 </div>
-                {DisplayHelper.getOrientation() == 'landscape' && scanNumber?.submit && (
+                {getOrientation() == 'landscape' && scanNumber?.submit && (
                     <ResultNumber value={scanNumber?.tiger_value} />
                 )}
 
                 <div className={styles['slot-chip']} style={{ right: '-20%', left: 'auto' }}>
                     {chip > 0 && <ChipBet value={chip} />}
                 </div>
-                {DisplayHelper.getOrientation() == 'landscape' ? (
+                {getOrientation() == 'landscape' ? (
                     <div className={styles.cardContainerTiger}>
                         <div
                             style={{

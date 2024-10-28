@@ -1,5 +1,5 @@
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
-import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import { DragonTigerBHelper } from '../../utils/DragonTigerBHelper';
@@ -68,7 +68,7 @@ const TableBetV2 = () => {
                     <RenderCard
                         top="-1rem"
                         right="unset"
-                        left={DisplayHelper.getOrientation() == 'portrait' ? '50%' : '50%'}
+                        left={getOrientation() == 'portrait' ? '50%' : '50%'}
                         position={{ x: '-50%', y: '5px' }}
                         rotation={{ z: '0deg' }}
                         opacity={isSuperWildLose ? 0.6 : 1}

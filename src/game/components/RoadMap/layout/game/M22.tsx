@@ -1,4 +1,4 @@
-import { DisplayHelper } from '../../../../../common/utils/DisplayHelper';
+import { getOrientation } from '../../../../../common/utils/DisplayHelper';
 import { getPcode } from '../../../../../common/utils/GameHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { checkLastIdx } from '../base/BaccaratRoadmaps';
@@ -598,7 +598,7 @@ export default class M22 extends BaseV2Roadmap {
                     historyBlink={historyBlink}
                     history={data}
                     full={''}
-                    isLandscape={DisplayHelper.getOrientation() == 'landscape'}
+                    isLandscape={getOrientation() == 'landscape'}
                     onClick={() => console.log('')}
                     totalColumns={0}
                     type="predictions"

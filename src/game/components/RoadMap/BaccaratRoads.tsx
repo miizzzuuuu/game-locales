@@ -5,7 +5,7 @@ import './style.scss';
 import M23 from './layout/game/M23';
 import M22 from './layout/game/M22';
 import { useAppSelector } from '../../../store/hooks';
-import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { getBasePcode } from '../../../common/utils/GameHelper';
 import M27 from './layout/game/M27';
 import { BaccaratGrid } from './layout/base/BaccaratGrid';
@@ -34,7 +34,7 @@ export const layouts: any = {
 };
 
 function BaccaratRoads(props: IProps) {
-    const styles = DisplayHelper.getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
+    const styles = getOrientation() == 'landscape' ? stylesLandscape : stylesPortrait;
     const darkMode = false;
     const data = useAppSelector((state) => state.history.history);
     const scanNumber = useAppSelector((state) => state.result.scanNumber);

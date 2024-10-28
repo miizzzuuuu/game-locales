@@ -1,4 +1,4 @@
-import { DisplayHelper } from '../../../common/utils/DisplayHelper';
+import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectGameNewSet } from '../../../store/slice/gameSlice';
 import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
@@ -10,7 +10,7 @@ import { useDummy } from './hooks/useDummy';
 import styles from './styles.module.scss';
 
 const MainArea = () => {
-    const isLandscape = DisplayHelper.getOrientation() == 'landscape';
+    const isLandscape = getOrientation() == 'landscape';
     const showPatternUI = useAppSelector(selectShowPatternUI);
 
     const gameNewSet = useAppSelector(selectGameNewSet);
