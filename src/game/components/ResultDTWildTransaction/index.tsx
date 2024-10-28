@@ -1,8 +1,6 @@
 import { useRef } from 'react';
-import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { PcodeDragonTigerWild, Transaction } from '../../../types';
 import { Label } from '../External/components/base/label';
-// import { StringUtility } from '../External/managers/StringUtility';
 import { RenderCardV2 } from '../External/prefabs/covercards/rcard-v2';
 import dragonornamen from './base/dragonornamen';
 import tigerornamen from './base/tigerornamen';
@@ -186,11 +184,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 background: 'rgba(255, 255, 255, 0)',
                                 marginRight: '1.5rem',
                                 marginTop: '-0.5rem',
-                                ...(getOrientation() == 'landscape'
-                                    ? { transform: '' }
-                                    : {
-                                          transform: 'scale(1.25)',
-                                      }),
                             }}
                         >
                             <RenderCardV2 value={slotCardDragon} visible={true} submit={true} />
@@ -501,11 +494,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 background: 'rgba(255, 255, 255, 0)',
                                 marginLeft: '0.5rem',
                                 marginTop: '-0.5rem',
-                                ...(getOrientation() == 'landscape'
-                                    ? { transform: '' }
-                                    : {
-                                          transform: 'scale(1.25)',
-                                      }),
                             }}
                         >
                             <RenderCardV2 value={slotCardTiger} visible={true} submit={true} />

@@ -6,18 +6,19 @@ import Section from './Section';
 import SideBetTable from './SideBet/SideBetTable';
 import styles from './styles.module.scss';
 
+const dataMainBet: string[] = ['dragon', 'tiger', 'tie'];
+const dataSideBet: string[] = [
+    'dragon-wild',
+    'tiger-wild',
+    'super-wild',
+    'dragon-pair',
+    'tiger-pair',
+];
+
 const BetDescription = () => {
     const keyLang = 'htp.bet-description-and-example';
     const keyLangMainBet = 'htp.bet-description-and-example.main-bet';
     const keyLangSideBet = 'htp.bet-description-and-example.side-bet';
-    const dataSideBet: string[] = [
-        'dragon-wild',
-        'tiger-wild',
-        'super-wild',
-        'dragon-pair',
-        'tiger-pair',
-    ];
-    const dataMainBet: string[] = ['dragon', 'tiger', 'tie'];
 
     return (
         <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
