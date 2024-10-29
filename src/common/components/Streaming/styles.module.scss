@@ -32,6 +32,7 @@
             bottom: 0;
             width: 100%;
             height: var(--height-overlay-streaming-portrait);
+            mask-image: linear-gradient(transparent, #000);
             z-index: 1;
         }
 
@@ -114,11 +115,11 @@
     }
 
     .video-left {
-        left: -0.1rem;
+        left: 0;
     }
 
     .video-right {
-        right: -0.1rem;
+        right: 0;
     }
 
     .video-left,
