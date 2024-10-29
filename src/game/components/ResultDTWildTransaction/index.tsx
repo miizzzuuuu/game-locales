@@ -1,9 +1,8 @@
 import { useRef } from 'react';
 import { PcodeDragonTigerWild, Transaction } from '../../../types';
-import { Label } from '../External/components/base/label';
-import { RenderCardV2 } from '../External/prefabs/covercards/rcard-v2';
-import dragonornamen from './base/dragonornamen';
-import tigerornamen from './base/tigerornamen';
+import RenderCardV2 from '../Card/RenderCard2';
+import DragonOrnamen from './SVG/DragonOrnamen';
+import TigerOrnamen from './SVG/TigerOrnamen';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -36,7 +35,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
     return (
         <div className={styles.result}>
             <div
-                className="detail-history"
                 style={{
                     display: 'flex',
                     width: '100%',
@@ -48,7 +46,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                 }}
             >
                 <div
-                    className="player-board-history"
                     style={{
                         flex: '1',
                         display: 'flex',
@@ -67,7 +64,6 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                     }}
                 >
                     <div
-                        className="player-info-board-history"
                         style={{
                             display: 'flex',
                             flexDirection: 'column',
@@ -87,8 +83,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 alignItems: 'center',
                             }}
                         >
-                            <Label
-                                value="DRAGON"
+                            <p
                                 style={{
                                     color: '#FFF',
                                     textAlign: 'center',
@@ -103,7 +98,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     padding: '0px',
                                     margin: '0px',
                                 }}
-                            />
+                            >
+                                DRAGON
+                            </p>
+
                             <div
                                 className="badge-win"
                                 style={{
@@ -116,8 +114,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     right: 0,
                                 }}
                             >
-                                <Label
-                                    value="WIN"
+                                <p
                                     style={{
                                         color: '#FFF',
                                         textAlign: 'center',
@@ -138,12 +135,13 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                         boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
                                         backdropFilter: 'blur(0.4rem)',
                                     }}
-                                />
+                                >
+                                    WIN
+                                </p>
                             </div>
                         </div>
 
-                        <Label
-                            value={`${Number(isNaN(Number(detail_result.dragon[0])) ? getValueOfLeterCard(detail_result.dragon[0]) : detail_result.dragon[0])}`}
+                        <p
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
@@ -158,10 +156,17 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 padding: '0px',
                                 margin: '0px',
                             }}
-                        />
+                        >
+                            {Number(
+                                isNaN(Number(detail_result.dragon[0]))
+                                    ? getValueOfLeterCard(detail_result.dragon[0])
+                                    : detail_result.dragon[0],
+                            )}
+                        </p>
                     </div>
 
-                    {dragonornamen()}
+                    <DragonOrnamen />
+
                     <div
                         ref={cardContainer}
                         className="player-cards-board-history"
@@ -186,7 +191,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 marginTop: '-0.5rem',
                             }}
                         >
-                            <RenderCardV2 value={slotCardDragon} visible={true} submit={true} />
+                            <RenderCardV2
+                                value={slotCardDragon}
+                                style={{ width: '2rem', fontSize: '2rem' }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -283,8 +291,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             zIndex: 2,
                         }}
                     >
-                        <Label
-                            value="WIN"
+                        <p
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
@@ -305,7 +312,9 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
                                 backdropFilter: 'blur(0.4rem)',
                             }}
-                        />
+                        >
+                            WIN
+                        </p>
                     </div>
                     <div
                         className="badge-win"
@@ -320,8 +329,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             zIndex: 2,
                         }}
                     >
-                        <Label
-                            value="WIN"
+                        <p
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
@@ -342,7 +350,9 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
                                 backdropFilter: 'blur(0.4rem)',
                             }}
-                        />
+                        >
+                            WIN
+                        </p>
                     </div>
 
                     <div
@@ -357,7 +367,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                             transform: 'translate(-50%, -50%)',
                         }}
                     >
-                        <RenderCardV2 value={slotCardWild} visible={true} submit={true} />
+                        <RenderCardV2
+                            value={slotCardWild}
+                            style={{ width: '2rem', fontSize: '2rem' }}
+                        />
                     </div>
                 </div>
                 <div
@@ -408,8 +421,7 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     zIndex: 2,
                                 }}
                             >
-                                <Label
-                                    value="WIN"
+                                <p
                                     style={{
                                         color: '#FFF',
                                         textAlign: 'center',
@@ -430,10 +442,11 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                         boxShadow: '-0.2rem 0.4rem 0.6rem 0px rgba(0, 0, 0, 0.20)',
                                         backdropFilter: 'blur(0.4rem)',
                                     }}
-                                />
+                                >
+                                    WIN
+                                </p>
                             </div>
-                            <Label
-                                value="TIGER"
+                            <p
                                 style={{
                                     color: '#FFF',
                                     textAlign: 'center',
@@ -448,11 +461,12 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                     padding: '0px',
                                     margin: '0px',
                                 }}
-                            />
+                            >
+                                TIGER
+                            </p>
                         </div>
-                        {/* @ts-ignore */}
-                        <Label
-                            value={`${Number(isNaN(Number(detail_result.tiger[0])) ? getValueOfLeterCard(detail_result.tiger[0]) : detail_result.tiger[0])}`}
+
+                        <p
                             style={{
                                 color: '#FFF',
                                 textAlign: 'center',
@@ -467,10 +481,16 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 padding: '0px',
                                 margin: '0px',
                             }}
-                        />
+                        >
+                            {Number(
+                                isNaN(Number(detail_result.tiger[0]))
+                                    ? getValueOfLeterCard(detail_result.tiger[0])
+                                    : detail_result.tiger[0],
+                            )}
+                        </p>
                     </div>
 
-                    {tigerornamen()}
+                    <TigerOrnamen />
 
                     <div
                         ref={cardContainer2}
@@ -496,7 +516,10 @@ const ResultDTWildTransaction = ({ data }: IProps) => {
                                 marginTop: '-0.5rem',
                             }}
                         >
-                            <RenderCardV2 value={slotCardTiger} visible={true} submit={true} />
+                            <RenderCardV2
+                                value={slotCardTiger}
+                                style={{ width: '2rem', fontSize: '2rem' }}
+                            />
                         </div>
                     </div>
                 </div>

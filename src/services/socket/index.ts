@@ -1,4 +1,7 @@
 import io from 'socket.io-client';
+import { Features } from '../../common/utils/Features';
+import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
+import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
     CameraSequence,
     CloseTimerData,
@@ -11,10 +14,6 @@ import {
     Thunder,
     TopWinnerData,
 } from '../../types';
-
-import { StringUtility } from '../../game/components/External/managers/StringUtility';
-import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
-import { Features } from '../../common/utils/Features';
 
 export class SocketComponent {
     static _instance: SocketComponent;
@@ -203,7 +202,7 @@ export class SocketComponent {
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {
             const eventName = SocketComponent.scanNumber.concat(
-                StringUtility.convertGameCodeToGameName(getPcode()),
+                convertGameCodeToGameName(getPcode()),
             );
 
             this._socket.on(eventName, (data: ScanNumberData) => {
@@ -292,7 +291,7 @@ export class SocketComponent {
             }
 
             const eventScan = SocketComponent.scanNumber.concat(
-                StringUtility.convertGameCodeToGameName(getPcode()),
+                convertGameCodeToGameName(getPcode()),
             );
             if (eventScan) {
                 this._socket.off(eventScan);

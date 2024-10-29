@@ -4,8 +4,6 @@ import { selectGameNewSet } from '../../../store/slice/gameSlice';
 import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetV2 from '../TableBetV2';
-import './../External/components/css/animation.css';
-import './../External/components/css/styles.css';
 import { useDummy } from './hooks/useDummy';
 import styles from './styles.module.scss';
 
@@ -20,9 +18,9 @@ const MainArea = () => {
     if (isLandscape) {
         return (
             <div className={styles['main-area']}>
-                <div className={`container-center-board`}>
+                <div className={`${styles['container-center-board']}`}>
                     <div
-                        className={`landscape-top-board ${showPatternUI == true ? 'open' : 'close'}`}
+                        className={`${styles['landscape-top-board']} ${showPatternUI == true ? styles.open : styles.close}`}
                     >
                         <RoadMap activeColumns={18} isLandscape={true} />
                     </div>

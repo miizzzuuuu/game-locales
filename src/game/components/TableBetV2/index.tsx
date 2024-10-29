@@ -2,7 +2,8 @@ import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
 import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { DragonTigerBHelper } from '../../utils/DragonTigerBHelper';
+import { BETS } from '../../utils/DragonTigerBHelper';
+import { RenderCard } from '../Card/RenderCard';
 import BetDragon from './ButtonBet/BetDragon';
 import BetDragonPair from './ButtonBet/BetDragonPair';
 import BetDragonWild from './ButtonBet/BetDragonWild';
@@ -12,7 +13,6 @@ import BetTiger from './ButtonBet/BetTiger';
 import BetTigerPair from './ButtonBet/BetTigerPair';
 import BetTigerWild from './ButtonBet/BetTigerWild';
 import styles from './index.module.scss';
-import { RenderCard } from './RenderCard/RenderCard';
 
 const TableBetV2 = () => {
     const betIsOpen = useAppSelector(selectBetIsOpen);
@@ -29,40 +29,18 @@ const TableBetV2 = () => {
 
     return (
         <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
-            <BetDragonWild
-                bet={DragonTigerBHelper.betsTop['dragon-wild']}
-                placeBetHandler={placeBetHandler}
-            />
+            <BetDragonWild bet={BETS['dragon-wild']} placeBetHandler={placeBetHandler} />
+            <BetTigerWild bet={BETS['tiger-wild']} placeBetHandler={placeBetHandler} />
 
-            <BetTigerWild
-                bet={DragonTigerBHelper.betsTop['tiger-wild']}
-                placeBetHandler={placeBetHandler}
-            />
-            <BetDragon
-                bet={DragonTigerBHelper.betsMid['dragon']}
-                placeBetHandler={placeBetHandler}
-            />
-            <BetTiger bet={DragonTigerBHelper.betsMid['tiger']} placeBetHandler={placeBetHandler} />
-            <BetDragonPair
-                bet={DragonTigerBHelper.betsBottom['dragon-pair']}
-                placeBetHandler={placeBetHandler}
-            />
+            <BetDragon bet={BETS['dragon']} placeBetHandler={placeBetHandler} />
+            <BetTiger bet={BETS['tiger']} placeBetHandler={placeBetHandler} />
 
-            <BetTigerPair
-                bet={DragonTigerBHelper.betsBottom['tiger-pair']}
-                placeBetHandler={placeBetHandler}
-            />
+            <BetDragonPair bet={BETS['dragon-pair']} placeBetHandler={placeBetHandler} />
+            <BetTigerPair bet={BETS['tiger-pair']} placeBetHandler={placeBetHandler} />
 
             <div className={styles['center']}>
-                <BetSuperWild
-                    bet={DragonTigerBHelper.betsCenter['superwild']}
-                    placeBetHandler={placeBetHandler}
-                />
-
-                <BetTie
-                    bet={DragonTigerBHelper.betsCenter['tie']}
-                    placeBetHandler={placeBetHandler}
-                />
+                <BetSuperWild bet={BETS['superwild']} placeBetHandler={placeBetHandler} />
+                <BetTie bet={BETS['tie']} placeBetHandler={placeBetHandler} />
 
                 <div className={`${styles['slot-card']}`} style={{}}>
                     <RenderCard

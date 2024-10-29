@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import LabelTranslate from '../../../../../../common/components/LabelTranslate';
 import { getBasePcode } from '../../../../../../common/utils/GameHelper';
-import Card from '../Card';
+import RenderCard2 from '../../../../Card/RenderCard2';
 import styles from './style.module.scss';
 
 export interface IProps {
@@ -18,9 +18,10 @@ const CardExample = ({ keyCard, data, dataValue }: IProps) => {
         <div className={styles['item']}>
             <LabelTranslate value={keyCard} keyLang={keyLang} className={styles.name} />
 
-            <div className={styles.cards}>
+            {/* <div className={styles.cards}>
                 <Card value={data} />
-            </div>
+            </div> */}
+            <RenderCard2 value={data} className={styles.card} />
 
             <span className={styles.value}>
                 {!dataValue

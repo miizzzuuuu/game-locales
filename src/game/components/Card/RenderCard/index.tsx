@@ -1,32 +1,48 @@
-import { useEffect } from 'react';
-import { StringUtility } from '../../managers/StringUtility';
-import { RenderSymbol } from '../cardsymbol';
+import { splitCharStringToArray } from '../../../utils/StringUtility';
+import { RenderSymbol } from '../RenderSymbol';
+import styles from './styles.module.scss';
 
-export function RenderCard(props: any) {
-    let displayValue = StringUtility.splitCharStringToArray(props.value);
+interface IProps {
+    top: string;
+    right: string;
+    left: string;
+    position: { x: string; y: string };
+    rotation: { z: string };
+    opacity: number;
+    value: string;
+    appear: boolean;
+    disappear: boolean;
+    submit?: boolean;
+    notAbsolute?: boolean;
+    marginTop?: string;
+}
+
+export function RenderCard(props: IProps) {
+    let displayValue = splitCharStringToArray(props.value);
+
     if (displayValue.length < 2) {
         displayValue = ['', ''];
     }
-    const displayColor = displayValue[1] == 'd' || displayValue[1] == 'h' ? '#FF0415' : '#121524';
 
-    useEffect(() => {
-        // if (props.visible) audioManager.playAudio("cardpush");
-    }, [props.visible]);
+    const displayColor = displayValue[1] == 'd' || displayValue[1] == 'h' ? '#FF0415' : '#121524';
 
     return (
         <div
             style={{
-                position: 'absolute',
+                position: props.notAbsolute ? 'unset' : 'absolute',
                 top: `${props.top}`,
+                opacity: `${props.opacity}`,
                 left: `${props.left}`,
                 right: `${props.right}`,
-                transform: `perspective(1000px) translate(${props.position.x}, ${props.position.y})`,
-                width: '24px',
-                height: '31.68px',
+                transform: `perspective(100rem) translate(${props.position.x}, ${props.position.y})`,
+                marginTop: `${props.marginTop}`,
+                transformOrigin: 'center',
+                width: '2.4rem',
+                height: '3.1rem',
             }}
         >
             <div
-                className={`card-slot ${props.visible == true ? '' : 'disappear'}`}
+                className={`${styles['card-slot']}${!props.disappear && props.appear == true ? ` ${styles.appear}` : ''}${props.disappear == true ? ` ${styles.disappear}` : ''}`}
                 style={{
                     position: 'absolute',
                     width: '100%',
@@ -34,29 +50,31 @@ export function RenderCard(props: any) {
                 }}
             >
                 <div
-                    className={`card-core ${props.submit == true ? 'flipup' : ''}`}
+                    className={`${styles['card-core']}${props.submit == true ? ` ${styles.flipup}` : ''}`}
                     style={{
                         position: 'absolute',
                         width: '100%',
                         height: '100%',
-                        transform: `perspective(1000px)`,
+                        transform: `perspective(100rem)`,
                     }}
                 >
                     <div
-                        className={`card-core-detail`}
+                        className={styles['card-core-detail']}
                         style={{
                             position: 'absolute',
                             width: '100%',
                             height: '100%',
-                            transform: `perspective(1000px) rotateZ(${props.rotation.z})`,
+                            transform: `perspective(100rem) rotateZ(${props.rotation.z}) `,
                         }}
                     >
                         <div
-                            className="card-cover"
+                            className={styles['card-cover']}
                             style={{
                                 position: 'absolute',
                                 width: '100%',
-                                height: '100%',
+                                height: 'fit-content',
+                                boxShadow:
+                                    '0 0 0.064rem 0 rgba(0, 0, 0, 0.4) 0 0.064rem 0.064rem 0 rgba(0, 0, 0, 0.2)',
                             }}
                         >
                             <svg
@@ -66,13 +84,13 @@ export function RenderCard(props: any) {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <rect width="100" height="132" rx="14" fill="white" />
+                                <rect width={100} height={132} rx={14} fill="white" />
                                 <rect
-                                    x="10"
-                                    y="10"
-                                    width="80"
-                                    height="112"
-                                    rx="8"
+                                    x={10}
+                                    y={10}
+                                    width={80}
+                                    height={112}
+                                    rx={8}
                                     fill="url(#paint0_radial_1_3949)"
                                 />
                                 <g filter="url(#filter0_d_1_3949)">
@@ -92,22 +110,22 @@ export function RenderCard(props: any) {
                                 <defs>
                                     <filter
                                         id="filter0_d_1_3949"
-                                        x="28"
+                                        x={28}
                                         y="41.4937"
-                                        width="48"
+                                        width={48}
                                         height="53.0623"
                                         filterUnits="userSpaceOnUse"
                                         colorInterpolationFilters="sRGB"
                                     >
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feFlood floodOpacity={0} result="BackgroundImageFix" />
                                         <feColorMatrix
                                             in="SourceAlpha"
                                             type="matrix"
                                             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                                             result="hardAlpha"
                                         />
-                                        <feOffset dy="2" />
-                                        <feGaussianBlur stdDeviation="2" />
+                                        <feOffset dy={2} />
+                                        <feGaussianBlur stdDeviation={2} />
                                         <feComposite in2="hardAlpha" operator="out" />
                                         <feColorMatrix
                                             type="matrix"
@@ -127,36 +145,36 @@ export function RenderCard(props: any) {
                                     </filter>
                                     <radialGradient
                                         id="paint0_radial_1_3949"
-                                        cx="0"
-                                        cy="0"
-                                        r="1"
+                                        cx={0}
+                                        cy={0}
+                                        r={1}
                                         gradientUnits="userSpaceOnUse"
                                         gradientTransform="translate(50 12.0741) rotate(90) scale(132.741 379.898)"
                                     >
                                         <stop stopColor="#4C5378" />
-                                        <stop offset="1" stopColor="#121524" />
+                                        <stop offset={1} stopColor="#121524" />
                                     </radialGradient>
                                     <linearGradient
                                         id="paint1_linear_1_3949"
-                                        x1="32"
+                                        x1={32}
                                         y1="54.7533"
                                         x2="68.1171"
                                         y2="54.7533"
                                         gradientUnits="userSpaceOnUse"
                                     >
                                         <stop stopColor="#15B586" />
-                                        <stop offset="1" stopColor="#009FD1" />
+                                        <stop offset={1} stopColor="#009FD1" />
                                     </linearGradient>
                                     <linearGradient
                                         id="paint2_linear_1_3949"
                                         x1="37.6309"
                                         y1="74.163"
-                                        x2="72"
+                                        x2={72}
                                         y2="74.163"
                                         gradientUnits="userSpaceOnUse"
                                     >
                                         <stop stopColor="#0367DC" />
-                                        <stop offset="1" stopColor="#894B92" />
+                                        <stop offset={1} stopColor="#894B92" />
                                     </linearGradient>
                                     <linearGradient
                                         id="paint3_linear_1_3949"
@@ -167,13 +185,13 @@ export function RenderCard(props: any) {
                                         gradientUnits="userSpaceOnUse"
                                     >
                                         <stop stopColor="#0C4B92" />
-                                        <stop offset="1" stopColor="#0395DE" />
+                                        <stop offset={1} stopColor="#0395DE" />
                                     </linearGradient>
                                 </defs>
                             </svg>
                         </div>
                         <div
-                            className="card-value"
+                            className={styles['card-value']}
                             style={{
                                 position: 'absolute',
                                 width: '100%',
@@ -182,30 +200,25 @@ export function RenderCard(props: any) {
                         >
                             <svg
                                 width="100%"
-                                height="100%"
+                                // height="100%"
                                 viewBox="0 0 100 132"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <rect width="100" height="132" rx="14" fill="white" />
-                                {/* The Symbol */}
                                 <RenderSymbol symbol={displayValue[1]} />
-                                {/* The Value */}
-                                {/* <path
-                  d="M9.57305 55L23.193 11.8H33.783L47.4031 55H39.963L27.603 16.24H29.223L17.013 55H9.57305ZM17.163 45.64V38.89H39.843V45.64H17.163Z"
-                  fill="#121524"
-                /> */}
                             </svg>
+
                             <p
                                 style={{
                                     position: 'absolute',
-                                    top: '0px',
-                                    left: '0px',
-                                    margin: '-2px 0px 0px 2px',
+                                    top: '0',
+                                    left: '0',
+                                    margin: '-0.2rem 0 0 0.2rem',
                                     fontFamily: 'Manrope',
                                     fontSize: '1.44rem',
                                     fontStyle: 'normal',
-                                    fontWeight: '600',
+                                    fontWeight: '700',
                                     lineHeight: 'normal',
                                     textTransform: 'uppercase',
                                     color: displayColor,

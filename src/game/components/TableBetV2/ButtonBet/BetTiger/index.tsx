@@ -3,8 +3,8 @@ import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
-import { DragonTigerBHelper } from '../../../../utils/DragonTigerBHelper';
-import { RenderCard } from '../../RenderCard/RenderCard';
+import { payoutGroup } from '../../../../utils/DragonTigerBHelper';
+import { RenderCard } from '../../../Card/RenderCard';
 import SvgTiger from '../../SVG/SvgTiger';
 import styles from './../styles.module.scss';
 
@@ -30,7 +30,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
             <div className={styles['content']}>
                 <div className={styles['bet-name']}>TIGER</div>
                 <div className={styles['bet-payout']}>
-                    {DragonTigerBHelper.payoutGroup[`${bet.button}-${bet.group}`]}:1
+                    {payoutGroup[`${bet.button}-${bet.group}`]}:1
                 </div>
             </div>
 

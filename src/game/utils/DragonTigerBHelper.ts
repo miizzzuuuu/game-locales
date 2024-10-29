@@ -9,40 +9,31 @@ export enum TypeGroup {
     SuperWild = 'superwild',
 }
 
-export class DragonTigerBHelper {
-    static betsTop = {
-        'dragon-wild': { button: 'dragonwild', group: 'wild' },
-        'tiger-wild': { button: 'tigerwild', group: 'wild' },
-    };
-    static betsMid = {
-        dragon: { button: 'dragon', group: 'dragon' },
-        tiger: { button: 'tiger', group: 'tiger' },
-    };
-    static betsBottom = {
-        'dragon-pair': { button: 'dragonpair', group: 'pair' },
-        'tiger-pair': { button: 'tigerpair', group: 'pair' },
-    };
+export const BETS: Record<string, Bet> = {
+    // top
+    'dragon-wild': { button: 'dragonwild', group: 'wild' },
+    'tiger-wild': { button: 'tigerwild', group: 'wild' },
 
-    static betsCenter = {
-        superwild: { button: 'superwild', group: 'superwild' },
-        tie: { button: 'tie', group: 'tie' },
-    };
+    // mid
+    dragon: { button: 'dragon', group: 'dragon' },
+    tiger: { button: 'tiger', group: 'tiger' },
 
-    static bets: Record<string, Bet> = {
-        ...this.betsTop,
-        ...this.betsMid,
-        ...this.betsBottom,
-        ...this.betsCenter,
-    };
+    // bottom
+    'dragon-pair': { button: 'dragonpair', group: 'pair' },
+    'tiger-pair': { button: 'tigerpair', group: 'pair' },
 
-    static payoutGroup: Record<string, number> = {
-        'dragon-dragon': 1,
-        'tiger-tiger': 1,
-        'tie-tie': 11,
-        'dragonwild-wild': 24,
-        'tigerwild-wild': 24,
-        'superwild-superwild': 127,
-        'dragonpair-pair': 11,
-        'tigerpair-pair': 11,
-    };
-}
+    // center
+    superwild: { button: 'superwild', group: 'superwild' },
+    tie: { button: 'tie', group: 'tie' },
+};
+
+export const payoutGroup: Record<string, number> = {
+    'dragon-dragon': 1,
+    'tiger-tiger': 1,
+    'tie-tie': 11,
+    'dragonwild-wild': 24,
+    'tigerwild-wild': 24,
+    'superwild-superwild': 127,
+    'dragonpair-pair': 11,
+    'tigerpair-pair': 11,
+};
