@@ -1,22 +1,18 @@
-import { getColor } from '../../utils/_24DHelper';
+import { useRef } from 'react';
+import { useDragToScroll } from '../../../common/hooks/useDragToScroll';
 import { historyResultDummy } from './data';
+import Item from './Item';
 import styles from './styles.module.scss';
 
 const HistoryResult = () => {
-    return (
-        <div className={`${styles.wrapper} no-scrollbar`}>
-            {historyResultDummy.map((data, idx) => {
-                const color = getColor(data.angka);
-                const multiplier = data.thunder.data_thunder.prize_thunder;
+    const containerRef = useRef<HTMLDivElement>(null);
 
-                return (
-                    <div
-                        key={idx}
-                        className={`${styles.item}${multiplier ? ` ${styles.thunder}` : ''}`}
-                    >
-                        <span className={`${styles.text} ${styles[color]}`}>{data.angka}</span>
-                    </div>
-                );
+    useDragToScroll({ slider: containerRef });
+
+    return (
+        <div className={`${styles.wrapper} no-scrollbar`} ref={containerRef}>
+            {historyResultDummy.map((data, idx) => {
+                return <Item key={idx} data={data} />;
             })}
         </div>
     );

@@ -1,4 +1,5 @@
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
+import { hasCommonElement } from '../../../common/utils/ArrayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectWinBets } from '../../../store/slice/resultSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
@@ -28,8 +29,9 @@ const TableBet = () => {
         bet: Bet,
         type: string | undefined,
         additionalClass: string,
+        isWin?: boolean,
     ) => {
-        const className = `slot-${key} ${additionalClass} ${winBets.length > 0 ? (winBets.includes(bet.button) ? 'win' : 'lose') : ''}`;
+        const className = `slot-${key} ${additionalClass} ${winBets.length > 0 ? (isWin ? 'win' : 'lose') : ''}`;
 
         return (
             <ButtonBet
@@ -54,21 +56,39 @@ const TableBet = () => {
         return Object.keys(BETS).map((key) => {
             const bet = BETS[key];
             const color = getColor(Number(bet.button));
-            return renderButtonBet(key, bet, 'number', `bet-number-${color}`);
+            return renderButtonBet(
+                key,
+                bet,
+                'number',
+                `bet-number-${color}`,
+                winBets.includes(bet.button),
+            );
         });
     };
 
     const renderColRowBets = () => {
         return Object.keys(BETS_COL_ROW).map((key) => {
             const bet = BETS_COL_ROW[key];
-            return renderButtonBet(key, bet, 'col-row', 'bet-col-row');
+            return renderButtonBet(
+                key,
+                bet,
+                'col-row',
+                'bet-col-row',
+                winBets.includes(bet.button),
+            );
         });
     };
 
     const renderMultiColBets = () => {
         return Object.keys(BETS_MULTI_COLS).map((key) => {
             const bet = BETS_MULTI_COLS[key];
-            return renderButtonBet(key, bet, 'col-row', 'bet-col-row');
+            return renderButtonBet(
+                key,
+                bet,
+                'col-row',
+                'bet-col-row',
+                winBets.includes(bet.button),
+            );
         });
     };
 
@@ -78,14 +98,20 @@ const TableBet = () => {
             const colorClass = ['Small', 'Odd', 'Red'].includes(bet.button)
                 ? 'bet-red'
                 : 'bet-black';
-            return renderButtonBet(key, bet, 'text', colorClass);
+            return renderButtonBet(key, bet, 'text', colorClass, winBets.includes(bet.button));
         });
     };
 
     const renderMultiNumberBets = () => {
         return Object.keys(BETS_MULTI_NUMBERS).map((key) => {
             const bet = BETS_MULTI_NUMBERS[key];
-            return renderButtonBet(key, bet, undefined, '');
+            return renderButtonBet(
+                key,
+                bet,
+                undefined,
+                '',
+                hasCommonElement(winBets, bet.button.split(',')),
+            );
         });
     };
 
