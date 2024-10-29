@@ -125,6 +125,10 @@ export class SocketComponent {
                         return;
                     }
 
+                    this.lastDragonCard = undefined;
+                    this.lastTigerCard = undefined;
+                    this.lastWildCard = undefined;
+
                     // this._lastLoadNewValuePeriod = data.periode;
                     this._lastLoadNewValuePeriod = Number(data.shoePeriode?.split('-')[1]) - 1;
 
@@ -199,6 +203,11 @@ export class SocketComponent {
         }
     }
 
+    lastDragonCard: string | undefined = undefined;
+    lastTigerCard: string | undefined = undefined;
+    lastWildCard: string | undefined = undefined;
+    lastSubmit: boolean = false;
+
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {
             const eventName = SocketComponent.scanNumber.concat(
@@ -206,8 +215,25 @@ export class SocketComponent {
             );
 
             this._socket.on(eventName, (data: ScanNumberData) => {
-                console.log('socket scanNumber:', data);
+                // console.log('socket scanNumber:', data);
                 if (data && data.pcode === getPcode()) {
+                    if (
+                        this.lastDragonCard === data.dragon &&
+                        this.lastTigerCard === data.tiger &&
+                        this.lastWildCard === data.wild &&
+                        this.lastSubmit === data.submit
+                    ) {
+                        console.log('skip card');
+                        return;
+                    }
+
+                    this.lastDragonCard = data.dragon;
+                    this.lastTigerCard = data.tiger;
+                    this.lastWildCard = data.wild;
+                    this.lastSubmit = data.submit;
+
+                    console.table({ dragon: data.dragon, tiger: data.tiger, wild: data.wild });
+
                     callback(data);
                 }
             });

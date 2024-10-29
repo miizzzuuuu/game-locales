@@ -46,7 +46,15 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
         });
 
         SocketComponent.instance.listenScanNumber((data) => {
-            dispatch(scanNumberAction(data));
+            if (!data.submit) {
+                dispatch(scanNumberAction(data));
+                return;
+            }
+
+            console.log('delay open card');
+            setTimeout(() => {
+                dispatch(scanNumberAction(data));
+            }, 4000);
         });
 
         SocketComponent.instance.listenNewShoe((data) => {
