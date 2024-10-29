@@ -9,8 +9,8 @@ const keySlide = 'slide-3';
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
     <Graphic
         isActive={isActive}
-        animationSrc="https://cdn.lottielab.com/l/ADvMgqJwyXB7Q4.json"
-        style={{ width: '28rem' }}
+        animationSrc="https://cdn.lottielab.com/l/BL6Spgp3SYcmkS.json"
+        style={{ height: 'unset' }}
     />
 );
 

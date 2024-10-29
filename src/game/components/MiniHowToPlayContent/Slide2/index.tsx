@@ -7,7 +7,11 @@ import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
 const keySlide = 'slide-2';
 
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
-    <Graphic isActive={isActive} animationSrc="https://cdn.lottielab.com/l/835p29id7FkP7U.json" />
+    <Graphic
+        isActive={isActive}
+        animationSrc="https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json"
+        style={{ height: 'unset' }}
+    />
 );
 
 const Slide2: ModalItem = {
