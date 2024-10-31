@@ -5,7 +5,7 @@ const BackToLobby = () => {
     const handleBackToLobby = () => {
         const changeMainGame = async () => {
             try {
-                await fetch('/auth/maingame/change?game=""');
+                await fetch('/auth/maingame/change?game=');
 
                 const origin = window.location.origin;
 
