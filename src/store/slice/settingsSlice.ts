@@ -11,7 +11,7 @@ const initialState: Settings = {
     enableGameSound: false,
     enableStreamingSound: false,
     enableStreamingVideo: false,
-    streamingQuality: 'high',
+    streamingQuality: 'medium',
     volumeStreamingSound: 0,
     volumeGameSound: 0,
 };
@@ -23,10 +23,10 @@ const playerSlice = createSlice({
         setSetings: (state, action: PayloadAction<Settings>) => {
             const {
                 language,
-                autoRebet,
+                // autoRebet,
                 enableGameSound,
                 enableStreamingSound,
-                enableStreamingVideo,
+                // enableStreamingVideo,
                 streamingQuality,
                 volumeStreamingSound,
                 volumeGameSound,
@@ -36,11 +36,11 @@ const playerSlice = createSlice({
             void i18next.changeLanguage(lang);
             state.language = lang;
 
-            state.autoRebet = autoRebet;
+            // state.autoRebet = autoRebet;
 
             state.volumeStreamingSound = volumeStreamingSound;
             state.enableStreamingSound = enableStreamingSound;
-            state.enableStreamingVideo = enableStreamingVideo;
+            // state.enableStreamingVideo = enableStreamingVideo;
             state.streamingQuality = streamingQuality;
 
             state.volumeGameSound = volumeGameSound;

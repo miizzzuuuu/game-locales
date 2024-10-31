@@ -1,0 +1,9 @@
+.version {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: var(--layer-streaming);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}

@@ -19,6 +19,7 @@ import Streaming from '../Streaming';
 import Timer from '../Timer';
 import TopWinner from '../TopWinner';
 import styles from './styles.module.scss';
+import Version from '../Version';
 
 const Menu = lazy(() => import('../../menus/Menu'));
 
@@ -98,6 +99,7 @@ function Game() {
             className={`${styles['game-area']}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
+            <Version />
             <Timer />
             <GameUI />
 

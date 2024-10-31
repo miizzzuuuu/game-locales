@@ -467,6 +467,68 @@ export const payouts: Record<string, PayoutData[]> = {
             max: 5000000,
         },
     ],
+    m8b: [
+        {
+            name: 'one number',
+            payout: null,
+            min: 1000,
+            max: 1000000,
+            items: [
+                {
+                    name: 'normal',
+                    payout: 4,
+                },
+                {
+                    name: 'hot',
+                    payout: 7,
+                },
+                {
+                    name: 'cold',
+                    payout: 2,
+                },
+            ],
+        },
+        {
+            name: 'two numbers',
+            payout: 1.5,
+            min: 1000,
+            max: 1000000,
+            items: [],
+        },
+        {
+            name: 'four numbers',
+            payout: 0.25,
+            min: 1000,
+            max: 1000000,
+            items: [],
+        },
+        {
+            name: 'side bet',
+            payout: null,
+            min: 5000,
+            max: 5000000,
+            items: [
+                {
+                    name: 'big,small,odd,even',
+                    payout: null,
+                    items: [
+                        {
+                            name: 'normal',
+                            payout: 0.95,
+                        },
+                        {
+                            name: 'hot',
+                            payout: 1.5,
+                        },
+                        {
+                            name: 'cold',
+                            payout: 0.5,
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
     m14: [
         {
             name: 'pair',

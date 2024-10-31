@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
     readonly VITE_URL_SOCKET: string;
     readonly VITE_URL_API: string;
+    readonly VITE_URL_LOBBY: string;
 
     readonly VITE_MOBILE_PORTRAIT_WIDTH: number;
     readonly VITE_MOBILE_PORTRAIT_HEIGHT: number;
