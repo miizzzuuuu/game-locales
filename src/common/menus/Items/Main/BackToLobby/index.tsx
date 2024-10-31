@@ -1,19 +1,21 @@
 import Item from '../Item';
 import SVGIconLobby from '../SVG/SVGIconLobby';
 
+const urlLobby = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
+
 const BackToLobby = () => {
     const handleBackToLobby = () => {
         const changeMainGame = async () => {
             try {
                 await fetch('/auth/maingame/change?game=');
 
-                const origin = window.location.origin;
+                // const origin = window.location.origin;
 
                 const parent = window === window.parent ? window : window.parent;
                 if (parent.top?.opener) {
                     parent.close();
                 } else {
-                    parent.location.href = origin;
+                    parent.location.href = urlLobby;
                 }
             } catch (error) {
                 throw error;
