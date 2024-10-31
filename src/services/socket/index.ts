@@ -234,7 +234,14 @@ export class SocketComponent {
 
                     console.table({ dragon: data.dragon, tiger: data.tiger, wild: data.wild });
 
-                    callback(data);
+                    if (!data.submit) {
+                        callback(data);
+                        return;
+                    }
+
+                    setTimeout(() => {
+                        callback(data);
+                    }, 5000);
                 }
             });
             console.log(eventName);
