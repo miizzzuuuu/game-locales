@@ -90,9 +90,13 @@ export interface SendBetParam {
     transId: string;
 }
 
-export type PayoutItem = {
+export type PayoutChildren = {
     name: string;
     payout: number | string | null;
+};
+
+export type PayoutItem = PayoutChildren & {
+    items?: PayoutChildren[];
 };
 
 export type PayoutData = {
