@@ -13,8 +13,8 @@ export class Sound {
     private static _enablePlay = false;
     private static _isFocus = false;
 
-    private static _volumeMusic = 0.15;
-    private static _volumeSound = 1;
+    private static _volumeMusic = 0.05;
+    private static _volumeSound = 0.8;
 
     private static _enableSound = false;
 
@@ -135,7 +135,7 @@ export class Sound {
     }
 
     static set volumeMusic(value: number) {
-        const volume = (value / 100) * 0.15;
+        const volume = (value / 100) * 0.05;
 
         this.bgMusicAudio.volume = volume;
         this._volumeMusic = volume;
