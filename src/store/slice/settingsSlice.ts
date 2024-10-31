@@ -9,10 +9,10 @@ const initialState: Settings = {
     language: '',
     autoRebet: false,
     enableGameSound: false,
-    enableStreamingSound: false,
-    enableStreamingVideo: false,
+    enableStreamingSound: true,
+    enableStreamingVideo: true,
     streamingQuality: 'medium',
-    volumeStreamingSound: 0,
+    volumeStreamingSound: 100,
     volumeGameSound: 0,
 };
 
@@ -26,7 +26,7 @@ const playerSlice = createSlice({
                 // autoRebet,
                 enableGameSound,
                 enableStreamingSound,
-                // enableStreamingVideo,
+                enableStreamingVideo,
                 streamingQuality,
                 volumeStreamingSound,
                 volumeGameSound,
@@ -40,7 +40,7 @@ const playerSlice = createSlice({
 
             state.volumeStreamingSound = volumeStreamingSound;
             state.enableStreamingSound = enableStreamingSound;
-            // state.enableStreamingVideo = enableStreamingVideo;
+            state.enableStreamingVideo = enableStreamingVideo;
             state.streamingQuality = streamingQuality;
 
             state.volumeGameSound = volumeGameSound;

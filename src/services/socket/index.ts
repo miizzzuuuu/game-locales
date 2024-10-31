@@ -66,7 +66,7 @@ export class SocketComponent {
     onConnect(data: LobbyConnect) {
         if (this._socket) {
             this._socket.on(SocketComponent.SOCKET_EVENT.connect, () => {
-                SocketComponent.instance.emitLobbyConnect(data);
+                // SocketComponent.instance.emitLobbyConnect(data);
                 SocketComponent.instance.emitGameConnect({
                     user: data.user,
                     game: getGameCode(),
