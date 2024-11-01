@@ -39,6 +39,7 @@ const GAME_CODE: Record<string, string> = {
     m40: 'XD',
     m41: 'DMN',
     m42: 'GPX',
+    m46: 'CME',
 };
 
 const GAME_NAME: Record<string, string> = {
