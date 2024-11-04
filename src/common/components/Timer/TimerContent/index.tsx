@@ -53,7 +53,7 @@ const TimerContent = () => {
         if (remainingTime > 0) {
             requestRef.current = requestAnimationFrame(updateTimer);
         }
-    }, [getRemainingTime, timer, dispatch]);
+    }, [getRemainingTime, timer]);
 
     useEffect(() => {
         console.log(time);
@@ -83,7 +83,7 @@ const TimerContent = () => {
                 requestRef.current = undefined;
             }
         };
-    }, [time, timerIsClose, updateTimer]);
+    }, [time, timerIsClose, updateTimer, dispatch]);
 
     return (
         <div className={`${styles.timer}${time <= 0 ? ` ${styles.disappear}` : ''}`}>

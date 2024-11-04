@@ -8,7 +8,7 @@ module.exports = {
         'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
-        // 'plugin:react-hooks/recommended',
+        'plugin:react-hooks/recommended',
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],

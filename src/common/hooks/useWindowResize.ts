@@ -28,7 +28,7 @@ function useWindowResize<T extends Handler>(handler: T, delay = true) {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, [handler]);
+    }, [handler, delay]);
 }
 
 export { useWindowResize };

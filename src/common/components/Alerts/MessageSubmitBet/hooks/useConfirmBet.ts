@@ -47,7 +47,7 @@ function useConfirmBet() {
             });
             return;
         }
-    }, [confirmBetStatus, confirmBetError]);
+    }, [confirmBetStatus, confirmBetError, t]);
 
     const handleClose = () => {
         dispatch(resetConfirmBet());
