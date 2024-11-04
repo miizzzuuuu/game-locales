@@ -5,9 +5,9 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
         'plugin:@typescript-eslint/stylistic-type-checked',
-        'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended',
+        // 'plugin:react/recommended',
+        // 'plugin:react/jsx-runtime',
+        // 'plugin:react-hooks/recommended',
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -21,12 +21,25 @@ module.exports = {
 
     settings: {
         react: {
-            version: 'detect',
+            version: '18',
         },
     },
-    plugins: ['react-refresh'],
+    // plugins: ['react-refresh'],
     rules: {
-        'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-        '@typescript-eslint/consistent-type-definitions': ['off'],
+        // 'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+        '@typescript-eslint/consistent-type-definitions': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                args: 'all',
+                argsIgnorePattern: '^_',
+                caughtErrors: 'all',
+                caughtErrorsIgnorePattern: '^_',
+                destructuredArrayIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                ignoreRestSiblings: true,
+            },
+        ],
     },
 };

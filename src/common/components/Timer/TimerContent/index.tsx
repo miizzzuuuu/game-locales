@@ -38,7 +38,7 @@ const TimerContent = () => {
         }
 
         if (svgRef.current) {
-            const timeCircle = svgRef.current.querySelector('#timer-cirlce') as SVGCircleElement;
+            const timeCircle = svgRef.current.querySelector('#timer-cirlce')! as SVGCircleElement;
             if (timeCircle) {
                 timeCircle.style.setProperty(
                     '--color-effect',

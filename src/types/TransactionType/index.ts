@@ -64,7 +64,7 @@ export type BaseTransaction = {
 };
 
 type DefaultDetailResult = {
-    detail_result: {} | [];
+    detail_result: object | [];
 };
 
 export type Transaction<PCode extends string> = PCode extends Pcode24D

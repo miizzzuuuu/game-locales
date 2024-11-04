@@ -20,7 +20,7 @@ const BetNumber = ({ button }: IProps) => {
                 {Number(button)}
             </span>
 
-            <span className={styles.payout}>1:{formatNumber(PAYOUT['n'], i18n.language)}</span>
+            <span className={styles.payout}>1:{formatNumber(PAYOUT.n, i18n.language)}</span>
         </div>
     );
 };

@@ -128,7 +128,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 const pcode = request.params.pcode;
 
                 const page = Number(request.params.page);
-                const per_page = Number(request.params['per_page']);
+                const per_page = Number(request.params.per_page);
 
                 const total_datas = 100;
                 const total_page = Math.ceil(total_datas / per_page);

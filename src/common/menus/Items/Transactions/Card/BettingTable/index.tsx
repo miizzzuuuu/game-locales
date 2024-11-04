@@ -68,7 +68,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                         <td className={`${styles.shading}`}>&nbsp;</td>
                         <td>
                             <div
-                                className={`${styles['text-center']} ${styles['bigger']}`}
+                                className={`${styles['text-center']} ${styles.bigger}`}
                                 style={{
                                     color: total_credit >= 0 ? '#3be800' : '#ff2667',
                                 }}

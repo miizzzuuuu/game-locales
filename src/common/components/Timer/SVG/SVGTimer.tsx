@@ -1,7 +1,7 @@
 import { CSSProperties, forwardRef } from 'react';
 import { lengthStroke } from '../TimerContent';
 
-const SVGTimer = forwardRef<SVGSVGElement, {}>((_, ref) => {
+const SVGTimer = forwardRef<SVGSVGElement, unknown>((_, ref) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
