@@ -39,17 +39,15 @@ const TimerContent = () => {
 
         if (svgRef.current) {
             const timeCircle = svgRef.current.querySelector('#timer-cirlce')! as SVGCircleElement;
-            if (timeCircle) {
-                timeCircle.style.setProperty(
-                    '--color-effect',
-                    timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
-                );
-                timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
-                timeCircle.setAttribute(
-                    'stroke-dashoffset',
-                    `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
-                );
-            }
+            timeCircle.style.setProperty(
+                '--color-effect',
+                timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
+            );
+            timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
+            timeCircle.setAttribute(
+                'stroke-dashoffset',
+                `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
+            );
         }
 
         if (remainingTime > 0) {

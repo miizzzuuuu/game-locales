@@ -59,7 +59,7 @@ export function makeServer({ environment = 'test' } = {}) {
             this.get(ENDPOINTS.playerLastbets + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                let lastbet: { periode: number; data: any[] } | { message: string } | undefined =
+                const lastbet: { periode: number; data: any[] } | { message: string } | undefined =
                     lastbets[pcode];
 
                 if (!lastbet) {
@@ -94,7 +94,7 @@ export function makeServer({ environment = 'test' } = {}) {
             this.get(ENDPOINTS.games + '/:pcode/payout', (_, request) => {
                 const pcode = request.params.pcode;
 
-                let payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
+                const payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
 
                 if (!payout) {
                     return new Response(400, {}, { message: 'Payout Empty' });
