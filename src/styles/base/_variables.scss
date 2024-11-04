@@ -78,3 +78,16 @@
     --border-total-bet-bg-1: rgba(255, 255, 255, 0);
     --border-total-bet-bg-2: rgba(255, 255, 255, 0.3);
 }
+
+.app {
+    &.mobile-portrait {
+        --height-footer: 4rem;
+        --width-total-bet: 12rem;
+    }
+
+    &.desktop,
+    &.mobile-landscape {
+        --height-footer: 4rem;
+        --width-total-bet: 13.5rem;
+    }
+}

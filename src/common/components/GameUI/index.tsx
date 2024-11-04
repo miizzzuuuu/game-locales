@@ -1,5 +1,6 @@
 import MainArea from '../../../game/components/MainArea';
 import LayoutV1 from '../../layouts/v1';
+import LayoutV1_2 from '../../layouts/v1.2';
 import LayoutV2 from '../../layouts/v2';
 import LayoutV3 from '../../layouts/v3';
 import { Features } from '../../utils/Features';
@@ -12,7 +13,9 @@ const Layout =
           ? LayoutV2
           : layoutVersion === 3
             ? LayoutV3
-            : null;
+            : layoutVersion === 1.2
+              ? LayoutV1_2
+              : null;
 
 const GameUI = () => {
     if (!Layout) {

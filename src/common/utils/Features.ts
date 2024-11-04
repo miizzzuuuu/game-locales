@@ -1,5 +1,5 @@
 export type FeaturesType = {
-    LAYOUT_VERSION: 1 | 2 | 3;
+    LAYOUT_VERSION: 1 | 2 | 3 | 1.2;
     BUTTON_PATTERN: boolean;
     MINI_HOW_TO_PLAY: boolean;
     SHUFFLE_THE_CARDS: boolean;
@@ -9,7 +9,7 @@ export type FeaturesType = {
 };
 
 export const Features: FeaturesType = {
-    LAYOUT_VERSION: 1,
+    LAYOUT_VERSION: 1.2,
     BUTTON_PATTERN: false,
     MINI_HOW_TO_PLAY: true,
     SHUFFLE_THE_CARDS: false,

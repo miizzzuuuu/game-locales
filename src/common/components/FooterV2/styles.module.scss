@@ -1,0 +1,20 @@
+.footer {
+    flex-shrink: 0;
+    height: var(--height-footer);
+    background: var(--bg-footer);
+
+    display: flex;
+}
+
+:global(.mobile-portrait) {
+    .footer {
+        justify-content: space-between;
+    }
+}
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .footer {
+        gap: var(--width-total-bet);
+    }
+}

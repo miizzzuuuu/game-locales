@@ -7,17 +7,6 @@
     // height: 100%;
 
     background-color: var(--base);
-
-    &.mobile-portrait {
-        --height-footer: 4rem;
-        --width-total-bet: 12rem;
-    }
-
-    &.desktop,
-    &.mobile-landscape {
-        --height-footer: 4rem;
-        --width-total-bet: 13.5rem;
-    }
 }
 
 .ios {
