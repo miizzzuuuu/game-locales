@@ -25,9 +25,9 @@ module.exports = {
             version: '18',
         },
     },
-    // plugins: ['react-refresh'],
+    plugins: ['react-refresh'],
     rules: {
-        // 'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+        'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
         '@typescript-eslint/consistent-type-definitions': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-unused-vars': [
