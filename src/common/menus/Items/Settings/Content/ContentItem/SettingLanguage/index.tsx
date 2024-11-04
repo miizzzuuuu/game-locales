@@ -1,11 +1,10 @@
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import { selectLanguage, updateSetings } from '../../../../../../../store/slice/settingsSlice';
-import { Dropdown } from '../../../Dropdown';
-import { langMap } from '../../../../../../utils/LangHelper';
 import LabelTranslate from '../../../../../../components/LabelTranslate';
-import SVGIconLanguage from '../../../SVG/SVGIconLanguage';
-
+import { langMap } from '../../../../../../utils/LangHelper';
+import Dropdown from '../../../Dropdown';
 import styles from '../../../Item/styles.module.scss';
+import SVGIconLanguage from '../../../SVG/SVGIconLanguage';
 
 const SettingLanguage = () => {
     const dispatch = useAppDispatch();

@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-
-import styles from './styles.module.scss';
 import Button from '../../../../components/Button';
-import { langLogo, langName } from '../../../../utils/LangHelper';
 import { SVGIconChevronDown } from '../../../../components/SVG/SVGIconChevronDown';
+import { langLogo, langName } from '../../../../utils/LangHelper';
+import styles from './styles.module.scss';
 
 interface DropdownProps {
     initialValue?: string;
@@ -12,7 +11,7 @@ interface DropdownProps {
     style?: React.CSSProperties;
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onChange, style }) => {
+const Dropdown = ({ initialValue, options, onChange, style }: DropdownProps) => {
     const [selectedValue, setSelectedValue] = useState(initialValue);
     const [isOpen, setOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -131,3 +130,5 @@ export const Dropdown: React.FC<DropdownProps> = ({ initialValue, options, onCha
         </div>
     );
 };
+
+export default Dropdown;

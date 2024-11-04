@@ -36,4 +36,6 @@ const SVGTimer = forwardRef<SVGSVGElement, unknown>((_, ref) => {
     );
 });
 
+SVGTimer.displayName = 'SVGTimer';
+
 export default SVGTimer;
