@@ -1,31 +1,30 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { selectFocus, setFocus } from '../../store/slice/windowSlice';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
-function useFocus() {
-    const dispatch = useAppDispatch();
+function useFocus(): boolean {
+    const getFocus = useCallback(() => {
+        return document.visibilityState === 'visible';
+    }, []);
 
-    const isFocus = useAppSelector(selectFocus);
+    const [isFocused, setIsFocused] = useState<boolean>(getFocus);
+    const focusRef = useRef<boolean>(isFocused);
 
     useEffect(() => {
-        const handleVisibilityChange = () => {
-            if (document.visibilityState === 'visible') {
-                console.log('focus');
-                dispatch(setFocus(true));
-            } else {
-                console.log('not focus');
-                dispatch(setFocus(false));
+        const handleFocusChange = () => {
+            const newFocus = getFocus();
+            if (focusRef.current !== newFocus) {
+                focusRef.current = newFocus;
+                setIsFocused(newFocus);
             }
         };
 
-        document.addEventListener('visibilitychange', handleVisibilityChange, false);
+        document.addEventListener('visibilitychange', handleFocusChange);
 
         return () => {
-            document.removeEventListener('visibilitychange', handleVisibilityChange);
+            document.removeEventListener('visibilitychange', handleFocusChange);
         };
-    }, [dispatch]);
+    }, [getFocus]);
 
-    return { isFocus };
+    return isFocused;
 }
 
 export { useFocus };

@@ -7,7 +7,6 @@ import { useFetchGame } from './common/hooks/useFetchGame';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
 import { useFetchTimer } from './common/hooks/useFetchTimer';
-import { useFocus } from './common/hooks/useFocus';
 import { useFullscreen } from './common/hooks/useFullscreen';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useWindowResize } from './common/hooks/useWindowResize';
@@ -50,7 +49,6 @@ function App() {
         dispatch(setOrientation(orientation));
     }, [orientation, dispatch]);
 
-    useFocus();
     useSettingSound();
     useFullscreen();
 

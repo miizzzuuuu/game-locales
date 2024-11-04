@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
-import { useAppSelector } from '../../store/hooks';
 import { Sound } from '../../services/sound';
-import { selectFocus } from '../../store/slice/windowSlice';
+import { useFocus } from './useFocus';
 
 function useSettingSound() {
-    const isFocus = useAppSelector(selectFocus);
+    const isFocus = useFocus();
 
-    // start sound setting
     useEffect(() => {
         const handleEnableSound = () => {
             Sound.enablePlay = true;
@@ -22,13 +20,14 @@ function useSettingSound() {
     }, []);
 
     useEffect(() => {
+        console.log('is focus', isFocus);
+
         if (isFocus) {
             Sound.isFocus = true;
         } else {
             Sound.isFocus = false;
         }
     }, [isFocus]);
-    // end sound setting
 }
 
 export { useSettingSound };
