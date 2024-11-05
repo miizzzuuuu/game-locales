@@ -7,6 +7,10 @@ import PanelLeft from '../v1/PanelLeft';
 import PanelRight from '../v1/PanelRight';
 import PanelTop from '../v1/PanelTop';
 import styles from './styles.module.scss';
+import Footer from '../../components/Footer';
+import InfoLimitBet from '../../components/InfoLimitBet';
+
+const enableNew = true;
 
 const LayoutV1_2 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -45,7 +49,8 @@ const LayoutV1_2 = ({ children }: PropsWithChildren) => {
                 </div>
             )}
 
-            <FooterV2 />
+            <InfoLimitBet />
+            {device === 'mobile-portrait' && !enableNew ? <Footer /> : <FooterV2 />}
         </div>
     );
 };

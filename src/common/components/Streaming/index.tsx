@@ -4,7 +4,7 @@ import Video from '../Video';
 import { useGetStreamingSize } from './hooks/useGetStreamingSize';
 import styles from './styles.module.scss';
 
-const streamingClasses = `${styles.streaming} ${Features.STREAMING_LANDSCAPE_LETTER_BOX ? styles['letter-box'] : styles['non-letter-box']}`;
+const streamingClasses = `${styles.streaming} ${Features.STREAMING_LANDSCAPE_LETTER_BOX ? styles['letter-box'] : styles['non-letter-box']}${Features.LAYOUT_VERSION === 1.2 ? ` ${styles.full}` : ''}`;
 
 const Streaming = () => {
     const orientation = getOrientation();

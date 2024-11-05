@@ -71,6 +71,12 @@
         }
     }
 
+    .full {
+        .video-container {
+            height: 100%;
+        }
+    }
+
     .left,
     .right {
         flex: 1;
@@ -146,6 +152,12 @@
             position: absolute;
             inset: 0;
             background: var(--streaming-color-6);
+        }
+    }
+
+    .full {
+        .video-background {
+            height: 0;
         }
     }
 }

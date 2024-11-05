@@ -44,3 +44,10 @@
         padding-top: calc(var(--height-streaming) * 1px);
     }
 }
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .main {
+        height: calc(100% + var(--height-footer));
+    }
+}

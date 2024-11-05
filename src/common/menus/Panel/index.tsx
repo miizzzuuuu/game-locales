@@ -28,8 +28,6 @@ const Panel = ({
     handleClose,
     handleBack,
 }: IProps) => {
-    const layoutVersion = Features.LAYOUT_VERSION;
-
     const [hiddenUI, setVisibleUI] = useState(true);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
@@ -50,7 +48,7 @@ const Panel = ({
 
     return (
         <div
-            className={`${styles['menu-content']} ${styles[`layout-${layoutVersion}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
+            className={`${styles['menu-content']} ${styles[`layout-${Features.LAYOUT_VERSION.toFixed()}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >
