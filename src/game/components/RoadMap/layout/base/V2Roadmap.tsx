@@ -387,6 +387,8 @@ export class BaseV2Roadmap extends React.Component<Props> {
         if (this.firstDisplayedCol! > master![lengths.indexOf(Math.max(...lengths))].length)
             this.firstDisplayedCol! =
                 master![lengths.indexOf(Math.max(...lengths))].length - this.totalColumns!;
+        if (this.firstDisplayedCol! < 0) this.firstDisplayedCol = 0;
+
         if (this.firstDisplayedCol == master![lengths.indexOf(Math.max(...lengths))].length)
             this.firstDisplayedCol = 0;
 
