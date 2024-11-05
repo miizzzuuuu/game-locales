@@ -381,7 +381,17 @@ export class BaseV2Roadmap extends React.Component<Props> {
             />
         );
 
-        // const maxIdxRow = maxRow - 1;
+        const master = this.roadmapDisplay!.map((a) => a.filter((a) => a !== null));
+        const lengths = master.map((a) => a.length);
+
+        if (this.firstDisplayedCol! > master![lengths.indexOf(Math.max(...lengths))].length)
+            this.firstDisplayedCol! =
+                master![lengths.indexOf(Math.max(...lengths))].length - this.totalColumns!;
+        if (this.firstDisplayedCol! < 0) this.firstDisplayedCol = 0;
+
+        if (this.firstDisplayedCol == master![lengths.indexOf(Math.max(...lengths))].length)
+            this.firstDisplayedCol = 0;
+
         return nary(maxRow + 1).map((row, rowIdx) => (
             <Fragment key={`brd_${row}-${rowIdx}`}>
                 {hitArea}
