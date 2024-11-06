@@ -47,6 +47,10 @@
 
 :global(.desktop),
 :global(.mobile-landscape) {
+    .main-wrapper {
+        position: relative;
+    }
+
     .main {
         height: calc(100% + var(--height-footer));
     }
