@@ -11,6 +11,7 @@ import Footer from '../../components/Footer';
 import InfoLimitBet from '../../components/InfoLimitBet';
 
 const enableNew = true;
+const enableInfoBet = true;
 
 const LayoutV1_2 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -49,7 +50,7 @@ const LayoutV1_2 = ({ children }: PropsWithChildren) => {
                 </div>
             )}
 
-            <InfoLimitBet />
+            {enableInfoBet && <InfoLimitBet />}
             {device === 'mobile-portrait' && !enableNew ? <Footer /> : <FooterV2 />}
         </div>
     );
