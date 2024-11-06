@@ -4,6 +4,7 @@ import {
     Pcode12DThunder,
     Pcode24D,
     Pcode24DJackpot,
+    Pcode24DSpin,
     Pcode48D,
     PcodeBaccarat,
     PcodeCeme,
@@ -12,6 +13,7 @@ import {
     PcodeDomino,
     PcodeDragonTiger,
     PcodeDragonTigerWild,
+    PcodeOglok,
     PcodePokerDice,
     PcodeRedWhite,
     PcodeRoulette,
@@ -59,6 +61,14 @@ export const is12DThunder = (item: Transaction<string>): item is Transaction<Pco
 
 export const isSicboDice = (item: Transaction<string>): item is Transaction<PcodeSicboDice> => {
     return item.pcode.startsWith('p12');
+};
+
+export const is24DSpin = (item: Transaction<string>): item is Transaction<Pcode24DSpin> => {
+    return item.pcode.startsWith('m6');
+};
+
+export const isOglok = (item: Transaction<string>): item is Transaction<PcodeOglok> => {
+    return item.pcode.startsWith('m7');
 };
 
 export const isDice6 = (item: Transaction<string>): item is Transaction<PcodeDice6> => {

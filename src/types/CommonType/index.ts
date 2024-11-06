@@ -50,6 +50,20 @@ export type Pcode24DSpin =
     | 'm6j'
     | 'm6k';
 
+// pcode Oglok
+export type PcodeOglok =
+    | 'm7'
+    | 'm7b'
+    | 'm7c'
+    | 'm7d'
+    | 'm7e'
+    | 'm7f'
+    | 'm7g'
+    | 'm7h'
+    | 'm7i'
+    | 'm7j'
+    | 'm7k';
+
 // pcode Dice 6
 export type PcodeDice6 =
     | 'm8'

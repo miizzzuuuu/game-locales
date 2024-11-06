@@ -1,0 +1,157 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-11-06T09:35:14.000Z",
+            "periode": "3322524",
+            "pcode": "m7",
+            "detail_betting": [
+                {
+                    "tebak": "Shrimp,Chicken,Jug,Coin",
+                    "type": "e",
+                    "taruhan": 1000,
+                    "prize": 8,
+                    "win_amount": 8000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Jug",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 2000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Fish,Fish,Fish",
+                    "type": "t",
+                    "taruhan": 1000,
+                    "prize": 181,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Crab,Crab",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 9,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Fish",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Crab",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 2,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Jug,Coin",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Anytriple",
+                    "type": "triple",
+                    "taruhan": 1000,
+                    "prize": 31,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Chicken,Coin,Crab,Fish",
+                    "type": "e",
+                    "taruhan": 1000,
+                    "prize": 8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2165628,
+                "tanggal": "2024-11-06T09:36:28.000Z",
+                "periode": 3322524,
+                "hitung": "1",
+                "gamekey": "2165382",
+                "angka": "2,3,1"
+            },
+            "total_debit": 9000,
+            "total_credit": 10000,
+            "total_transaction": 1000
+        },
+        {
+            "tglbel": "2024-11-06T09:32:05.000Z",
+            "periode": "3322522",
+            "pcode": "m7",
+            "detail_betting": [
+                {
+                    "tebak": "Chicken,Crab",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Chicken,Coin",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Chicken,Jug",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Chicken,Coin,Crab,Fish",
+                    "type": "e",
+                    "taruhan": 5000,
+                    "prize": 8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Shrimp,Shrimp",
+                    "type": "d",
+                    "taruhan": 5000,
+                    "prize": 9,
+                    "win_amount": 45000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2165626,
+                "tanggal": "2024-11-06T09:33:13.000Z",
+                "periode": 3322522,
+                "hitung": "1",
+                "gamekey": "2165380",
+                "angka": "6,1,1"
+            },
+            "total_debit": 25000,
+            "total_credit": 45000,
+            "total_transaction": 20000
+        }
+    ],
+    "pagination": {
+        "total_datas": 11,
+        "current_page": 1,
+        "total_pages": 2
+    }
+}
