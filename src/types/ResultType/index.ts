@@ -83,6 +83,11 @@ export type ResultM14 = CommonResult & {
     angka3: string; // '5 of a Kind';
 };
 
+export type ResultM19 = CommonResult & {
+    angkawin: string; // 'gunting,kelingking';
+    angka: string; // 'kertas,jempol';
+};
+
 export type ResultM22 = CommonResult & {
     result: 'banker' | 'player' | 'tie';
     value: number | string;

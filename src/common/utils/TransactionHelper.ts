@@ -19,6 +19,7 @@ import {
     PcodeRoulette,
     PcodeShioFight,
     PcodeSicboDice,
+    PcodeSuwit,
     Transaction,
 } from '../../types';
 
@@ -85,6 +86,10 @@ export const isRedWhite = (item: Transaction<string>): item is Transaction<Pcode
 
 export const isPokerDice = (item: Transaction<string>): item is Transaction<PcodePokerDice> => {
     return item.pcode.startsWith('m14');
+};
+
+export const isSuwit = (item: Transaction<string>): item is Transaction<PcodeSuwit> => {
+    return item.pcode.startsWith('m19');
 };
 
 export const isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {

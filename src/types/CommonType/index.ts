@@ -106,6 +106,20 @@ export type PcodePokerDice =
     | 'm14j'
     | 'm14k';
 
+// pcode Suwit
+export type PcodeSuwit =
+    | 'm19'
+    | 'm19b'
+    | 'm19c'
+    | 'm19d'
+    | 'm19e'
+    | 'm19f'
+    | 'm19g'
+    | 'm19h'
+    | 'm19i'
+    | 'm19j'
+    | 'm19k';
+
 // pcode Baccarat
 export type PcodeBaccarat =
     | 'm22'
