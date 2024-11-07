@@ -24,6 +24,8 @@ function useConfirmBet() {
     const confirmBetError = useAppSelector(selectConfirmBetError);
 
     useEffect(() => {
+        console.log('confirmBetStatus', confirmBetStatus);
+
         if (confirmBetStatus === 'pending') {
             setMessage({
                 value: 'SUBMITING...',
@@ -47,7 +49,7 @@ function useConfirmBet() {
             });
             return;
         }
-    }, [confirmBetStatus, confirmBetError, t]);
+    }, [confirmBetStatus, confirmBetError]);
 
     const handleClose = () => {
         dispatch(resetConfirmBet());
