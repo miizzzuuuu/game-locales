@@ -170,7 +170,11 @@ export const hideMiniHowToPlayLocalStorage = () => {
     localStorage.setItem(getKeyMiniHowToPlay(), 'false');
 };
 
-export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
+// export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
+export const getVariant = () => {
+    const match = _pcode.match(/[^0-9]$/);
+    return match ? match[0] : '';
+};
 
 export const getEventNewSet = () => {
     let baseNewSet = '';
