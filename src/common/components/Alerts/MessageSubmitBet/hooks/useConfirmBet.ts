@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import { useAppTranslate } from '../../../../../services/i18next/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import {
     resetConfirmBet,
     selectConfirmBetError,

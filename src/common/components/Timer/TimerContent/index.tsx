@@ -58,7 +58,7 @@ const TimerContent = () => {
     useEffect(() => {
         console.log(time);
 
-        let timeOutTime: number | undefined;
+        let timeOutTime: ReturnType<typeof setTimeout> | undefined;
 
         if (time > 0) {
             targetTime.current = new Date().getTime() + time * 1000;
