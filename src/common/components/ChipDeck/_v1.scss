@@ -43,7 +43,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .v1 {
         &.chip-deck {
@@ -76,6 +75,41 @@
                 // height: 13.8rem;
 
                 border-radius: var(--button-action-size);
+                background-color: var(--overlay-1);
+                backdrop-filter: blur(0.6rem);
+            }
+        }
+    }
+}
+
+:global(.desktop) {
+    .v1 {
+        &.chip-deck {
+            --size-chip: 4.3rem;
+            --gap: 0.8rem;
+            --offset: 0.5rem;
+
+            position: relative;
+
+            .wrapper {
+                display: flex;
+                align-items: center;
+                gap: var(--gap);
+
+                padding-left: var(--offset);
+                padding-right: var(--offset);
+
+                outline: 0.1rem solid rgba(255, 255, 255, 0.16);
+            }
+
+            .wrapper {
+                height: 5.3rem;
+
+                overflow: auto;
+
+                width: calc((var(--size-chip) * 10) + (var(--gap) * 9) + (var(--offset) * 2));
+
+                border-radius: 5.3rem;
                 background-color: var(--overlay-1);
                 backdrop-filter: blur(0.6rem);
             }

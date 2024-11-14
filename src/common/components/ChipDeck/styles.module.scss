@@ -19,13 +19,13 @@
 @import './v1';
 @import './v2';
 
+:global(.desktop),
 :global(.mobile-portrait) {
     .disapear {
         opacity: 0.2;
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .disapear {
         opacity: 0;

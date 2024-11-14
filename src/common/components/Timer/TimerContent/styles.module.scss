@@ -1,9 +1,6 @@
 .timer {
     position: absolute;
 
-    width: 5.5rem;
-    height: 5.5rem;
-
     overflow: visible;
 }
 
@@ -26,10 +23,6 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: -0.1rem;
 }
 
 :global(.mobile-portrait) {
@@ -41,12 +34,42 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .timer {
         top: var(--timer-landscape-top);
         left: var(--timer-landscape-left);
 
         translate: var(--timer-landscape-trans-x) var(--timer-landscape-trans-y);
+    }
+}
+
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .timer {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .text {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.1rem;
+    }
+}
+
+:global(.desktop) {
+    .timer {
+        width: 9.6rem;
+        height: 9.6rem;
+
+        left: 50%;
+        top: var(--timer-desktop-top);
+        translate: -50% 0;
+    }
+
+    .text {
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: -0.14rem;
     }
 }

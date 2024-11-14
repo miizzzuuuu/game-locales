@@ -3,7 +3,7 @@ import { Sound } from '../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectActiveChip, selectChipBase, setActiveChip } from '../../../store/slice/chipSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { selectOrientation } from '../../../store/slice/windowSlice';
+import { selectDevice } from '../../../store/slice/windowSlice';
 import { useDragToScroll } from '../../hooks/useDragToScroll';
 import { getChipColorByIndex } from '../../utils/ChipHelper';
 import Chip from './Chip';
@@ -24,7 +24,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
     const chipBase = useAppSelector(selectChipBase);
     const activeChip = useAppSelector(selectActiveChip);
 
-    const orientation = useAppSelector(selectOrientation);
+    const device = useAppSelector(selectDevice);
 
     const scrollToCenter = useCallback(
         (index: number) => {
@@ -37,8 +37,8 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
             const circleClickedRect = circleClicked.getBoundingClientRect();
 
             if (
-                (orientation === 'landscape' && version === 1) ||
-                (orientation === 'portrait' && version === 2)
+                (device === 'mobile-landscape' && version === 1) ||
+                (device === 'mobile-portrait' && version === 2)
             ) {
                 const containerCenter = containerRect.top + containerRect.height / 2;
                 const circleCenter = circleClickedRect.top + circleClickedRect.height / 2;
@@ -49,8 +49,8 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                     behavior: 'smooth',
                 });
             } else if (
-                (orientation === 'portrait' && version === 1) ||
-                (orientation === 'landscape' && version === 2)
+                (device === 'mobile-portrait' && version === 1) ||
+                (device === 'mobile-landscape' && version === 2)
             ) {
                 const containerCenter = containerRect.left + containerRect.width / 2;
                 const circleCenter = circleClickedRect.left + circleClickedRect.width / 2;
@@ -62,7 +62,7 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
                 });
             }
         },
-        [orientation, version],
+        [device, version],
     );
 
     useEffect(() => {
@@ -70,7 +70,10 @@ const ChipDeck = ({ version = 1, show = true }: IProps) => {
         scrollToCenter(index);
     }, [activeChip, chipBase, scrollToCenter]);
 
-    useDragToScroll({ slider, direction: version === 1 ? 'vertical' : 'horizontal' });
+    useDragToScroll({
+        slider,
+        direction: device === 'desktop' ? 'horizontal' : version === 1 ? 'vertical' : 'horizontal',
+    });
 
     return (
         <div

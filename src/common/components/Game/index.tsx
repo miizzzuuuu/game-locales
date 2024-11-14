@@ -8,6 +8,7 @@ import { selectNickname, selectOperatorId } from '../../../store/slice/playerSli
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
+import { selectDevice } from '../../../store/slice/windowSlice';
 import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
@@ -18,8 +19,8 @@ import GameUI from '../GameUI';
 import Streaming from '../Streaming';
 import Timer from '../Timer';
 import TopWinner from '../TopWinner';
-import styles from './styles.module.scss';
 import Version from '../Version';
+import styles from './styles.module.scss';
 
 const Menu = lazy(() => import('../../menus/Menu'));
 
@@ -28,6 +29,7 @@ function Game() {
 
     const dispatch = useAppDispatch();
 
+    const device = useAppSelector(selectDevice);
     const nickname = useAppSelector(selectNickname);
     const operatorId = useAppSelector(selectOperatorId);
     const time = useAppSelector(selectTime);
@@ -94,6 +96,9 @@ function Game() {
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
+    if (device === 'desktop') {
+    }
+
     return (
         <div
             className={`${styles['game-area']}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
@@ -101,11 +106,16 @@ function Game() {
             <Streaming />
             <Version />
             <Timer />
+
             <GameUI />
 
-            {winnerData.length > 0 && <TopWinner />}
+            {device === 'desktop' ? null : (
+                <>
+                    {winnerData.length > 0 && <TopWinner />}
 
-            <AlertUI />
+                    <AlertUI />
+                </>
+            )}
 
             <Suspense>
                 <Menu />

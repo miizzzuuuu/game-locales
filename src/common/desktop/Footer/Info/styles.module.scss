@@ -1,0 +1,30 @@
+.wrapper {
+    height: 100%;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.top {
+    color: #ddd;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.bottom {
+    font-size: 1.6rem;
+    font-weight: 800;
+    // letter-spacing: -0.18px;
+}
+
+.total-bet {
+    .top {
+        text-transform: capitalize;
+    }
+
+    .bottom {
+        color: #00c3d8;
+    }
+}

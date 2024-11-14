@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Button from '../../../components/Button';
 import SVGIconLeft from '../SVG/SVGIconLeft';
-import SVGIconX from '../SVG/SVGIconX';
+import SVGIconX from '../../../components/SVG/SVGIconX';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -23,7 +23,7 @@ const Header = ({ title, handleClose, handleBack }: IProps) => {
             )}
 
             <Button className={`${styles.action} ${styles.right}`} onClick={handleClose}>
-                <SVGIconX />
+                <SVGIconX color="#6B6C80" />
             </Button>
         </div>
     );

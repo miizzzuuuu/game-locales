@@ -83,3 +83,9 @@
         }
     }
 }
+
+:global(.desktop) {
+    .menu-content {
+        width: 50rem;
+    }
+}

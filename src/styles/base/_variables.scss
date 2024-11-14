@@ -28,12 +28,7 @@
     // landscape, kanan
     --streaming-color-5: linear-gradient(to left, var(--streaming-background) 0%, transparent 100%);
     // landscape, bawah
-    --streaming-color-6: linear-gradient(
-        0deg,
-        var(--streaming-background) 0%,
-        var(--streaming-background) 4rem,
-        transparent 100%
-    );
+    --streaming-color-6: linear-gradient(0deg, var(--streaming-background) 0%, transparent 100%);
 
     --streaming-color-7: linear-gradient(to left, var(--streaming-background) 0%, #0e0901 14rem);
     --streaming-color-8: linear-gradient(to right, var(--streaming-background) 0%, #0e0901 14rem);
@@ -52,6 +47,8 @@
     --timer-landscape-trans-x: 0;
     --timer-landscape-trans-y: 0;
 
+    --timer-desktop-top: 52rem;
+
     // layer
     --layer-streaming: 1;
     --layer-timer: 2;
@@ -68,8 +65,6 @@
         #2c2d3f 0.5rem
     );
 
-    --button-action-size: 3.8rem;
-
     --overlay-1: rgba(0, 0, 0, 0.3);
 
     --background-total-bet-bg-1: rgba(255, 255, 255, 0); // rgba(0, 0, 0, 0.1);
@@ -85,11 +80,17 @@
     &.mobile-portrait {
         --height-footer: 4rem;
         --width-total-bet: 12rem;
+        --button-action-size: 3.8rem;
     }
 
-    &.desktop,
     &.mobile-landscape {
         --height-footer: 4rem;
         --width-total-bet: 13.5rem;
+        --button-action-size: 3.8rem;
+    }
+
+    &.desktop {
+        --height-footer: 9rem;
+        --button-action-size: 4rem;
     }
 }

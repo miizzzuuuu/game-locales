@@ -9,13 +9,19 @@
 
 :global(.mobile-portrait) {
     .footer {
+        position: relative;
         justify-content: space-between;
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .footer {
-        gap: var(--width-total-bet);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        justify-content: space-between;
+
+        z-index: 1;
     }
 }

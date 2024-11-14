@@ -53,7 +53,6 @@
 }
 
 .value {
-    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: -0.02rem;
 }
@@ -63,11 +62,18 @@
         flex-shrink: 0;
         width: calc((36rem - var(--width-total-bet)) * 50 / 100 + 1.25rem);
     }
+
+    .value {
+        font-size: 1rem;
+    }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .user-info {
-        flex: 1;
+        flex-shrink: 0;
+    }
+
+    .value {
+        font-size: 1rem;
     }
 }
