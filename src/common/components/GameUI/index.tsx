@@ -1,4 +1,5 @@
 import MainArea from '../../../game/components/MainArea';
+import MainAreaDesktop from '../../../game/components/MainAreaDesktop';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import GameDesktop from '../../desktop/GameDesktop';
@@ -24,7 +25,11 @@ const GameUI = () => {
     const device = useAppSelector(selectDevice);
 
     if (device === 'desktop') {
-        return <GameDesktop />;
+        return (
+            <GameDesktop>
+                <MainAreaDesktop />
+            </GameDesktop>
+        );
     }
 
     if (!Layout) {

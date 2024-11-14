@@ -61,7 +61,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .table-bet {
         --perspective: 100rem;
@@ -79,7 +78,6 @@
         --rotate-x-close: 46deg;
 
         height: 100%;
-        padding-top: 2rem;
 
         grid-template-columns: repeat(9, minmax(0px, 1fr));
         grid-template-rows: repeat(6, minmax(0px, 1fr));
@@ -112,6 +110,51 @@
             --scale: 0.5;
             --opacity: 0.5;
             --rotate-x: 46deg;
+
+            &.win-state {
+                --opacity: 1;
+            }
+        }
+    }
+
+    .container-multi-cols {
+        grid-column: 2 / span 6;
+        grid-row: 6;
+    }
+}
+
+:global(.desktop) {
+    .table-bet {
+        --perspective: 100rem;
+
+        --translate-x: 0;
+        --translate-y: 2rem;
+        --scale: 1;
+        --opacity: 1;
+        --rotate-x: 0;
+
+        height: 100%;
+
+        grid-template-columns: repeat(9, minmax(0px, 1fr));
+        grid-template-rows: repeat(6, minmax(0px, 1fr));
+
+        transform: scale(var(--scale)) perspective(var(--perspective)) rotateX(var(--rotate-x));
+        opacity: var(--opacity);
+        transform-origin: bottom;
+        transition:
+            transform 0.75s,
+            opacity 0.75s;
+
+        &.opened {
+            --scale: 1;
+            --opacity: 1;
+            --rotate-x: 0;
+        }
+
+        &.closed {
+            --scale: 1;
+            --opacity: 0.5;
+            --rotate-x: 36deg;
 
             &.win-state {
                 --opacity: 1;

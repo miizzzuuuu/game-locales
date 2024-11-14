@@ -109,13 +109,9 @@ function Game() {
 
             <GameUI />
 
-            {device === 'desktop' ? null : (
-                <>
-                    {winnerData.length > 0 && <TopWinner />}
+            {device === 'desktop' ? null : <>{winnerData.length > 0 && <TopWinner />}</>}
 
-                    <AlertUI />
-                </>
-            )}
+            <AlertUI />
 
             <Suspense>
                 <Menu />

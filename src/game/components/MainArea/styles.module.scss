@@ -32,6 +32,7 @@
 :global(.mobile-landscape) {
     .main-area {
         padding-bottom: 0.8rem;
+        padding-top: 2rem;
 
         flex-direction: column-reverse;
         gap: 2rem;
