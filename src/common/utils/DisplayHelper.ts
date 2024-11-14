@@ -107,7 +107,7 @@ const getDevice = (): { type: DeviceType; orientation: Orientation } => {
     const platform = getPlatform();
     const orientation = getOrientation();
 
-    if (platform === 'desktop') {
+    if (platform === 'desktop' || platform === 'tablet') {
         return { type: 'desktop', orientation: 'landscape' };
     }
 
