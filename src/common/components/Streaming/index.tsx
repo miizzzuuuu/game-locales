@@ -39,6 +39,7 @@ const Streaming = () => {
             {device === 'desktop' && (
                 <div className={styles['video-container']}>
                     <Video />
+                    <div className={styles['top-gradient']}></div>
                 </div>
             )}
 
