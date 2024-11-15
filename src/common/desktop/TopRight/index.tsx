@@ -1,3 +1,4 @@
+import ButtonFullscreen from '../ButtonFullscreen';
 import ButtonHTP from '../ButtonHTP';
 import ButtonPromotion from '../ButtonPromotion';
 import ButtonSettings from '../ButtonSettings';
@@ -11,6 +12,7 @@ const TopRight = () => {
             <ButtonHTP />
             <ButtonPromotion />
             <ButtonSettings />
+            <ButtonFullscreen />
         </div>
     );
 };

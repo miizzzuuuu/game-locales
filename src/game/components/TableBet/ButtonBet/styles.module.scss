@@ -181,6 +181,12 @@
     @include button-bet-position-landscape;
 }
 
+:global(.desktop) {
+    .button-bet {
+        cursor: pointer;
+    }
+}
+
 // .button-bet {
 //     @for $row from 1 through 4 {
 //         @for $col from 1 through 5 {

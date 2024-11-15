@@ -13,9 +13,15 @@
     background: rgba(0, 0, 0, 0.4);
     box-shadow: 0.2rem 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.12) inset;
 
+    transition: all 0.3s linear;
+
     &:active,
     &:focus {
         background: rgba(0, 0, 0, 0.4);
+    }
+
+    &:hover {
+        background-color: rgba(94, 94, 94, 0.3);
     }
 
     & > svg {

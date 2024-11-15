@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getLoacale } from '../../../utils/LangHelper';
 import styles from './styles.module.scss';
@@ -6,26 +6,26 @@ import styles from './styles.module.scss';
 const DateTime = () => {
     const { i18n } = useTranslation();
     const ref = useRef<HTMLSpanElement>(null);
+    const animationFrameId = useRef<number | null>(null);
 
-    useEffect(() => {
+    const updateTime = useCallback(() => {
         if (ref.current) {
             ref.current.textContent = new Date().toLocaleString(getLoacale(i18n.language), {
                 hour12: false,
             });
         }
+        animationFrameId.current = requestAnimationFrame(updateTime);
+    }, [i18n.language]);
 
-        const interval = setInterval(() => {
-            if (ref.current) {
-                ref.current.textContent = new Date().toLocaleString(getLoacale(i18n.language), {
-                    hour12: false,
-                });
-            }
-        }, 1000);
+    useEffect(() => {
+        updateTime(); // start the animation frame loop
 
         return () => {
-            clearInterval(interval);
+            if (animationFrameId.current) {
+                cancelAnimationFrame(animationFrameId.current);
+            }
         };
-    }, [i18n.language]);
+    }, [updateTime]);
 
     return <span className={styles.timer} ref={ref} />;
 };
