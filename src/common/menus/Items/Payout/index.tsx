@@ -1,15 +1,19 @@
-import { MenuPageProps } from '../../Menu';
-import LabelTranslate from '../../../components/LabelTranslate';
-import Panel from '../../Panel';
-
-import styles from './styles.module.scss';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
-import { selectOpenMenuPayout, toggleMenuPayout } from '../../../../store/slice/menuSlice';
+import {
+    selectOpenMenuMain,
+    selectOpenMenuPayout,
+    toggleMenuPayout,
+} from '../../../../store/slice/menuSlice';
+import LabelTranslate from '../../../components/LabelTranslate';
+import { MenuPageProps } from '../../Menu';
+import Panel from '../../Panel';
 import PayoutContent from './PayoutContent';
+import styles from './styles.module.scss';
 
 const Payout = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();
     const openMenuPayout = useAppSelector(selectOpenMenuPayout);
+    const openMenuMain = useAppSelector(selectOpenMenuMain);
 
     return (
         <Panel
@@ -17,7 +21,7 @@ const Payout = ({ handleClose }: MenuPageProps) => {
             title={<LabelTranslate value="payout-and-limit" />}
             footerBg="#1e1f2e"
             className={styles['menu-payout']}
-            handleBack={() => dispatch(toggleMenuPayout())}
+            handleBack={openMenuMain ? () => dispatch(toggleMenuPayout()) : undefined}
             handleClose={handleClose}
         >
             <div className={styles.payout}>

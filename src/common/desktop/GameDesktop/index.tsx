@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import Footer from '../Footer';
-import TopLeft from '../TopLeft';
 import TopRight from '../TopRight';
+import TopLeft from '../TopLeft';
 import Main from '../Main';
 import WinnerArea from '../WinnerArea';
 

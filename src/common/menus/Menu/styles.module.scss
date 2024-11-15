@@ -4,12 +4,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(2, 16, 33, 0.75);
-    backdrop-filter: blur(0.1rem);
     z-index: var(--layer-menu);
-
-    animation-duration: 0.4s;
     animation-fill-mode: both;
+}
+
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .menu {
+        background-color: rgba(2, 16, 33, 0.75);
+        backdrop-filter: blur(0.1rem);
+        animation-duration: 0.3s;
+    }
+}
+
+:global(.desktop) {
+    .menu {
+        background-color: rgba(2, 16, 33, 0.2);
+        animation-duration: 0.2s;
+    }
 }
 
 :global :local(.menu) {

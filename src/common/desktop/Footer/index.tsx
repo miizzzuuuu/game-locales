@@ -1,6 +1,6 @@
 import ActionArea from '../ActionArea';
 import ButtonLobby from './ButtonLobby';
-import ButtonMultiGame from './ButtonMultiGame';
+// import ButtonMultiGame from './ButtonMultiGame';
 import DateTime from './DateTime';
 import styles from './styles.module.scss';
 import TotalBet from './TotalBet';
@@ -26,7 +26,7 @@ function Footer() {
                 <Separator />
                 <div className={styles.buttons}>
                     <ButtonLobby />
-                    <ButtonMultiGame />
+                    {/* <ButtonMultiGame /> */}
                 </div>
             </div>
         </div>

@@ -1,3 +1,17 @@
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .menu-payout {
+        min-height: 90%;
+    }
+}
+
+:global(.desktop) {
+    .menu-payout {
+        right: unset;
+        left: 2rem;
+    }
+}
+
 .payout {
     flex: 1;
     overflow-y: auto;
@@ -5,8 +19,4 @@
     border-top: 0.1rem solid #2b2c3d;
 
     padding: 1rem;
-}
-
-.menu-payout {
-    min-height: 90%;
 }

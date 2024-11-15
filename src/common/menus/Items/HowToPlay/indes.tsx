@@ -1,5 +1,9 @@
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
-import { selectOpenMenuHTP, toggleMenuHTP } from '../../../../store/slice/menuSlice';
+import {
+    selectOpenMenuHTP,
+    selectOpenMenuMain,
+    toggleMenuHTP,
+} from '../../../../store/slice/menuSlice';
 import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
@@ -10,6 +14,7 @@ import styles from './styles.module.scss';
 const HowToPlay = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();
     const openMenuHTP = useAppSelector(selectOpenMenuHTP);
+    const openMenuMain = useAppSelector(selectOpenMenuMain);
 
     return (
         <Panel
@@ -17,7 +22,7 @@ const HowToPlay = ({ handleClose }: MenuPageProps) => {
             title={<LabelTranslate value="how-to-play" />}
             footerBg="#1e1f2e"
             className={styles['menu-how-to-play']}
-            handleBack={() => dispatch(toggleMenuHTP())}
+            handleBack={openMenuMain ? () => dispatch(toggleMenuHTP()) : undefined}
             handleClose={handleClose}
         >
             <Content />

@@ -24,10 +24,7 @@ const Content = () => {
             return;
         }
 
-        const { width, height } = ref.current.getBoundingClientRect();
-
-        console.log('width', width);
-        console.log('height', height);
+        const { height } = ref.current.getBoundingClientRect();
 
         const scale = getComputedStyle(ref.current).getPropertyValue('--scale');
         const heightOverlay = (15 / 100) * 410 * Number(scale);
