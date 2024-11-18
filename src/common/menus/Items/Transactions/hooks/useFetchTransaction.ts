@@ -59,7 +59,7 @@ export const useFetchTransaction = ({ date }: Params) => {
             }
         };
 
-        fetchTransaction(page, date);
+        void fetchTransaction(page, date);
 
         return () => {
             ignore = true;

@@ -1,4 +1,4 @@
-import { AnimationEventHandler, useEffect, useRef, useState } from 'react';
+import { AnimationEventHandler, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
@@ -59,42 +59,45 @@ const MessageYouWin = () => {
     const previousTimeRef = useRef<number | undefined>(undefined);
     const startTimeRef = useRef<number | undefined>(undefined);
 
-    const animate = (time: number) => {
-        if (startTimeRef.current === undefined) {
-            startTimeRef.current = time;
-        }
+    const animate = useCallback(
+        (time: number) => {
+            if (startTimeRef.current === undefined) {
+                startTimeRef.current = time;
+            }
 
-        const elapsedTime = time - startTimeRef.current;
+            const elapsedTime = time - startTimeRef.current;
 
-        if (previousTimeRef.current !== undefined) {
-            const deltaTime = time - previousTimeRef.current;
+            if (previousTimeRef.current !== undefined) {
+                const deltaTime = time - previousTimeRef.current;
 
-            // Only update if enough time has passed for 60fps (approx. 16.67ms per frame)
-            if (deltaTime >= 16.67) {
-                const currentWin = Array(String(winAmount).length);
-                for (let i = 0; i < currentWin.length; i++) {
-                    currentWin[i] = Math.floor(Math.random() * 9);
+                // Only update if enough time has passed for 60fps (approx. 16.67ms per frame)
+                if (deltaTime >= 16.67) {
+                    const currentWin = Array(String(winAmount).length);
+                    for (let i = 0; i < currentWin.length; i++) {
+                        currentWin[i] = Math.floor(Math.random() * 9);
+                    }
+                    setDisplayValue(Number(currentWin.join('')));
+
+                    previousTimeRef.current = time;
                 }
-                setDisplayValue(Number(currentWin.join('')));
-
+            } else {
                 previousTimeRef.current = time;
             }
-        } else {
-            previousTimeRef.current = time;
-        }
 
-        // Stop the animation after 3 seconds
-        if (elapsedTime < 1000) {
-            requestRef.current = requestAnimationFrame(animate);
-        } else {
-            setDisplayValue(winAmount);
+            // Stop the animation after 3 seconds
+            if (elapsedTime < 1000) {
+                requestRef.current = requestAnimationFrame(animate);
+            } else {
+                setDisplayValue(winAmount);
 
-            if (requestRef.current) {
-                cancelAnimationFrame(requestRef.current);
+                if (requestRef.current) {
+                    cancelAnimationFrame(requestRef.current);
+                }
+                startTimeRef.current = undefined;
             }
-            startTimeRef.current = undefined;
-        }
-    };
+        },
+        [winAmount],
+    );
 
     useEffect(() => {
         if (winAmount > 0) {
@@ -111,7 +114,7 @@ const MessageYouWin = () => {
                 cancelAnimationFrame(requestRef.current);
             }
         };
-    }, [winAmount]);
+    }, [winAmount, animate]);
 
     // useEffect(() => {
     //     if (resultStatus === 'done') {

@@ -43,9 +43,7 @@ export interface LastBetsGameResponse {
     data: LastBets;
 }
 
-export interface LastBetsResponse {
-    [key: string]: LastBetsGameResponse;
-}
+export type LastBetsResponse = Record<string, LastBetsGameResponse>;
 
 export interface Game {
     name: string;

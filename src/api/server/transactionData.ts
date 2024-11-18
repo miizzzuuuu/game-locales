@@ -11,12 +11,15 @@ import transactionsP9B from './response/transactions/p9b.json';
 import transactionsP12 from './response/transactions/p12.json';
 import transactionsP12B from './response/transactions/p12b.json';
 import transactionsM6 from './response/transactions/m6.json';
+import transactionsM7 from './response/transactions/m7.json';
 import transactionsM8 from './response/transactions/m8.json';
 import transactionsM8B from './response/transactions/m8b.json';
 import transactionsM11 from './response/transactions/m11.json';
 import transactionsM11B from './response/transactions/m11b.json';
 import transactionsM14 from './response/transactions/m14.json';
 import transactionsM14B from './response/transactions/m14b.json';
+import transactionsM19 from './response/transactions/m19.json';
+import transactionsM19B from './response/transactions/m19b.json';
 import transactionsM22 from './response/transactions/m22.json';
 import transactionsM22B from './response/transactions/m22b.json';
 import transactionsM22C from './response/transactions/m22c.json';
@@ -46,12 +49,15 @@ const transactionData: Record<string, object> = {
     p12: transactionsP12,
     p12b: transactionsP12B,
     m6: transactionsM6,
+    m7: transactionsM7,
     m8: transactionsM8,
     m8b: transactionsM8B,
     m11: transactionsM11,
     m11b: transactionsM11B,
     m14: transactionsM14,
     m14b: transactionsM14B,
+    m19: transactionsM19,
+    m19b: transactionsM19B,
     m22: transactionsM22,
     m22b: transactionsM22B,
     m22c: transactionsM22C,

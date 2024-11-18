@@ -11,12 +11,15 @@ import resultsP9B from './response/results/p9b.json';
 import resultsP12 from './response/results/p12.json';
 import resultsP12B from './response/results/p12b.json';
 import resultM6 from './response/results/m6.json';
+import resultM7 from './response/results/m7.json';
 import resultM8 from './response/results/m8.json';
 import resultM8B from './response/results/m8b.json';
 import resultM11 from './response/results/m11.json';
 import resultM11B from './response/results/m11b.json';
 import resultM14 from './response/results/m14.json';
 import resultM14B from './response/results/m14b.json';
+import resultM19 from './response/results/m19.json';
+import resultM19B from './response/results/m19b.json';
 import resultM22 from './response/results/m22.json';
 import resultM22B from './response/results/m22b.json';
 import resultM22C from './response/results/m22c.json';
@@ -32,8 +35,6 @@ import resultM41 from './response/results/m41.json';
 import resultM41B from './response/results/m41b.json';
 import resultM46 from './response/results/m46.json';
 
-import resultsM7 from './response/results/m7.json';
-
 const resultData: Record<string, { data: any[] }> = {
     p6: resultP6,
     p6b: resultP6B,
@@ -48,12 +49,15 @@ const resultData: Record<string, { data: any[] }> = {
     p12: resultsP12,
     p12b: resultsP12B,
     m6: resultM6,
+    m7: resultM7,
     m8: resultM8,
     m8b: resultM8B,
     m11: resultM11,
     m11b: resultM11B,
     m14: resultM14,
     m14b: resultM14B,
+    m19: resultM19,
+    m19b: resultM19B,
     m22: resultM22,
     m22b: resultM22B,
     m22c: resultM22C,
@@ -68,8 +72,6 @@ const resultData: Record<string, { data: any[] }> = {
     m41: resultM41,
     m41b: resultM41B,
     m46: resultM46,
-
-    m7: resultsM7,
 };
 
 export default resultData;

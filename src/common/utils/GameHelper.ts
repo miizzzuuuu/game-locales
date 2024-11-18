@@ -39,6 +39,7 @@ const GAME_CODE: Record<string, string> = {
     m40: 'XD',
     m41: 'DMN',
     m42: 'GPX',
+    m46: 'CME',
 };
 
 const GAME_NAME: Record<string, string> = {
@@ -169,7 +170,11 @@ export const hideMiniHowToPlayLocalStorage = () => {
     localStorage.setItem(getKeyMiniHowToPlay(), 'false');
 };
 
-export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
+// export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
+export const getVariant = () => {
+    const match = _pcode.match(/[^0-9]$/);
+    return match ? match[0] : '';
+};
 
 export const getEventNewSet = () => {
     let baseNewSet = '';

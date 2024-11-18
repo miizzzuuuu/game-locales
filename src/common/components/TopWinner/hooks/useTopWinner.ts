@@ -59,7 +59,7 @@ function useTopWinner({ ref: winnerContentRef }: Params) {
         setIsFinish(false);
         setIndex(0);
         setWraps(wraps);
-    }, [winnerData]);
+    }, [winnerData, winnerContentRef]);
 
     useEffect(() => {
         console.log('aaa 1');

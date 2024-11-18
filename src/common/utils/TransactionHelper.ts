@@ -4,6 +4,7 @@ import {
     Pcode12DThunder,
     Pcode24D,
     Pcode24DJackpot,
+    Pcode24DSpin,
     Pcode48D,
     PcodeBaccarat,
     PcodeCeme,
@@ -12,11 +13,13 @@ import {
     PcodeDomino,
     PcodeDragonTiger,
     PcodeDragonTigerWild,
+    PcodeOglok,
     PcodePokerDice,
     PcodeRedWhite,
     PcodeRoulette,
     PcodeShioFight,
     PcodeSicboDice,
+    PcodeSuwit,
     Transaction,
 } from '../../types';
 
@@ -61,6 +64,14 @@ export const isSicboDice = (item: Transaction<string>): item is Transaction<Pcod
     return item.pcode.startsWith('p12');
 };
 
+export const is24DSpin = (item: Transaction<string>): item is Transaction<Pcode24DSpin> => {
+    return item.pcode.startsWith('m6');
+};
+
+export const isOglok = (item: Transaction<string>): item is Transaction<PcodeOglok> => {
+    return item.pcode.startsWith('m7');
+};
+
 export const isDice6 = (item: Transaction<string>): item is Transaction<PcodeDice6> => {
     return item.pcode.startsWith('m8') && !item.pcode.startsWith('m8b');
 };
@@ -75,6 +86,10 @@ export const isRedWhite = (item: Transaction<string>): item is Transaction<Pcode
 
 export const isPokerDice = (item: Transaction<string>): item is Transaction<PcodePokerDice> => {
     return item.pcode.startsWith('m14');
+};
+
+export const isSuwit = (item: Transaction<string>): item is Transaction<PcodeSuwit> => {
+    return item.pcode.startsWith('m19');
 };
 
 export const isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {

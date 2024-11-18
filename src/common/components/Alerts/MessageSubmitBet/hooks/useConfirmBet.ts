@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import { useAppTranslate } from '../../../../../services/i18next/hooks';
+import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import {
     resetConfirmBet,
     selectConfirmBetError,
@@ -24,6 +24,8 @@ function useConfirmBet() {
     const confirmBetError = useAppSelector(selectConfirmBetError);
 
     useEffect(() => {
+        console.log('confirmBetStatus', confirmBetStatus);
+
         if (confirmBetStatus === 'pending') {
             setMessage({
                 value: 'SUBMITING...',

@@ -52,4 +52,6 @@ export const Button = forwardRef<HTMLButtonElement, IProps>(
     },
 );
 
+Button.displayName = 'Button';
+
 export default Button;

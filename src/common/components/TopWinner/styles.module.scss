@@ -1,6 +1,4 @@
 .top-winner {
-    --top-winner-height: 1.6rem;
-
     position: absolute;
     width: 100%;
     height: var(--top-winner-height);
@@ -46,4 +44,13 @@
     padding-right: 0.6rem;
 
     opacity: 0.8;
+}
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .top-winner {
+        width: 50rem;
+        left: 50%;
+        translate: -50%;
+    }
 }

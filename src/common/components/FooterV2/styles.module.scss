@@ -1,0 +1,86 @@
+.footer {
+    flex-shrink: 0;
+    height: var(--height-footer);
+    background: var(--bg-footer);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+}
+
+:global(.mobile-portrait) {
+    .footer {
+        justify-content: space-between;
+    }
+}
+
+:global(.desktop),
+:global(.mobile-landscape) {
+    .footer {
+        gap: var(--width-total-bet);
+    }
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.right {
+    align-items: flex-end;
+}
+
+.text-1 {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.text-2 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-shadow:
+        0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.7),
+        -0.1rem -0.1rem 0.4rem rgba(0, 0, 0, 0.7);
+}
+
+.text-3,
+.text-5 {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.02rem;
+}
+
+.text-5 {
+    color: var(--cyan);
+}
+
+.text-4 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+    text-transform: capitalize;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.total-bet {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.text-shadow {
+    text-shadow:
+        0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.7),
+        -0.2rem -0.2rem 0.4rem rgba(0, 0, 0, 0.7);
+}

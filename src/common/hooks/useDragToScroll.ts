@@ -82,7 +82,7 @@ function useDragToScroll<T extends HTMLElement>({
             currentSlider.removeEventListener('mouseup', stopDragging);
             currentSlider.removeEventListener('mouseleave', stopDragging);
         };
-    }, [device, direction]);
+    }, [device, direction, slider]);
 }
 
 export { useDragToScroll };

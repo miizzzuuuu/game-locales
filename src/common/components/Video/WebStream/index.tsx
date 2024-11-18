@@ -5,13 +5,13 @@ import {
     selectEnableStreamingSound,
     selectVolumeStreamingSound,
 } from '../../../../store/slice/settingsSlice';
-import { selectFocus } from '../../../../store/slice/windowSlice';
+import { useFocus } from '../../../hooks/useFocus';
 import styles from './styles.module.scss';
 
 const WebStream = () => {
     const videoRef = useRef<HTMLIFrameElement>(null);
 
-    const isFocus = useAppSelector(selectFocus);
+    const isFocus = useFocus();
     const [isLoading, setIsLoading] = useState(true);
 
     const enableSoundStreaming = useAppSelector(selectEnableStreamingSound);

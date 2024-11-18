@@ -38,7 +38,7 @@ const ChipAnimation = ({ value, ignoreTransparent }: ChipBetProps) => {
     }, [value]);
 
     return (
-        <div className={`${styles['chip']}${showChip ? '' : ` ${styles.hide}`}`} ref={chipRef}>
+        <div className={`${styles.chip}${showChip ? '' : ` ${styles.hide}`}`} ref={chipRef}>
             <SVGChip color={color} value={stringValue} />
 
             <div ref={lightRef} className={styles['chip-light']} />

@@ -38,29 +38,27 @@ const TimerContent = () => {
         }
 
         if (svgRef.current) {
-            const timeCircle = svgRef.current.querySelector('#timer-cirlce') as SVGCircleElement;
-            if (timeCircle) {
-                timeCircle.style.setProperty(
-                    '--color-effect',
-                    timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
-                );
-                timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
-                timeCircle.setAttribute(
-                    'stroke-dashoffset',
-                    `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
-                );
-            }
+            const timeCircle = svgRef.current.querySelector('#timer-cirlce')! as SVGCircleElement;
+            timeCircle.style.setProperty(
+                '--color-effect',
+                timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
+            );
+            timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
+            timeCircle.setAttribute(
+                'stroke-dashoffset',
+                `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
+            );
         }
 
         if (remainingTime > 0) {
             requestRef.current = requestAnimationFrame(updateTimer);
         }
-    }, [getRemainingTime, timer, dispatch]);
+    }, [getRemainingTime, timer]);
 
     useEffect(() => {
         console.log(time);
 
-        let timeOutTime: number | undefined;
+        let timeOutTime: ReturnType<typeof setTimeout> | undefined;
 
         if (time > 0) {
             targetTime.current = new Date().getTime() + time * 1000;
@@ -85,7 +83,7 @@ const TimerContent = () => {
                 requestRef.current = undefined;
             }
         };
-    }, [time, timerIsClose, updateTimer]);
+    }, [time, timerIsClose, updateTimer, dispatch]);
 
     return (
         <div className={`${styles.timer}${time <= 0 ? ` ${styles.disappear}` : ''}`}>

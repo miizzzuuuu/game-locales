@@ -31,12 +31,12 @@
         box-shadow: 0 -0.4rem 1.2rem rgba(0, 0, 0, 0.3);
 
         &:global {
-            animation: slideInUp 0.5s both;
+            animation: slideInUp 0.25s both;
         }
 
         &.disappear {
             :global {
-                animation: slideOutDown 0.4s both;
+                animation: slideOutDown 0.25s both;
             }
         }
     }
@@ -55,12 +55,12 @@
             box-shadow: 0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
             &:global {
-                animation: slideInLeft 0.5s both;
+                animation: slideInLeft 0.25s both;
             }
 
             &.disappear {
                 :global {
-                    animation: slideOutLeft 0.4s both;
+                    animation: slideOutLeft 0.25s both;
                 }
             }
         }
@@ -72,12 +72,12 @@
             box-shadow: -0.4rem 0 1.2rem rgba(0, 0, 0, 0.3);
 
             &:global {
-                animation: slideInRight 0.5s both;
+                animation: slideInRight 0.25s both;
             }
 
             &.disappear {
                 :global {
-                    animation: slideOutRight 0.4s both;
+                    animation: slideOutRight 0.25s both;
                 }
             }
         }

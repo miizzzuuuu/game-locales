@@ -1,0 +1,194 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-11-06T09:43:14.000Z",
+            "periode": "3308586",
+            "pcode": "m19",
+            "detail_betting": [
+                {
+                    "tebak": "Column 2",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Row 1",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 13750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Index",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 2.95,
+                    "win_amount": 14750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Thumb",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 2.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Paper",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 2.95,
+                    "win_amount": 14750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Scissors",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 2.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2884099,
+                "tanggal": "2024-11-06T09:43:42.000Z",
+                "periode": 3308586,
+                "hitung": "1",
+                "gamekey": "3308586",
+                "angka": "batu,kelingking",
+                "angkawin": "kertas,telunjuk"
+            },
+            "total_debit": 30000,
+            "total_credit": 43250,
+            "total_transaction": 13250
+        },
+        {
+            "tglbel": "2024-11-06T09:41:20.000Z",
+            "periode": "3308583",
+            "pcode": "m19",
+            "detail_betting": [
+                {
+                    "tebak": "Row 3",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 13750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Row 2",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Row 1",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Paper-Thumb",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 8.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Stone-Pinky",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 8.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2884096,
+                "tanggal": "2024-11-06T09:41:37.000Z",
+                "periode": 3308583,
+                "hitung": "1",
+                "gamekey": "3308583",
+                "angka": "batu,jempol",
+                "angkawin": "kertas,kelingking"
+            },
+            "total_debit": 25000,
+            "total_credit": 13750,
+            "total_transaction": -11250
+        },
+        {
+            "tglbel": "2024-11-06T09:41:14.000Z",
+            "periode": "3308583",
+            "pcode": "m19",
+            "detail_betting": [
+                {
+                    "tebak": "Row 3",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 13750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Row 2",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Row 1",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Paper-Thumb",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 8.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Stone-Pinky",
+                    "type": "c",
+                    "taruhan": 5000,
+                    "prize": 8.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2884096,
+                "tanggal": "2024-11-06T09:41:37.000Z",
+                "periode": 3308583,
+                "hitung": "1",
+                "gamekey": "3308583",
+                "angka": "batu,jempol",
+                "angkawin": "kertas,kelingking"
+            },
+            "total_debit": 25000,
+            "total_credit": 13750,
+            "total_transaction": -11250
+        }
+    ],
+    "pagination": {
+        "total_datas": 3,
+        "current_page": 1,
+        "total_pages": 1
+    }
+}

@@ -24,3 +24,8 @@ export function hasCommonElement<T>(array1: T[], array2: T[]): boolean {
     const commonElements = array1.filter((item) => array2.includes(item));
     return commonElements.length > 0;
 }
+
+export function checkWinMultiBet<T>(win: T, button: T[]): boolean {
+    const commonElements = button.filter((item) => item === win);
+    return commonElements.length > 0;
+}

@@ -59,6 +59,10 @@ export type ResultP12 = CommonResult & {
 
 export type ResultM6 = ResultP6;
 
+export type ResultM7 = CommonResult & {
+    angka: string; // '3,2,6';
+};
+
 export type ResultM8 = CommonResult & {
     angka: string;
 };
@@ -77,6 +81,11 @@ export type ResultM14 = CommonResult & {
     angka: string; // '1b,1b,1b,1b,1b';
     angka2: string; // '1b,1b,1b,1b,1b';
     angka3: string; // '5 of a Kind';
+};
+
+export type ResultM19 = CommonResult & {
+    angkawin: string; // 'gunting,kelingking';
+    angka: string; // 'kertas,jempol';
 };
 
 export type ResultM22 = CommonResult & {
@@ -134,12 +143,3 @@ export type ResultM46 = CommonResult & {
 };
 
 // not done
-
-export type ResultM7 = {
-    angka: string;
-    tanggal: string;
-    periode: number;
-    hitung: string;
-    gamekey: number;
-    idnomor: number;
-};

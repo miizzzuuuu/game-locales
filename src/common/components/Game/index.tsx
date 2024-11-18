@@ -90,7 +90,7 @@ function Game() {
             console.log('close game');
             dispatch(closeTime());
         }
-    }, [time]);
+    }, [time, dispatch]);
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
