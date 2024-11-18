@@ -1,0 +1,10 @@
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    z-index: var(--layer-game);
+
+    display: flex;
+    gap: 1.2rem;
+}

@@ -4,9 +4,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
-    display: flex;
-    flex-direction: column;
     z-index: var(--layer-game);
 }
 
@@ -40,7 +37,26 @@
 }
 
 :global(.mobile-portrait) {
-    .offset-streaming {
+    .layout {
+        display: flex;
+        flex-direction: column;
+        z-index: var(--layer-game);
+    }
+
+    .offset-streaming .main {
         padding-top: calc(var(--height-streaming) * 1px);
+    }
+}
+
+:global(.mobile-landscape) {
+    .main-wrapper {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
+    .right,
+    .left {
+        margin-bottom: var(--height-footer);
     }
 }

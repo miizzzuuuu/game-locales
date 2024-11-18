@@ -22,7 +22,6 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
                 messageRef.current.classList.add(styles.disapear);
             }
         }, 2000);
-
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);

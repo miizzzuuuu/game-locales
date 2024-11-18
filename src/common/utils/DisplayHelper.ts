@@ -12,8 +12,8 @@ type SetStyleDisplayParams = {
 
 const getSize = () => ({
     desktop: {
-        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 720),
-        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 360),
+        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 1920),
+        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 1080),
     },
     'mobile-landscape': {
         width: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_WIDTH || 720),
@@ -88,13 +88,13 @@ const isIpad = () => /Mac/.test(navigator.userAgent) && navigator.maxTouchPoints
 
 const isTablet = () =>
     isIpad() ||
-    /(tablet|ipad|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(
+    /(tablet|ipad|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(
         getUserAgent(),
     );
 
 const getPlatform = (): Platform => {
-    if (isTablet()) return 'tablet';
     if (isMobile()) return 'mobile';
+    if (isTablet()) return 'tablet';
     return 'desktop';
 };
 
@@ -107,7 +107,7 @@ const getDevice = (): { type: DeviceType; orientation: Orientation } => {
     const platform = getPlatform();
     const orientation = getOrientation();
 
-    if (platform === 'desktop') {
+    if (platform === 'desktop' || platform === 'tablet') {
         return { type: 'desktop', orientation: 'landscape' };
     }
 

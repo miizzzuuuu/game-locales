@@ -1,13 +1,13 @@
 import { PropsWithChildren, useState } from 'react';
-import styles from './styles.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
-
 import Footer from '../../components/Footer';
+import InfoLimitBet from '../../components/InfoLimitBet';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
 import PanelTop from './PanelTop';
+import styles from './styles.module.scss';
 
 const LayoutV1 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -29,24 +29,29 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
                     <div className={styles.top}>
                         <PanelTop />
                     </div>
+
+                    <Footer />
                 </>
             )}
 
-            {(device === 'desktop' || device === 'mobile-landscape') && (
-                <div className={styles['main-wrapper']}>
-                    <div className={styles.left}>
-                        <PanelLeft />
+            {device === 'mobile-landscape' && (
+                <>
+                    <div className={styles['main-wrapper']}>
+                        <div className={styles.left}>
+                            <PanelLeft />
+                        </div>
+
+                        <div className={styles.main}>{children}</div>
+
+                        <div className={styles.left}>
+                            <PanelRight />
+                        </div>
                     </div>
 
-                    <div className={styles.main}>{children}</div>
-
-                    <div className={styles.left}>
-                        <PanelRight />
-                    </div>
-                </div>
+                    <InfoLimitBet />
+                    <Footer />
+                </>
             )}
-
-            <Footer />
         </div>
     );
 };

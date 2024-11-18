@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Header from './Header/Header';
 import SliderUp from './SliderUp';
 import styles from './styles.module.scss';
+import { useAppSelector } from '../../../store/hooks';
+import { selectDevice } from '../../../store/slice/windowSlice';
 
 interface IProps {
     show: boolean;
@@ -28,6 +30,7 @@ const Panel = ({
     handleClose,
     handleBack,
 }: IProps) => {
+    const device = useAppSelector(selectDevice);
     const [hiddenUI, setVisibleUI] = useState(true);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
@@ -52,14 +55,16 @@ const Panel = ({
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >
-            <SliderUp />
+            {device !== 'desktop' && <SliderUp />}
             <Header title={title} handleBack={handleBack} handleClose={handleClose} />
 
             <div className={`${styles['menu-body']}${bodyClassName ? ` ${bodyClassName}` : ''}`}>
                 {children}
             </div>
 
-            <Footer style={{ backgroundColor: footerBg ? footerBg : undefined }} />
+            {device !== 'desktop' && (
+                <Footer style={{ backgroundColor: footerBg ? footerBg : undefined }} />
+            )}
         </div>
     );
 };

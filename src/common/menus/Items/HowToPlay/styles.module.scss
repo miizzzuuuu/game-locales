@@ -1,3 +1,6 @@
-.menu-how-to-play {
-    min-height: 90%;
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .menu-how-to-play {
+        min-height: 90%;
+    }
 }

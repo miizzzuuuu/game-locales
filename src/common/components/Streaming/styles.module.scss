@@ -53,7 +53,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .streaming {
         display: flex;
@@ -61,19 +60,13 @@
 
     .letter-box {
         .video-container {
-            height: calc(100% - var(--height-footer));
+            height: 100%;
         }
     }
 
     .non-letter-box {
         .video-container {
             width: 100%;
-        }
-    }
-
-    .full {
-        .video-container {
-            height: 100%;
         }
     }
 
@@ -145,19 +138,70 @@
         width: 100%;
         height: var(--height-overlay-streaming-landscape);
 
-        background: var(--streaming-color-6);
-
         &::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: var(--streaming-color-6);
         }
+    }
+
+    .video-background,
+    .video-background::before {
+        background: var(--streaming-background); // var(--streaming-color-6);
+        mask-image: linear-gradient(transparent, #000);
     }
 
     .full {
         .video-background {
             height: 0;
         }
+    }
+}
+
+:global(.desktop) {
+    .video-container {
+        height: 100%;
+    }
+
+    .video-background {
+        --color: 0, 0, 0;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30rem;
+
+        background: linear-gradient(180deg, transparent 0%, rgba(var(--color), 0.7) 100%);
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        // }
+    }
+
+    // .video-background,
+    // .video-background::before {
+    //     background: rgba(
+    //         var(--color),
+    //         0.5
+    //     ); // var(--streaming-background); // var(--streaming-color-6);
+    //     mask-image: linear-gradient(transparent, #000);
+    // }
+
+    .top-gradient {
+        --color: 0, 0, 0;
+        // --rem-migration-size: 7.46875px;
+        // height: calc(var(--rem-migration-size) * 12.5);
+
+        background: linear-gradient(-11.3deg, transparent 73%, rgba(var(--color), 0.5) 89%),
+            linear-gradient(11.3deg, transparent 73%, rgba(var(--color), 0.5) 89%);
+        height: 16rem;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }

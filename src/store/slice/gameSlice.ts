@@ -94,5 +94,6 @@ export const selectStreamURL = createSelector(
 
 export const selectGameNewSet = (state: RootState) => state.game.newSet;
 export const selectGameSet = (state: RootState) => state.game.shoePeriode.split('-')[0];
+export const selectGameSetPeriod = (state: RootState) => state.game.shoePeriode.split('-')[1];
 
 export default gameSlice.reducer;

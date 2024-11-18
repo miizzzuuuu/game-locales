@@ -112,7 +112,6 @@ window.addEventListener('updateloading', (event) => {
 
 window.addEventListener('loadingfinish', () => {
     const loadingElement = document.querySelector('#loading');
-
     if (loadingElement) {
         loadingElement.classList.add('loading-hide');
         loadingElement.addEventListener('animationend', () => {

@@ -127,6 +127,29 @@
     }
 }
 
+@media (orientation: landscape) and (min-width: 768px) {
+    .loading-logo {
+        width: 300px;
+    }
+
+    .loading-bottom {
+        bottom: 40px;
+    }
+
+    .loading-idnlive {
+        width: 120px;
+    }
+
+    .progress-container {
+        --width: 300px;
+        --height: 10px;
+    }
+
+    .loading-text {
+        font-size: 14px;
+    }
+}
+
 @keyframes loadingFadeOut {
     0% {
         opacity: 1;

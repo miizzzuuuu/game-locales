@@ -1,0 +1,9 @@
+.main {
+    position: absolute;
+    left: 0;
+    bottom: var(--height-footer);
+
+    width: 100%;
+    min-height: 1rem;
+    z-index: var(--layer-game);
+}

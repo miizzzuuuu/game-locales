@@ -1,4 +1,8 @@
 import MainArea from '../../../game/components/MainArea';
+import MainAreaDesktop from '../../../game/components/MainAreaDesktop';
+import { useAppSelector } from '../../../store/hooks';
+import { selectDevice } from '../../../store/slice/windowSlice';
+import GameDesktop from '../../desktop/GameDesktop';
 import LayoutV1 from '../../layouts/v1';
 import LayoutV1_2 from '../../layouts/v1.2';
 import LayoutV2 from '../../layouts/v2';
@@ -18,6 +22,16 @@ const Layout =
               : null;
 
 const GameUI = () => {
+    const device = useAppSelector(selectDevice);
+
+    if (device === 'desktop') {
+        return (
+            <GameDesktop>
+                <MainAreaDesktop />
+            </GameDesktop>
+        );
+    }
+
     if (!Layout) {
         return null;
     }

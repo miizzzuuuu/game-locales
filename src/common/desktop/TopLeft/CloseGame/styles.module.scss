@@ -1,0 +1,22 @@
+.close {
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4.4rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(0.4rem);
+
+    & > svg {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+}
+
+.close,
+.close:hover,
+.close:active,
+.close:focus {
+    background-color: var(--overlay-1);
+}

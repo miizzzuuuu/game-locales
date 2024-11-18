@@ -1,0 +1,47 @@
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--height-footer);
+    z-index: var(--layer-game);
+
+    display: flex;
+    // gap: 85rem;
+
+    // background-color: black;
+}
+
+.wrapper {
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.right,
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    gap: 1.2rem;
+    padding-left: 2rem;
+}
+
+.right {
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding-right: 2rem;
+}
+
+.sparator {
+    height: 3.6rem;
+    width: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.buttons {
+    display: flex;
+    gap: 1.2rem;
+}

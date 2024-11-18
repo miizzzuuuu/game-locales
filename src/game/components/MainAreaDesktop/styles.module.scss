@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.panel {
+    width: 86rem;
+    height: 31rem;
+}
+
+.left,
+.right {
+    width: 47rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow: hidden;
+}

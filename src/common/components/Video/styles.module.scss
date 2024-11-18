@@ -13,12 +13,24 @@
 
 .off {
     position: absolute;
-    top: 50%;
     left: 50%;
-    translate: -50% -50%;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.8rem;
     text-align: center;
     text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .off {
+        top: 50%;
+        translate: -50% -50%;
+    }
+}
+
+:global(.desktop) {
+    .off {
+        top: 30rem;
+        translate: -50% 0;
+    }
 }

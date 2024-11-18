@@ -16,3 +16,13 @@
 .image {
     width: 9rem;
 }
+
+:global(.desktop) {
+    .result {
+        top: 35rem;
+    }
+
+    .image {
+        width: 12rem;
+    }
+}
