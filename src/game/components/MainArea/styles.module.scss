@@ -80,11 +80,11 @@
         padding-bottom: 0.8rem;
 
         &.close {
-            animation: landscape-board-hide 0.35s linear forwards;
+            animation: landscape-board-hide 0.3s linear forwards;
         }
 
         &.open {
-            animation: landscape-board-show 0.35s linear forwards;
+            animation: landscape-board-show 0.3s linear forwards;
         }
     }
 }

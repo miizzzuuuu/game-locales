@@ -9,7 +9,7 @@ export type FeaturesType = {
 };
 
 export const Features: FeaturesType = {
-    LAYOUT_VERSION: 1.2,
+    LAYOUT_VERSION: 1,
     BUTTON_PATTERN: true,
     MINI_HOW_TO_PLAY: true,
     SHUFFLE_THE_CARDS: true,
