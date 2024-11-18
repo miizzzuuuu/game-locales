@@ -76,7 +76,7 @@ export default class M23 extends BaseV2Roadmap {
                     justifyContent: 'space-between',
                     flexDirection: 'row',
                     width: '100%',
-                    paddingBlock: '1%',
+                    paddingBottom: '1%',
                 }}
             >
                 <svg
