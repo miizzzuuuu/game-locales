@@ -49,7 +49,6 @@ const Result = () => {
                 }
             }, WIN_NOTIFICATION_DURATION);
         }
-
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);

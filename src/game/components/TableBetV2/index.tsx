@@ -1,7 +1,7 @@
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
-import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import { selectDevice } from '../../../store/slice/windowSlice';
 import { BETS } from '../../utils/DragonTigerBHelper';
 import { RenderCard } from '../Card/RenderCard';
 import BetDragon from './ButtonBet/BetDragon';
@@ -15,6 +15,7 @@ import BetTigerWild from './ButtonBet/BetTigerWild';
 import styles from './index.module.scss';
 
 const TableBetV2 = () => {
+    const device = useAppSelector(selectDevice);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet({ betIsOpen });
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -46,8 +47,8 @@ const TableBetV2 = () => {
                     <RenderCard
                         top="-1rem"
                         right="unset"
-                        left={getOrientation() == 'portrait' ? '50%' : '50%'}
-                        position={{ x: '-50%', y: '5px' }}
+                        left={'50%'}
+                        position={{ x: '-50%', y: device === 'desktop' ? '-3rem' : '-1rem' }}
                         rotation={{ z: '0deg' }}
                         opacity={isSuperWildLose ? 0.6 : 1}
                         value={scanNumber ? scanNumber.wild : ''}

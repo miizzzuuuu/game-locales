@@ -17,4 +17,8 @@
     flex-shrink: 0;
     flex-grow: 0;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }

@@ -24,7 +24,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .container1 {
         top: 0rem;
@@ -41,6 +40,25 @@
 
     .image2 {
         height: 4rem;
+    }
+}
+
+:global(.desktop) {
+    .container1 {
+        top: 46rem;
+    }
+
+    .image1 {
+        width: 42rem;
+        height: auto;
+    }
+
+    .container2 {
+        top: 68rem;
+    }
+
+    .image2 {
+        height: 6rem;
     }
 }
 

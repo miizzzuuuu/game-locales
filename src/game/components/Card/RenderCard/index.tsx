@@ -28,6 +28,7 @@ export function RenderCard(props: IProps) {
 
     return (
         <div
+            className={styles.container}
             style={{
                 position: props.notAbsolute ? 'unset' : 'absolute',
                 top: `${props.top}`,
@@ -37,8 +38,6 @@ export function RenderCard(props: IProps) {
                 transform: `perspective(100rem) translate(${props.position.x}, ${props.position.y})`,
                 marginTop: `${props.marginTop}`,
                 transformOrigin: 'center',
-                width: '2.4rem',
-                height: '3.1rem',
             }}
         >
             <div
@@ -214,11 +213,11 @@ export function RenderCard(props: IProps) {
                                     position: 'absolute',
                                     top: '0',
                                     left: '0',
-                                    margin: '-0.2rem 0 0 0.2rem',
+                                    margin: '-0.2em 0 0 0.2em',
                                     fontFamily: 'Manrope',
-                                    fontSize: '1.44rem',
+                                    fontSize: '0.5em',
                                     fontStyle: 'normal',
-                                    fontWeight: '700',
+                                    fontWeight: '600',
                                     lineHeight: 'normal',
                                     textTransform: 'uppercase',
                                     color: displayColor,

@@ -13,7 +13,7 @@ import { ShiofightGrid } from './layout/base/ShiofightGrid';
 
 export type TypeRoadmap = 'color' | 'pattern' | 'number';
 
-const dataColumns = {
+export const dataColumns: Record<number, number> = {
     24: 14,
     21: 12,
     18: 10,
