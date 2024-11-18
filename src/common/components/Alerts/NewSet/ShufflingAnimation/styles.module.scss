@@ -21,11 +21,21 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .container {
         left: 50%;
         top: 50%;
         translate: -50% -50%;
+    }
+}
+
+:global(.desktop) {
+    .container {
+        left: 50%;
+        top: 56rem;
+        translate: -50% 0;
+
+        width: 14rem;
+        height: 14rem;
     }
 }

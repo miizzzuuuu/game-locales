@@ -6,6 +6,7 @@ const SVGBackground = ({ className, style }: SVGProps<SVGSVGElement>) => {
             viewBox="0 0 278 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
             className={className}
             style={style}
         >
