@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectOpenMenuHistory, toggleMenuHistory } from '../../../store/slice/menuSlice';
+import { selectOpenMenuHistory, toggleMenuHistoryDesktop } from '../../../store/slice/menuSlice';
 import ButtonAction from '../../components/ButtonAction';
 import SVGIconHistory from '../../menus/Items/Main/SVG/SVGIconHistory';
 
@@ -8,7 +8,7 @@ const ButtonTransactions = () => {
     const openMenuHistory = useAppSelector(selectOpenMenuHistory);
 
     const handleClick = () => {
-        dispatch(toggleMenuHistory());
+        dispatch(toggleMenuHistoryDesktop());
     };
 
     return (

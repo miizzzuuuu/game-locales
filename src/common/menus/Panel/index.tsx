@@ -1,11 +1,11 @@
 import { AnimationEventHandler, ReactNode, useState } from 'react';
+import { useAppSelector } from '../../../store/hooks';
+import { selectDevice } from '../../../store/slice/windowSlice';
 import { Features } from '../../utils/Features';
 import Footer from './Footer';
 import Header from './Header/Header';
 import SliderUp from './SliderUp';
 import styles from './styles.module.scss';
-import { useAppSelector } from '../../../store/hooks';
-import { selectDevice } from '../../../store/slice/windowSlice';
 
 interface IProps {
     show: boolean;
