@@ -46,48 +46,11 @@ const Dropdown = ({ initialValue, options, onChange, style }: DropdownProps) => 
 
     return (
         <div ref={dropdownRef} className={styles.dropdown} style={style}>
-            <Button
-                style={{
-                    height: '100%',
+            <Button className={styles.button} onClick={handleBtnClick}>
+                {IconSelected && <IconSelected className={styles.icon} />}
+                <span className={styles.text}>{selectedValue && langName[selectedValue]}</span>
 
-                    border: 'none',
-                    background: 'none',
-                    display: 'flex',
-                    paddingLeft: '0.6rem',
-                    paddingRight: '0.6rem',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    gap: '0.8rem',
-                }}
-                onClick={handleBtnClick}
-            >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                    {IconSelected && (
-                        <IconSelected
-                            style={{
-                                flex: '0 1 1.8rem',
-                                width: '1.8rem',
-                                height: '1.8rem',
-                            }}
-                        />
-                    )}
-
-                    <p
-                        style={{
-                            color: '#FFF',
-                            fontSize: '1.3rem',
-                            fontStyle: 'normal',
-                            fontWeight: '500',
-                            letterSpacing: '0.026rem',
-                            margin: '0px',
-                            padding: '0px',
-                        }}
-                    >
-                        {selectedValue && langName[selectedValue]}
-                    </p>
-                </div>
-
-                <SVGIconChevronDown style={{ width: '1.8rem', height: '1.8rem' }} />
+                <SVGIconChevronDown className={styles.arrow} />
             </Button>
 
             {isOpen && (
@@ -101,27 +64,9 @@ const Dropdown = ({ initialValue, options, onChange, style }: DropdownProps) => 
                                 className={styles['dropdown-item']}
                                 onClick={() => handleOptionClick(option)}
                             >
-                                {Icon && (
-                                    <Icon
-                                        style={{
-                                            flex: '0 1 1.8rem',
-                                            width: '1.8rem',
-                                            height: '1.8rem',
-                                        }}
-                                    />
-                                )}
+                                {Icon && <Icon className={styles.icon} />}
 
-                                <p
-                                    style={{
-                                        flex: '1',
-                                        fontSize: '1.3rem',
-                                        fontStyle: 'normal',
-                                        fontWeight: '500',
-                                        letterSpacing: '0.026rem',
-                                    }}
-                                >
-                                    {langName[option]}
-                                </p>
+                                <p className={styles.text}>{langName[option]}</p>
                             </div>
                         );
                     })}

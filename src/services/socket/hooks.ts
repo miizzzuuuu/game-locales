@@ -70,7 +70,7 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
         });
 
         return () => {
-            // SocketComponent.instance.emitGameDisconnect(dataLobbyConnect);
+            SocketComponent.instance.emitGameDisconnect(dataLobbyConnect);
             SocketComponent.instance.close();
         };
     }, [dispatch, nickname, operatorId]);

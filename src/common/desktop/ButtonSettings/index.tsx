@@ -1,14 +1,14 @@
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectOpenMenuSettings, toggleMenuSettings } from '../../../store/slice/menuSlice';
-import SVGIconSettings from '../../menus/Items/Main/SVG/SVGIconSettings';
+import { selectOpenMenuSettings, toggleMenuSettingsDesktop } from '../../../store/slice/menuSlice';
 import ButtonAction from '../../components/ButtonAction';
+import SVGIconSettings from '../../menus/Items/Main/SVG/SVGIconSettings';
 
 const ButtonSettings = () => {
     const dispatch = useAppDispatch();
     const openMenuSettings = useAppSelector(selectOpenMenuSettings);
 
     const handleClick = () => {
-        dispatch(toggleMenuSettings());
+        dispatch(toggleMenuSettingsDesktop());
     };
 
     return (

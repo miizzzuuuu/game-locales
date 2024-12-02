@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectOpenMenuHTP, toggleMenuHTP } from '../../../store/slice/menuSlice';
+import { selectOpenMenuHTP, toggleMenuHTPDesktop } from '../../../store/slice/menuSlice';
 import ButtonAction from '../../components/ButtonAction';
 import SVGIconHowToPlay from '../../menus/Items/Main/SVG/SVGIconHowToPlay';
 
@@ -8,7 +8,7 @@ const ButtonHTP = () => {
     const openMenuHTP = useAppSelector(selectOpenMenuHTP);
 
     const handleClick = () => {
-        dispatch(toggleMenuHTP());
+        dispatch(toggleMenuHTPDesktop());
     };
 
     return (

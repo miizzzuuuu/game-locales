@@ -38,10 +38,16 @@
 }
 
 .bet-child {
-    font-size: 400;
+    font-weight: 400;
     color: #c8c9db;
 }
 
 .shading {
     background: var(--bg-shading);
+}
+
+:global(.desktop) {
+    .payout-table {
+        font-size: 1.1rem;
+    }
 }

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 export type NameMenu = 'main' | 'payout' | 'settings' | 'history' | 'htp' | 'statistic';
@@ -105,6 +105,72 @@ const menuSlice = createSlice({
             state.openMenuHistory = false;
             state.openMenuHTP = false;
         },
+
+        // desktop
+        toggleMenuSettingsDesktop: (state) => {
+            const prev = state.openMenuSettings;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'settings');
+            } else {
+                state.menuOpened = state.menuOpened.filter(
+                    (menu) => menu !== 'history' && menu !== 'htp',
+                );
+                state.menuOpened.push('settings');
+
+                state.openMenuHistory = false;
+                state.openMenuHTP = false;
+            }
+
+            state.openMenuSettings = !prev;
+        },
+        toggleMenuHistoryDesktop: (state) => {
+            const prev = state.openMenuHistory;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'history');
+            } else {
+                state.menuOpened = state.menuOpened.filter(
+                    (menu) => menu !== 'settings' && menu !== 'htp',
+                );
+                state.menuOpened.push('history');
+
+                state.openMenuSettings = false;
+                state.openMenuHTP = false;
+            }
+
+            state.openMenuHistory = !state.openMenuHistory;
+        },
+        toggleMenuHTPDesktop: (state) => {
+            const prev = state.openMenuHTP;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'htp');
+            } else {
+                state.menuOpened = state.menuOpened.filter(
+                    (menu) => menu !== 'settings' && menu !== 'history',
+                );
+                state.menuOpened.push('htp');
+
+                state.openMenuSettings = false;
+                state.openMenuHistory = false;
+            }
+
+            state.openMenuHTP = !state.openMenuHTP;
+        },
+        closeAllMenuDesktop: (state, action: PayloadAction<NameMenu>) => {
+            state.menuOpened = state.menuOpened.filter((menu) => menu !== action.payload);
+
+            if (action.payload === 'history') {
+                state.openMenuHistory = false;
+            } else if (action.payload === 'settings') {
+                state.openMenuSettings = false;
+            } else if (action.payload === 'htp') {
+                state.openMenuHTP = false;
+            } else if (action.payload === 'payout') {
+                state.openMenuPayout = false;
+            }
+        },
     },
 });
 
@@ -116,6 +182,11 @@ export const {
     toggleMenuHistory,
     toggleMenuHTP,
     closeAllMenu,
+
+    toggleMenuSettingsDesktop,
+    toggleMenuHistoryDesktop,
+    toggleMenuHTPDesktop,
+    closeAllMenuDesktop,
 } = menuSlice.actions;
 
 export const selectOpenStatistic = (state: RootState) => state.menu.openStatistic;

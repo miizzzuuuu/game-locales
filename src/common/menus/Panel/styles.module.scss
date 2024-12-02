@@ -7,10 +7,6 @@
     background-color: #222334;
 
     transition: height 1s linear;
-
-    &:first-child {
-        opacity: 0;
-    }
 }
 
 .menu-body {
@@ -84,12 +80,22 @@
     }
 }
 
+:globla(.mobile-portrait),
+:global(.mobile-landscape) {
+    .menu-content {
+        &:first-child {
+            opacity: 0;
+        }
+    }
+}
+
 :global(.desktop) {
     .menu-content {
-        width: 38rem;
+        width: 42rem;
         height: 58.8rem;
         top: 8rem;
         right: 2rem;
         border-radius: 1rem;
+        pointer-events: all;
     }
 }

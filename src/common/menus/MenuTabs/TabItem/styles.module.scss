@@ -21,3 +21,9 @@
     font-weight: 400;
     text-transform: capitalize;
 }
+
+:global(.desktop) {
+    .item-text {
+        font-size: 1.32rem; // 1.2rem;
+    }
+}
