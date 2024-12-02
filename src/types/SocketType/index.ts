@@ -8,6 +8,7 @@ export type LobbyConnect = {
 export interface GameConnect extends LobbyConnect {
     game: string;
     pcode: string;
+    newlobby?: boolean;
 }
 
 export type LoadNewValueData = {
