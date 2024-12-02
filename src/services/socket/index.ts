@@ -66,6 +66,7 @@ export class SocketComponent {
                     user: data.user,
                     game: getGameCode(),
                     pcode: getPcode(),
+                    newlobby: true,
                 });
             });
         }
