@@ -29,3 +29,13 @@
     font-size: 500;
     text-transform: capitalize;
 }
+
+:global(.desktop) {
+    .button {
+        height: 3.6rem;
+    }
+
+    .label {
+        font-size: 1.43rem;
+    }
+}

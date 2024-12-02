@@ -17,3 +17,9 @@
         text-transform: capitalize;
     }
 }
+
+:global(.desktop) {
+    .payout-note {
+        font-size: 1.1rem; // 1rem;
+    }
+}

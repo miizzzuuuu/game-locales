@@ -70,3 +70,9 @@
         border: 0.4rem #1e1f2e solid;
     }
 }
+
+:global(.desktop) {
+    .label-slider {
+        font-size: 1.32rem;
+    }
+}

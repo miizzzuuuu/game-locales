@@ -34,3 +34,9 @@
     font-weight: 600;
     text-transform: capitalize;
 }
+
+:global(.desktop) {
+    .title {
+        font-size: 1.76rem; // 1.6rem;
+    }
+}
