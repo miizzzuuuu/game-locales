@@ -46,6 +46,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
             total_bet: totalBetAdd,
             game: getPcode(),
             transId: '',
+            newlobby: true,
         };
 
         void confirmBet(dispatch, params, period, balance);
