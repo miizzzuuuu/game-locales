@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { DeviceType, Orientation } from '../../types';
-import { getDevice, getSize, getWindowSize, setGameSize } from '../utils/DisplayHelper';
+import { GAME_SIZE, getDevice, getWindowSize, setGameSize } from '../utils/DisplayHelper';
 import { useWindowResize } from './useWindowResize';
 
 function useAutoResize() {
@@ -18,7 +18,7 @@ function useAutoResize() {
             setDeviceType(device.type);
             setOrientation(device.orientation);
 
-            const size = getSize()[device.type];
+            const size = GAME_SIZE[device.type];
 
             setGameSize(size, widthScreen, heightScreen);
         }

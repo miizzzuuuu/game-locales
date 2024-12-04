@@ -1,3 +1,5 @@
+import { MessageData } from '../../types';
+
 const debounce = <T extends (...args: any[]) => void>(
     func: T,
     wait: number,
@@ -22,4 +24,8 @@ const getRandomInt = (min: number, max: number) => {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export { debounce, getRandomInt, sleep };
+const sendMessageToParent = (data: MessageData, targetOrigin: string) => {
+    parent.postMessage(data, targetOrigin);
+};
+
+export { debounce, getRandomInt, sleep, sendMessageToParent };

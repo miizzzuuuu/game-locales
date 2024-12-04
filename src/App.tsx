@@ -15,6 +15,7 @@ import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
+import { sendMessageToParent } from './common/utils/FunctionHelper';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
@@ -51,6 +52,30 @@ function App() {
 
     useSettingSound();
     useFullscreen();
+
+    useEffect(() => {
+        const listenMessage = (event: MessageEvent) => {
+            if (event.data.source !== 'GAME_CONTAINER') return;
+
+            console.log('Message from parent:', event.data);
+
+            // Kirim pesan kembali ke parent
+            sendMessageToParent(
+                {
+                    type: 'MESSAGE',
+                    payload: { message: 'game connect to container' },
+                    source: 'LIVE_GAME',
+                },
+                event.origin,
+            );
+        };
+
+        window.addEventListener('message', listenMessage);
+
+        return () => {
+            window.removeEventListener('message', listenMessage);
+        };
+    }, []);
 
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);

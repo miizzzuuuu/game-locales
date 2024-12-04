@@ -10,10 +10,10 @@ type SetStyleDisplayParams = {
     heightScreen: number;
 };
 
-const getSize = () => ({
+const GAME_SIZE: Record<string, GameSize> = {
     desktop: {
-        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 720),
-        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 360),
+        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 1920),
+        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 1080),
     },
     'mobile-landscape': {
         width: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_WIDTH || 720),
@@ -23,7 +23,7 @@ const getSize = () => ({
         width: Number(import.meta.env.VITE_MOBILE_PORTRAIT_WIDTH || 360),
         height: Number(import.meta.env.VITE_MOBILE_PORTRAIT_HEIGHT || 720),
     },
-});
+};
 
 const getLetterOrPillarBoxActive = () => {
     if (typeof window === 'undefined') return false;
@@ -34,7 +34,7 @@ const getLetterOrPillarBoxActive = () => {
     const { innerWidth: width, innerHeight: height } = window;
     const aspectRatio = height / width;
 
-    const size = getSize()[device];
+    const size = GAME_SIZE[device];
     const standardAspectRatio = size.height / size.width;
 
     if (device === 'mobile-portrait') {
@@ -88,13 +88,13 @@ const isIpad = () => /Mac/.test(navigator.userAgent) && navigator.maxTouchPoints
 
 const isTablet = () =>
     isIpad() ||
-    /(tablet|ipad|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(
+    /(tablet|ipad|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(
         getUserAgent(),
     );
 
 const getPlatform = (): Platform => {
-    if (isTablet()) return 'tablet';
     if (isMobile()) return 'mobile';
+    if (isTablet()) return 'tablet';
     return 'desktop';
 };
 
@@ -107,7 +107,7 @@ const getDevice = (): { type: DeviceType; orientation: Orientation } => {
     const platform = getPlatform();
     const orientation = getOrientation();
 
-    if (platform === 'desktop') {
+    if (platform === 'desktop' || platform === 'tablet') {
         return { type: 'desktop', orientation: 'landscape' };
     }
 
@@ -191,13 +191,13 @@ export {
     checkIOS,
     checkLargeAndroid,
     checkLargeIphone,
+    GAME_SIZE,
     getDevice,
     getDeviceClassName,
     getLangClassName,
     getLetterOrPillarBoxActive,
     getOrientation,
     getPlatform,
-    getSize,
     getUserAgent,
     getWindowSize,
     hashStyles,
