@@ -86,6 +86,7 @@ export interface SendBetParam {
     total_bet: number;
     game: string;
     transId: string;
+    newlobby?: boolean;
 }
 
 export type PayoutChildren = {
