@@ -12,8 +12,8 @@ type SetStyleDisplayParams = {
 
 const GAME_SIZE: Record<string, GameSize> = {
     desktop: {
-        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 720), // 1920
-        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 360), // 1080
+        width: Number(import.meta.env.VITE_DESKTOP_WIDTH || 1920),
+        height: Number(import.meta.env.VITE_DESKTOP_HEIGHT || 1080),
     },
     'mobile-landscape': {
         width: Number(import.meta.env.VITE_MOBILE_LANDSCAPE_WIDTH || 720),
