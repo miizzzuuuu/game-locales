@@ -24,8 +24,8 @@ const getRandomInt = (min: number, max: number) => {
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const sendMessageToParent = (data: MessageData, targetOrigin: string) => {
-    parent.postMessage(data, targetOrigin);
+const sendMessageToParent = (data: MessageData, targetOrigin?: string) => {
+    parent.postMessage(data, targetOrigin ?? '*');
 };
 
 export { debounce, getRandomInt, sleep, sendMessageToParent };

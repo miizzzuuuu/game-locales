@@ -20,13 +20,10 @@ const updateLoading = (value: number, text?: string) => {
 const finishLoading = () => {
     window.dispatchEvent(new Event('loadingfinish'));
 
-    sendMessageToParent(
-        {
-            source: 'LIVE_GAME',
-            type: 'FINISH_GAME',
-        },
-        '*',
-    );
+    sendMessageToParent({
+        source: 'LIVE_GAME',
+        type: 'FINISH_GAME',
+    });
 };
 
 export { updateLoading, finishLoading };

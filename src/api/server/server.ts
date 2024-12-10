@@ -197,6 +197,10 @@ export function makeServer({ environment = 'test' } = {}) {
                 };
             });
 
+            // events
+
+            // end events
+
             this.passthrough();
             this.passthrough('https://cdn.lottielab.com/*');
         },

@@ -1,13 +1,13 @@
 import { PropsWithChildren, useState } from 'react';
-import styles from './styles.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
-
+import ButtonEvents from '../../events/ButtonEvents';
 import Footer from '../../components/Footer';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
 import PanelTop from './PanelTop';
+import styles from './styles.module.scss';
 
 const LayoutV1 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -47,6 +47,7 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
             )}
 
             <Footer />
+            <ButtonEvents />
         </div>
     );
 };

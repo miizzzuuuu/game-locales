@@ -115,3 +115,45 @@ export type Pagination = {
 export type MiniHowToPlay = {
     show: boolean;
 };
+
+// Events
+export interface EventIdnliveDate {
+    date: string;
+    timezone_type: number;
+    timezone: string;
+}
+
+export interface EventIdnlive {
+    name: string;
+    group?: string;
+    pcode: string;
+    total_amount: number;
+    max_amount?: number;
+    max_prize?: number;
+    status: 'completed' | 'running' | 'off';
+    date_start: EventIdnliveDate;
+    date_end: EventIdnliveDate;
+    latest: boolean;
+}
+
+export type EventIdnliveList = EventIdnlive[];
+
+{
+}
+export type EventIdnliveWinner = {
+    username: string;
+    agent: string;
+    prize: number;
+    date: string;
+};
+
+export type EventIdnliveWinnerData = {
+    data: EventIdnliveWinner[];
+    pagination: Pagination;
+};
+
+export type EventIdnliveTopWinner = {
+    username: string;
+    agent: string;
+    total_prize: number;
+};
