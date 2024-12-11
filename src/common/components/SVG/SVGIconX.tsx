@@ -1,22 +1,20 @@
-import { CSSProperties } from 'react';
+import { SVGProps } from 'react';
 
-interface IProps {
-    style?: CSSProperties;
-    className?: string;
+type IProps = Pick<SVGProps<SVGSVGElement>, 'className' | 'style'> & {
     color?: string;
-}
+};
 
-const SVGIconX = ({ style, className, color }: IProps) => (
+const SVGIconX = ({ className, style, color }: IProps) => (
     <svg
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={style}
         className={className}
+        style={style}
     >
         <path
             d="M18 6L6 18M6 6L18 18"
-            stroke={color ? color : '#fff'}
+            stroke={color ? color : '#6B6C80'}
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"

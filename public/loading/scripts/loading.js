@@ -2,15 +2,14 @@
 
 Loading - 100%
 
-- load document - 20
-- load whole page - 20
+- load document - 25
+- load whole page - 25
 
 - load player data - 10
 - load player settings - 10
-- load player lastbets - 10
 - load game data - 10
 - load timer - 10
-- load history result - 10
+- load events list - 10
 
 */
 
@@ -99,11 +98,11 @@ function updateProgress(value, text = '') {
 addLoadingScreen();
 
 window.addEventListener('DOMContentLoaded', () => {
-    updateProgress(20, 'Load document completed');
+    updateProgress(25, 'Load document completed');
 });
 
 window.addEventListener('load', () => {
-    updateProgress(20, 'Load page completed');
+    updateProgress(25, 'Load page completed');
 });
 
 window.addEventListener('updateloading', (event) => {

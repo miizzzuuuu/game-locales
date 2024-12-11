@@ -3,6 +3,7 @@ import Game from './common/components/Game';
 import MiniHowToPlay from './common/components/MiniHowToPlay';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import { useAutoResize } from './common/hooks/useAutoResize';
+import { useFetchEventList } from './common/hooks/useFetchEventList';
 import { useFetchGame } from './common/hooks/useFetchGame';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
@@ -32,14 +33,21 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
+    const { finish: finishGetEventList } = useFetchEventList();
 
     useEffect(() => {
-        if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
+        if (
+            finishGetPlayer &&
+            finishGetSettings &&
+            finishGetGame &&
+            finishGetTimer &&
+            finishGetEventList
+        ) {
             setShowGame(true);
 
             finishLoading();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
+    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer, finishGetEventList]);
 
     const { deviceType, orientation } = useAutoResize();
 

@@ -1,4 +1,3 @@
-import ButtonFavorite from '../../../components/ButtonFavorite';
 import ButtonHideChip from '../../../components/ButtonHideChip';
 import ButtonMenu from '../../../components/ButtonMenu';
 import ButtonSatatistic from '../../../components/ButtonSatatistic';
@@ -8,7 +7,7 @@ const PanelLeft = () => {
     return (
         <div className={styles['panel-left']}>
             <ButtonHideChip />
-            <ButtonFavorite />
+            {/* <ButtonFavorite /> */}
             <ButtonSatatistic />
             <ButtonMenu />
         </div>

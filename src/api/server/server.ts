@@ -2,6 +2,10 @@ import { createServer, Response } from 'miragejs';
 import { ENDPOINTS } from '../../common/utils/APIManager';
 
 import sendBetData from './response/send-bet/success.json';
+import eventsList from './response/events/eventsList.json';
+import eventLatestWinners from './response/events/latestWinners.json';
+import eventTopWinners from './response/events/topWinners.json';
+import eventPrize from './response/events/eventsPrize.json';
 
 // result
 import resultData from './resultData';
@@ -196,6 +200,21 @@ export function makeServer({ environment = 'test' } = {}) {
                     show: false,
                 };
             });
+
+            // events
+            this.get(ENDPOINTS.events, () => {
+                return eventsList;
+            });
+            this.get(ENDPOINTS.events + '/:name' + ENDPOINTS.eventLatestWinners, () => {
+                return eventLatestWinners;
+            });
+            this.get(ENDPOINTS.events + '/:name' + ENDPOINTS.eventTopWinners, () => {
+                return eventTopWinners;
+            });
+            this.post(ENDPOINTS.events + '/:name' + ENDPOINTS.eventGetPrize, () => {
+                return eventPrize;
+            });
+            // end events
 
             this.passthrough();
             this.passthrough('https://cdn.lottielab.com/*');

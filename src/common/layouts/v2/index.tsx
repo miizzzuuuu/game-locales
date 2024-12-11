@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
 import PanelBottom from './PanelBottom';
+import EventsIdnlive from '../../EventsIdnlive';
 
 const LayoutV2 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -36,6 +37,7 @@ const LayoutV2 = ({ children }: PropsWithChildren) => {
             </div>
 
             <Footer />
+            <EventsIdnlive />
         </div>
     );
 };
