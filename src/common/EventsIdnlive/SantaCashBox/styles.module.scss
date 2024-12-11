@@ -20,7 +20,8 @@
 }
 
 :global(.mobile-portrait),
-:global(.mobile-landscape) {
+:global(.mobile-landscape),
+:global(.desktop) {
     .wrapper {
         width: 4.8rem;
     }
