@@ -1,8 +1,8 @@
 import { PropsWithChildren, useState } from 'react';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
-import ButtonEvents from '../../events/ButtonEvents';
 import Footer from '../../components/Footer';
+import EventsIdnlive from '../../EventsIdnlive';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
@@ -47,7 +47,7 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
             )}
 
             <Footer />
-            <ButtonEvents />
+            <EventsIdnlive />
         </div>
     );
 };

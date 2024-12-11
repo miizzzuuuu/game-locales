@@ -1,0 +1,44 @@
+import { useEffect, useState } from 'react';
+import { getEventsList } from '../../services/api/eventIdnlive';
+import { useAppDispatch } from '../../store/hooks';
+import { setEventsList } from '../../store/slice/eventIdnliveSlice';
+import { updateLoading } from '../utils/LoadingHelper';
+
+function useFetchEventList() {
+    const dispatch = useAppDispatch();
+
+    const [finish, setFinish] = useState(false);
+
+    useEffect(() => {
+        let ignore = false;
+
+        const fetchEvensIdnliveList = async () => {
+            try {
+                updateLoading(0, 'Load event list');
+                const data = await getEventsList();
+
+                if (!ignore) {
+                    const eventRunning = data.filter((events) => events.status === 'running');
+                    if (eventRunning.length > 0) {
+                        dispatch(setEventsList(eventRunning));
+                    }
+                }
+            } catch (error) {
+                console.log('fetch events list', error);
+            } finally {
+                setFinish(true);
+                updateLoading(10, 'Load event list completed');
+            }
+        };
+
+        void fetchEvensIdnliveList();
+
+        return () => {
+            ignore = true;
+        };
+    }, [dispatch]);
+
+    return { finish };
+}
+
+export { useFetchEventList };

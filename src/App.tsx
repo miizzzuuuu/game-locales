@@ -16,6 +16,7 @@ import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { sendMessageToParent } from './common/utils/FunctionHelper';
+import { useFetchEventList } from './common/hooks/useFetchEventList';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
@@ -31,14 +32,21 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
+    const { finish: finishGetEventList } = useFetchEventList();
 
     useEffect(() => {
-        if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
+        if (
+            finishGetPlayer &&
+            finishGetSettings &&
+            finishGetGame &&
+            finishGetTimer &&
+            finishGetEventList
+        ) {
             setShowGame(true);
 
             finishLoading();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
+    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer, finishGetEventList]);
 
     const { deviceType, orientation } = useAutoResize();
 

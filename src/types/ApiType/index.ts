@@ -138,22 +138,26 @@ export interface EventIdnlive {
 
 export type EventIdnliveList = EventIdnlive[];
 
-{
-}
-export type EventIdnliveWinner = {
+export type EventIdnliveBase = {
     username: string;
     agent: string;
+};
+
+export type EventIdnliveWinner = EventIdnliveBase & {
     prize: number;
     date: string;
 };
 
-export type EventIdnliveWinnerData = {
+export type EventIdnliveLatestWinner = {
     data: EventIdnliveWinner[];
     pagination: Pagination;
 };
 
-export type EventIdnliveTopWinner = {
-    username: string;
-    agent: string;
+export type EventIdnliveTopWinner = EventIdnliveBase & {
     total_prize: number;
+};
+
+export type EventIdnlivePrize = {
+    win: number;
+    notwin: number[];
 };

@@ -3,10 +3,15 @@ import styles from './styles.module.scss';
 import SVGIconX from '../../menus/Panel/SVG/SVGIconX';
 import { useState } from 'react';
 import { sendMessageToParent } from '../../utils/FunctionHelper';
+import { Features } from '../../utils/Features';
 
-const className = `${styles.wrapper} ${styles[`layout-1`]}`;
+type IProps = {
+    name: string;
+};
 
-const ButtonEvents = () => {
+const className = `${styles.wrapper} ${Features.LAYOUT_VERSION === 2 || Features.LAYOUT_VERSION === 3 ? styles[`layout-2`] : styles[`layout-1`]}`;
+
+const SantaCashBox = ({ name }: IProps) => {
     const [showButton, setShowButton] = useState(true);
 
     const openPopup = () => {
@@ -14,8 +19,8 @@ const ButtonEvents = () => {
 
         sendMessageToParent({
             source: 'LIVE_GAME',
-            type: 'OPEN_MODAL',
-            payload: 'santa-cash-box',
+            type: 'OPEN_MODAL_EVENT',
+            payload: name,
         });
     };
 
@@ -41,4 +46,4 @@ const ButtonEvents = () => {
     );
 };
 
-export default ButtonEvents;
+export default SantaCashBox;

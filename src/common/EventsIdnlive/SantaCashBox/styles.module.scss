@@ -1,0 +1,75 @@
+.wrapper {
+    position: absolute;
+    width: 4.8rem;
+}
+
+.close {
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+
+    background-color: var(--overlay-1);
+
+    .close-icon {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+:global(.mobile-portrait) {
+    .layout-1,
+    .layout-2 {
+        top: 8rem;
+
+        .close {
+            top: 1.5rem;
+        }
+    }
+
+    .layout-1 {
+        right: 0;
+
+        .close {
+            left: -0.4rem;
+        }
+    }
+
+    .layout-2 {
+        left: 0;
+
+        .close {
+            right: -0.4rem;
+        }
+    }
+}
+
+:global(.mobile-landscape) {
+    .layout-1,
+    .layout-2 {
+        top: 7rem;
+
+        .close {
+            top: 1.5rem;
+        }
+    }
+
+    .layout-1 {
+        left: 0;
+
+        .close {
+            top: 1.5rem;
+            right: -0.4rem;
+        }
+    }
+
+    .layout-2 {
+        top: 8rem;
+        left: 0;
+
+        .close {
+            top: 1.5rem;
+            right: -0.4rem;
+        }
+    }
+}
