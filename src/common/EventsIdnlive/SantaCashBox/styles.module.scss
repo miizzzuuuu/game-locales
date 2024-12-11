@@ -1,6 +1,7 @@
 .wrapper {
     position: absolute;
     width: 4.8rem;
+    z-index: 1;
 }
 
 .close {
@@ -45,8 +46,7 @@
 }
 
 :global(.mobile-landscape) {
-    .layout-1,
-    .layout-2 {
+    .wrapper {
         top: 7rem;
 
         .close {
