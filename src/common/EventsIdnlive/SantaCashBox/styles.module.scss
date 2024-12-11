@@ -59,7 +59,8 @@
     }
 }
 
-:global(.mobile-landscape) {
+:global(.mobile-landscape),
+:global(.desktop) {
     .wrapper {
         top: 7rem;
 
@@ -88,23 +89,23 @@
     }
 }
 
-:global(.desktop) {
-    .wrapper {
-        width: 9.6rem;
-        z-index: var(--layer-game);
+// :global(.desktop) {
+//     .wrapper {
+//         width: 9.6rem;
+//         z-index: var(--layer-game);
 
-        top: 20rem;
-        right: 0;
+//         top: 20rem;
+//         right: 0;
 
-        .close {
-            top: 1.5rem;
-            left: -0.4rem;
-        }
-    }
+//         .close {
+//             top: 1.5rem;
+//             left: -0.4rem;
+//         }
+//     }
 
-    .close {
-        width: 2.1rem;
-        height: 2.1rem;
-        border-radius: 2.1rem;
-    }
-}
+//     .close {
+//         width: 2.1rem;
+//         height: 2.1rem;
+//         border-radius: 2.1rem;
+//     }
+// }

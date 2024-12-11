@@ -30,7 +30,7 @@ const SantaCashBox = ({ name }: IProps) => {
 
     return (
         <div className={className}>
-            <div onClick={openPopup}>
+            <div className={styles.button} onClick={openPopup}>
                 <Lottie
                     src={'https://cdn.lottielab.com/l/ECUL6LyZTnUXRR.json'}
                     loop
