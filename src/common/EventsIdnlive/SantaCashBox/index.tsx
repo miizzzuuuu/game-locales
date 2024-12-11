@@ -1,9 +1,9 @@
 import Lottie from '@lottielab/lottie-player/react';
-import styles from './styles.module.scss';
-import SVGIconX from '../../menus/Panel/SVG/SVGIconX';
 import { useState } from 'react';
-import { sendMessageToParent } from '../../utils/FunctionHelper';
+import SVGIconX from '../../components/SVG/SVGIconX';
 import { Features } from '../../utils/Features';
+import { sendMessageToParent } from '../../utils/FunctionHelper';
+import styles from './styles.module.scss';
 
 type IProps = {
     name: string;
