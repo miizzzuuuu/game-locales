@@ -9,7 +9,7 @@ const EventsIdnlive = () => {
         <>
             {eventsIdnliveList.map((event) => {
                 if (event.name === 'santa-cash-box') {
-                    return <SantaCashBox key={event.name} name={event.name} />;
+                    return <SantaCashBox key={event.name} event={event} />;
                 }
 
                 return null;

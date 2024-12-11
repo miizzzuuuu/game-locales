@@ -1,17 +1,18 @@
 import Lottie from '@lottielab/lottie-player/react';
 import { useState } from 'react';
+import { EventIdnlive } from '../../../types';
 import SVGIconX from '../../components/SVG/SVGIconX';
 import { Features } from '../../utils/Features';
 import { sendMessageToParent } from '../../utils/FunctionHelper';
 import styles from './styles.module.scss';
 
 type IProps = {
-    name: string;
+    event: EventIdnlive;
 };
 
 const className = `${styles.wrapper} ${Features.LAYOUT_VERSION === 2 || Features.LAYOUT_VERSION === 3 ? styles[`layout-2`] : styles[`layout-1`]}`;
 
-const SantaCashBox = ({ name }: IProps) => {
+const SantaCashBox = ({ event }: IProps) => {
     const [showButton, setShowButton] = useState(true);
 
     const openPopup = () => {
@@ -20,7 +21,7 @@ const SantaCashBox = ({ name }: IProps) => {
         sendMessageToParent({
             source: 'LIVE_GAME',
             type: 'OPEN_MODAL_EVENT',
-            payload: name,
+            payload: event,
         });
     };
 
