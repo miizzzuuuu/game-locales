@@ -7,7 +7,9 @@ function useFullscreen() {
 
     useEffect(() => {
         const toggleFullScreen = () => {
-            if (device === 'desktop' || window.isIOS || document.fullscreenElement) {
+            const inIframe = () => window.self !== window.top;
+
+            if (device === 'desktop' || window.isIOS || document.fullscreenElement || inIframe()) {
                 return;
             }
 
