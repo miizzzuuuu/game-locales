@@ -26,8 +26,10 @@ function useFetchEventList() {
             } catch (error) {
                 console.log('fetch events list', error);
             } finally {
-                setFinish(true);
-                updateLoading(10, 'Load event list completed');
+                if (!ignore) {
+                    setFinish(true);
+                    updateLoading(10, 'Load event list completed');
+                }
             }
         };
 

@@ -15,7 +15,7 @@ function useFetchTimer() {
 
         const fetchPlayerSettings = async () => {
             try {
-                updateLoading(0, 'Load settings');
+                updateLoading(0, 'Load timer');
                 const data = await getTimer();
 
                 if (!ignore) {
@@ -27,7 +27,7 @@ function useFetchTimer() {
                     }
 
                     setFinish(true);
-                    updateLoading(10, 'Load settings completed');
+                    updateLoading(10, 'Load timer completed');
                 }
             } catch (error) {
                 handleErrorApi(error);
