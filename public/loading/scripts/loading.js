@@ -6,7 +6,7 @@ Loading - 100%
 - load whole page - 25
 
 - load player data - 10
-- load player settings - 10
+- load settings - 10
 - load game data - 10
 - load timer - 10
 - load events list - 10
