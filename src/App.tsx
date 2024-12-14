@@ -16,6 +16,7 @@ import { sendMessageToParent } from './common/utils/FunctionHelper';
 import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { addBalance } from './store/slice/playerSlice';
 import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
@@ -33,21 +34,16 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
-    const { finish: finishGetEventList } = useFetchEventList();
+
+    useFetchEventList();
 
     useEffect(() => {
-        if (
-            finishGetPlayer &&
-            finishGetSettings &&
-            finishGetGame &&
-            finishGetTimer &&
-            finishGetEventList
-        ) {
+        if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
             setShowGame(true);
 
             finishLoading();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer, finishGetEventList]);
+    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
 
     const { deviceType, orientation } = useAutoResize();
 
@@ -68,15 +64,22 @@ function App() {
 
             console.log('Message from parent:', event.data);
 
-            // Kirim pesan kembali ke parent
-            sendMessageToParent(
-                {
-                    type: 'MESSAGE',
-                    payload: { message: 'game connect to container' },
-                    source: 'LIVE_GAME',
-                },
-                event.origin,
-            );
+            if (event.data.type === 'GAME_LOADED') {
+                // Kirim pesan kembali ke parent
+                sendMessageToParent(
+                    {
+                        type: 'MESSAGE',
+                        payload: { message: 'game connect to container' },
+                        source: 'LIVE_GAME',
+                    },
+                    event.origin,
+                );
+            }
+
+            if (event.data.type === 'EVENT_WIN') {
+                const value = event.data.payload as number;
+                dispatch(addBalance(value));
+            }
         };
 
         window.addEventListener('message', listenMessage);
@@ -84,7 +87,7 @@ function App() {
         return () => {
             window.removeEventListener('message', listenMessage);
         };
-    }, []);
+    }, [dispatch]);
 
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
