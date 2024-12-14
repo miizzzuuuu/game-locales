@@ -2,6 +2,7 @@ import { PropsWithChildren, useState } from 'react';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import Footer from '../../components/Footer';
+import InfoLimitBet from '../../components/InfoLimitBet';
 import EventsIdnlive from '../../EventsIdnlive';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
@@ -32,19 +33,23 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
                 </>
             )}
 
-            {(device === 'desktop' || device === 'mobile-landscape') && (
-                <div className={styles['main-wrapper']}>
-                    <div className={styles.left}>
-                        <PanelLeft />
+            {device === 'desktop' || device === 'mobile-landscape' ? (
+                <>
+                    <div className={styles['main-wrapper']}>
+                        <div className={styles.left}>
+                            <PanelLeft />
+                        </div>
+
+                        <div className={styles.main}>{children}</div>
+
+                        <div className={styles.left}>
+                            <PanelRight />
+                        </div>
                     </div>
 
-                    <div className={styles.main}>{children}</div>
-
-                    <div className={styles.left}>
-                        <PanelRight />
-                    </div>
-                </div>
-            )}
+                    <InfoLimitBet />
+                </>
+            ) : null}
 
             <Footer />
             <EventsIdnlive />
