@@ -33,21 +33,16 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
-    const { finish: finishGetEventList } = useFetchEventList();
+
+    useFetchEventList();
 
     useEffect(() => {
-        if (
-            finishGetPlayer &&
-            finishGetSettings &&
-            finishGetGame &&
-            finishGetTimer &&
-            finishGetEventList
-        ) {
+        if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
             setShowGame(true);
 
             finishLoading();
         }
-    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer, finishGetEventList]);
+    }, [finishGetPlayer, finishGetSettings, finishGetGame, finishGetTimer]);
 
     const { deviceType, orientation } = useAutoResize();
 

@@ -202,9 +202,13 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // events
-            this.get(ENDPOINTS.events, () => {
-                return eventsList;
-            });
+            this.get(
+                ENDPOINTS.events,
+                () => {
+                    return eventsList;
+                },
+                { timing: 5000 },
+            );
             this.get(ENDPOINTS.events + '/:name' + ENDPOINTS.eventLatestWinners, () => {
                 return eventLatestWinners;
             });

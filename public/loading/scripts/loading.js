@@ -2,18 +2,18 @@
 
 Loading - 100%
 
-- load document - 25
-- load whole page - 25
+- load document - 30
+- load whole page - 30
 
 - load player data - 10
 - load settings - 10
 - load game data - 10
 - load timer - 10
-- load events list - 10
 
 */
 
 let currentProgress = 0;
+const progressDocument = 30;
 
 function addLoadingScreen() {
     // Create the loading container
@@ -98,11 +98,11 @@ function updateProgress(value, text = '') {
 addLoadingScreen();
 
 window.addEventListener('DOMContentLoaded', () => {
-    updateProgress(25, 'Load document completed');
+    updateProgress(progressDocument, 'Load document completed');
 });
 
 window.addEventListener('load', () => {
-    updateProgress(25, 'Load page completed');
+    updateProgress(progressDocument, 'Load page completed');
 });
 
 window.addEventListener('updateloading', (event) => {
