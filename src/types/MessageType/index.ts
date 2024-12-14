@@ -1,4 +1,5 @@
 import { EventIdnlive } from '../ApiType';
+import { Cashdrop } from '../SocketType';
 
 export type MessageData =
     | {
@@ -10,4 +11,9 @@ export type MessageData =
           type: 'OPEN_MODAL_EVENT';
           source: 'LIVE_GAME';
           payload: EventIdnlive;
+      }
+    | {
+          type: 'GET_CASHDROP';
+          source: 'LIVE_GAME';
+          payload: Cashdrop;
       };

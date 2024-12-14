@@ -6,6 +6,7 @@ import { gameResultAction, loadNewValueAction } from '../../store/actions/socket
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
 import { setNewSet } from '../../store/slice/gameSlice';
+import { sendMessageToParent } from '../../common/utils/FunctionHelper';
 
 interface Params {
     nickname: string;
@@ -53,6 +54,14 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
             const { status } = data;
 
             dispatch(setNewSet(status));
+        });
+
+        SocketComponent.instance.listenCashdrop((data) => {
+            sendMessageToParent({
+                source: 'LIVE_GAME',
+                type: 'GET_CASHDROP',
+                payload: data,
+            });
         });
 
         return () => {

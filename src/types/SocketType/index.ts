@@ -94,3 +94,11 @@ export type ThunderM46 = {
 };
 
 export type NewSetData = { pcode: string; gameSet: number; status: boolean };
+
+export type Cashdrop = {
+    name: string; // 'santa-cash-box';
+    data: {
+        username: string;
+        agent: string;
+    };
+};

@@ -1,4 +1,4 @@
-import { LoadNewValueData, TopWinnerData } from '../../types';
+import { Cashdrop, LoadNewValueData, TopWinnerData } from '../../types';
 
 export const dummyChipBase = [
     1000, 5000, 10000, 20000, 50000, 100000, 200000, 500000, 1000000, 5000000,
@@ -143,3 +143,11 @@ export const topWinnerDummy: TopWinnerData['data'] = [
 ];
 
 export const newSetDummy = { pcode: 'm22', gameSet: 13494, status: true };
+
+export const santaCashBoxDummy: Cashdrop = {
+    name: 'santa-cash-box',
+    data: {
+        username: 'DWTKUSERBETA2',
+        agent: '287495130',
+    },
+};
