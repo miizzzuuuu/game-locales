@@ -8,11 +8,11 @@ import { selectNickname, selectOperatorId } from '../../../store/slice/playerSli
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { dummyLoadNewValue, newSetDummy, topWinnerDummy } from '../../dummy';
+import { dummyLoadNewValue, newSetDummy, santaCashBoxDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
 import { Features } from '../../utils/Features';
-import { getRandomInt } from '../../utils/FunctionHelper';
+import { getRandomInt, sendMessageToParent } from '../../utils/FunctionHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
 import Streaming from '../Streaming';
@@ -76,6 +76,13 @@ function Game() {
                 }
 
                 dispatch(setNewSet(false));
+            }
+            if (e.key === 'j') {
+                sendMessageToParent({
+                    source: 'LIVE_GAME',
+                    type: 'GET_CASHDROP',
+                    payload: santaCashBoxDummy,
+                });
             }
         },
         [dispatch],
