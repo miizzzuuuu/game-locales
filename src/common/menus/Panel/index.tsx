@@ -48,7 +48,7 @@ const Panel = ({
 
     return (
         <div
-            className={`${styles['menu-content']} ${styles[`layout-${Features.LAYOUT_VERSION.toFixed()}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
+            className={`${styles['menu-content']} ${styles[`layout-${Features.LAYOUT_VERSION}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >
