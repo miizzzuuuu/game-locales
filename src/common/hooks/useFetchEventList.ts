@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { getEventsList } from '../../services/api/eventIdnlive';
 import { useAppDispatch } from '../../store/hooks';
 import { setEventsList } from '../../store/slice/eventIdnliveSlice';
-import { updateLoading } from '../utils/LoadingHelper';
 
 function useFetchEventList() {
     const dispatch = useAppDispatch();
@@ -14,7 +13,6 @@ function useFetchEventList() {
 
         const fetchEvensIdnliveList = async () => {
             try {
-                updateLoading(0, 'Load event list');
                 const data = await getEventsList();
 
                 if (!ignore) {
@@ -28,7 +26,6 @@ function useFetchEventList() {
             } finally {
                 if (!ignore) {
                     setFinish(true);
-                    updateLoading(10, 'Load event list completed');
                 }
             }
         };
