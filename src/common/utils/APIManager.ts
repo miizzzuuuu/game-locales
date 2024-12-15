@@ -38,6 +38,13 @@ const ENDPOINTS = {
     transaction: '/v2/transactions', // path :pcode. query ?page=&per_page=&date=
 
     miniHowToPlay: '/v2/player/mini-how-to-play',
+
+    // events
+    events: '/v2/events',
+    eventLatestWinners: '/latest-winners',
+    eventTopWinners: '/top-winners',
+    eventGetPrize: '/get-prize',
+    // end events
 };
 
 const BASE_API = import.meta.env.VITE_URL_API;

@@ -48,6 +48,13 @@
     .main-area {
         grid-template-columns: 100%;
         grid-template-rows: 1fr 7rem;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: var(--height-footer);
+        z-index: 2;
     }
 
     .main-area-top {

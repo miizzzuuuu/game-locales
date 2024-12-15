@@ -86,6 +86,7 @@ export interface SendBetParam {
     total_bet: number;
     game: string;
     transId: string;
+    newlobby?: boolean;
 }
 
 export type PayoutChildren = {
@@ -113,4 +114,50 @@ export type Pagination = {
 
 export type MiniHowToPlay = {
     show: boolean;
+};
+
+// Events
+export interface EventIdnliveDate {
+    date: string;
+    timezone_type: number;
+    timezone: string;
+}
+
+export interface EventIdnlive {
+    name: string;
+    group?: string;
+    pcode: string;
+    total_amount: number;
+    max_amount?: number;
+    max_prize?: number;
+    status: 'completed' | 'running' | 'off';
+    date_start: EventIdnliveDate;
+    date_end: EventIdnliveDate;
+    latest: boolean;
+}
+
+export type EventIdnliveList = EventIdnlive[];
+
+export type EventIdnliveBase = {
+    username: string;
+    agent: string;
+};
+
+export type EventIdnliveWinner = EventIdnliveBase & {
+    prize: number;
+    date: string;
+};
+
+export type EventIdnliveLatestWinner = {
+    data: EventIdnliveWinner[];
+    pagination: Pagination;
+};
+
+export type EventIdnliveTopWinner = EventIdnliveBase & {
+    total_prize: number;
+};
+
+export type EventIdnlivePrize = {
+    win: number;
+    notwin: number[];
 };

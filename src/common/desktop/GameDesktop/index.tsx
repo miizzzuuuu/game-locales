@@ -1,8 +1,9 @@
 import { PropsWithChildren } from 'react';
+import EventsIdnlive from '../../EventsIdnlive';
 import Footer from '../Footer';
-import TopRight from '../TopRight';
-import TopLeft from '../TopLeft';
 import Main from '../Main';
+import TopLeft from '../TopLeft';
+import TopRight from '../TopRight';
 import WinnerArea from '../WinnerArea';
 
 const GameDesktop = ({ children }: PropsWithChildren) => {
@@ -12,6 +13,8 @@ const GameDesktop = ({ children }: PropsWithChildren) => {
             <TopLeft />
             <TopRight />
             <Footer />
+            <EventsIdnlive />
+
             <Main>{children}</Main>
         </>
     );

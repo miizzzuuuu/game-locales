@@ -1,7 +1,6 @@
 .footer {
     flex-shrink: 0;
     height: var(--height-footer);
-    background: var(--bg-footer);
 
     display: flex;
     line-height: 1.5;
@@ -11,6 +10,7 @@
     .footer {
         position: relative;
         justify-content: space-between;
+        background: var(--bg-footer);
     }
 }
 

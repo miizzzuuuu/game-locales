@@ -4,6 +4,7 @@ import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common
 import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
     CameraSequence,
+    Cashdrop,
     CloseTimerData,
     GameConnect,
     LoadNewValueData,
@@ -272,6 +273,14 @@ export class SocketComponent {
         if (this._socket) {
             this._socket.on(eventName, (data: NewSetData) => {
                 this.validationDataWithPcode(data, () => callback(data));
+            });
+        }
+    }
+
+    listenCashdrop(callback: (data: Cashdrop) => void): void {
+        if (this._socket) {
+            this._socket.on(SocketComponent.SOCKET_EVENT.cashdrop, (data: Cashdrop) => {
+                callback(data);
             });
         }
     }

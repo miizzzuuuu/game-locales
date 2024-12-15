@@ -24,10 +24,13 @@ const playerSlice = createSlice({
         updateBalance: (state, action: PayloadAction<number>) => {
             state.balance = action.payload;
         },
+        addBalance: (state, action: PayloadAction<number>) => {
+            state.balance += action.payload;
+        },
     },
 });
 
-export const { setPlayerData, updateBalance } = playerSlice.actions;
+export const { setPlayerData, updateBalance, addBalance } = playerSlice.actions;
 
 export const selectNickname = (state: RootState) => state.player.nickname;
 export const selectBalance = (state: RootState) => state.player.balance;

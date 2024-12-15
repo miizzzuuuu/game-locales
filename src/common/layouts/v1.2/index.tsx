@@ -9,6 +9,7 @@ import PanelLeft from '../v1/PanelLeft';
 import PanelRight from '../v1/PanelRight';
 import PanelTop from '../v1/PanelTop';
 import styles from './styles.module.scss';
+import EventsIdnlive from '../../EventsIdnlive';
 
 const LayoutV1_2 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -55,6 +56,7 @@ const LayoutV1_2 = ({ children }: PropsWithChildren) => {
                     <FooterV2 />
                 </>
             )}
+            <EventsIdnlive />
         </div>
     );
 };

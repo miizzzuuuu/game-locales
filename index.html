@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="IDNLIVE" />
@@ -20,6 +20,8 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@700..800&family=Manrope:wght@200..800&family=Poppins:wght@600&display=swap&v=1.0.0"
             rel="stylesheet"
         />
+
+        <link rel="preconnect" href="https://cdn.lottielab.com" />
 
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/loading/styles/loading.css" />
@@ -39,13 +41,15 @@
 
         <script src="/loading/scripts/loading.js"></script>
         <script>
-            function isIOS() {
+            const isIOS = () => {
                 const ua = navigator.userAgent;
                 // return !!ua.match(/iPad/i) || !!ua.match(/iPhone/i) || !!ua.match(/iPod/i)
                 return /\b(iPad|iPhone|iPod)\b/.test(ua);
-            }
+            };
 
-            if (isIOS()) {
+            const inIframe = () => window.self !== window.top;
+
+            if (isIOS() && !inIframe()) {
                 document.body.classList.add('ios');
                 window.isIOS = true;
             } else {

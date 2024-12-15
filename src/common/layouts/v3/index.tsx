@@ -5,6 +5,7 @@ import { selectDevice } from '../../../store/slice/windowSlice';
 import Footer from '../../components/Footer';
 import PanelRight from './PanelRight';
 import PanelBottom from './PanelBottom';
+import EventsIdnlive from '../../EventsIdnlive';
 
 const LayoutV3 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -32,6 +33,7 @@ const LayoutV3 = ({ children }: PropsWithChildren) => {
             </div>
 
             <Footer />
+            <EventsIdnlive />
         </div>
     );
 };
