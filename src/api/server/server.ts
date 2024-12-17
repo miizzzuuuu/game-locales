@@ -207,7 +207,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 () => {
                     return eventsList;
                 },
-                { timing: 5000 },
+                { timing: 1000 },
             );
             this.get(ENDPOINTS.events + '/:name' + ENDPOINTS.eventLatestWinners, () => {
                 return eventLatestWinners;
