@@ -43,7 +43,16 @@
         }
     }
 
-    .layout-1 {
+    .layout-3 {
+        top: 4rem;
+
+        .close {
+            top: 1.5rem;
+        }
+    }
+
+    .layout-1,
+    .layout-3 {
         right: 0;
 
         .close {
@@ -70,7 +79,8 @@
         }
     }
 
-    .layout-1 {
+    .layout-1,
+    .layout-3 {
         left: 0;
 
         .close {

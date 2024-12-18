@@ -10,7 +10,7 @@ type IProps = {
     event: EventIdnlive;
 };
 
-const className = `${styles.wrapper} ${Features.LAYOUT_VERSION === 2 || Features.LAYOUT_VERSION === 3 ? styles[`layout-2`] : styles[`layout-1`]}`;
+const className = `${styles.wrapper} ${Features.LAYOUT_VERSION === 2 ? styles[`layout-2`] : Features.LAYOUT_VERSION === 3 ? styles['layout-3'] : styles[`layout-1`]}`;
 
 const SantaCashBox = ({ event }: IProps) => {
     const [showButton, setShowButton] = useState(true);
