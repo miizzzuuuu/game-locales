@@ -6,6 +6,7 @@ import Footer from '../../components/Footer';
 import PanelRight from './PanelRight';
 import PanelBottom from './PanelBottom';
 import EventsIdnlive from '../../EventsIdnlive';
+import InfoLimitBet from '../../components/InfoLimitBet';
 
 const LayoutV3 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -28,6 +29,8 @@ const LayoutV3 = ({ children }: PropsWithChildren) => {
                         <div className={styles['main-area-bottom']}>
                             <PanelBottom />
                         </div>
+
+                        <InfoLimitBet />
                     </>
                 )}
             </div>
