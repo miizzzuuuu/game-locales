@@ -1,12 +1,13 @@
 import { PropsWithChildren } from 'react';
-import styles from './styles.module.scss';
+import HistoryResult from '../../../game/components/HistoryResult';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import Footer from '../../components/Footer';
-import PanelRight from './PanelRight';
-import PanelBottom from './PanelBottom';
-import EventsIdnlive from '../../EventsIdnlive';
 import InfoLimitBet from '../../components/InfoLimitBet';
+import EventsIdnlive from '../../EventsIdnlive';
+import PanelBottom from './PanelBottom';
+import PanelRight from './PanelRight';
+import styles from './styles.module.scss';
 
 const LayoutV3 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -35,6 +36,7 @@ const LayoutV3 = ({ children }: PropsWithChildren) => {
                 )}
             </div>
 
+            <HistoryResult />
             <Footer />
             <EventsIdnlive />
         </div>
