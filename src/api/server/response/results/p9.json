@@ -1,84 +1,89 @@
 {
     "data": [
         {
-            "angka": "04",
-            "tanggal": "2024-09-04 16:03:49",
-            "periode": 2933763,
+            "angka": "11",
+            "tanggal": "2024-12-18 18:58:31",
+            "periode": 3036472,
             "hitung": "1",
-            "gamekey": 1894276,
-            "idnomor": 1894436
+            "gamekey": 1996985,
+            "idnomor": 1997145
         },
         {
-            "angka": "08",
-            "tanggal": "2024-09-04 16:02:15",
-            "periode": 2933762,
+            "angka": "07",
+            "tanggal": "2024-12-18 18:56:45",
+            "periode": 3036471,
             "hitung": "1",
-            "gamekey": 1894275,
-            "idnomor": 1894435
+            "gamekey": 1996984,
+            "idnomor": 1997144
         },
         {
-            "angka": "02",
-            "tanggal": "2024-09-04 16:00:43",
-            "periode": 2933761,
+            "angka": "03",
+            "tanggal": "2024-12-18 18:55:14",
+            "periode": 3036470,
             "hitung": "1",
-            "gamekey": 1894274,
-            "idnomor": 1894434
+            "gamekey": 1996983,
+            "idnomor": 1997143
         },
         {
-            "angka": "08",
-            "tanggal": "2024-09-04 15:59:20",
-            "periode": 2933760,
+            "angka": "11",
+            "tanggal": "2024-12-18 18:53:47",
+            "periode": 3036469,
             "hitung": "1",
-            "gamekey": 1894273,
-            "idnomor": 1894433
-        },
-        {
-            "angka": "12",
-            "tanggal": "2024-09-04 15:57:05",
-            "periode": 2933759,
-            "hitung": "1",
-            "gamekey": 1894272,
-            "idnomor": 1894432
-        },
-        {
-            "angka": "02",
-            "tanggal": "2024-09-04 15:55:37",
-            "periode": 2933758,
-            "hitung": "1",
-            "gamekey": 1894271,
-            "idnomor": 1894431
+            "gamekey": 1996982,
+            "idnomor": 1997142
         },
         {
             "angka": "06",
-            "tanggal": "2024-09-04 15:54:08",
-            "periode": 2933757,
+            "tanggal": "2024-12-18 18:52:31",
+            "periode": 3036468,
             "hitung": "1",
-            "gamekey": 1894270,
-            "idnomor": 1894430
+            "gamekey": 1996981,
+            "idnomor": 1997141
         },
         {
-            "angka": "10",
-            "tanggal": "2024-09-04 15:52:35",
-            "periode": 2933756,
+            "angka": "05",
+            "tanggal": "2024-12-18 18:51:10",
+            "periode": 3036467,
             "hitung": "1",
-            "gamekey": 1894269,
-            "idnomor": 1894429
+            "gamekey": 1996980,
+            "idnomor": 1997140
+        },
+        {
+            "angka": "09",
+            "tanggal": "2024-12-18 18:49:49",
+            "periode": 3036466,
+            "hitung": "1",
+            "gamekey": 1996979,
+            "idnomor": 1997139
+        },
+        {
+            "angka": "05",
+            "tanggal": "2024-12-18 18:48:30",
+            "periode": 3036465,
+            "hitung": "1",
+            "gamekey": 1996978,
+            "idnomor": 1997138
+        },
+        {
+            "angka": "01",
+            "tanggal": "2024-12-18 18:47:14",
+            "periode": 3036464,
+            "hitung": "1",
+            "gamekey": 1996977,
+            "idnomor": 1997137
         },
         {
             "angka": "04",
-            "tanggal": "2024-09-04 15:51:09",
-            "periode": 2933755,
+            "tanggal": "2024-12-18 18:45:55",
+            "periode": 3036463,
             "hitung": "1",
-            "gamekey": 1894268,
-            "idnomor": 1894428
-        },
-        {
-            "angka": "08",
-            "tanggal": "2024-09-04 15:48:53",
-            "periode": 2933754,
-            "hitung": "1",
-            "gamekey": 1894267,
-            "idnomor": 1894427
+            "gamekey": 1996976,
+            "idnomor": 1997136
         }
-    ]
+    ],
+    "pagination": {
+        "total_datas": 181719,
+        "current_page": 1,
+        "total_pages": 10
+    }
 }
