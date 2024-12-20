@@ -118,7 +118,7 @@ export class SocketComponent {
                 // console.log('socket loadNewValue:', data);
 
                 this.validationDataWithPcode(data, () => {
-                    if (this._lastLoadNewValuePeriod === data.periode) {
+                    if (this._lastLoadNewValuePeriod === data.periode || !data.timer) {
                         return;
                     }
 
