@@ -1,4 +1,5 @@
-import BACKGROUND_STREAMING from '../../../assets/img/streaming/background-streaming.webp';
+import { useMemo } from 'react';
+import { getBackgroundStreaming } from '../../../game/utils/StreamingHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectStreamURL } from '../../../store/slice/gameSlice';
 import { selectEnableStreamingVideo } from '../../../store/slice/settingsSlice';
@@ -9,6 +10,8 @@ import WebStreamError from './WebStreamError';
 const Video = () => {
     const enableStreamingVideo = useAppSelector(selectEnableStreamingVideo);
     const url = useAppSelector(selectStreamURL);
+
+    const BACKGROUND_STREAMING = useMemo(() => getBackgroundStreaming(), []);
 
     return (
         <div className={styles['video-wrapper']}>
