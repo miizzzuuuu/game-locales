@@ -1,3 +1,5 @@
+import { FLASHSCREENS, GAME_LOGOS } from './game-assets.js';
+
 /** 
 
 Loading - 100%
@@ -15,17 +17,14 @@ Loading - 100%
 let currentProgress = 0;
 const progressDocument = 30;
 
-const FLASHSCREENS = {};
-const GAME_LOGOS = {};
-
 function setFlashsreen(element, pcode) {
     const flashscreen = pcode in FLASHSCREENS ? FLASHSCREENS[pcode] : 'flashscreen.webp';
-    element.style.setProperty('--bg-image', `url('../img/${flashscreen}')`);
+    element.style.setProperty('--bg-image', `url('../img/game/${flashscreen}')`);
 }
 
 function setGameLogo(element, pcode) {
     const logo = pcode in GAME_LOGOS ? GAME_LOGOS[pcode] : 'game-logo.webp';
-    element.src = `loading/img/${logo}`;
+    element.src = `loading/img/game/${logo}`;
 }
 
 function getPcode() {

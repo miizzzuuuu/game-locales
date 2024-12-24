@@ -1,14 +1,12 @@
-import BACKGROUND_STREAMING from '../../assets/img/streaming/background-streaming.webp';
 import { getPcode } from '../../common/utils/GameHelper';
-
-const BG_STREAMINGS: Record<string, string> = {};
+import { BACKGROUND_STREAMING, BACKGROUND_STREAMINGS } from '../constants/BackgroundStreaming';
 
 export const getBackgroundStreaming = () => {
     const pcode = getPcode();
 
-    if (!(pcode in BG_STREAMINGS)) {
-        return BACKGROUND_STREAMING;
+    if (pcode in BACKGROUND_STREAMINGS) {
+        return BACKGROUND_STREAMINGS[pcode];
     }
 
-    return BG_STREAMINGS[pcode];
+    return BACKGROUND_STREAMING;
 };
