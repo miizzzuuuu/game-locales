@@ -1,9 +1,13 @@
+import { useAppSelector } from '../../../../../store/hooks';
+import { selectLobbyUrl } from '../../../../../store/slice/playerSlice';
 import Item from '../Item';
 import SVGIconLobby from '../SVG/SVGIconLobby';
 
-const urlLobby = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
+const urlLobbyLocal = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
 
 const BackToLobby = () => {
+    const lobbyUrl = useAppSelector(selectLobbyUrl);
+
     const handleBackToLobby = () => {
         const changeMainGame = async () => {
             await fetch('/auth/maingame/change?game=');
@@ -14,7 +18,7 @@ const BackToLobby = () => {
             if (parent.top?.opener) {
                 parent.close();
             } else {
-                parent.location.href = urlLobby;
+                parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
             }
         };
 
