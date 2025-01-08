@@ -203,3 +203,20 @@ export const getEventNewSet = () => {
 
     return variant ? baseNewSet + variant.toUpperCase() : baseNewSet;
 };
+
+export const urlLobbyLocal = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
+
+export const handleBackToLobby = (lobbyUrl?: string) => {
+    const changeMainGame = async () => {
+        await fetch('/auth/maingame/change?game=');
+
+        const parent = window === window.parent ? window : window.parent;
+        if (parent.top?.opener) {
+            parent.close();
+        } else {
+            parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
+        }
+    };
+
+    void changeMainGame();
+};
