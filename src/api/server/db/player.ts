@@ -3,7 +3,7 @@ export const player = {
     device: 'desktop',
     balance: 30507433630,
     currency: 'IDR',
-    showCurrency: false,
+    showCurrency: true,
     chipBase: [1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 25000000],
     nickname: 'DWTKUSERBETA1',
     table: 'B',
