@@ -1,6 +1,15 @@
 import { getLoacale } from './LangHelper';
 
-export const formatCurrency = (number: number, currency: string, lang: string): string => {
+export const formatCurrency = (
+    number: number,
+    currency: string,
+    lang: string,
+    hide?: boolean,
+): string => {
+    if (hide) {
+        return formatNumber(number, lang);
+    }
+
     const locale = getLoacale(lang);
 
     let result = number.toLocaleString(locale, {

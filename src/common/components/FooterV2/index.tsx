@@ -1,10 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../store/hooks';
 import { selectTotalBet, selectTotalBetAdd } from '../../../store/slice/bets';
-import { selectBalance, selectCurrency, selectNickname } from '../../../store/slice/playerSlice';
+import { selectGameName, selectPeriod } from '../../../store/slice/gameSlice';
+import {
+    selectBalance,
+    selectCurrency,
+    selectNickname,
+    selectShowCurrency,
+} from '../../../store/slice/playerSlice';
 import { formatCurrency, formatNumber } from '../../utils/StringHelper';
 import styles from './styles.module.scss';
-import { selectGameName, selectPeriod } from '../../../store/slice/gameSlice';
 
 const Left = () => {
     const { i18n } = useTranslation();
@@ -12,6 +17,7 @@ const Left = () => {
     const nickname = useAppSelector(selectNickname);
     const balance = useAppSelector(selectBalance);
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
 
     const totalBetAdd = useAppSelector(selectTotalBetAdd);
 
@@ -19,7 +25,7 @@ const Left = () => {
         <div className={styles.left}>
             <span className={`${styles['text-1']} ${styles['text-shadow']}`}>{nickname}</span>
             <span className={`${styles['text-3']} ${styles['text-shadow']}`}>
-                {formatCurrency(balance - totalBetAdd, currency, i18n.language)}
+                {formatCurrency(balance - totalBetAdd, currency, i18n.language, !showCurrency)}
             </span>
         </div>
     );

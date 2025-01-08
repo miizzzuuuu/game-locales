@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ITransactionCardProps } from '..';
 import { useAppSelector } from '../../../../../../store/hooks';
 import { selectGameName } from '../../../../../../store/slice/gameSlice';
-import { selectCurrency } from '../../../../../../store/slice/playerSlice';
+import { selectCurrency, selectShowCurrency } from '../../../../../../store/slice/playerSlice';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { getGameDisplayName, getPcode } from '../../../../../utils/GameHelper';
 import { formatCurrency, formatedDate } from '../../../../../utils/StringHelper';
@@ -14,6 +14,7 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
     const { tglbel, pcode, total_transaction, total_debit, periode } = data;
 
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
     const gameName = useAppSelector(selectGameName);
 
     return (
@@ -30,7 +31,7 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
                     }}
                 >
                     {total_transaction > 0 ? '+' : ''}
-                    {formatCurrency(total_transaction, currency, i18n.language)}
+                    {formatCurrency(total_transaction, currency, i18n.language, !showCurrency)}
                 </span>
             </div>
 
@@ -39,7 +40,7 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
                     {formatedDate(tglbel, i18n.language)}
                 </span>
                 <span className={styles['text-secondary']}>
-                    {formatCurrency(total_debit, currency, i18n.language)}
+                    {formatCurrency(total_debit, currency, i18n.language, !showCurrency)}
                 </span>
             </div>
 
