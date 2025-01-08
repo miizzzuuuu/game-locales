@@ -6,7 +6,7 @@ import {
     selectMin,
     selectPeriod,
 } from '../../../../store/slice/gameSlice';
-import { selectCurrency } from '../../../../store/slice/playerSlice';
+import { selectCurrency, selectShowCurrency } from '../../../../store/slice/playerSlice';
 import { formatCurrency, formatNumber } from '../../../utils/StringHelper';
 import UserInfo from '../../UserInfo';
 
@@ -18,12 +18,13 @@ const Game = () => {
     const min = useAppSelector(selectMin);
     const max50 = useAppSelector(selectMax50);
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
 
     return (
         <UserInfo
             label={`#${period}`}
             labelSecond={gameName}
-            value={`${formatCurrency(min, currency, i18n.language)}-${formatNumber(max50, i18n.language)}`}
+            value={`${formatCurrency(min, currency, i18n.language, !showCurrency)}-${formatNumber(max50, i18n.language)}`}
             isRight
         />
     );
