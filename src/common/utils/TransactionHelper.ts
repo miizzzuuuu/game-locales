@@ -13,6 +13,7 @@ import {
     PcodeDomino,
     PcodeDragonTiger,
     PcodeDragonTigerWild,
+    PcodeMonopoly,
     PcodeOglok,
     PcodePokerDice,
     PcodeRedWhite,
@@ -90,6 +91,10 @@ export const isPokerDice = (item: Transaction<string>): item is Transaction<Pcod
 
 export const isSuwit = (item: Transaction<string>): item is Transaction<PcodeSuwit> => {
     return item.pcode.startsWith('m19');
+};
+
+export const isMonopoly = (item: Transaction<string>): item is Transaction<PcodeMonopoly> => {
+    return item.pcode.startsWith('m20');
 };
 
 export const isBaccarat = (item: Transaction<string>): item is Transaction<PcodeBaccarat> => {

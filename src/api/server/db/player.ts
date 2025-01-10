@@ -3,6 +3,7 @@ export const player = {
     device: 'desktop',
     balance: 30507433630,
     currency: 'IDR',
+    showCurrency: true,
     chipBase: [1000, 5000, 10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 25000000],
     nickname: 'DWTKUSERBETA1',
     table: 'B',
@@ -12,4 +13,5 @@ export const player = {
     operatorLogo: null,
     apiKey: '2w1SFvhYsU3yB9EHTiforqtgzkxWpbQl',
     token_sid: 'a2_PRncw0Xt_G80XqRNelPFu9wcjrjRy',
+    lobbyUrl: 'http://localhost:4000',
 };

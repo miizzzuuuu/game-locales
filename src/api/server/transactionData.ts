@@ -8,6 +8,7 @@ import transactionsP7E from './response/transactions/p7e.json';
 import transactionsP7G from './response/transactions/p7g.json';
 import transactionsP9 from './response/transactions/p9.json';
 import transactionsP9B from './response/transactions/p9b.json';
+import transactionsP9C from './response/transactions/p9c.json';
 import transactionsP12 from './response/transactions/p12.json';
 import transactionsP12B from './response/transactions/p12b.json';
 import transactionsM6 from './response/transactions/m6.json';
@@ -20,6 +21,7 @@ import transactionsM14 from './response/transactions/m14.json';
 import transactionsM14B from './response/transactions/m14b.json';
 import transactionsM19 from './response/transactions/m19.json';
 import transactionsM19B from './response/transactions/m19b.json';
+import transactionsM20 from './response/transactions/m20.json';
 import transactionsM22 from './response/transactions/m22.json';
 import transactionsM22B from './response/transactions/m22b.json';
 import transactionsM22C from './response/transactions/m22c.json';
@@ -46,6 +48,7 @@ const transactionData: Record<string, object> = {
     p7g: transactionsP7G,
     p9: transactionsP9,
     p9b: transactionsP9B,
+    p9c: transactionsP9C,
     p12: transactionsP12,
     p12b: transactionsP12B,
     m6: transactionsM6,
@@ -58,6 +61,7 @@ const transactionData: Record<string, object> = {
     m14b: transactionsM14B,
     m19: transactionsM19,
     m19b: transactionsM19B,
+    m20: transactionsM20,
     m22: transactionsM22,
     m22b: transactionsM22B,
     m22c: transactionsM22C,

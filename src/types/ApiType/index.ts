@@ -14,6 +14,9 @@ export interface Player {
     operatorLogo: string | null;
     apiKey: string;
     token_sid: string;
+
+    showCurrency?: boolean;
+    lobbyUrl?: string;
 }
 
 export interface Settings {

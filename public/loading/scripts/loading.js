@@ -1,3 +1,5 @@
+import { FLASHSCREENS, GAME_LOGOS } from './game-assets.js';
+
 /** 
 
 Loading - 100%
@@ -15,17 +17,37 @@ Loading - 100%
 let currentProgress = 0;
 const progressDocument = 30;
 
+function setFlashsreen(element, pcode) {
+    const flashscreen = pcode in FLASHSCREENS ? FLASHSCREENS[pcode] : 'flashscreen.webp';
+    element.style.setProperty('--bg-image', `url('../img/game/${flashscreen}')`);
+}
+
+function setGameLogo(element, pcode) {
+    const logo = pcode in GAME_LOGOS ? GAME_LOGOS[pcode] : 'game-logo.webp';
+    element.src = `loading/img/game/${logo}`;
+}
+
+function getPcode() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    return urlParams.get('pcode');
+}
+
 function addLoadingScreen() {
+    const pcode = getPcode();
+
     // Create the loading container
     const loadingContainer = document.createElement('div');
     loadingContainer.id = 'loading';
     loadingContainer.className = 'loading';
+    setFlashsreen(loadingContainer, pcode);
 
     // Create the loading logo image
     const loadingLogo = document.createElement('img');
     loadingLogo.className = 'loading-logo';
-    loadingLogo.src = 'loading/img/game-logo.webp';
     loadingLogo.alt = '';
+    setGameLogo(loadingLogo, pcode);
 
     // Create the loading bottom container
     const loadingBottom = document.createElement('div');

@@ -5,6 +5,7 @@ import {
     selectBalance,
     selectCurrency,
     selectNickname,
+    selectShowCurrency,
 } from '../../../../../../../../store/slice/playerSlice';
 import { formatCurrency } from '../../../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
@@ -13,6 +14,7 @@ const Username = () => {
     const { i18n } = useTranslation();
 
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
     const nickname = useAppSelector(selectNickname);
     const balance = useAppSelector(selectBalance);
     const totalBetAdd = useAppSelector(selectTotalBetAdd);
@@ -24,7 +26,7 @@ const Username = () => {
             </div>
 
             <span className={styles.value}>
-                {formatCurrency(balance - totalBetAdd, currency, i18n.language)}
+                {formatCurrency(balance - totalBetAdd, currency, i18n.language, !showCurrency)}
             </span>
         </div>
     );

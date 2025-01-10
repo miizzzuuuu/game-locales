@@ -204,9 +204,9 @@ export const getEventNewSet = () => {
     return variant ? baseNewSet + variant.toUpperCase() : baseNewSet;
 };
 
-export const urlLobby = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
+export const urlLobbyLocal = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
 
-export const handleBackToLobby = () => {
+export const handleBackToLobby = (lobbyUrl?: string) => {
     const changeMainGame = async () => {
         await fetch('/auth/maingame/change?game=');
 
@@ -214,7 +214,7 @@ export const handleBackToLobby = () => {
         if (parent.top?.opener) {
             parent.close();
         } else {
-            parent.location.href = urlLobby;
+            parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
         }
     };
 

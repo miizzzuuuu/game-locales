@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Fragment } from 'react/jsx-runtime';
 import { useAppSelector } from '../../../../../../store/hooks';
-import { selectCurrency } from '../../../../../../store/slice/playerSlice';
+import { selectCurrency, selectShowCurrency } from '../../../../../../store/slice/playerSlice';
 import { PayoutData } from '../../../../../../types';
 import LabelTranslate from '../../../../../components/LabelTranslate';
 import { getBasePcode } from '../../../../../utils/GameHelper';
@@ -16,6 +16,7 @@ const TableMenuPayout = ({ data }: IProps) => {
     const { i18n } = useTranslation();
 
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
 
     const basePcode = getBasePcode();
 
@@ -47,8 +48,13 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     />
                                 </td>
                                 <td className="text-center text-cyan text-nowrap">
-                                    {formatCurrency(item.min, currency, i18n.language)} -{' '}
-                                    {formatNumber(item.max, i18n.language)}
+                                    {formatCurrency(
+                                        item.min,
+                                        currency,
+                                        i18n.language,
+                                        !showCurrency,
+                                    )}{' '}
+                                    - {formatNumber(item.max, i18n.language)}
                                 </td>
                                 <td
                                     className={`${'text-center'}${item.payout ? '' : ' ' + styles.shading}`}

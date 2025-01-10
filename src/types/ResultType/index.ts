@@ -88,6 +88,10 @@ export type ResultM19 = CommonResult & {
     angka: string; // 'kertas,jempol';
 };
 
+export type ResultM20 = CommonResult & {
+    angka: string;
+};
+
 export type ResultM22 = CommonResult & {
     result: 'banker' | 'player' | 'tie';
     value: number | string;

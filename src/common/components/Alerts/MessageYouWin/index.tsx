@@ -2,7 +2,7 @@ import { AnimationEventHandler, useCallback, useEffect, useRef, useState } from 
 import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
-import { selectCurrency } from '../../../../store/slice/playerSlice';
+import { selectCurrency, selectShowCurrency } from '../../../../store/slice/playerSlice';
 import {
     endWinAnimation,
     selectWinAmount,
@@ -16,6 +16,7 @@ import styles from './styles.module.scss';
 
 const MessageYouWin = () => {
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
 
     const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
     const messageYouWinRef = useRef<HTMLDivElement>(null);
@@ -146,7 +147,7 @@ const MessageYouWin = () => {
                 <LabelTranslate value="you-win" className={styles.label} />
 
                 <div className={styles.value}>
-                    {formatCurrency(displayValue, currency, i18n.language)}
+                    {formatCurrency(displayValue, currency, i18n.language, !showCurrency)}
                 </div>
             </div>
         </div>

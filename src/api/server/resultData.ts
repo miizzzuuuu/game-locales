@@ -8,6 +8,7 @@ import resultsP7E from './response/results/p7e.json';
 import resultsP7G from './response/results/p7g.json';
 import resultsP9 from './response/results/p9.json';
 import resultsP9B from './response/results/p9b.json';
+import resultsP9C from './response/results/p9c.json';
 import resultsP12 from './response/results/p12.json';
 import resultsP12B from './response/results/p12b.json';
 import resultM6 from './response/results/m6.json';
@@ -20,6 +21,7 @@ import resultM14 from './response/results/m14.json';
 import resultM14B from './response/results/m14b.json';
 import resultM19 from './response/results/m19.json';
 import resultM19B from './response/results/m19b.json';
+import resultM20 from './response/results/m20.json';
 import resultM22 from './response/results/m22.json';
 import resultM22B from './response/results/m22b.json';
 import resultM22C from './response/results/m22c.json';
@@ -46,6 +48,7 @@ const resultData: Record<string, { data: any[] }> = {
     p7g: resultsP7G,
     p9: resultsP9,
     p9b: resultsP9B,
+    p9c: resultsP9C,
     p12: resultsP12,
     p12b: resultsP12B,
     m6: resultM6,
@@ -58,6 +61,7 @@ const resultData: Record<string, { data: any[] }> = {
     m14b: resultM14B,
     m19: resultM19,
     m19b: resultM19B,
+    m20: resultM20,
     m22: resultM22,
     m22b: resultM22B,
     m22c: resultM22C,

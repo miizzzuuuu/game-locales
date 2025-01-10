@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import { useAppSelector } from '../../../store/hooks';
 import { selectMax50, selectMin } from '../../../store/slice/gameSlice';
+import { selectCurrency, selectShowCurrency } from '../../../store/slice/playerSlice';
 import { formatCurrency, formatNumber } from '../../utils/StringHelper';
 import styles from './styles.module.scss';
-import { selectCurrency } from '../../../store/slice/playerSlice';
 
 const InfoLimitBet = () => {
     const { i18n } = useTranslation();
@@ -11,11 +11,13 @@ const InfoLimitBet = () => {
     const min = useAppSelector(selectMin);
     const max50 = useAppSelector(selectMax50);
     const currency = useAppSelector(selectCurrency);
+    const showCurrency = useAppSelector(selectShowCurrency);
 
     return (
         <div className={styles.info}>
             <span className={styles.text}>
-                {formatCurrency(min, currency, i18n.language)}-{formatNumber(max50, i18n.language)}
+                {formatCurrency(min, currency, i18n.language, !showCurrency)}-
+                {formatNumber(max50, i18n.language)}
             </span>
         </div>
     );
