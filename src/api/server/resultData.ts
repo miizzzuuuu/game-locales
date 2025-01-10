@@ -21,6 +21,7 @@ import resultM14 from './response/results/m14.json';
 import resultM14B from './response/results/m14b.json';
 import resultM19 from './response/results/m19.json';
 import resultM19B from './response/results/m19b.json';
+import resultM20 from './response/results/m20.json';
 import resultM22 from './response/results/m22.json';
 import resultM22B from './response/results/m22b.json';
 import resultM22C from './response/results/m22c.json';
@@ -60,6 +61,7 @@ const resultData: Record<string, { data: any[] }> = {
     m14b: resultM14B,
     m19: resultM19,
     m19b: resultM19B,
+    m20: resultM20,
     m22: resultM22,
     m22b: resultM22B,
     m22c: resultM22C,
