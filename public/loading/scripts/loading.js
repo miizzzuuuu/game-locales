@@ -1,4 +1,5 @@
 import { FLASHSCREENS, GAME_LOGOS } from './game-assets.js';
+import { getTitle } from './game-name.js';
 
 /** 
 
@@ -36,6 +37,12 @@ function getPcode() {
 
 function addLoadingScreen() {
     const pcode = getPcode();
+
+    // Set Title Document
+    const title = getTitle(pcode);
+    if (title) {
+        document.title = title;
+    }
 
     // Create the loading container
     const loadingContainer = document.createElement('div');
