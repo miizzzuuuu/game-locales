@@ -81,6 +81,10 @@ export const isDice6Fever = (item: Transaction<string>): item is Transaction<Pco
     return item.pcode.startsWith('m8b');
 };
 
+export const isHeadTail = (item: Transaction<string>): item is Transaction<PcodeHeadTail> => {
+    return item.pcode.startsWith('m10');
+};
+
 export const isRedWhite = (item: Transaction<string>): item is Transaction<PcodeHeadTail> => {
     return item.pcode.startsWith('m11');
 };
