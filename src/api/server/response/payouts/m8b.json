@@ -1,0 +1,63 @@
+[
+    {
+        "name": "one number",
+        "payout": null,
+        "items": [
+            {
+                "name": "normal",
+                "payout": 4
+            },
+            {
+                "name": "hot",
+                "payout": 7
+            },
+            {
+                "name": "cold",
+                "payout": 2
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "two numbers",
+        "payout": 1.5,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "four numbers",
+        "payout": 0.25,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "side bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "big,small,odd,even",
+                "payout": null,
+                "type": "n50",
+                "items": [
+                    {
+                        "name": "normal",
+                        "payout": 0.95
+                    },
+                    {
+                        "name": "hot",
+                        "payout": 1.5
+                    },
+                    {
+                        "name": "cold",
+                        "payout": 0.5
+                    }
+                ]
+            }
+        ],
+        "min": 5000,
+        "max": 5000000
+    }
+]

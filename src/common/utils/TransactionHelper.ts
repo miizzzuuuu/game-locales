@@ -16,7 +16,7 @@ import {
     PcodeMonopoly,
     PcodeOglok,
     PcodePokerDice,
-    PcodeRedWhite,
+    PcodeHeadTail,
     PcodeRoulette,
     PcodeShioFight,
     PcodeSicboDice,
@@ -81,7 +81,7 @@ export const isDice6Fever = (item: Transaction<string>): item is Transaction<Pco
     return item.pcode.startsWith('m8b');
 };
 
-export const isRedWhite = (item: Transaction<string>): item is Transaction<PcodeRedWhite> => {
+export const isRedWhite = (item: Transaction<string>): item is Transaction<PcodeHeadTail> => {
     return item.pcode.startsWith('m11');
 };
 
