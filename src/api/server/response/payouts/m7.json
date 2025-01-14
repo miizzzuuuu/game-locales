@@ -1,0 +1,57 @@
+[
+    {
+        "name": "single dice",
+        "payout": null,
+        "items": [
+            {
+                "name": "on single dice",
+                "payout": 1
+            },
+            {
+                "name": "on double dice",
+                "payout": 2
+            },
+            {
+                "name": "on triple dice",
+                "payout": 3
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "two dice combination",
+        "payout": 5,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "four dice combination",
+        "payout": 7,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "double",
+        "payout": 8,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "triple",
+        "payout": 180,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "any triple",
+        "payout": 30,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    }
+]

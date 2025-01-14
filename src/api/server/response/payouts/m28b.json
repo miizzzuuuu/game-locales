@@ -1,0 +1,37 @@
+[
+    {
+        "name": "player",
+        "payout": 0.97,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "banker",
+        "payout": 0.97,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tie",
+        "payout": 8,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "player pair",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "banker pair",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    }
+]

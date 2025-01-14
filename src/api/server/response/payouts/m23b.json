@@ -1,0 +1,59 @@
+[
+    {
+        "name": "dragon",
+        "payout": 1,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tiger",
+        "payout": 1,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tie",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "wild bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "dragon wild",
+                "payout": 24
+            },
+            {
+                "name": "tiger wild",
+                "payout": 24
+            },
+            {
+                "name": "super wild",
+                "payout": 127
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "pair bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "dragon pair",
+                "payout": 11
+            },
+            {
+                "name": "tiger pair",
+                "payout": 11
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    }
+]

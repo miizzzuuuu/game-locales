@@ -1,0 +1,70 @@
+[
+    {
+        "name": "versus black",
+        "payout": null,
+        "items": [
+            {
+                "name": "scissors",
+                "payout": 1.95
+            },
+            {
+                "name": "stone",
+                "payout": 1.95
+            },
+            {
+                "name": "paper",
+                "payout": 1.95
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "versus red",
+        "payout": null,
+        "items": [
+            {
+                "name": "thumb",
+                "payout": 1.95
+            },
+            {
+                "name": "index",
+                "payout": 1.95
+            },
+            {
+                "name": "pinky",
+                "payout": 1.95
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "combination",
+        "payout": null,
+        "items": [
+            {
+                "name": "single",
+                "payout": 7.5
+            },
+            {
+                "name": "split",
+                "payout": 3.25
+            },
+            {
+                "name": "corner",
+                "payout": 1.1
+            },
+            {
+                "name": "row",
+                "payout": 1.75
+            },
+            {
+                "name": "column",
+                "payout": 1.75
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    }
+]
