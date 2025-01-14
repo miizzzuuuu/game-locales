@@ -10,7 +10,7 @@ import Item from '../Item';
 import SVGIconHistory from '../SVG/SVGIconHistory';
 import SVGIconHowToPlay from '../SVG/SVGIconHowToPlay';
 import SVGIconPayout from '../SVG/SVGIconPayout';
-import SVGIconPromotion from '../SVG/SVGIconPromotion';
+// import SVGIconPromotion from '../SVG/SVGIconPromotion';
 import SVGIconSettings from '../SVG/SVGIconSettings';
 
 import styles from './styles.module.scss';
@@ -37,7 +37,7 @@ const Content = () => {
                 text="payout-and-limit"
                 onClick={() => dispatch(toggleMenuPayout())}
             />
-            <Item icon={<SVGIconPromotion />} text="promotion" />
+            {/* <Item icon={<SVGIconPromotion />} text="promotion" /> */}
             <Item
                 icon={<SVGIconSettings />}
                 text="settings"
