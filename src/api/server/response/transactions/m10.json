@@ -1,0 +1,789 @@
+{
+    "data": [
+        {
+            "tglbel": "2025-01-14T11:40:46.000Z",
+            "periode": "3418986",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 2600,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352593,
+                "tanggal": "2025-01-14T11:41:25.000Z",
+                "periode": 3418986,
+                "hitung": "1",
+                "gamekey": "2352418",
+                "angka": "1,2,1"
+            },
+            "total_debit": 19000,
+            "total_credit": 16250,
+            "total_transaction": -2750
+        },
+        {
+            "tglbel": "2025-01-14T11:39:27.000Z",
+            "periode": "3418985",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352592,
+                "tanggal": "2025-01-14T11:40:17.000Z",
+                "periode": 3418985,
+                "hitung": "1",
+                "gamekey": "2352417",
+                "angka": "1,1,1"
+            },
+            "total_debit": 19000,
+            "total_credit": 11700,
+            "total_transaction": -7300
+        },
+        {
+            "tglbel": "2025-01-14T11:38:17.000Z",
+            "periode": "3418984",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 11700,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 2600,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352591,
+                "tanggal": "2025-01-14T11:38:57.000Z",
+                "periode": 3418984,
+                "hitung": "1",
+                "gamekey": "2352416",
+                "angka": "2,1,1"
+            },
+            "total_debit": 19000,
+            "total_credit": 24050,
+            "total_transaction": 5050
+        },
+        {
+            "tglbel": "2025-01-14T11:37:06.000Z",
+            "periode": "3418983",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 11700,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352590,
+                "tanggal": "2025-01-14T11:37:46.000Z",
+                "periode": 3418983,
+                "hitung": "1",
+                "gamekey": "2352415",
+                "angka": "2,2,2"
+            },
+            "total_debit": 19000,
+            "total_credit": 21450,
+            "total_transaction": 2450
+        },
+        {
+            "tglbel": "2025-01-14T11:35:53.000Z",
+            "periode": "3418982",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 2600,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352589,
+                "tanggal": "2025-01-14T11:36:36.000Z",
+                "periode": 3418982,
+                "hitung": "1",
+                "gamekey": "2352414",
+                "angka": "1,1,2"
+            },
+            "total_debit": 19000,
+            "total_credit": 12350,
+            "total_transaction": -6650
+        },
+        {
+            "tglbel": "2025-01-14T11:34:36.000Z",
+            "periode": "3418981",
+            "pcode": "m10",
+            "detail_betting": [
+                {
+                    "tebak": "Right",
+                    "type": "n50",
+                    "taruhan": 6000,
+                    "prize": 1.95,
+                    "win_amount": 11700,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Head,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Tail,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 7800,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Tail,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Tail,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Tail,Tail",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Head,Head,Head",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 7.8,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 1 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Coin 2 Tail",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Coin 3 Head",
+                    "type": "d",
+                    "taruhan": 1000,
+                    "prize": 1.95,
+                    "win_amount": 1950,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "2 Tails 1 Head",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 2600,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "2 Heads 1 Tail",
+                    "type": "c",
+                    "taruhan": 1000,
+                    "prize": 2.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 2352588,
+                "tanggal": "2025-01-14T11:35:25.000Z",
+                "periode": 3418981,
+                "hitung": "1",
+                "gamekey": "2352413",
+                "angka": "2,2,1"
+            },
+            "total_debit": 19000,
+            "total_credit": 26000,
+            "total_transaction": 7000
+        }
+    ],
+    "pagination": {
+        "total_datas": 6,
+        "current_page": 1,
+        "total_pages": 1
+    }
+}
