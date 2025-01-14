@@ -98,7 +98,7 @@ export function makeServer({ environment = 'test' } = {}) {
             this.get(ENDPOINTS.games + '/:pcode/payout', (_, request) => {
                 const pcode = request.params.pcode;
 
-                if (pcode in resultData) {
+                if (pcode in payoutData) {
                     return payoutData[pcode];
                 } else {
                     return new Response(400, {}, { message: 'Payout Empty' });
