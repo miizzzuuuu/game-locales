@@ -1,0 +1,357 @@
+{
+    "data": [
+        {
+            "tglbel": "2024-11-14T04:17:47.000Z",
+            "periode": "291033",
+            "pcode": "m13",
+            "detail_betting": [
+                {
+                    "tebak": "Big",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "13",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "05",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "04",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "02",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "10",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "09",
+                    "type": "n",
+                    "taruhan": 10000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 39182,
+                "tanggal": "2024-11-14T04:17:59.000Z",
+                "periode": 291033,
+                "hitung": "1",
+                "gamekey": "39021",
+                "angka": "15",
+                "type": "15"
+            },
+            "total_debit": 40000,
+            "total_credit": 10000,
+            "total_transaction": -30000
+        },
+        {
+            "tglbel": "2024-11-14T04:14:58.000Z",
+            "periode": "291031",
+            "pcode": "m13",
+            "detail_betting": [
+                {
+                    "tebak": "11,12,13,14,15",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "01,02,03,04,05",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "06,07,08,09,10",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 13750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "06",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "14",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Big",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Odd",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 9750,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "05,10,15",
+                    "type": "n3",
+                    "taruhan": 5000,
+                    "prize": 4.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "09",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 14000,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 39180,
+                "tanggal": "2024-11-14T04:15:17.000Z",
+                "periode": 291031,
+                "hitung": "1",
+                "gamekey": "39019",
+                "angka": "09",
+                "type": "9"
+            },
+            "total_debit": 41000,
+            "total_credit": 47500,
+            "total_transaction": 6500
+        },
+        {
+            "tglbel": "2024-11-14T04:13:20.000Z",
+            "periode": "291030",
+            "pcode": "m13",
+            "detail_betting": [
+                {
+                    "tebak": "01,02,03,04,05",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "06,07,08,09,10",
+                    "type": "n5",
+                    "taruhan": 5000,
+                    "prize": 2.75,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "15",
+                    "type": "n",
+                    "taruhan": 5000,
+                    "prize": 14,
+                    "win_amount": 70000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "Odd",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 1.95,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "Big",
+                    "type": "n50",
+                    "taruhan": 5000,
+                    "prize": 2,
+                    "win_amount": 10000,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "05,10,15",
+                    "type": "n3",
+                    "taruhan": 1000,
+                    "prize": 4.6,
+                    "win_amount": 4600,
+                    "status": "Win"
+                },
+                {
+                    "tebak": "04,09,14",
+                    "type": "n3",
+                    "taruhan": 1000,
+                    "prize": 4.6,
+                    "win_amount": 0,
+                    "status": "Lose"
+                },
+                {
+                    "tebak": "04",
+                    "type": "n",
+                    "taruhan": 1000,
+                    "prize": 14,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 39179,
+                "tanggal": "2024-11-14T04:13:38.000Z",
+                "periode": 291030,
+                "hitung": "1",
+                "gamekey": "39018",
+                "angka": "15",
+                "type": "0"
+            },
+            "total_debit": 28000,
+            "total_credit": 84600,
+            "total_transaction": 56600
+        },
+        {
+            "tglbel": "2024-11-11T09:35:26.000Z",
+            "periode": "127",
+            "pcode": "m22e",
+            "detail_betting": [
+                {
+                    "tebak": "small",
+                    "type": "small",
+                    "taruhan": 5000,
+                    "prize": 2.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 127,
+                "tanggal": "2024-11-11T09:36:16.000Z",
+                "periode": 127,
+                "hitung": "1",
+                "banker": "2c-3c-",
+                "player": "Kc-3c-Ac",
+                "result": "player",
+                "gamekey": "1",
+                "value": 4,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 4,
+                "bankerValue": null
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        },
+        {
+            "tglbel": "2024-11-11T09:12:43.000Z",
+            "periode": "126",
+            "pcode": "m22e",
+            "detail_betting": [
+                {
+                    "tebak": "small",
+                    "type": "small",
+                    "taruhan": 5000,
+                    "prize": 2.5,
+                    "win_amount": 12500,
+                    "status": "Win"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 126,
+                "tanggal": "2024-11-11T09:13:28.000Z",
+                "periode": 126,
+                "hitung": "1",
+                "banker": "4c-2c-x",
+                "player": "3d-4d-x",
+                "result": "player",
+                "gamekey": "1",
+                "value": 7,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 7,
+                "bankerValue": 6
+            },
+            "total_debit": 5000,
+            "total_credit": 12500,
+            "total_transaction": 7500
+        },
+        {
+            "tglbel": "2024-11-11T09:12:01.000Z",
+            "periode": "125",
+            "pcode": "m22e",
+            "detail_betting": [
+                {
+                    "tebak": "small",
+                    "type": "small",
+                    "taruhan": 5000,
+                    "prize": 2.5,
+                    "win_amount": 0,
+                    "status": "Lose"
+                }
+            ],
+            "detail_result": {
+                "idnomor": 125,
+                "tanggal": "2024-11-11T09:12:28.000Z",
+                "periode": 125,
+                "hitung": "1",
+                "banker": "2s-3h-Th",
+                "player": "2c-Ac-Ad",
+                "result": "banker",
+                "gamekey": "1",
+                "value": 5,
+                "bankerPair": 0,
+                "playerPair": 0,
+                "playerValue": 4,
+                "bankerValue": 5
+            },
+            "total_debit": 5000,
+            "total_credit": 0,
+            "total_transaction": -5000
+        }
+    ],
+    "pagination": {
+        "total_datas": 3948,
+        "current_page": 1,
+        "total_pages": 395
+    }
+}
