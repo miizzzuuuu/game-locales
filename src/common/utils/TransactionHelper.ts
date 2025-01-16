@@ -22,6 +22,7 @@ import {
     PcodeSicboDice,
     PcodeSuwit,
     Transaction,
+    PcodeBilliards,
 } from '../../types';
 
 export function groupTransactionsByDate(
@@ -87,6 +88,10 @@ export const isHeadTail = (item: Transaction<string>): item is Transaction<Pcode
 
 export const isRedWhite = (item: Transaction<string>): item is Transaction<PcodeHeadTail> => {
     return item.pcode.startsWith('m11');
+};
+
+export const isBilliards = (item: Transaction<string>): item is Transaction<PcodeBilliards> => {
+    return item.pcode.startsWith('m13');
 };
 
 export const isPokerDice = (item: Transaction<string>): item is Transaction<PcodePokerDice> => {

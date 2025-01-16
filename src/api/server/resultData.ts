@@ -18,6 +18,7 @@ import resultsM8B from './response/results/m8b.json';
 import resultsM10 from './response/results/m10.json';
 import resultsM10B from './response/results/m10b.json';
 import resultsM11 from './response/results/m11.json';
+import resultsM13 from './response/results/m13.json';
 import resultsM14 from './response/results/m14.json';
 import resultsM14B from './response/results/m14b.json';
 import resultsM19 from './response/results/m19.json';
@@ -63,6 +64,7 @@ const resultData: Record<string, { data: any[] }> = {
     m10: resultsM10,
     m10b: resultsM10B,
     m11: resultsM11,
+    m13: resultsM13,
     m14: resultsM14,
     m14b: resultsM14B,
     m19: resultsM19,
