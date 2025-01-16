@@ -106,6 +106,20 @@ export type PcodeRedWhite =
     | 'm11j'
     | 'm11k';
 
+// pcode Billiards
+export type PcodeBilliards =
+    | 'm13'
+    | 'm13b'
+    | 'm13c'
+    | 'm13d'
+    | 'm13e'
+    | 'm13f'
+    | 'm13g'
+    | 'm13h'
+    | 'm13i'
+    | 'm13j'
+    | 'm13k';
+
 // pcode Poker Dice
 export type PcodePokerDice =
     | 'm14'

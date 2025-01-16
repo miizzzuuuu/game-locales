@@ -23,10 +23,12 @@ import {
     PcodeSicboDice,
     PcodeSuwit,
     PcodeRedWhite,
+    PcodeBilliards,
 } from '../CommonType';
 import {
     ResultM10,
     ResultM11,
+    ResultM13,
     ResultM14,
     ResultM19,
     ResultM20,
@@ -101,27 +103,29 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                           ? BaseTransaction & DetailResultM10
                           : PCode extends PcodeRedWhite
                             ? BaseTransaction & DetailResultM11
-                            : PCode extends PcodePokerDice
-                              ? BaseTransaction & DetailResultM14
-                              : PCode extends PcodeSuwit
-                                ? BaseTransaction & DetailResultM19
-                                : PCode extends PcodeMonopoly
-                                  ? BaseTransaction & DetailResultM20
-                                  : PCode extends PcodeBaccarat
-                                    ? BaseTransaction & DetailResultM22
-                                    : PCode extends PcodeDragonTiger
-                                      ? BaseTransaction & DetailResultM23
-                                      : PCode extends PcodeDragonTigerWild
-                                        ? BaseTransaction & DetailResultM23Wild
-                                        : PCode extends PcodeShioFight
-                                          ? BaseTransaction & DetailResultM27
-                                          : PCode extends Pcode48D
-                                            ? BaseTransaction & DetailResultM35
-                                            : PCode extends PcodeDomino
-                                              ? BaseTransaction & DetailResultM41
-                                              : PCode extends PcodeCeme
-                                                ? BaseTransaction & DetailResultM46
-                                                : BaseTransaction & DefaultDetailResult;
+                            : PCode extends PcodeBilliards
+                              ? BaseTransaction & DetailResultM13
+                              : PCode extends PcodePokerDice
+                                ? BaseTransaction & DetailResultM14
+                                : PCode extends PcodeSuwit
+                                  ? BaseTransaction & DetailResultM19
+                                  : PCode extends PcodeMonopoly
+                                    ? BaseTransaction & DetailResultM20
+                                    : PCode extends PcodeBaccarat
+                                      ? BaseTransaction & DetailResultM22
+                                      : PCode extends PcodeDragonTiger
+                                        ? BaseTransaction & DetailResultM23
+                                        : PCode extends PcodeDragonTigerWild
+                                          ? BaseTransaction & DetailResultM23Wild
+                                          : PCode extends PcodeShioFight
+                                            ? BaseTransaction & DetailResultM27
+                                            : PCode extends Pcode48D
+                                              ? BaseTransaction & DetailResultM35
+                                              : PCode extends PcodeDomino
+                                                ? BaseTransaction & DetailResultM41
+                                                : PCode extends PcodeCeme
+                                                  ? BaseTransaction & DetailResultM46
+                                                  : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -183,6 +187,10 @@ export type DetailResultM10 = {
 
 export type DetailResultM11 = {
     detail_result: ResultM11 | [];
+};
+
+export type DetailResultM13 = {
+    detail_result: ResultM13 | [];
 };
 
 export type DetailResultM14 = {
