@@ -38,14 +38,16 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
             <div className={`${styles['slot-card']}`} style={{}}>
                 <RenderCard
+                    delay={1000}
                     top="50%"
                     left="unset"
                     right="50%"
                     position={{ x: '0', y: '-170%' }}
-                    rotation={{ z: '0deg' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.tiger : ''}
-                    appear={!betIsOpen}
+                    appear={
+                        !!(!betIsOpen && scanNumber && scanNumber.tiger && scanNumber.tiger != 'x')
+                    }
                     disappear={!scanNumber}
                     submit={scanNumber && scanNumber.submit == true}
                 />

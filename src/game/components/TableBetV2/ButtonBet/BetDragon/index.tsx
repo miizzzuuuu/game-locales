@@ -42,10 +42,16 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     left="50%"
                     right="unset"
                     position={{ x: '0', y: '-170%' }}
-                    rotation={{ z: '0deg' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.dragon : ''}
-                    appear={!betIsOpen}
+                    appear={
+                        !!(
+                            !betIsOpen &&
+                            scanNumber &&
+                            scanNumber.dragon &&
+                            scanNumber.dragon != 'x'
+                        )
+                    }
                     disappear={!scanNumber}
                     submit={scanNumber && scanNumber.submit == true}
                 />

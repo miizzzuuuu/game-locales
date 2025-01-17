@@ -1,7 +1,7 @@
 import { usePlaceBet } from '../../../common/hooks/usePlaceBet';
+import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { selectDevice } from '../../../store/slice/windowSlice';
 import { BETS } from '../../utils/DragonTigerBHelper';
 import { RenderCard } from '../Card/RenderCard';
 import BetDragon from './ButtonBet/BetDragon';
@@ -15,7 +15,6 @@ import BetTigerWild from './ButtonBet/BetTigerWild';
 import styles from './index.module.scss';
 
 const TableBetV2 = () => {
-    const device = useAppSelector(selectDevice);
     const betIsOpen = useAppSelector(selectBetIsOpen);
     const { placeBetHandler } = usePlaceBet({ betIsOpen });
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -27,6 +26,22 @@ const TableBetV2 = () => {
             scanNumber.dragon_value == scanNumber.tiger_value &&
             scanNumber.dragon_value == scanNumber.wild_value
         );
+
+    const isDragonWildPairWin =
+        !betIsOpen &&
+        scanNumber &&
+        scanNumber.submit &&
+        ((scanNumber.dragon_value == scanNumber.wild_value &&
+            scanNumber.wild_value > scanNumber.tiger_value) ||
+            scanNumber.dragon_value == scanNumber.wild_value);
+
+    const isTigerWildPairWin =
+        !betIsOpen &&
+        scanNumber &&
+        scanNumber.submit &&
+        ((scanNumber.tiger_value == scanNumber.wild_value &&
+            scanNumber.wild_value > scanNumber.dragon_value) ||
+            scanNumber.tiger_value == scanNumber.wild_value);
 
     return (
         <div className={`${styles['table-bet']} ${betIsOpen ? styles.opened : styles.closed}`}>
@@ -43,18 +58,40 @@ const TableBetV2 = () => {
                 <BetSuperWild bet={BETS['superwild']} placeBetHandler={placeBetHandler} />
                 <BetTie bet={BETS['tie']} placeBetHandler={placeBetHandler} />
 
-                <div className={`${styles['slot-card']}`} style={{}}>
+                <div
+                    className={`${styles['slot-card']}`}
+                    style={{
+                        transform: `translateX(${getOrientation() == 'portrait' ? '50%' : '50%'}) translateY( ${
+                            getOrientation() == 'portrait' ? '5%' : '6%'
+                        })`,
+                        transformOrigin: 'center',
+                    }}
+                >
                     <RenderCard
+                        notAbsolute={getOrientation() == 'portrait' ? true : true}
+                        delay={3000}
                         top="-1rem"
                         right="unset"
-                        left={'50%'}
-                        position={{ x: '-50%', y: device === 'desktop' ? '-3rem' : '-1rem' }}
-                        rotation={{ z: '0deg' }}
-                        opacity={isSuperWildLose ? 0.6 : 1}
+                        left={getOrientation() == 'portrait' ? '0%' : '50%'}
+                        position={{ x: '-50%', y: '5px' }}
+                        opacity={
+                            isDragonWildPairWin || isTigerWildPairWin
+                                ? 1
+                                : isSuperWildLose
+                                  ? 0.6
+                                  : 1
+                        }
                         value={scanNumber ? scanNumber.wild : ''}
-                        appear={!betIsOpen}
+                        appear={
+                            !!(
+                                !betIsOpen &&
+                                scanNumber &&
+                                scanNumber.wild &&
+                                scanNumber.wild != 'x'
+                            )
+                        }
                         disappear={!scanNumber}
-                        submit={scanNumber && scanNumber.submit == true}
+                        submit={!!(scanNumber && scanNumber.submit)}
                     />
                 </div>
             </div>

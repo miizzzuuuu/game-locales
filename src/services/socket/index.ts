@@ -129,6 +129,7 @@ export class SocketComponent {
                     this.lastDragonCard = undefined;
                     this.lastTigerCard = undefined;
                     this.lastWildCard = undefined;
+                    this.lastSubmit = false;
 
                     // this._lastLoadNewValuePeriod = data.periode;
                     this._lastLoadNewValuePeriod = Number(data.shoePeriode?.split('-')[1]) - 1;
@@ -240,9 +241,9 @@ export class SocketComponent {
                         return;
                     }
 
-                    setTimeout(() => {
-                        callback(data);
-                    }, 5000);
+                    // setTimeout(() => {
+                    callback(data);
+                    // }, 5000);
                 }
             });
             console.log(eventName);

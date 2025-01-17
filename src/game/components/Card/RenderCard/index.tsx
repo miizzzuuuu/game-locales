@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { splitCharStringToArray } from '../../../utils/StringUtility';
 import { RenderSymbol } from '../RenderSymbol';
 import styles from './styles.module.scss';
@@ -7,18 +8,19 @@ interface IProps {
     right: string;
     left: string;
     position: { x: string; y: string };
-    rotation: { z: string };
     opacity: number;
     value: string;
     appear: boolean;
     disappear: boolean;
     submit?: boolean;
+    delay?: number;
     notAbsolute?: boolean;
     marginTop?: string;
 }
 
 export function RenderCard(props: IProps) {
     let displayValue = splitCharStringToArray(props.value);
+    const [flipup, setFlipup] = useState(false);
 
     if (displayValue.length < 2) {
         displayValue = ['', ''];
@@ -26,31 +28,46 @@ export function RenderCard(props: IProps) {
 
     const displayColor = displayValue[1] == 'd' || displayValue[1] == 'h' ? '#FF0415' : '#121524';
 
+    useEffect(() => {
+        if (props.submit) {
+            setTimeout(() => {
+                setFlipup(true);
+            }, props.delay || 0);
+        } else {
+            setFlipup(false);
+        }
+    }, [props.submit, props.delay]);
+
     return (
         <div
-            className={styles.container}
             style={{
                 position: props.notAbsolute ? 'unset' : 'absolute',
                 top: `${props.top}`,
+                transition: 'opacity',
+                transitionDelay: '5s',
                 opacity: `${props.opacity}`,
                 left: `${props.left}`,
                 right: `${props.right}`,
                 transform: `perspective(100rem) translate(${props.position.x}, ${props.position.y})`,
                 marginTop: `${props.marginTop}`,
                 transformOrigin: 'center',
+                width: '2.4rem',
+                height: '3.1rem',
             }}
         >
             <div
-                className={`${styles['card-slot']}${!props.disappear && props.appear == true ? ` ${styles.appear}` : ''}${props.disappear == true ? ` ${styles.disappear}` : ''}`}
+                className={`${styles['card-slot']}${props.appear == true ? ` ${styles.appear}` : ''}${props.disappear == true ? ` ${styles.disappear}` : ''}`}
                 style={{
+                    // animationDelay: props.delay || '0',
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
                 }}
             >
                 <div
-                    className={`${styles['card-core']}${props.submit == true ? ` ${styles.flipup}` : ''}`}
+                    className={`${styles['card-core']}${flipup ? ` ${styles.flipup}` : ''}`}
                     style={{
+                        // animationDelay: props.submit == true ? props.delay : '0',
                         position: 'absolute',
                         width: '100%',
                         height: '100%',
@@ -63,7 +80,7 @@ export function RenderCard(props: IProps) {
                             position: 'absolute',
                             width: '100%',
                             height: '100%',
-                            transform: `perspective(100rem) rotateZ(${props.rotation.z}) `,
+                            transform: `perspective(100rem) rotateZ(0deg) `,
                         }}
                     >
                         <div
@@ -189,6 +206,7 @@ export function RenderCard(props: IProps) {
                                 </defs>
                             </svg>
                         </div>
+
                         <div
                             className={styles['card-value']}
                             style={{
@@ -213,11 +231,11 @@ export function RenderCard(props: IProps) {
                                     position: 'absolute',
                                     top: '0',
                                     left: '0',
-                                    margin: '-0.2em 0 0 0.2em',
+                                    margin: '-0.2rem 0 0 0.2rem',
                                     fontFamily: 'Manrope',
-                                    fontSize: '0.5em',
+                                    fontSize: '1.44rem',
                                     fontStyle: 'normal',
-                                    fontWeight: '600',
+                                    fontWeight: '700',
                                     lineHeight: 'normal',
                                     textTransform: 'uppercase',
                                     color: displayColor,
