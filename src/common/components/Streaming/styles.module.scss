@@ -150,12 +150,6 @@
         background: var(--streaming-background); // var(--streaming-color-6);
         mask-image: linear-gradient(transparent, #000);
     }
-
-    .full {
-        .video-background {
-            height: 0;
-        }
-    }
 }
 
 :global(.desktop) {

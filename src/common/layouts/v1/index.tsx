@@ -3,6 +3,7 @@ import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import Footer from '../../components/Footer';
 import InfoLimitBet from '../../components/InfoLimitBet';
+import EventsIdnlive from '../../EventsIdnlive';
 import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
@@ -29,8 +30,6 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
                     <div className={styles.top}>
                         <PanelTop />
                     </div>
-
-                    <Footer />
                 </>
             )}
 
@@ -49,9 +48,11 @@ const LayoutV1 = ({ children }: PropsWithChildren) => {
                     </div>
 
                     <InfoLimitBet />
-                    <Footer />
                 </>
             )}
+
+            <Footer />
+            <EventsIdnlive />
         </div>
     );
 };

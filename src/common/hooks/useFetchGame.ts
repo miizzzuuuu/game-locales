@@ -19,7 +19,7 @@ function useFetchGame() {
 
         const fetchPlayerSettings = async () => {
             try {
-                updateLoading(0, 'Load settings');
+                updateLoading(0, 'Load game data');
                 const data = await getGameData();
 
                 if (!ignore) {
@@ -55,7 +55,7 @@ function useFetchGame() {
                     ]);
 
                     setFinish(true);
-                    updateLoading(10, 'Load game completed');
+                    updateLoading(10, 'Load game data completed');
                 }
             } catch (error) {
                 handleErrorApi(error);

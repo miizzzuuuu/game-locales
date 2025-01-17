@@ -38,6 +38,8 @@ const WebStream = () => {
     return (
         <>
             <iframe
+                key="game-streaming"
+                title="Game Streaming"
                 allow="fullscreen; autoplay; encrypted-media"
                 ref={videoRef}
                 className={styles['web-stream']}

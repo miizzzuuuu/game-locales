@@ -3,6 +3,7 @@ import Game from './common/components/Game';
 import MiniHowToPlay from './common/components/MiniHowToPlay';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import { useAutoResize } from './common/hooks/useAutoResize';
+import { useFetchEventList } from './common/hooks/useFetchEventList';
 import { useFetchGame } from './common/hooks/useFetchGame';
 import { useFetchPlayer } from './common/hooks/useFetchPlayer';
 import { useFetchSettings } from './common/hooks/useFetchSettings';
@@ -11,9 +12,11 @@ import { useFullscreen } from './common/hooks/useFullscreen';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useWindowResize } from './common/hooks/useWindowResize';
 import { Features } from './common/utils/Features';
+import { sendMessageToParent } from './common/utils/FunctionHelper';
 import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
+import { addBalance } from './store/slice/playerSlice';
 import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
@@ -31,6 +34,8 @@ function App() {
     const { finish: finishGetSettings } = useFetchSettings();
     const { finish: finishGetGame } = useFetchGame();
     const { finish: finishGetTimer } = useFetchTimer();
+
+    useFetchEventList();
 
     useEffect(() => {
         if (finishGetPlayer && finishGetSettings && finishGetGame && finishGetTimer) {
@@ -52,6 +57,37 @@ function App() {
 
     useSettingSound();
     useFullscreen();
+
+    useEffect(() => {
+        const listenMessage = (event: MessageEvent) => {
+            if (event.data.source !== 'GAME_CONTAINER') return;
+
+            console.log('Message from parent:', event.data);
+
+            if (event.data.type === 'GAME_LOADED') {
+                // Kirim pesan kembali ke parent
+                sendMessageToParent(
+                    {
+                        type: 'MESSAGE',
+                        payload: { message: 'game connect to container' },
+                        source: 'LIVE_GAME',
+                    },
+                    event.origin,
+                );
+            }
+
+            if (event.data.type === 'EVENT_WIN') {
+                const value = event.data.payload as number;
+                dispatch(addBalance(value));
+            }
+        };
+
+        window.addEventListener('message', listenMessage);
+
+        return () => {
+            window.removeEventListener('message', listenMessage);
+        };
+    }, [dispatch]);
 
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);

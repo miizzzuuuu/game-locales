@@ -1,11 +1,13 @@
 import { PropsWithChildren } from 'react';
-import styles from './styles.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
 import Footer from '../../components/Footer';
+import InfoLimitBet from '../../components/InfoLimitBet';
+import EventsIdnlive from '../../EventsIdnlive';
+import PanelBottom from './PanelBottom';
 import PanelLeft from './PanelLeft';
 import PanelRight from './PanelRight';
-import PanelBottom from './PanelBottom';
+import styles from './styles.module.scss';
 
 const LayoutV2 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
@@ -31,11 +33,14 @@ const LayoutV2 = ({ children }: PropsWithChildren) => {
                         <div className={styles['main-area-bottom']}>
                             <PanelBottom />
                         </div>
+
+                        <InfoLimitBet />
                     </>
                 )}
             </div>
 
             <Footer />
+            <EventsIdnlive />
         </div>
     );
 };

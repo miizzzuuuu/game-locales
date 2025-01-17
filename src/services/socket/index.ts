@@ -4,6 +4,7 @@ import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common
 import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
     CameraSequence,
+    Cashdrop,
     CloseTimerData,
     GameConnect,
     LoadNewValueData,
@@ -122,7 +123,7 @@ export class SocketComponent {
                 // console.log('socket loadNewValue:', data);
 
                 this.validationDataWithPcode(data, () => {
-                    if (this._lastLoadNewValuePeriod === data.periode) {
+                    if (this._lastLoadNewValuePeriod === data.periode || !data.timer) {
                         return;
                     }
 
@@ -273,6 +274,14 @@ export class SocketComponent {
         if (this._socket) {
             this._socket.on(eventName, (data: NewSetData) => {
                 this.validationDataWithPcode(data, () => callback(data));
+            });
+        }
+    }
+
+    listenCashdrop(callback: (data: Cashdrop) => void): void {
+        if (this._socket) {
+            this._socket.on(SocketComponent.SOCKET_EVENT.cashdrop, (data: Cashdrop) => {
+                callback(data);
             });
         }
     }

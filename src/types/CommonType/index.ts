@@ -120,6 +120,20 @@ export type PcodeSuwit =
     | 'm19j'
     | 'm19k';
 
+// pcode Monopoly
+export type PcodeMonopoly =
+    | 'm20'
+    | 'm20b'
+    | 'm20c'
+    | 'm20d'
+    | 'm20e'
+    | 'm20f'
+    | 'm20g'
+    | 'm20h'
+    | 'm20i'
+    | 'm20j'
+    | 'm20k';
+
 // pcode Baccarat
 export type PcodeBaccarat =
     | 'm22'

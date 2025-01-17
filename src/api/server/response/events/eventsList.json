@@ -1,0 +1,21 @@
+[
+    {
+        "name": "santa-cash-box",
+        "group": "all",
+        "pcode": "",
+        "status": "running",
+        "total_amount": 300000000,
+        "max_amount": 500000,
+        "date_start": {
+            "date": "2024-12-03 00:00:00.000000",
+            "timezone_type": 3,
+            "timezone": "Asia/Jakarta"
+        },
+        "date_end": {
+            "date": "2025-01-02 23:59:59.000000",
+            "timezone_type": 3,
+            "timezone": "Asia/Jakarta"
+        },
+        "latest": false
+    }
+]

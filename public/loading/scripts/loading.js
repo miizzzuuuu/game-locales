@@ -1,32 +1,60 @@
+import { FLASHSCREENS, GAME_LOGOS } from './game-assets.js';
+import { getTitle } from './game-name.js';
+
 /** 
 
 Loading - 100%
 
-- load document - 20
-- load whole page - 20
+- load document - 30
+- load whole page - 30
 
 - load player data - 10
-- load player settings - 10
-- load player lastbets - 10
+- load settings - 10
 - load game data - 10
 - load timer - 10
-- load history result - 10
 
 */
 
 let currentProgress = 0;
+const progressDocument = 30;
+
+function setFlashsreen(element, pcode) {
+    const flashscreen = pcode in FLASHSCREENS ? FLASHSCREENS[pcode] : 'flashscreen.webp';
+    element.style.setProperty('--bg-image', `url('../img/game/${flashscreen}')`);
+}
+
+function setGameLogo(element, pcode) {
+    const logo = pcode in GAME_LOGOS ? GAME_LOGOS[pcode] : 'game-logo.webp';
+    element.src = `loading/img/game/${logo}`;
+}
+
+function getPcode() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    return urlParams.get('pcode');
+}
 
 function addLoadingScreen() {
+    const pcode = getPcode();
+
+    // Set Title Document
+    const title = getTitle(pcode);
+    if (title) {
+        document.title = title;
+    }
+
     // Create the loading container
     const loadingContainer = document.createElement('div');
     loadingContainer.id = 'loading';
     loadingContainer.className = 'loading';
+    setFlashsreen(loadingContainer, pcode);
 
     // Create the loading logo image
     const loadingLogo = document.createElement('img');
     loadingLogo.className = 'loading-logo';
-    loadingLogo.src = 'loading/img/game-logo.webp';
     loadingLogo.alt = '';
+    setGameLogo(loadingLogo, pcode);
 
     // Create the loading bottom container
     const loadingBottom = document.createElement('div');
@@ -99,11 +127,11 @@ function updateProgress(value, text = '') {
 addLoadingScreen();
 
 window.addEventListener('DOMContentLoaded', () => {
-    updateProgress(20, 'Load document completed');
+    updateProgress(progressDocument, 'Load document completed');
 });
 
 window.addEventListener('load', () => {
-    updateProgress(20, 'Load page completed');
+    updateProgress(progressDocument, 'Load page completed');
 });
 
 window.addEventListener('updateloading', (event) => {
