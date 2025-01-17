@@ -1,0 +1,139 @@
+{
+    "data": [
+        {
+            "banker": "Kc-5c-x",
+            "player": "Ah-Tc-Th",
+            "result": "banker",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "5",
+            "tanggal": "2025-01-14 07:07:35",
+            "periode": "61",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338268
+        },
+        {
+            "banker": "Qd-Kc-6c",
+            "player": "Kd-6d-x",
+            "result": "tie",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "6",
+            "tanggal": "2025-01-14 07:06:41",
+            "periode": "60",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338267
+        },
+        {
+            "banker": "7s-9c-x",
+            "player": "Jh-6d-x",
+            "result": "tie",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "6",
+            "tanggal": "2025-01-14 07:05:53",
+            "periode": "59",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338266
+        },
+        {
+            "banker": "Tc-6h-x",
+            "player": "Jh-Tc-3d",
+            "result": "banker",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "6",
+            "tanggal": "2025-01-14 07:05:04",
+            "periode": "58",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338265
+        },
+        {
+            "banker": "4d-Jh-x",
+            "player": "3h-5h-x",
+            "result": "player",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "8",
+            "tanggal": "2025-01-14 07:04:15",
+            "periode": "57",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338264
+        },
+        {
+            "banker": "8c-7h-x",
+            "player": "9h-7s-x",
+            "result": "player",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "6",
+            "tanggal": "2025-01-14 07:03:28",
+            "periode": "56",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338263
+        },
+        {
+            "banker": "Th-5h-x",
+            "player": "9h-3c-2s",
+            "result": "banker",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "5",
+            "tanggal": "2025-01-14 07:02:16",
+            "periode": "55",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338262
+        },
+        {
+            "banker": "6s-3h-x",
+            "player": "7c-Tc-x",
+            "result": "banker",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "9",
+            "tanggal": "2025-01-14 07:01:19",
+            "periode": "54",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338261
+        },
+        {
+            "banker": "Ad-2d-4h",
+            "player": "9s-6d-x",
+            "result": "banker",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "7",
+            "tanggal": "2025-01-14 07:00:27",
+            "periode": "53",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338260
+        },
+        {
+            "banker": "Qs-Js-x",
+            "player": "4c-5s-x",
+            "result": "player",
+            "bankerPair": 0,
+            "playerPair": 0,
+            "value": "9",
+            "tanggal": "2025-01-14 06:59:34",
+            "periode": "52",
+            "hitung": "1",
+            "gamekey": "35935",
+            "idnomor": 2338259
+        }
+    ],
+    "pagination": {
+        "total_datas": 303788,
+        "current_page": 1,
+        "total_pages": 10
+    }
+}

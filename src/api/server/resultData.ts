@@ -1,5 +1,5 @@
-import resultP6 from './response/results/p6.json';
-import resultP6B from './response/results/p6b.json';
+import resultsP6 from './response/results/p6.json';
+import resultsP6B from './response/results/p6b.json';
 import resultsP7 from './response/results/p7.json';
 import resultsP7B from './response/results/p7b.json';
 import resultsP7C from './response/results/p7c.json';
@@ -11,35 +11,41 @@ import resultsP9B from './response/results/p9b.json';
 import resultsP9C from './response/results/p9c.json';
 import resultsP12 from './response/results/p12.json';
 import resultsP12B from './response/results/p12b.json';
-import resultM6 from './response/results/m6.json';
-import resultM7 from './response/results/m7.json';
-import resultM8 from './response/results/m8.json';
-import resultM8B from './response/results/m8b.json';
-import resultM11 from './response/results/m11.json';
-import resultM11B from './response/results/m11b.json';
-import resultM14 from './response/results/m14.json';
-import resultM14B from './response/results/m14b.json';
-import resultM19 from './response/results/m19.json';
-import resultM19B from './response/results/m19b.json';
-import resultM20 from './response/results/m20.json';
-import resultM22 from './response/results/m22.json';
-import resultM22B from './response/results/m22b.json';
-import resultM22C from './response/results/m22c.json';
-import resultM22D from './response/results/m22d.json';
-import resultM22E from './response/results/m22e.json';
-import resultM23 from './response/results/m23.json';
-import resultM23B from './response/results/m23b.json';
-import resultM23C from './response/results/m23c.json';
-import resultM27 from './response/results/m27.json';
-import resultM35 from './response/results/m35.json';
-import resultM35B from './response/results/m35b.json';
-import resultM41 from './response/results/m41.json';
-import resultM41B from './response/results/m41b.json';
-import resultM46 from './response/results/m46.json';
+import resultsM6 from './response/results/m6.json';
+import resultsM7 from './response/results/m7.json';
+import resultsM8 from './response/results/m8.json';
+import resultsM8B from './response/results/m8b.json';
+import resultsM10 from './response/results/m10.json';
+import resultsM10B from './response/results/m10b.json';
+import resultsM11 from './response/results/m11.json';
+import resultsM13 from './response/results/m13.json';
+import resultsM14 from './response/results/m14.json';
+import resultsM14B from './response/results/m14b.json';
+import resultsM19 from './response/results/m19.json';
+import resultsM19B from './response/results/m19b.json';
+import resultsM20 from './response/results/m20.json';
+import resultsM22 from './response/results/m22.json';
+import resultsM22B from './response/results/m22b.json';
+import resultsM22C from './response/results/m22c.json';
+import resultsM22D from './response/results/m22d.json';
+import resultsM22F from './response/results/m22f.json';
+import resultsM23 from './response/results/m23.json';
+import resultsM23B from './response/results/m23b.json';
+import resultsM23D from './response/results/m23d.json';
+import resultsM28 from './response/results/m28.json';
+import resultsM28B from './response/results/m28b.json';
+import resultsM27 from './response/results/m27.json';
+import resultsM31 from './response/results/m31.json';
+import resultsM35 from './response/results/m35.json';
+import resultsM37 from './response/results/m37.json';
+import resultsM35B from './response/results/m35b.json';
+import resultsM41 from './response/results/m41.json';
+import resultsM41B from './response/results/m41b.json';
+import resultsM46 from './response/results/m46.json';
 
 const resultData: Record<string, { data: any[] }> = {
-    p6: resultP6,
-    p6b: resultP6B,
+    p6: resultsP6,
+    p6b: resultsP6B,
     p7: resultsP7,
     p7b: resultsP7B,
     p7c: resultsP7C,
@@ -51,31 +57,37 @@ const resultData: Record<string, { data: any[] }> = {
     p9c: resultsP9C,
     p12: resultsP12,
     p12b: resultsP12B,
-    m6: resultM6,
-    m7: resultM7,
-    m8: resultM8,
-    m8b: resultM8B,
-    m11: resultM11,
-    m11b: resultM11B,
-    m14: resultM14,
-    m14b: resultM14B,
-    m19: resultM19,
-    m19b: resultM19B,
-    m20: resultM20,
-    m22: resultM22,
-    m22b: resultM22B,
-    m22c: resultM22C,
-    m22d: resultM22D,
-    m22e: resultM22E,
-    m23: resultM23,
-    m23b: resultM23B,
-    m23c: resultM23C,
-    m27: resultM27,
-    m35: resultM35,
-    m35b: resultM35B,
-    m41: resultM41,
-    m41b: resultM41B,
-    m46: resultM46,
+    m6: resultsM6,
+    m7: resultsM7,
+    m8: resultsM8,
+    m8b: resultsM8B,
+    m10: resultsM10,
+    m10b: resultsM10B,
+    m11: resultsM11,
+    m13: resultsM13,
+    m14: resultsM14,
+    m14b: resultsM14B,
+    m19: resultsM19,
+    m19b: resultsM19B,
+    m20: resultsM20,
+    m22: resultsM22,
+    m22b: resultsM22B,
+    m22c: resultsM22C,
+    m22d: resultsM22D,
+    m22f: resultsM22F,
+    m23: resultsM23,
+    m23b: resultsM23B,
+    m23d: resultsM23D,
+    m27: resultsM27,
+    m28: resultsM28,
+    m28b: resultsM28B,
+    m31: resultsM31,
+    m35: resultsM35,
+    m35b: resultsM35B,
+    m37: resultsM37,
+    m41: resultsM41,
+    m41b: resultsM41B,
+    m46: resultsM46,
 };
 
 export default resultData;

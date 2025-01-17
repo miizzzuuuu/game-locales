@@ -78,6 +78,20 @@ export type PcodeDice6 =
     | 'm8k';
 export type PcodeDice6Fever = 'm8b';
 
+// pcode Head Tail
+export type PcodeHeadTail =
+    | 'm10'
+    | 'm10b'
+    | 'm10c'
+    | 'm10d'
+    | 'm10e'
+    | 'm10f'
+    | 'm10g'
+    | 'm10h'
+    | 'm10i'
+    | 'm10j'
+    | 'm10k';
+
 // pcode Red White
 export type PcodeRedWhite =
     | 'm11'
@@ -91,6 +105,20 @@ export type PcodeRedWhite =
     | 'm11i'
     | 'm11j'
     | 'm11k';
+
+// pcode Billiards
+export type PcodeBilliards =
+    | 'm13'
+    | 'm13b'
+    | 'm13c'
+    | 'm13d'
+    | 'm13e'
+    | 'm13f'
+    | 'm13g'
+    | 'm13h'
+    | 'm13i'
+    | 'm13j'
+    | 'm13k';
 
 // pcode Poker Dice
 export type PcodePokerDice =
@@ -228,7 +256,7 @@ export type Pcode =
     | Pcode24DSpin
     | PcodeDice6
     | PcodeDice6Fever
-    | PcodeRedWhite
+    | PcodeHeadTail
     | PcodePokerDice
     | PcodeBaccarat
     | PcodeDragonTiger

@@ -13,16 +13,16 @@ import resultData from './resultData';
 // transaction
 import transactionData from './transactionData';
 
+// payouts
+import payoutData from './payoutData';
+
 // database
 import { games } from './db/games';
-import { timers } from './db/timer';
 import { player } from './db/player';
 import { settings } from './db/settings';
 import { properties } from './db/properties';
 import { lastbets } from './db/lastbets';
-import { payouts } from './db/payouts';
-
-import { PayoutData } from '../../types';
+import { time, timer } from './response/timer/dummyTimer';
 
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
@@ -98,28 +98,22 @@ export function makeServer({ environment = 'test' } = {}) {
             this.get(ENDPOINTS.games + '/:pcode/payout', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const payout: PayoutData[] | { message: string } | undefined = payouts[pcode];
-
-                if (!payout) {
+                if (pcode in payoutData) {
+                    return payoutData[pcode];
+                } else {
                     return new Response(400, {}, { message: 'Payout Empty' });
                 }
-
-                return payout;
             });
 
             // timers
-            this.get(ENDPOINTS.timers, (schema) => {
-                const timers = schema.db.timers;
-
-                return timers;
-            });
-
-            this.get(ENDPOINTS.timers + '/:pcode', (schema, request) => {
+            this.get(ENDPOINTS.timers + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const timer = schema.db.timers.findBy({ pcode });
-
-                return timer;
+                return {
+                    pcode: pcode,
+                    time: time,
+                    timer: timer,
+                };
             });
 
             // send bet
@@ -227,7 +221,6 @@ export function makeServer({ environment = 'test' } = {}) {
 
     server.db.loadData({
         games,
-        timers,
         properties,
     });
 

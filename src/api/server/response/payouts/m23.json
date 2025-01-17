@@ -1,0 +1,55 @@
+[
+    {
+        "name": "dragon",
+        "payout": 1,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tiger",
+        "payout": 1,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tie",
+        "payout": 8,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "side bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "big",
+                "payout": 1
+            },
+            {
+                "name": "small",
+                "payout": 1
+            },
+            {
+                "name": "odd",
+                "payout": 1
+            },
+            {
+                "name": "even",
+                "payout": 1
+            },
+            {
+                "name": "red",
+                "payout": 1
+            },
+            {
+                "name": "black",
+                "payout": 1
+            }
+        ],
+        "min": 5000,
+        "max": 5000000
+    }
+]

@@ -1,0 +1,169 @@
+[
+    {
+        "name": "player",
+        "payout": 1,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "banker",
+        "payout": 0.95,
+        "items": [],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tie",
+        "payout": 8,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "player bonus",
+        "payout": null,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "banker bonus",
+        "payout": null,
+        "items": [
+            {
+                "name": "natural win",
+                "payout": 1
+            },
+            {
+                "name": "natural tie",
+                "payout": "push"
+            },
+            {
+                "name": "win by 9 points",
+                "payout": 30
+            },
+            {
+                "name": "win by 8 points",
+                "payout": 10
+            },
+            {
+                "name": "win by 7 points",
+                "payout": 6
+            },
+            {
+                "name": "win by 6 points",
+                "payout": 4
+            },
+            {
+                "name": "win by 5 points",
+                "payout": 2
+            },
+            {
+                "name": "win by 4 points",
+                "payout": 1
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "player pair",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "banker pair",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "perfect pair",
+        "payout": 200,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "perfect pair",
+        "payout": 25,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "mixed pair",
+        "payout": 5,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "side bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "big",
+                "payout": 0.54
+            },
+            {
+                "name": "small",
+                "payout": 1.5
+            }
+        ],
+        "min": 5000,
+        "max": 5000000
+    },
+    {
+        "name": "tie on",
+        "payout": null,
+        "items": [
+            {
+                "name": "0",
+                "payout": 150
+            },
+            {
+                "name": "1",
+                "payout": 215
+            },
+            {
+                "name": "2",
+                "payout": 220
+            },
+            {
+                "name": "3",
+                "payout": 200
+            },
+            {
+                "name": "4",
+                "payout": 120
+            },
+            {
+                "name": "5",
+                "payout": 110
+            },
+            {
+                "name": "6",
+                "payout": 45
+            },
+            {
+                "name": "7",
+                "payout": 45
+            },
+            {
+                "name": "8",
+                "payout": 80
+            },
+            {
+                "name": "9",
+                "payout": 80
+            }
+        ],
+        "min": 1000,
+        "max": 1000000
+    }
+]
