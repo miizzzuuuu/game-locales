@@ -38,6 +38,10 @@
     gap: 0.4rem;
 }
 
+.super-wild {
+    position: relative;
+}
+
 .top.left,
 .middle.left,
 .bottom.left {
@@ -237,7 +241,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .slot-chip {
         $size: 7.5cqh;
@@ -248,6 +251,81 @@
     }
 }
 
+:global(.desktop) {
+    .slot-chip {
+        $size: 4.4cqh;
+
+        width: $size;
+        height: $size;
+        font-size: $size;
+    }
+
+    .super-wild,
+    .tie {
+        width: 26rem;
+    }
+
+    .shadow-center::after {
+        content: '';
+        position: absolute;
+        height: 28rem;
+        width: 28rem;
+        border-radius: 50%;
+    }
+
+    .top.left .shadow-center::after {
+        translate: -14rem -5.3rem;
+    }
+
+    .bottom.left .shadow-center::after {
+        translate: -14rem 5.3rem;
+    }
+
+    .middle.left .shadow-center::after {
+        translate: -5rem -50%;
+    }
+
+    .top.right .shadow-center::after {
+        translate: 14rem -5.3rem;
+    }
+
+    .bottom.right .shadow-center::after {
+        translate: 14rem 5.3rem;
+    }
+
+    .middle.right .shadow-center::after {
+        translate: 5rem -50%;
+    }
+
+    .bet-name,
+    .bet-payout {
+        font-size: 1.6rem;
+    }
+
+    .dragon-wild,
+    .tiger-wild,
+    .dragon-pair,
+    .tiger-pair,
+    .dragon,
+    .tiger {
+        padding: 0.8rem 2rem;
+    }
+
+    .dragon-wild .content,
+    .dragon-pair .content,
+    .dragon .content,
+    .tiger-wild .content,
+    .tiger-pair .content,
+    .tiger .content {
+        gap: 1rem;
+    }
+
+    .dragon-back,
+    .tiger-back {
+        width: 14.4rem;
+        height: 16rem;
+    }
+}
 :global :local(.table-win-blink) {
     animation: buttonWinBlinkBrightness 0.75s reverse ease-in-out;
     animation-iteration-count: infinite;
