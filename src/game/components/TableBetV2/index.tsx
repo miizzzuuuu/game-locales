@@ -69,7 +69,7 @@ const TableBetV2 = () => {
                 >
                     <RenderCard
                         notAbsolute={getOrientation() == 'portrait' ? true : true}
-                        delay={3000}
+                        delay={3500}
                         top="-1rem"
                         right="unset"
                         left={getOrientation() == 'portrait' ? '0%' : '50%'}
