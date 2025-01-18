@@ -19,10 +19,11 @@
 
 :global(.desktop) {
     .result {
-        top: 35rem;
+        top: unset; // 35rem;
+        bottom: calc(30rem + var(--gap-result));
     }
 
     .image {
-        width: 12rem;
+        width: 14rem;
     }
 }
