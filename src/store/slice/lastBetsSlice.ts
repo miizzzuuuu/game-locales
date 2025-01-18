@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { BetSend } from '../../types';
+import { RootState } from '../store';
 
 export type LastBetState = {
     data: BetSend[];

@@ -1,6 +1,6 @@
 import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { BetSend, FetchStatus } from '../../types';
+import { RootState } from '../store';
 
 export interface State {
     add: Record<string, number>;

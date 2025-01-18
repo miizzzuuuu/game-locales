@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { MessageGameType } from '../../types';
+import { RootState } from '../store';
 
 export interface GameStateState {
     modeBet: 'main' | 'race-track';
