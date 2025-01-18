@@ -22,8 +22,8 @@ import GameUI from '../GameUI';
 import Streaming from '../Streaming';
 import Timer from '../Timer';
 import TopWinner from '../TopWinner';
-import styles from './styles.module.scss';
 import Version from '../Version';
+import styles from './styles.module.scss';
 
 const Menu = lazy(() => import('../../menus/Menu'));
 

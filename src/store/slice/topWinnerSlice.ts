@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { TopWinnerData } from '../../types';
+import { RootState } from '../store';
 
 export type TopWinnerState = Omit<TopWinnerData, 'pcode'>;
 

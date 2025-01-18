@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { normalizeTime } from '../../common/utils/GameHelper';
+import { RootState } from '../store';
 
 export interface TimerState {
     time: number;

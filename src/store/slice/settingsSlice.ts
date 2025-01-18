@@ -1,9 +1,9 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
-import { Settings } from '../../types';
-import { formatedLanguage } from '../../common/utils/LangHelper';
 import i18next from 'i18next';
+import { formatedLanguage } from '../../common/utils/LangHelper';
 import { Sound } from '../../services/sound';
+import { Settings } from '../../types';
+import { RootState } from '../store';
 
 const initialState: Settings = {
     language: '',
