@@ -144,6 +144,8 @@ export const topWinnerDummy: TopWinnerData['data'] = [
 
 export const newSetDummy = { pcode: 'm22', gameSet: 13494, status: true };
 
+export const newGameDummy = { pcode: 'p6b', gameSet: 13494 };
+
 export const santaCashBoxDummy: Cashdrop = {
     name: 'santa-cash-box',
     data: {

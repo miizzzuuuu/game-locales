@@ -1,12 +1,13 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
+import { MessageGameType } from '../../types';
 
 export interface GameStateState {
     modeBet: 'main' | 'race-track';
     showChip: boolean;
     message: {
         value: string | undefined;
-        type: 'danger' | 'warning' | 'none';
+        type: MessageGameType;
     };
 
     showPatternUI: boolean;

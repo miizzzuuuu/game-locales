@@ -9,7 +9,11 @@ import { AppDispatch, RootState } from './store';
 import { confirmBetFullfiledListener } from './listener/betsListener';
 import { endWinAnimationListener } from './listener/resultListener';
 import { updateSettingsListener } from './listener/settingsListener';
-import { gameResultListener, loadNewValueListener } from './listener/socketListener';
+import {
+    gameResultListener,
+    loadNewValueListener,
+    noGameListenere,
+} from './listener/socketListener';
 import { closeTimeListener, openTimeListener } from './listener/timerListener';
 
 export const listenerMiddleware = createListenerMiddleware();
@@ -19,6 +23,7 @@ export const addAppListener = addListener as TypedAddListener<RootState, AppDisp
 
 loadNewValueListener(startAppListening);
 gameResultListener(startAppListening);
+noGameListenere(startAppListening);
 closeTimeListener(startAppListening);
 openTimeListener(startAppListening);
 confirmBetFullfiledListener(startAppListening);

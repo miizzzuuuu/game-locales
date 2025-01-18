@@ -1,16 +1,15 @@
+import i18n from '../../services/i18next/index';
 import { Sound } from '../../services/sound';
-import { gameResultAction, loadNewValueAction } from '../actions/socketAction';
+import { BetSend } from '../../types';
+import { gameResultAction, loadNewValueAction, noGameAction } from '../actions/socketAction';
 import { AppStartListening } from '../listenerMiddleware';
+import { newAddBetPeriod, placeMultiBet, resetBetSend, selectBetSend } from '../slice/bets';
+import { setNewSet, updateGamePeriod, updateGameSet } from '../slice/gameSlice';
 import { setMessage } from '../slice/gameStateSlice';
 import { LastBetState, setLastBetData } from '../slice/lastBetsSlice';
 import { selectBalance } from '../slice/playerSlice';
 import { setResult } from '../slice/resultSlice';
 import { openTime } from '../slice/timerSlice';
-
-import i18n from '../../services/i18next/index';
-import { setNewSet, updateGamePeriod, updateGameSet } from '../slice/gameSlice';
-import { newAddBetPeriod, placeMultiBet, resetBetSend, selectBetSend } from '../slice/bets';
-import { BetSend } from '../../types';
 
 export const loadNewValueListener = (startListening: AppStartListening) => {
     startListening({
@@ -95,6 +94,27 @@ export const gameResultListener = (startListening: AppStartListening) => {
 
             const resultNumber = Number(action.payload.win);
             dispatch(setResult(resultNumber));
+        },
+    });
+};
+
+export const noGameListenere = (startListening: AppStartListening) => {
+    startListening({
+        actionCreator: noGameAction,
+        effect: (action, listenerApi) => {
+            console.log('middleware: noGame', {
+                action,
+                listenerApi,
+            });
+
+            const dispatch = listenerApi.dispatch;
+
+            dispatch(
+                setMessage({
+                    value: 'no game',
+                    type: 'no-game',
+                }),
+            );
         },
     });
 };

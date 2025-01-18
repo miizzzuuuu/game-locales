@@ -1,6 +1,10 @@
 import { lazy, Suspense, useCallback } from 'react';
 import { useSocket } from '../../../services/socket/hooks';
-import { gameResultAction, loadNewValueAction } from '../../../store/actions/socketAction';
+import {
+    gameResultAction,
+    loadNewValueAction,
+    noGameAction,
+} from '../../../store/actions/socketAction';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { setNewSet } from '../../../store/slice/gameSlice';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
@@ -78,6 +82,9 @@ function Game() {
                 }
 
                 dispatch(setNewSet(false));
+            }
+            if (e.key === 'o') {
+                dispatch(noGameAction());
             }
             if (e.key === 'j') {
                 sendMessageToParent({
