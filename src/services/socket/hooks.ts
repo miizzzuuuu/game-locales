@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
 import { LobbyConnect, NewSetData } from '../../types';
 import { useAppDispatch } from '../../store/hooks';
-import { gameResultAction, loadNewValueAction } from '../../store/actions/socketAction';
+import {
+    gameResultAction,
+    loadNewValueAction,
+    noGameAction,
+} from '../../store/actions/socketAction';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
 import { setNewSet } from '../../store/slice/gameSlice';
@@ -54,6 +58,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
             const { status } = data;
 
             dispatch(setNewSet(status));
+        });
+
+        SocketComponent.instance.listenNoGame(() => {
+            dispatch(noGameAction());
         });
 
         SocketComponent.instance.listenCashdrop((data) => {

@@ -2,11 +2,12 @@ import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import SVGBackgroundMessage from './SVG/SVGBackgroundMessage';
+import { MessageGameType } from '../../../../types';
 
 interface IProps {
     value?: ReactNode | undefined;
     handleClose: () => void;
-    type?: 'warning' | 'danger' | 'none';
+    type?: MessageGameType;
 }
 
 const Message = ({ value, handleClose, type = 'none' }: IProps) => {
@@ -46,7 +47,9 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
         <div className={`${styles.message}`} ref={messageRef} onAnimationEnd={handleAnimationEnd}>
             <SVGBackgroundMessage className={styles.background} type={type} />
 
-            <div className={styles.content}>
+            <div
+                className={`${styles.content}${type === 'no-game' ? ` ${styles['no-game']}` : ''}`}
+            >
                 <div className={styles.text}>{value}</div>
             </div>
         </div>

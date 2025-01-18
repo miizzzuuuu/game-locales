@@ -1,6 +1,8 @@
 import { EventIdnlive } from '../ApiType';
 import { Cashdrop } from '../SocketType';
 
+export type MessageGameType = 'danger' | 'warning' | 'none' | 'no-game';
+
 export type MessageData =
     | {
           type: 'MESSAGE' | 'FINISH_GAME' | 'OPEN_MODAL_EVENT';

@@ -6,11 +6,15 @@ import {
 } from '@reduxjs/toolkit';
 import { AppDispatch, RootState } from './store';
 
-import { gameResultListener, loadNewValueListener } from './listener/socketListener';
-import { closeTimeListener, openTimeListener } from './listener/timerListener';
 import { confirmBetFullfiledListener } from './listener/betsListener';
-import { updateSettingsListener } from './listener/settingsListener';
 import { endWinAnimationListener } from './listener/resultListener';
+import { updateSettingsListener } from './listener/settingsListener';
+import {
+    gameResultListener,
+    loadNewValueListener,
+    noGameListenere,
+} from './listener/socketListener';
+import { closeTimeListener, openTimeListener } from './listener/timerListener';
 
 export const listenerMiddleware = createListenerMiddleware();
 export type AppStartListening = TypedStartListening<RootState, AppDispatch>;
@@ -19,6 +23,7 @@ export const addAppListener = addListener as TypedAddListener<RootState, AppDisp
 
 loadNewValueListener(startAppListening);
 gameResultListener(startAppListening);
+noGameListenere(startAppListening);
 closeTimeListener(startAppListening);
 openTimeListener(startAppListening);
 confirmBetFullfiledListener(startAppListening);
