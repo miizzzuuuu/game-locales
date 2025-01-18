@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
-import { LobbyConnect, NewSetData } from '../../types';
-import { useAppDispatch } from '../../store/hooks';
+import { sendMessageToParent } from '../../common/utils/FunctionHelper';
 import {
     gameResultAction,
     loadNewValueAction,
     noGameAction,
 } from '../../store/actions/socketAction';
+import { useAppDispatch } from '../../store/hooks';
+import { setNewSet } from '../../store/slice/gameSlice';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
-import { setNewSet } from '../../store/slice/gameSlice';
-import { sendMessageToParent } from '../../common/utils/FunctionHelper';
+import { LobbyConnect, NewSetData } from '../../types';
 
 interface Params {
     nickname: string;
