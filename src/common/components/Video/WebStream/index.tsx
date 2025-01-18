@@ -17,11 +17,18 @@ const WebStream = () => {
     const enableSoundStreaming = useAppSelector(selectEnableStreamingSound);
     const volumeStreamingSound = useAppSelector(selectVolumeStreamingSound);
 
-    const volume = !enableSoundStreaming ? 0 : volumeStreamingSound / 100;
+    const volume = !enableSoundStreaming ? 0 : (volumeStreamingSound / 100) * 5;
 
     const streamURL = useAppSelector(selectStreamURL);
     const url = new URL(streamURL);
-    url.searchParams.append('volume', String(volume));
+
+    if (url.searchParams.has('volume')) {
+        // jika ada, ubah nilai parameter volume
+        url.searchParams.set('volume', String(volume));
+    } else {
+        // jika tidak ada, tambahkan parameter volume
+        url.searchParams.append('volume', String(volume));
+    }
 
     const urlStreaming = !isFocus ? 'about:blank' : url.href;
 

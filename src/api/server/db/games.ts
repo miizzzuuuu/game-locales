@@ -5,7 +5,7 @@ export const games = [
         displayName: '24D',
         periode: 2349802,
         pcode: 'p6',
-        stream: '',
+        stream: 'https://eu.idnstreams.com/?app=Geo&name=E24D_1080P&volume=5',
         stream_hd: '',
         stream_uhd: '',
         stream_4k: '',
