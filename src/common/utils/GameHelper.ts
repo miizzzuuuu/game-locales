@@ -132,13 +132,26 @@ export const getPcode = () => _pcode;
 
 export const getBasePcode = () => {
     if (!_pcode.trim()) throw new Error('mixedPcode is empty!');
+
+    if (_pcode === 'm6') {
+        return 'p6';
+    }
+
+    if (_pcode === 'm31' || _pcode === 'm37') {
+        return 'p12';
+    }
+
     return _pcode.replace(/\D+$/, '');
 };
 
 export const isDev = () => import.meta.env.MODE === 'development';
 
 export const getGameCode = () => {
-    const basePcode = getBasePcode();
+    const basePcode = _pcode.startsWith('m6')
+        ? 'm6'
+        : _pcode.startsWith('m37')
+          ? 'm37'
+          : getBasePcode();
     const lastLetter = isNaN(Number(_pcode[_pcode.length - 1]))
         ? _pcode[_pcode.length - 1].toUpperCase()
         : '';
