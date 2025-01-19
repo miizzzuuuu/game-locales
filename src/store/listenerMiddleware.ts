@@ -12,6 +12,7 @@ import { updateSettingsListener } from './listener/settingsListener';
 import {
     gameResultListener,
     loadNewValueListener,
+    noGameListenere,
     scanNumberListener,
 } from './listener/socketListener';
 import { closeTimeListener, openTimeListener } from './listener/timerListener';
@@ -22,8 +23,9 @@ export const startAppListening = listenerMiddleware.startListening as AppStartLi
 export const addAppListener = addListener as TypedAddListener<RootState, AppDispatch>;
 
 loadNewValueListener(startAppListening);
-scanNumberListener(startAppListening);
 gameResultListener(startAppListening);
+noGameListenere(startAppListening);
+scanNumberListener(startAppListening);
 closeTimeListener(startAppListening);
 openTimeListener(startAppListening);
 confirmBetFullfiledListener(startAppListening);

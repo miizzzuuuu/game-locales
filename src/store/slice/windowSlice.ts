@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { DeviceType, Orientation } from '../../types';
+import { RootState } from '../store';
 
 export interface WindowState {
     device: DeviceType;

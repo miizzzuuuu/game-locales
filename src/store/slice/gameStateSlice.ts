@@ -1,4 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { MessageGameType } from '../../types';
 import { RootState } from '../store';
 
 export interface GameStateState {
@@ -6,7 +7,7 @@ export interface GameStateState {
     showChip: boolean;
     message: {
         value: string | undefined;
-        type: 'danger' | 'warning' | 'none';
+        type: MessageGameType;
     };
 
     showPatternUI: boolean;

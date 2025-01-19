@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { Player } from '../../types';
+import { RootState } from '../store';
 
 type PlayerState = Pick<Player, 'balance' | 'nickname' | 'currency' | 'operatorId' | 'lobbyUrl'> & {
     showCurrency: boolean;

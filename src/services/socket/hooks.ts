@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react';
 import { SocketComponent } from '.';
-import { LobbyConnect, NewSetData } from '../../types';
-import { useAppDispatch } from '../../store/hooks';
+import { sendMessageToParent } from '../../common/utils/FunctionHelper';
 import {
     gameResultAction,
     loadNewValueAction,
+    noGameAction,
     scanNumberAction,
 } from '../../store/actions/socketAction';
+import { useAppDispatch } from '../../store/hooks';
+import { setNewSet } from '../../store/slice/gameSlice';
+import { setHistory } from '../../store/slice/historySlice';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
-import { setHistory } from '../../store/slice/historySlice';
-import { setNewSet } from '../../store/slice/gameSlice';
-import { sendMessageToParent } from '../../common/utils/FunctionHelper';
+import { LobbyConnect, NewSetData } from '../../types';
 
 interface Params {
     nickname: string;
@@ -68,6 +69,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
             const { status } = data;
 
             dispatch(setNewSet(status));
+        });
+
+        SocketComponent.instance.listenNoGame(() => {
+            dispatch(noGameAction());
         });
 
         SocketComponent.instance.listenCashdrop((data) => {

@@ -1,6 +1,6 @@
 import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
-import { RootState } from '../store';
 import { Game } from '../../types';
+import { RootState } from '../store';
 import { selectStreamingQuality } from './settingsSlice';
 
 export type GameState = Game;

@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 import { Features } from '../../common/utils/Features';
-import { getEventNewSet, getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
+import { getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
     CameraSequence,
@@ -10,6 +10,7 @@ import {
     LoadNewValueData,
     LobbyConnect,
     NewSetData,
+    NoGameData,
     RecieveTotalWinData,
     ScanNumberData,
     Thunder,
@@ -40,6 +41,8 @@ export class SocketComponent {
         cameraSequence: 'cameraSequence',
         topWinner: 'topWinner',
         cashdrop: 'cash_drop',
+        newSet: 'new_set',
+        noGame: 'no_game',
     };
 
     static get instance() {
@@ -264,15 +267,39 @@ export class SocketComponent {
             return;
         }
 
-        const eventName = getEventNewSet();
-        console.log('event new set', eventName);
+        if (this._socket) {
+            this._socket.on(SocketComponent.SOCKET_EVENT.newSet, (data: NewSetData) => {
+                this.validationDataWithPcode(data, () => callback(data));
+            });
+        }
+    }
 
-        if (!eventName) {
+    // listenNewSet(callback: (data: NewSetData) => void): void {
+    //     if (!Features.SHUFFLE_THE_CARDS) {
+    //         return;
+    //     }
+
+    //     const eventName = getEventNewSet();
+    //     console.log('event new set', eventName);
+
+    //     if (!eventName) {
+    //         return;
+    //     }
+
+    //     if (this._socket) {
+    //         this._socket.on(eventName, (data: NewSetData) => {
+    //             this.validationDataWithPcode(data, () => callback(data));
+    //         });
+    //     }
+    // }
+
+    listenNoGame(callback: (data: NoGameData) => void): void {
+        if (!Features.SHUFFLE_THE_CARDS) {
             return;
         }
 
         if (this._socket) {
-            this._socket.on(eventName, (data: NewSetData) => {
+            this._socket.on(SocketComponent.SOCKET_EVENT.noGame, (data: NoGameData) => {
                 this.validationDataWithPcode(data, () => callback(data));
             });
         }
@@ -329,10 +356,10 @@ export class SocketComponent {
                 this._socket.off(eventName);
             });
 
-            const eventNewSet = getEventNewSet();
-            if (eventNewSet) {
-                this._socket.off(eventNewSet);
-            }
+            // const eventNewSet = getEventNewSet();
+            // if (eventNewSet) {
+            //     this._socket.off(eventNewSet);
+            // }
 
             const eventScan = SocketComponent.scanNumber.concat(
                 convertGameCodeToGameName(getPcode()),
