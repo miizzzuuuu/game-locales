@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
                             return 'i18next';
                         }
 
-                        if (id.indexOf('lottie') >= 0) {
+                        if (id.indexOf('@lottielab') >= 0) {
                             return 'lottie';
                         }
 

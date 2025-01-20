@@ -39,6 +39,9 @@ const ENDPOINTS = {
 
     miniHowToPlay: '/v2/player/mini-how-to-play',
 
+    // thunder
+    currentThunder: '/games/thunder',
+
     // events
     events: '/v2/events',
     eventLatestWinners: '/latest-winners',
