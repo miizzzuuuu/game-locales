@@ -3,6 +3,7 @@ import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
 import SVGBackgroundMessage from './SVG/SVGBackgroundMessage';
 import { MessageGameType } from '../../../../types';
+import SVGBackgroundMessageWinSide from '../../../../game/components/MessageWinSide/SVGBackgroundMessage';
 
 interface IProps {
     value?: ReactNode | undefined;
@@ -17,12 +18,15 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
     const prevMessage = useRef<ReactNode | undefined>();
 
     useEffect(() => {
-        currentTimeOut.current = setTimeout(() => {
-            if (messageRef.current) {
-                prevMessage.current = value;
-                messageRef.current.classList.add(styles.disapear);
-            }
-        }, 2000);
+        currentTimeOut.current = setTimeout(
+            () => {
+                if (messageRef.current) {
+                    prevMessage.current = value;
+                    messageRef.current.classList.add(styles.disapear);
+                }
+            },
+            type.includes('win-') ? 5000 : 2000,
+        );
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);
@@ -45,9 +49,9 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
     return (
         <div className={`${styles.message}`} ref={messageRef} onAnimationEnd={handleAnimationEnd}>
             <SVGBackgroundMessage className={styles.background} type={type} />
-
+            <SVGBackgroundMessageWinSide className={styles.background} type={type} />
             <div
-                className={`${styles.content}${type === 'no-game' ? ` ${styles['no-game']}` : ''}`}
+                className={`${styles.content} ${type === 'no-game' ? `${styles['no-game']}` : ''} ${type.includes('win-') ? `win` : ''}`}
             >
                 <div className={styles.text}>{value}</div>
             </div>

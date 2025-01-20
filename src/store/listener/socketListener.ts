@@ -146,6 +146,14 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                         hitung: '1',
                         tanggal: formattedDate,
                     };
+                    setTimeout(() => {
+                        dispatch(
+                            setMessage({
+                                value: scanNumber.win,
+                                type: 'win-'.concat(scanNumber.win),
+                            }),
+                        );
+                    }, 3000);
                     dispatch(addHistory(result as any));
                 }, 5000)();
             }

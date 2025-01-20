@@ -56,7 +56,7 @@ const MessageGeneral = () => {
 
     return (
         <Message
-            value={message}
+            value={messageType.includes('win-') ? `${message} ${t('win')}` : message}
             type={messageType}
             handleClose={() =>
                 dispatch(
