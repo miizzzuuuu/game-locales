@@ -1,0 +1,90 @@
+[
+    {
+        "name": "single",
+        "payout": 29,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "split",
+        "payout": 17,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "street",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "corner",
+        "payout": 8,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "six line / double street",
+        "payout": 5,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "trio",
+        "payout": 11,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "dozen",
+        "payout": 2,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "column",
+        "payout": 2,
+        "items": [],
+        "min": 1000,
+        "max": 1000000
+    },
+    {
+        "name": "side bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "1-18",
+                "payout": 1
+            },
+            {
+                "name": "19-36",
+                "payout": 1
+            },
+            {
+                "name": "odd",
+                "payout": 1
+            },
+            {
+                "name": "even",
+                "payout": 1
+            },
+            {
+                "name": "red",
+                "payout": 1
+            },
+            {
+                "name": "black",
+                "payout": 1
+            }
+        ],
+        "min": 5000,
+        "max": 5000000
+    }
+]
