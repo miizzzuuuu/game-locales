@@ -1,6 +1,6 @@
 import ButtonFullscreen from '../ButtonFullscreen';
 import ButtonHTP from '../ButtonHTP';
-import ButtonPromotion from '../ButtonPromotion';
+// import ButtonPromotion from '../ButtonPromotion';
 import ButtonSettings from '../ButtonSettings';
 import ButtonTransactions from '../ButtonTransactions';
 import styles from './styles.module.scss';
@@ -10,7 +10,7 @@ const TopRight = () => {
         <div className={styles.container}>
             <ButtonTransactions />
             <ButtonHTP />
-            <ButtonPromotion />
+            {/* <ButtonPromotion /> */}
             <ButtonSettings />
             <ButtonFullscreen />
         </div>

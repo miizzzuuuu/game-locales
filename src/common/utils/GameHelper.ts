@@ -117,6 +117,12 @@ const GAME_DISPLAY_NAME: Record<string, string> = {
 
 const KEY_MINI_HOW_TO_PLAY = 'mini-htp';
 
+const DUPLICATE_PCODE: Record<string, string> = {
+    m6: 'p6',
+    m31: 'p12',
+    m37: 'p12',
+};
+
 export const WIN_NOTIFICATION_DURATION = 3000;
 
 export const normalizeTime = (time: number) => {
@@ -132,13 +138,18 @@ export const getPcode = () => _pcode;
 
 export const getBasePcode = () => {
     if (!_pcode.trim()) throw new Error('mixedPcode is empty!');
+
+    if (_pcode in DUPLICATE_PCODE) {
+        return DUPLICATE_PCODE[_pcode];
+    }
+
     return _pcode.replace(/\D+$/, '');
 };
 
 export const isDev = () => import.meta.env.MODE === 'development';
 
 export const getGameCode = () => {
-    const basePcode = getBasePcode();
+    const basePcode = _pcode.replace(/\D+$/, '');
     const lastLetter = isNaN(Number(_pcode[_pcode.length - 1]))
         ? _pcode[_pcode.length - 1].toUpperCase()
         : '';

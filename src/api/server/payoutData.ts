@@ -4,6 +4,7 @@ import payoutsP7 from './response/payouts/p7.json';
 import payoutsP7B from './response/payouts/p7b.json';
 import payoutsP7C from './response/payouts/p7c.json';
 import payoutsP7D from './response/payouts/p7d.json';
+import payoutsP7E from './response/payouts/p7e.json';
 import payoutsP7G from './response/payouts/p7g.json';
 import payoutsP9 from './response/payouts/p9.json';
 import payoutsP9B from './response/payouts/p9b.json';
@@ -49,6 +50,7 @@ const payoutData: Record<string, object> = {
     p7b: payoutsP7B,
     p7c: payoutsP7C,
     p7d: payoutsP7D,
+    p7e: payoutsP7E,
     p7g: payoutsP7G,
     p9: payoutsP9,
     p9b: payoutsP9B,

@@ -16,6 +16,9 @@ import transactionData from './transactionData';
 // payouts
 import payoutData from './payoutData';
 
+// thunder
+import thunderData from './thunderData';
+
 // database
 import { games } from './db/games';
 import { player } from './db/player';
@@ -100,6 +103,17 @@ export function makeServer({ environment = 'test' } = {}) {
 
                 if (pcode in payoutData) {
                     return payoutData[pcode];
+                } else {
+                    return new Response(400, {}, { message: 'Payout Empty' });
+                }
+            });
+
+            // thunder
+            this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request) => {
+                const pcode = request.params.pcode;
+
+                if (pcode in thunderData) {
+                    return thunderData[pcode];
                 } else {
                     return new Response(400, {}, { message: 'Payout Empty' });
                 }

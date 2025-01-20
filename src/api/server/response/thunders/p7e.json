@@ -1,0 +1,11 @@
+{
+    "status": true,
+    "pcode": "p7e",
+    "data": {
+        "lucky_number": [30, 13, 1],
+        "multipliers": [1, 1, 1],
+        "prize_data": 50,
+        "total_multipliers": [50, 50, 50],
+        "golden_time": false
+    }
+}
