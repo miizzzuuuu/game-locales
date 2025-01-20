@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { MessageGameType } from '../../types';
+import { MessageGameType, MessageWinSideType } from '../../types';
 import { RootState } from '../store';
 
 export interface GameStateState {
@@ -7,7 +7,7 @@ export interface GameStateState {
     showChip: boolean;
     message: {
         value: string | undefined;
-        type: MessageGameType;
+        type: MessageGameType | MessageWinSideType;
     };
 
     showPatternUI: boolean;
@@ -72,6 +72,5 @@ export const selectMessageValue = (state: RootState) => state.gameState.message.
 export const selectMessageType = (state: RootState) => state.gameState.message.type;
 export const selectShowPatternUI = (state: RootState) => state.gameState.showPatternUI;
 export const selectShowMiniHowToPlay = (state: RootState) => state.gameState.showMiniHowToPlay;
-
 
 export default gameStateSlice.reducer;

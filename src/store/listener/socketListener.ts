@@ -1,6 +1,6 @@
 import i18n from '../../services/i18next/index';
 import { Sound } from '../../services/sound';
-import { BetSend } from '../../types';
+import { BetSend, MessageWinSideType } from '../../types';
 import {
     gameResultAction,
     loadNewValueAction,
@@ -150,7 +150,9 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                         dispatch(
                             setMessage({
                                 value: scanNumber.win,
-                                type: 'win-'.concat(scanNumber.win),
+                                type: 'win-'.concat(
+                                    scanNumber.win as 'dragon' | 'tiger' | 'tie',
+                                ) as MessageWinSideType,
                             }),
                         );
                     }, 3000);

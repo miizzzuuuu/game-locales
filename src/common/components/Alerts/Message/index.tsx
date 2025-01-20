@@ -2,13 +2,13 @@ import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
 
 import styles from './styles.module.scss';
 import SVGBackgroundMessage from './SVG/SVGBackgroundMessage';
-import { MessageGameType } from '../../../../types';
+import { MessageGameType, MessageWinSideType } from '../../../../types';
 import SVGBackgroundMessageWinSide from '../../../../game/components/MessageWinSide/SVGBackgroundMessage';
 
 interface IProps {
     value?: ReactNode | undefined;
     handleClose: () => void;
-    type?: MessageGameType;
+    type?: MessageGameType | MessageWinSideType;
 }
 
 const Message = ({ value, handleClose, type = 'none' }: IProps) => {
@@ -48,8 +48,11 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
 
     return (
         <div className={`${styles.message}`} ref={messageRef} onAnimationEnd={handleAnimationEnd}>
-            <SVGBackgroundMessage className={styles.background} type={type} />
-            <SVGBackgroundMessageWinSide className={styles.background} type={type} />
+            <SVGBackgroundMessage className={styles.background} type={type as MessageGameType} />
+            <SVGBackgroundMessageWinSide
+                className={styles.background}
+                type={type as MessageWinSideType}
+            />
             <div
                 className={`${styles.content} ${type === 'no-game' ? `${styles['no-game']}` : ''} ${type.includes('win-') ? `win` : ''}`}
             >

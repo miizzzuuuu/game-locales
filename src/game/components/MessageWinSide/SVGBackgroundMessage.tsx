@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
-import { MessageGameType } from '../../../types';
+import { MessageWinSideType } from '../../../types';
 
 interface IProps {
     style?: CSSProperties;
     className?: string;
-    type?: MessageGameType;
+    type?: MessageWinSideType | 'none';
 }
 
 const SVGBackgroundMessageWinSide = ({ className, style, type = 'none' }: IProps) => {

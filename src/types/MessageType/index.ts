@@ -2,6 +2,7 @@ import { EventIdnlive } from '../ApiType';
 import { Cashdrop } from '../SocketType';
 
 export type MessageGameType = 'danger' | 'warning' | 'none' | 'no-game';
+export type MessageWinSideType = 'win-dragon' | 'win-tiger' | 'win-tie';
 
 export type MessageData =
     | {
