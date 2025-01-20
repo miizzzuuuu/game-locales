@@ -16,6 +16,7 @@ interface IProps {
     delay?: number;
     notAbsolute?: boolean;
     marginTop?: string;
+    delayAppear?: string;
 }
 
 export function RenderCard(props: IProps) {
@@ -57,7 +58,7 @@ export function RenderCard(props: IProps) {
             <div
                 className={`${styles['card-slot']}${props.appear == true ? ` ${styles.appear}` : ''}${props.disappear == true ? ` ${styles.disappear}` : ''}`}
                 style={{
-                    // animationDelay: props.delay || '0',
+                    animationDelay: props.delayAppear || '0',
                     position: 'absolute',
                     width: '100%',
                     height: '100%',

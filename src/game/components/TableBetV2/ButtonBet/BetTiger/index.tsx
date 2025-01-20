@@ -2,6 +2,7 @@ import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
 import { useAppSelector } from '../../../../../store/hooks';
+import { selectScanNumber } from '../../../../../store/slice/resultSlice';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
 import { payoutGroup } from '../../../../utils/DragonTigerBHelper';
 import { RenderCard } from '../../../Card/RenderCard';
@@ -11,7 +12,7 @@ import styles from './../styles.module.scss';
 const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
     const chip = useGetChipBet(bet);
 
-    const scanNumber = useAppSelector((state) => state.result.scanNumber);
+    const scanNumber = useAppSelector(selectScanNumber);
     const betIsOpen = useAppSelector(selectBetIsOpen);
 
     const isLose = !betIsOpen && scanNumber && scanNumber.submit && scanNumber.win !== 'tiger';
@@ -42,11 +43,17 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     top="50%"
                     left="unset"
                     right="50%"
+                    delayAppear="1000"
                     position={{ x: '0', y: '-170%' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.tiger : ''}
                     appear={
-                        !!(!betIsOpen && scanNumber && scanNumber.tiger && scanNumber.tiger != 'x')
+                        !!(
+                            !betIsOpen &&
+                            scanNumber &&
+                            scanNumber.dragon &&
+                            scanNumber.dragon != 'x'
+                        )
                     }
                     disappear={!scanNumber}
                     submit={scanNumber && scanNumber.submit == true}
