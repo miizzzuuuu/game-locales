@@ -155,7 +155,7 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                                 ) as MessageWinSideType,
                             }),
                         );
-                    }, 3000);
+                    }, 5000);
                     dispatch(addHistory(result as any));
                 }, 5000)();
             }
