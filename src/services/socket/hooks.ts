@@ -58,7 +58,9 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
 
         SocketComponent.instance.listenRecieveTotalWin((data) => {
             const { winamount } = data;
-            dispatch(setWinAmount(winamount));
+            setTimeout(() => {
+                dispatch(setWinAmount(winamount));
+            }, 5000);
         });
 
         SocketComponent.instance.listenTopWinner((data) => {

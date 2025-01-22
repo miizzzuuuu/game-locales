@@ -46,7 +46,7 @@ const SVGBackgroundMessageWinSide = ({ className, style, type = 'none' }: IProps
                             d="M0 0h150v25H0z"
                         ></path>
                     </mask>
-                    <g fill="#E60045" mask="url(#mask-win-side)">
+                    <g fill={`url(#paint2-${typeMessage})`} mask="url(#mask-win-side)">
                         <path d="m4.167 0 4.167 4.167-4.167 4.167L0 4.167z"></path>
                         <path d="m12.5 0 4.167 4.167L12.5 8.334 8.333 4.167z"></path>
                         <path d="M20.833 0 25 4.167l-4.167 4.167-4.167-4.167zM29.167 0l4.167 4.167-4.167 4.167L25 4.167z"></path>
@@ -116,7 +116,7 @@ const SVGBackgroundMessageWinSide = ({ className, style, type = 'none' }: IProps
                     cx="0"
                     cy="0"
                     r="1"
-                    gradientTransform="matrix(59.7425 0 0 137.898 60.258 12.5)"
+                    gradientTransform="matrix(74.6781 0 0 137.898 75.322 12.5)"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#0097A7"></stop>
@@ -222,7 +222,7 @@ const SVGBackgroundMessageWinSide = ({ className, style, type = 'none' }: IProps
                     cx="0"
                     cy="0"
                     r="1"
-                    gradientTransform="matrix(59.7425 0 0 137.898 60.258 12.5)"
+                    gradientTransform="matrix(74.6781 0 0 137.898 75.322 12.5)"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#00AE8F"></stop>
@@ -234,7 +234,7 @@ const SVGBackgroundMessageWinSide = ({ className, style, type = 'none' }: IProps
                     cx="0"
                     cy="0"
                     r="1"
-                    gradientTransform="matrix(59.7425 0 0 137.898 60.258 12.5)"
+                    gradientTransform="matrix(74.6781 0 0 137.898 75.322 12.5)"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#01CBA7"></stop>
