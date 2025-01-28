@@ -47,9 +47,10 @@
                 return /\b(iPad|iPhone|iPod)\b/.test(ua);
             };
 
-            const inIframe = () => window.self !== window.top;
+            // const inIframe = () => window.self !== window.top;
 
-            if (isIOS() && !inIframe()) {
+            // if (isIOS() && !inIframe()) {
+            if (isIOS()) {
                 document.body.classList.add('ios');
                 window.isIOS = true;
             } else {
