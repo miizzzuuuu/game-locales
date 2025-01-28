@@ -12,7 +12,7 @@ import { selectNickname, selectOperatorId } from '../../../store/slice/playerSli
 import { setWinAmount } from '../../../store/slice/resultSlice';
 import { closeTime, selectTime } from '../../../store/slice/timerSlice';
 import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSlice';
-import { dummyLoadNewValue, newSetDummy, santaCashBoxDummy, topWinnerDummy } from '../../dummy';
+import { dummyLoadNewValue, newSetDummy, luckyAngpaoDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
 import { Features } from '../../utils/Features';
@@ -88,7 +88,7 @@ function Game() {
                 sendMessageToParent({
                     source: 'LIVE_GAME',
                     type: 'GET_CASHDROP',
-                    payload: santaCashBoxDummy,
+                    payload: luckyAngpaoDummy,
                 });
             }
         },
