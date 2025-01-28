@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useAppSelector } from '../../store/hooks';
 import { selectDevice } from '../../store/slice/windowSlice';
+import { sendMessageToParent } from '../utils/FunctionHelper';
 
 function useFullscreen() {
     const device = useAppSelector(selectDevice);
@@ -10,6 +11,12 @@ function useFullscreen() {
             const inIframe = () => window.self !== window.top;
 
             if (device === 'desktop' || window.isIOS || document.fullscreenElement || inIframe()) {
+                if (inIframe()) {
+                    sendMessageToParent({
+                        source: 'LIVE_GAME',
+                        type: 'CLICK_GAME',
+                    });
+                }
                 return;
             }
 
