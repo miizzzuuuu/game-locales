@@ -18,4 +18,8 @@ export type MessageData =
           type: 'GET_CASHDROP';
           source: 'LIVE_GAME';
           payload: Cashdrop;
+      }
+    | {
+          type: 'CLICK_GAME';
+          source: 'LIVE_GAME';
       };
