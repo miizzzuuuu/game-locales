@@ -146,8 +146,8 @@ export const newSetDummy = { pcode: 'm22', gameSet: 13494, status: true };
 
 export const newGameDummy = { pcode: 'p6b', gameSet: 13494 };
 
-export const santaCashBoxDummy: Cashdrop = {
-    name: 'santa-cash-box',
+export const luckyAngpaoDummy: Cashdrop = {
+    name: 'lucky-angpao',
     data: {
         username: 'DWTKUSERBETA2',
         agent: '287495130',
