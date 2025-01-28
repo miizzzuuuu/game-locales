@@ -1,6 +1,9 @@
+import { lazy, Suspense } from 'react';
 import { useAppSelector } from '../../store/hooks';
 import { selectEventIdnliveList } from '../../store/slice/eventIdnliveSlice';
-import SantaCashBox from './SantaCashBox';
+
+const LuckyAngpao = lazy(() => import('./LuckyAngpao'));
+const SantaCashBox = lazy(() => import('./SantaCashBox'));
 
 const EventsIdnlive = () => {
     const eventsIdnliveList = useAppSelector(selectEventIdnliveList);
@@ -9,7 +12,19 @@ const EventsIdnlive = () => {
         <>
             {eventsIdnliveList.map((event) => {
                 if (event.name === 'santa-cash-box') {
-                    return <SantaCashBox key={event.name} event={event} />;
+                    return (
+                        <Suspense key={event.name}>
+                            <SantaCashBox event={event} />
+                        </Suspense>
+                    );
+                }
+
+                if (event.name === 'lucky-angpao') {
+                    return (
+                        <Suspense key={event.name}>
+                            <LuckyAngpao event={event} />
+                        </Suspense>
+                    );
                 }
 
                 return null;
