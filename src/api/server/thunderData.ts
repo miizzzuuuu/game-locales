@@ -1,7 +1,7 @@
-import thunderP7E from './response/thunders/p7e.json';
+import thundersP7E from './response/thunders/p7e.json';
 
 const thunderData: Record<string, { data: any }> = {
-    p7e: thunderP7E,
+    p7e: thundersP7E,
 };
 
 export default thunderData;
