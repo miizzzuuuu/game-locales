@@ -11,6 +11,9 @@ import { time, timer } from './response/timer/dummyTimer';
 // games
 import gameData from './gameData';
 
+// lastbets
+import lastbetData from './lastbetData';
+
 // payouts
 import payoutData from './payoutData';
 
@@ -24,7 +27,6 @@ import thunderData from './thunderData';
 import transactionData from './transactionData';
 
 // database
-import { lastbets } from './db/lastbets';
 import { player } from './db/player';
 import { properties } from './db/properties';
 import { settings } from './db/settings';
@@ -61,26 +63,17 @@ export function makeServer({ environment = 'test' } = {}) {
 
             // lastbets
             this.get(ENDPOINTS.playerLastbets, () => {
-                return lastbets;
+                return lastbetData;
             });
 
             this.get(ENDPOINTS.playerLastbets + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const lastbet: { periode: number; data: any[] } | { message: string } | undefined =
-                    lastbets[pcode];
-
-                if (!lastbet) {
-                    return new Response(
-                        400,
-                        {},
-                        {
-                            message: 'Empty Lastbet',
-                        },
-                    );
+                if (pcode in lastbetData) {
+                    return lastbetData[pcode];
+                } else {
+                    return new Response(400, {}, { message: 'Empty Lastbet' });
                 }
-
-                return lastbet;
             });
 
             // games
@@ -94,7 +87,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 if (pcode in gameData) {
                     return gameData[pcode];
                 } else {
-                    return new Response(400, {}, { message: 'Game Empty' });
+                    return new Response(400, {}, { message: 'Empty Game' });
                 }
             });
 
@@ -105,7 +98,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 if (pcode in payoutData) {
                     return payoutData[pcode];
                 } else {
-                    return new Response(400, {}, { message: 'Payout Empty' });
+                    return new Response(400, {}, { message: 'Payout Not Found' });
                 }
             });
 
@@ -113,10 +106,16 @@ export function makeServer({ environment = 'test' } = {}) {
             this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request) => {
                 const pcode = request.params.pcode;
 
+                const baseThunder = {
+                    status: true,
+                    pcode: pcode,
+                    data: [],
+                };
+
                 if (pcode in thunderData) {
-                    return thunderData[pcode];
+                    return { ...baseThunder, data: thunderData[pcode] };
                 } else {
-                    return new Response(400, {}, { message: 'Thunder Empty' });
+                    return baseThunder;
                 }
             });
 
