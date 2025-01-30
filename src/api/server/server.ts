@@ -1,31 +1,33 @@
 import { createServer, Response } from 'miragejs';
 import { ENDPOINTS } from '../../common/utils/APIManager';
 
-import sendBetData from './response/send-bet/success.json';
 import eventsList from './response/events/eventsList.json';
+import eventPrize from './response/events/eventsPrize.json';
 import eventLatestWinners from './response/events/latestWinners.json';
 import eventTopWinners from './response/events/topWinners.json';
-import eventPrize from './response/events/eventsPrize.json';
+import sendBetData from './response/send-bet/success.json';
+import { time, timer } from './response/timer/dummyTimer';
 
-// result
-import resultData from './resultData';
-
-// transaction
-import transactionData from './transactionData';
+// games
+import gameData from './gameData';
 
 // payouts
 import payoutData from './payoutData';
 
-// thunder
+// results
+import resultData from './resultData';
+
+// thunders
 import thunderData from './thunderData';
 
+// transactions
+import transactionData from './transactionData';
+
 // database
-import { games } from './db/games';
-import { player } from './db/player';
-import { settings } from './db/settings';
-import { properties } from './db/properties';
 import { lastbets } from './db/lastbets';
-import { time, timer } from './response/timer/dummyTimer';
+import { player } from './db/player';
+import { properties } from './db/properties';
+import { settings } from './db/settings';
 
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
@@ -41,8 +43,7 @@ export function makeServer({ environment = 'test' } = {}) {
             );
 
             // player properties
-            this.get(ENDPOINTS.playerProperties, (scheme) => {
-                const properties = scheme.db.properties;
+            this.get(ENDPOINTS.playerProperties, () => {
                 return properties;
             });
 
@@ -83,18 +84,18 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // games
-            this.get(ENDPOINTS.games, (schema) => {
-                const games = schema.db.games;
-
-                return games;
+            this.get(ENDPOINTS.games, () => {
+                return gameData;
             });
 
-            this.get(ENDPOINTS.games + '/:pcode', (schema, request) => {
+            this.get(ENDPOINTS.games + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const game = schema.db.games.findBy({ pcode });
-
-                return game;
+                if (pcode in gameData) {
+                    return gameData[pcode];
+                } else {
+                    return new Response(400, {}, { message: 'Game Empty' });
+                }
             });
 
             // payout
@@ -115,7 +116,7 @@ export function makeServer({ environment = 'test' } = {}) {
                 if (pcode in thunderData) {
                     return thunderData[pcode];
                 } else {
-                    return new Response(400, {}, { message: 'Payout Empty' });
+                    return new Response(400, {}, { message: 'Thunder Empty' });
                 }
             });
 
@@ -231,11 +232,6 @@ export function makeServer({ environment = 'test' } = {}) {
             this.passthrough();
             this.passthrough('https://cdn.lottielab.com/*');
         },
-    });
-
-    server.db.loadData({
-        games,
-        properties,
     });
 
     return server;
