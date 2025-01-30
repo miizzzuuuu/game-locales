@@ -24,8 +24,6 @@ function useConfirmBet() {
     const confirmBetError = useAppSelector(selectConfirmBetError);
 
     useEffect(() => {
-        console.log('confirmBetStatus', confirmBetStatus);
-
         if (confirmBetStatus === 'pending') {
             setMessage({
                 value: 'SUBMITING...',
