@@ -11,6 +11,7 @@ import transactionsP9B from './response/transactions/p9b.json';
 import transactionsP9C from './response/transactions/p9c.json';
 import transactionsP12 from './response/transactions/p12.json';
 import transactionsP12B from './response/transactions/p12b.json';
+
 import transactionsM6 from './response/transactions/m6.json';
 import transactionsM7 from './response/transactions/m7.json';
 import transactionsM8 from './response/transactions/m8.json';

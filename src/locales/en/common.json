@@ -48,7 +48,7 @@
     "bet-error-min": "Bet {{button}} minimal {{value, number}}",
     "insuffix-balance": "insuffix balance",
     "autobet-error-insufficient-balance": "autobet failed, insufficient balance",
-    "doublebet-error-max-bet": "double bet error, max bet",
+    "doublebet-error-max-bet": "Max Bet limit reached",
     "bet-void-n50": "Place the main bet first",
     "winner": "winner",
     "payout-no-initial-bet": "Payout does not include initial bet.",

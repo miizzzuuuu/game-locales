@@ -48,7 +48,7 @@
     "bet-error-min": "Cược {{button}} tối thiểu {{value, number}}",
     "insuffix-balance": "số dư không đủ",
     "autobet-error-insufficient-balance": "tự động cược thất bại, số dư không đủ",
-    "doublebet-error-max-bet": "lỗi cược đôi, cược tối đa",
+    "doublebet-error-max-bet": "Đã đạt giới hạn cược tối đa",
     "bet-void-n50": "Bạn phải đặt cược vào Người chơi hoặc Nhà cái hoặc Hòa trước để đặt cược vào {{button}}",
     "winner": "người thắng",
     "payout-no-initial-bet": "Tiền thưởng không bao gồm tiền cược ban đầu.",
