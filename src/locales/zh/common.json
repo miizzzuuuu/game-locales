@@ -48,7 +48,7 @@
     "bet-error-min": "下注 {{button}} 最小 {{value, number}}",
     "insuffix-balance": "余额不足",
     "autobet-error-insufficient-balance": "自动下注失败，余额不足",
-    "doublebet-error-max-bet": "双倍下注错误，最大下注",
+    "doublebet-error-max-bet": "已达到最大投注限额",
     "bet-void-n50": "您必须先对闲家、庄家或平局下注，才能对 {{button}} 下注",
     "winner": "赢家",
     "payout-no-initial-bet": "支付不包括初始投注。",

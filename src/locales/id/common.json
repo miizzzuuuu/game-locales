@@ -48,7 +48,7 @@
     "bet-error-min": "Taruhan {{button}} minimal {{value, number}}",
     "insuffix-balance": "saldo tidak cukup",
     "autobet-error-insufficient-balance": "autobet gagal, saldo tidak mencukupi",
-    "doublebet-error-max-bet": "kesalahan gandakan taruhan, taruhan maksimum",
+    "doublebet-error-max-bet": "Batas taruhan maksimal tercapai",
     "bet-void-n50": "Pasang taruhan utama terlebih dahulu",
     "winner": "pemenang",
     "payout-no-initial-bet": "Pembayaran tidak termasuk taruhan awal.",

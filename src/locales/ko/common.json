@@ -48,7 +48,7 @@
     "bet-error-min": "{{button}} 베팅 최소 {{value, number}}",
     "insuffix-balance": "잔액 부족",
     "autobet-error-insufficient-balance": "자동 베팅 실패, 잔액 부족",
-    "doublebet-error-max-bet": "이중 베팅 오류, 최대 베팅",
+    "doublebet-error-max-bet": "최대 베팅 한도에 도달했습니다",
     "bet-void-n50": "{{button}}에 베팅하려면 먼저 플레이어, 뱅커 또는 타이에 베팅해야 합니다",
     "winner": "승자",
     "payout-no-initial-bet": "지불금에는 초기 베팅이 포함되지 않습니다.",
