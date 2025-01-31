@@ -16,19 +16,19 @@ export default defineConfig(({ mode }) => {
             rollupOptions: {
                 output: {
                     manualChunks(id: string) {
-                        if (id.indexOf('i18next') >= 0) {
+                        if (id.includes('i18next')) {
                             return 'i18next';
                         }
 
-                        if (id.indexOf('@lottielab') >= 0) {
+                        if (id.includes('@lottielab')) {
                             return 'lottie';
                         }
 
-                        if (id.indexOf('react') >= 0) {
+                        if (id.includes('react')) {
                             return 'react';
                         }
 
-                        if (id.indexOf('node_modules') >= 0) {
+                        if (id.includes('node_modules')) {
                             return 'vendor';
                         }
                     },

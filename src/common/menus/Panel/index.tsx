@@ -34,13 +34,13 @@ const Panel = ({
     const [hiddenUI, setVisibleUI] = useState(true);
 
     const handleAnimationStart: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (/slideIn/.test(e.animationName)) {
+        if (e.animationName.includes('slideIn')) {
             setVisibleUI(false);
         }
     };
 
     const handleAnimationEnd: AnimationEventHandler<HTMLDivElement> = (e) => {
-        if (/slideOut/.test(e.animationName)) {
+        if (e.animationName.includes('slideOut')) {
             setVisibleUI(true);
         }
     };
@@ -63,7 +63,7 @@ const Panel = ({
             </div>
 
             {device !== 'desktop' && (
-                <Footer style={{ backgroundColor: footerBg ? footerBg : undefined }} />
+                <Footer style={{ backgroundColor: footerBg }} />
             )}
         </div>
     );

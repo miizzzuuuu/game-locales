@@ -183,7 +183,8 @@ export const hideMiniHowToPlayLocalStorage = () => {
 
 // export const getVariant = () => (_pcode.length === 3 ? '' : _pcode.charAt(_pcode.length - 1));
 export const getVariant = () => {
-    const match = _pcode.match(/[^0-9]$/);
+    const regex = /[^0-9]$/;
+    const match = regex.exec(_pcode);
     return match ? match[0] : '';
 };
 
@@ -225,7 +226,7 @@ export const handleBackToLobby = (lobbyUrl?: string) => {
         if (parent.top?.opener) {
             parent.close();
         } else {
-            parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
+            parent.location.href = lobbyUrl ?? urlLobbyLocal;
         }
     };
 

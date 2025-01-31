@@ -11,7 +11,7 @@ const PayoutNote = ({ title, content }: IProps) => {
 
     return (
         <div className={styles['payout-note']}>
-            <div className={styles['payout-note-title']}>{t(title ? title : 'note')}</div>
+            <div className={styles['payout-note-title']}>{t(title ?? 'note')}</div>
 
             <div>{content && t(content)}</div>
         </div>

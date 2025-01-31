@@ -53,7 +53,7 @@ const checkLargeIphone = () => {
         screen: { width: screenWidth, height: screenHeight },
     } = window;
     return (
-        /iPhone/.test(navigator.userAgent) &&
+        navigator.userAgent.includes('iPhone') &&
         Math.max(width, height) === 1024 &&
         Math.min(width, height) === 768 &&
         ((screenWidth === 768 && screenHeight === 1024) ||
@@ -66,7 +66,7 @@ const checkLargeAndroid = () => {
 
     const { innerWidth: width, innerHeight: height } = window;
     return (
-        /Android/.test(navigator.userAgent) &&
+        navigator.userAgent.includes('Android') &&
         Math.max(width, height) >= 1024 &&
         Math.min(width, height) >= 768
     );
@@ -84,7 +84,7 @@ const getUserAgent = () => {
 const isMobile = () =>
     /Mobi|Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-const isIpad = () => /Mac/.test(navigator.userAgent) && navigator.maxTouchPoints > 0;
+const isIpad = () => navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 0;
 
 const isTablet = () =>
     isIpad() ||

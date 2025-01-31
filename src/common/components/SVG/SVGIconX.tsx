@@ -14,7 +14,7 @@ const SVGIconX = ({ className, style, color }: IProps) => (
     >
         <path
             d="M18 6L6 18M6 6L18 18"
-            stroke={color ? color : '#6B6C80'}
+            stroke={color ?? '#6B6C80'}
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
