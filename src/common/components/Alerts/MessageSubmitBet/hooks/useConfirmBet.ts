@@ -47,7 +47,7 @@ function useConfirmBet() {
             });
             return;
         }
-    }, [confirmBetStatus, confirmBetError]);
+    }, [confirmBetStatus, confirmBetError, t]); // tambahkan 't' ke dependency array
 
     const handleClose = () => {
         dispatch(resetConfirmBet());

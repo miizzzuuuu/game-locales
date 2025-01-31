@@ -110,8 +110,7 @@ function Game() {
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
-    if (device === 'desktop') {
-    }
+    
 
     return (
         <div
