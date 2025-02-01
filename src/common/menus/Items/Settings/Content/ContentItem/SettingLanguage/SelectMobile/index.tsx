@@ -29,7 +29,7 @@ const SelectMobile = ({ initialValue, options, onChange }: IProps) => {
                 value={initialValue}
             >
                 {options?.map((opt) => (
-                    <option key={opt} value={opt} selected={opt === initialValue}>
+                    <option key={opt} value={opt}>
                         {langName[opt]}
                     </option>
                 ))}
