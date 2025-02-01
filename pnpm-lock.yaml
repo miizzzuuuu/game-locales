@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@lottielab/lottie-player':
-        specifier: ^1.1.2
-        version: 1.1.2(react@19.0.0)
+        specifier: ^1.1.3
+        version: 1.1.3(react@19.0.0)
       '@reduxjs/toolkit':
         specifier: ^2.5.1
         version: 2.5.1(react-redux@9.2.0(@types/react@19.0.8)(react@19.0.0)(redux@5.0.1))(react@19.0.0)
@@ -305,8 +305,8 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@lottielab/lottie-player@1.1.2':
-    resolution: {integrity: sha512-i+Q8b4AZtekicMT+RWiHLPyM31EldeumUsVjZV7A5CsXYGUhVJfB90yTmpY2/QqyqvkGkjvfZKQNCDhTkxs38A==}
+  '@lottielab/lottie-player@1.1.3':
+    resolution: {integrity: sha512-3Em6ZwBnIyFsAU3XsJf9GcTwxVz3FQWguxIp99Vs7dCZNelYne3k+PyCkp+3MSJPnk104KRt71SgVJ7cXUUgoA==}
     peerDependencies:
       react: '>=16.8.0'
     peerDependenciesMeta:
@@ -2070,7 +2070,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@lottielab/lottie-player@1.1.2(react@19.0.0)':
+  '@lottielab/lottie-player@1.1.3(react@19.0.0)':
     dependencies:
       lottie-web: https://codeload.github.com/lottielab/lottie-web/tar.gz/c671e8eaefb95099fdb126d2fc68a566327e4354
     optionalDependencies:
