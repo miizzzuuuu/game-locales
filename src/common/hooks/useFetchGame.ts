@@ -29,13 +29,9 @@ function useFetchGame() {
                         fetchResultHistory(dispatch),
                         fetchLastbets((lastbet) => {
                             if (lastbet.periode !== data.periode) {
-                                console.log('current bet');
-
                                 dispatch(setLastBetData(lastbet));
                                 return;
                             }
-
-                            console.log('current bet');
 
                             let totalBet = 0;
                             for (const i of lastbet.data) {

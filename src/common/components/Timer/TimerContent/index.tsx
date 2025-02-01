@@ -21,7 +21,7 @@ const TimerContent = () => {
 
     const svgRef = useRef<SVGSVGElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number>(null);
     const targetTime = useRef<number>(0);
 
     const getRemainingTime = useCallback(() => {
@@ -58,8 +58,6 @@ const TimerContent = () => {
     }, [getRemainingTime, timer]);
 
     useEffect(() => {
-        console.log(time);
-
         let timeOutTime: ReturnType<typeof setTimeout> | undefined;
 
         if (time > 0) {
@@ -82,7 +80,7 @@ const TimerContent = () => {
             }
             if (requestRef.current) {
                 cancelAnimationFrame(requestRef.current);
-                requestRef.current = undefined;
+                requestRef.current = null;
             }
         };
     }, [time, timerIsClose, updateTimer, dispatch]);

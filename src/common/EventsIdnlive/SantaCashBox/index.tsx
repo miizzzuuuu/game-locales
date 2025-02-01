@@ -16,8 +16,6 @@ const SantaCashBox = ({ event }: IProps) => {
     const [showButton, setShowButton] = useState(true);
 
     const openPopup = () => {
-        console.log('open popup');
-
         sendMessageToParent({
             source: 'LIVE_GAME',
             type: 'OPEN_MODAL_EVENT',
