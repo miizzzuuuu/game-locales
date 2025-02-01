@@ -28,8 +28,6 @@ const ButtonAction = ({
     custonSound,
 }: IProps) => {
     const handleClick = () => {
-        console.log('click action button');
-
         onClick?.();
     };
 
