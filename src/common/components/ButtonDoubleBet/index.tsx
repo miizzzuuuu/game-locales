@@ -1,15 +1,14 @@
 import { CSSProperties } from 'react';
-import ButtonAction from '../ButtonAction';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { useAppTranslate } from '../../../services/i18next/hooks';
-
-import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { selectBalance } from '../../../store/slice/playerSlice';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { doubleBet, selectBetAdd, selectIdsBetAdd } from '../../../store/slice/bets';
 import { selectMax, selectMax50 } from '../../../store/slice/gameSlice';
+import { setMessage } from '../../../store/slice/gameStateSlice';
+import { selectBalance } from '../../../store/slice/playerSlice';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import ButtonAction from '../ButtonAction';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconDoubleBet from './SVG/SVGIconDoubleBet';
-import { setMessage } from '../../../store/slice/gameStateSlice';
-import { doubleBet, selectBetAdd, selectIdsBetAdd } from '../../../store/slice/bets';
 
 interface IProps {
     styles?: CSSProperties;

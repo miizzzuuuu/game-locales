@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { selectShowPatternUI, togglePatternUI } from '../../../store/slice/gameStateSlice';
-
 import ButtonAction from '../ButtonAction';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconPattern from './SVG/SVGIconPattern';

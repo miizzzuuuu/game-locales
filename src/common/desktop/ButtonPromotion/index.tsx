@@ -1,7 +1,7 @@
-import SVGIconPromotion from '../../menus/Items/Main/SVG/SVGIconPromotion';
-import ButtonAction from '../../components/ButtonAction';
 import { useAppSelector } from '../../../store/hooks';
 import { selectEventIdnliveList } from '../../../store/slice/eventIdnliveSlice';
+import ButtonAction from '../../components/ButtonAction';
+import SVGIconPromotion from '../../menus/Items/Main/SVG/SVGIconPromotion';
 import { sendMessageToParent } from '../../utils/FunctionHelper';
 
 const ButtonPromotion = () => {

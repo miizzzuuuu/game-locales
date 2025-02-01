@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import SVGIconCancelBet from '../../../../../../components/ButtonCancelBet/SVG/SVGIconCancelBet';
 import SVGIconDoubleBet from '../../../../../../components/ButtonDoubleBet/SVG/SVGIconDoubleBet';
 import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
@@ -13,7 +14,7 @@ import HowToPlayCard from '../../../HowToPlayCard';
 import styles from './styles.module.scss';
 
 interface ButtonIconProps {
-    icon: JSX.Element;
+    icon: ReactElement;
 }
 
 const ButtonIcon = ({ icon }: ButtonIconProps) => {

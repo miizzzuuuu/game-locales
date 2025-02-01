@@ -1,14 +1,14 @@
 import { ReactNode, useState } from 'react';
+import { updateMiniHowToPlay } from '../../../../services/api/miniHowToPlay';
+import { useAppDispatch } from '../../../../store/hooks';
+import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
+import { hideMiniHowToPlayLocalStorage } from '../../../utils/GameHelper';
 import Slider from '../Slider';
 import ButtonClose from './ButtonClose';
 import ButtonDetails from './ButtonDetails';
 import DontShowAgain from './DontShowAgain';
 import Indicators from './Indicators';
 import styles from './styles.module.scss';
-import { toggleMenuHTP } from '../../../../store/slice/menuSlice';
-import { useAppDispatch } from '../../../../store/hooks';
-import { hideMiniHowToPlayLocalStorage } from '../../../utils/GameHelper';
-import { updateMiniHowToPlay } from '../../../../services/api/miniHowToPlay';
 
 export type ModalItem = {
     title: ReactNode;

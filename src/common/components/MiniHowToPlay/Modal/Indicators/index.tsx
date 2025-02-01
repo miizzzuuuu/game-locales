@@ -3,7 +3,6 @@ import { ModalProps } from '..';
 import Button from '../../../Button';
 import SVGNext from './SVG/SVGNext';
 import SVGPrev from './SVG/SVGPrev';
-
 import styles from './styles.module.scss';
 
 interface IProps extends ModalProps {

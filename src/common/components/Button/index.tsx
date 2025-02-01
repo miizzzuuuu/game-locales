@@ -1,6 +1,6 @@
-import { HTMLProps, MouseEventHandler, forwardRef } from 'react';
-import styles from './styles.module.scss';
+import { HTMLProps, MouseEventHandler } from 'react';
 import { Sound } from '../../../services/sound';
+import styles from './styles.module.scss';
 
 type ButtonProps = Pick<
     HTMLProps<HTMLButtonElement>,
@@ -12,45 +12,39 @@ interface IProps extends ButtonProps {
     disableAnimation?: boolean;
 }
 
-export const Button = forwardRef<HTMLButtonElement, IProps>(
-    (
-        {
-            children,
-            className,
-            style,
-            disabled,
-            onAnimationEnd,
-            onClick,
-            custonSound,
-            disableAnimation,
-        },
-        buttonRef,
-    ) => {
-        const clickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
-            if (custonSound) {
-                custonSound();
-            } else {
-                Sound.playClick();
-            }
+export const Button = ({
+    onClick,
+    children,
+    className,
+    style,
+    disabled,
+    onAnimationEnd,
+    custonSound,
+    disableAnimation,
+}: IProps) => {
+    const clickHandler: MouseEventHandler<HTMLButtonElement> = (e) => {
+        if (custonSound) {
+            custonSound();
+        } else {
+            Sound.playClick();
+        }
 
-            onClick?.(e);
-        };
+        onClick?.(e);
+    };
 
-        return (
-            <button
-                ref={buttonRef}
-                type="button"
-                className={`${styles.button}${disableAnimation ? '' : ` ${styles.animate}`}${className ? ` ${className}` : ''}`}
-                style={style}
-                disabled={disabled}
-                onAnimationEnd={onAnimationEnd}
-                onClick={clickHandler}
-            >
-                {children}
-            </button>
-        );
-    },
-);
+    return (
+        <button
+            type="button"
+            className={`${styles.button}${disableAnimation ? '' : ` ${styles.animate}`}${className ? ` ${className}` : ''}`}
+            style={style}
+            disabled={disabled}
+            onAnimationEnd={onAnimationEnd}
+            onClick={clickHandler}
+        >
+            {children}
+        </button>
+    );
+};
 
 Button.displayName = 'Button';
 

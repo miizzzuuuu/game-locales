@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
-
-import styles from './styles.module.scss';
 import Button from '../../../components/Button';
+import styles from './styles.module.scss';
 
 interface IProps {
     text: ReactNode;

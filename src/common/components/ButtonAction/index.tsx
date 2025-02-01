@@ -1,12 +1,11 @@
-import { CSSProperties, ReactNode, useRef } from 'react';
-
-import styles from './styles.module.scss';
+import { CSSProperties, ReactElement, ReactNode } from 'react';
 import Button from '../Button';
+import styles from './styles.module.scss';
 
 interface IProps {
     show?: boolean;
     label?: ReactNode | undefined;
-    icon: JSX.Element;
+    icon: ReactElement;
     disabled?: boolean;
     borderColor?: string;
     circle?: boolean;
@@ -28,8 +27,6 @@ const ButtonAction = ({
     onClick,
     custonSound,
 }: IProps) => {
-    const buttonRef = useRef<HTMLButtonElement>(null);
-
     const handleClick = () => {
         console.log('click action button');
 
@@ -43,7 +40,6 @@ const ButtonAction = ({
             onClick={handleClick}
             disabled={disabled}
             custonSound={custonSound}
-            ref={buttonRef}
         >
             <div
                 className={`${styles.icon}${circle ? ` ${styles.circle}` : ''}`}
