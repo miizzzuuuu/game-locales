@@ -28,7 +28,7 @@ const SelectMobile = ({ initialValue, options, onChange }: IProps) => {
                 onChange={(e: ChangeEvent<HTMLSelectElement>) => onChange?.(e.target.value)}
             >
                 {options?.map((opt) => (
-                    <option key={opt} value={opt}>
+                    <option key={opt} value={opt} selected={opt === initialValue}>
                         {langName[opt]}
                     </option>
                 ))}
