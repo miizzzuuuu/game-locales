@@ -2,7 +2,7 @@ import { CSSProperties, RefObject } from 'react';
 import { lengthStroke } from '../TimerContent';
 
 type IProps = {
-    ref: RefObject<SVGSVGElement | null>;
+    ref?: RefObject<SVGSVGElement | null>;
 };
 
 const SVGTimer = ({ ref }: IProps) => {

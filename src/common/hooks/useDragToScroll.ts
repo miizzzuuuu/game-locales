@@ -6,7 +6,7 @@ function useDragToScroll<T extends HTMLElement>({
     slider,
     direction = 'horizontal',
 }: {
-    slider: RefObject<T>;
+    slider: RefObject<T | null>;
     direction?: 'horizontal' | 'vertical';
 }) {
     const device = useAppSelector(selectDevice);

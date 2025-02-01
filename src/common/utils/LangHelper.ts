@@ -1,11 +1,10 @@
-import { SVGProps } from 'react';
-
-import SVGLangUk from '../components/SVG/languages/SVGLangUk';
-import SVGLangId from '../components/SVG/languages/SVGLangId';
+import { ReactElement, SVGProps } from 'react';
 import SVGLangCn from '../components/SVG/languages/SVGLangCn';
-import SVGLangVn from '../components/SVG/languages/SVGLangVn';
-import SVGLangTh from '../components/SVG/languages/SVGLangTh';
+import SVGLangId from '../components/SVG/languages/SVGLangId';
 import SVGLangKr from '../components/SVG/languages/SVGLangKr';
+import SVGLangTh from '../components/SVG/languages/SVGLangTh';
+import SVGLangUk from '../components/SVG/languages/SVGLangUk';
+import SVGLangVn from '../components/SVG/languages/SVGLangVn';
 
 export type SupportLang = (typeof supportLang)[number];
 
@@ -29,7 +28,7 @@ export const langMap: Record<string, string> = {
     ko: 'ko',
 };
 
-export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
+export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => ReactElement> = {
     zh: SVGLangCn,
     en: SVGLangUk,
     id: SVGLangId,
