@@ -2,10 +2,18 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
 
+const ReactCompilerConfig = {};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
     return {
-        plugins: [react()],
+        plugins: [
+            react({
+                babel: {
+                    plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
+                },
+            }),
+        ],
         css: {
             postcss: {
                 plugins: [autoprefixer({})],
