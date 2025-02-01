@@ -78,7 +78,7 @@ function App() {
             }
 
             if (event.data.type === 'EVENT_WIN') {
-                const value = event.data.payload as number;
+                const value = event.data.payload;
                 dispatch(addBalance(value));
             }
         };

@@ -2,14 +2,12 @@ export function range(size: number, startAt = 0): number[] {
     return [...Array(size).keys()].map((i) => i + startAt);
 }
 
-export function newArray(length: number, fill: any = null) {
-    return Array(length).fill(fill);
+export function newArray<T>(length: number, fill?: T) {
+    return Array(length).fill(fill ?? null) as T[];
 }
 
-export function newArray2D(col: number, row: number, fill: any = null) {
-    return Array(row)
-        .fill(undefined)
-        .map(() => Array(col).fill(fill));
+export function newArray2D<T>(col: number, row: number, fill?: T) {
+    return newArray(row).map(() => newArray(col, fill));
 }
 
 export function takeLeft<T>(array: T[], n = 1): T[] {
