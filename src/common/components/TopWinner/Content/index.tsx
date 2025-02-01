@@ -1,14 +1,15 @@
-import { forwardRef } from 'react';
+import { RefObject } from 'react';
+import { TopWinnerData } from '../../../../types';
 import ItemWinner from '../ItemWinner';
 import styles from './styles.module.scss';
-import { TopWinnerData } from '../../../../types';
 
 interface IProps {
     data: TopWinnerData['data'];
     index: number;
+    ref: RefObject<HTMLDivElement | null>;
 }
 
-const Content = forwardRef<HTMLDivElement, IProps>(({ data, index }, ref) => {
+const Content = ({ data, index, ref }: IProps) => {
     return (
         <div className={`${styles.content} no-scrollbar`}>
             <div
@@ -27,7 +28,7 @@ const Content = forwardRef<HTMLDivElement, IProps>(({ data, index }, ref) => {
             </div>
         </div>
     );
-});
+};
 
 Content.displayName = 'Content';
 
