@@ -1,5 +1,5 @@
 import { CSSProperties, RefObject } from 'react';
-import { lengthStroke } from '../TimerContent';
+import { lengthStroke } from '../TimerContent/const';
 
 type IProps = {
     ref?: RefObject<SVGSVGElement | null>;

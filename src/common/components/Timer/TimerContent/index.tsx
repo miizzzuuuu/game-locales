@@ -8,9 +8,8 @@ import {
     selectTimerIsClose,
 } from '../../../../store/slice/timerSlice';
 import SVGTimer from '../SVG/SVGTimer';
+import { lengthStroke } from './const';
 import styles from './styles.module.scss';
-
-export const lengthStroke = 138.23;
 
 const TimerContent = () => {
     const dispatch = useAppDispatch();
