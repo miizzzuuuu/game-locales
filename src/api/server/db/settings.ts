@@ -1,4 +1,6 @@
-export const settings = {
+import { Settings } from "../../../types";
+
+export const settings: Settings = {
     language: 'en',
     autoRebet: true,
     enableGameSound: false,

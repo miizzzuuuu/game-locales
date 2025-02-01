@@ -31,6 +31,10 @@ import { player } from './db/player';
 import { properties } from './db/properties';
 import { settings } from './db/settings';
 
+// Add at the top with other imports
+import { ApiResponse, CurrentThunder } from '../../types';
+import { Player, Settings } from '../../types';
+
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
         environment,
@@ -38,28 +42,27 @@ export function makeServer({ environment = 'test' } = {}) {
             // player
             this.get(
                 ENDPOINTS.player,
-                () => {
+                (): ApiResponse<Player> => {
                     return player;
                 },
                 { timing: 400 },
             );
 
+            // player settings
+            this.get(ENDPOINTS.playerSettings, (): ApiResponse<Settings> => {
+                return settings;
+            });
+
+            this.put(ENDPOINTS.playerSettings, (_, request): ApiResponse<Settings> => {
+                const settings = JSON.parse(request.requestBody) as Settings;
+                return settings;
+            });
+            // end player settings
+
             // player properties
             this.get(ENDPOINTS.playerProperties, () => {
                 return properties;
             });
-
-            // player settings
-            this.get(ENDPOINTS.playerSettings, () => {
-                return settings;
-            });
-
-            this.put(ENDPOINTS.playerSettings, (_, request) => {
-                const settings = JSON.parse(request.requestBody);
-
-                return settings;
-            });
-            // end player settings
 
             // lastbets
             this.get(ENDPOINTS.playerLastbets, () => {
@@ -103,10 +106,10 @@ export function makeServer({ environment = 'test' } = {}) {
             });
 
             // thunder
-            this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request) => {
+            this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request): CurrentThunder => {
                 const pcode = request.params.pcode;
 
-                const baseThunder = {
+                const baseThunder: CurrentThunder = {
                     status: true,
                     pcode: pcode,
                     data: [],

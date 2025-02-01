@@ -18,6 +18,7 @@ import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { addBalance } from './store/slice/playerSlice';
 import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
+import { MessageDataContainerToGame } from './types';
 
 const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
@@ -59,7 +60,7 @@ function App() {
     useFullscreen();
 
     useEffect(() => {
-        const listenMessage = (event: MessageEvent) => {
+        const listenMessage = (event: MessageEvent<MessageDataContainerToGame>) => {
             if (event.data.source !== 'GAME_CONTAINER') return;
 
             console.log('Message from parent:', event.data);

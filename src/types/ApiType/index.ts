@@ -1,3 +1,13 @@
+import { Thunder } from "..";
+
+export interface ApiResponseBase {
+    status?: boolean;
+    detail?: string;
+    message?: string;
+}
+
+export type ApiResponse<T> = T & ApiResponseBase;
+
 export interface Player {
     uid: number;
     device: string;
@@ -164,3 +174,5 @@ export type EventIdnlivePrize = {
     win: number;
     notwin: number[];
 };
+
+export type CurrentThunder = { status: boolean } & Thunder<string>
