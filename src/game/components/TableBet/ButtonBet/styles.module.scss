@@ -1,4 +1,4 @@
-@import './position.scss';
+@use 'position.scss';
 
 .button-bet {
     position: relative;
@@ -136,7 +136,7 @@
     }
 
     // position
-    @include button-bet-position-portrait;
+    @include position.button-bet-position-portrait;
 }
 
 :global(.desktop),
@@ -178,7 +178,7 @@
     }
 
     // position
-    @include button-bet-position-landscape;
+    @include position.button-bet-position-landscape;
 }
 
 :global(.desktop) {
