@@ -1,0 +1,89 @@
+{
+    "data": [
+        {
+            "angka": "White,White,White,Red",
+            "tanggal": "2025-02-02 23:15:24",
+            "periode": 1375720,
+            "hitung": "1",
+            "gamekey": 1375720,
+            "idnomor": 1375760
+        },
+        {
+            "angka": "White,White,Red,Red",
+            "tanggal": "2025-02-02 23:13:53",
+            "periode": 1375719,
+            "hitung": "1",
+            "gamekey": 1375719,
+            "idnomor": 1375759
+        },
+        {
+            "angka": "White,White,White,Red",
+            "tanggal": "2025-02-02 23:12:41",
+            "periode": 1375718,
+            "hitung": "1",
+            "gamekey": 1375718,
+            "idnomor": 1375758
+        },
+        {
+            "angka": "White,White,White,Red",
+            "tanggal": "2025-02-02 23:11:22",
+            "periode": 1375717,
+            "hitung": "1",
+            "gamekey": 1375717,
+            "idnomor": 1375757
+        },
+        {
+            "angka": "White,White,Red,Red",
+            "tanggal": "2025-02-02 23:09:50",
+            "periode": 1375716,
+            "hitung": "1",
+            "gamekey": 1375716,
+            "idnomor": 1375756
+        },
+        {
+            "angka": "White,White,Red,Red",
+            "tanggal": "2025-02-02 23:08:37",
+            "periode": 1375715,
+            "hitung": "1",
+            "gamekey": 1375715,
+            "idnomor": 1375755
+        },
+        {
+            "angka": "White,Red,Red,Red",
+            "tanggal": "2025-02-02 23:07:26",
+            "periode": 1375714,
+            "hitung": "1",
+            "gamekey": 1375714,
+            "idnomor": 1375754
+        },
+        {
+            "angka": "White,White,Red,Red",
+            "tanggal": "2025-02-02 23:06:08",
+            "periode": 1375713,
+            "hitung": "1",
+            "gamekey": 1375713,
+            "idnomor": 1375753
+        },
+        {
+            "angka": "White,White,Red,Red",
+            "tanggal": "2025-02-02 23:05:01",
+            "periode": 1375712,
+            "hitung": "1",
+            "gamekey": 1375712,
+            "idnomor": 1375752
+        },
+        {
+            "angka": "Red,Red,Red,Red",
+            "tanggal": "2025-02-02 23:03:48",
+            "periode": 1375711,
+            "hitung": "1",
+            "gamekey": 1375711,
+            "idnomor": 1375751
+        }
+    ],
+    "pagination": {
+        "total_datas": 237701,
+        "current_page": 1,
+        "total_pages": 10
+    }
+}
