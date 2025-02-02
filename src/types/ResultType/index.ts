@@ -132,6 +132,10 @@ export type ResultM35 = CommonResult & {
     angka: string;
 };
 
+export type ResultM40 = CommonResult & {
+    angka: string;
+};
+
 export type ResultM41 = CommonResult & {
     banker: string;
     player: string;
