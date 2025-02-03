@@ -189,6 +189,20 @@ export type PcodeDragonTiger =
     | 'm23k';
 export type PcodeDragonTigerWild = 'm23b' | 'm23c';
 
+// pcode Fantan
+export type PcodeFantan =
+    | 'm25'
+    | 'm25b'
+    | 'm25c'
+    | 'm25d'
+    | 'm25e'
+    | 'm25f'
+    | 'm25g'
+    | 'm25h'
+    | 'm25i'
+    | 'm25j'
+    | 'm25k';
+
 // pcode Shio Fight
 export type PcodeShioFight =
     | 'm27'
