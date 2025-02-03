@@ -189,6 +189,20 @@ export type PcodeDragonTiger =
     | 'm23k';
 export type PcodeDragonTigerWild = 'm23b' | 'm23c';
 
+// pcode Fantan
+export type PcodeFantan =
+    | 'm25'
+    | 'm25b'
+    | 'm25c'
+    | 'm25d'
+    | 'm25e'
+    | 'm25f'
+    | 'm25g'
+    | 'm25h'
+    | 'm25i'
+    | 'm25j'
+    | 'm25k';
+
 // pcode Shio Fight
 export type PcodeShioFight =
     | 'm27'
@@ -216,6 +230,19 @@ export type Pcode48D =
     | 'm35i'
     | 'm35j'
     | 'm35k';
+
+export type PcodeXocDia =
+    | 'm40'
+    | 'm40b'
+    | 'm40c'
+    | 'm40d'
+    | 'm40e'
+    | 'm40f'
+    | 'm40g'
+    | 'm40h'
+    | 'm40i'
+    | 'm40j'
+    | 'm40k';
 
 // pcode Domino
 export type PcodeDomino =

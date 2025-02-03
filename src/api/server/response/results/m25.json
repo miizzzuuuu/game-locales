@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "angka": "2",
+            "tanggal": "2024-11-24 09:37:03.000",
+            "periode": 2844,
+            "hitung": "1",
+            "gamekey": 2844,
+            "idnomor": 3031
+        },
+        {
+            "angka": "1",
+            "tanggal": "2024-11-10 08:23:30.000",
+            "periode": 2843,
+            "hitung": "1",
+            "gamekey": 2843,
+            "idnomor": 3030
+        },
+        {
+            "angka": "3",
+            "tanggal": "2024-11-10 08:22:50.000",
+            "periode": 2842,
+            "hitung": "1",
+            "gamekey": 2842,
+            "idnomor": 3029
+        },
+        {
+            "angka": "4",
+            "tanggal": "2024-11-09 07:22:40.000",
+            "periode": 2841,
+            "hitung": "1",
+            "gamekey": 2841,
+            "idnomor": 3028
+        },
+        {
+            "angka": "1",
+            "tanggal": "2024-11-09 07:22:09.000",
+            "periode": 2840,
+            "hitung": "1",
+            "gamekey": 2840,
+            "idnomor": 3027
+        }
+    ]
+}

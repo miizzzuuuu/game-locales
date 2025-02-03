@@ -7,22 +7,24 @@ import {
     Pcode24DSpin,
     Pcode48D,
     PcodeBaccarat,
+    PcodeBilliards,
     PcodeCeme,
     PcodeDice6,
     PcodeDice6Fever,
     PcodeDomino,
     PcodeDragonTiger,
     PcodeDragonTigerWild,
+    PcodeFantan,
+    PcodeHeadTail,
     PcodeMonopoly,
     PcodeOglok,
     PcodePokerDice,
-    PcodeHeadTail,
     PcodeRoulette,
     PcodeShioFight,
     PcodeSicboDice,
     PcodeSuwit,
+    PcodeXocDia,
     Transaction,
-    PcodeBilliards,
 } from '../../types';
 
 export function groupTransactionsByDate(
@@ -124,12 +126,20 @@ export const isDragonTigerWild = (
     return /^m23[bc]$/.test(item.pcode);
 };
 
+export const isFantan = (item: Transaction<string>): item is Transaction<PcodeFantan> => {
+    return item.pcode.startsWith('m25');
+};
+
 export const isShioFight = (item: Transaction<string>): item is Transaction<PcodeShioFight> => {
     return item.pcode.startsWith('m27');
 };
 
 export const is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
     return item.pcode.startsWith('m35');
+};
+
+export const isXocDia = (item: Transaction<string>): item is Transaction<PcodeXocDia> => {
+    return item.pcode.startsWith('m40');
 };
 
 export const isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {
