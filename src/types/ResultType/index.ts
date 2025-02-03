@@ -122,6 +122,10 @@ export type ResultM23Wild = ResultM23 & {
     wild: string;
 };
 
+export type ResultM25 = CommonResult & {
+    angka: string;
+};
+
 export type ResultM27 = CommonResult & {
     di: ShioName;
     tian: ShioName;

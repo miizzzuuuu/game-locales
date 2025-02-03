@@ -24,6 +24,7 @@ import {
     PcodeSuwit,
     PcodeRedWhite,
     PcodeBilliards,
+    PcodeFantan,
 } from '../CommonType';
 import {
     ResultM10,
@@ -35,6 +36,7 @@ import {
     ResultM22,
     ResultM23,
     ResultM23Wild,
+    ResultM25,
     ResultM27,
     ResultM35,
     ResultM41,
@@ -117,15 +119,17 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                                         ? BaseTransaction & DetailResultM23
                                         : PCode extends PcodeDragonTigerWild
                                           ? BaseTransaction & DetailResultM23Wild
-                                          : PCode extends PcodeShioFight
-                                            ? BaseTransaction & DetailResultM27
-                                            : PCode extends Pcode48D
-                                              ? BaseTransaction & DetailResultM35
-                                              : PCode extends PcodeDomino
-                                                ? BaseTransaction & DetailResultM41
-                                                : PCode extends PcodeCeme
-                                                  ? BaseTransaction & DetailResultM46
-                                                  : BaseTransaction & DefaultDetailResult;
+                                          : PCode extends PcodeFantan
+                                            ? BaseTransaction & DetailResultM25
+                                            : PCode extends PcodeShioFight
+                                              ? BaseTransaction & DetailResultM27
+                                              : PCode extends Pcode48D
+                                                ? BaseTransaction & DetailResultM35
+                                                : PCode extends PcodeDomino
+                                                  ? BaseTransaction & DetailResultM41
+                                                  : PCode extends PcodeCeme
+                                                    ? BaseTransaction & DetailResultM46
+                                                    : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -215,6 +219,10 @@ export type DetailResultM23 = {
 
 export type DetailResultM23Wild = {
     detail_result: ResultM23Wild | [];
+};
+
+export type DetailResultM25 = {
+    detail_result: ResultM25 | [];
 };
 
 export type DetailResultM27 = {
