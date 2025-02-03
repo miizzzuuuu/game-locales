@@ -1,3 +1,5 @@
+import resultsP12 from './response/results/p12.json';
+import resultsP12B from './response/results/p12b.json';
 import resultsP6 from './response/results/p6.json';
 import resultsP6B from './response/results/p6b.json';
 import resultsP7 from './response/results/p7.json';
@@ -9,13 +11,7 @@ import resultsP7G from './response/results/p7g.json';
 import resultsP9 from './response/results/p9.json';
 import resultsP9B from './response/results/p9b.json';
 import resultsP9C from './response/results/p9c.json';
-import resultsP12 from './response/results/p12.json';
-import resultsP12B from './response/results/p12b.json';
 
-import resultsM6 from './response/results/m6.json';
-import resultsM7 from './response/results/m7.json';
-import resultsM8 from './response/results/m8.json';
-import resultsM8B from './response/results/m8b.json';
 import resultsM10 from './response/results/m10.json';
 import resultsM10B from './response/results/m10b.json';
 import resultsM11 from './response/results/m11.json';
@@ -33,16 +29,22 @@ import resultsM22F from './response/results/m22f.json';
 import resultsM23 from './response/results/m23.json';
 import resultsM23B from './response/results/m23b.json';
 import resultsM23D from './response/results/m23d.json';
+import resultsM25 from './response/results/m25.json';
+import resultsM27 from './response/results/m27.json';
 import resultsM28 from './response/results/m28.json';
 import resultsM28B from './response/results/m28b.json';
-import resultsM27 from './response/results/m27.json';
 import resultsM31 from './response/results/m31.json';
 import resultsM35 from './response/results/m35.json';
-import resultsM37 from './response/results/m37.json';
 import resultsM35B from './response/results/m35b.json';
+import resultsM37 from './response/results/m37.json';
+import resultsM40 from './response/results/m40.json';
 import resultsM41 from './response/results/m41.json';
 import resultsM41B from './response/results/m41b.json';
 import resultsM46 from './response/results/m46.json';
+import resultsM6 from './response/results/m6.json';
+import resultsM7 from './response/results/m7.json';
+import resultsM8 from './response/results/m8.json';
+import resultsM8B from './response/results/m8b.json';
 
 const resultData: Record<string, { data: any[] }> = {
     p6: resultsP6,
@@ -79,6 +81,7 @@ const resultData: Record<string, { data: any[] }> = {
     m23: resultsM23,
     m23b: resultsM23B,
     m23d: resultsM23D,
+    m25: resultsM25,
     m27: resultsM27,
     m28: resultsM28,
     m28b: resultsM28B,
@@ -86,6 +89,7 @@ const resultData: Record<string, { data: any[] }> = {
     m35: resultsM35,
     m35b: resultsM35B,
     m37: resultsM37,
+    m40: resultsM40,
     m41: resultsM41,
     m41b: resultsM41B,
     m46: resultsM46,

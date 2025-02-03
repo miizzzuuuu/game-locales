@@ -23,6 +23,7 @@ import {
     PcodeShioFight,
     PcodeSicboDice,
     PcodeSuwit,
+    PcodeXocDia,
     Transaction,
 } from '../../types';
 
@@ -135,6 +136,10 @@ export const isShioFight = (item: Transaction<string>): item is Transaction<Pcod
 
 export const is48D = (item: Transaction<string>): item is Transaction<Pcode48D> => {
     return item.pcode.startsWith('m35');
+};
+
+export const isXocDia = (item: Transaction<string>): item is Transaction<PcodeXocDia> => {
+    return item.pcode.startsWith('m40');
 };
 
 export const isDomino = (item: Transaction<string>): item is Transaction<PcodeDomino> => {

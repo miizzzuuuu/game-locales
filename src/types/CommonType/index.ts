@@ -231,6 +231,19 @@ export type Pcode48D =
     | 'm35j'
     | 'm35k';
 
+export type PcodeXocDia =
+    | 'm40'
+    | 'm40b'
+    | 'm40c'
+    | 'm40d'
+    | 'm40e'
+    | 'm40f'
+    | 'm40g'
+    | 'm40h'
+    | 'm40i'
+    | 'm40j'
+    | 'm40k';
+
 // pcode Domino
 export type PcodeDomino =
     | 'm41'

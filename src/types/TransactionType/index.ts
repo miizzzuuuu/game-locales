@@ -25,6 +25,7 @@ import {
     PcodeRedWhite,
     PcodeBilliards,
     PcodeFantan,
+    PcodeXocDia,
 } from '../CommonType';
 import {
     ResultM10,
@@ -39,6 +40,7 @@ import {
     ResultM25,
     ResultM27,
     ResultM35,
+    ResultM40,
     ResultM41,
     ResultM46,
     ResultM6,
@@ -125,11 +127,13 @@ export type Transaction<PCode extends string> = PCode extends Pcode24D
                                               ? BaseTransaction & DetailResultM27
                                               : PCode extends Pcode48D
                                                 ? BaseTransaction & DetailResultM35
-                                                : PCode extends PcodeDomino
-                                                  ? BaseTransaction & DetailResultM41
-                                                  : PCode extends PcodeCeme
-                                                    ? BaseTransaction & DetailResultM46
-                                                    : BaseTransaction & DefaultDetailResult;
+                                                : PCode extends PcodeXocDia
+                                                  ? BaseTransaction & DetailResultM40
+                                                  : PCode extends PcodeDomino
+                                                    ? BaseTransaction & DetailResultM41
+                                                    : PCode extends PcodeCeme
+                                                      ? BaseTransaction & DetailResultM46
+                                                      : BaseTransaction & DefaultDetailResult;
 
 export type TransactionData = {
     data: Transaction<Pcode>[];
@@ -231,6 +235,10 @@ export type DetailResultM27 = {
 
 export type DetailResultM35 = {
     detail_result: ResultM35 | [];
+};
+
+export type DetailResultM40 = {
+    detail_result: ResultM40 | [];
 };
 
 export type DetailResultM41 = {
