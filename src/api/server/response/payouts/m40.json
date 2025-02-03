@@ -1,0 +1,30 @@
+[
+    { "name": "four white Buttons", "payout": 13.5, "items": [], "min": 1000, "max": 1000000 },
+    { "name": "four Red Buttons", "payout": 13.5, "items": [], "min": 1000, "max": 1000000 },
+    { "name": "three White + One Red", "payout": 2.85, "items": [], "min": 1000, "max": 1000000 },
+    { "name": "three Red + One White", "payout": 2.85, "items": [], "min": 1000, "max": 1000000 },
+    {
+        "name": "side bet",
+        "payout": null,
+        "items": [
+            {
+                "name": "big",
+                "payout": 2.1
+            },
+            {
+                "name": "small",
+                "payout": 2.1
+            },
+            {
+                "name": "odd",
+                "payout": 0.97
+            },
+            {
+                "name": "even",
+                "payout": 0.97
+            }
+        ],
+        "min": 5000,
+        "max": 5000000
+    }
+]

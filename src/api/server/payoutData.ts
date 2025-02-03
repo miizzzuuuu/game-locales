@@ -33,6 +33,7 @@ import payoutsM22F from './response/payouts/m22f.json';
 import payoutsM23 from './response/payouts/m23.json';
 import payoutsM23B from './response/payouts/m23b.json';
 import payoutsM23D from './response/payouts/m23d.json';
+import payoutsM25 from './response/payouts/m25.json';
 import payoutsM27 from './response/payouts/m27.json';
 import payoutsM28 from './response/payouts/m28.json';
 import payoutsM28B from './response/payouts/m28b.json';
@@ -40,6 +41,7 @@ import payoutsM31 from './response/payouts/m31.json';
 import payoutsM35 from './response/payouts/m35.json';
 import payoutsM35B from './response/payouts/m35b.json';
 import payoutsM37 from './response/payouts/m37.json';
+import payoutsM40 from './response/payouts/m40.json';
 import payoutsM41 from './response/payouts/m41.json';
 import payoutsM46 from './response/payouts/m46.json';
 
@@ -78,6 +80,7 @@ const payoutData: Record<string, object> = {
     m23: payoutsM23,
     m23b: payoutsM23B,
     m23d: payoutsM23D,
+    m25: payoutsM25,
     m27: payoutsM27,
     m28: payoutsM28,
     m28b: payoutsM28B,
@@ -85,6 +88,7 @@ const payoutData: Record<string, object> = {
     m35: payoutsM35,
     m35b: payoutsM35B,
     m37: payoutsM37,
+    m40: payoutsM40,
     m41: payoutsM41,
     m46: payoutsM46,
 };
