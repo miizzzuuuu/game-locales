@@ -81,16 +81,15 @@ const getUserAgent = () => {
           : navigator.userAgent;
 };
 
-const isMobile = () =>
-    /Mobi|Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+const MOBILE_REGEX = /Mobi|Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i;
+const TABLET_REGEX =
+    /(tablet|ipad|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i;
+const IOS_REGEX = /\b(iPhone|iPod)\b/;
 
 const isIpad = () => navigator.userAgent.includes('Mac') && navigator.maxTouchPoints > 0;
-
-const isTablet = () =>
-    isIpad() ||
-    /(tablet|ipad|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/i.test(
-        getUserAgent(),
-    );
+const isMobile = () => MOBILE_REGEX.test(navigator.userAgent);
+const isTablet = () => isIpad() || TABLET_REGEX.test(getUserAgent());
+const checkIOS = () => IOS_REGEX.test(getUserAgent());
 
 const getPlatform = (): Platform => {
     if (isMobile()) return 'mobile';
@@ -117,8 +116,6 @@ const getDevice = (): { type: DeviceType; orientation: Orientation } => {
     };
 };
 
-const checkIOS = () => /\b(iPhone|iPod)\b/.test(getUserAgent());
-
 const getWindowSize = () => ({
     widthScreen: window.innerWidth || 0,
     heightScreen: window.innerHeight || 0,
@@ -136,19 +133,23 @@ const setStyleDisplay = ({
     const rootElement = document.documentElement;
     if (!rootElement) return;
 
-    rootElement.style.setProperty('--scale', `${scale}`);
-    rootElement.style.setProperty('--scale-width', `${scaleWidth}`);
-    rootElement.style.setProperty('--scale-height', `${scaleHeight}`);
+    // Use CSS custom properties batch update
+    const styles = {
+        '--scale': `${scale}`,
+        '--scale-width': `${scaleWidth}`,
+        '--scale-height': `${scaleHeight}`,
+        '--width-game': `${widthGame}`,
+        '--width-game-px': `${widthGame}px`,
+        '--height-game': `${heightGame}`,
+        '--height-game-px': `${heightGame}px`,
+        '--width-screen': `${widthScreen}`,
+        '--height-screen': `${heightScreen}`,
+        'font-size': `${scale * 10}px`,
+    };
 
-    rootElement.style.setProperty('--width-game', `${widthGame}`);
-    rootElement.style.setProperty('--width-game-px', `${widthGame}px`);
-    rootElement.style.setProperty('--height-game', `${heightGame}`);
-    rootElement.style.setProperty('--height-game-px', `${heightGame}px`);
-
-    rootElement.style.setProperty('--width-screen', `${widthScreen}`);
-    rootElement.style.setProperty('--height-screen', `${heightScreen}`);
-
-    rootElement.style.fontSize = `${scale * 10}px`;
+    Object.entries(styles).forEach(([prop, value]) => {
+        rootElement.style.setProperty(prop, value);
+    });
 };
 
 const setGameSize = (size: GameSize, widthScreen: number, heightScreen: number) => {
