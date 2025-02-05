@@ -20,6 +20,7 @@ import {
     PcodeOglok,
     PcodePokerDice,
     PcodeRoulette,
+    PcodeRouletteSoccer,
     PcodeShioFight,
     PcodeSicboDice,
     PcodeSuwit,
@@ -53,7 +54,13 @@ export const is24DJackpot = (item: Transaction<string>): item is Transaction<Pco
 };
 
 export const isRoulette = (item: Transaction<string>): item is Transaction<PcodeRoulette> => {
-    return item.pcode.startsWith('p7');
+    return item.pcode.startsWith('p7') && !item.pcode.startsWith('p7e');
+};
+
+export const isSoccerRoulette = (
+    item: Transaction<string>,
+): item is Transaction<PcodeRouletteSoccer> => {
+    return item.pcode.startsWith('p7e');
 };
 
 export const is12D = (item: Transaction<string>): item is Transaction<Pcode12D> => {
