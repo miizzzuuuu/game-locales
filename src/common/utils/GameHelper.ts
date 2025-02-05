@@ -221,17 +221,17 @@ export const getEventNewSet = () => {
     return variant ? baseNewSet + variant.toUpperCase() : baseNewSet;
 };
 
-export const urlLobbyLocal = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
+export const urlLobby = import.meta.env.VITE_URL_LOBBY ?? window.location.origin;
 
-export const handleBackToLobby = (lobbyUrl?: string) => {
+export const handleBackToLobby = () => {
     const changeMainGame = async () => {
-        await fetch('/auth/maingame/change?game=');
-
+        void (await fetch('/auth/maingame/change?game='));
         const parent = window === window.parent ? window : window.parent;
+
         if (parent.top?.opener) {
             parent.close();
         } else {
-            parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
+            parent.location.href = urlLobby as string;
         }
     };
 
