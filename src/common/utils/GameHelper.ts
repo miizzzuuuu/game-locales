@@ -231,7 +231,7 @@ export const handleBackToLobby = (lobbyUrl?: string) => {
         if (parent.top?.opener) {
             parent.close();
         } else {
-            parent.location.href = lobbyUrl ? lobbyUrl : urlLobbyLocal;
+            parent.location.href = lobbyUrl ?? urlLobbyLocal;
         }
     };
 
