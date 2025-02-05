@@ -1,6 +1,6 @@
 import SVGIconCancelBet from '../../../../../../components/ButtonCancelBet/SVG/SVGIconCancelBet';
 import SVGIconDoubleBet from '../../../../../../components/ButtonDoubleBet/SVG/SVGIconDoubleBet';
-import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
+// import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
 import SVGIconHideChip from '../../../../../../components/ButtonHideChip/SVG/SVGIconHideChip';
 import SVGIconMenu from '../../../../../../components/ButtonMenu/SVG/SVGIconMenu';
 import SVGIconPattern from '../../../../../../components/ButtonPattern/SVG/SVGIconPattern';
@@ -27,7 +27,7 @@ const paragraphArr = [
     { icon: <SVGIconMenu /> },
     { icon: <SVGIconHideChip /> },
     { icon: <SVGIconStatistic /> },
-    { icon: <SVGIconFavorite /> },
+    // { icon: <SVGIconFavorite /> },
     { icon: <SVGIconPattern strokeColor="#fff" /> },
 ];
 
