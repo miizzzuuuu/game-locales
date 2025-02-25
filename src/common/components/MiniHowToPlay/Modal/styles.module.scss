@@ -3,7 +3,7 @@
     width: var(--width-modal-mini-htp);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 2.4rem 0.8rem 2rem;
-    border-radius: 1.6rem;
+    border-radius: 0.4rem;
 
     display: flex;
     flex-direction: column;
@@ -36,7 +36,6 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .modal {
         --width-modal-mini-htp: 42rem;
@@ -46,16 +45,16 @@
     }
 }
 
-:global(.mobile-landscape) {
-    .modal {
-        height: calc(100% - 2rem);
-        max-height: calc(100% - 2rem);
-    }
-}
-
 :global(.desktop) {
     .modal {
-        height: calc(var(--height-game-px) - 2rem);
+        --width-modal-mini-htp: 54rem;
+
+        border-radius: 0.8rem;
+
+        // height: calc(var(--height-game-px) - 2rem);
+        height: fit-content;
         max-height: calc(var(--height-game-px) - 2rem);
+
+        padding: 2.4rem 1.2rem 2rem;
     }
 }

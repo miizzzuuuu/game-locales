@@ -49,3 +49,32 @@
     font-weight: 400;
     letter-spacing: 0.012rem;
 }
+
+:global(.desktop) {
+    .container {
+        margin-top: 1.6rem;
+    }
+
+    .input-bottom {
+        gap: 0.8rem;
+    }
+
+    .checkbox {
+        width: 2rem;
+        height: 2rem;
+        border-width: 0.2rem;
+        cursor: pointer;
+    }
+
+    .checkbox::before {
+        top: 0;
+        left: 0;
+        translate: -10% -5%;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .label {
+        font-size: 1.5rem;
+    }
+}

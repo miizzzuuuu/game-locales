@@ -38,6 +38,17 @@
     text-transform: capitalize;
 }
 
+:global(.desktop) {
+    .button svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
 @keyframes showAnimation {
     from {
         opacity: 0;

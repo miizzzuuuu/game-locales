@@ -43,7 +43,7 @@ const Indicators = ({ data, index: activeIndex, setIndex }: IProps) => {
                     setIndex((prev) => prev - 1);
                 }}
             >
-                <SVGPrev />
+                <SVGPrev className={styles.icon} />
             </Button>
 
             <div className={styles['dot-wrapper']}>
@@ -61,7 +61,7 @@ const Indicators = ({ data, index: activeIndex, setIndex }: IProps) => {
                     setIndex((prev) => prev + 1);
                 }}
             >
-                <SVGNext />
+                <SVGNext className={styles.icon} />
             </Button>
         </div>
     );

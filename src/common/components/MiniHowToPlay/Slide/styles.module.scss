@@ -45,9 +45,18 @@
     }
 }
 
-:global(.desktop),
 :global(.mobile-landscape) {
     .graphic {
         height: 8rem;
+    }
+}
+
+:global(.desktop) {
+    .title h1 {
+        font-size: 1.8rem;
+    }
+
+    .graphic {
+        height: 24rem;
     }
 }

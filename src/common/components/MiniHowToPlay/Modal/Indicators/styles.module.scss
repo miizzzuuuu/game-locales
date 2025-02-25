@@ -31,3 +31,28 @@
     background-color: rgba(255, 255, 255, 1);
     transition: background-color 0.4s linear;
 }
+
+.icon {
+    width: 2.1rem;
+}
+
+:global(.desktop) {
+    .indicator {
+        margin-top: 1.6rem;
+    }
+
+    .dot-wrapper {
+        gap: 1.2rem;
+    }
+
+    .dot {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+
+    .icon {
+        width: 3rem;
+    }
+}

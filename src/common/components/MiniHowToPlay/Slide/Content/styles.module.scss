@@ -8,3 +8,10 @@
         margin-bottom: 0.8rem;
     }
 }
+
+:global(.desktop) {
+    .paragraf {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}

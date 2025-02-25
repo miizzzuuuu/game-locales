@@ -17,7 +17,7 @@ import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { addBalance } from './store/slice/playerSlice';
-import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
+import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { MessageDataContainerToGame } from './types';
 
 const MiniHowToPlayComponents = FEATURES.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
@@ -28,7 +28,7 @@ function App() {
     const [showOverlayResize, setShowOverlayResize] = useState(false);
 
     const [showGame, setShowGame] = useState(false);
-    const device = useAppSelector(selectDevice);
+    // const device = useAppSelector(selectDevice);
     const showMiniHowToPlay = useAppSelector(selectShowMiniHowToPlay);
 
     const { finish: finishGetPlayer } = useFetchPlayer();
@@ -104,7 +104,7 @@ function App() {
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
 
-            {showGame && showMiniHowToPlay && device !== 'desktop' ? MiniHowToPlayComponents : null}
+            {showGame && showMiniHowToPlay ? MiniHowToPlayComponents : null}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>
