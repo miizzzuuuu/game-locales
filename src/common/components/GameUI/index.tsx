@@ -1,4 +1,4 @@
-import MainArea from '../../../game/components/MainArea';
+// import MainArea from '../../../game/components/MainArea';
 import MainAreaDesktop from '../../../game/components/MainAreaDesktop';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
@@ -33,11 +33,7 @@ const GameUI = () => {
         return null;
     }
 
-    return (
-        <Layout>
-            <MainArea />
-        </Layout>
-    );
+    return <Layout>{/* <MainArea /> */}</Layout>;
 };
 
 export default GameUI;

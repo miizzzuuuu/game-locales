@@ -7,14 +7,14 @@
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
 
     align-items: center;
 
     width: var(--button-action-size);
 
     &.disapear {
-        transition: all 0.3s linear;
+        transition: all 0.2s linear;
     }
 }
 

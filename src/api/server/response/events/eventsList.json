@@ -3,7 +3,7 @@
         "name": "lucky-angpao",
         "group": "all",
         "pcode": "newlobby",
-        "status": "running",
+        "status": "finished",
         "total_amount": 1888000000,
         "max_amount": 15000000,
         "date_start": {
