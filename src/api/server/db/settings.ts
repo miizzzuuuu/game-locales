@@ -1,7 +1,7 @@
 import { Settings } from '../../../types';
 
 export const settings: Settings = {
-    language: 'en',
+    language: 'id',
     autoRebet: true,
     enableGameSound: false,
     enableStreamingVideo: false,

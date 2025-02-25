@@ -2,9 +2,11 @@ import i18next, { Resource } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import enCommon from '../../locales/en/common.json';
+import hiCommon from '../../locales/hi/common.json';
 import idCommon from '../../locales/id/common.json';
 import koCommon from '../../locales/ko/common.json';
 import thCommon from '../../locales/th/common.json';
+import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
@@ -48,6 +50,11 @@ const resources: Resource = {
             miniHtp: enMiniHTP,
         },
     },
+    hi: {
+        translation: {
+            common: { ...hiCommon },
+        },
+    },
     id: {
         translation: {
             common: { ...idCommon, ...idFeatures },
@@ -72,6 +79,11 @@ const resources: Resource = {
             miniHtp: thMiniHTP,
         },
     },
+    tr: {
+        translation: {
+            common: { ...trCommon },
+        },
+    },
     vn: {
         translation: {
             common: { ...vnCommon, ...vnFeatures },
@@ -94,7 +106,7 @@ i18next
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'id',
+        fallbackLng: 'en',
     })
     .then()
     .catch(() => console.log('error init i18n'));
