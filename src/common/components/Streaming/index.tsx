@@ -28,8 +28,10 @@ const Streaming = () => {
                 <>
                     <div className={styles.left} />
                     <div className={styles['video-container']}>
-                        <div className={styles['video-left']} />
                         <Video />
+
+                        <div className={styles['top-gradient']} />
+                        <div className={styles['video-left']} />
                         <div className={styles['video-right']} />
                     </div>
                     <div className={styles.right} />
