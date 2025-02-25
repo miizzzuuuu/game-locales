@@ -10,7 +10,7 @@ import SVGLangVn from '../components/SVG/languages/SVGLangVn';
 
 export type SupportLang = (typeof supportLang)[number];
 
-const supportLang = ['en', 'hi', 'id', 'vn', 'th', 'tr', 'zh', 'ko'] as const;
+export const supportLang = ['en', 'hi', 'id', 'vn', 'th', 'tr', 'zh', 'ko'] as const;
 
 const countryLanguageCodes: Record<string, string> = {
     en: 'en-US',

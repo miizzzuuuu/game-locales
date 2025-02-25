@@ -3,11 +3,16 @@ import { GraphicComponentProps } from '../../../../common/components/MiniHowToPl
 import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
 import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
 import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
+import styles from './styles.module.scss';
 
 const keySlide = 'slide-2';
 
 export const GraphicComponent = ({ isActive }: GraphicComponentProps) => (
-    <Graphic isActive={isActive} animationSrc="https://cdn.lottielab.com/l/835p29id7FkP7U.json" />
+    <Graphic
+        isActive={isActive}
+        animationSrc="https://cdn.lottielab.com/l/835p29id7FkP7U.json"
+        className={styles.image}
+    />
 );
 
 const Slide2: ModalItem = {
