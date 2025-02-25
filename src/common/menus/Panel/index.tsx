@@ -1,7 +1,7 @@
 import { AnimationEventHandler, ReactNode, useState } from 'react';
 import { useAppSelector } from '../../../store/hooks';
 import { selectDevice } from '../../../store/slice/windowSlice';
-import { Features } from '../../utils/Features';
+import { FEATURES } from '../../utils/Features';
 import Footer from './Footer';
 import Header from './Header/Header';
 import SliderUp from './SliderUp';
@@ -51,7 +51,7 @@ const Panel = ({
 
     return (
         <div
-            className={`${styles['menu-content']} ${styles[`layout-${Features.LAYOUT_VERSION}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
+            className={`${styles['menu-content']} ${styles[`layout-${FEATURES.LAYOUT_VERSION}`]}${show ? '' : ` ${styles.disappear}`}${className ? ` ${className}` : ''}`}
             onAnimationStart={handleAnimationStart}
             onAnimationEnd={handleAnimationEnd}
         >
@@ -62,9 +62,7 @@ const Panel = ({
                 {children}
             </div>
 
-            {device !== 'desktop' && (
-                <Footer style={{ backgroundColor: footerBg }} />
-            )}
+            {device !== 'desktop' && <Footer style={{ backgroundColor: footerBg }} />}
         </div>
     );
 };

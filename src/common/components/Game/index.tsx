@@ -16,7 +16,7 @@ import { selectDevice } from '../../../store/slice/windowSlice';
 import { dummyLoadNewValue, luckyAngpaoDummy, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
-import { Features } from '../../utils/Features';
+import { FEATURES } from '../../utils/Features';
 import { getRandomInt, sendMessageToParent } from '../../utils/FunctionHelper';
 import AlertUI from '../AlertUI';
 import GameUI from '../GameUI';
@@ -70,14 +70,14 @@ function Game() {
                 dispatch(setShowMiniHowToPlay(true));
             }
             if (e.key === 'n') {
-                if (!Features.SHUFFLE_THE_CARDS) {
+                if (!FEATURES.SHUFFLE_THE_CARDS) {
                     return;
                 }
 
                 dispatch(setNewSet(newSetDummy.status));
             }
             if (e.key === 'm') {
-                if (!Features.SHUFFLE_THE_CARDS) {
+                if (!FEATURES.SHUFFLE_THE_CARDS) {
                     return;
                 }
 
@@ -110,11 +110,9 @@ function Game() {
 
     useSocket({ nickname, operatorId, listenerCloseTimerHandler });
 
-    
-
     return (
         <div
-            className={`${styles['game-area']}${isLetterOrPillarBoxActive || Features.LETTER_BOX ? ` ${styles.box}` : ''}`}
+            className={`${styles['game-area']}${isLetterOrPillarBoxActive || FEATURES.LETTER_BOX ? ` ${styles.box}` : ''}`}
         >
             <Streaming />
             <Version />

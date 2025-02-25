@@ -11,7 +11,7 @@ import { useFetchTimer } from './common/hooks/useFetchTimer';
 import { useFullscreen } from './common/hooks/useFullscreen';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useWindowResize } from './common/hooks/useWindowResize';
-import { Features } from './common/utils/Features';
+import { FEATURES } from './common/utils/Features';
 import { sendMessageToParent } from './common/utils/FunctionHelper';
 import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
@@ -20,7 +20,7 @@ import { addBalance } from './store/slice/playerSlice';
 import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { MessageDataContainerToGame } from './types';
 
-const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
+const MiniHowToPlayComponents = FEATURES.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
 
 function App() {
     const dispatch = useAppDispatch();

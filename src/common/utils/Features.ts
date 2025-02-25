@@ -11,25 +11,36 @@ export type FeaturesType = {
 
 export type BUTTON_KEY = 'HIDE_CHIP' | 'PATTERN' | 'STATISTIC' | 'FAVORITE';
 
-export const Features: FeaturesType = {
+export const FEATURES: FeaturesType = {
     LAYOUT_VERSION: 1,
     MINI_HOW_TO_PLAY: true,
     SHUFFLE_THE_CARDS: false,
     LETTER_BOX: false,
     STREAMING_LANDSCAPE_LETTER_BOX: true,
     CHIP_ANIMATION: true,
-};
-
-export const BUTTON_FEATURES: Record<BUTTON_KEY, boolean> = {
-    HIDE_CHIP: true,
-    PATTERN: false,
-    STATISTIC: true,
-    FAVORITE: false,
 } as const;
 
-export const BUTTON_COMPONENTS: Record<BUTTON_KEY, LazyExoticComponent<() => JSX.Element>> = {
-    HIDE_CHIP: lazy(() => import('../components/ButtonHideChip')),
-    PATTERN: lazy(() => import('../components/ButtonPattern')),
-    STATISTIC: lazy(() => import('../components/ButtonSatatistic')),
-    FAVORITE: lazy(() => import('../components/ButtonFavorite')),
+export const BUTTON_CONFIG: Record<
+    BUTTON_KEY,
+    {
+        enabled: boolean;
+        component: LazyExoticComponent<() => JSX.Element>;
+    }
+> = {
+    HIDE_CHIP: {
+        enabled: true,
+        component: lazy(() => import('../components/ButtonHideChip')),
+    },
+    PATTERN: {
+        enabled: true,
+        component: lazy(() => import('../components/ButtonPattern')),
+    },
+    STATISTIC: {
+        enabled: true,
+        component: lazy(() => import('../components/ButtonSatatistic')),
+    },
+    FAVORITE: {
+        enabled: true,
+        component: lazy(() => import('../components/ButtonFavorite')),
+    },
 } as const;

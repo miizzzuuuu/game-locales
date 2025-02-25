@@ -6,9 +6,9 @@ import GameDesktop from '../../desktop/GameDesktop';
 import LayoutV1 from '../../layouts/v1';
 import LayoutV2 from '../../layouts/v2';
 import LayoutV3 from '../../layouts/v3';
-import { Features } from '../../utils/Features';
+import { FEATURES } from '../../utils/Features';
 
-const layoutVersion = Features.LAYOUT_VERSION;
+const layoutVersion = FEATURES.LAYOUT_VERSION;
 const Layout =
     layoutVersion === 1
         ? LayoutV1

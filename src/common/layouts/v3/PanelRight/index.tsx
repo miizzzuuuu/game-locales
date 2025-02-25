@@ -1,12 +1,13 @@
+import { Suspense } from 'react';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../store/slice/timerSlice';
 import ButtonCancelBet from '../../../components/ButtonCancelBet';
 import ButtonDoubleBet from '../../../components/ButtonDoubleBet';
-import ButtonHideChip from '../../../components/ButtonHideChip';
 import ButtonMenu from '../../../components/ButtonMenu';
 import ButtonRebet from '../../../components/ButtonRebet';
-import ButtonSatatistic from '../../../components/ButtonSatatistic';
 import ChipDeck from '../../../components/ChipDeck';
+import { BUTTON_CONFIG } from '../../../utils/Features';
+import { RIGHT_BUTTONS } from '../constants';
 import PanelUI from '../PanelUI';
 import styles from './styles.module.scss';
 
@@ -15,8 +16,15 @@ const PanelRight = () => {
 
     return (
         <PanelUI className={styles['panel-right']}>
-            <ButtonHideChip />
-            <ButtonSatatistic />
+            <Suspense>
+                {RIGHT_BUTTONS.map((key) => {
+                    const config = BUTTON_CONFIG[key];
+                    if (!config.enabled) return null;
+
+                    const Component = config.component;
+                    return <Component key={key} />;
+                })}
+            </Suspense>
 
             <ButtonCancelBet show={betIsOpen} />
             <ButtonRebet show={betIsOpen} />
