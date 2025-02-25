@@ -1,7 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
-export type NameMenu = 'main' | 'payout' | 'settings' | 'history' | 'htp' | 'statistic';
+export type NameMenu =
+    | 'main'
+    | 'payout'
+    | 'settings'
+    | 'history'
+    | 'htp'
+    | 'statistic'
+    | 'promotion';
 
 export interface MenuState {
     openStatistic: boolean;
@@ -10,6 +17,7 @@ export interface MenuState {
     openMenuSettings: boolean;
     openMenuHistory: boolean;
     openMenuHTP: boolean;
+    openMenuPromotion: boolean;
 
     menuOpened: NameMenu[];
 }
@@ -21,6 +29,7 @@ const initialState: MenuState = {
     openMenuSettings: false,
     openMenuHistory: false,
     openMenuHTP: false,
+    openMenuPromotion: false,
     menuOpened: [],
 };
 
@@ -93,6 +102,17 @@ const menuSlice = createSlice({
             }
 
             state.openMenuHTP = !state.openMenuHTP;
+        },
+        toggleMenuPromotion: (state) => {
+            const prev = state.openMenuPromotion;
+
+            if (prev) {
+                state.menuOpened = state.menuOpened.filter((menu) => menu !== 'promotion');
+            } else {
+                state.menuOpened.push('promotion');
+            }
+
+            state.openMenuPromotion = !state.openMenuPromotion;
         },
 
         closeAllMenu: (state) => {
@@ -180,6 +200,7 @@ export const {
     toggleMenuPayout,
     toggleMenuSettings,
     toggleMenuHistory,
+    toggleMenuPromotion,
     toggleMenuHTP,
     closeAllMenu,
 
@@ -196,6 +217,7 @@ export const selectOpenMenuPayout = (state: RootState) => state.menu.openMenuPay
 export const selectOpenMenuSettings = (state: RootState) => state.menu.openMenuSettings;
 export const selectOpenMenuHistory = (state: RootState) => state.menu.openMenuHistory;
 export const selectOpenMenuHTP = (state: RootState) => state.menu.openMenuHTP;
+export const selectOpenMenuPromotion = (state: RootState) => state.menu.openMenuPromotion;
 
 export const selectMenuOpened = (state: RootState) => state.menu.menuOpened;
 

@@ -58,5 +58,6 @@
     "shuffling-cards": "洗牌",
     "complete-how-to-play": "完整的游戏指南",
     "dont-show-again": "不再显示",
-    "streaming-error": "流媒体错误：无效的流媒体 url"
+    "streaming-error": "流媒体错误：无效的流媒体 url",
+    "no-promotion": "当前没有活动"
 }

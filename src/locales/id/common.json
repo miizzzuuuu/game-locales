@@ -58,5 +58,6 @@
     "shuffling-cards": "mengocok kartu",
     "complete-how-to-play": "Cara bermain lengkap",
     "dont-show-again": "Jangan tampilkan lagi",
-    "streaming-error": "terjadi kesalahan pada streaming: url streaming tidak valid"
+    "streaming-error": "terjadi kesalahan pada streaming: url streaming tidak valid",
+    "no-promotion": "tidak ada promosi saat ini"
 }

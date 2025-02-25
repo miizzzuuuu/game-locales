@@ -5,6 +5,7 @@ import {
     toggleMenuHistory,
     toggleMenuMain,
     toggleMenuPayout,
+    toggleMenuPromotion,
     toggleMenuSettings,
 } from '../../../../../store/slice/menuSlice';
 import { sendMessageToParent } from '../../../../utils/FunctionHelper';
@@ -41,21 +42,23 @@ const Content = () => {
                 text="payout-and-limit"
                 onClick={() => dispatch(toggleMenuPayout())}
             />
-            {eventsIdnliveList.length > 0 && (
-                <Item
-                    icon={<SVGIconPromotion />}
-                    text="promotion"
-                    onClick={() => {
+            <Item
+                icon={<SVGIconPromotion />}
+                text="promotion"
+                onClick={() => {
+                    if (eventsIdnliveList.length > 0) {
                         sendMessageToParent({
                             source: 'LIVE_GAME',
                             type: 'OPEN_MODAL_EVENT',
                             payload: eventsIdnliveList[0],
                         });
 
-                        dispatch(toggleMenuMain());
-                    }}
-                />
-            )}
+                        return dispatch(toggleMenuMain());
+                    }
+
+                    dispatch(toggleMenuPromotion());
+                }}
+            />
             <Item
                 icon={<SVGIconSettings />}
                 text="settings"

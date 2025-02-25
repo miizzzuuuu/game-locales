@@ -5,7 +5,7 @@
     "history": "history",
     "how-to-play": "how to play",
     "payout-and-limit": "payout and limit",
-    "promotion": "promosi",
+    "promotion": "promotion",
     "settings": "settings",
     "video": "video",
     "live-streaming-sound": "live streaming sound",
@@ -58,5 +58,6 @@
     "shuffling-cards": "shuffling cards",
     "complete-how-to-play": "Complete how to play",
     "dont-show-again": "Don't show again",
-    "streaming-error": "streaming error: invalid streaming url"
+    "streaming-error": "streaming error: invalid streaming url",
+    "no-promotion": "no events at this time"
 }
