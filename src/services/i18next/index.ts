@@ -35,9 +35,11 @@ import zhHTP from '../../locales/zh/htp.json';
 
 // mini how to play
 import enMiniHTP from '../../locales/en/mini-htp.json';
+import hiMiniHTP from '../../locales/hi/mini-htp.json';
 import idMiniHTP from '../../locales/id/mini-htp.json';
 import koMiniHTP from '../../locales/ko/mini-htp.json';
 import thMiniHTP from '../../locales/th/mini-htp.json';
+import trMiniHTP from '../../locales/tr/mini-htp.json';
 import vnMiniHTP from '../../locales/vn/mini-htp.json';
 import zhMiniHTP from '../../locales/zh/mini-htp.json';
 
@@ -53,6 +55,7 @@ const resources: Resource = {
     hi: {
         translation: {
             common: { ...hiCommon },
+            miniHtp: hiMiniHTP,
         },
     },
     id: {
@@ -82,6 +85,7 @@ const resources: Resource = {
     tr: {
         translation: {
             common: { ...trCommon },
+            miniHtp: trMiniHTP,
         },
     },
     vn: {

@@ -1,0 +1,21 @@
+{
+    "slide-1": {
+        "title": "Nasıl Oynanır",
+        "content": [
+            "<b>500x Jackpot & Lucky Number!</b>'a kadar fantastik ödeme bonusları kazanın!",
+            "Dönen kafeste görünecek topu tahmin ederek oynayın. Kırmızı ve siyah renkte 1'den 24'e kadar numaralı 24 top vardır."
+        ]
+    },
+    "slide-2": {
+        "title": "Lucky Numbers",
+        "content": [
+            "Sistem rastgele 2 ila 12 numara seçer ve bunları Lucky Numbers olarak belirler. Lucky Numbers lar normal ödemenin üzerinde önemli bir ödeme artışı sağlar, bahis tutarınızın <b>30 katından 95 katına</b> kadar."
+        ]
+    },
+    "slide-3": {
+        "title": "Jackpot Number",
+        "content": [
+            "Sistem rastgele <b>1 numara</b> seçer ve bunu Jackpot Number olarak belirler. Bu numara, Lucky Number Bonus'unun ötesinde ödemeyi önemli ölçüde artırabilir, bahis tutarınızın <b>100 katından 500 katına</b> kadar."
+        ]
+    }
+}

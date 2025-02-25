@@ -2,19 +2,20 @@
     "slide-1": {
         "title": "Cara Bermain",
         "content": [
-            "Permainan dimana 1 bola kecil dilemparkan kedalam Roda berputar yang memiliki 37 slot dengan angka dari 0 hingga 36 Angka."
+            "Menangkan bonus pembayaran fantastis hingga <b>500x Jackpot & Lucky Number!</b>",
+            "Mainkan dengan cara menebak bola yang akan muncul pada sangkar berputar. Terdapat 24 bola terdiri dari angka 1 hingga 24 dengan warna merah dan hitam."
         ]
     },
     "slide-2": {
-        "title": "Taruhan",
+        "title": "Lucky Numbers",
         "content": [
-            "Anda dapat bertaruh pada angka, rentang angka, warna atau apakah ganjil / genap. Setelah Anda memasang taruhan, Roda akan diputar dan 1 bola dilemparkan."
+            "System secara acak memilih 2 hingga 12 angka sebagai Lucky Numbers. Lucky numbers memiliki peningkatan pembayaran drastis diatas bayaran normal, mulai dari <b>30x hingga 95x</b> nominal taruhan Anda."
         ]
     },
     "slide-3": {
-        "title": "Hasil Permainan",
+        "title": "Jackpot Number",
         "content": [
-            "Bola akan berhenti disalah satu slot, dan taruhan yang sesuai dengan hasil tersebut akan menang."
+            "System secara acak memilih <b>1 angka</b> sebagai Jackpot Number. Angka ini dapat meningkatkan pembayaran secara signifikan melebihi Lucky Number Bonus, dimulai dari <b>100x hingga 500x</b> taruhan Anda."
         ]
     }
 }

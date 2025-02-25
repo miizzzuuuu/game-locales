@@ -1,16 +1,21 @@
 {
     "slide-1": {
-        "title": "玩法介绍",
-        "content": ["这是一个将小球抛入拥有37个编号为0到36的槽位的旋转轮中的游戏。"]
+        "title": "玩法",
+        "content": [
+            "赢得高达 <b>500x Jackpot & Lucky Number!</b> 的丰厚奖金！",
+            "通过猜测旋转笼中将出现的球来玩。有24个球，编号从1到24，红色和黑色。"
+        ]
     },
     "slide-2": {
-        "title": "投注",
+        "title": "Lucky Numbers",
         "content": [
-            "您可以下注在数字、数字范围、颜色，或者是奇数/偶数。下注后，轮盘将旋转并投掷一个小球。"
+            "系统随机选择2到12个数字作为 Lucky Number。Lucky Numbers 的赔付大幅增加，超过正常赔付，从您下注金额的 <b>30倍到95倍</b>。"
         ]
     },
     "slide-3": {
-        "title": "游戏结果",
-        "content": ["小球将停在某个槽位，结果与下注相符的玩家将获胜。"]
+        "title": "Jackpot Number",
+        "content": [
+            "系统随机选择 <b>1个数字</b> 作为 Jackpot Number。这个数字可以显著增加赔付，超过 Lucky Number 奖金，从您下注金额的 <b>100倍到500倍</b>。"
+        ]
     }
 }
