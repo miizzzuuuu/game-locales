@@ -1,4 +1,4 @@
-import { ShioName } from '../CommonType';
+import { ShioName } from '../GameType';
 import { ThunderM8B, ThunderP6B, ThunderP7E, ThunderP9B } from '../SocketType';
 
 export type CommonResult = {

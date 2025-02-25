@@ -26,7 +26,7 @@ import {
     PcodeSicboDice,
     PcodeSuwit,
     PcodeXocDia,
-} from '../CommonType';
+} from '../GameType';
 import {
     ResultM10,
     ResultM11,
