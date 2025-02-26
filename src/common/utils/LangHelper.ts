@@ -7,10 +7,11 @@ import SVGLangTh from '../components/SVG/languages/SVGLangTh';
 import SVGLangTr from '../components/SVG/languages/SVGLangTr';
 import SVGLangUk from '../components/SVG/languages/SVGLangUk';
 import SVGLangVn from '../components/SVG/languages/SVGLangVn';
+import SVGLangBr from '../components/SVG/languages/SVGLangBr';
 
 export type SupportLang = (typeof supportLang)[number];
 
-export const supportLang = ['en', 'hi', 'id', 'vn', 'th', 'tr', 'zh', 'ko'] as const;
+export const supportLang = ['en', 'hi', 'id', 'vn', 'th', 'tr', 'zh', 'ko', 'pt-br'] as const;
 
 const countryLanguageCodes: Record<string, string> = {
     en: 'en-US',
@@ -21,6 +22,7 @@ const countryLanguageCodes: Record<string, string> = {
     tr: 'tr-TR',
     vn: 'vn-VN',
     zh: 'zh-CN',
+    'pt-br': 'pt-BR',
 };
 
 export const langMap: Record<string, string> = {
@@ -32,6 +34,7 @@ export const langMap: Record<string, string> = {
     tr: 'tr',
     vn: 'vn',
     zh: 'zh',
+    'pt-br': 'pt-BR',
 };
 
 export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => ReactElement> = {
@@ -43,6 +46,7 @@ export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => ReactE
     tr: SVGLangTr,
     vn: SVGLangVn,
     zh: SVGLangCn,
+    'pt-br': SVGLangBr,
 };
 
 export const langName: Record<string, string> = {
@@ -54,6 +58,7 @@ export const langName: Record<string, string> = {
     tr: 'Türkçe',
     vn: 'Tiếng Việt',
     zh: '中文',
+    'pt-br': 'Português',
 };
 
 export const getLoacale = (lang: string) => {
@@ -67,6 +72,10 @@ export const formatedLanguage = (lang: string) => {
 
     if (lang === 'cn') {
         lang = 'zh';
+    }
+
+    if (lang === 'pt') {
+        lang = 'pt-BR';
     }
 
     const validLang = langMap[lang.toLowerCase()];

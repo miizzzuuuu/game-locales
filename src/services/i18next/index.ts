@@ -5,6 +5,7 @@ import enCommon from '../../locales/en/common.json';
 import hiCommon from '../../locales/hi/common.json';
 import idCommon from '../../locales/id/common.json';
 import koCommon from '../../locales/ko/common.json';
+import ptBRCommon from '../../locales/pt-BR/common.json';
 import thCommon from '../../locales/th/common.json';
 import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
@@ -13,6 +14,7 @@ import zhCommon from '../../locales/zh/common.json';
 import enFeatures from '../../locales/en/features.json';
 import idFeatures from '../../locales/id/features.json';
 import koFeatures from '../../locales/ko/features.json';
+import ptBRFeatures from '../../locales/pt-BR/features.json';
 import thFeatures from '../../locales/th/features.json';
 import vnFeatures from '../../locales/vn/features.json';
 import zhFeatures from '../../locales/zh/features.json';
@@ -72,6 +74,11 @@ const resources: Resource = {
             p6: koP6,
             htp: koHTP,
             miniHtp: koMiniHTP,
+        },
+    },
+    'pt-BR': {
+        translation: {
+            common: { ...ptBRCommon, ...ptBRFeatures },
         },
     },
     th: {
