@@ -49,7 +49,7 @@ function useConfirmBet() {
             });
             return;
         }
-    }, [confirmBetStatus, confirmBetError]); // tambahkan 't' ke dependency array
+    }, [confirmBetStatus, confirmBetError, t]); // tambahkan 't' ke dependency array
 
     useEffect(() => {
         if (confirmBetStatus === 'idle' && betIsClose) {
