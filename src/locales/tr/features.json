@@ -1,0 +1,28 @@
+{
+    "htp": {
+        "general": {
+            "title": "Genel",
+            "content": {
+                "paragraph-1": "Oyuna katılmak için bahislerinizi karşılayacak yeterli bakiyeniz/fonunuz olmalıdır. Mevcut bakiyeniz ekranınızın sol alt kısmında görülebilir.",
+                "paragraph-2": "TOPLAM BAHİS göstergesi, geçerli turda yerleştirdiğiniz bahislerin toplam tutarını gösterir.",
+                "paragraph-3": "Masada izin verilen minimum ve maksimum bahis sınırları gösterilir, bu sınırlar her an değişebilir. Ayrıca geçerli dönem kodu ve oynadığınız oyun adı görüntülenir.",
+                "paragraph-4": "Zamanlayıcı, bahis yapmak için kalan süreyi gösterir. Süre bittiğinde bahisler kapanır ve yeni bahis kabul edilmez. Bahis süresi sona erdikten sonra, bahsiniz geçerliyse \"bahis kabul edildi\" onayı alırsınız; aksi takdirde \"Tüm bahisler kabul edilmedi\" veya \"Bahis reddedildi\" uyarısı görülür.",
+                "paragraph-5": "Çip ekranı, bahis yapmak istediğiniz çip değerlerini seçmenizi sağlar. Çip değerlerini ekranın alt kısmındaki çiplere tıklayarak seçebilirsiniz (Geri Al, Katla, Tekrar Bahis butonlarına yakın). Yalnızca mevcut bakiyenizle uyumlu çip değerleri seçilebilir."
+            },
+            "game-name": "Oyun Adı"
+        },
+        "menu": {
+            "title": "Menü",
+            "description": "Oyunculara yardımcı ek butonlar",
+            "content": {
+                "paragraph-1": "Geri Al butonu, masaya en son yerleştirilen çipi kaldırır.",
+                "paragraph-2": "Yerleştirdiğiniz çip toplamını iki katına çıkarır. Hesap bakiyenizin tüm bahisleri karşılayacak kadar yüksek olduğundan emin olun.",
+                "paragraph-3": "Önceki turda yaptığınız bahsi tekrar yerleştirir.",
+                "paragraph-4": "Burger Menüsü, oyun içi önemli özelliklere erişim sağlar.",
+                "paragraph-5": "Masada yerleştirdiğiniz çipleri gizler.",
+                "paragraph-6": "Canlı oyun istatistiklerini görüntüler.",
+                "paragraph-7": "Roadmap/Oyun İstatistiklerinin görünürlüğünü değiştirir."
+            }
+        }
+    }
+}
