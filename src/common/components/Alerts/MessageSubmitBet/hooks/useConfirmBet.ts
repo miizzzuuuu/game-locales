@@ -58,7 +58,7 @@ function useConfirmBet() {
                 type: 'danger',
             });
         }
-    }, [confirmBetStatus, betIsClose]);
+    }, [confirmBetStatus, betIsClose, t]);
 
     const handleClose = () => {
         dispatch(resetConfirmBet());
