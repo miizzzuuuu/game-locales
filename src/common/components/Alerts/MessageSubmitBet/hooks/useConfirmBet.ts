@@ -31,6 +31,7 @@ function useConfirmBet() {
                 value: 'SUBMITING...',
                 type: 'none',
             });
+            dispatch(resetConfirmBet());
             return;
         }
 
@@ -39,6 +40,7 @@ function useConfirmBet() {
                 value: t('bet-accepted'),
                 type: 'warning',
             });
+            dispatch(resetConfirmBet());
             return;
         }
 
@@ -47,9 +49,10 @@ function useConfirmBet() {
                 value: confirmBetError ?? t('bet-error'),
                 type: 'danger',
             });
+            dispatch(resetConfirmBet());
             return;
         }
-    }, [confirmBetStatus, confirmBetError, t]); // tambahkan 't' ke dependency array
+    }, [confirmBetStatus, confirmBetError, dispatch, t]); // tambahkan 't' ke dependency array
 
     useEffect(() => {
         if (confirmBetStatus === 'idle' && betIsClose) {
@@ -57,11 +60,12 @@ function useConfirmBet() {
                 value: t('bet-closed'),
                 type: 'danger',
             });
+            dispatch(resetConfirmBet());
         }
-    }, [confirmBetStatus, betIsClose, t]);
+    }, [confirmBetStatus, betIsClose, dispatch, t]);
 
     const handleClose = () => {
-        dispatch(resetConfirmBet());
+        // dispatch(resetConfirmBet());
 
         setMessage({
             value: null,
