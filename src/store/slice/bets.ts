@@ -14,7 +14,7 @@ export interface State {
         addTotal: number;
     }[];
 
-    confirmStatus: FetchStatus | 'end';
+    confirmStatus: FetchStatus;
     confirmError: null | string;
 }
 
@@ -131,7 +131,7 @@ const betsSlice = createSlice({
             state.history = [];
         },
         resetConfirmBet: (state) => {
-            state.confirmStatus = 'end';
+            // state.confirmStatus = 'idle';
             state.confirmError = null;
         },
         newAddBetPeriod: (state) => {

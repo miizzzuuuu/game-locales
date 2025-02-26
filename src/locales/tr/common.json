@@ -43,6 +43,7 @@
     "you-win": "kazandınız",
     "bet-confirmed": "bahis onaylandı",
     "bet-error": "bahis hatası",
+    "bet-closed": "bahis kapalı",
     "bet-error-n50": "Zaten {{button}} bahsi yaptınız, {{other}} bahsi yapamazsınız",
     "bet-error-max": "{{button}} bahsi maksimum {{value, number}}",
     "bet-error-min": "{{button}} bahsi minimum {{value, number}}",

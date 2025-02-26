@@ -43,6 +43,7 @@
     "you-win": "คุณชนะ",
     "bet-confirmed": "ยืนยันการเดิมพัน",
     "bet-error": "ข้อผิดพลาดในการเดิมพัน",
+    "bet-closed": "เดิมพันปิด",
     "bet-error-n50": "ได้วางเดิมพัน {{button}} แล้ว ไม่สามารถวางเดิมพัน {{other}}",
     "bet-error-max": "เดิมพัน {{button}} สูงสุด {{value, number}}",
     "bet-error-min": "เดิมพัน {{button}} ต่ำสุด {{value, number}}",

@@ -43,6 +43,7 @@
     "you-win": "आप जीते",
     "bet-confirmed": "दांव की पुष्टि हुई",
     "bet-error": "दांव त्रुटि",
+    "bet-closed": "शर्त बंद",
     "bet-error-n50": "पहले से ही {{button}} दांव लगाया है, {{other}} दांव नहीं लगा सकते",
     "bet-error-max": "{{button}} दांव अधिकतम {{value, number}}",
     "bet-error-min": "{{button}} दांव न्यूनतम {{value, number}}",

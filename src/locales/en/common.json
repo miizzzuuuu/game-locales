@@ -43,6 +43,7 @@
     "you-win": "you win",
     "bet-confirmed": "bet confirmed",
     "bet-error": "bet error",
+    "bet-closed": "bet closed",
     "bet-error-n50": "Already placed {{button}} bet, can't bet {{other}}",
     "bet-error-max": "Bet {{button}} maximal {{value, number}}",
     "bet-error-min": "Bet {{button}} minimal {{value, number}}",

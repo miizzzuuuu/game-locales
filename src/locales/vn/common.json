@@ -43,6 +43,7 @@
     "you-win": "bạn thắng",
     "bet-confirmed": "cược đã được xác nhận",
     "bet-error": "lỗi cược",
+    "bet-closed": "cược đã đóng",
     "bet-error-n50": "Đã đặt cược {{button}}, không thể đặt cược {{other}}",
     "bet-error-max": "Cược {{button}} tối đa {{value, number}}",
     "bet-error-min": "Cược {{button}} tối thiểu {{value, number}}",
