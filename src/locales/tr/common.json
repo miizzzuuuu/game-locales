@@ -42,6 +42,7 @@
     "total-bet": "toplam bahis",
     "you-win": "kazandınız",
     "bet-confirmed": "bahis onaylandı",
+    "bet-accepted": "bahis kabul edildi",
     "bet-error": "bahis hatası",
     "bet-closed": "bahis kapalı",
     "bet-error-n50": "Zaten {{button}} bahsi yaptınız, {{other}} bahsi yapamazsınız",

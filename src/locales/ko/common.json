@@ -42,6 +42,7 @@
     "total-bet": "총 베팅",
     "you-win": "승리하셨습니다",
     "bet-confirmed": "베팅 확인됨",
+    "bet-accepted": "베팅 승인",
     "bet-error": "베팅 오류",
     "bet-closed": "베팅 종료",
     "bet-error-n50": "이미 {{button}} 베팅을 했으므로 {{other}} 베팅을 할 수 없습니다",

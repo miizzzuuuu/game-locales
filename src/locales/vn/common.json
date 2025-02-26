@@ -42,6 +42,7 @@
     "total-bet": "tổng cược",
     "you-win": "bạn thắng",
     "bet-confirmed": "cược đã được xác nhận",
+    "bet-accepted": "cược thành công",
     "bet-error": "lỗi cược",
     "bet-closed": "cược đã đóng",
     "bet-error-n50": "Đã đặt cược {{button}}, không thể đặt cược {{other}}",

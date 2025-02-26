@@ -42,6 +42,7 @@
     "total-bet": "कुल दांव",
     "you-win": "आप जीते",
     "bet-confirmed": "दांव की पुष्टि हुई",
+    "bet-accepted": "शर्त स्वीकृत",
     "bet-error": "दांव त्रुटि",
     "bet-closed": "शर्त बंद",
     "bet-error-n50": "पहले से ही {{button}} दांव लगाया है, {{other}} दांव नहीं लगा सकते",

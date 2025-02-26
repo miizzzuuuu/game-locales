@@ -42,6 +42,7 @@
     "total-bet": "总下注",
     "you-win": "您赢了",
     "bet-confirmed": "下注已确认",
+    "bet-accepted": "投注成功",
     "bet-error": "下注错误",
     "bet-closed": "投注已关闭",
     "bet-error-n50": "已下 {{button}} 注，不能下 {{other}} 注",

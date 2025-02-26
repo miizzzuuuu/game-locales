@@ -42,6 +42,7 @@
     "total-bet": "total taruhan",
     "you-win": "kamu menang",
     "bet-confirmed": "taruhan dikonfirmasi",
+    "bet-accepted": "taruhan diterima",
     "bet-closed": "taruhan ditutup",
     "bet-error": "kesalahan taruhan",
     "bet-error-n50": "Sudah memasang taruhan {{button}}, tidak bisa memasang {{other}}",

@@ -36,7 +36,7 @@ function useConfirmBet() {
 
         if (confirmBetStatus === 'fulfilled') {
             setMessage({
-                value: t('bet-confirmed'),
+                value: t('bet-accepted'),
                 type: 'warning',
             });
             return;

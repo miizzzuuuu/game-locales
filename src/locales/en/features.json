@@ -3,7 +3,7 @@
         "general": {
             "title": "General",
             "content": {
-                "paragraph-1": "To participate in the game, you must have sufficient balance/funds to cover your bets. Your current balance can be seen at the bottom left of your screen.",
+                "paragraph-1": "To participate in the game, you must have sufficient balance/funds to cover your bets. Your current balance can be viewed at the bottom left of your screen.",
                 "paragraph-2": "The TOTAL BET indicator displays the total amount of bets you have placed for the current round.",
                 "paragraph-3": "Displays the minimum and maximum bets allowed on the table, which may change at any time. Additionally, the unique code for the current period and the name of the game you are playing are shown.",
                 "paragraph-4": "The timer indicates the remaining time to place bets. Once the timer ends, betting closes, and no further bets are accepted. After betting concludes, you will receive a \"bet accepted\" confirmation if your bet is valid for the game round; otherwise, you will see \"Not all bets accepted\" or \"Bet rejected\".",
