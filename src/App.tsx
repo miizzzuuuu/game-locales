@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Game from './common/components/Game';
 import MiniHowToPlay from './common/components/MiniHowToPlay';
 import ResizeOverlay from './common/components/ResizeOverlay';
@@ -28,7 +28,7 @@ function App() {
     const [showOverlayResize, setShowOverlayResize] = useState(false);
 
     const [showGame, setShowGame] = useState(false);
-    // const device = useAppSelector(selectDevice);
+
     const showMiniHowToPlay = useAppSelector(selectShowMiniHowToPlay);
 
     const { finish: finishGetPlayer } = useFetchPlayer();
@@ -90,11 +90,16 @@ function App() {
         };
     }, [dispatch]);
 
+    const timeoutRef = useRef<number>(null);
+
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
-
-        setTimeout(() => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
             setShowOverlayResize(false);
+            timeoutRef.current = null;
         }, 350);
     }, []);
 

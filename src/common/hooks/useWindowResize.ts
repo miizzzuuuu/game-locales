@@ -2,13 +2,15 @@ import { useLayoutEffect } from 'react';
 
 type Handler = () => void | (() => void)[];
 
+const DELAY_RESIZE = 150;
+
 function useWindowResize<T extends Handler>(handler: T, delay = true) {
     useLayoutEffect(() => {
         const handleResize = () => {
             if (delay) {
                 setTimeout(() => {
                     actionResize();
-                }, 300);
+                }, DELAY_RESIZE);
             } else {
                 actionResize();
             }
