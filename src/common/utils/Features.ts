@@ -28,28 +28,23 @@ export const BUTTON_CONFIG: Record<
     BUTTON_KEY,
     {
         enabled: boolean;
-        // component: LazyExoticComponent<() => JSX.Element>;
         component: () => JSX.Element;
     }
 > = {
     HIDE_CHIP: {
         enabled: true,
-        // component: lazy(() => import('../components/ButtonHideChip')),
         component: ButtonHideChip,
     },
     ROADMAP: {
         enabled: true,
-        // component: lazy(() => import('../components/ButtonRoadmap')),
         component: ButtonRoadmap,
     },
     STATISTIC: {
         enabled: true,
-        // component: lazy(() => import('../components/ButtonSatatistic')),
         component: ButtonSatatistic,
     },
     FAVORITE: {
         enabled: false,
-        // component: lazy(() => import('../components/ButtonFavorite')),
         component: ButtonFavorite,
     },
 } as const;

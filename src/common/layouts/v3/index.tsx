@@ -9,31 +9,34 @@ import PanelBottom from './PanelBottom';
 import PanelRight from './PanelRight';
 import styles from './styles.module.scss';
 
+const PortraitLayout = ({ children }: PropsWithChildren) => (
+    <>
+        <div className={styles['main-area-middle']}>{children}</div>
+        <div className={styles['main-area-right']}>
+            <PanelRight />
+        </div>
+    </>
+);
+
+const LandscapeLayout = ({ children }: PropsWithChildren) => (
+    <>
+        <div className={styles['main-area-top']}>{children}</div>
+        <div className={styles['main-area-bottom']}>
+            <PanelBottom />
+        </div>
+
+        <InfoLimitBet />
+    </>
+);
+
 const LayoutV3 = ({ children }: PropsWithChildren) => {
     const device = useAppSelector(selectDevice);
 
     return (
         <div className={`${styles.layout}`}>
             <div className={styles['main-area']}>
-                {device === 'mobile-portrait' && (
-                    <>
-                        <div className={styles['main-area-middle']}>{children}</div>
-                        <div className={styles['main-area-right']}>
-                            <PanelRight />
-                        </div>
-                    </>
-                )}
-
-                {(device === 'mobile-landscape' || device === 'desktop') && (
-                    <>
-                        <div className={styles['main-area-top']}>{children}</div>
-                        <div className={styles['main-area-bottom']}>
-                            <PanelBottom />
-                        </div>
-
-                        <InfoLimitBet />
-                    </>
-                )}
+                {device === 'mobile-portrait' && <PortraitLayout>{children}</PortraitLayout>}
+                {device === 'mobile-landscape' && <LandscapeLayout>{children}</LandscapeLayout>}
             </div>
 
             <HistoryResult />

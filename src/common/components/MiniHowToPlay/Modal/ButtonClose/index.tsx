@@ -7,7 +7,11 @@ interface IProps {
 
 const ButtonClose = ({ handleClose }: IProps) => {
     return (
-        <Button className={styles.button} onClick={handleClose} aria-label="close how to play">
+        <Button
+            className={styles.button}
+            onClick={handleClose}
+            aria-label="close quick how to play"
+        >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

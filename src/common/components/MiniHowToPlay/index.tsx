@@ -1,8 +1,8 @@
 import { AnimationEventHandler, useState } from 'react';
 import MiniHowToPlayContent from '../../../game/components/MiniHowToPlayContent';
-import styles from './styles.module.scss';
-import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import { useAppDispatch } from '../../../store/hooks';
+import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
+import styles from './styles.module.scss';
 
 const MiniHowToPlay = () => {
     const dispatch = useAppDispatch();
