@@ -9,7 +9,7 @@ function useSettingSound() {
         const handleEnableSound = () => {
             Sound.enablePlay = true;
 
-            const streamIframe = document.querySelector('#game-streaming') as HTMLIFrameElement;
+            const streamIframe: HTMLIFrameElement = document.querySelector('#game-streaming')!;
             if (streamIframe) {
                 streamIframe.src = streamIframe.src + '';
             }
@@ -27,11 +27,7 @@ function useSettingSound() {
     useEffect(() => {
         console.log('is focus', isFocus);
 
-        if (isFocus) {
-            Sound.isFocus = true;
-        } else {
-            Sound.isFocus = false;
-        }
+        Sound.isFocus = isFocus;
     }, [isFocus]);
 }
 
