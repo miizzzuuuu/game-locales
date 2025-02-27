@@ -3,7 +3,7 @@ import { SVGProps } from 'react';
 interface IProps extends SVGProps<SVGSVGElement> {
     strokeColor: string;
 }
-const SVGIconPattern = ({ strokeColor, ...props }: IProps) => (
+const SVGIconRoadmap = ({ strokeColor, ...props }: IProps) => (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path
             fill="#fff"
@@ -28,4 +28,4 @@ const SVGIconPattern = ({ strokeColor, ...props }: IProps) => (
     </svg>
 );
 
-export default SVGIconPattern;
+export default SVGIconRoadmap;
