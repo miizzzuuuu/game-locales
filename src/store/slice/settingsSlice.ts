@@ -126,11 +126,13 @@ export const { setSetings, updateSetings } = playerSlice.actions;
 export const selectSettings = (state: RootState) => state.settings;
 export const selectLanguage = (state: RootState) => state.settings.language;
 export const selectAutoRebet = (state: RootState) => state.settings.autoRebet;
+export const selectEnableGameMusic = (state: RootState) => state.settings.enableGameMusic;
 export const selectEnableGameSound = (state: RootState) => state.settings.enableGameSound;
 export const selectEnableStreamingSound = (state: RootState) => state.settings.enableStreamingSound;
 export const selectEnableStreamingVideo = (state: RootState) => state.settings.enableStreamingVideo;
 export const selectStreamingQuality = (state: RootState) => state.settings.streamingQuality;
-export const selectVolumeStreamingSound = (state: RootState) => state.settings.volumeStreamingSound;
+export const selectVolumeGameMusic = (state: RootState) => state.settings.volumeGameMusic;
 export const selectVolumeGameSound = (state: RootState) => state.settings.volumeGameSound;
+export const selectVolumeStreamingSound = (state: RootState) => state.settings.volumeStreamingSound;
 
 export default playerSlice.reducer;

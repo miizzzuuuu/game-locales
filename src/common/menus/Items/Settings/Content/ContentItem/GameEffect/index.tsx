@@ -5,9 +5,9 @@ import {
 } from '../../../../../../../store/slice/settingsSlice';
 import LabelTranslate from '../../../../../../components/LabelTranslate';
 import Item from '../../../Item';
-import SVGIconMusic from '../../../SVG/SVGIconMusic';
+import SVGIconSfx from '../../../SVG/SVGIconSfx';
 
-const GameSound = () => {
+const GameEffect = () => {
     const dispatch = useAppDispatch();
 
     const enableGameSound = useAppSelector(selectEnableGameSound);
@@ -15,7 +15,7 @@ const GameSound = () => {
     return (
         <Item
             label={<LabelTranslate value="game-effects" />}
-            icon={<SVGIconMusic />}
+            icon={<SVGIconSfx />}
             active={enableGameSound}
             onChangeActive={(value) => {
                 dispatch(updateSetings({ enableGameSound: value }));
@@ -24,4 +24,4 @@ const GameSound = () => {
     );
 };
 
-export default GameSound;
+export default GameEffect;

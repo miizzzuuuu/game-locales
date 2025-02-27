@@ -1,7 +1,7 @@
 import Separator from '../../../../components/Separator';
 import AutoRebet from './ContentItem/AutoRebet';
-import GameSound from './ContentItem/GameSound';
-import GameVolume from './ContentItem/GameVolume';
+import GameEffect from './ContentItem/GameEffect';
+import GameEffectVolume from './ContentItem/GameEffectVolume';
 
 import StreamingQuality from './ContentItem/StreamingQuality';
 import StreamingSound from './ContentItem/StreamingSound';
@@ -10,6 +10,8 @@ import StreamingVolume from './ContentItem/StreamingVolume';
 import SettingLanguage from './ContentItem/SettingLanguage';
 
 import styles from './styles.module.scss';
+import GameMusic from './ContentItem/GameMusic';
+import GameMusicVolume from './ContentItem/GameMusicVolume';
 
 const Content = () => {
     return (
@@ -24,8 +26,13 @@ const Content = () => {
 
             <Separator />
 
-            <GameSound />
-            <GameVolume />
+            <GameMusic />
+            <GameMusicVolume />
+
+            <Separator />
+
+            <GameEffect />
+            <GameEffectVolume />
 
             <Separator />
 

@@ -1,20 +1,20 @@
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import {
-    selectVolumeGameSound,
+    selectVolumeGameMusic,
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import { RoundRangeSlider } from '../../../RoundRangeSlider';
 
-const GameVolume = () => {
+const GameMusicVolume = () => {
     const dispatch = useAppDispatch();
 
-    const volumeGameSound = useAppSelector(selectVolumeGameSound);
+    const volumeGameMusic = useAppSelector(selectVolumeGameMusic);
 
     return (
         <RoundRangeSlider
-            initialValue={volumeGameSound}
+            initialValue={volumeGameMusic}
             onChange={(value) => {
-                dispatch(updateSetings({ volumeGameSound: value }));
+                dispatch(updateSetings({ volumeGameMusic: value }));
             }}
             minValue={0}
             maxValue={100}
@@ -22,4 +22,4 @@ const GameVolume = () => {
     );
 };
 
-export default GameVolume;
+export default GameMusicVolume;
