@@ -8,4 +8,11 @@
 
 .text {
     font-size: 1.2rem;
+    text-align: center;
+}
+
+:global(.mobile-portrait) {
+    .text {
+        margin-top: 4rem;
+    }
 }
