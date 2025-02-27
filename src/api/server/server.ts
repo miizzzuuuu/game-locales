@@ -55,6 +55,7 @@ export function makeServer({ environment = 'test' } = {}) {
 
             this.put(ENDPOINTS.playerSettings, (_, request): ApiResponse<Settings> => {
                 const settings = JSON.parse(request.requestBody) as Settings;
+
                 return settings;
             });
             // end player settings

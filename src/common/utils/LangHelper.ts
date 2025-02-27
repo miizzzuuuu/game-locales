@@ -65,8 +65,8 @@ export const getLoacale = (lang: string) => {
     return countryLanguageCodes[lang];
 };
 
-export const formatedLanguage = (lang: string) => {
-    if (lang === '') {
+export const formatedLanguage = (lang?: string): string => {
+    if (!lang) {
         lang = 'id';
     }
 

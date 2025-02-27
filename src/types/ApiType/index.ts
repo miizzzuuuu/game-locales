@@ -1,4 +1,4 @@
-import { Thunder } from "..";
+import { Thunder } from '..';
 
 export interface ApiResponseBase {
     status?: boolean;
@@ -33,11 +33,13 @@ export interface Settings {
     language: string;
     autoRebet: boolean;
     enableGameSound: boolean;
+    enableGameMusic: boolean;
     enableStreamingVideo: boolean;
     enableStreamingSound: boolean;
     streamingQuality: 'high' | 'medium' | 'auto';
-    volumeStreamingSound: number;
     volumeGameSound: number;
+    volumeGameMusic: number;
+    volumeStreamingSound: number;
 }
 
 export interface Bet {
@@ -175,4 +177,4 @@ export type EventIdnlivePrize = {
     notwin: number[];
 };
 
-export type CurrentThunder = { status: boolean } & Thunder<string>
+export type CurrentThunder = { status: boolean } & Thunder<string>;

@@ -11,7 +11,7 @@ const ButtonRoadmap = () => {
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="pattern" option={{ lng: 'en' }} />}
+            label={<LabelTranslate value="roadmap" option={{ lng: 'en' }} />}
             icon={<SVGIconPattern strokeColor={color} />}
             borderColor={showRoadmapUI ? '#00C3D8' : undefined}
             onClick={() => dispatch(toggleRoadmapUI())}

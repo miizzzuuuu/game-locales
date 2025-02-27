@@ -8,6 +8,11 @@ function useSettingSound() {
     useEffect(() => {
         const handleEnableSound = () => {
             Sound.enablePlay = true;
+
+            const streamIframe = document.querySelector('#game-streaming') as HTMLIFrameElement;
+            if (streamIframe) {
+                streamIframe.src = streamIframe.src + '';
+            }
         };
 
         document.addEventListener('mousedown', handleEnableSound, {

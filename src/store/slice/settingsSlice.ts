@@ -8,98 +8,114 @@ import { RootState } from '../store';
 const initialState: Settings = {
     language: '',
     autoRebet: false,
-    enableGameSound: false,
+    enableGameSound: true,
+    enableGameMusic: true,
     enableStreamingSound: true,
     enableStreamingVideo: true,
     streamingQuality: 'medium',
+    volumeGameSound: 100,
+    volumeGameMusic: 100,
     volumeStreamingSound: 100,
-    volumeGameSound: 0,
 };
 
 const playerSlice = createSlice({
     name: 'settings',
     initialState,
     reducers: {
-        setSetings: (state, action: PayloadAction<Settings>) => {
-            const {
-                language,
-                // autoRebet,
-                enableGameSound,
-                enableStreamingSound,
-                enableStreamingVideo,
-                streamingQuality,
-                volumeStreamingSound,
-                volumeGameSound,
-            } = action.payload;
+        setSetings: (state, action: PayloadAction<Partial<Settings>>) => {
+            const payload = action.payload;
 
-            const lang = formatedLanguage(language);
+            const lang = formatedLanguage(payload.language);
             void i18next.changeLanguage(lang);
             state.language = lang;
 
             // state.autoRebet = autoRebet;
 
-            state.volumeStreamingSound = volumeStreamingSound;
-            state.enableStreamingSound = enableStreamingSound;
-            state.enableStreamingVideo = enableStreamingVideo;
-            state.streamingQuality = streamingQuality;
+            if (payload.enableStreamingVideo !== undefined) {
+                state.enableStreamingVideo = payload.enableStreamingVideo;
+            }
 
-            state.volumeGameSound = volumeGameSound;
-            Sound.volumeSound = volumeGameSound;
-            Sound.volumeMusic = volumeGameSound;
+            if (payload.enableStreamingSound !== undefined) {
+                state.enableStreamingSound = payload.enableStreamingSound;
+            }
 
-            state.enableGameSound = enableGameSound;
-            Sound.enableSound = enableGameSound;
+            if (payload.volumeStreamingSound !== undefined) {
+                state.volumeStreamingSound = payload.volumeStreamingSound;
+            }
+
+            if (payload.streamingQuality !== undefined) {
+                state.streamingQuality = payload.streamingQuality;
+            }
+
+            if (payload.enableGameMusic !== undefined) {
+                state.enableGameMusic = payload.enableGameMusic;
+                Sound.enableMusic = payload.enableGameMusic;
+            }
+
+            if (payload.volumeGameMusic !== undefined) {
+                const volumeGameMusic = payload.volumeGameMusic;
+                state.volumeGameMusic = volumeGameMusic;
+                Sound.volumeMusic = volumeGameMusic;
+            }
+
+            if (payload.enableGameSound !== undefined) {
+                state.enableGameSound = payload.enableGameSound;
+                Sound.enableSound = payload.enableGameSound;
+            }
+
+            if (payload.volumeGameSound !== undefined) {
+                const volumeGameSound = payload.volumeGameSound;
+                state.volumeGameSound = volumeGameSound;
+                Sound.volumeSound = volumeGameSound;
+            }
         },
         updateSetings: (state, action: PayloadAction<Partial<Settings>>) => {
-            const {
-                language,
-                autoRebet,
-                enableGameSound,
-                enableStreamingSound,
-                enableStreamingVideo,
-                streamingQuality,
-                volumeStreamingSound,
-                volumeGameSound,
-            } = action.payload;
+            const payload = action.payload;
 
-            if (language !== undefined) {
-                const lang = formatedLanguage(language);
-                state.language = lang;
-
+            if (payload.language !== undefined) {
+                const lang = formatedLanguage(payload.language);
                 void i18next.changeLanguage(lang);
+                state.language = lang;
             }
 
-            if (autoRebet !== undefined) {
-                state.autoRebet = autoRebet;
+            // state.autoRebet = autoRebet;
+
+            if (payload.enableStreamingVideo !== undefined) {
+                state.enableStreamingVideo = payload.enableStreamingVideo;
             }
 
-            if (enableStreamingSound !== undefined) {
-                state.enableStreamingSound = enableStreamingSound;
+            if (payload.enableStreamingSound !== undefined) {
+                state.enableStreamingSound = payload.enableStreamingSound;
             }
 
-            if (enableStreamingVideo !== undefined) {
-                state.enableStreamingVideo = enableStreamingVideo;
+            if (payload.volumeStreamingSound !== undefined) {
+                state.volumeStreamingSound = payload.volumeStreamingSound;
             }
 
-            if (streamingQuality !== undefined) {
-                state.streamingQuality = streamingQuality;
+            if (payload.streamingQuality !== undefined) {
+                state.streamingQuality = payload.streamingQuality;
             }
 
-            if (volumeStreamingSound !== undefined) {
-                state.volumeStreamingSound = volumeStreamingSound;
+            if (payload.enableGameMusic !== undefined) {
+                state.enableGameMusic = payload.enableGameMusic;
+                Sound.enableMusic = payload.enableGameMusic;
             }
 
-            if (volumeGameSound !== undefined) {
+            if (payload.volumeGameMusic !== undefined) {
+                const volumeGameMusic = payload.volumeGameMusic;
+                state.volumeGameMusic = volumeGameMusic;
+                Sound.volumeMusic = volumeGameMusic;
+            }
+
+            if (payload.enableGameSound !== undefined) {
+                state.enableGameSound = payload.enableGameSound;
+                Sound.enableSound = payload.enableGameSound;
+            }
+
+            if (payload.volumeGameSound !== undefined) {
+                const volumeGameSound = payload.volumeGameSound;
                 state.volumeGameSound = volumeGameSound;
-
                 Sound.volumeSound = volumeGameSound;
-                Sound.volumeMusic = volumeGameSound;
-            }
-
-            if (enableGameSound !== undefined) {
-                state.enableGameSound = enableGameSound;
-
-                Sound.enableSound = enableGameSound;
             }
         },
     },
