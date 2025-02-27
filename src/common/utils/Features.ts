@@ -1,4 +1,8 @@
-import { JSX, lazy, LazyExoticComponent } from 'react';
+import { JSX } from 'react';
+import ButtonFavorite from '../components/ButtonFavorite';
+import ButtonHideChip from '../components/ButtonHideChip';
+import ButtonRoadmap from '../components/ButtonRoadmap';
+import ButtonSatatistic from '../components/ButtonSatatistic';
 
 export type FeaturesType = {
     LAYOUT_VERSION: 1 | 2 | 3;
@@ -24,23 +28,28 @@ export const BUTTON_CONFIG: Record<
     BUTTON_KEY,
     {
         enabled: boolean;
-        component: LazyExoticComponent<() => JSX.Element>;
+        // component: LazyExoticComponent<() => JSX.Element>;
+        component: () => JSX.Element;
     }
 > = {
     HIDE_CHIP: {
         enabled: true,
-        component: lazy(() => import('../components/ButtonHideChip')),
+        // component: lazy(() => import('../components/ButtonHideChip')),
+        component: ButtonHideChip,
     },
     ROADMAP: {
         enabled: true,
-        component: lazy(() => import('../components/ButtonRoadmap')),
+        // component: lazy(() => import('../components/ButtonRoadmap')),
+        component: ButtonRoadmap,
     },
     STATISTIC: {
         enabled: true,
-        component: lazy(() => import('../components/ButtonSatatistic')),
+        // component: lazy(() => import('../components/ButtonSatatistic')),
+        component: ButtonSatatistic,
     },
     FAVORITE: {
         enabled: false,
-        component: lazy(() => import('../components/ButtonFavorite')),
+        // component: lazy(() => import('../components/ButtonFavorite')),
+        component: ButtonFavorite,
     },
 } as const;

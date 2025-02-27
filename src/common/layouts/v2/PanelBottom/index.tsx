@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../store/slice/timerSlice';
 import ButtonCancelBet from '../../../components/ButtonCancelBet';
@@ -16,7 +15,7 @@ const PanelBottom = () => {
     return (
         <div className={styles['panel-bottom']}>
             <div className={styles['button-action-wrapper']}>
-                <Suspense>
+                {/* <Suspense>
                     {BOTTOM_BUTTONS.map((key) => {
                         const config = BUTTON_CONFIG[key];
                         if (!config.enabled) return null;
@@ -24,7 +23,15 @@ const PanelBottom = () => {
                         const Component = config.component;
                         return <Component key={key} />;
                     })}
-                </Suspense>
+                </Suspense> */}
+
+                {BOTTOM_BUTTONS.map((key) => {
+                    const config = BUTTON_CONFIG[key];
+                    if (!config.enabled) return null;
+
+                    const Component = config.component;
+                    return <Component key={key} />;
+                })}
             </div>
 
             <div className={styles.middle}>

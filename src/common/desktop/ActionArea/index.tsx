@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import ButtonCancelBet from '../../components/ButtonCancelBet';
@@ -23,7 +22,7 @@ const ActionArea = () => {
     return (
         <div className={styles['area-action']}>
             <div className={styles.side}>
-                <Suspense>
+                {/* <Suspense>
                     {DESKTOP_BUTTONS.map((key) => {
                         const config = BUTTON_CONFIG[key];
                         if (!config.enabled) {
@@ -32,7 +31,15 @@ const ActionArea = () => {
                         const Component = config.component;
                         return <Component key={key} />;
                     })}
-                </Suspense>
+                </Suspense> */}
+                {DESKTOP_BUTTONS.map((key) => {
+                    const config = BUTTON_CONFIG[key];
+                    if (!config.enabled) {
+                        return null;
+                    }
+                    const Component = config.component;
+                    return <Component key={key} />;
+                })}
             </div>
 
             <ChipsArea />

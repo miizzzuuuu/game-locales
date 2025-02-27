@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { useAppSelector } from '../../../../store/hooks';
 import { selectBetIsOpen } from '../../../../store/slice/timerSlice';
 import ButtonCancelBet from '../../../components/ButtonCancelBet';
@@ -16,7 +15,7 @@ const PanelRight = () => {
 
     return (
         <PanelUI className={styles['panel-right']}>
-            <Suspense>
+            {/* <Suspense>
                 {RIGHT_BUTTONS.map((key) => {
                     const config = BUTTON_CONFIG[key];
                     if (!config.enabled) return null;
@@ -24,7 +23,15 @@ const PanelRight = () => {
                     const Component = config.component;
                     return <Component key={key} />;
                 })}
-            </Suspense>
+            </Suspense> */}
+
+            {RIGHT_BUTTONS.map((key) => {
+                const config = BUTTON_CONFIG[key];
+                if (!config.enabled) return null;
+
+                const Component = config.component;
+                return <Component key={key} />;
+            })}
 
             <ButtonCancelBet show={betIsOpen} />
             <ButtonRebet show={betIsOpen} />
