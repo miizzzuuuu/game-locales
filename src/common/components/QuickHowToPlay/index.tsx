@@ -1,10 +1,10 @@
 import { AnimationEventHandler, useState } from 'react';
-import MiniHowToPlayContent from '../../../game/components/MiniHowToPlayContent';
+import QuickHowToPlayContent from '../../../game/components/QuickHowToPlayContent';
 import { useAppDispatch } from '../../../store/hooks';
 import { setShowMiniHowToPlay } from '../../../store/slice/gameStateSlice';
 import styles from './styles.module.scss';
 
-const MiniHowToPlay = () => {
+const QuickHowToPlay = () => {
     const dispatch = useAppDispatch();
     const [showUI, setShowUI] = useState(true);
 
@@ -19,9 +19,9 @@ const MiniHowToPlay = () => {
             className={`${styles['mini-how-to-play']}${!showUI ? ` ${styles.close}` : ''}`}
             onAnimationEnd={handleModalAnimationEnd}
         >
-            <MiniHowToPlayContent showUI={showUI} setShowUI={setShowUI} />
+            <QuickHowToPlayContent showUI={showUI} setShowUI={setShowUI} />
         </div>
     );
 };
 
-export default MiniHowToPlay;
+export default QuickHowToPlay;

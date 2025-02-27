@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ModalItem } from '../../../../common/components/MiniHowToPlay/Modal';
-import { GraphicComponentProps } from '../../../../common/components/MiniHowToPlay/Slide';
-import Content from '../../../../common/components/MiniHowToPlay/Slide/Content';
-import Graphic from '../../../../common/components/MiniHowToPlay/Slide/Graphic';
-import Title from '../../../../common/components/MiniHowToPlay/Slide/Title';
+import { ModalItem } from '../../../../common/components/QuickHowToPlay/ModalQuickHTP';
+import { GraphicComponentProps } from '../../../../common/components/QuickHowToPlay/Slide';
+import Content from '../../../../common/components/QuickHowToPlay/Slide/Content';
+import Graphic from '../../../../common/components/QuickHowToPlay/Slide/Graphic';
+import Title from '../../../../common/components/QuickHowToPlay/Slide/Title';
 import { getUrlAnimation } from '../helper';
 import styles from './styles.module.scss';
 

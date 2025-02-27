@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Game from './common/components/Game';
-import MiniHowToPlay from './common/components/MiniHowToPlay';
+import QuickHowToPlay from './common/components/QuickHowToPlay';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { useFetchEventList } from './common/hooks/useFetchEventList';
@@ -20,7 +20,7 @@ import { addBalance } from './store/slice/playerSlice';
 import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { MessageDataContainerToGame } from './types';
 
-const MiniHowToPlayComponents = FEATURES.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
+const MiniHowToPlayComponents = FEATURES.MINI_HOW_TO_PLAY ? <QuickHowToPlay /> : null;
 
 function App() {
     const dispatch = useAppDispatch();

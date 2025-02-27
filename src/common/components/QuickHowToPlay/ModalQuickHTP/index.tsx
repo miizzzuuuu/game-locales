@@ -25,7 +25,7 @@ export interface IProps extends ModalProps {
     setShowUI: (value: boolean) => void;
 }
 
-const Modal = ({ data, showUI, setShowUI }: IProps) => {
+const ModalQuickHTP = ({ data, showUI, setShowUI }: IProps) => {
     const dispatch = useAppDispatch();
 
     const [dontShowAgain, setDontShowAgain] = useState(false);
@@ -68,4 +68,4 @@ const Modal = ({ data, showUI, setShowUI }: IProps) => {
     );
 };
 
-export default Modal;
+export default ModalQuickHTP;

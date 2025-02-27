@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useRef } from 'react';
 import Slide from '../Slide';
 import styles from './styles.module.scss';
-import { ModalProps } from '../Modal';
+import { ModalProps } from '../ModalQuickHTP';
 
 interface IProps extends ModalProps {
     index: number;

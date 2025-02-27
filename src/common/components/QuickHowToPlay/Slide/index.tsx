@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { ModalItem } from '../Modal';
+import { ModalItem } from '../ModalQuickHTP';
 
 export interface GraphicComponentProps {
     isActive: boolean;
