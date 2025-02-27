@@ -12,13 +12,14 @@ const Content = ({ keySlide }: IProps) => {
 
     return (
         <>
-            {contents.map((content, idx) => (
-                <p
-                    key={idx}
-                    className={styles.paragraf}
-                    dangerouslySetInnerHTML={{ __html: content }}
-                />
-            ))}
+            {Array.isArray(contents) &&
+                contents.map((content, idx) => (
+                    <p
+                        key={idx}
+                        className={styles.paragraf}
+                        dangerouslySetInnerHTML={{ __html: content }}
+                    />
+                ))}
         </>
     );
 };
