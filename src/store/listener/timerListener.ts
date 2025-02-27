@@ -55,7 +55,7 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
 const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
     if (BUTTON_CONFIG.PATTERN.enabled && state) {
         const showPatternUIBeforeClose = state.gameState.showPatternUIBeforeClose;
-        if (showPatternUIBeforeClose) {
+        if (showPatternUIBeforeClose && !state.gameState.showPatternUI) {
             dispatch(togglePatternUI());
         }
     }
