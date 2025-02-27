@@ -40,7 +40,7 @@ export const BUTTON_CONFIG: Record<
         component: lazy(() => import('../components/ButtonSatatistic')),
     },
     FAVORITE: {
-        enabled: true,
+        enabled: false,
         component: lazy(() => import('../components/ButtonFavorite')),
     },
 } as const;
