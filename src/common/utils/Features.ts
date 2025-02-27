@@ -9,7 +9,7 @@ export type FeaturesType = {
     CHIP_ANIMATION: boolean;
 };
 
-export type BUTTON_KEY = 'HIDE_CHIP' | 'PATTERN' | 'STATISTIC' | 'FAVORITE';
+export type BUTTON_KEY = 'HIDE_CHIP' | 'ROADMAP' | 'STATISTIC' | 'FAVORITE';
 
 export const FEATURES: FeaturesType = {
     LAYOUT_VERSION: 1,
@@ -31,9 +31,9 @@ export const BUTTON_CONFIG: Record<
         enabled: true,
         component: lazy(() => import('../components/ButtonHideChip')),
     },
-    PATTERN: {
+    ROADMAP: {
         enabled: true,
-        component: lazy(() => import('../components/ButtonPattern')),
+        component: lazy(() => import('../components/ButtonRoadmap')),
     },
     STATISTIC: {
         enabled: true,

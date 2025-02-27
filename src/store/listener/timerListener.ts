@@ -5,7 +5,7 @@ import { BetSend } from '../../types';
 import { AppStartListening } from '../listenerMiddleware';
 import { resetBetAdd, selectBetAdd, selectTotalBetAdd } from '../slice/bets';
 import { selectPeriod } from '../slice/gameSlice';
-import { setShowPatternBeforeClose, togglePatternUI } from '../slice/gameStateSlice';
+import { setShowRoadmapBeforeClose, toggleRoadmapUI } from '../slice/gameStateSlice';
 import { selectBalance } from '../slice/playerSlice';
 import { closeTime, openTime } from '../slice/timerSlice';
 import { AppDispatch, RootState } from '../store';
@@ -14,13 +14,13 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
     if (state) {
         const betAdd = selectBetAdd(state);
 
-        if (BUTTON_CONFIG.PATTERN.enabled && state) {
-            const showPatternUI = state.gameState.showPatternUI;
+        if (BUTTON_CONFIG.ROADMAP.enabled && state) {
+            const showPatternUI = state.gameState.showRoadmapUI;
             if (showPatternUI) {
-                dispatch(setShowPatternBeforeClose(true));
-                dispatch(togglePatternUI());
+                dispatch(setShowRoadmapBeforeClose(true));
+                dispatch(toggleRoadmapUI());
             } else {
-                dispatch(setShowPatternBeforeClose(false));
+                dispatch(setShowRoadmapBeforeClose(false));
             }
         }
 
@@ -53,11 +53,13 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
 };
 
 const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
-    if (BUTTON_CONFIG.PATTERN.enabled && state) {
-        const showPatternUIBeforeClose = state.gameState.showPatternUIBeforeClose;
-        if (showPatternUIBeforeClose && !state.gameState.showPatternUI) {
-            dispatch(togglePatternUI());
-        }
+    if (!BUTTON_CONFIG.ROADMAP.enabled || !state) {
+        return;
+    }
+
+    const showPatternUIBeforeClose = state.gameState.showRoadmapUIBeforeClose;
+    if (showPatternUIBeforeClose && !state.gameState.showRoadmapUI) {
+        dispatch(toggleRoadmapUI());
     }
 };
 

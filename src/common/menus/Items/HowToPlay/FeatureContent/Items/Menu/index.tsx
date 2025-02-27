@@ -4,7 +4,7 @@ import SVGIconDoubleBet from '../../../../../../components/ButtonDoubleBet/SVG/S
 // import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
 import SVGIconHideChip from '../../../../../../components/ButtonHideChip/SVG/SVGIconHideChip';
 import SVGIconMenu from '../../../../../../components/ButtonMenu/SVG/SVGIconMenu';
-import SVGIconPattern from '../../../../../../components/ButtonPattern/SVG/SVGIconPattern';
+import SVGIconPattern from '../../../../../../components/ButtonRoadmap/SVG/SVGIconPattern';
 import SVGIconRebet from '../../../../../../components/ButtonRebet/SVG/SVGIconRebet';
 import SVGIconStatistic from '../../../../../../components/ButtonSatatistic/SVG/SVGIconStatistic';
 import LabelTranslate from '../../../../../../components/LabelTranslate';

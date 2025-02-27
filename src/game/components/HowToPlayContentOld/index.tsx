@@ -8,7 +8,7 @@ import Rules from './Items/Rules';
 
 const HowToPlayContent = () => {
     return (
-        <MenuContentContainer className="htp">
+        <MenuContentContainer>
             <Introduction />
             <Rules />
             <BetDescription />
