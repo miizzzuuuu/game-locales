@@ -18,12 +18,12 @@ const BetTigerPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['bottom']} ${styles['right']} ${styles['tiger-pair']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles.bottom} ${styles.right} ${styles['tiger-pair']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={styles['shadow-center']}></div>
 
-            <div className={styles['content']}>
+            <div className={styles.content}>
                 <div className={styles['bet-name']}>TIGER PAIR</div>
                 <div className={styles['bet-payout']}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1

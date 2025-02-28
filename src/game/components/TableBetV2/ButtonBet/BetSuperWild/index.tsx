@@ -28,7 +28,7 @@ const BetSuperWild = ({ bet, placeBetHandler }: BetButtonIProps) => {
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <SvgSuperWild />
-            <div className={`${styles['content']}`}>
+            <div className={`${styles.content}`}>
                 <div className={`${styles['bet-name']}`}>SUPER WILD</div>
                 <div className={`${styles['bet-payout']}`}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1

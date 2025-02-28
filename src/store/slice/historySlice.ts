@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export interface ResultState {
     status: 'idle' | 'done';
-    history: any | HistoryItem[];
+    history: HistoryItem[];
 }
 
 export type HistoryItem = {

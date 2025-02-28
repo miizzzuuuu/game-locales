@@ -20,7 +20,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['middle']} ${styles['right']} ${styles['tiger']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles.middle} ${styles.right} ${styles.tiger} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={styles['shadow-center']}></div>
@@ -28,7 +28,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 <SvgTiger />
             </div>
 
-            <div className={styles['content']}>
+            <div className={styles.content}>
                 <div className={styles['bet-name']}>TIGER</div>
                 <div className={styles['bet-payout']}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1
@@ -47,14 +47,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     position={{ x: '0', y: '-170%' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.tiger : ''}
-                    appear={
-                        !!(
-                            !betIsOpen &&
-                            scanNumber &&
-                            scanNumber.dragon &&
-                            scanNumber.dragon != 'x'
-                        )
-                    }
+                    appear={!!(!betIsOpen && scanNumber?.dragon && scanNumber.dragon !== 'x')}
                     disappear={!scanNumber}
                     submit={scanNumber && scanNumber.submit == true}
                 />

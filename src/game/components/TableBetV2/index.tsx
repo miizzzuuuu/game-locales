@@ -48,15 +48,15 @@ const TableBetV2 = () => {
             <BetDragonWild bet={BETS['dragon-wild']} placeBetHandler={placeBetHandler} />
             <BetTigerWild bet={BETS['tiger-wild']} placeBetHandler={placeBetHandler} />
 
-            <BetDragon bet={BETS['dragon']} placeBetHandler={placeBetHandler} />
-            <BetTiger bet={BETS['tiger']} placeBetHandler={placeBetHandler} />
+            <BetDragon bet={BETS.dragon} placeBetHandler={placeBetHandler} />
+            <BetTiger bet={BETS.tiger} placeBetHandler={placeBetHandler} />
 
             <BetDragonPair bet={BETS['dragon-pair']} placeBetHandler={placeBetHandler} />
             <BetTigerPair bet={BETS['tiger-pair']} placeBetHandler={placeBetHandler} />
 
-            <div className={styles['center']}>
-                <BetSuperWild bet={BETS['superwild']} placeBetHandler={placeBetHandler} />
-                <BetTie bet={BETS['tie']} placeBetHandler={placeBetHandler} />
+            <div className={styles.center}>
+                <BetSuperWild bet={BETS.superwild} placeBetHandler={placeBetHandler} />
+                <BetTie bet={BETS.tie} placeBetHandler={placeBetHandler} />
 
                 <div
                     className={`${styles['slot-card']}`}
@@ -81,23 +81,16 @@ const TableBetV2 = () => {
                                   ? 0.6
                                   : 1
                         }
-                        value={scanNumber ? scanNumber.wild : ''}
-                        appear={
-                            !!(
-                                !betIsOpen &&
-                                scanNumber &&
-                                scanNumber.wild &&
-                                scanNumber.wild != 'x'
-                            )
-                        }
+                        value={scanNumber?.wild ?? ''}
+                        appear={!!(!betIsOpen && scanNumber?.wild && scanNumber.wild !== 'x')}
                         disappear={!scanNumber}
-                        submit={!!(scanNumber && scanNumber.submit)}
+                        submit={scanNumber?.submit}
                     />
                 </div>
             </div>
 
-            <div className={`${styles['stick']} ${styles['left']}`}>
-                <div className={styles['long']}></div>
+            <div className={`${styles.stick} ${styles.left}`}>
+                <div className={styles.long}></div>
                 <div className={styles['stick-top']}></div>
                 <div className={styles['stick-bottom']}></div>
                 <div className={styles['top-ornamen']}>
@@ -108,8 +101,8 @@ const TableBetV2 = () => {
                 </div>
             </div>
 
-            <div className={`${styles['stick']} ${styles['right']}`}>
-                <div className={`${styles['long']}`}></div>
+            <div className={`${styles.stick} ${styles.right}`}>
+                <div className={`${styles.long}`}></div>
                 <div className={`${styles['stick-top']}`}></div>
                 <div className={`${styles['stick-bottom']}`}></div>
                 <div className={`${styles['top-ornamen']}`}>

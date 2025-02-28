@@ -14,6 +14,8 @@ interface ImportMetaEnv {
     readonly VITE_DESKTOP_WIDTH: number;
     readonly VITE_DESKTOP_HEIGHT: number;
 
+    readonly VITE_GAME_NAME: string;
+
     // more env variables...
 }
 

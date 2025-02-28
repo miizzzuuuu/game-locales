@@ -9,7 +9,6 @@ import {
 } from '../../store/actions/socketAction';
 import { useAppDispatch } from '../../store/hooks';
 import { setNewSet } from '../../store/slice/gameSlice';
-import { setHistory } from '../../store/slice/historySlice';
 import { setWinAmount } from '../../store/slice/resultSlice';
 import { setTopWinner } from '../../store/slice/topWinnerSlice';
 import { LobbyConnect, NewSetData } from '../../types';
@@ -49,11 +48,6 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
 
         SocketComponent.instance.listenScanNumber((data) => {
             dispatch(scanNumberAction(data));
-        });
-
-        SocketComponent.instance.listenNewShoe((data) => {
-            data;
-            dispatch(setHistory([]));
         });
 
         SocketComponent.instance.listenRecieveTotalWin((data) => {

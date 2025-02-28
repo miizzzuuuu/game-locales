@@ -1,7 +1,7 @@
 import { getOrientation } from '../../../common/utils/DisplayHelper';
 import { useAppSelector } from '../../../store/hooks';
 import { selectGameNewSet } from '../../../store/slice/gameSlice';
-import { selectShowPatternUI } from '../../../store/slice/gameStateSlice';
+import { selectShowRoadmapUI } from '../../../store/slice/gameStateSlice';
 import RoadMap from '../RoadMap/BaccaratRoads';
 import TableBetV2 from '../TableBetV2';
 import { useDummy } from './hooks/useDummy';
@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 
 const MainArea = () => {
     const isLandscape = getOrientation() == 'landscape';
-    const showPatternUI = useAppSelector(selectShowPatternUI);
+    const showRoadmapUI = useAppSelector(selectShowRoadmapUI);
 
     const gameNewSet = useAppSelector(selectGameNewSet);
 
@@ -20,7 +20,7 @@ const MainArea = () => {
             <div className={styles['main-area']}>
                 <div className={`${styles['container-center-board']}`}>
                     <div
-                        className={`${styles['landscape-top-board']} ${showPatternUI == true ? styles.open : styles.close}`}
+                        className={`${styles['landscape-top-board']} ${showRoadmapUI == true ? styles.open : styles.close}`}
                     >
                         <RoadMap activeColumns={18} isLandscape={true} />
                     </div>

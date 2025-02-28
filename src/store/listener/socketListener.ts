@@ -129,14 +129,15 @@ export const noGameListenere = (startListening: AppStartListening) => {
 export const scanNumberListener = (startListening: AppStartListening) => {
     startListening({
         actionCreator: scanNumberAction,
-        effect: async (action, listenerApi) => {
+        effect: (action, listenerApi) => {
             console.log('middleware: scanNumber');
             const dispatch = listenerApi.dispatch;
             const scanNumber = action.payload;
             dispatch(setScanNumber(scanNumber));
             if (scanNumber.submit) {
                 debounce(() => {
-                    dispatch(doneResult(scanNumber as any));
+                    dispatch(doneResult());
+
                     const formattedDate = getFormattedDate();
                     const result: HistoryItem = {
                         ...scanNumber,
@@ -146,6 +147,7 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                         hitung: '1',
                         tanggal: formattedDate,
                     };
+
                     setTimeout(() => {
                         dispatch(
                             setMessage({
@@ -156,24 +158,30 @@ export const scanNumberListener = (startListening: AppStartListening) => {
                             }),
                         );
                     }, 5000);
-                    dispatch(addHistory(result as any));
+
+                    dispatch(addHistory(result));
                 }, 5000)();
             }
         },
     });
 };
 
-let timerId: any;
+let timerId: ReturnType<typeof setTimeout> | null;
+
 function debounce(callback: () => void, wait: number) {
     return () => {
         if (timerId) {
-        } else {
-            timerId = setTimeout(() => {
-                clearTimeout(timerId);
-                timerId = undefined;
-            }, wait);
-            callback();
+            return;
         }
+
+        timerId = setTimeout(() => {
+            if (timerId) {
+                clearTimeout(timerId);
+                timerId = null;
+            }
+        }, wait);
+
+        callback();
     };
 }
 

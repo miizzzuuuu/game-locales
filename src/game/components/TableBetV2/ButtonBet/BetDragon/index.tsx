@@ -19,7 +19,7 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
 
     return (
         <div
-            className={`${styles['middle']} ${styles['left']} ${styles['dragon']} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
+            className={`${styles.middle} ${styles.left} ${styles.dragon} ${isWin ? styles['table-win-blink'] : ''} ${isLose ? styles['table-lose-opacity'] : ''}`}
             onClick={() => placeBetHandler(bet.button, bet.group)}
         >
             <div className={`${styles['shadow-center']}`}></div>
@@ -27,7 +27,7 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
                 <SvgDragon />
             </div>
 
-            <div className={`${styles['content']}`}>
+            <div className={`${styles.content}`}>
                 <div className={`${styles['bet-name']}`}>DRAGON</div>
                 <div className={`${styles['bet-payout']}`}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1
@@ -44,16 +44,9 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     position={{ x: '0', y: '-170%' }}
                     opacity={1}
                     value={scanNumber ? scanNumber.dragon : ''}
-                    appear={
-                        !!(
-                            !betIsOpen &&
-                            scanNumber &&
-                            scanNumber.dragon &&
-                            scanNumber.dragon != 'x'
-                        )
-                    }
+                    appear={!!(!betIsOpen && scanNumber?.dragon && scanNumber.dragon != 'x')}
                     disappear={!scanNumber}
-                    submit={scanNumber && scanNumber.submit == true}
+                    submit={scanNumber?.submit}
                 />
             </div>
         </div>

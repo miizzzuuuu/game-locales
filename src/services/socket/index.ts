@@ -32,7 +32,6 @@ export class SocketComponent {
     static SOCKET_EVENT = {
         connect: 'connect',
         loadNewValue: 'loadNewValue',
-        newDragonTigerShoe: 'dragonTigerNewSet',
         closeTimer: 'closeTimer',
         gameResult: 'gameResult',
         recieveTotalWin: 'recieve_totalwin',
@@ -144,28 +143,6 @@ export class SocketComponent {
         }
     }
 
-    listenNewShoe(callback: (data: LoadNewValueData) => void): void {
-        if (this._socket) {
-            const variantUpper = Number.isNaN(getPcode()[getPcode().length - 1])
-                ? getPcode()[getPcode().length - 1].toUpperCase()
-                : '';
-            this._socket.on(
-                SocketComponent.SOCKET_EVENT.newDragonTigerShoe.concat(variantUpper),
-                (data: LoadNewValueData) => {
-                    // console.log('socket loadNewValue:', data);
-
-                    this.validationDataWithPcode(data, () => {
-                        if (this._lastLoadNewValuePeriod === data.periode) {
-                            return;
-                        }
-
-                        callback(data);
-                    });
-                },
-            );
-        }
-    }
-
     listenCloseTimer(callback: (data: CloseTimerData) => void): void {
         if (this._socket) {
             this._socket.on(SocketComponent.SOCKET_EVENT.closeTimer, (data: CloseTimerData) => {
@@ -212,7 +189,7 @@ export class SocketComponent {
     lastDragonCard: string | undefined = undefined;
     lastTigerCard: string | undefined = undefined;
     lastWildCard: string | undefined = undefined;
-    lastSubmit: boolean = false;
+    lastSubmit = false;
 
     listenScanNumber(callback: (data: ScanNumberData) => void): void {
         if (this._socket) {

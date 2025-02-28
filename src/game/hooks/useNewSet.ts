@@ -12,7 +12,7 @@ function useNewSet() {
             console.log('new set callback');
             dispatch(resetHistory());
         }
-    }, [newSet]);
+    }, [newSet, dispatch]);
 }
 
 export { useNewSet };
