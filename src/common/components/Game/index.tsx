@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useSocket } from '../../../services/socket/hooks';
 import {
     gameResultAction,
@@ -15,6 +15,7 @@ import { selectTopWinner, setTopWinner } from '../../../store/slice/topWinnerSli
 import { selectDevice } from '../../../store/slice/windowSlice';
 import { dummyLoadNewValue, luckyAngpaoDummy, newSetDummy, topWinnerDummy } from '../../dummy';
 import { useKeyboard } from '../../hooks/useKeyboard';
+import Menu from '../../menus/Menu';
 import { getLetterOrPillarBoxActive } from '../../utils/DisplayHelper';
 import { FEATURES } from '../../utils/Features';
 import { getRandomInt, sendMessageToParent } from '../../utils/FunctionHelper';
@@ -25,8 +26,6 @@ import Timer from '../Timer';
 import TopWinner from '../TopWinner';
 import Version from '../Version';
 import styles from './styles.module.scss';
-
-const Menu = lazy(() => import('../../menus/Menu'));
 
 function Game() {
     const isLetterOrPillarBoxActive = getLetterOrPillarBoxActive();
@@ -123,10 +122,7 @@ function Game() {
             {device === 'desktop' ? null : <>{winnerData.length > 0 && <TopWinner />}</>}
 
             <AlertUI />
-
-            <Suspense>
-                <Menu />
-            </Suspense>
+            <Menu />
         </div>
     );
 }

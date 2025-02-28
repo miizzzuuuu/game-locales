@@ -1,17 +1,17 @@
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import {
     selectMessageType,
     selectMessageValue,
     setMessage,
 } from '../../../../store/slice/gameStateSlice';
-import { useAppTranslate } from '../../../../services/i18next/hooks';
 import { useKeyboard } from '../../../hooks/useKeyboard';
 import Message from '../Message';
 
 const MessageGeneral = () => {
     const dispatch = useAppDispatch();
-    const { t } = useAppTranslate();
+    const { t } = useTranslation();
 
     const message = useAppSelector(selectMessageValue);
     const messageType = useAppSelector(selectMessageType);

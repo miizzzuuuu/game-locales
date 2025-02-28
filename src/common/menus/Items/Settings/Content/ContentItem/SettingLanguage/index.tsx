@@ -1,7 +1,7 @@
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import { selectLanguage, updateSetings } from '../../../../../../../store/slice/settingsSlice';
 import { selectDevice } from '../../../../../../../store/slice/windowSlice';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import { langMap } from '../../../../../../utils/LangHelper';
 import Dropdown from '../../../Dropdown';
 import styles from '../../../Item/styles.module.scss';
@@ -9,7 +9,9 @@ import SVGIconLanguage from '../../../SVG/SVGIconLanguage';
 import SelectMobile from './SelectMobile';
 
 const SettingLanguage = () => {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
+
     const lang = useAppSelector(selectLanguage);
     const device = useAppSelector(selectDevice);
 
@@ -18,9 +20,7 @@ const SettingLanguage = () => {
             <div className={styles.left}>
                 <SVGIconLanguage />
 
-                <span className={styles.text}>
-                    <LabelTranslate value="language" />
-                </span>
+                <span className={styles.text}>{t('language')}</span>
             </div>
 
             {device === 'desktop' ? (

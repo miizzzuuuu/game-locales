@@ -1,21 +1,18 @@
 import { memo } from 'react';
-import styles from './styles.module.scss';
+import { useTranslation } from 'react-i18next';
 import { getBasePcode } from '../../../../../common/utils/GameHelper';
-import LabelTranslate from '../../../../../common/components/LabelTranslate';
+import styles from './styles.module.scss';
 
 interface IProps {
     label: string;
 }
 
 const BetText = ({ label }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.container}>
-            <LabelTranslate
-                type="span"
-                className={styles.text}
-                value={label}
-                keyLang={getBasePcode()}
-            />
+            <span className={styles.text}>{t(`${getBasePcode()}.${label}`, { ns: 'game' })}</span>
         </div>
     );
 };

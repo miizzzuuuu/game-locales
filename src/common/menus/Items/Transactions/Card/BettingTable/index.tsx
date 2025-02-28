@@ -1,12 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { ITransactionCardProps } from '..';
 import BettingItemTransaction from '../../../../../../game/components/BettingItemTransaction';
-import LabelTranslate from '../../../../../components/LabelTranslate';
 import { formatNumber } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const BettingTable = ({ data }: ITransactionCardProps) => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const { detail_betting, total_debit, total_credit } = data;
 
@@ -17,16 +16,14 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
                     <tr>
                         <th>&nbsp;</th>
                         <th>
-                            <LabelTranslate value="bet" className="text-capitalize" />
+                            <span className="text-capitalize">{t('bet')}</span>
                         </th>
                         <th>(x)</th>
                         <th>
                             X{' '}
-                            <LabelTranslate
-                                value="win"
-                                style={{ display: 'inline' }}
-                                className="text-capitalize"
-                            />
+                            <span style={{ display: 'inline' }} className="text-capitalize">
+                                {t('win')}
+                            </span>
                         </th>
                     </tr>
                 </thead>
@@ -58,7 +55,7 @@ const BettingTable = ({ data }: ITransactionCardProps) => {
 
                     <tr>
                         <td>
-                            <LabelTranslate value="total" className="text-uppercase" />
+                            <span className="text-uppercase">{t('total')}</span>
                         </td>
                         <td>
                             <div className={`${styles['text-center']}`}>

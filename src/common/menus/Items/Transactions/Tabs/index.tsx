@@ -1,4 +1,4 @@
-import LabelTranslate from '../../../../components/LabelTranslate';
+import { useTranslation } from 'react-i18next';
 import MenuTabs from '../../../MenuTabs';
 import TabItem from '../../../MenuTabs/TabItem';
 import { TabTransactions } from '../Content';
@@ -9,15 +9,17 @@ interface IProps {
 }
 
 const Tabs = ({ activeTab, setActiveTab }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <MenuTabs>
             <TabItem
-                text={<LabelTranslate value="today" />}
+                text={t('today')}
                 isActive={activeTab === 'today'}
                 onClick={() => setActiveTab('today')}
             />
             <TabItem
-                text={<LabelTranslate value="previous" />}
+                text={t('previous')}
                 isActive={activeTab === 'previous'}
                 onClick={() => setActiveTab('previous')}
             />

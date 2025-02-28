@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import LabelTranslate from '../../../../components/LabelTranslate';
 import { formatDateByLocale } from '../../../../utils/StringHelper';
 import { groupTransactionsByDate } from '../../../../utils/TransactionHelper';
 import Card from '../Card';
@@ -9,7 +8,7 @@ import { useFetchTransaction } from '../hooks/useFetchTransaction';
 import styles from './styles.module.scss';
 
 const Previous = () => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'before' });
     const groupTransaction = groupTransactionsByDate(transactionData);
@@ -17,7 +16,7 @@ const Previous = () => {
     return (
         <div className={styles.container}>
             {transactionData.length === 0 && !isLoading ? (
-                <ContentEmpty message={<LabelTranslate value="no-transactions" />} />
+                <ContentEmpty message={t('no-transactions')} />
             ) : (
                 Object.keys(groupTransaction).map((key, indexDate) => {
                     const lastDate = indexDate === Object.keys(groupTransaction).length - 1;

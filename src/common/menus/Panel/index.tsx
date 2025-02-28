@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 interface IProps {
     show: boolean;
 
-    title?: ReactNode | undefined;
+    title: string;
     children?: ReactNode | undefined;
     footerBg?: string;
     className?: string;

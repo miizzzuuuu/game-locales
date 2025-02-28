@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
+import { useTranslation } from 'react-i18next';
 import SVGCheck from './SVG/check.svg';
 import styles from './style.module.scss';
-import LabelTranslate from '../../../LabelTranslate';
 
 interface IProps {
     checked: boolean;
@@ -9,6 +9,8 @@ interface IProps {
 }
 
 const DontShowAgain = ({ checked, setChecked }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.container}>
             <div className={styles['input-bottom']}>
@@ -21,7 +23,7 @@ const DontShowAgain = ({ checked, setChecked }: IProps) => {
                     onChange={() => setChecked(!checked)}
                 />
 
-                <LabelTranslate type="span" className={styles.label} value="dont-show-again" />
+                <span className={styles.label}>{t('dont-show-again')}</span>
             </div>
         </div>
     );

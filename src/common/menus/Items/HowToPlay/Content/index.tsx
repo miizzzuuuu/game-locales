@@ -1,8 +1,8 @@
 import { useState, useTransition } from 'react';
-import styles from './styles.module.scss';
 import Tabs from '../Tabs';
-import HowToPlayContent from '../../../../../game/components/HowToPlayContent';
-import FeatureContent from '../FeatureContent';
+import styles from './styles.module.scss';
+// import HowToPlayContent from '../../../../../game/components/HowToPlayContent';
+// import FeatureContent from '../FeatureContent';
 
 export type TabHowToPlay = 'game' | 'features';
 
@@ -21,8 +21,8 @@ const Content = () => {
             <Tabs activeTab={tab} setActiveTab={selectTab} />
 
             <div className={styles['htp-main']}>
-                {tab === 'game' && <HowToPlayContent />}
-                {tab === 'features' && <FeatureContent />}
+                {tab === 'game' && null}
+                {tab === 'features' && null}
             </div>
         </>
     );

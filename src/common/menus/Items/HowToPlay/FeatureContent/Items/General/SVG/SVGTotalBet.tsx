@@ -1,7 +1,7 @@
-import { useAppTranslate } from '../../../../../../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 
 const SVGTotalBet = () => {
-    const { t } = useAppTranslate();
+    const { t } = useTranslation();
 
     return (
         <svg

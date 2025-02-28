@@ -47,65 +47,64 @@ import zhMiniHTP from '../../locales/zh/mini-htp.json';
 
 const resources: Resource = {
     en: {
-        translation: {
-            common: { ...enCommon, ...enFeatures },
+        common: { ...enCommon, ...enFeatures },
+        game: {
             p6: enP6,
             htp: enHTP,
             miniHtp: enMiniHTP,
         },
     },
     hi: {
-        translation: {
-            common: { ...hiCommon },
+        common: { ...hiCommon },
+        game: {
             miniHtp: hiMiniHTP,
         },
     },
     id: {
-        translation: {
-            common: { ...idCommon, ...idFeatures },
+        common: { ...idCommon, ...idFeatures },
+        game: {
             p6: idP6,
             htp: idHTP,
             miniHtp: idMiniHTP,
         },
     },
     ko: {
-        translation: {
-            common: { ...koCommon, ...koFeatures },
+        common: { ...koCommon, ...koFeatures },
+        game: {
             p6: koP6,
             htp: koHTP,
             miniHtp: koMiniHTP,
         },
     },
     'pt-BR': {
-        translation: {
-            common: { ...ptBRCommon, ...ptBRFeatures },
-        },
+        common: { ...ptBRCommon, ...ptBRFeatures },
+        game: {},
     },
     th: {
-        translation: {
-            common: { ...thCommon, ...thFeatures },
+        common: { ...thCommon, ...thFeatures },
+        game: {
             p6: thP6,
             htp: thHTP,
             miniHtp: thMiniHTP,
         },
     },
     tr: {
-        translation: {
-            common: { ...trCommon },
+        common: { ...trCommon },
+        game: {
             miniHtp: trMiniHTP,
         },
     },
     vn: {
-        translation: {
-            common: { ...vnCommon, ...vnFeatures },
+        common: { ...vnCommon, ...vnFeatures },
+        game: {
             p6: vnP6,
             htp: vnHTP,
             miniHtp: vnMiniHTP,
         },
     },
     zh: {
-        translation: {
-            common: { ...zhCommon, ...zhFeatures },
+        common: { ...zhCommon, ...zhFeatures },
+        game: {
             p6: zhP6,
             htp: zhHTP,
             miniHtp: zhMiniHTP,
@@ -116,8 +115,11 @@ const resources: Resource = {
 i18next
     .use(initReactI18next)
     .init({
-        resources,
+        debug: true,
         fallbackLng: 'en',
+        ns: ['common', 'game'],
+        defaultNS: 'common',
+        resources,
     })
     .then()
     .catch(() => console.log('error init i18n'));

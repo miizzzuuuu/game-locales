@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { useAppTranslate } from '../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import { Sound } from '../../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { placeMultiBet, selectIdsBetAdd } from '../../../store/slice/bets';
@@ -9,7 +9,6 @@ import { selectBalance } from '../../../store/slice/playerSlice';
 import { selectAutoRebet, updateSetings } from '../../../store/slice/settingsSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import ButtonAction from '../ButtonAction';
-import LabelTranslate from '../LabelTranslate';
 import SVGIconPause from './SVG/SVGIconPause';
 import SVGIconRebet from './SVG/SVGIconRebet';
 
@@ -19,9 +18,8 @@ interface IProps {
 }
 
 const ButtonRebet = ({ show, styles }: IProps) => {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
-
-    const { t } = useAppTranslate();
 
     const autoRebet = useAppSelector(selectAutoRebet);
 
@@ -72,9 +70,7 @@ const ButtonRebet = ({ show, styles }: IProps) => {
     return (
         <ButtonAction
             show={show}
-            label={
-                <LabelTranslate value={`${autoRebet ? 'stop' : 'rebet'}`} option={{ lng: 'en' }} />
-            }
+            label={t(`${autoRebet ? 'stop' : 'rebet'}`, { lng: 'en' })}
             icon={autoRebet ? <SVGIconPause /> : <SVGIconRebet />}
             circle={autoRebet}
             background={autoRebet ? 'rgba(255, 0, 77, 0.20)' : undefined}

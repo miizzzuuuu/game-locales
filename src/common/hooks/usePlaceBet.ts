@@ -1,4 +1,4 @@
-import { useAppTranslate } from '../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import { Sound } from '../../services/sound';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { placeSingleBet, selectBetAdd, selectTotalBetAdd } from '../../store/slice/bets';
@@ -15,9 +15,8 @@ interface Params {
 }
 
 function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
-
-    const { t } = useAppTranslate('');
 
     const activeChip = useAppSelector(selectActiveChip);
 
@@ -44,12 +43,14 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
 
                 const buttonOpposite = t(
                     `${getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
+                    { ns: 'game' },
                 );
                 const buttonName = t(
                     `${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`,
+                    { ns: 'game' },
                 );
 
-                const message = t('common.bet-error-n50', {
+                const message = t('bet-error-n50', {
                     button: buttonOpposite,
                     other: buttonName,
                 });
@@ -70,7 +71,7 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
 
         // cek balance
         if (curBalance - activeChip < 0) {
-            const message = t('common.insuffix-balance');
+            const message = t('insuffix-balance');
 
             console.log('bet error', message);
             dispatch(
@@ -87,9 +88,11 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
             const buttonName = isGroup50
-                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`, {
+                      ns: 'game',
+                  })
                 : button;
-            const message = t('common.bet-error-min', {
+            const message = t('bet-error-min', {
                 button: buttonName,
                 value: min,
             });
@@ -108,9 +111,11 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
             const buttonName = isGroup50
-                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`)
+                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`, {
+                      ns: 'game',
+                  })
                 : button;
-            const message = t('common.bet-error-max', {
+            const message = t('bet-error-max', {
                 button: buttonName,
                 value: max,
             });

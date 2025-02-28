@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import LabelTranslate from '../../../../components/LabelTranslate';
+import { useTranslation } from 'react-i18next';
 import { ToggleSwitch } from '../ToggleSwitch';
 import styles from './styles.module.scss';
 
@@ -11,12 +11,14 @@ interface IProps {
 }
 
 const Item = ({ label, icon, active, onChangeActive }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.item}>
             <div className={styles.left}>
                 {icon}
 
-                <LabelTranslate type="span" className={styles.text} value={label} />
+                <span className={styles.text}>{t(label)}</span>
             </div>
 
             <ToggleSwitch

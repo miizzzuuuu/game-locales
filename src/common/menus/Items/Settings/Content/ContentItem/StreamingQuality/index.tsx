@@ -1,10 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import {
     selectStreamingQuality,
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import Button from '../../../../../../components/Button';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import styles from './styles.module.scss';
 
 interface IQualityButtonProps {
@@ -14,12 +14,14 @@ interface IQualityButtonProps {
 }
 
 const StreamingQualityButton = ({ label, active, onClick }: IQualityButtonProps) => {
+    const { t } = useTranslation();
+
     return (
         <Button
             className={`${styles.button}${active ? ` ${styles.active}` : ''}`}
             onClick={onClick}
         >
-            <LabelTranslate value={label} className={styles.label} />
+            <span className={styles.label}>{t(label)}</span>
         </Button>
     );
 };

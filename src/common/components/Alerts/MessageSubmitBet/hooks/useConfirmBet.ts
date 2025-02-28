@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useAppTranslate } from '../../../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
 import {
     resetConfirmBet,
@@ -11,7 +11,7 @@ import { selectTimerIsClose } from '../../../../../store/slice/timerSlice';
 function useConfirmBet() {
     const dispatch = useAppDispatch();
 
-    const { t } = useAppTranslate();
+    const { t } = useTranslation();
 
     const [message, setMessage] = useState<{
         value: null | string;

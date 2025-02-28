@@ -1,14 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
-import { useAppTranslate } from '../../../../../services/i18next/hooks';
 
 interface IProps {
     keySlide: string;
 }
 
 const Content = ({ keySlide }: IProps) => {
-    const { t } = useAppTranslate(`miniHtp.${keySlide}`);
+    const { t } = useTranslation();
 
-    const contents = t<string[]>('content', {}, true);
+    const contents = t(`miniHtp.${keySlide}.content`, { returnObjects: true, ns: 'game' });
 
     return (
         <>

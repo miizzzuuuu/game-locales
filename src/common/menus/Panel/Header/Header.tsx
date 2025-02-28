@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next';
 import Button from '../../../components/Button';
-import LabelTranslate from '../../../components/LabelTranslate';
 import SVGIconX from '../../../components/SVG/SVGIconX';
 import SVGIconLeft from '../SVG/SVGIconLeft';
 import styles from './styles.module.scss';
@@ -12,10 +12,11 @@ interface IProps {
 }
 
 const Header = ({ title, handleClose, handleBack }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.header}>
-            <LabelTranslate value={title} className={styles.title} />
-            {/* <div className={styles.title}>{title}</div> */}
+            <p className={styles.title}>{t(title)}</p>
 
             {handleBack && (
                 <Button className={`${styles.action} ${styles.left}`} onClick={handleBack}>

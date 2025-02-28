@@ -1,4 +1,4 @@
-import { useAppTranslate } from '../../../../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const PayoutNote = ({ title, content }: IProps) => {
-    const { t } = useAppTranslate();
+    const { t } = useTranslation();
 
     return (
         <div className={styles['payout-note']}>

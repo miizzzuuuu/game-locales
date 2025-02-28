@@ -1,17 +1,14 @@
 import { SVGProps } from 'react';
-import { useAppTranslate } from '../../../../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import { getBasePcode } from '../../../../../../common/utils/GameHelper';
-// import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
 const SVGColRow = ({ className, style }: IProps) => {
-    const { t } = useAppTranslate(getBasePcode());
+    const { t } = useTranslation();
 
     return (
         <svg
-            // width="200"
-            // height="136"
             viewBox="0 0 200 136"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +45,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                     letterSpacing="0em"
                     style={{ textTransform: 'uppercase' }}
                 >
-                    {t('small')}
+                    {t(`${getBasePcode()}.small`, { ns: 'game' })}
                 </text>
             </g>
             <rect
@@ -669,7 +666,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                     letterSpacing="0em"
                     style={{ textTransform: 'uppercase' }}
                 >
-                    {t('big')}
+                    {t(`${getBasePcode()}.big`, { ns: 'game' })}
                 </text>
             </g>
             <rect
