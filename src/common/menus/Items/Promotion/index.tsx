@@ -4,11 +4,9 @@ import {
     selectOpenMenuPromotion,
     toggleMenuPromotion,
 } from '../../../../store/slice/menuSlice';
-import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
 import NoPromotion from './NoPromotion';
-import styles from './styles.module.scss';
 
 const Promotion = ({ handleClose }: MenuPageProps) => {
     const dispatch = useAppDispatch();
@@ -18,9 +16,8 @@ const Promotion = ({ handleClose }: MenuPageProps) => {
     return (
         <Panel
             show={openMenuPromotion}
-            title={<LabelTranslate value="promotion" />}
+            title="promotion"
             footerBg="#1e1f2e"
-            className={styles['menu-promotion']}
             handleBack={openMenuMain ? () => dispatch(toggleMenuPromotion()) : undefined}
             handleClose={handleClose}
         >

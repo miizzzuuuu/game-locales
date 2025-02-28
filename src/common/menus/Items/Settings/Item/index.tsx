@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
+import LabelTranslate from '../../../../components/LabelTranslate';
 import { ToggleSwitch } from '../ToggleSwitch';
 import styles from './styles.module.scss';
 
 interface IProps {
-    label: ReactNode | undefined;
+    label: string;
     icon: ReactNode;
     active: boolean;
     onChangeActive?: (checked: boolean) => void;
@@ -15,7 +16,7 @@ const Item = ({ label, icon, active, onChangeActive }: IProps) => {
             <div className={styles.left}>
                 {icon}
 
-                <span className={styles.text}>{label}</span>
+                <LabelTranslate type="span" className={styles.text} value={label} />
             </div>
 
             <ToggleSwitch

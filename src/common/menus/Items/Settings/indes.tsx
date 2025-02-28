@@ -4,7 +4,6 @@ import {
     selectOpenMenuSettings,
     toggleMenuSettings,
 } from '../../../../store/slice/menuSlice';
-import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
 import Content from './Content';
@@ -17,7 +16,7 @@ const Settings = ({ handleClose }: MenuPageProps) => {
     return (
         <Panel
             show={openMenuSettings}
-            title={<LabelTranslate value="settings" />}
+            title="settings"
             footerBg="#1e1f2e"
             handleBack={openMenuMain ? () => dispatch(toggleMenuSettings()) : undefined}
             handleClose={handleClose}

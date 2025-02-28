@@ -22,11 +22,15 @@
 }
 
 :global(.desktop) {
+    .menu-payout-top {
+        gap: 0.8rem;
+    }
+
     .menu-payout-info {
-        font-size: 1.1rem; // 1rem;
+        font-size: 1.4rem;
     }
 
     .menu-payout-top-bottom {
-        font-size: 1.54rem; // 1.4rem
+        font-size: 1.6rem;
     }
 }

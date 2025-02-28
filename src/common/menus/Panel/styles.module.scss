@@ -91,8 +91,9 @@
 
 :global(.desktop) {
     .menu-content {
-        width: 42rem;
-        height: 58.8rem;
+        width: 48rem;
+        min-height: 58rem;
+        max-height: 92rem;
         top: 8rem;
         right: 2rem;
         border-radius: 1rem;

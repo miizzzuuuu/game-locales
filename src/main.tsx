@@ -36,7 +36,6 @@ const main = () => {
     document.body.classList.add(pcode);
 
     // modify for spesifik
-    // setGameBetHelper(new _24DBet());
     betHelper.game = new _24DBet();
 
     ReactDOM.createRoot(document.getElementById('root')!).render(

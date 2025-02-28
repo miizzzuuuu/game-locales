@@ -8,27 +8,25 @@
     animation-fill-mode: both;
 }
 
-:global(.mobile-portrait),
-:global(.mobile-landscape) {
-    .menu {
-        background-color: rgba(2, 16, 33, 0.75);
-        backdrop-filter: blur(0.1rem);
-        animation-duration: 0.3s;
+:global {
+    .mobile-portrait,
+    .mobile-landscape {
+        :local(.menu) {
+            background-color: rgba(2, 16, 33, 0.75);
+            backdrop-filter: blur(0.1rem);
+            animation-duration: 0.3s;
+            animation-name: fadeIn;
+
+            &:local(.closed) {
+                animation-name: fadeOut;
+            }
+        }
     }
 }
 
 :global(.desktop) {
     .menu {
-        background-color: rgba(2, 16, 33, 0.2);
         animation-duration: 0.2s;
         pointer-events: none;
-    }
-}
-
-:global :local(.menu) {
-    animation-name: fadeIn;
-
-    &:local(.closed) {
-        animation-name: fadeOut;
     }
 }

@@ -4,7 +4,6 @@ import {
     selectOpenMenuMain,
     toggleMenuHistory,
 } from '../../../../store/slice/menuSlice';
-import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
 import Content from './Content';
@@ -18,7 +17,7 @@ const Transactions = ({ handleClose }: MenuPageProps) => {
     return (
         <Panel
             show={openMenuHistory}
-            title={<LabelTranslate value="history" />}
+            title="history"
             footerBg="#1e1f2e"
             className={styles['menu-history']}
             handleBack={openMenuMain ? () => dispatch(toggleMenuHistory()) : undefined}

@@ -73,3 +73,13 @@
         visibility: visible;
     }
 }
+
+:global(.desktop) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .top {
+        height: 5.2rem;
+    }
+}

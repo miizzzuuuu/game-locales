@@ -6,3 +6,9 @@
 
     background-color: #222334;
 }
+
+:global(.desktop) {
+    .menu-tabs {
+        height: 3.5rem;
+    }
+}

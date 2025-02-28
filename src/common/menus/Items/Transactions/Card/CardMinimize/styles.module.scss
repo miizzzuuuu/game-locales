@@ -39,3 +39,30 @@
     display: inline-flex;
     gap: 0.5rem;
 }
+
+:global(.desktop) {
+    .card-top {
+        padding: 1.4rem 1.2rem;
+        gap: 1rem;
+    }
+
+    .game-name {
+        font-size: 1.4rem;
+    }
+
+    .text-total-transaction {
+        font-size: 1.6rem;
+    }
+
+    .text-secondary {
+        font-size: 1.3rem;
+    }
+
+    .text-period {
+        font-size: 1.3rem;
+    }
+
+    .bottom {
+        gap: 0.5rem;
+    }
+}

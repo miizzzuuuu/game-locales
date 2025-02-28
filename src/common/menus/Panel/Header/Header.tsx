@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
 import Button from '../../../components/Button';
+import LabelTranslate from '../../../components/LabelTranslate';
 import SVGIconX from '../../../components/SVG/SVGIconX';
 import SVGIconLeft from '../SVG/SVGIconLeft';
 import styles from './styles.module.scss';
 
 interface IProps {
-    title?: ReactNode | undefined;
+    title: string;
 
     handleClose: () => void;
     handleBack?: () => void;
@@ -14,7 +14,8 @@ interface IProps {
 const Header = ({ title, handleClose, handleBack }: IProps) => {
     return (
         <div className={styles.header}>
-            <div className={styles.title}>{title}</div>
+            <LabelTranslate value={title} className={styles.title} />
+            {/* <div className={styles.title}>{title}</div> */}
 
             {handleBack && (
                 <Button className={`${styles.action} ${styles.left}`} onClick={handleBack}>
