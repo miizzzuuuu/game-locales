@@ -1,9 +1,10 @@
+import { ReactElement } from 'react';
 import SVGIconCancelBet from '../../../../../../components/ButtonCancelBet/SVG/SVGIconCancelBet';
 import SVGIconDoubleBet from '../../../../../../components/ButtonDoubleBet/SVG/SVGIconDoubleBet';
-import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
+// import SVGIconFavorite from '../../../../../../components/ButtonFavorite/SVG/SVGIconFavorite';
 import SVGIconHideChip from '../../../../../../components/ButtonHideChip/SVG/SVGIconHideChip';
 import SVGIconMenu from '../../../../../../components/ButtonMenu/SVG/SVGIconMenu';
-import SVGIconPattern from '../../../../../../components/ButtonPattern/SVG/SVGIconPattern';
+import SVGIconRoadmap from '../../../../../../components/ButtonRoadmap/SVG/SVGIconRoadmap';
 import SVGIconRebet from '../../../../../../components/ButtonRebet/SVG/SVGIconRebet';
 import SVGIconStatistic from '../../../../../../components/ButtonSatatistic/SVG/SVGIconStatistic';
 import LabelTranslate from '../../../../../../components/LabelTranslate';
@@ -13,7 +14,7 @@ import HowToPlayCard from '../../../HowToPlayCard';
 import styles from './styles.module.scss';
 
 interface ButtonIconProps {
-    icon: JSX.Element;
+    icon: ReactElement;
 }
 
 const ButtonIcon = ({ icon }: ButtonIconProps) => {
@@ -27,8 +28,8 @@ const paragraphArr = [
     { icon: <SVGIconMenu /> },
     { icon: <SVGIconHideChip /> },
     { icon: <SVGIconStatistic /> },
-    { icon: <SVGIconFavorite /> },
-    { icon: <SVGIconPattern strokeColor="#fff" /> },
+    // { icon: <SVGIconFavorite /> },
+    { icon: <SVGIconRoadmap strokeColor="#fff" /> },
 ];
 
 const Menu = () => {

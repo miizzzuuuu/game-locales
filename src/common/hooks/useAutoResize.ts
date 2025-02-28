@@ -11,8 +11,6 @@ function useAutoResize() {
         if (typeof window !== 'undefined') {
             const device = getDevice();
 
-            console.log('useAutoResize', device);
-
             const { widthScreen, heightScreen } = getWindowSize();
 
             setDeviceType(device.type);

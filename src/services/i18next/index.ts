@@ -2,15 +2,19 @@ import i18next, { Resource } from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 import enCommon from '../../locales/en/common.json';
+import hiCommon from '../../locales/hi/common.json';
 import idCommon from '../../locales/id/common.json';
 import koCommon from '../../locales/ko/common.json';
+import ptBRCommon from '../../locales/pt-BR/common.json';
 import thCommon from '../../locales/th/common.json';
+import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
 import enFeatures from '../../locales/en/features.json';
 import idFeatures from '../../locales/id/features.json';
 import koFeatures from '../../locales/ko/features.json';
+import ptBRFeatures from '../../locales/pt-BR/features.json';
 import thFeatures from '../../locales/th/features.json';
 import vnFeatures from '../../locales/vn/features.json';
 import zhFeatures from '../../locales/zh/features.json';
@@ -33,9 +37,11 @@ import zhHTP from '../../locales/zh/htp.json';
 
 // mini how to play
 import enMiniHTP from '../../locales/en/mini-htp.json';
+import hiMiniHTP from '../../locales/hi/mini-htp.json';
 import idMiniHTP from '../../locales/id/mini-htp.json';
 import koMiniHTP from '../../locales/ko/mini-htp.json';
 import thMiniHTP from '../../locales/th/mini-htp.json';
+import trMiniHTP from '../../locales/tr/mini-htp.json';
 import vnMiniHTP from '../../locales/vn/mini-htp.json';
 import zhMiniHTP from '../../locales/zh/mini-htp.json';
 
@@ -46,6 +52,12 @@ const resources: Resource = {
             m23: enM23,
             htp: enHTP,
             miniHtp: enMiniHTP,
+        },
+    },
+    hi: {
+        translation: {
+            common: { ...hiCommon },
+            miniHtp: hiMiniHTP,
         },
     },
     id: {
@@ -64,12 +76,23 @@ const resources: Resource = {
             miniHtp: koMiniHTP,
         },
     },
+    'pt-BR': {
+        translation: {
+            common: { ...ptBRCommon, ...ptBRFeatures },
+        },
+    },
     th: {
         translation: {
             common: { ...thCommon, ...thFeatures },
             m23: thM23,
             htp: thHTP,
             miniHtp: thMiniHTP,
+        },
+    },
+    tr: {
+        translation: {
+            common: { ...trCommon },
+            miniHtp: trMiniHTP,
         },
     },
     vn: {
@@ -94,7 +117,7 @@ i18next
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: 'id',
+        fallbackLng: 'en',
     })
     .then()
     .catch(() => console.log('error init i18n'));

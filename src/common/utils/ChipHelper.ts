@@ -36,21 +36,25 @@ const CHIP_IMAGES: string[] = [
 ];
 
 const getChipColorByIndex = (index: number): string => {
-    return CHIP_COLORS[index % CHIP_COLORS.length];
+    const normalizedIndex = index % CHIP_COLORS.length;
+    return CHIP_COLORS[normalizedIndex] ?? CHIP_COLORS[0];
 };
 
-const getChipColorByAmount = (amount: number, chipBase: number[]): string => {
-    if (chipBase.length === 0) return CHIP_COLORS[0];
+const findChipIndex = (amount: number, chipBase: number[]): number => {
+    if (chipBase.length === 0) return 0;
 
     let index = chipBase.findIndex(
         (base, i) => amount >= base && (i === chipBase.length - 1 || amount < chipBase[i + 1]),
     );
 
-    if (index === -1 || index >= CHIP_COLORS.length) {
-        index = CHIP_COLORS.length - 1;
-    }
+    index = index === -1 ? CHIP_COLORS.length - 1 : Math.min(index, CHIP_COLORS.length - 1);
 
-    return CHIP_COLORS[index];
+    return index;
+};
+
+const getChipColorByAmount = (amount: number, chipBase: number[]): string => {
+    const index = findChipIndex(amount, chipBase);
+    return CHIP_COLORS[index] ?? CHIP_COLORS[0];
 };
 
 const getChipImageByAmount = (amount: number, chipBase: number[]): string => {

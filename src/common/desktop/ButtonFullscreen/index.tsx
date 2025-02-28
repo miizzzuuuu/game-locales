@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import ButtonAction from '../../components/ButtonAction';
-import SVGIconFullscreen from './SVG/SVGIconFullscreen';
 import SVGIconExitFullscreen from './SVG/SVGIconExitFullscreen';
+import SVGIconFullscreen from './SVG/SVGIconFullscreen';
 
 const ButtonFullscreen = () => {
     const [isFullsSreen, setFullScreen] = useState(false);
 
     function toggleFullScreen() {
         if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
+            void document.documentElement.requestFullscreen();
             setFullScreen(true);
         } else if (document.exitFullscreen) {
-            document.exitFullscreen();
+            void document.exitFullscreen();
             setFullScreen(false);
         }
     }

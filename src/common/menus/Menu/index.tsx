@@ -15,6 +15,7 @@ import Statistic from '../Items/Statistic';
 import Transactions from '../Items/Transactions';
 import Overlay from './Overlay';
 import styles from './styles.module.scss';
+import Promotion from '../Items/Promotion';
 
 export interface MenuPageProps {
     handleClose: () => void;
@@ -70,6 +71,7 @@ const Menu = () => {
             <HowToPlay handleClose={() => handleClose('htp')} />
             <Payout handleClose={() => handleClose('payout')} />
             <Transactions handleClose={() => handleClose('history')} />
+            <Promotion handleClose={() => handleClose('promotion')} />
         </div>
     );
 };

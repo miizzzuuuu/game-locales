@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
-
-import styles from './styles.module.scss';
 import Button from '../../../../components/Button';
 import LabelTranslate from '../../../../components/LabelTranslate';
+import styles from './styles.module.scss';
 
 interface IProps {
     icon: ReactNode;

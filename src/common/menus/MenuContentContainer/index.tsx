@@ -3,8 +3,11 @@ import styles from './styles.module.scss';
 
 interface IProps {
     children?: ReactNode | undefined;
+    className?: string;
 }
 
-export const MenuContentContainer = ({ children }: IProps) => {
-    return <div className={styles.container}>{children}</div>;
+export const MenuContentContainer = ({ children, className }: IProps) => {
+    return (
+        <div className={`${styles.container}${className ? ` ${className}` : ''}`}>{children}</div>
+    );
 };

@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
-import ButtonAction from '../ButtonAction';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { selectHistoryBetAdd, undoBet } from '../../../store/slice/bets';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import ButtonAction from '../ButtonAction';
 import LabelTranslate from '../LabelTranslate';
 import SVGIconCancelBet from './SVG/SVGIconCancelBet';
-import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import { selectHistoryBetAdd, undoBet } from '../../../store/slice/bets';
 
 interface IProps {
     styles?: CSSProperties;

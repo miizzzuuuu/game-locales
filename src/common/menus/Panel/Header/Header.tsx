@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import Button from '../../../components/Button';
-import SVGIconLeft from '../SVG/SVGIconLeft';
 import SVGIconX from '../../../components/SVG/SVGIconX';
+import SVGIconLeft from '../SVG/SVGIconLeft';
 import styles from './styles.module.scss';
 
 interface IProps {

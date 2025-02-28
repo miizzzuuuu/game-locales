@@ -1,23 +1,21 @@
 {
     "slide-1": {
-        "title": "玩法介绍",
+        "title": "玩法",
         "content": [
-            "Dragon Tiger Wild 带来了最新的 <b>WILD CARD</b> 奖金！赢取高达 <b>127倍</b> 的胜利机会！",
-            "只需猜测最高的牌和 wild 牌，即可赢取更大奖励！<b>LET'S GET WILD!!!</b>"
+            "赢得高达 <b>500x Jackpot & Lucky Number!</b> 的丰厚奖金！",
+            "通过猜测旋转笼中将出现的球来玩。有24个球，编号从1到24，红色和黑色。"
         ]
     },
     "slide-2": {
-        "title": "玩法介绍",
+        "title": "Lucky Numbers",
         "content": [
-            "此游戏使用3张牌进行。2张主要牌（龙和虎）<b>比拼哪一方拥有更高的点数。</b> 1张wild牌被抽出以形成Wild奖金组合。",
-            "您可以投注于主要投注：龙/虎，或wild组合投注：龙wild，龙对，虎wild，虎对和超级wild。"
+            "系统随机选择2到12个数字作为 Lucky Number。Lucky Numbers 的赔付大幅增加，超过正常赔付，从您下注金额的 <b>30倍到95倍</b>。"
         ]
     },
     "slide-3": {
-        "title": "Wild 奖金",
+        "title": "Jackpot Number",
         "content": [
-            "wild 牌出现以形成可将您的奖金大幅提高至 <b>127倍</b> 的奖金组合！",
-            "投注wild组合，抓住<b>多次WILD 奖金</b>的机会！"
+            "系统随机选择 <b>1个数字</b> 作为 Jackpot Number。这个数字可以显著增加赔付，超过 Lucky Number 奖金，从您下注金额的 <b>100倍到500倍</b>。"
         ]
     }
 }

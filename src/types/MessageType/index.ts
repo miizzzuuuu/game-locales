@@ -4,7 +4,7 @@ import { Cashdrop } from '../SocketType';
 export type MessageGameType = 'danger' | 'warning' | 'none' | 'no-game';
 export type MessageWinSideType = 'win-dragon' | 'win-tiger' | 'win-tie';
 
-export type MessageData =
+export type MessageDataGameToContainer =
     | {
           type: 'MESSAGE' | 'FINISH_GAME' | 'OPEN_MODAL_EVENT';
           payload?: any;
@@ -24,3 +24,14 @@ export type MessageData =
           type: 'CLICK_GAME';
           source: 'LIVE_GAME';
       };
+
+export type MessageDataContainerToGame =
+    | {
+        source: 'GAME_CONTAINER';
+        type: 'GAME_LOADED';
+    }
+    | {
+        source: 'GAME_CONTAINER';
+        type: 'EVENT_WIN';
+        payload: number;
+    };

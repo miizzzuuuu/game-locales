@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Features } from '../../utils/Features';
+import { FEATURES } from '../../utils/Features';
 import Chip from './Chip';
 import ChipAnimation from './ChipAnimation';
 
@@ -8,7 +8,7 @@ export interface ChipBetProps {
     ignoreTransparent?: boolean;
 }
 
-const ChipComponent = Features.CHIP_ANIMATION ? ChipAnimation : Chip;
+const ChipComponent = FEATURES.CHIP_ANIMATION ? ChipAnimation : Chip;
 
 const ChipBet = (props: ChipBetProps) => {
     return <ChipComponent {...props} />;

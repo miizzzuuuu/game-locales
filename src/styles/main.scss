@@ -1,7 +1,9 @@
-@import './base/variables';
-@import './base/global';
-@import './base/app';
-@import './base/utilities';
-@import './base/animation';
+@use 'base/variables';
+@use 'base/global';
+@use 'base/app';
+@use 'base/utilities';
+@use 'base/animation';
 
-@import './game/24d';
+@use 'common/how-to-play';
+
+@use 'game/24d' as game24d;

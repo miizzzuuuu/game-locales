@@ -10,8 +10,8 @@ export interface GameStateState {
         type: MessageGameType | MessageWinSideType;
     };
 
-    showPatternUI: boolean;
-    showPatternUIBeforeClose: boolean;
+    showRoadmapUI: boolean;
+    showRoadmapUIBeforeClose: boolean;
     showMiniHowToPlay: boolean;
 }
 
@@ -23,8 +23,8 @@ const initialState: GameStateState = {
         type: 'danger',
     },
 
-    showPatternUI: false,
-    showPatternUIBeforeClose: false,
+    showRoadmapUI: false,
+    showRoadmapUIBeforeClose: false,
     showMiniHowToPlay: true,
 };
 
@@ -45,11 +45,11 @@ const gameStateSlice = createSlice({
         setMessage: (state, action: PayloadAction<GameStateState['message']>) => {
             state.message = action.payload;
         },
-        togglePatternUI: (state) => {
-            state.showPatternUI = !state.showPatternUI;
+        toggleRoadmapUI: (state) => {
+            state.showRoadmapUI = !state.showRoadmapUI;
         },
-        setShowPatternBeforeClose: (state, action: PayloadAction<boolean>) => {
-            state.showPatternUIBeforeClose = action.payload;
+        setShowRoadmapBeforeClose: (state, action: PayloadAction<boolean>) => {
+            state.showRoadmapUIBeforeClose = action.payload;
         },
         setShowMiniHowToPlay: (state, action: PayloadAction<boolean>) => {
             state.showMiniHowToPlay = action.payload;
@@ -61,8 +61,8 @@ export const {
     toggleModeBet,
     toggleShowChip,
     setMessage,
-    togglePatternUI,
-    setShowPatternBeforeClose,
+    toggleRoadmapUI,
+    setShowRoadmapBeforeClose,
     setShowMiniHowToPlay,
 } = gameStateSlice.actions;
 
@@ -70,7 +70,7 @@ export const selectModeBet = (state: RootState) => state.gameState.modeBet;
 export const selectShowChip = (state: RootState) => state.gameState.showChip;
 export const selectMessageValue = (state: RootState) => state.gameState.message.value;
 export const selectMessageType = (state: RootState) => state.gameState.message.type;
-export const selectShowPatternUI = (state: RootState) => state.gameState.showPatternUI;
+export const selectShowRoadmapUI = (state: RootState) => state.gameState.showRoadmapUI;
 export const selectShowMiniHowToPlay = (state: RootState) => state.gameState.showMiniHowToPlay;
 
 export default gameStateSlice.reducer;

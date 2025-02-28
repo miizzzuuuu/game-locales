@@ -29,8 +29,6 @@ function useFetchPlayer() {
                     const dataMiniHTP = await getMiniHowToPlay();
                     const showMiniHowToPlayLS = getMiniHowToPlayLocalStorage();
 
-                    console.log('showMiniHowToPlayLS', showMiniHowToPlayLS);
-
                     dispatch(setShowMiniHowToPlay(dataMiniHTP.show && showMiniHowToPlayLS));
 
                     setFinish(true);

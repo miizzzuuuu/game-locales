@@ -12,7 +12,7 @@ import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 
 const Result = () => {
     const resultRef = useRef<HTMLDivElement>(null);
-    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
+    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>(null);
 
     const dispatch = useAppDispatch();
 
@@ -41,7 +41,7 @@ const Result = () => {
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);
-                currentTimeOut.current = undefined;
+                currentTimeOut.current = null;
             }
         };
     }, [resultStatus]);

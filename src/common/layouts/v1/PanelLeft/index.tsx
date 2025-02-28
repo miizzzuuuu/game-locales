@@ -1,17 +1,29 @@
-import ButtonHideChip from '../../../components/ButtonHideChip';
 import ButtonMenu from '../../../components/ButtonMenu';
-import ButtonPattern from '../../../components/ButtonPattern';
+import { BUTTON_CONFIG } from '../../../utils/Features';
+import { LEFT_BUTTONS } from '../constants';
 import styles from './style.module.scss';
 
 const PanelLeft = () => {
     return (
         <div className={styles['panel-left']}>
-            <ButtonHideChip />
+            {/* <Suspense>
+                {LEFT_BUTTONS.map((key) => {
+                    const config = BUTTON_CONFIG[key];
+                    if (!config.enabled) return null;
 
-            {/* <ButtonFavorite />
-            <ButtonSatatistic /> */}
+                    const Component = config.component;
+                    return <Component key={key} />;
+                })}
+            </Suspense> */}
 
-            <ButtonPattern />
+            {LEFT_BUTTONS.map((key) => {
+                const config = BUTTON_CONFIG[key];
+                if (!config.enabled) return null;
+
+                const Component = config.component;
+                return <Component key={key} />;
+            })}
+
             <ButtonMenu />
         </div>
     );

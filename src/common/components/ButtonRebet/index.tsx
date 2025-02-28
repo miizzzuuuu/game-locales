@@ -1,17 +1,17 @@
 import { CSSProperties } from 'react';
-import ButtonAction from '../ButtonAction';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { selectAutoRebet, updateSetings } from '../../../store/slice/settingsSlice';
-import { selectLastBetData } from '../../../store/slice/lastBetsSlice';
-import { selectBetIsOpen } from '../../../store/slice/timerSlice';
-import LabelTranslate from '../LabelTranslate';
+import { useAppTranslate } from '../../../services/i18next/hooks';
 import { Sound } from '../../../services/sound';
+import { useAppDispatch, useAppSelector } from '../../../store/hooks';
+import { placeMultiBet, selectIdsBetAdd } from '../../../store/slice/bets';
+import { setMessage } from '../../../store/slice/gameStateSlice';
+import { selectLastBetData } from '../../../store/slice/lastBetsSlice';
+import { selectBalance } from '../../../store/slice/playerSlice';
+import { selectAutoRebet, updateSetings } from '../../../store/slice/settingsSlice';
+import { selectBetIsOpen } from '../../../store/slice/timerSlice';
+import ButtonAction from '../ButtonAction';
+import LabelTranslate from '../LabelTranslate';
 import SVGIconPause from './SVG/SVGIconPause';
 import SVGIconRebet from './SVG/SVGIconRebet';
-import { selectBalance } from '../../../store/slice/playerSlice';
-import { useAppTranslate } from '../../../services/i18next/hooks';
-import { setMessage } from '../../../store/slice/gameStateSlice';
-import { placeMultiBet, selectIdsBetAdd } from '../../../store/slice/bets';
 
 interface IProps {
     styles?: CSSProperties;

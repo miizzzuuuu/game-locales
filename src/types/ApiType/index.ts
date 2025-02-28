@@ -1,3 +1,13 @@
+import { Thunder } from '..';
+
+export interface ApiResponseBase {
+    status?: boolean;
+    detail?: string;
+    message?: string;
+}
+
+export type ApiResponse<T> = T & ApiResponseBase;
+
 export interface Player {
     uid: number;
     device: string;
@@ -23,11 +33,13 @@ export interface Settings {
     language: string;
     autoRebet: boolean;
     enableGameSound: boolean;
+    enableGameMusic: boolean;
     enableStreamingVideo: boolean;
     enableStreamingSound: boolean;
     streamingQuality: 'high' | 'medium' | 'auto';
-    volumeStreamingSound: number;
     volumeGameSound: number;
+    volumeGameMusic: number;
+    volumeStreamingSound: number;
 }
 
 export interface Bet {
@@ -164,3 +176,5 @@ export type EventIdnlivePrize = {
     win: number;
     notwin: number[];
 };
+
+export type CurrentThunder = { status: boolean } & Thunder<string>;

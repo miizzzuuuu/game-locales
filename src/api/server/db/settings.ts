@@ -1,10 +1,14 @@
-export const settings = {
+import { Settings } from '../../../types';
+
+export const settings: Settings = {
     language: 'en',
-    autoRebet: true,
+    autoRebet: false,
     enableGameSound: false,
+    enableGameMusic: false,
     enableStreamingVideo: false,
-    enableStreamingSound: true,
+    enableStreamingSound: false,
     streamingQuality: 'high',
-    volumeStreamingSound: 100,
     volumeGameSound: 100,
+    volumeGameMusic: 100,
+    volumeStreamingSound: 100,
 };

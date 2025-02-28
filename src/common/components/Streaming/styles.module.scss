@@ -89,20 +89,13 @@
         flex-shrink: 0;
 
         position: relative;
-        // position: absolute;
-        // left: 50%;
-        // bottom: calc(var(--height-footer));
-        // transform: translateX(-50%);
     }
 
     .video-right,
     .video-left {
-        // content: '';
         position: absolute;
         top: 0;
         bottom: 0;
-        // bottom: calc(var(--height-footer) * -1);
-        // height: calc(100% + var(--height-footer));
         width: var(--width-overlay-streaming-landscape);
         z-index: 1;
 
@@ -149,6 +142,20 @@
     .video-background::before {
         background: var(--streaming-background); // var(--streaming-color-6);
         mask-image: linear-gradient(transparent, #000);
+    }
+
+    .top-gradient {
+        --color: 0, 0, 0;
+
+        background: linear-gradient(-10.3deg, transparent 73%, rgba(var(--color), 0.5) 89%),
+            linear-gradient(10.3deg, transparent 73%, rgba(var(--color), 0.5) 89%);
+
+        height: 4rem;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
 

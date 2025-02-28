@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
-import { Features } from '../../common/utils/Features';
+import { FEATURES } from '../../common/utils/Features';
 import { getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
@@ -263,7 +263,7 @@ export class SocketComponent {
     }
 
     listenNewSet(callback: (data: NewSetData) => void): void {
-        if (!Features.SHUFFLE_THE_CARDS) {
+        if (!FEATURES.SHUFFLE_THE_CARDS) {
             return;
         }
 
@@ -294,7 +294,7 @@ export class SocketComponent {
     // }
 
     listenNoGame(callback: (data: NoGameData) => void): void {
-        if (!Features.SHUFFLE_THE_CARDS) {
+        if (!FEATURES.SHUFFLE_THE_CARDS) {
             return;
         }
 

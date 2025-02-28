@@ -1,4 +1,4 @@
-import { forwardRef, useState } from 'react';
+import { useState } from 'react';
 import { Pcode, Transaction } from '../../../../../types';
 import CardMaximize from './CardMaximize';
 import CardMinimize from './CardMinimize';
@@ -8,20 +8,24 @@ export interface ITransactionCardProps {
     data: Transaction<Pcode>;
 }
 
-const Card = forwardRef<HTMLDivElement, ITransactionCardProps>(({ data }, cardRef) => {
+export type IProps = ITransactionCardProps & {
+    ref?: (node: HTMLDivElement | null) => void;
+};
+
+const Card = ({ data, ref }: IProps) => {
     const [expand, setExpand] = useState(false);
 
     return (
         <div
             className={`${styles.card} ${expand ? ` ${styles.expand}` : ''}`}
             onClick={() => setExpand((prev) => !prev)}
-            ref={cardRef}
+            ref={ref}
         >
             <CardMinimize data={data} />
             <CardMaximize data={data} expand={expand} />
         </div>
     );
-});
+};
 
 Card.displayName = 'Card';
 

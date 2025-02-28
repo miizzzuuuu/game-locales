@@ -18,7 +18,7 @@ const MessageYouWin = () => {
     const currency = useAppSelector(selectCurrency);
     const showCurrency = useAppSelector(selectShowCurrency);
 
-    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
+    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>(null);
     const messageYouWinRef = useRef<HTMLDivElement>(null);
 
     const dispatch = useAppDispatch();
@@ -35,7 +35,7 @@ const MessageYouWin = () => {
     useEffect(() => {
         if (currentTimeOut.current) {
             clearTimeout(currentTimeOut.current);
-            currentTimeOut.current = undefined;
+            currentTimeOut.current = null;
         }
 
         if (winAmount > 0) {
@@ -51,12 +51,12 @@ const MessageYouWin = () => {
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);
-                currentTimeOut.current = undefined;
+                currentTimeOut.current = null;
             }
         };
     }, [winAmount]);
 
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number>(null);
     const previousTimeRef = useRef<number | undefined>(undefined);
     const startTimeRef = useRef<number | undefined>(undefined);
 
@@ -105,14 +105,16 @@ const MessageYouWin = () => {
             requestRef.current = requestAnimationFrame(animate);
         } else {
             setDisplayValue(0);
-            if (requestRef.current !== undefined) {
+            if (requestRef.current) {
                 cancelAnimationFrame(requestRef.current);
+                requestRef.current = null;
             }
         }
 
         return () => {
-            if (requestRef.current !== undefined) {
+            if (requestRef.current) {
                 cancelAnimationFrame(requestRef.current);
+                requestRef.current = null;
             }
         };
     }, [winAmount, animate]);

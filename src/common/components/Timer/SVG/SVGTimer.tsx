@@ -1,7 +1,11 @@
-import { CSSProperties, forwardRef } from 'react';
-import { lengthStroke } from '../TimerContent';
+import { CSSProperties, RefObject } from 'react';
+import { lengthStroke } from '../TimerContent/const';
 
-const SVGTimer = forwardRef<SVGSVGElement, unknown>((_, ref) => {
+type IProps = {
+    ref?: RefObject<SVGSVGElement | null>;
+};
+
+const SVGTimer = ({ ref }: IProps) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +38,7 @@ const SVGTimer = forwardRef<SVGSVGElement, unknown>((_, ref) => {
             />
         </svg>
     );
-});
+};
 
 SVGTimer.displayName = 'SVGTimer';
 

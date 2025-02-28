@@ -4,13 +4,13 @@
     opacity: var(--opacity);
 
     scale: 1;
-    transition: scale 0.3s;
+    transition: scale 0.2s;
     padding: 0;
     border: 0;
 
     &.animate:active:not(:disabled) {
-        scale: 0.85;
-        transition: scale 0.3s;
+        scale: 0.9;
+        transition: scale 0.2s;
     }
 
     &:disabled {

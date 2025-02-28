@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../../store/hooks';
 import { resetTopWinner, selectTopWinner } from '../../../../store/slice/topWinnerSlice';
 
 interface Params {
-    ref: RefObject<HTMLDivElement>;
+    ref: RefObject<HTMLDivElement | null>;
 }
 
 const delay = 3000;
@@ -11,7 +11,7 @@ const delay = 3000;
 function useTopWinner({ ref: winnerContentRef }: Params) {
     const dispatch = useAppDispatch();
 
-    const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+    const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
     const [index, setIndex] = useState(0);
     const [isFinish, setIsFinish] = useState(true);
@@ -26,6 +26,7 @@ function useTopWinner({ ref: winnerContentRef }: Params) {
     const resetTimeout = useCallback(() => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
         }
     }, []);
 

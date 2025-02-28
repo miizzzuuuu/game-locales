@@ -1,3 +1,5 @@
+import { ApiResponse, ApiResponseBase } from "../../types";
+
 interface Params extends Omit<RequestInit, 'body'> {
     body?: Record<string, any>;
 }
@@ -60,16 +62,16 @@ const timeout = (time: number) => {
     return controller;
 };
 
-const checkApiStatus = (response: any) => {
+const checkApiStatus = (response: ApiResponseBase) => {
     if (response.status === false) {
         const detail = response.detail;
         if (detail) {
-            if (/SESSION EMPTY/.test(response.detail)) {
+            if (detail.includes('SESSION EMPTY')) {
                 throw new SessionError();
             }
             throw new ApiError(detail);
         }
-        const message = response.message || 'API Error';
+        const message = response.message ?? 'API Error';
         throw new ApiError(message);
     }
 };
@@ -97,10 +99,10 @@ const handleErrorApi = (error: unknown) => {
     redirectError(message === SESSION_EMPTY);
 };
 
-const request = async <T = object>(
+const request = async <T>(
     endpoint: string,
     { body, ...customConfig }: Params = {},
-): Promise<Client<T>> => {
+): Promise<Client<ApiResponse<T>>> => {
     const headers = { 'Content-Type': 'application/json' };
 
     const config: RequestInit = {
@@ -118,7 +120,7 @@ const request = async <T = object>(
     }
 
     const response = await fetch(BASE_API + endpoint, config);
-    const data: T = await response.json();
+    const data = await response.json() as ApiResponse<T>;
 
     if (!response.ok) {
         throw new Error(response.statusText);
@@ -134,24 +136,24 @@ const request = async <T = object>(
     };
 };
 
-const get = <T = object>(endpoint: string, customConfig = {}): Promise<Client<T>> => {
-    return request(endpoint, { ...customConfig, method: 'GET' });
+const get = <T>(endpoint: string, customConfig = {}): Promise<Client<ApiResponse<T>>> => {
+    return request<T>(endpoint, { ...customConfig, method: 'GET' });
 };
 
-const post = <T = object>(
+const post = <T>(
     endpoint: string,
     body: Record<string, any>,
     customConfig = {},
-): Promise<Client<T>> => {
-    return request(endpoint, { ...customConfig, body });
+): Promise<Client<ApiResponse<T>>> => {
+    return request<T>(endpoint, { ...customConfig, body });
 };
 
-const put = <T = object>(
+const put = <T>(
     endpoint: string,
     body: Record<string, any>,
     customConfig = {},
-): Promise<Client<T>> => {
-    return request(endpoint, { ...customConfig, body, method: 'PUT' });
+): Promise<Client<ApiResponse<T>>> => {
+    return request<T>(endpoint, { ...customConfig, body, method: 'PUT' });
 };
 
 export {

@@ -1,0 +1,10 @@
+{
+    "lucky_number": {
+        "data": ["18", "17"],
+        "prize": 30
+    },
+    "jackpot_number": {
+        "data": 5,
+        "prize": 100
+    }
+}

@@ -12,7 +12,7 @@ interface IProps {
 
 const Message = ({ value, close, handleClose }: IProps) => {
     const messageRef = useRef<HTMLDivElement>(null);
-    const prevMessage = useRef<string | undefined>();
+    const prevMessage = useRef<string | undefined>(undefined);
 
     useEffect(() => {
         if (close) {

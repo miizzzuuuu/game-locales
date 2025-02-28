@@ -1,4 +1,6 @@
-export const player = {
+import { Player } from "../../../types";
+
+export const player: Player = {
     uid: 3018,
     device: 'desktop',
     balance: 30507433630,
@@ -14,4 +16,6 @@ export const player = {
     apiKey: '2w1SFvhYsU3yB9EHTiforqtgzkxWpbQl',
     token_sid: 'a2_PRncw0Xt_G80XqRNelPFu9wcjrjRy',
     lobbyUrl: 'http://localhost:4000',
+    maingame: "",
+    currentBet: []
 };

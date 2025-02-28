@@ -14,9 +14,10 @@ export class Sound {
     private static _isFocus = false;
 
     private static _volumeMusic = 0.05;
-    private static _volumeSound = 0.8;
+    private static _volumeSound = 0.6;
 
-    private static _enableSound = false;
+    private static _enableMusic = true;
+    private static _enableSound = true;
 
     static bgMusicAudio = new Audio(BG_MUSIC);
     static clickAudio = new Audio(CLICK_SFX);
@@ -30,7 +31,7 @@ export class Sound {
     static selectChipAudio = new Audio(SELECT_CHIP_SFX);
 
     static playMusic(): void {
-        if (!this._enableSound || !this._enablePlay || !this._isFocus) {
+        if (!this._enableMusic || !this._enablePlay || !this._isFocus) {
             this.stopMusic();
             return;
         }
@@ -129,9 +130,13 @@ export class Sound {
         this.playMusic();
     }
 
+    static set enableMusic(value: boolean) {
+        this._enableMusic = value;
+        this.playMusic();
+    }
+
     static set enableSound(value: boolean) {
         this._enableSound = value;
-        this.playMusic();
     }
 
     static set volumeMusic(value: number) {

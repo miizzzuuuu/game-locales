@@ -16,7 +16,7 @@ const HowToPlayCard = ({ title, children }: IProps) => {
 
     return (
         <div
-            className={`${styles.wrapper}${isOpen ? ` ${styles.open}` : ''}`}
+            className={`${styles.wrapper}${isOpen ? ` ${styles.open}` : ''} htp`}
             onClick={handleClick}
         >
             <div className={styles.top}>

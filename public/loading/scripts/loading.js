@@ -51,7 +51,8 @@ function addLoadingScreen() {
     setFlashsreen(loadingContainer, pcode);
 
     // Create the loading logo image
-    const loadingLogo = document.createElement('img');
+    const loadingLogo = new Image();
+    loadingLogo.setAttribute('fetchpriority', 'high');
     loadingLogo.className = 'loading-logo';
     loadingLogo.alt = '';
     setGameLogo(loadingLogo, pcode);
@@ -61,7 +62,7 @@ function addLoadingScreen() {
     loadingBottom.className = 'loading-bottom';
 
     // Create the IDNLive logo image
-    const loadingIdnLive = document.createElement('img');
+    const loadingIdnLive = new Image(200, 47);
     loadingIdnLive.className = 'loading-idnlive';
     loadingIdnLive.src = 'loading/img/idnlive-logo.webp';
     loadingIdnLive.alt = '';

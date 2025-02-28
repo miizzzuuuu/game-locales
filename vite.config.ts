@@ -1,11 +1,19 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import autoprefixer from 'autoprefixer';
+
+const ReactCompilerConfig = {};
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
     return {
-        plugins: [react()],
+        plugins: [
+            react({
+                babel: {
+                    plugins: [['babel-plugin-react-compiler', ReactCompilerConfig]],
+                },
+            }),
+        ],
         css: {
             postcss: {
                 plugins: [autoprefixer({})],
@@ -16,19 +24,19 @@ export default defineConfig(({ mode }) => {
             rollupOptions: {
                 output: {
                     manualChunks(id: string) {
-                        if (id.indexOf('i18next') >= 0) {
+                        if (id.includes('i18next')) {
                             return 'i18next';
                         }
 
-                        if (id.indexOf('@lottielab') >= 0) {
+                        if (id.includes('@lottielab')) {
                             return 'lottie';
                         }
 
-                        if (id.indexOf('react') >= 0) {
+                        if (id.includes('react')) {
                             return 'react';
                         }
 
-                        if (id.indexOf('node_modules') >= 0) {
+                        if (id.includes('node_modules')) {
                             return 'vendor';
                         }
                     },

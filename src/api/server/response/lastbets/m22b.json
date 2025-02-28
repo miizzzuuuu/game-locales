@@ -1,0 +1,15 @@
+{
+    "periode": 2622457,
+    "data": [
+        {
+            "button": "player",
+            "group": "player",
+            "value": 5000
+        },
+        {
+            "button": "bankerpair",
+            "group": "bankerpair",
+            "value": 5000
+        }
+    ]
+}

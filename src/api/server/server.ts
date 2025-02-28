@@ -1,31 +1,39 @@
 import { createServer, Response } from 'miragejs';
 import { ENDPOINTS } from '../../common/utils/APIManager';
 
-import sendBetData from './response/send-bet/success.json';
 import eventsList from './response/events/eventsList.json';
+import eventPrize from './response/events/eventsPrize.json';
 import eventLatestWinners from './response/events/latestWinners.json';
 import eventTopWinners from './response/events/topWinners.json';
-import eventPrize from './response/events/eventsPrize.json';
+import sendBetData from './response/send-bet/success.json';
+import { time, timer } from './response/timer/dummyTimer';
 
-// result
-import resultData from './resultData';
+// games
+import gameData from './gameData';
 
-// transaction
-import transactionData from './transactionData';
+// lastbets
+import lastbetData from './lastbetData';
 
 // payouts
 import payoutData from './payoutData';
 
-// thunder
+// results
+import resultData from './resultData';
+
+// thunders
 import thunderData from './thunderData';
 
+// transactions
+import transactionData from './transactionData';
+
 // database
-import { games } from './db/games';
 import { player } from './db/player';
-import { settings } from './db/settings';
 import { properties } from './db/properties';
-import { lastbets } from './db/lastbets';
-import { time, timer } from './response/timer/dummyTimer';
+import { settings } from './db/settings';
+
+// Add at the top with other imports
+import { ApiResponse, CurrentThunder } from '../../types';
+import { Player, Settings } from '../../types';
 
 export function makeServer({ environment = 'test' } = {}) {
     const server = createServer({
@@ -34,67 +42,57 @@ export function makeServer({ environment = 'test' } = {}) {
             // player
             this.get(
                 ENDPOINTS.player,
-                () => {
+                (): ApiResponse<Player> => {
                     return player;
                 },
                 { timing: 400 },
             );
 
-            // player properties
-            this.get(ENDPOINTS.playerProperties, (scheme) => {
-                const properties = scheme.db.properties;
-                return properties;
-            });
-
             // player settings
-            this.get(ENDPOINTS.playerSettings, () => {
+            this.get(ENDPOINTS.playerSettings, (): ApiResponse<Settings> => {
                 return settings;
             });
 
-            this.put(ENDPOINTS.playerSettings, (_, request) => {
-                const settings = JSON.parse(request.requestBody);
+            this.put(ENDPOINTS.playerSettings, (_, request): ApiResponse<Settings> => {
+                const settings = JSON.parse(request.requestBody) as Settings;
 
                 return settings;
             });
             // end player settings
 
+            // player properties
+            this.get(ENDPOINTS.playerProperties, () => {
+                return properties;
+            });
+
             // lastbets
             this.get(ENDPOINTS.playerLastbets, () => {
-                return lastbets;
+                return lastbetData;
             });
 
             this.get(ENDPOINTS.playerLastbets + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const lastbet: { periode: number; data: any[] } | { message: string } | undefined =
-                    lastbets[pcode];
-
-                if (!lastbet) {
-                    return new Response(
-                        400,
-                        {},
-                        {
-                            message: 'Empty Lastbet',
-                        },
-                    );
+                if (pcode in lastbetData) {
+                    return lastbetData[pcode];
+                } else {
+                    return new Response(400, {}, { message: 'Empty Lastbet' });
                 }
-
-                return lastbet;
             });
 
             // games
-            this.get(ENDPOINTS.games, (schema) => {
-                const games = schema.db.games;
-
-                return games;
+            this.get(ENDPOINTS.games, () => {
+                return gameData;
             });
 
-            this.get(ENDPOINTS.games + '/:pcode', (schema, request) => {
+            this.get(ENDPOINTS.games + '/:pcode', (_, request) => {
                 const pcode = request.params.pcode;
 
-                const game = schema.db.games.findBy({ pcode });
-
-                return game;
+                if (pcode in gameData) {
+                    return gameData[pcode];
+                } else {
+                    return new Response(400, {}, { message: 'Empty Game' });
+                }
             });
 
             // payout
@@ -104,18 +102,24 @@ export function makeServer({ environment = 'test' } = {}) {
                 if (pcode in payoutData) {
                     return payoutData[pcode];
                 } else {
-                    return new Response(400, {}, { message: 'Payout Empty' });
+                    return new Response(400, {}, { message: 'Payout Not Found' });
                 }
             });
 
             // thunder
-            this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request) => {
+            this.get(ENDPOINTS.currentThunder + '/:pcode/:period', (_, request): CurrentThunder => {
                 const pcode = request.params.pcode;
 
+                const baseThunder: CurrentThunder = {
+                    status: true,
+                    pcode: pcode,
+                    data: [],
+                };
+
                 if (pcode in thunderData) {
-                    return thunderData[pcode];
+                    return { ...baseThunder, data: thunderData[pcode] };
                 } else {
-                    return new Response(400, {}, { message: 'Payout Empty' });
+                    return baseThunder;
                 }
             });
 
@@ -231,11 +235,6 @@ export function makeServer({ environment = 'test' } = {}) {
             this.passthrough();
             this.passthrough('https://cdn.lottielab.com/*');
         },
-    });
-
-    server.db.loadData({
-        games,
-        properties,
     });
 
     return server;

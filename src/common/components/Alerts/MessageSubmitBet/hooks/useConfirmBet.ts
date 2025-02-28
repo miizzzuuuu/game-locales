@@ -6,6 +6,7 @@ import {
     selectConfirmBetError,
     selectConfirmBetStatus,
 } from '../../../../../store/slice/bets';
+import { selectTimerIsClose } from '../../../../../store/slice/timerSlice';
 
 function useConfirmBet() {
     const dispatch = useAppDispatch();
@@ -22,23 +23,24 @@ function useConfirmBet() {
 
     const confirmBetStatus = useAppSelector(selectConfirmBetStatus);
     const confirmBetError = useAppSelector(selectConfirmBetError);
+    const betIsClose = useAppSelector(selectTimerIsClose);
 
     useEffect(() => {
-        console.log('confirmBetStatus', confirmBetStatus);
-
         if (confirmBetStatus === 'pending') {
             setMessage({
                 value: 'SUBMITING...',
                 type: 'none',
             });
+            dispatch(resetConfirmBet());
             return;
         }
 
         if (confirmBetStatus === 'fulfilled') {
             setMessage({
-                value: t('bet-confirmed'),
+                value: t('bet-accepted'),
                 type: 'warning',
             });
+            dispatch(resetConfirmBet());
             return;
         }
 
@@ -47,12 +49,23 @@ function useConfirmBet() {
                 value: confirmBetError ?? t('bet-error'),
                 type: 'danger',
             });
+            dispatch(resetConfirmBet());
             return;
         }
-    }, [confirmBetStatus, confirmBetError]);
+    }, [confirmBetStatus, confirmBetError, dispatch, t]); // tambahkan 't' ke dependency array
+
+    useEffect(() => {
+        if (confirmBetStatus === 'idle' && betIsClose) {
+            setMessage({
+                value: t('bet-closed'),
+                type: 'danger',
+            });
+            dispatch(resetConfirmBet());
+        }
+    }, [confirmBetStatus, betIsClose, dispatch, t]);
 
     const handleClose = () => {
-        dispatch(resetConfirmBet());
+        // dispatch(resetConfirmBet());
 
         setMessage({
             value: null,

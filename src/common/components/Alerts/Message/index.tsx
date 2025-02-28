@@ -1,9 +1,8 @@
 import { AnimationEventHandler, ReactNode, useEffect, useRef } from 'react';
-
+import SVGBackgroundMessageWinSide from '../../../../game/components/MessageWinSide/SVGBackgroundMessage';
+import { MessageGameType, MessageWinSideType } from '../../../../types';
 import styles from './styles.module.scss';
 import SVGBackgroundMessage from './SVG/SVGBackgroundMessage';
-import { MessageGameType, MessageWinSideType } from '../../../../types';
-import SVGBackgroundMessageWinSide from '../../../../game/components/MessageWinSide/SVGBackgroundMessage';
 
 interface IProps {
     value?: ReactNode | undefined;
@@ -12,10 +11,10 @@ interface IProps {
 }
 
 const Message = ({ value, handleClose, type = 'none' }: IProps) => {
-    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
+    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>(null);
     const messageRef = useRef<HTMLDivElement>(null);
 
-    const prevMessage = useRef<ReactNode | undefined>();
+    const prevMessage = useRef<ReactNode>(null);
 
     useEffect(() => {
         currentTimeOut.current = setTimeout(
@@ -30,7 +29,7 @@ const Message = ({ value, handleClose, type = 'none' }: IProps) => {
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);
-                currentTimeOut.current = undefined;
+                currentTimeOut.current = null;
             }
         };
     }, [value]);

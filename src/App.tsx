@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Game from './common/components/Game';
-import MiniHowToPlay from './common/components/MiniHowToPlay';
+import QuickHowToPlay from './common/components/QuickHowToPlay';
 import ResizeOverlay from './common/components/ResizeOverlay';
 import { useAutoResize } from './common/hooks/useAutoResize';
 import { useFetchEventList } from './common/hooks/useFetchEventList';
@@ -11,15 +11,16 @@ import { useFetchTimer } from './common/hooks/useFetchTimer';
 import { useFullscreen } from './common/hooks/useFullscreen';
 import { useSettingSound } from './common/hooks/useSettingSound';
 import { useWindowResize } from './common/hooks/useWindowResize';
-import { Features } from './common/utils/Features';
+import { FEATURES } from './common/utils/Features';
 import { sendMessageToParent } from './common/utils/FunctionHelper';
 import { finishLoading } from './common/utils/LoadingHelper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { addBalance } from './store/slice/playerSlice';
-import { selectDevice, setDeviceType, setOrientation } from './store/slice/windowSlice';
+import { setDeviceType, setOrientation } from './store/slice/windowSlice';
+import { MessageDataContainerToGame } from './types';
 
-const MiniHowToPlayComponents = Features.MINI_HOW_TO_PLAY ? <MiniHowToPlay /> : null;
+const MiniHowToPlayComponents = FEATURES.MINI_HOW_TO_PLAY ? <QuickHowToPlay /> : null;
 
 function App() {
     const dispatch = useAppDispatch();
@@ -27,7 +28,7 @@ function App() {
     const [showOverlayResize, setShowOverlayResize] = useState(false);
 
     const [showGame, setShowGame] = useState(false);
-    const device = useAppSelector(selectDevice);
+
     const showMiniHowToPlay = useAppSelector(selectShowMiniHowToPlay);
 
     const { finish: finishGetPlayer } = useFetchPlayer();
@@ -59,7 +60,7 @@ function App() {
     useFullscreen();
 
     useEffect(() => {
-        const listenMessage = (event: MessageEvent) => {
+        const listenMessage = (event: MessageEvent<MessageDataContainerToGame>) => {
             if (event.data.source !== 'GAME_CONTAINER') return;
 
             console.log('Message from parent:', event.data);
@@ -77,7 +78,7 @@ function App() {
             }
 
             if (event.data.type === 'EVENT_WIN') {
-                const value = event.data.payload as number;
+                const value = event.data.payload;
                 dispatch(addBalance(value));
             }
         };
@@ -89,11 +90,16 @@ function App() {
         };
     }, [dispatch]);
 
+    const timeoutRef = useRef<number>(null);
+
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);
-
-        setTimeout(() => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
             setShowOverlayResize(false);
+            timeoutRef.current = null;
         }, 350);
     }, []);
 
@@ -103,7 +109,7 @@ function App() {
         <div className={`app ${deviceType}`}>
             {showGame && <Game />}
 
-            {showGame && showMiniHowToPlay && device !== 'desktop' ? MiniHowToPlayComponents : null}
+            {showGame && showMiniHowToPlay ? MiniHowToPlayComponents : null}
 
             {showOverlayResize && <ResizeOverlay />}
         </div>

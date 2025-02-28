@@ -21,7 +21,7 @@ const MessageGeneral = () => {
             if (e.key === 'd') {
                 dispatch(
                     setMessage({
-                        value: t('bet-confirmed'),
+                        value: t('bet-accepted'),
                         type: 'warning',
                     }),
                 );

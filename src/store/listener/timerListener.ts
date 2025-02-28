@@ -1,12 +1,11 @@
-import { Features } from '../../common/utils/Features';
+import { BUTTON_CONFIG } from '../../common/utils/Features';
 import { getPcode } from '../../common/utils/GameHelper';
 import { confirmBet } from '../../services/api/sendBet';
 import { BetSend } from '../../types';
 import { AppStartListening } from '../listenerMiddleware';
 import { resetBetAdd, selectBetAdd, selectTotalBetAdd } from '../slice/bets';
-// import { resetBetAdd, selectAllBetAdd, selectTotalBetAdd } from '../slice/betAddSlice';
 import { selectPeriod } from '../slice/gameSlice';
-import { setShowPatternBeforeClose, togglePatternUI } from '../slice/gameStateSlice';
+import { setShowRoadmapBeforeClose, toggleRoadmapUI } from '../slice/gameStateSlice';
 import { selectBalance } from '../slice/playerSlice';
 import { closeTime, openTime } from '../slice/timerSlice';
 import { AppDispatch, RootState } from '../store';
@@ -15,13 +14,13 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
     if (state) {
         const betAdd = selectBetAdd(state);
 
-        if (Features.BUTTON_PATTERN) {
-            const showPatternUI = state.gameState.showPatternUI;
+        if (BUTTON_CONFIG.ROADMAP.enabled && state) {
+            const showPatternUI = state.gameState.showRoadmapUI;
             if (showPatternUI) {
-                dispatch(setShowPatternBeforeClose(true));
-                dispatch(togglePatternUI());
+                dispatch(setShowRoadmapBeforeClose(true));
+                dispatch(toggleRoadmapUI());
             } else {
-                dispatch(setShowPatternBeforeClose(false));
+                dispatch(setShowRoadmapBeforeClose(false));
             }
         }
 
@@ -54,11 +53,13 @@ const actionClose = (dispatch: AppDispatch, state?: RootState) => {
 };
 
 const actionOpen = (dispatch: AppDispatch, state?: RootState) => {
-    if (Features.BUTTON_PATTERN && state) {
-        const showPatternUIBeforeClose = state.gameState.showPatternUIBeforeClose;
-        if (showPatternUIBeforeClose) {
-            dispatch(togglePatternUI());
-        }
+    if (!BUTTON_CONFIG.ROADMAP.enabled || !state) {
+        return;
+    }
+
+    const showPatternUIBeforeClose = state.gameState.showRoadmapUIBeforeClose;
+    if (showPatternUIBeforeClose && !state.gameState.showRoadmapUI) {
+        dispatch(toggleRoadmapUI());
     }
 };
 

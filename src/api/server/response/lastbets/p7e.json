@@ -1,0 +1,15 @@
+{
+    "periode": 1909121,
+    "data": [
+        {
+            "button": "2nd 12",
+            "group": "n12",
+            "value": 5000
+        },
+        {
+            "button": "05,06,08,09",
+            "group": "n4",
+            "value": 5000
+        }
+    ]
+}

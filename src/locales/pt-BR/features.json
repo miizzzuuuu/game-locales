@@ -1,0 +1,28 @@
+{
+    "htp": {
+        "general": {
+            "title": "Geral",
+            "content": {
+                "paragraph-1": "Para participar do jogo, você deve ter saldo/fundos suficientes para cobrir suas apostas. Seu saldo atual pode ser visto no canto inferior esquerdo da tela.",
+                "paragraph-2": "O indicador APOSTA TOTAL exibe o valor total das apostas que você colocou para a rodada atual.",
+                "paragraph-3": "Exibe as apostas mínima e máxima permitidas na mesa, que podem mudar a qualquer momento. Além disso, o código único do período atual e o nome do jogo que você está jogando são mostrados.",
+                "paragraph-4": "O temporizador indica o tempo restante para fazer apostas. Quando o temporizador termina, as apostas são encerradas e não são mais aceitas. Após o término das apostas, você receberá uma confirmação de \"aposta aceita\" se sua aposta for válida para a rodada do jogo; caso contrário, você verá \"Nem todas as apostas foram aceitas\" ou \"Aposta rejeitada\".",
+                "paragraph-5": "A exibição de fichas permite que você selecione o valor das fichas que deseja apostar. Escolha os valores das fichas clicando nas fichas na parte inferior da tela, localizadas perto dos botões Desfazer, Dobrar e Reapostar. Apenas valores de fichas compatíveis com seu saldo atual podem ser selecionados."
+            },
+            "game-name": "Nome do Jogo"
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Botões adicionais para auxiliar os jogadores durante o jogo.",
+            "content": {
+                "paragraph-1": "O botão Desfazer remove a última ficha colocada na mesa.",
+                "paragraph-2": "Dobra o valor total das fichas que você colocou. Certifique-se de que seu saldo da conta seja suficiente para cobrir as apostas dobradas.",
+                "paragraph-3": "Permite que você repita a mesma aposta da sua rodada anterior na mesa.",
+                "paragraph-4": "O Menu Hambúrguer fornece acesso a recursos e configurações importantes do jogo.",
+                "paragraph-5": "Oculta as fichas que você colocou na mesa.",
+                "paragraph-6": "Exibe estatísticas do jogo em tempo real para a sessão em andamento.",
+                "paragraph-7": "Alterna a visibilidade do Mapa/Estatísticas do Jogo."
+            }
+        }
+    }
+}

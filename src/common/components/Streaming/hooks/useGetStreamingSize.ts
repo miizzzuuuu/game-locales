@@ -4,7 +4,7 @@ import { selectDevice } from '../../../../store/slice/windowSlice';
 import { useWindowResize } from '../../../hooks/useWindowResize';
 import { setGlobalProperty } from '../../../utils/DisplayHelper';
 
-function useGetStreamingSize(ref: RefObject<HTMLDivElement>) {
+function useGetStreamingSize(ref: RefObject<HTMLDivElement | null>) {
     const device = useAppSelector(selectDevice);
 
     const handleResize = useCallback(() => {
@@ -12,12 +12,12 @@ function useGetStreamingSize(ref: RefObject<HTMLDivElement>) {
             const element = ref.current ?? document.documentElement;
 
             const widthGame = Number(
-                window.getComputedStyle(element).getPropertyValue('--width-game') ?? 1,
+                window.getComputedStyle(element).getPropertyValue('--width-game') ?? '1',
             );
-            const scaleStreaming =
-                Number(
-                    window.getComputedStyle(element).getPropertyValue('--streaming-scale-portrait'),
-                ) ?? 1;
+            const scaleStreaming = Number(
+                window.getComputedStyle(element).getPropertyValue('--streaming-scale-portrait') ??
+                    '1',
+            );
 
             const heightStreaming = (9 / 16) * widthGame * scaleStreaming;
 

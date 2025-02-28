@@ -19,7 +19,12 @@ const Video = () => {
                 <>{url ? <WebStream /> : <WebStreamError />}</>
             ) : (
                 <>
-                    <img src={BACKGROUND_STREAMING} alt="" className={styles['video-off']} />
+                    <img
+                        src={BACKGROUND_STREAMING}
+                        alt=""
+                        className={styles['video-off']}
+                        loading="lazy"
+                    />
                     <span className={styles.off}>video streaming is currently off.</span>
                 </>
             )}

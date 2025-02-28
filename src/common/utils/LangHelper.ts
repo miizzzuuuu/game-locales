@@ -1,58 +1,72 @@
-import { SVGProps } from 'react';
-
-import SVGLangUk from '../components/SVG/languages/SVGLangUk';
-import SVGLangId from '../components/SVG/languages/SVGLangId';
+import { ReactElement, SVGProps } from 'react';
 import SVGLangCn from '../components/SVG/languages/SVGLangCn';
-import SVGLangVn from '../components/SVG/languages/SVGLangVn';
-import SVGLangTh from '../components/SVG/languages/SVGLangTh';
+import SVGLangId from '../components/SVG/languages/SVGLangId';
+import SVGLangIn from '../components/SVG/languages/SVGLangIn';
 import SVGLangKr from '../components/SVG/languages/SVGLangKr';
+import SVGLangTh from '../components/SVG/languages/SVGLangTh';
+import SVGLangTr from '../components/SVG/languages/SVGLangTr';
+import SVGLangUk from '../components/SVG/languages/SVGLangUk';
+import SVGLangVn from '../components/SVG/languages/SVGLangVn';
+import SVGLangBr from '../components/SVG/languages/SVGLangBr';
 
 export type SupportLang = (typeof supportLang)[number];
 
-const supportLang = ['en', 'id', 'vn', 'th', 'zh', 'ko'] as const;
+export const supportLang = ['en', 'hi', 'id', 'vn', 'th', 'tr', 'zh', 'ko', 'pt-BR'] as const;
 
 const countryLanguageCodes: Record<string, string> = {
     en: 'en-US',
+    hi: 'hi-IN',
     id: 'id-ID',
-    vn: 'vn-VN',
-    th: 'th-TH',
-    zh: 'zh-CN',
     ko: 'ko-KR',
+    th: 'th-TH',
+    tr: 'tr-TR',
+    vn: 'vn-VN',
+    zh: 'zh-CN',
+    'pt-BR': 'pt-BR',
 };
 
 export const langMap: Record<string, string> = {
     en: 'en',
+    hi: 'hi',
     id: 'id',
-    vn: 'vn',
-    th: 'th',
-    zh: 'zh',
     ko: 'ko',
+    th: 'th',
+    tr: 'tr',
+    vn: 'vn',
+    zh: 'zh',
+    'pt-BR': 'pt-BR',
 };
 
-export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
-    zh: SVGLangCn,
+export const langLogo: Record<string, (props: SVGProps<SVGSVGElement>) => ReactElement> = {
     en: SVGLangUk,
+    hi: SVGLangIn,
     id: SVGLangId,
-    th: SVGLangTh,
-    vn: SVGLangVn,
     ko: SVGLangKr,
+    th: SVGLangTh,
+    tr: SVGLangTr,
+    vn: SVGLangVn,
+    zh: SVGLangCn,
+    'pt-BR': SVGLangBr,
 };
 
 export const langName: Record<string, string> = {
-    zh: '中文',
     en: 'English',
+    hi: 'हिन्दी',
     id: 'Bahasa Indonesia',
-    th: 'ภาษาไทย',
-    vn: 'Tiếng Việt',
     ko: '한국어',
+    th: 'ภาษาไทย',
+    tr: 'Türkçe',
+    vn: 'Tiếng Việt',
+    zh: '中文',
+    'pt-BR': 'Português (Brasil)',
 };
 
 export const getLoacale = (lang: string) => {
     return countryLanguageCodes[lang];
 };
 
-export const formatedLanguage = (lang: string) => {
-    if (lang === '') {
+export const formatedLanguage = (lang?: string): string => {
+    if (!lang) {
         lang = 'id';
     }
 
@@ -60,7 +74,15 @@ export const formatedLanguage = (lang: string) => {
         lang = 'zh';
     }
 
-    const validLang = langMap[lang.toLowerCase()];
+    if (lang === 'pt') {
+        lang = 'pt-BR';
+    }
+
+    if (!lang.includes('-')) {
+        lang = lang.toLowerCase();
+    }
+
+    const validLang = langMap[lang];
 
     if ((supportLang as readonly string[]).includes(lang)) {
         return validLang;

@@ -2,10 +2,10 @@ import { useAppSelector } from '../../../store/hooks';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import ButtonCancelBet from '../../components/ButtonCancelBet';
 import ButtonDoubleBet from '../../components/ButtonDoubleBet';
-import ButtonFavorite from '../../components/ButtonFavorite';
-import ButtonHideChip from '../../components/ButtonHideChip';
 import ButtonRebet from '../../components/ButtonRebet';
 import ChipDeck from '../../components/ChipDeck';
+import { BUTTON_CONFIG } from '../../utils/Features';
+import { DESKTOP_BUTTONS } from './constants';
 import styles from './styles.module.scss';
 
 const ChipsArea = () => {
@@ -22,8 +22,24 @@ const ActionArea = () => {
     return (
         <div className={styles['area-action']}>
             <div className={styles.side}>
-                <ButtonHideChip />
-                <ButtonFavorite />
+                {/* <Suspense>
+                    {DESKTOP_BUTTONS.map((key) => {
+                        const config = BUTTON_CONFIG[key];
+                        if (!config.enabled) {
+                            return null;
+                        }
+                        const Component = config.component;
+                        return <Component key={key} />;
+                    })}
+                </Suspense> */}
+                {DESKTOP_BUTTONS.map((key) => {
+                    const config = BUTTON_CONFIG[key];
+                    if (!config.enabled) {
+                        return null;
+                    }
+                    const Component = config.component;
+                    return <Component key={key} />;
+                })}
             </div>
 
             <ChipsArea />

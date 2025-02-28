@@ -2,7 +2,7 @@ import Lottie from '@lottielab/lottie-player/react';
 import { useState } from 'react';
 import { EventIdnlive } from '../../../types';
 import SVGIconX from '../../components/SVG/SVGIconX';
-import { Features } from '../../utils/Features';
+import { FEATURES } from '../../utils/Features';
 import { sendMessageToParent } from '../../utils/FunctionHelper';
 import styles from './styles.module.scss';
 
@@ -10,14 +10,12 @@ type IProps = {
     event: EventIdnlive;
 };
 
-const className = `${styles.wrapper} ${Features.LAYOUT_VERSION === 2 ? styles[`layout-2`] : Features.LAYOUT_VERSION === 3 ? styles['layout-3'] : styles[`layout-1`]}`;
+const className = `${styles.wrapper} ${FEATURES.LAYOUT_VERSION === 2 ? styles[`layout-2`] : FEATURES.LAYOUT_VERSION === 3 ? styles['layout-3'] : styles[`layout-1`]}`;
 
 const LuckyAngpao = ({ event }: IProps) => {
     const [showButton, setShowButton] = useState(true);
 
     const openPopup = () => {
-        console.log('open popup');
-
         sendMessageToParent({
             source: 'LIVE_GAME',
             type: 'OPEN_MODAL_EVENT',

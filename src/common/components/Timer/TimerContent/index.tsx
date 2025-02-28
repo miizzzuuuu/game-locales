@@ -8,9 +8,8 @@ import {
     selectTimerIsClose,
 } from '../../../../store/slice/timerSlice';
 import SVGTimer from '../SVG/SVGTimer';
+import { lengthStroke } from './const';
 import styles from './styles.module.scss';
-
-export const lengthStroke = 138.23;
 
 const TimerContent = () => {
     const dispatch = useAppDispatch();
@@ -21,7 +20,7 @@ const TimerContent = () => {
 
     const svgRef = useRef<SVGSVGElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
-    const requestRef = useRef<number>();
+    const requestRef = useRef<number>(null);
     const targetTime = useRef<number>(0);
 
     const getRemainingTime = useCallback(() => {
@@ -38,16 +37,18 @@ const TimerContent = () => {
         }
 
         if (svgRef.current) {
-            const timeCircle = svgRef.current.querySelector('#timer-cirlce')! as SVGCircleElement;
-            timeCircle.style.setProperty(
-                '--color-effect',
-                timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
-            );
-            timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
-            timeCircle.setAttribute(
-                'stroke-dashoffset',
-                `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
-            );
+            const timeCircle: SVGSVGElement | null = svgRef.current.querySelector('#timer-cirlce');
+            if (timeCircle) {
+                timeCircle.style.setProperty(
+                    '--color-effect',
+                    timeInSecond < 5 ? 'rgba(255, 0, 0, 0.75)' : 'rgba(84, 252, 21, 0.75)',
+                );
+                timeCircle.setAttribute('stroke', timeInSecond < 5 ? 'red' : '#54FC15');
+                timeCircle.setAttribute(
+                    'stroke-dashoffset',
+                    `${lengthStroke - (remainingTime / (timer * 1000)) * lengthStroke}`,
+                );
+            }
         }
 
         if (remainingTime > 0) {
@@ -56,8 +57,6 @@ const TimerContent = () => {
     }, [getRemainingTime, timer]);
 
     useEffect(() => {
-        console.log(time);
-
         let timeOutTime: ReturnType<typeof setTimeout> | undefined;
 
         if (time > 0) {
@@ -80,7 +79,7 @@ const TimerContent = () => {
             }
             if (requestRef.current) {
                 cancelAnimationFrame(requestRef.current);
-                requestRef.current = undefined;
+                requestRef.current = null;
             }
         };
     }, [time, timerIsClose, updateTimer, dispatch]);
