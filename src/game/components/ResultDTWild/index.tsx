@@ -1,6 +1,6 @@
 import { AnimationEventHandler, useEffect, useRef } from 'react';
-import { GraphicComponentProps } from '../../../common/components/MiniHowToPlay/Slide';
-import Graphic from '../../../common/components/MiniHowToPlay/Slide/Graphic';
+import { GraphicComponentProps } from '../../../common/components/QuickHowToPlay/Slide';
+import Graphic from '../../../common/components/QuickHowToPlay/Slide/Graphic';
 import { WIN_NOTIFICATION_DURATION } from '../../../common/utils/GameHelper';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { doneResult, resetResult, selectScanNumber } from '../../../store/slice/resultSlice';
@@ -12,6 +12,7 @@ interface AnimationSrcXGraphicComponentProps extends GraphicComponentProps {
     className?: string;
     classChild?: string;
 }
+
 export const GraphicComponent = ({
     isActive,
     animationSrc,
@@ -25,7 +26,7 @@ export const GraphicComponent = ({
 
 const Result = () => {
     const resultRef = useRef<HTMLDivElement>(null);
-    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>();
+    const currentTimeOut = useRef<ReturnType<typeof setTimeout>>(null);
 
     const dispatch = useAppDispatch();
 
@@ -52,7 +53,7 @@ const Result = () => {
         return () => {
             if (currentTimeOut.current) {
                 clearTimeout(currentTimeOut.current);
-                currentTimeOut.current = undefined;
+                currentTimeOut.current = null;
             }
         };
     }, [resultStatus]);
