@@ -1,8 +1,7 @@
 import { AnimationEventHandler, useEffect, useRef } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 import SVGBackground from './SVG/SVGBackground';
-import LabelTranslate from '../../../LabelTranslate';
 
 interface IProps {
     value?: string;
@@ -11,6 +10,8 @@ interface IProps {
 }
 
 const Message = ({ value, close, handleClose }: IProps) => {
+    const { t } = useTranslation();
+
     const messageRef = useRef<HTMLDivElement>(null);
     const prevMessage = useRef<string | undefined>(undefined);
 
@@ -39,7 +40,7 @@ const Message = ({ value, close, handleClose }: IProps) => {
             <SVGBackground className={styles.background} type="new-set" />
 
             <div className={styles.content}>
-                {value && <LabelTranslate value={value} className={styles.text} />}
+                {value && <span className={styles.text}>{t(value)}</span>}
             </div>
         </div>
     );

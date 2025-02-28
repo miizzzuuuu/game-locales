@@ -10,18 +10,18 @@ import {
 } from '../../../../store/slice/resultSlice';
 import { WIN_NOTIFICATION_DURATION } from '../../../utils/GameHelper';
 import { formatCurrency } from '../../../utils/StringHelper';
-import LabelTranslate from '../../LabelTranslate';
 import SVGBackgroundYouWin from './SVG/SVGBackgroundYouWin';
 import styles from './styles.module.scss';
 
 const MessageYouWin = () => {
+    const { t, i18n } = useTranslation();
+    const dispatch = useAppDispatch();
+
     const currency = useAppSelector(selectCurrency);
     const showCurrency = useAppSelector(selectShowCurrency);
 
     const currentTimeOut = useRef<ReturnType<typeof setTimeout>>(null);
     const messageYouWinRef = useRef<HTMLDivElement>(null);
-
-    const dispatch = useAppDispatch();
 
     const [displayValue, setDisplayValue] = useState(0);
     // const [renderUI, setRenderUI] = useState(false);
@@ -29,8 +29,6 @@ const MessageYouWin = () => {
     const winAmount = useAppSelector(selectWinAmount);
     const winStatus = useAppSelector(selectWinStatus);
     // const resultStatus = useAppSelector(selectResultStatus);
-
-    const { i18n } = useTranslation();
 
     useEffect(() => {
         if (currentTimeOut.current) {
@@ -146,7 +144,7 @@ const MessageYouWin = () => {
             <SVGBackgroundYouWin className={styles.background} />
 
             <div className={styles.content}>
-                <LabelTranslate value="you-win" className={styles.label} />
+                <span className={styles.label}>{t('you-win')}</span>
 
                 <div className={styles.value}>
                     {formatCurrency(displayValue, currency, i18n.language, !showCurrency)}

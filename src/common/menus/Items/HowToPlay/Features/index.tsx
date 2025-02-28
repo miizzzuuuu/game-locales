@@ -1,12 +1,14 @@
 import { MenuContentContainer } from '../../../MenuContentContainer';
+import General from './Items/General';
 import Menu from './Items/Menu';
 
-const FeatureContent = () => {
+const Features = () => {
     return (
         <MenuContentContainer>
+            <General />
             <Menu />
         </MenuContentContainer>
     );
 };
 
-export default FeatureContent;
+export default Features;

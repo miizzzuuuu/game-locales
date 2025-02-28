@@ -1,10 +1,11 @@
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import Content from './Content';
-import styles from './styles.module.scss';
 import { useTopWinner } from './hooks/useTopWinner';
-import LabelTranslate from '../LabelTranslate';
+import styles from './styles.module.scss';
 
 const TopWinner = () => {
+    const { t } = useTranslation();
     const winnerContentRef = useRef<HTMLDivElement>(null);
 
     const { winnerData, index, isFinish, animationEndHandler } = useTopWinner({
@@ -17,9 +18,7 @@ const TopWinner = () => {
             onAnimationEnd={animationEndHandler}
         >
             <div className={styles.wrapper}>
-                <div className={styles.label}>
-                    <LabelTranslate value="winner" />:
-                </div>
+                <div className={styles.label}>{t('winner')}</div>
 
                 <Content ref={winnerContentRef} data={winnerData} index={index} />
             </div>

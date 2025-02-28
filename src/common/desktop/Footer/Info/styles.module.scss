@@ -8,7 +8,7 @@
 }
 
 .top {
-    color: #ddd;
+    color: #ccc;
     font-size: 1.4rem;
     font-weight: 500;
 }
@@ -25,6 +25,6 @@
     }
 
     .bottom {
-        color: #00c3d8;
+        color: var(--cyan);
     }
 }

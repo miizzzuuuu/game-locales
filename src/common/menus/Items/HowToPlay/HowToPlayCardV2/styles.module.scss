@@ -1,0 +1,85 @@
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-rows: min-content 0fr;
+    border: 0.1rem solid #343547;
+    cursor: pointer;
+
+    transition:
+        background-color 0.4s,
+        grid-template-rows 0.4s;
+
+    &:first-child {
+        border-radius: 0.8rem 0.8rem 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 0.8rem 0.8rem;
+    }
+
+    &.open {
+        background-color: #1e1f2e;
+        grid-template-rows: min-content 1fr;
+    }
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    height: 4.6rem;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.accordion-icon {
+    width: 2rem;
+    height: 2rem;
+
+    transform: rotateZ(0deg);
+    color: #6b6c80;
+
+    & > svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    transition:
+        transform 0.4s,
+        color 0.4s;
+
+    &.close {
+        transform: rotateZ(0deg);
+        color: #6b6c80;
+    }
+
+    &.open {
+        transform: rotateZ(180deg);
+        color: white;
+    }
+}
+
+.accordion-content {
+    visibility: hidden;
+    overflow: hidden;
+
+    &.open {
+        visibility: visible;
+    }
+}
+
+:global(.desktop) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .top {
+        height: 5.2rem;
+    }
+}

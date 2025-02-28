@@ -64,7 +64,7 @@ export const loadNewValueListener = (startListening: AppStartListening) => {
                     if (totalLastBet > balance) {
                         dispatch(
                             setMessage({
-                                value: i18n.t('common.autobet-error-insufficient-balance'),
+                                value: i18n.t('autobet-error-insufficient-balance'),
                                 type: 'danger',
                             }),
                         );

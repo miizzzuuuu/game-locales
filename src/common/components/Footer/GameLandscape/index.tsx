@@ -6,7 +6,7 @@ import { formatNumber } from '../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const GameLandscape = () => {
-    const { i18n, t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const gameName = useAppSelector(selectGameName);
     const period = useAppSelector(selectPeriod);
@@ -20,7 +20,7 @@ const GameLandscape = () => {
             </div>
 
             <div className={styles['total-bet']}>
-                <span className={styles['text-4']}>{t('common.total-bet')}: </span>
+                <span className={styles['text-4']}>{t('total-bet')}: </span>
                 <span className={styles['text-5']}>{formatNumber(totaBet, i18n.language)}</span>
             </div>
         </div>

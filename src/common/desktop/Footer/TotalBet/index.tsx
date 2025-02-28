@@ -14,7 +14,7 @@ const TotalBet = () => {
 
     return (
         <Info
-            topValue={t('common.total-bet')}
+            topValue={t('total-bet')}
             bottomValue={formatCurrency(totaBet, currency, i18n.language, !showCurrency)}
             isTotalBet
         />
