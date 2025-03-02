@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import Button from '../../../../components/Button';
-import LabelTranslate from '../../../../components/LabelTranslate';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -10,11 +10,13 @@ interface IProps {
 }
 
 const Item = ({ icon, text, onClick }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <Button className={styles.item} onClick={onClick}>
             {icon}
 
-            <LabelTranslate value={text} className={styles['item-text']} />
+            <p className={styles.text}>{t(text)}</p>
         </Button>
     );
 };

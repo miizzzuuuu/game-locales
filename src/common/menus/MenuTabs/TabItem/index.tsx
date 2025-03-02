@@ -1,9 +1,8 @@
-import { ReactNode } from 'react';
 import Button from '../../../components/Button';
 import styles from './styles.module.scss';
 
 interface IProps {
-    text: ReactNode;
+    text: string;
     isActive?: boolean;
     onClick?: () => void;
 }

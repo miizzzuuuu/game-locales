@@ -62,5 +62,28 @@
     "complete-how-to-play": "Complete how to play",
     "dont-show-again": "Don't show again",
     "streaming-error": "streaming error: invalid streaming url",
-    "no-promotion": "no events at this time"
+    "no-promotion": "no events at this time",
+
+    "features-htp": {
+        "general": {
+            "title": "General",
+            "paragraph-1": "To participate in the game, you must have sufficient balance/funds to cover your bets. Your current balance can be seen at the bottom left of your screen.",
+            "paragraph-2": "The TOTAL BET indicator displays the total amount of bets you have placed for the current round.",
+            "paragraph-3": "The table displays the minimum and maximum bets allowed, which may change at any time. Additionally, a unique period code and the name of the game you are playing are shown.",
+            "paragraph-4": "The timer informs you of the remaining time to place your bet. Once it expires, betting is closed, and no further bets are accepted. After the betting time ends, you will receive a confirmation message stating \"Bet Accepted\" if your bet has been successfully placed. Otherwise, you will receive a message stating \"Not all bets were accepted\" or \"Bet Rejected.\"",
+            "paragraph-5": "The chip display allows you to select the value of each chip you want to bet. You can choose the chip value by clicking on the chips at the bottom of the screen near the Cancel, Double, and Rebet buttons to see all available chip values. Only chip values that can be used with your current balance will be selectable."
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Additional buttons to enhance the player’s experience.",
+            "paragraph-1": "The Undo button removes the last chip you placed on the table.",
+            "paragraph-2": "Doubles the total value of the chips you have placed. Ensure your account balance is sufficient to cover the doubled bets.",
+            "paragraph-3": "Allows you to repeat the same bet as your previous round on the table.",
+            "paragraph-4": "The Burger Menu provides access to important in-game menus and features.",
+            "paragraph-5": "Conceals the chips already placed on the table.",
+            "paragraph-6": "Displays the statistics of the ongoing game.",
+            "paragraph-7": "Shows or hides the Roadmap/Game Statistics.",
+            "paragraph-8": "To save and use each player's favorite bets."
+        }
+    }
 }

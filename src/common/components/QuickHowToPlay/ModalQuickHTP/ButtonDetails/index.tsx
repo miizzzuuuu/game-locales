@@ -1,5 +1,5 @@
+import { useTranslation } from 'react-i18next';
 import Button from '../../../Button';
-import LabelTranslate from '../../../LabelTranslate';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -8,6 +8,8 @@ interface IProps {
 }
 
 const ButtonDetails = ({ show, openHTPDetail }: IProps) => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.container}>
             <Button
@@ -35,7 +37,7 @@ const ButtonDetails = ({ show, openHTPDetail }: IProps) => {
                     </defs>
                 </svg>
 
-                <LabelTranslate type="span" className={styles.text} value="complete-how-to-play" />
+                <span className={styles.text}>{t('complete-how-to-play')}</span>
             </Button>
         </div>
     );

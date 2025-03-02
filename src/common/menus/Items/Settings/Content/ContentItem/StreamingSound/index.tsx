@@ -3,7 +3,6 @@ import {
     selectEnableStreamingSound,
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import Item from '../../../Item';
 import SVGIconVolume from '../../../SVG/SVGIconVolume';
 
@@ -14,7 +13,7 @@ const StreamingSound = () => {
 
     return (
         <Item
-            label={<LabelTranslate value="live-streaming-sound" />}
+            label="live-streaming-sound"
             icon={<SVGIconVolume />}
             active={enableStreamingSound}
             onChangeActive={(value) => {

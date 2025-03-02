@@ -75,3 +75,9 @@
 .lose {
     color: #e0326f;
 }
+
+:global(.desktop) {
+    .bet-name {
+        font-size: 1.4rem;
+    }
+}

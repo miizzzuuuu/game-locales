@@ -62,5 +62,28 @@
     "complete-how-to-play": "Tam nasıl oynanır",
     "dont-show-again": "Tekrar gösterme",
     "streaming-error": "yayın hatası: geçersiz yayın URL'si",
-    "no-promotion": "şu anda etkinlik yok"
+    "no-promotion": "şu anda etkinlik yok",
+
+    "features-htp": {
+        "general": {
+            "title": "Genel",
+            "paragraph-1": "Oyuna katılmak için bahislerinizi karşılayacak yeterli bakiye/fonlara sahip olmalısınız. Mevcut bakiyeniz ekranınızın sol alt köşesinde görülebilir.",
+            "paragraph-2": "TOPLAM BAHİS göstergesi, mevcut tur için yerleştirdiğiniz bahislerin toplam tutarını gösterir.",
+            "paragraph-3": "Masada izin verilen minimum ve maksimum bahisleri gösterir ve bu tutarlar her an değişebilir. Ayrıca, mevcut dönemin benzersiz kodu ve oynadığınız oyunun adı da gösterilir.",
+            "paragraph-4": "Zamanlayıcı, bahis yapmak için kalan süreyi belirtir. Zamanlayıcı sona erdiğinde, bahisler kapanır ve daha fazla bahis kabul edilmez. Bahisler kapandıktan sonra, bahsiniz oyun turu için kabul edilirse \"bahis onaylandı\" bildirimini alırsınız; aksi takdirde \"Tüm bahisler kabul edilmedi\" veya \"Bahis reddedildi\" mesajını görürsünüz.",
+            "paragraph-5": "Chip ekranı, bahis yapmak istediğiniz her chipin değerini seçmenizi sağlar. Ekranın alt kısmında, Undo, Double ve Rebet düğmelerinin yakınında bulunan chiplere tıklayarak chip değerlerini seçebilirsiniz. Mevcut bakiyenizle uyumlu olan chip değerleri seçilebilir."
+        },
+        "menu": {
+            "title": "Menü",
+            "description": "Oyunculara oyun sırasında yardımcı olacak ek düğmeler.",
+            "paragraph-1": "Undo düğmesi, masaya yerleştirdiğiniz son chipi kaldırır.",
+            "paragraph-2": "Yerleştirdiğiniz chiplerin toplam değerini ikiye katlar. Hesap bakiyenizin ikiye katlanan bahisleri karşılayacak kadar olduğundan emin olun.",
+            "paragraph-3": "Masada önceki turda yerleştirdiğinizle aynı bahsi tekrarlamanıza olanak tanır.",
+            "paragraph-4": "Burger Menüsü, oyundaki önemli menülere ve özelliklere erişim sağlar.",
+            "paragraph-5": "Masaya yerleştirdiğiniz chipleri gizler.",
+            "paragraph-6": "Devam eden oyunun istatistiklerini gösterir.",
+            "paragraph-7": "Roadmap/Oyun İstatistiklerini gösterir veya gizler.",
+            "paragraph-8": "Her oyuncunun favori bahislerini kaydetmek ve kullanmak için."
+        }
+    }
 }

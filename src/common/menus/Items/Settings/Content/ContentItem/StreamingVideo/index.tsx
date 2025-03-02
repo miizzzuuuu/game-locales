@@ -3,7 +3,6 @@ import {
     selectEnableStreamingVideo,
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import Item from '../../../Item';
 import SVGIconCamera from '../../../SVG/SVGIconCamera';
 
@@ -14,7 +13,7 @@ const StreamingVideo = () => {
 
     return (
         <Item
-            label={<LabelTranslate value="video" />}
+            label="video"
             icon={<SVGIconCamera />}
             active={enableStreamingVideo}
             onChangeActive={(value) => {

@@ -1,16 +1,17 @@
-import LabelTranslate from '../../../../components/LabelTranslate';
+import { useTranslation } from 'react-i18next';
 import Card from '../Card';
 import CardContainer from '../CardContainer';
 import ContentEmpty from '../ContentEmpty';
 import { useFetchTransaction } from '../hooks/useFetchTransaction';
 
 const Today = () => {
+    const { t } = useTranslation();
     const { transactionData, isLoading, lastItemRef } = useFetchTransaction({ date: 'today' });
 
     return (
         <div>
             {transactionData.length === 0 && !isLoading && (
-                <ContentEmpty message={<LabelTranslate value="no-transactions" />} />
+                <ContentEmpty message={t('no-transactions')} />
             )}
 
             {transactionData.length > 0 && (

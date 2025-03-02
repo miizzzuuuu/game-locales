@@ -11,14 +11,6 @@ import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
-import enFeatures from '../../locales/en/features.json';
-import idFeatures from '../../locales/id/features.json';
-import koFeatures from '../../locales/ko/features.json';
-import ptBRFeatures from '../../locales/pt-BR/features.json';
-import thFeatures from '../../locales/th/features.json';
-import vnFeatures from '../../locales/vn/features.json';
-import zhFeatures from '../../locales/zh/features.json';
-
 // spesific game
 import enM23 from '../../locales/en/m23.json';
 import idM23 from '../../locales/id/m23.json';
@@ -36,79 +28,78 @@ import vnHTP from '../../locales/vn/htp.json';
 import zhHTP from '../../locales/zh/htp.json';
 
 // mini how to play
-import enMiniHTP from '../../locales/en/mini-htp.json';
-import hiMiniHTP from '../../locales/hi/mini-htp.json';
-import idMiniHTP from '../../locales/id/mini-htp.json';
-import koMiniHTP from '../../locales/ko/mini-htp.json';
-import thMiniHTP from '../../locales/th/mini-htp.json';
-import trMiniHTP from '../../locales/tr/mini-htp.json';
-import vnMiniHTP from '../../locales/vn/mini-htp.json';
-import zhMiniHTP from '../../locales/zh/mini-htp.json';
+import enQuickHTP from '../../locales/en/quick-htp.json';
+import hiQuickHTP from '../../locales/hi/quick-htp.json';
+import idQuickHTP from '../../locales/id/quick-htp.json';
+import koQuickHTP from '../../locales/ko/quick-htp.json';
+import thQuickHTP from '../../locales/th/quick-htp.json';
+import trQuickHTP from '../../locales/tr/quick-htp.json';
+import vnQuickHTP from '../../locales/vn/quick-htp.json';
+import zhQuickHTP from '../../locales/zh/quick-htp.json';
 
 const resources: Resource = {
     en: {
-        translation: {
-            common: { ...enCommon, ...enFeatures },
+        common: enCommon,
+        game: {
             m23: enM23,
             htp: enHTP,
-            miniHtp: enMiniHTP,
+            'quick-htp': enQuickHTP,
         },
     },
     hi: {
-        translation: {
-            common: { ...hiCommon },
-            miniHtp: hiMiniHTP,
+        common: hiCommon,
+        game: {
+            'quick-htp': hiQuickHTP,
         },
     },
     id: {
-        translation: {
-            common: { ...idCommon, ...idFeatures },
+        common: idCommon,
+        game: {
             m23: idM23,
             htp: idHTP,
-            miniHtp: idMiniHTP,
+            'quick-htp': idQuickHTP,
         },
     },
     ko: {
-        translation: {
-            common: { ...koCommon, ...koFeatures },
+        common: koCommon,
+        game: {
             m23: koM23,
             htp: koHTP,
-            miniHtp: koMiniHTP,
+            'quick-htp': koQuickHTP,
         },
     },
     'pt-BR': {
-        translation: {
-            common: { ...ptBRCommon, ...ptBRFeatures },
-        },
+        common: ptBRCommon,
+        game: {},
     },
     th: {
-        translation: {
-            common: { ...thCommon, ...thFeatures },
+        common: thCommon,
+        game: {
             m23: thM23,
             htp: thHTP,
-            miniHtp: thMiniHTP,
+            'quick-htp': thQuickHTP,
         },
     },
     tr: {
-        translation: {
-            common: { ...trCommon },
-            miniHtp: trMiniHTP,
+        common: trCommon,
+        game: {
+            'quick-htp': trQuickHTP,
         },
     },
     vn: {
-        translation: {
-            common: { ...vnCommon, ...vnFeatures },
+        common: vnCommon,
+        game: {
             m23: vnM23,
             htp: vnHTP,
-            miniHtp: vnMiniHTP,
+            'quick-htp': vnQuickHTP,
         },
     },
     zh: {
-        translation: {
-            common: { ...zhCommon, ...zhFeatures },
+        common: zhCommon,
+        game: {
             m23: zhM23,
             htp: zhHTP,
-            miniHtp: zhMiniHTP,
+            'quick-htp': zhQuickHTP,
         },
     },
 };
@@ -116,8 +107,12 @@ const resources: Resource = {
 i18next
     .use(initReactI18next)
     .init({
-        resources,
+        debug: true,
         fallbackLng: 'en',
+        ns: ['common', 'game'],
+        defaultNS: 'common',
+        fallbackNS: 'common',
+        resources,
     })
     .then()
     .catch(() => console.log('error init i18n'));

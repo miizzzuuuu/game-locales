@@ -1,15 +1,16 @@
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '../../../store/hooks';
 import { toggleMenuMain } from '../../../store/slice/menuSlice';
 import ButtonAction from '../ButtonAction';
-import LabelTranslate from '../LabelTranslate';
 import SVGIconMenu from './SVG/SVGIconMenu';
 
 const ButtonMenu = () => {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="menu" option={{ lng: 'en' }} />}
+            label={t('menu', { lng: 'en' })}
             icon={<SVGIconMenu />}
             onClick={() => dispatch(toggleMenuMain())}
         />

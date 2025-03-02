@@ -25,7 +25,6 @@
     }
 
     th {
-        font-size: 1rem;
         font-weight: 600;
     }
 
@@ -61,4 +60,14 @@
 
     font-size: 0.8rem;
     font-weight: 700;
+}
+
+:global(.desktop) {
+    .table {
+        font-size: 1.3rem;
+    }
+
+    .bigger {
+        font-size: 1.4rem;
+    }
 }

@@ -30,13 +30,13 @@
 }
 
 .title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 :global(.desktop) {
     .title {
-        font-size: 1.76rem; // 1.6rem;
+        font-size: 1.6rem;
     }
 }

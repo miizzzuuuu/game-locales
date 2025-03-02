@@ -1,0 +1,21 @@
+.total-bet {
+    height: auto;
+}
+
+:global(.mobile-portrait) {
+    .total-bet {
+        width: var(--width-total-bet);
+        position: relative;
+        line-height: 1.5;
+    }
+}
+
+:global(.mobile-landscape) {
+    .total-bet {
+        width: max-content;
+        padding: 0.8rem;
+
+        background-color: #282a3d;
+        border-radius: 0.4rem;
+    }
+}

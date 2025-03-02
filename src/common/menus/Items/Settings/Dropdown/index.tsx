@@ -50,7 +50,9 @@ const Dropdown = ({ initialValue, options, onChange, style }: DropdownProps) => 
                 {IconSelected && <IconSelected className={styles.icon} />}
                 <span className={styles.text}>{selectedValue && langName[selectedValue]}</span>
 
-                <SVGIconChevronDown className={styles.arrow} />
+                <SVGIconChevronDown
+                    className={`${styles.arrow} ${isOpen ? styles.open : styles.close}`}
+                />
             </Button>
 
             {isOpen && (

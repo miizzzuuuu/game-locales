@@ -4,7 +4,6 @@ import {
     selectOpenMenuPayout,
     toggleMenuPayout,
 } from '../../../../store/slice/menuSlice';
-import LabelTranslate from '../../../components/LabelTranslate';
 import { MenuPageProps } from '../../Menu';
 import Panel from '../../Panel';
 import PayoutContent from './PayoutContent';
@@ -18,7 +17,7 @@ const Payout = ({ handleClose }: MenuPageProps) => {
     return (
         <Panel
             show={openMenuPayout}
-            title={<LabelTranslate value="payout-and-limit" />}
+            title="payout-and-limit"
             footerBg="#1e1f2e"
             className={styles['menu-payout']}
             handleBack={openMenuMain ? () => dispatch(toggleMenuPayout()) : undefined}

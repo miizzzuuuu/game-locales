@@ -1,0 +1,79 @@
+:global(.mobile-portrait),
+:global(.mobile-landscape) {
+    .user-info {
+        height: var(--height-footer);
+        width: max-content;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+
+        background-color: #282a3d;
+        border-radius: 0.4rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .label-wrapper {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .label,
+    .value {
+        white-space: nowrap;
+        line-height: 1.5rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .label {
+        color: var(--gray);
+    }
+
+    .value {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: -0.02rem;
+    }
+}
+
+:global(.desktop) {
+    .user-info {
+        background-color: #282a3d;
+        width: max-content;
+        border-radius: 0.4rem;
+        padding: 1.2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .label-wrapper {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .label,
+    .value {
+        white-space: nowrap;
+    }
+
+    .label {
+        color: #ddd;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .value {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}

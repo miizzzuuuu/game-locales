@@ -33,9 +33,10 @@
 :global(.desktop) {
     .button {
         height: 3.6rem;
+        border-width: 0.2rem;
     }
 
     .label {
-        font-size: 1.43rem;
+        font-size: 1.4rem;
     }
 }

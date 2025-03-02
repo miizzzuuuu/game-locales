@@ -1,10 +1,12 @@
-import LabelTranslate from '../../../../components/LabelTranslate';
+import { useTranslation } from 'react-i18next';
 import styles from './styles.module.scss';
 
 const NoPromotion = () => {
+    const { t } = useTranslation();
+
     return (
         <div className={styles.content}>
-            <LabelTranslate value="no-promotion" className={styles.text} />
+            <span className={styles.text}>{t('no-promotion')}</span>
         </div>
     );
 };

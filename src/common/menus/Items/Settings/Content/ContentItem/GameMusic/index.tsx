@@ -3,7 +3,6 @@ import {
     selectEnableGameMusic,
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import Item from '../../../Item';
 import SVGIconMusic from '../../../SVG/SVGIconMusic';
 
@@ -14,7 +13,7 @@ const GameMusic = () => {
 
     return (
         <Item
-            label={<LabelTranslate value="background-music" />}
+            label="background-music"
             icon={<SVGIconMusic />}
             active={enableGameMusic}
             onChangeActive={(value) => {

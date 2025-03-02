@@ -1,6 +1,5 @@
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import { selectAutoRebet, updateSetings } from '../../../../../../../store/slice/settingsSlice';
-import LabelTranslate from '../../../../../../components/LabelTranslate';
 import Item from '../../../Item';
 import SVGIconBetClick from '../../../SVG/SVGIconBetClick';
 
@@ -11,7 +10,7 @@ const AutoRebet = () => {
 
     return (
         <Item
-            label={<LabelTranslate value="auto-rebet" />}
+            label="auto-rebet"
             icon={<SVGIconBetClick />}
             active={autoRebet}
             onChangeActive={(value) => {

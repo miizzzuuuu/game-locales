@@ -16,3 +16,9 @@
     letter-spacing: 0.028rem;
     padding-left: 0.8rem;
 }
+
+:global(.desktop) {
+    .date {
+        font-size: 1.6rem;
+    }
+}

@@ -25,7 +25,8 @@
 
 .dropdown-item {
     height: 3.6rem;
-    padding: 0 0.8rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     cursor: pointer;
     color: #fff;
     display: flex;
@@ -45,8 +46,8 @@
     border: none;
     background: none;
     display: flex;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     justify-content: space-between;
     align-items: center;
     gap: 0.6rem;
@@ -63,7 +64,19 @@
     height: 1.8rem;
 }
 
+.arrow {
+    transition: transform 0.4s;
+
+    &.close {
+        transform: rotateZ(0deg);
+    }
+
+    &.open {
+        transform: rotateZ(180deg);
+    }
+}
+
 .text {
-    font-size: 1.43rem; // 1.3rem;
+    font-size: 1.4rem; // 1.3rem;
     font-weight: 500;
 }

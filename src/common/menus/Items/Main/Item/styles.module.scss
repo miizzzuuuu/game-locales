@@ -8,17 +8,16 @@
     padding: 1rem 0.8rem;
     cursor: pointer;
 
-    & > svg {
+    svg {
         width: 3.2rem;
         height: 3.2rem;
     }
+}
 
-    &-text {
-        color: #5e5f73;
-        font-size: 1.2rem;
-        font-weight: 400;
-        text-align: center;
-        line-height: 1.25;
-        text-transform: capitalize;
-    }
+.text {
+    color: #5e5f73;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
 }

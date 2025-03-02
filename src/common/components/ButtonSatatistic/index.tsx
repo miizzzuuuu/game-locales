@@ -1,15 +1,16 @@
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '../../../store/hooks';
 import { toggleMenuStatistic } from '../../../store/slice/menuSlice';
 import ButtonAction from '../ButtonAction';
-import LabelTranslate from '../LabelTranslate';
 import SVGIconStatistic from './SVG/SVGIconStatistic';
 
 const ButtonSatatistic = () => {
+    const { t } = useTranslation();
     const dispatch = useAppDispatch();
 
     return (
         <ButtonAction
-            label={<LabelTranslate value="statistic" option={{ lng: 'en' }} />}
+            label={t('statistic', { lng: 'en' })}
             icon={<SVGIconStatistic />}
             onClick={() => dispatch(toggleMenuStatistic())}
         />

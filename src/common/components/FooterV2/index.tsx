@@ -32,7 +32,7 @@ const Left = () => {
 };
 
 const Right = () => {
-    const { i18n, t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const gameName = useAppSelector(selectGameName);
     const period = useAppSelector(selectPeriod);
@@ -47,7 +47,7 @@ const Right = () => {
             </div>
 
             <div className={styles['total-bet']}>
-                <span className={styles['text-4']}>{t('common.total-bet')}: </span>
+                <span className={styles['text-4']}>{t('total-bet')}: </span>
                 <span className={`${styles['text-5']} ${styles['text-shadow']}`}>
                     {formatNumber(totaBet, i18n.language)}
                 </span>

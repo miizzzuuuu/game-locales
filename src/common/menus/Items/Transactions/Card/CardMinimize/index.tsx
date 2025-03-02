@@ -3,13 +3,12 @@ import { ITransactionCardProps } from '..';
 import { useAppSelector } from '../../../../../../store/hooks';
 import { selectGameName } from '../../../../../../store/slice/gameSlice';
 import { selectCurrency, selectShowCurrency } from '../../../../../../store/slice/playerSlice';
-import LabelTranslate from '../../../../../components/LabelTranslate';
 import { getGameDisplayName, getPcode } from '../../../../../utils/GameHelper';
 import { formatCurrency, formatedDate } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
 const CardMinimize = ({ data }: ITransactionCardProps) => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const { tglbel, pcode, total_transaction, total_debit, periode } = data;
 
@@ -45,11 +44,9 @@ const CardMinimize = ({ data }: ITransactionCardProps) => {
             </div>
 
             <div className={styles.bottom}>
-                <LabelTranslate
-                    value="period"
-                    className={styles['text-secondary']}
-                    style={{ textTransform: 'capitalize' }}
-                />
+                <span className={styles['text-secondary']} style={{ textTransform: 'capitalize' }}>
+                    {t('period')}
+                </span>
 
                 <span className={styles['text-period']}>#{periode}</span>
             </div>

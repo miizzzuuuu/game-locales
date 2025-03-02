@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { useAppTranslate } from '../../../services/i18next/hooks';
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { doubleBet, selectBetAdd, selectIdsBetAdd } from '../../../store/slice/bets';
 import { selectMax, selectMax50 } from '../../../store/slice/gameSlice';
@@ -7,7 +7,6 @@ import { setMessage } from '../../../store/slice/gameStateSlice';
 import { selectBalance } from '../../../store/slice/playerSlice';
 import { selectBetIsOpen } from '../../../store/slice/timerSlice';
 import ButtonAction from '../ButtonAction';
-import LabelTranslate from '../LabelTranslate';
 import SVGIconDoubleBet from './SVG/SVGIconDoubleBet';
 
 interface IProps {
@@ -18,7 +17,7 @@ interface IProps {
 const ButtonDoubleBet = ({ show, styles }: IProps) => {
     const dispatch = useAppDispatch();
 
-    const { t } = useAppTranslate();
+    const { t } = useTranslation();
 
     const idsBetAdd = useAppSelector(selectIdsBetAdd);
     const betAdd = useAppSelector(selectBetAdd);
@@ -86,7 +85,7 @@ const ButtonDoubleBet = ({ show, styles }: IProps) => {
     return (
         <ButtonAction
             show={show}
-            label={<LabelTranslate value="double" option={{ lng: 'en' }} />}
+            label={t('double', { lng: 'en' })}
             icon={<SVGIconDoubleBet />}
             style={styles}
             disabled={!isActive}

@@ -1,10 +1,10 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 import Button from '../Button';
 import styles from './styles.module.scss';
 
 interface IProps {
     show?: boolean;
-    label?: ReactNode | undefined;
+    label?: string;
     icon: ReactElement;
     disabled?: boolean;
     borderColor?: string;
