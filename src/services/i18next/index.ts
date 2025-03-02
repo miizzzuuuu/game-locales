@@ -11,14 +11,6 @@ import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
-// import enFeatures from '../../locales/en/features.json';
-// import idFeatures from '../../locales/id/features.json';
-// import koFeatures from '../../locales/ko/features.json';
-// import ptBRFeatures from '../../locales/pt-BR/features.json';
-// import thFeatures from '../../locales/th/features.json';
-// import vnFeatures from '../../locales/vn/features.json';
-// import zhFeatures from '../../locales/zh/features.json';
-
 // spesific game
 import enP6 from '../../locales/en/p6.json';
 import idP6 from '../../locales/id/p6.json';
