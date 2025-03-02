@@ -11,13 +11,13 @@ import trCommon from '../../locales/tr/common.json';
 import vnCommon from '../../locales/vn/common.json';
 import zhCommon from '../../locales/zh/common.json';
 
-import enFeatures from '../../locales/en/features.json';
-import idFeatures from '../../locales/id/features.json';
-import koFeatures from '../../locales/ko/features.json';
-import ptBRFeatures from '../../locales/pt-BR/features.json';
-import thFeatures from '../../locales/th/features.json';
-import vnFeatures from '../../locales/vn/features.json';
-import zhFeatures from '../../locales/zh/features.json';
+// import enFeatures from '../../locales/en/features.json';
+// import idFeatures from '../../locales/id/features.json';
+// import koFeatures from '../../locales/ko/features.json';
+// import ptBRFeatures from '../../locales/pt-BR/features.json';
+// import thFeatures from '../../locales/th/features.json';
+// import vnFeatures from '../../locales/vn/features.json';
+// import zhFeatures from '../../locales/zh/features.json';
 
 // spesific game
 import enP6 from '../../locales/en/p6.json';
@@ -36,78 +36,78 @@ import vnHTP from '../../locales/vn/htp.json';
 import zhHTP from '../../locales/zh/htp.json';
 
 // mini how to play
-import enMiniHTP from '../../locales/en/mini-htp.json';
-import hiMiniHTP from '../../locales/hi/mini-htp.json';
-import idMiniHTP from '../../locales/id/mini-htp.json';
-import koMiniHTP from '../../locales/ko/mini-htp.json';
-import thMiniHTP from '../../locales/th/mini-htp.json';
-import trMiniHTP from '../../locales/tr/mini-htp.json';
-import vnMiniHTP from '../../locales/vn/mini-htp.json';
-import zhMiniHTP from '../../locales/zh/mini-htp.json';
+import enQuickHTP from '../../locales/en/quick-htp.json';
+import hiQuickHTP from '../../locales/hi/quick-htp.json';
+import idQuickHTP from '../../locales/id/quick-htp.json';
+import koQuickHTP from '../../locales/ko/quick-htp.json';
+import thQuickHTP from '../../locales/th/quick-htp.json';
+import trQuickHTP from '../../locales/tr/quick-htp.json';
+import vnQuickHTP from '../../locales/vn/quick-htp.json';
+import zhQuickHTP from '../../locales/zh/quick-htp.json';
 
 const resources: Resource = {
     en: {
-        common: { ...enCommon, ...enFeatures },
+        common: enCommon,
         game: {
             p6: enP6,
             htp: enHTP,
-            miniHtp: enMiniHTP,
+            'quick-htp': enQuickHTP,
         },
     },
     hi: {
-        common: { ...hiCommon },
+        common: hiCommon,
         game: {
-            miniHtp: hiMiniHTP,
+            'quick-htp': hiQuickHTP,
         },
     },
     id: {
-        common: { ...idCommon, ...idFeatures },
+        common: idCommon,
         game: {
             p6: idP6,
             htp: idHTP,
-            miniHtp: idMiniHTP,
+            'quick-htp': idQuickHTP,
         },
     },
     ko: {
-        common: { ...koCommon, ...koFeatures },
+        common: koCommon,
         game: {
             p6: koP6,
             htp: koHTP,
-            miniHtp: koMiniHTP,
+            'quick-htp': koQuickHTP,
         },
     },
     'pt-BR': {
-        common: { ...ptBRCommon, ...ptBRFeatures },
+        common: ptBRCommon,
         game: {},
     },
     th: {
-        common: { ...thCommon, ...thFeatures },
+        common: thCommon,
         game: {
             p6: thP6,
             htp: thHTP,
-            miniHtp: thMiniHTP,
+            'quick-htp': thQuickHTP,
         },
     },
     tr: {
-        common: { ...trCommon },
+        common: trCommon,
         game: {
-            miniHtp: trMiniHTP,
+            'quick-htp': trQuickHTP,
         },
     },
     vn: {
-        common: { ...vnCommon, ...vnFeatures },
+        common: vnCommon,
         game: {
             p6: vnP6,
             htp: vnHTP,
-            miniHtp: vnMiniHTP,
+            'quick-htp': vnQuickHTP,
         },
     },
     zh: {
-        common: { ...zhCommon, ...zhFeatures },
+        common: zhCommon,
         game: {
             p6: zhP6,
             htp: zhHTP,
-            miniHtp: zhMiniHTP,
+            'quick-htp': zhQuickHTP,
         },
     },
 };
@@ -119,6 +119,7 @@ i18next
         fallbackLng: 'en',
         ns: ['common', 'game'],
         defaultNS: 'common',
+        fallbackNS: 'common',
         resources,
     })
     .then()

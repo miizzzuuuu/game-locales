@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { getQuickHTPPrefix } from '../../../../../game/components/QuickHowToPlayContent/helper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -8,7 +9,10 @@ interface IProps {
 const Content = ({ keySlide }: IProps) => {
     const { t } = useTranslation();
 
-    const contents = t(`miniHtp.${keySlide}.content`, { returnObjects: true, ns: 'game' });
+    const contents = t(`quick-htp.${getQuickHTPPrefix()}.${keySlide}.content`, {
+        returnObjects: true,
+        ns: 'game',
+    });
 
     return (
         <>

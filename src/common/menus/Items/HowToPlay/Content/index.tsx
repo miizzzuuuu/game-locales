@@ -1,5 +1,5 @@
 import { useState, useTransition } from 'react';
-import Features from '../Features';
+import Features from '../../../../components/HowToPlay/Features';
 import Tabs from '../Tabs';
 import styles from './styles.module.scss';
 

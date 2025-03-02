@@ -31,16 +31,27 @@ const ANIMATIONS_URLS: MiniHTPAnimationUrls = [
     'https://cdn.lottielab.com/l/gcj2eacK47zTE0.json',
 ];
 
-export const MINI_HTP_AIMATIOSN: Record<string, MiniHTPAnimationUrls> = {
-    p6b: ANIMATIONS_URLS,
+export const QUICK_HTP_CONFIG: Record<string, { animations: MiniHTPAnimationUrls; key: string }> = {
+    p6b: {
+        animations: ANIMATIONS_URLS,
+        key: 'p6b',
+    },
 } as const;
 
 export const getUrlAnimation = (slide: number, language: string) => {
-    const urls = MINI_HTP_AIMATIOSN[getPcode()]?.[slide - 1];
+    const urls = QUICK_HTP_CONFIG[getPcode()]?.animations[slide - 1];
 
     if (typeof urls === 'object') {
         return urls[language] || urls[Object.keys(urls)[0]];
     }
 
     return urls;
+};
+
+export const getQuickHTPPrefix = () => {
+    return QUICK_HTP_CONFIG[getPcode()]?.key;
+};
+
+export const checkIfQuickHTPExist = () => {
+    return !!QUICK_HTP_CONFIG[getPcode()];
 };

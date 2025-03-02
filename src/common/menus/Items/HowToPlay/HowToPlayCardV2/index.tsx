@@ -1,4 +1,5 @@
 import { ReactNode, useState } from 'react';
+import H1 from '../../../../components/HowToPlay/ui/H1';
 import { SVGIconChevronDown } from '../../../../components/SVG/SVGIconChevronDown';
 import styles from './styles.module.scss';
 
@@ -20,7 +21,7 @@ const HowToPlayCardV2 = ({ title, children }: IProps) => {
             onClick={handleClick}
         >
             <div className={styles.top}>
-                <div className={styles.title}>{title}</div>
+                <H1>{title}</H1>
 
                 <div
                     className={`${styles['accordion-icon']} ${isOpen ? styles.open : styles.close}`}

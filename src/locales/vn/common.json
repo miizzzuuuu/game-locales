@@ -62,5 +62,28 @@
     "complete-how-to-play": "Hướng dẫn chơi đầy đủ",
     "dont-show-again": "Không hiển thị lại",
     "streaming-error": "lỗi phát trực tuyến: url phát không hợp lệ",
-    "no-promotion": "không có sự kiện lúc này"
+    "no-promotion": "không có sự kiện lúc này",
+
+    "features-htp": {
+        "general": {
+            "title": "Chung",
+            "paragraph-1": "Để tham gia trò chơi, bạn phải có đủ số dư/quỹ để trang trải cho các cược của mình. Số dư hiện tại của bạn có thể được xem ở góc dưới bên trái màn hình.",
+            "paragraph-2": "Chỉ báo TỔNG CƯỢC hiển thị tổng số tiền cược bạn đã đặt cho vòng hiện tại.",
+            "paragraph-3": "Hiển thị cược tối thiểu và tối đa được phép trên bàn, có thể thay đổi bất cứ lúc nào. Ngoài ra, mã duy nhất của kỳ hiện tại và tên trò chơi bạn đang chơi cũng được hiển thị.",
+            "paragraph-4": "Bộ đếm thời gian cho biết thời gian còn lại để đặt cược. Khi bộ đếm kết thúc, việc đặt cược sẽ đóng và không còn cược nào được chấp nhận. Sau khi đặt cược kết thúc, bạn sẽ nhận được thông báo \"cược được xác nhận\" nếu cược của bạn được chấp nhận cho vòng trò chơi; nếu không, bạn sẽ thấy \"Không phải tất cả cược được chấp nhận\" hoặc \"Cược bị từ chối\".",
+            "paragraph-5": "Màn hình chip cho phép bạn chọn giá trị của mỗi chip bạn muốn đặt cược. Bạn có thể chọn giá trị chip bằng cách nhấp vào chip ở dưới cùng của màn hình, nằm gần các nút Hoàn tác, Nhân đôi và Đặt lại, để xem tất cả giá trị chip có sẵn. Chỉ những giá trị chip tương thích với số dư hiện tại của bạn mới có thể được chọn."
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Các nút bổ sung để hỗ trợ người chơi trong trò chơi.",
+            "paragraph-1": "Nút Hoàn tác sẽ xóa chip cuối cùng bạn đã đặt trên bàn.",
+            "paragraph-2": "Nhân đôi giá trị tổng của các chip bạn đã đặt. Đảm bảo số dư tài khoản của bạn đủ để trang trải cho các cược nhân đôi.",
+            "paragraph-3": "Cho phép bạn lặp lại cược giống như vòng trước trên bàn.",
+            "paragraph-4": "Menu Burger cung cấp quyền truy cập vào các menu và tính năng quan trọng trong trò chơi.",
+            "paragraph-5": "Ẩn các chip bạn đã đặt trên bàn.",
+            "paragraph-6": "Hiển thị thống kê của trò chơi đang diễn ra.",
+            "paragraph-7": "Hiển thị hoặc ẩn Roadmap/Thống kê trò chơi.",
+            "paragraph-8": "Để lưu và sử dụng các cược yêu thích của từng người chơi."
+        }
+    }
 }
