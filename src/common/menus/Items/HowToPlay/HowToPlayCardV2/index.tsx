@@ -1,5 +1,5 @@
 import { ReactNode, useState } from 'react';
-import H1 from '../../../../components/HowToPlay/ui/H1';
+import { H1 } from '../../../../components/HowToPlay/ui';
 import { SVGIconChevronDown } from '../../../../components/SVG/SVGIconChevronDown';
 import styles from './styles.module.scss';
 
