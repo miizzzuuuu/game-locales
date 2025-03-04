@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
+import { getBasePcode } from '../../../../../common/utils/GameHelper';
 import { useAppSelector } from '../../../../../store/hooks';
 import { selectScanNumber } from '../../../../../store/slice/resultSlice';
 import { selectBetIsOpen } from '../../../../../store/slice/timerSlice';
@@ -10,6 +12,7 @@ import SvgTiger from '../../SVG/SvgTiger';
 import styles from './../styles.module.scss';
 
 const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
+    const { t } = useTranslation();
     const chip = useGetChipBet(bet);
 
     const scanNumber = useAppSelector(selectScanNumber);
@@ -29,7 +32,9 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
             </div>
 
             <div className={styles.content}>
-                <div className={styles['bet-name']}>TIGER</div>
+                <div className={styles['bet-name']}>
+                    {t(`${getBasePcode()}.tiger`, { ns: 'game' })}
+                </div>
                 <div className={styles['bet-payout']}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1
                 </div>

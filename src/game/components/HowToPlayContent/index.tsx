@@ -1,19 +1,17 @@
 import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
+import DTWCard from './Items/DTWCard';
+import GeneralRules from './Items/GeneralRules';
 import Introduction from './Items/Introduction';
 import Payout from './Items/Payout';
-import Rules from './Items/Rules';
-import WildcardBet from './Items/WildcardBet';
-import BetDescription from './Items/BetDescription';
-import DTWCard from './Items/DTWCard';
+import WildBet from './Items/WildBet';
 
 const HowToPlayContent = () => {
     return (
         <MenuContentContainer>
             <Introduction />
-            <Rules />
+            <GeneralRules />
             <DTWCard />
-            <WildcardBet />
-            <BetDescription />
+            <WildBet />
             <Payout />
         </MenuContentContainer>
     );

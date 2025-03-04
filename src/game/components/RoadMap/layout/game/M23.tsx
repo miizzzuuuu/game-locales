@@ -1,3 +1,4 @@
+import { JSX } from 'react';
 import { getOrientation } from '../../../../../common/utils/DisplayHelper';
 import { getPcode } from '../../../../../common/utils/GameHelper';
 import { useAppSelector } from '../../../../../store/hooks';

@@ -1,11 +1,9 @@
 {
     "introduction": {
         "title": "pengenalan",
-        "content": "Dragon Tiger Wild adalah game terbaru dari IDNLIVE EUROPE yang menghadirkan keseruan lebih dengan tambahan <b>Kartu Wild</b>. Permainan ini memberikan pengalaman baru bagi para penggemar Dragon Tiger, dengan peluang kemenangan fantastis <b>hingga 127x! LET’S GET WILD!!!</b>"
-    },
-    "game-objective": {
-        "title": "TUJUAN PERMAINAN",
-        "content": "Tujuan dalam permainan ini adalah menebak kartu tertinggi antara Naga dan Harimau, serta memanfaatkan Kartu Wild untuk membentuk kombinasi bonus wild agar meraih hadiah kemenangan yang lebih besar."
+        "paragraph-1": "Dragon Tiger Wild adalah game terbaru dari IDNLIVE EUROPE yang menghadirkan keseruan lebih dengan tambahan <b>Kartu Wild</b>. Permainan ini memberikan pengalaman baru bagi para penggemar Dragon Tiger, dengan peluang kemenangan fantastis <b>hingga 127x! LET’S GET WILD!!!</b>",
+        "game-objective": "TUJUAN PERMAINAN",
+        "paragraph-2": "Tujuan dalam permainan ini adalah menebak kartu tertinggi antara Naga dan Harimau, serta memanfaatkan Kartu Wild untuk membentuk kombinasi bonus wild agar meraih hadiah kemenangan yang lebih besar."
     },
     "rules": {
         "title": "PERATURAN UMUM",
@@ -15,7 +13,7 @@
             "Pada setiap awal <i>Shoe</i> baru, <i>Dealer</i> akan mengeluarkan satu kartu sebagai penentu berapa kartu yang akan di <i>Burn</i> atau dibuang. Maksimal 10 kartu bisa dibuang.",
             "Setelah waktu taruhan habis, dealer mengeluarkan satu kartu sebagai Kartu Wild, lalu membagikan masing-masing satu kartu ke Naga dan Harimau.",
             "Pihak dengan nilai tertinggi akan menjadi pemenang. Nilai tertinggi adalah K yaitu bernilai 13.",
-            "Jika hasilnya <b>Seri</b>, taruhan Naga dan Harimau dikembalikan setengahnya. Taruhan seri hanya menang jika nilai Naga dan Harimau sama."
+            "Jika hasilnya <b>Seri</b>, <b>taruhan Naga dan Harimau dikembalikan setengahnya</b>. Taruhan seri hanya menang jika nilai Naga dan Harimau sama."
         ]
     },
     "dragon-tiger-wild-card": {

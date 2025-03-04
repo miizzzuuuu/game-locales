@@ -1,22 +1,23 @@
 {
-    "p6b": {
+    "m23b": {
         "slide-1": {
             "title": "How to Play",
             "content": [
-                "Win fantastic payout bonuses up to <b>500x Jackpot & Lucky Number!</b>",
-                "Play by guessing the ball that will appear in the spinning cage. There are 24 balls numbered from 1 to 24 in red and black."
+                "Dragon Tiger Wild comes with the latest <b>WILD CARD</b> bonus! Seize the opportunity to win bigger up to <b>127x!</b> You just need to guess the highest card and the wild card for bigger prizes! <b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
-            "title": "Lucky Numbers",
+            "title": "How to Play",
             "content": [
-                "The system randomly selects 2 to 12 numbers as Lucky Numbers. Lucky Numbers have a drastic increase in payout above the normal payout, ranging from <b>30x to 95x</b> your bet amount."
+                "This game is played with 3 cards. 2 main cards (Dragon and Tiger) <b>will compete to see which side has the highest value</b>. 1 wild card is drawn to form a <b>Bonus Wild combination</b>.",
+                "You can bet on the Main Bet: Dragon/Tiger. Or on the wild bet combinations: Dragon Wild, Dragon Pair or Tiger Wild, Tiger Pair, and Super Wild."
             ]
         },
         "slide-3": {
-            "title": "Jackpot Number",
+            "title": "Bonus Wild",
             "content": [
-                "The system randomly selects <b>1 number</b> as the Jackpot Number. This number can significantly increase the payout beyond the Lucky Number Bonus, starting from <b>100x to 500x</b> your bet."
+                "The wild card is here to form bonus combinations that can drastically increase your winnings up to <b>127x!</b>",
+                "Bet on the wild bet combinations and seize the chance for <b>multiple BONUS WILD rewards!</b>"
             ]
         }
     }

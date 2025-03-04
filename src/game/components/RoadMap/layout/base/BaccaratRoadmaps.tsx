@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import { getBasePcode, getPcode } from '../../../../../common/utils/GameHelper';
 import { IKeyNumberDict } from '../game/M23';
 import { BaseV2Roadmap } from './V2Roadmap';

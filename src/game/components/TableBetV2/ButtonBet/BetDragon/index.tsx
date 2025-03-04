@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { BetButtonIProps } from '..';
 import ChipBet from '../../../../../common/components/ChipBet';
 import { useGetChipBet } from '../../../../../common/hooks/useGetChipBet';
@@ -7,8 +8,10 @@ import { payoutGroup } from '../../../../utils/DragonTigerBHelper';
 import { RenderCard } from '../../../Card/RenderCard';
 import SvgDragon from '../../SVG/SvgDragon';
 import styles from './../styles.module.scss';
+import { getBasePcode } from '../../../../../common/utils/GameHelper';
 
 const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
+    const { t } = useTranslation();
     const chip = useGetChipBet(bet);
 
     const scanNumber = useAppSelector((state) => state.result.scanNumber);
@@ -28,7 +31,9 @@ const BetDragon = ({ bet, placeBetHandler }: BetButtonIProps) => {
             </div>
 
             <div className={`${styles.content}`}>
-                <div className={`${styles['bet-name']}`}>DRAGON</div>
+                <div className={`${styles['bet-name']}`}>
+                    {t(`${getBasePcode()}.dragon`, { ns: 'game' })}
+                </div>
                 <div className={`${styles['bet-payout']}`}>
                     {payoutGroup[`${bet.button}-${bet.group}`]}:1
                 </div>

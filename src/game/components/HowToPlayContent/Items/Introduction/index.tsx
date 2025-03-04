@@ -1,21 +1,22 @@
-import LabelTranslate from '../../../../../common/components/LabelTranslate';
-import { Container, Heading2, P } from '../../../../../common/menus/Items/HowToPlay/Components';
-import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
-import Tablebet from './SVG/Tablebet';
+import { useTranslation } from 'react-i18next';
+import { Container, H2, P } from '../../../../../common/components/HowToPlay/ui';
+import HowToPlayCardV2 from '../../../../../common/menus/Items/HowToPlay/HowToPlayCardV2';
+import TableBetDTWild from './TableBetDTWild';
+
+const keyLang = 'htp.introduction';
 
 const Introduction = () => {
-    const keyLang = 'htp.introduction';
-    const keyLangGoal = 'htp.game-objective';
+    const { t } = useTranslation();
 
     return (
-        <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
+        <HowToPlayCardV2 title={t(`${keyLang}.title`, { ns: 'game' })}>
             <Container>
-                <Tablebet />
-                <P keyLang={keyLang} value="content" dangerouslySetInnerHTML />
-                <Heading2 keyLang={keyLangGoal} value="title" />
-                <P keyLang={keyLangGoal} value="content" />
+                <TableBetDTWild />
+                <P>{t(`${keyLang}.paragraph-1`, { ns: 'game' })}</P>
+                <H2>{t(`${keyLang}.game-objective`, { ns: 'game' })}</H2>
+                <P>{t(`${keyLang}.paragraph-2`, { ns: 'game' })}</P>
             </Container>
-        </HowToPlayCard>
+        </HowToPlayCardV2>
     );
 };
 

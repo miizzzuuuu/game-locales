@@ -1,17 +1,21 @@
-import LabelTranslate from '../../../../../common/components/LabelTranslate';
-import { Container, P } from '../../../../../common/menus/Items/HowToPlay/Components';
-import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlayCard';
-import CardValueTable from './CardValueTable';
+import { useTranslation } from 'react-i18next';
+import { Container, P } from '../../../../../common/components/HowToPlay/ui';
+import HowToPlayCardV2 from '../../../../../common/menus/Items/HowToPlay/HowToPlayCardV2';
+import TableCardValue from './TableCardValue';
+
+const keyLang = 'htp.dragon-tiger-wild-card';
+
 const DTWCard = () => {
-    const keyLang = 'htp.dragon-tiger-wild-card';
+    const { t } = useTranslation();
 
     return (
-        <HowToPlayCard title={<LabelTranslate value="title" keyLang={keyLang} />}>
+        <HowToPlayCardV2 title={t(`${keyLang}.title`, { ns: 'game' })}>
             <Container>
-                <P keyLang={keyLang} value="content" />
-                <CardValueTable />
+                <P>{t(`${keyLang}.content`, { ns: 'game' })}</P>
+
+                <TableCardValue />
             </Container>
-        </HowToPlayCard>
+        </HowToPlayCardV2>
     );
 };
 

@@ -1,22 +1,23 @@
 {
-    "p6b": {
+    "m23b": {
         "slide-1": {
             "title": "玩法",
             "content": [
-                "赢得高达 <b>500x Jackpot & Lucky Number!</b> 的丰厚奖金！",
-                "通过猜测旋转笼中将出现的球来玩。有24个球，编号从1到24，红色和黑色。"
+                "Dragon Tiger Wild 配备了最新的 <b>KARTU WILD</b> bonus！抓住机会赢得高达 <b>127x</b> 的更大奖励！您只需猜出最高牌和 wild 牌即可获得更大的奖励！<b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
-            "title": "Lucky Numbers",
+            "title": "玩法",
             "content": [
-                "系统随机选择2到12个数字作为 Lucky Number。Lucky Numbers 的赔付大幅增加，超过正常赔付，从您下注金额的 <b>30倍到95倍</b>。"
+                "本游戏使用 3 张牌进行。2 张主牌（Dragon 和 Tiger）<b>将比较哪一侧的价值最高</b>。1 张 wild 牌被抽出以形成 <b>Bonus Wild 组合</b>。",
+                "您可以投注主注：Dragon/Tiger。或投注 wild 组合：Dragon Wild、Dragon Pair 或 Tiger Wild、Tiger Pair 和 Super Wild。"
             ]
         },
         "slide-3": {
-            "title": "Jackpot Number",
+            "title": "Bonus Wild",
             "content": [
-                "系统随机选择 <b>1个数字</b> 作为 Jackpot Number。这个数字可以显著增加赔付，超过 Lucky Number 奖金，从您下注金额的 <b>100倍到500倍</b>。"
+                "Kartu Wild 的存在是为了形成可以显著增加您的奖金支付的 bonus 组合，最高可达 <b>127x！</b>",
+                "在 wild 投注组合上下注，并抓住机会获得 <b>多重 BONUS WILD 奖励！</b>"
             ]
         }
     }

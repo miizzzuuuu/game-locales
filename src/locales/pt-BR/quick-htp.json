@@ -1,22 +1,23 @@
 {
-    "p6b": {
+    "m23b": {
         "slide-1": {
             "title": "Como Jogar",
             "content": [
-                "Ganhe bônus de pagamento fantásticos de até <b>500x Jackpot & Número da Sorte!</b>",
-                "Jogue adivinhando a bola que aparecerá na gaiola giratória. Há 24 bolas numeradas de 1 a 24 em vermelho e preto."
+                "Dragon Tiger Wild vem com o mais recente bônus de <b>WILD CARD</b>! Aproveite a oportunidade de ganhar prêmios maiores de até <b>127x!</b> Você só precisa adivinhar a carta mais alta e a wild card para prêmios maiores! <b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
-            "title": "Números da Sorte",
+            "title": "Como Jogar",
             "content": [
-                "O sistema seleciona aleatoriamente de 2 a 12 números como Números da Sorte. Os Números da Sorte têm um aumento drástico no pagamento acima do pagamento normal, variando de <b>30x a 95x</b> o valor da sua aposta."
+                "Este jogo é jogado com 3 cartas. 2 cartas principais (Dragon e Tiger) <b>competirão para ver qual lado tem o valor mais alto</b>. 1 wild card é retirada para formar uma <b>combinação Bonus Wild</b>.",
+                "Você pode apostar na Aposta Principal: Dragon/Tiger. Ou nas combinações de Aposta wild: Dragon Wild, Dragon Pair ou Tiger Wild, Tiger Pair e Super Wild."
             ]
         },
         "slide-3": {
-            "title": "Número do Jackpot",
+            "title": "Bonus Wild",
             "content": [
-                "O sistema seleciona aleatoriamente <b>1 número</b> como o Número do Jackpot. Este número pode aumentar significativamente o pagamento além do Bônus de Número da Sorte, começando de <b>100x a 500x</b> sua aposta."
+                "A wild card está aqui para formar combinações de bônus que podem aumentar drasticamente seus ganhos em até <b>127x!</b>",
+                "Aposte nas combinações de aposta wild e aproveite a chance de <b>múltiplos prêmios BONUS WILD!</b>"
             ]
         }
     }

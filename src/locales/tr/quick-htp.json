@@ -1,22 +1,23 @@
 {
-    "p6b": {
+    "m23b": {
         "slide-1": {
             "title": "Nasıl Oynanır",
             "content": [
-                "<b>500x Jackpot & Lucky Number!</b>'a kadar fantastik ödeme bonusları kazanın!",
-                "Dönen kafeste görünecek topu tahmin ederek oynayın. Kırmızı ve siyah renkte 1'den 24'e kadar numaralı 24 top vardır."
+                "Dragon Tiger Wild, en son <b>WILD CARD</b> bonusu ile birlikte geliyor! <b>127x</b>'e kadar daha büyük kazanma fırsatını yakalayın! Sadece en yüksek kartı ve wild kartı tahmin ederek daha büyük ödüller kazanın! <b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
-            "title": "Lucky Numbers",
+            "title": "Nasıl Oynanır",
             "content": [
-                "Sistem rastgele 2 ila 12 numara seçer ve bunları Lucky Numbers olarak belirler. Lucky Numbers lar normal ödemenin üzerinde önemli bir ödeme artışı sağlar, bahis tutarınızın <b>30 katından 95 katına</b> kadar."
+                "Bu oyun 3 kartla oynanır. 2 ana kart (Dragon ve Tiger) <b>hangi tarafın daha yüksek değere sahip olduğunu görmek için yarışır</b>. 1 wild kart, <b>Bonus Wild kombinasyonu</b> oluşturmak için çekilir.",
+                "Ana Bahis: Dragon/Tiger üzerine bahis yapabilirsiniz. Veya wild bahis kombinasyonları: Dragon Wild, Dragon Pair veya Tiger Wild, Tiger Pair ve Super Wild üzerine bahis yapabilirsiniz."
             ]
         },
         "slide-3": {
-            "title": "Jackpot Number",
+            "title": "Bonus Wild",
             "content": [
-                "Sistem rastgele <b>1 numara</b> seçer ve bunu Jackpot Number olarak belirler. Bu numara, Lucky Number Bonus'unun ötesinde ödemeyi önemli ölçüde artırabilir, bahis tutarınızın <b>100 katından 500 katına</b> kadar."
+                "Wild kart, kazançlarınızı <b>127x</b>'e kadar dramatik bir şekilde artırabilecek bonus kombinasyonları oluşturmak için buradadır!",
+                "Wild bahis kombinasyonlarına bahis yapın ve <b>çoklu BONUS WILD ödülleri</b> şansını yakalayın!"
             ]
         }
     }

@@ -13,9 +13,12 @@ import zhCommon from '../../locales/zh/common.json';
 
 // spesific game
 import enM23 from '../../locales/en/m23.json';
+import hiM23 from '../../locales/hi/m23.json';
 import idM23 from '../../locales/id/m23.json';
 import koM23 from '../../locales/ko/m23.json';
+import ptBRM23 from '../../locales/pt-BR/m23.json';
 import thM23 from '../../locales/th/m23.json';
+import trM23 from '../../locales/tr/m23.json';
 import vnM23 from '../../locales/vn/m23.json';
 import zhM23 from '../../locales/zh/m23.json';
 
@@ -32,6 +35,7 @@ import enQuickHTP from '../../locales/en/quick-htp.json';
 import hiQuickHTP from '../../locales/hi/quick-htp.json';
 import idQuickHTP from '../../locales/id/quick-htp.json';
 import koQuickHTP from '../../locales/ko/quick-htp.json';
+import ptBRQuickHTP from '../../locales/pt-BR/quick-htp.json';
 import thQuickHTP from '../../locales/th/quick-htp.json';
 import trQuickHTP from '../../locales/tr/quick-htp.json';
 import vnQuickHTP from '../../locales/vn/quick-htp.json';
@@ -49,6 +53,7 @@ const resources: Resource = {
     hi: {
         common: hiCommon,
         game: {
+            m23: hiM23,
             'quick-htp': hiQuickHTP,
         },
     },
@@ -70,7 +75,10 @@ const resources: Resource = {
     },
     'pt-BR': {
         common: ptBRCommon,
-        game: {},
+        game: {
+            m23: ptBRM23,
+            'quick-htp': ptBRQuickHTP,
+        },
     },
     th: {
         common: thCommon,
@@ -83,6 +91,7 @@ const resources: Resource = {
     tr: {
         common: trCommon,
         game: {
+            m23: trM23,
             'quick-htp': trQuickHTP,
         },
     },

@@ -26,15 +26,17 @@ import { MiniHTPAnimationUrls } from '../../../types';
  */
 
 const ANIMATIONS_URLS: MiniHTPAnimationUrls = [
-    'https://cdn.lottielab.com/l/7B7qpyGRgm3m7L.json',
-    'https://cdn.lottielab.com/l/FNJoyNcwuSu8P3.json',
-    'https://cdn.lottielab.com/l/gcj2eacK47zTE0.json',
+    'https://cdn.lottielab.com/l/E3LKnqriEikdTg.json',
+    {
+        en: 'https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json',
+    },
+    'https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json',
 ];
 
 export const QUICK_HTP_CONFIG: Record<string, { animations: MiniHTPAnimationUrls; key: string }> = {
-    p6b: {
+    m23b: {
         animations: ANIMATIONS_URLS,
-        key: 'p6b',
+        key: 'm23b',
     },
 } as const;
 
