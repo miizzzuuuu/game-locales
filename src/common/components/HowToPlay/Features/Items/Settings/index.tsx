@@ -8,9 +8,8 @@ import SVGIconMusic from '../../../../SVG/Icons/SVGIconMusic';
 import SVGIconSfx from '../../../../SVG/Icons/SVGIconSfx';
 import SVGIconVolume from '../../../../SVG/Icons/SVGIconVolume';
 import { Card, CardWrapper, Container, P } from '../../../ui';
+import { prefixSettings } from '../../helper';
 import styles from './styles.module.scss';
-
-const keyLang = 'features-htp.settings';
 
 const settingsKeys: string[] = [
     'video',
@@ -21,7 +20,7 @@ const settingsKeys: string[] = [
     'language',
 ];
 
-const iconsObj: Record<string, ReactNode> = {
+const settingsIcons: Record<string, ReactNode> = {
     video: <SVGIconCamera />,
     'live-streaming-audio': <SVGIconVolume />,
     'background-music': <SVGIconMusic />,
@@ -38,27 +37,29 @@ const Settings = () => {
     const { t } = useTranslation();
 
     return (
-        <HowToPlayCardV2 title={t(`${keyLang}.title`)}>
+        <HowToPlayCardV2 title={t(`${prefixSettings}.title`)}>
             <Container>
-                <P>{t(`${keyLang}.description`)}</P>
+                <P>{t(`${prefixSettings}.description`)}</P>
 
                 <CardWrapper>
                     {settingsKeys.map((key) => (
                         <Card key={key}>
                             <div className={styles.top}>
-                                <Icon component={iconsObj[key]} />
-                                <P className={styles.title}>{t(`${keyLang}.${key}.title`)}</P>
+                                <Icon component={settingsIcons[key]} />
+                                <P className={styles.title}>
+                                    {t(`${prefixSettings}.${key}.title`)}
+                                </P>
                             </div>
 
-                            <P>{t(`${keyLang}.${key}.description`)}</P>
-                            <P>{t(`${keyLang}.${key}.default`)}</P>
+                            <P>{t(`${prefixSettings}.${key}.description`)}</P>
+                            <P>{t(`${prefixSettings}.${key}.default`)}</P>
                         </Card>
                     ))}
                 </CardWrapper>
 
                 <div className={styles.disclaimer}>
                     <P className={styles['disclaimer-title']}>{t('disclaimer')}:</P>
-                    <P>{t(`${keyLang}.disclaimer-settings`)}</P>
+                    <P>{t(`${prefixSettings}.disclaimer-settings`)}</P>
                 </div>
             </Container>
         </HowToPlayCardV2>
