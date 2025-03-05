@@ -4,7 +4,7 @@ import {
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import Item from '../../../Item';
-import SVGIconVolume from '../../../SVG/SVGIconVolume';
+import SVGIconVolume from '../../../../../../components/SVG/Icons/SVGIconVolume';
 
 const StreamingSound = () => {
     const dispatch = useAppDispatch();

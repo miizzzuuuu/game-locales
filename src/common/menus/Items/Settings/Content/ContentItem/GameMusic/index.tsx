@@ -4,7 +4,7 @@ import {
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import Item from '../../../Item';
-import SVGIconMusic from '../../../SVG/SVGIconMusic';
+import SVGIconMusic from '../../../../../../components/SVG/Icons/SVGIconMusic';
 
 const GameMusic = () => {
     const dispatch = useAppDispatch();

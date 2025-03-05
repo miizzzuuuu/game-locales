@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../../../../store/hooks';
-import {
-    resetConfirmBet,
-    selectConfirmBetError,
-    selectConfirmBetStatus,
-} from '../../../../../store/slice/bets';
+import { resetConfirmBet, selectConfirmBetStatus } from '../../../../../store/slice/bets';
 import { selectTimerIsClose } from '../../../../../store/slice/timerSlice';
 
 function useConfirmBet() {
@@ -22,7 +18,7 @@ function useConfirmBet() {
     });
 
     const confirmBetStatus = useAppSelector(selectConfirmBetStatus);
-    const confirmBetError = useAppSelector(selectConfirmBetError);
+    // const confirmBetError = useAppSelector(selectConfirmBetError);
     const betIsClose = useAppSelector(selectTimerIsClose);
 
     useEffect(() => {
@@ -46,13 +42,13 @@ function useConfirmBet() {
 
         if (confirmBetStatus === 'rejected') {
             setMessage({
-                value: confirmBetError ?? t('bet-error'),
+                value: t('bet-rejected'),
                 type: 'danger',
             });
             dispatch(resetConfirmBet());
             return;
         }
-    }, [confirmBetStatus, confirmBetError, dispatch, t]); // tambahkan 't' ke dependency array
+    }, [confirmBetStatus, dispatch, t]); // tambahkan 't' ke dependency array
 
     useEffect(() => {
         if (confirmBetStatus === 'idle' && betIsClose) {

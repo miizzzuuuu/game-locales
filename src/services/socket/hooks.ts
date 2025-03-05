@@ -71,6 +71,10 @@ export const useSocket = ({ nickname, operatorId, listenerCloseTimerHandler }: P
             dispatch(noGameAction());
         });
 
+        SocketComponent.instance.listenBroadcast((data) => {
+            console.log('boardcast', data);
+        });
+
         SocketComponent.instance.listenCashdrop((data) => {
             sendMessageToParent({
                 source: 'LIVE_GAME',

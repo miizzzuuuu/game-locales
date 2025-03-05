@@ -7,6 +7,8 @@ import PayoutNote from '../../../../../common/menus/Items/Payout/PayoutContent/P
 import TableMenuPayout from '../../../../../common/menus/Items/Payout/PayoutContent/TableMenuPayout';
 import styles from './styles.module.scss';
 
+const keyLang = 'htp.payout';
+
 const Payout = () => {
     const { t } = useTranslation();
     const { loading, data } = useFetchPayout();

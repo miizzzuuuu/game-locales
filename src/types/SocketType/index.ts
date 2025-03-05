@@ -126,3 +126,17 @@ export type Cashdrop = {
         agent: string;
     };
 };
+
+export type Broadcast = {
+    name: string;
+    data: {
+        message_type: string;
+        message_data: {
+            language: string;
+            title?: string;
+            message?: string;
+        }[];
+        show_once: boolean;
+        status: boolean;
+    };
+};

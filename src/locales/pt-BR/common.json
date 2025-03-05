@@ -44,6 +44,7 @@
     "you-win": "você ganhou",
     "bet-confirmed": "aposta confirmada",
     "bet-accepted": "aposta aceita",
+    "bet-rejected": "aposta rejeitada",
     "bet-error": "erro na aposta",
     "bet-closed": "aposta encerrada",
     "bet-error-n50": "Já fez a aposta {{button}}, não pode apostar {{other}}",
@@ -63,6 +64,7 @@
     "dont-show-again": "não mostrar novamente",
     "streaming-error": "erro de streaming: URL de streaming inválida",
     "no-promotion": "nenhum evento no momento",
+    "disclaimer": "declaração de isenção",
 
     "features-htp": {
         "general": {
@@ -84,6 +86,41 @@
             "paragraph-6": "Exibe as estatísticas do jogo em andamento.",
             "paragraph-7": "Mostra ou oculta o Roadmap/Estatísticas do jogo.",
             "paragraph-8": "Para salvar e usar as apostas favoritas de cada jogador."
+        },
+        "settings": {
+            "title": "Configurações",
+            "description": "Opções adicionais para personalizar recursos com base nas necessidades e preferências do usuário.",
+            "video": {
+                "title": "Vídeo",
+                "description": "Descrição: Configura se o streaming ao vivo está ativado e ajusta a resolução do streaming.",
+                "default": "Padrão: Ativado, Resolução Média."
+            },
+            "live-streaming-audio": {
+                "title": "Áudio do Streaming Ao Vivo",
+                "description": "Descrição: Controla as configurações de áudio do streaming ao vivo.",
+                "default": "Padrão: Ativado."
+            },
+            "background-music": {
+                "title": "Música de Fundo",
+                "description": "Descrição: Controla as configurações da música de fundo.",
+                "default": "Padrão: Ativado."
+            },
+            "game-effects": {
+                "title": "Efeitos do Jogo",
+                "description": "Descrição: Controla as configurações de efeitos sonoros do jogo.",
+                "default": "Padrão: Ativado."
+            },
+            "auto-bet": {
+                "title": "Aposta Automática",
+                "description": "Descrição: Controla a aposta automática com base na aposta anterior.",
+                "default": "Padrão: Desativado."
+            },
+            "language": {
+                "title": "Idioma",
+                "description": "Descrição: Controla as configurações de idioma do jogo.",
+                "default": "Padrão: Corresponde ao último idioma selecionado."
+            },
+            "disclaimer-settings": "Sua configuração de preferências será salva, exceto a configuração de Aposta Automática, que será redefinida para o padrão."
         }
     }
 }

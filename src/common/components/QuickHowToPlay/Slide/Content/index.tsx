@@ -17,13 +17,19 @@ const Content = ({ keySlide }: IProps) => {
     return (
         <>
             {Array.isArray(contents) &&
-                contents.map((content, idx) => (
-                    <p
-                        key={idx}
-                        className={styles.paragraf}
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
-                ))}
+                contents.map((content, idx) => {
+                    if (typeof content !== 'string') {
+                        return null;
+                    }
+
+                    return (
+                        <p
+                            key={idx}
+                            className={styles.paragraf}
+                            dangerouslySetInnerHTML={{ __html: content }}
+                        />
+                    );
+                })}
         </>
     );
 };

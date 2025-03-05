@@ -1,7 +1,6 @@
 import baseReducer from './slice/baseSlice';
-// import betAddReducer from './slice/betAddSlice';
-// import betSendReducer from './slice/betSendSlice';
 import betsReducer from './slice/bets';
+import boardcastReducer from './slice/boardcastSlice';
 import chipReducer from './slice/chipSlice';
 import eventIdnliveReducer from './slice/eventIdnliveSlice';
 import gameReducer from './slice/gameSlice';
@@ -20,8 +19,7 @@ export const staticReducers = {
     base: baseReducer,
 
     bets: betsReducer,
-    // betAdd: betAddReducer,
-    // betSend: betSendReducer,
+    boardcast: boardcastReducer,
     chip: chipReducer,
     eventIdnlive: eventIdnliveReducer,
     game: gameReducer,

@@ -45,6 +45,7 @@
     "you-win": "您赢了",
     "bet-confirmed": "下注已确认",
     "bet-accepted": "投注成功",
+    "bet-rejected": "投注被拒绝",
     "bet-error": "下注错误",
     "bet-closed": "投注已关闭",
     "bet-error-n50": "已下 {{button}} 注，不能下 {{other}} 注",
@@ -64,6 +65,7 @@
     "dont-show-again": "不再显示",
     "streaming-error": "直播错误：无效的直播URL",
     "no-promotion": "目前没有活动",
+    "disclaimer": "免责声明",
 
     "features-htp": {
         "general": {
@@ -85,6 +87,41 @@
             "paragraph-6": "显示正在进行的游戏的统计数据。",
             "paragraph-7": "显示或隐藏路图/游戏统计。",
             "paragraph-8": "用于保存和使用每位玩家的最爱赌注。"
+        },
+        "settings": {
+            "title": "设置",
+            "description": "根据用户需求和偏好定制功能的附加选项。",
+            "video": {
+                "title": "视频",
+                "description": "描述：配置是否启用直播流并调整流媒体分辨率。",
+                "default": "默认：已开启，中等分辨率。"
+            },
+            "live-streaming-audio": {
+                "title": "直播音频",
+                "description": "描述：控制直播音频设置。",
+                "default": "默认：已开启。"
+            },
+            "background-music": {
+                "title": "背景音乐",
+                "description": "描述：控制背景音乐设置。",
+                "default": "默认：已开启。"
+            },
+            "game-effects": {
+                "title": "游戏音效",
+                "description": "描述：控制游戏音效设置。",
+                "default": "默认：已开启。"
+            },
+            "auto-bet": {
+                "title": "自动投注",
+                "description": "描述：根据前一次投注控制自动投注功能。",
+                "default": "默认：已关闭。"
+            },
+            "language": {
+                "title": "语言",
+                "description": "描述：控制游戏语言设置。",
+                "default": "默认：与最近选择的语言匹配。"
+            },
+            "disclaimer-settings": "您的偏好设置将被保存，但自动投注设置除外，该设置将重置为默认值。"
         }
     }
 }

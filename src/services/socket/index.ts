@@ -3,6 +3,7 @@ import { FEATURES } from '../../common/utils/Features';
 import { getGameCode, getGameName, getPcode } from '../../common/utils/GameHelper';
 import { convertGameCodeToGameName } from '../../game/utils/StringUtility';
 import {
+    Broadcast,
     CameraSequence,
     Cashdrop,
     CloseTimerData,
@@ -42,6 +43,7 @@ export class SocketComponent {
         cashdrop: 'cash_drop',
         newSet: 'new_set',
         noGame: 'no_game',
+        broadcast: 'broadcast',
     };
 
     static get instance() {
@@ -251,25 +253,6 @@ export class SocketComponent {
         }
     }
 
-    // listenNewSet(callback: (data: NewSetData) => void): void {
-    //     if (!Features.SHUFFLE_THE_CARDS) {
-    //         return;
-    //     }
-
-    //     const eventName = getEventNewSet();
-    //     console.log('event new set', eventName);
-
-    //     if (!eventName) {
-    //         return;
-    //     }
-
-    //     if (this._socket) {
-    //         this._socket.on(eventName, (data: NewSetData) => {
-    //             this.validationDataWithPcode(data, () => callback(data));
-    //         });
-    //     }
-    // }
-
     listenNoGame(callback: (data: NoGameData) => void): void {
         if (!FEATURES.SHUFFLE_THE_CARDS) {
             return;
@@ -278,6 +261,14 @@ export class SocketComponent {
         if (this._socket) {
             this._socket.on(SocketComponent.SOCKET_EVENT.noGame, (data: NoGameData) => {
                 this.validationDataWithPcode(data, () => callback(data));
+            });
+        }
+    }
+
+    listenBroadcast(callback: (data: Broadcast) => void): void {
+        if (this._socket) {
+            this._socket.on(SocketComponent.SOCKET_EVENT.broadcast, (data: Broadcast) => {
+                callback(data);
             });
         }
     }

@@ -44,6 +44,7 @@
     "you-win": "kazandınız",
     "bet-confirmed": "bahis onaylandı",
     "bet-accepted": "bahis kabul edildi",
+    "bet-rejected": "bahis reddedildi",
     "bet-error": "bahis hatası",
     "bet-closed": "bahis kapalı",
     "bet-error-n50": "Zaten {{button}} bahsi yaptınız, {{other}} bahsi yapamazsınız",
@@ -63,6 +64,7 @@
     "dont-show-again": "Tekrar gösterme",
     "streaming-error": "yayın hatası: geçersiz yayın URL'si",
     "no-promotion": "şu anda etkinlik yok",
+    "disclaimer": "feragatname",
 
     "features-htp": {
         "general": {
@@ -84,6 +86,41 @@
             "paragraph-6": "Devam eden oyunun istatistiklerini gösterir.",
             "paragraph-7": "Roadmap/Oyun İstatistiklerini gösterir veya gizler.",
             "paragraph-8": "Her oyuncunun favori bahislerini kaydetmek ve kullanmak için."
+        },
+        "settings": {
+            "title": "Ayarlar",
+            "description": "Kullanıcı ihtiyaç ve tercihlerine göre özellikleri özelleştirmek için ek seçenekler.",
+            "video": {
+                "title": "Video",
+                "description": "Açıklama: Canlı yayınların etkinleştirilmesini ve yayın çözünürlüğünün ayarlanmasını yapılandırır.",
+                "default": "Varsayılan: Açık, Orta Çözünürlük."
+            },
+            "live-streaming-audio": {
+                "title": "Canlı Yayın Ses",
+                "description": "Açıklama: Canlı yayın ses ayarlarını kontrol eder.",
+                "default": "Varsayılan: Açık."
+            },
+            "background-music": {
+                "title": "Arka Plan Müziği",
+                "description": "Açıklama: Arka plan müzik ayarlarını kontrol eder.",
+                "default": "Varsayılan: Açık."
+            },
+            "game-effects": {
+                "title": "Oyun Efektleri",
+                "description": "Açıklama: Oyun ses efekt ayarlarını kontrol eder.",
+                "default": "Varsayılan: Açık."
+            },
+            "auto-bet": {
+                "title": "Otomatik Bahis",
+                "description": "Açıklama: Önceki bahse göre otomatik bahis özelliğini kontrol eder.",
+                "default": "Varsayılan: Kapalı."
+            },
+            "language": {
+                "title": "Dil",
+                "description": "Açıklama: Oyun dil ayarlarını kontrol eder.",
+                "default": "Varsayılan: Son seçilen dile uygun."
+            },
+            "disclaimer-settings": "Tercih ayarlarınız kaydedilecektir, Otomatik Bahis ayarı hariç, bu ayar varsayılan değerine sıfırlanacaktır."
         }
     }
 }

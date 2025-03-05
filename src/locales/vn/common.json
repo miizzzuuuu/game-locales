@@ -45,6 +45,7 @@
     "you-win": "bạn thắng",
     "bet-confirmed": "cược đã được xác nhận",
     "bet-accepted": "cược thành công",
+    "bet-rejected": "đặt cược bị từ chối",
     "bet-error": "lỗi cược",
     "bet-closed": "cược đã đóng",
     "bet-error-n50": "Đã đặt cược {{button}}, không thể đặt cược {{other}}",
@@ -64,6 +65,7 @@
     "dont-show-again": "Không hiển thị lại",
     "streaming-error": "lỗi phát trực tuyến: url phát không hợp lệ",
     "no-promotion": "không có sự kiện lúc này",
+    "disclaimer": "tuyên bố từ chối",
 
     "features-htp": {
         "general": {
@@ -85,6 +87,41 @@
             "paragraph-6": "Hiển thị thống kê của trò chơi đang diễn ra.",
             "paragraph-7": "Hiển thị hoặc ẩn Roadmap/Thống kê trò chơi.",
             "paragraph-8": "Để lưu và sử dụng các cược yêu thích của từng người chơi."
+        },
+        "settings": {
+            "title": "Cài đặt",
+            "description": "Các tùy chọn bổ sung để tùy chỉnh tính năng dựa trên nhu cầu và sở thích của người dùng.",
+            "video": {
+                "title": "Video",
+                "description": "Mô tả: Cấu hình việc bật phát trực tiếp và điều chỉnh độ phân giải phát trực tuyến.",
+                "default": "Mặc định: Bật, Độ phân giải Trung bình."
+            },
+            "live-streaming-audio": {
+                "title": "Âm thanh Phát trực tiếp",
+                "description": "Mô tả: Điều khiển cài đặt âm thanh cho phát trực tiếp.",
+                "default": "Mặc định: Bật."
+            },
+            "background-music": {
+                "title": "Nhạc Nền",
+                "description": "Mô tả: Điều khiển cài đặt nhạc nền.",
+                "default": "Mặc định: Bật."
+            },
+            "game-effects": {
+                "title": "Hiệu ứng Trò chơi",
+                "description": "Mô tả: Điều khiển cài đặt âm thanh hiệu ứng trò chơi.",
+                "default": "Mặc định: Bật."
+            },
+            "auto-bet": {
+                "title": "Tự động Đặt cược",
+                "description": "Mô tả: Điều khiển việc đặt cược tự động dựa trên lần đặt trước đó.",
+                "default": "Mặc định: Tắt."
+            },
+            "language": {
+                "title": "Ngôn ngữ",
+                "description": "Mô tả: Điều khiển cài đặt ngôn ngữ trò chơi.",
+                "default": "Mặc định: Tương ứng với ngôn ngữ đã chọn gần nhất."
+            },
+            "disclaimer-settings": "Cài đặt tùy chọn của bạn sẽ được lưu, trừ cài đặt Tự động Đặt cược sẽ được đặt lại về mặc định."
         }
     }
 }
