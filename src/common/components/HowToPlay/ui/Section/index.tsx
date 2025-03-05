@@ -1,8 +1,13 @@
-import { PropsWithChildren } from 'react';
+import { ReactNode } from 'react';
 import styles from './styles.module.scss';
 
-const Section = ({ children }: PropsWithChildren) => {
-    return <div className={styles.section}>{children}</div>;
+type IProps = {
+    children?: ReactNode;
+    className?: string;
+};
+
+const Section = ({ children, className }: IProps) => {
+    return <div className={`${styles.section}${className ? ` ${className}` : ''}`}>{children}</div>;
 };
 
 export default Section;

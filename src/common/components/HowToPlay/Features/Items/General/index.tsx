@@ -7,6 +7,7 @@ import ChipHorizontal from './SVG/ChipHorizontal';
 import Timer from './Timer';
 import TotalBet from './TotalBet';
 import Username from './Username';
+import styles from './styles.module.scss';
 
 const keyLang = 'features-htp.general';
 
@@ -16,27 +17,27 @@ const General = () => {
     return (
         <HowToPlayCardV2 title={t(`${keyLang}.title`)}>
             <Container>
-                <Section>
+                <Section className={styles.section}>
                     <Username />
                     <P>{t(`${keyLang}.paragraph-1`)}</P>
                 </Section>
 
-                <Section>
+                <Section className={styles.section}>
                     <TotalBet />
                     <P>{t(`${keyLang}.paragraph-2`)}</P>
                 </Section>
 
-                <Section>
+                <Section className={styles.section}>
                     <LimitBet />
                     <P>{t(`${keyLang}.paragraph-3`)}</P>
                 </Section>
 
-                <Section>
+                <Section className={styles.section}>
                     <Timer />
                     <P>{t(`${keyLang}.paragraph-4`)}</P>
                 </Section>
 
-                <Section>
+                <Section className={styles.section}>
                     <ChipHorizontal />
                     <P>{t(`${keyLang}.paragraph-5`)}</P>
                 </Section>
