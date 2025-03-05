@@ -1,0 +1,47 @@
+{
+    "dragonpair": "드래곤 페어",
+    "tigerpair": "타이거 페어",
+    "dragonwild": "드래곤 wild",
+    "tigerwild": "타이거 wild",
+    "dragon": "드래곤",
+    "wild": "wild",
+    "superwild": "super wild",
+    "tie": "타이",
+    "tiger": "타이거",
+    "big": "큰",
+    "small": "작은",
+    "odd": "홀",
+    "even": "짝",
+    "red": "빨간",
+    "black": "검은",
+    "wild bet": "wild 베팅",
+    "dragon wild": "드래곤 wild",
+    "tiger wild": "타이거 wild",
+    "super wild": "super wild",
+    "pair bet": "페어 베팅",
+    "dragon pair": "드래곤 페어",
+    "tiger pair": "타이거 페어",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "게임 방법",
+            "content": [
+                "Dragon Tiger Wild는 최신 <b>WILD CARD</b> 보너스와 함께 제공됩니다! <b>127x</b>까지 더 큰 상금을 획득할 기회를 잡으세요! 당신은 단지 가장 높은 카드와 wild 카드를 추측하여 더 큰 상금을 얻으면 됩니다! <b>LET’S GET WILD!!!</b>"
+            ]
+        },
+        "slide-2": {
+            "title": "게임 방법",
+            "content": [
+                "이 게임은 3장의 카드로 진행됩니다. 2장의 메인 카드(Dragon과 Tiger)는 <b>어느 쪽이 더 높은 가치를 가지는지 경쟁합니다</b>. 1장의 wild 카드는 <b>Bonus Wild 조합</b>을 형성하기 위해 뽑힙니다.",
+                "당신은 메인 베팅: Dragon/Tiger에 베팅할 수 있습니다. 또는 wild 베팅 조합: Dragon Wild, Dragon Pair 또는 Tiger Wild, Tiger Pair, 그리고 Super Wild에 베팅할 수 있습니다."
+            ]
+        },
+        "slide-3": {
+            "title": "Bonus Wild",
+            "content": [
+                "Wild 카드는 당신의 상금을 <b>127x</b>까지 극적으로 증가시킬 수 있는 보너스 조합을 형성하기 위해 여기에 있습니다!",
+                "Wild 베팅 조합에 베팅하고 <b>여러 BONUS WILD 보상</b>의 기회를 잡으세요!"
+            ]
+        }
+    }
+}
