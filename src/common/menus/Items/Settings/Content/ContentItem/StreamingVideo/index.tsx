@@ -4,7 +4,7 @@ import {
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import Item from '../../../Item';
-import SVGIconCamera from '../../../SVG/SVGIconCamera';
+import SVGIconCamera from '../../../../../../components/SVG/Icons/SVGIconCamera';
 
 const StreamingVideo = () => {
     const dispatch = useAppDispatch();

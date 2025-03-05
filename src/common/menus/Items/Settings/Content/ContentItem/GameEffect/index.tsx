@@ -4,7 +4,7 @@ import {
     updateSetings,
 } from '../../../../../../../store/slice/settingsSlice';
 import Item from '../../../Item';
-import SVGIconSfx from '../../../SVG/SVGIconSfx';
+import SVGIconSfx from '../../../../../../components/SVG/Icons/SVGIconSfx';
 
 const GameEffect = () => {
     const dispatch = useAppDispatch();

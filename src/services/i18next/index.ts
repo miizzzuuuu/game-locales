@@ -13,9 +13,12 @@ import zhCommon from '../../locales/zh/common.json';
 
 // spesific game
 import enP6 from '../../locales/en/p6.json';
+import hiP6 from '../../locales/hi/p6.json';
 import idP6 from '../../locales/id/p6.json';
 import koP6 from '../../locales/ko/p6.json';
+import ptBRP6 from '../../locales/pt-BR/p6.json';
 import thP6 from '../../locales/th/p6.json';
+import trP6 from '../../locales/tr/p6.json';
 import vnP6 from '../../locales/vn/p6.json';
 import zhP6 from '../../locales/zh/p6.json';
 
@@ -32,6 +35,7 @@ import enQuickHTP from '../../locales/en/quick-htp.json';
 import hiQuickHTP from '../../locales/hi/quick-htp.json';
 import idQuickHTP from '../../locales/id/quick-htp.json';
 import koQuickHTP from '../../locales/ko/quick-htp.json';
+import ptBRQuickHTP from '../../locales/pt-BR/quick-htp.json';
 import thQuickHTP from '../../locales/th/quick-htp.json';
 import trQuickHTP from '../../locales/tr/quick-htp.json';
 import vnQuickHTP from '../../locales/vn/quick-htp.json';
@@ -49,6 +53,7 @@ const resources: Resource = {
     hi: {
         common: hiCommon,
         game: {
+            p6: hiP6,
             'quick-htp': hiQuickHTP,
         },
     },
@@ -70,7 +75,10 @@ const resources: Resource = {
     },
     'pt-BR': {
         common: ptBRCommon,
-        game: {},
+        game: {
+            p6: ptBRP6,
+            'quick-htp': ptBRQuickHTP,
+        },
     },
     th: {
         common: thCommon,
@@ -83,6 +91,7 @@ const resources: Resource = {
     tr: {
         common: trCommon,
         game: {
+            p6: trP6,
             'quick-htp': trQuickHTP,
         },
     },

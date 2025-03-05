@@ -5,7 +5,7 @@ import { selectDevice } from '../../../../../../../store/slice/windowSlice';
 import { langMap } from '../../../../../../utils/LangHelper';
 import Dropdown from '../../../Dropdown';
 import styles from '../../../Item/styles.module.scss';
-import SVGIconLanguage from '../../../SVG/SVGIconLanguage';
+import SVGIconLanguage from '../../../../../../components/SVG/Icons/SVGIconLanguage';
 import SelectMobile from './SelectMobile';
 
 const SettingLanguage = () => {

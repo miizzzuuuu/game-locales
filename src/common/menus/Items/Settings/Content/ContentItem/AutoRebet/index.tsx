@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '../../../../../../../store/hooks';
 import { selectAutoRebet, updateSetings } from '../../../../../../../store/slice/settingsSlice';
 import Item from '../../../Item';
-import SVGIconBetClick from '../../../SVG/SVGIconBetClick';
+import SVGIconBetClick from '../../../../../../components/SVG/Icons/SVGIconBetClick';
 
 const AutoRebet = () => {
     const dispatch = useAppDispatch();

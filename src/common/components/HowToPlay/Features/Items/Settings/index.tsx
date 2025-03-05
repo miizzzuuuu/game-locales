@@ -1,11 +1,18 @@
+import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import HowToPlayCardV2 from '../../../../../menus/Items/HowToPlay/HowToPlayCardV2';
-import { Card, CardWrapper, Container, H2, P } from '../../../ui';
+import SVGIconBetClick from '../../../../SVG/Icons/SVGIconBetClick';
+import SVGIconCamera from '../../../../SVG/Icons/SVGIconCamera';
+import SVGIconLanguage from '../../../../SVG/Icons/SVGIconLanguage';
+import SVGIconMusic from '../../../../SVG/Icons/SVGIconMusic';
+import SVGIconSfx from '../../../../SVG/Icons/SVGIconSfx';
+import SVGIconVolume from '../../../../SVG/Icons/SVGIconVolume';
+import { Card, CardWrapper, Container, P } from '../../../ui';
 import styles from './styles.module.scss';
 
 const keyLang = 'features-htp.settings';
 
-const settingsKeys = [
+const settingsKeys: string[] = [
     'video',
     'live-streaming-audio',
     'background-music',
@@ -13,6 +20,19 @@ const settingsKeys = [
     'auto-bet',
     'language',
 ];
+
+const iconsObj: Record<string, ReactNode> = {
+    video: <SVGIconCamera />,
+    'live-streaming-audio': <SVGIconVolume />,
+    'background-music': <SVGIconMusic />,
+    'game-effects': <SVGIconSfx />,
+    'auto-bet': <SVGIconBetClick />,
+    language: <SVGIconLanguage />,
+};
+
+const Icon = ({ component }: { component: ReactNode }) => {
+    return <div className={styles.icon}>{component}</div>;
+};
 
 const Settings = () => {
     const { t } = useTranslation();
@@ -25,7 +45,10 @@ const Settings = () => {
                 <CardWrapper>
                     {settingsKeys.map((key) => (
                         <Card key={key}>
-                            <H2>{t(`${keyLang}.${key}.title`)}</H2>
+                            <div className={styles.top}>
+                                <Icon component={iconsObj[key]} />
+                                <P className={styles.title}>{t(`${keyLang}.${key}.title`)}</P>
+                            </div>
 
                             <P>{t(`${keyLang}.${key}.description`)}</P>
                             <P>{t(`${keyLang}.${key}.default`)}</P>
