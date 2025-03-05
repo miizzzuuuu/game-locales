@@ -7,26 +7,25 @@ import TigerWild from './SVG/TigerWild';
 import SuperWild from './SVG/SuperWild';
 import DragonPair from './SVG/DragonPair';
 import TigerPair from './SVG/TigerPair';
+import { prefixWildBet } from '../../helper';
 
-const keyLang = 'htp.wild-bet';
 const keyContents = ['dragon-wild', 'tiger-wild', 'super-wild', 'dragon-pair', 'tiger-pair'];
-
 const Icons = [<DragonWild />, <TigerWild />, <SuperWild />, <DragonPair />, <TigerPair />];
 
 const WildBet = () => {
     const { t } = useTranslation();
 
     return (
-        <HowToPlayCardV2 title={t(`${keyLang}.title`, { ns: 'game' })}>
+        <HowToPlayCardV2 title={t(`${prefixWildBet}.title`, { ns: 'game' })}>
             <Container>
-                <P>{t(`${keyLang}.description`, { ns: 'game' })}</P>
-                <P>{t(`${keyLang}.description-2`, { ns: 'game' })}</P>
+                <P>{t(`${prefixWildBet}.description`, { ns: 'game' })}</P>
+                <P>{t(`${prefixWildBet}.description-2`, { ns: 'game' })}</P>
 
                 {keyContents.map((key, idx) => {
                     return (
                         <div key={key} className={styles.wrapper}>
                             <div className={styles.icon}>{Icons[idx]}</div>
-                            <P>{t(`${keyLang}.${key}`, { ns: 'game' })}</P>
+                            <P>{t(`${prefixWildBet}.${key}`, { ns: 'game' })}</P>
                         </div>
                     );
                 })}

@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { P } from '../../../../../../../common/components/HowToPlay/ui';
-import { CardData, keyLang } from '../../helper';
 import RenderCard2 from '../../../../../Card/RenderCard2';
+import { prefixBetDescription } from '../../../../helper';
+import { CardData } from '../../helper';
 import styles from './style.module.scss';
 
 type IProps = {
@@ -22,7 +23,9 @@ const CardExample = ({ cardName, card }: IProps) => {
 
             <RenderCard2 value={card.card} className={styles.card} />
 
-            <P className={styles.value}>{card.value ?? t(`${keyLang}.any`, { ns: 'game' })}</P>
+            <P className={styles.value}>
+                {card.value ?? t(`${prefixBetDescription}.any`, { ns: 'game' })}
+            </P>
         </div>
     );
 };

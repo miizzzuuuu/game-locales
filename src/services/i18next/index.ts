@@ -22,14 +22,6 @@ import trM23 from '../../locales/tr/m23.json';
 import vnM23 from '../../locales/vn/m23.json';
 import zhM23 from '../../locales/zh/m23.json';
 
-// how to play
-import enHTP from '../../locales/en/htp.json';
-import idHTP from '../../locales/id/htp.json';
-import koHTP from '../../locales/ko/htp.json';
-import thHTP from '../../locales/th/htp.json';
-import vnHTP from '../../locales/vn/htp.json';
-import zhHTP from '../../locales/zh/htp.json';
-
 // mini how to play
 import enQuickHTP from '../../locales/en/quick-htp.json';
 import hiQuickHTP from '../../locales/hi/quick-htp.json';
@@ -46,7 +38,6 @@ const resources: Resource = {
         common: enCommon,
         game: {
             m23: enM23,
-            htp: enHTP,
             'quick-htp': enQuickHTP,
         },
     },
@@ -61,7 +52,6 @@ const resources: Resource = {
         common: idCommon,
         game: {
             m23: idM23,
-            htp: idHTP,
             'quick-htp': idQuickHTP,
         },
     },
@@ -69,7 +59,6 @@ const resources: Resource = {
         common: koCommon,
         game: {
             m23: koM23,
-            htp: koHTP,
             'quick-htp': koQuickHTP,
         },
     },
@@ -84,7 +73,6 @@ const resources: Resource = {
         common: thCommon,
         game: {
             m23: thM23,
-            htp: thHTP,
             'quick-htp': thQuickHTP,
         },
     },
@@ -99,7 +87,6 @@ const resources: Resource = {
         common: vnCommon,
         game: {
             m23: vnM23,
-            htp: vnHTP,
             'quick-htp': vnQuickHTP,
         },
     },
@@ -107,7 +94,6 @@ const resources: Resource = {
         common: zhCommon,
         game: {
             m23: zhM23,
-            htp: zhHTP,
             'quick-htp': zhQuickHTP,
         },
     },

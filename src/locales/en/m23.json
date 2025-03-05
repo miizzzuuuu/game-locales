@@ -20,5 +20,87 @@
     "super wild": "super wild",
     "pair bet": "Pair Bet",
     "dragon pair": "dragon pair",
-    "tiger pair": "tiger pair"
+    "tiger pair": "tiger pair",
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Introduction",
+            "paragraph-1": "Dragon Tiger Wild is the latest game from IDNLIVE EUROPE, bringing more excitement with the addition of the Wild Card. This game offers a fresh experience for Dragon Tiger fans, with fantastic winning opportunities up to 127x! LET’S GET WILD!!!",
+            "game-objective": "Game Objective",
+            "paragraph-2": "The objective of this game is to predict the highest card between Dragon and Tiger while utilizing the Wild Card to form Bonus Wild combinations for greater winnings."
+        },
+        "general-rules": {
+            "title": "General Rules",
+            "steps": [
+                "The game is hosted by a dealer.",
+                "The game uses 8 decks of cards in one Shoe.",
+                "At the start of each new Shoe, the dealer will draw a card to determine how many cards will be burned or discarded. A maximum of 10 cards can be discarded.",
+                "After the betting time ends, the dealer will reveal one card as the Wild Card, then deal one card each to the Dragon and Tiger.",
+                "The side with the higher value wins. The highest card is the King, worth 13 points.",
+                "If the result is a <b>tie</b>, <b>half of the bets on Dragon and Tiger are returned</b>. A tie bet only wins if both Dragon and Tiger have the same value."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Dragon Tiger Wild Card",
+            "content": "Dragon Tiger Wild uses a standard deck of 52 cards, excluding jokers. The card values used in the game are as follows:",
+            "card": "Card",
+            "value": "Value"
+        },
+        "wild-bet": {
+            "title": "Wild Bet",
+            "description": "As mentioned in the introduction, Dragon Tiger Wild introduces new gameplay elements and exciting bonuses. Here's how it works:",
+            "description-2": "The Wild Card determines winnings with higher payouts compared to regular bets. There are five types of Wild bets:",
+
+            "dragon-wild": "This bet wins if the Dragon card wins and matches the Wild Card value.",
+            "tiger-wild": "This bet wins if the Tiger card wins and matches the Wild Card value.",
+            "super-wild": "This bet wins if all three cards—Wild Card, Dragon Card, and Tiger Card—have the same value.",
+            "dragon-pair": "This bet wins if the Dragon card and the Wild Card have the same value (Dragon does not need to win).",
+            "tiger-pair": "This bet wins if the Tiger card and the Wild Card have the same value (Tiger does not need to win)."
+        },
+        "bet-description": {
+            "title": "Bet Description",
+            "bet": "bet",
+            "description": "description",
+            "result": "result",
+            "any": "any",
+            "main-bet": {
+                "title": "main bet",
+                "dragon": {
+                    "title": "Dragon",
+                    "description": "Pays if the Dragon card has a higher value than the Tiger card."
+                },
+                "tiger": {
+                    "title": "Tiger",
+                    "description": "Pays if the Tiger card has a higher value than the Dragon card."
+                },
+                "tie": {
+                    "title": "Tie",
+                    "description": "Pays if the Dragon and Tiger cards have the same value."
+                }
+            },
+            "side-bet": {
+                "title": "SIDE BET",
+                "dragon-wild": {
+                    "title": "Dragon Wild",
+                    "description": "Pays if the Dragon hand wins and the Dragon card has the same value as the Wild card."
+                },
+                "tiger-wild": {
+                    "title": "Tiger Wild",
+                    "description": "Pays if the Tiger hand wins and the Tiger card has the same value as the Wild card."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Pays if the Dragon card, Tiger card, and Wild card all have the same value."
+                },
+                "dragon-pair": {
+                    "title": "Dragon Pair",
+                    "description": "Pays if the Dragon card and the Wild card have the same value."
+                },
+                "tiger-pair": {
+                    "title": "Tiger Pair",
+                    "description": "Pays if the Tiger card and the Wild card have the same value."
+                }
+            }
+        }
+    }
 }

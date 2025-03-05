@@ -22,7 +22,7 @@ const TableBetDTWild = () => {
                             {t(`${getBasePcode()}.dragon wild`, { ns: 'game' })}
                         </div>
                         <div className={styles['bet-payout']}>
-                            {payoutGroup['dragonwild-wild']}:1
+                            {payoutGroup['dragonwild@wild']}:1
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@ const TableBetDTWild = () => {
                             {t(`${getBasePcode()}.tiger wild`, { ns: 'game' })}
                         </div>
                         <div className={styles['bet-payout']}>
-                            {payoutGroup['tigerwild-wild']}:1
+                            {payoutGroup['tigerwild@wild']}:1
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const TableBetDTWild = () => {
                             {t(`${getBasePcode()}.dragon`, { ns: 'game' })}
                         </div>
                         <div className={`${styles['bet-payout']}`}>
-                            {payoutGroup['dragon-dragon']}:1
+                            {payoutGroup['dragon@dragon']}:1
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const TableBetDTWild = () => {
                         <div className={styles['bet-name']}>
                             {t(`${getBasePcode()}.tiger`, { ns: 'game' })}
                         </div>
-                        <div className={styles['bet-payout']}>{payoutGroup['tiger-tiger']}:1</div>
+                        <div className={styles['bet-payout']}>{payoutGroup['tiger@tiger']}:1</div>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@ const TableBetDTWild = () => {
                             {t(`${getBasePcode()}.dragon pair`, { ns: 'game' })}
                         </div>
                         <div className={styles['bet-payout']}>
-                            {payoutGroup['dragonpair-pair']}:1
+                            {payoutGroup['dragonpair@pair']}:1
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const TableBetDTWild = () => {
                             {t(`${getBasePcode()}.tiger pair`, { ns: 'game' })}
                         </div>
                         <div className={styles['bet-payout']}>
-                            {payoutGroup['tigerpair-pair']}:1
+                            {payoutGroup['tigerpair@pair']}:1
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ const TableBetDTWild = () => {
                                 {t(`${getBasePcode()}.super wild`, { ns: 'game' })}
                             </div>
                             <div className={`${styles['bet-payout']}`}>
-                                {payoutGroup['superwild-superwild']}:1
+                                {payoutGroup['superwild@superwild']}:1
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ const TableBetDTWild = () => {
                             <div className={styles['bet-name']}>
                                 {t(`${getBasePcode()}.tie`, { ns: 'game' })}
                             </div>
-                            <div className={styles['bet-payout']}>{payoutGroup['tie-tie']}:1</div>
+                            <div className={styles['bet-payout']}>{payoutGroup['tie@tie']}:1</div>
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@ const BetDragonPair = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     {t(`${getBasePcode()}.dragon pair`, { ns: 'game' })}
                 </div>
                 <div className={styles['bet-payout']}>
-                    {payoutGroup[`${bet.button}-${bet.group}`]}:1
+                    {payoutGroup[`${bet.button}@${bet.group}`]}:1
                 </div>
             </div>
 

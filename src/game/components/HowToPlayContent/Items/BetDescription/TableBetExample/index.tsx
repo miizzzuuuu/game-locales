@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { P } from '../../../../../../common/components/HowToPlay/ui';
-import { BetDescriptionData, keyLang } from '../helper';
+import { prefixBetDescription } from '../../../helper';
+import { BetDescriptionData } from '../helper';
 import CardExample from './CardExample';
 import styles from './styles.module.scss';
 
@@ -17,12 +18,14 @@ const TableBetExample = ({ nameTable, data }: IProps) => {
             <table className={styles.table}>
                 <thead>
                     <tr>
-                        <th className="text-nowrap">{t(`${keyLang}.bet`, { ns: 'game' })}</th>
                         <th className="text-nowrap">
-                            {t(`${keyLang}.description`, { ns: 'game' })}
+                            {t(`${prefixBetDescription}.bet`, { ns: 'game' })}
+                        </th>
+                        <th className="text-nowrap">
+                            {t(`${prefixBetDescription}.description`, { ns: 'game' })}
                         </th>
                         <th className="text-nowrap" colSpan={3}>
-                            {t(`${keyLang}.result`, { ns: 'game' })}
+                            {t(`${prefixBetDescription}.result`, { ns: 'game' })}
                         </th>
                     </tr>
                 </thead>
@@ -31,14 +34,14 @@ const TableBetExample = ({ nameTable, data }: IProps) => {
                         <tr key={key}>
                             <td>
                                 <P className="text-nowrap text-center">
-                                    {t(`${keyLang}.${nameTable}.${key}.title`, {
+                                    {t(`${prefixBetDescription}.${nameTable}.${key}.title`, {
                                         ns: 'game',
                                     })}
                                 </P>
                             </td>
                             <td>
                                 <P className="text-center">
-                                    {t(`${keyLang}.${nameTable}.${key}.description`, {
+                                    {t(`${prefixBetDescription}.${nameTable}.${key}.description`, {
                                         ns: 'game',
                                     })}
                                 </P>

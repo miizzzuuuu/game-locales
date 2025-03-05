@@ -36,7 +36,7 @@ const BetTiger = ({ bet, placeBetHandler }: BetButtonIProps) => {
                     {t(`${getBasePcode()}.tiger`, { ns: 'game' })}
                 </div>
                 <div className={styles['bet-payout']}>
-                    {payoutGroup[`${bet.button}-${bet.group}`]}:1
+                    {payoutGroup[`${bet.button}@${bet.group}`]}:1
                 </div>
             </div>
 

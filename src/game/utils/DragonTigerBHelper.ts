@@ -28,12 +28,12 @@ export const BETS: Record<string, Bet> = {
 };
 
 export const payoutGroup: Record<string, number> = {
-    'dragon-dragon': 1,
-    'tiger-tiger': 1,
-    'tie-tie': 11,
-    'dragonwild-wild': 24,
-    'tigerwild-wild': 24,
-    'superwild-superwild': 127,
-    'dragonpair-pair': 11,
-    'tigerpair-pair': 11,
+    'dragon@dragon': 1,
+    'tiger@tiger': 1,
+    'tie@tie': 11,
+    'dragonwild@wild': 24,
+    'tigerwild@wild': 24,
+    'superwild@superwild': 127,
+    'dragonpair@pair': 11,
+    'tigerpair@pair': 11,
 };

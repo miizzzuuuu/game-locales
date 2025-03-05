@@ -1,5 +1,3 @@
-export const keyLang = 'htp.bet-description';
-
 export type CardData = { card: string; value?: number };
 export type BetDescriptionData = Record<string, Record<string, CardData>>;
 
