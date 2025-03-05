@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import HowToPlayCardV2 from '../../../../../menus/Items/HowToPlay/HowToPlayCardV2';
+import { Container, Section } from '../../../ui';
 import P from '../../../ui/P';
 import LimitBet from './LimitBet';
 import ChipHorizontal from './SVG/ChipHorizontal';
@@ -14,32 +15,32 @@ const General = () => {
 
     return (
         <HowToPlayCardV2 title={t(`${keyLang}.title`)}>
-            <div className="htp__container">
-                <div className="htp__section">
+            <Container>
+                <Section>
                     <Username />
                     <P>{t(`${keyLang}.paragraph-1`)}</P>
-                </div>
+                </Section>
 
-                <div className="htp__section">
+                <Section>
                     <TotalBet />
                     <P>{t(`${keyLang}.paragraph-2`)}</P>
-                </div>
+                </Section>
 
-                <div className="htp__section">
+                <Section>
                     <LimitBet />
                     <P>{t(`${keyLang}.paragraph-3`)}</P>
-                </div>
+                </Section>
 
-                <div className="htp__section">
+                <Section>
                     <Timer />
                     <P>{t(`${keyLang}.paragraph-4`)}</P>
-                </div>
+                </Section>
 
-                <div className="htp__section">
+                <Section>
                     <ChipHorizontal />
                     <P>{t(`${keyLang}.paragraph-5`)}</P>
-                </div>
-            </div>
+                </Section>
+            </Container>
         </HowToPlayCardV2>
     );
 };

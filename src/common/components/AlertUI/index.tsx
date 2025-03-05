@@ -4,9 +4,12 @@ import MessageGeneral from '../Alerts/MessageGeneral';
 import MessageSubmitBet from '../Alerts/MessageSubmitBet';
 import MessageYouWin from '../Alerts/MessageYouWin';
 import NewSet from '../Alerts/NewSet';
+import PopupMessage from '../Alerts/PopupMessage';
 import styles from './styles.module.scss';
 
-const NewSetComponent = FEATURES.SHUFFLE_THE_CARDS ? <NewSet /> : null;
+const NewSetComponent = () => {
+    return FEATURES.SHUFFLE_THE_CARDS ? <NewSet /> : null;
+};
 
 const AlertUI = () => {
     return (
@@ -15,8 +18,9 @@ const AlertUI = () => {
             <MessageSubmitBet />
             <Result />
             <MessageYouWin />
+            <PopupMessage />
 
-            {NewSetComponent}
+            <NewSetComponent />
         </div>
     );
 };

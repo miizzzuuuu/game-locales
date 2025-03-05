@@ -10,6 +10,7 @@ import SVGIconRoadmap from '../../../../ButtonRoadmap/SVG/SVGIconRoadmap';
 import SVGIconStatistic from '../../../../ButtonSatatistic/SVG/SVGIconStatistic';
 import P from '../../../ui/P';
 import styles from './styles.module.scss';
+import { Card, CardWrapper, Container } from '../../../ui';
 
 const keyLang = 'features-htp.menu';
 
@@ -22,51 +23,51 @@ const Menu = () => {
 
     return (
         <HowToPlayCardV2 title={t(`${keyLang}.title`)}>
-            <div className="htp__container">
+            <Container>
                 <P>{t(`${keyLang}.description`)}</P>
 
-                <div className={styles.wrapper}>
-                    <div className={styles.card}>
+                <CardWrapper>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconCancelBet />} />
                         <P>{t(`${keyLang}.paragraph-1`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconDoubleBet />} />
                         <P>{t(`${keyLang}.paragraph-2`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconRebet />} />
                         <P>{t(`${keyLang}.paragraph-3`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconMenu />} />
                         <P>{t(`${keyLang}.paragraph-4`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconHideChip />} />
                         <P>{t(`${keyLang}.paragraph-5`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconStatistic />} />
                         <P>{t(`${keyLang}.paragraph-6`)}</P>
-                    </div>
+                    </Card>
 
-                    <div className={styles.card}>
+                    <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconRoadmap strokeColor="#fff" />} />
                         <P>{t(`${keyLang}.paragraph-7`)}</P>
-                    </div>
+                    </Card>
 
-                    {/* <div className={styles.card}>
+                    {/* <Card className={styles['card-menu']}>
                         <ButtonIcon icon={<SVGIconFavorite />} />
                         <P>{t(`${keyLang}.paragraph-8`)}</P>
-                    </div> */}
-                </div>
-            </div>
+                    </Card> */}
+                </CardWrapper>
+            </Container>
         </HowToPlayCardV2>
     );
 };

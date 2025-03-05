@@ -31,7 +31,7 @@ const HowToPlayCardV2 = ({ title, children }: IProps) => {
             </div>
 
             <div className={`${styles['accordion-content']}${isOpen ? ` ${styles.open}` : ''}`}>
-                {children}
+                {isOpen && children}
             </div>
         </div>
     );

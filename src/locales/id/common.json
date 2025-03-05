@@ -41,11 +41,12 @@
     "mode": "mode",
     "stop": "berhenti",
     "total-bet": "total taruhan",
-    "you-win": "kamu menang",
+    "you-win": "anda menang",
     "bet-confirmed": "taruhan dikonfirmasi",
     "bet-accepted": "taruhan diterima",
-    "bet-closed": "taruhan ditutup",
+    "bet-rejected": "taruhan ditolak",
     "bet-error": "kesalahan taruhan",
+    "bet-closed": "taruhan ditutup",
     "bet-error-n50": "Sudah memasang taruhan {{button}}, tidak bisa memasang {{other}}",
     "bet-error-max": "Taruhan {{button}} maksimal {{value, number}}",
     "bet-error-min": "Taruhan {{button}} minimal {{value, number}}",
@@ -63,6 +64,7 @@
     "dont-show-again": "Jangan tampilkan lagi",
     "streaming-error": "kesalahan streaming: url streaming tidak valid",
     "no-promotion": "tidak ada promosi saat ini",
+    "disclaimer": "disclaimer",
 
     "features-htp": {
         "general": {
@@ -84,6 +86,41 @@
             "paragraph-6": "Untuk memunculkan Statistic permainan yang sedang berlangsung.",
             "paragraph-7": "Menampilkan atau menyembunyikan Roadmap/Statistik permainan.",
             "paragraph-8": "Untuk menyimpan dan menggunakan taruhan favorit masing masing pemain."
+        },
+        "settings": {
+            "title": "Pengaturan",
+            "description": "Opsi tambahan untuk menyesuaikan fitur dengan kebutuhan dan preferensi pengguna.",
+            "video": {
+                "title": "Video",
+                "description": "Deskripsi: Pengaturan untuk menampilkan streaming atau tidak dan pengaturan resolusi streaming.",
+                "default": "Default: Toggle On, Resolusi Sedang."
+            },
+            "live-streaming-audio": {
+                "title": "Audio Streaming Langsung",
+                "description": "Deskripsi: Pengaturan suara dari siaran langsung studio.",
+                "default": "Default: Toggle On."
+            },
+            "background-music": {
+                "title": "Musik Latar",
+                "description": "Deskripsi: Pengaturan suara untuk Musik Latar.",
+                "default": "Default: Toggle On."
+            },
+            "game-effects": {
+                "title": "Efek Permainan",
+                "description": "Deskripsi: Pengaturan suara untuk Efek  Permainan.",
+                "default": "Default: Toggle On."
+            },
+            "auto-bet": {
+                "title": "Taruhan Otomatis",
+                "description": "Deskripsi: Pengaturan taruhan otomatis berdasarkan taruhan sebelumnya.",
+                "default": "Default: Toggle Off."
+            },
+            "language": {
+                "title": "Bahasa",
+                "description": "Deskripsi: Mengontrol pengaturan bahasa permainan.",
+                "default": "Default: Sesuai dengan bahasa yang dipilih terakhir."
+            },
+            "disclaimer-settings": "Preferensi pengaturan anda akan disimpan, kecuali pengaturan taruhan otomatis yang akan di reset ke default."
         }
     }
 }
