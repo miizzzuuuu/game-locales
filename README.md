@@ -24,6 +24,10 @@ To start creating a game, follow [these steps](docs/game).
 - [Styling](docs/css): How to work with the CSS tooling
 - [Game](docs/game): Start a game project.
 
+## Git Subtree
+
+[Git Subtree tutorial](GIT_SUBTREE.md)
+
 # New Update
 
 - the translation for "show chip missing" is added

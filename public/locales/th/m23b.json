@@ -1,0 +1,47 @@
+{
+    "dragonpair": "คู่มังกร",
+    "tigerpair": "คู่เสือ",
+    "dragonwild": "มังกร wild",
+    "tigerwild": "เสือ wild",
+    "dragon": "มังกร",
+    "wild": "wild",
+    "superwild": "super wild",
+    "tie": "เสมอ",
+    "tiger": "เสือ",
+    "big": "ใหญ่",
+    "small": "เล็ก",
+    "odd": "คี่",
+    "even": "คู่",
+    "red": "แดง",
+    "black": "ดำ",
+    "wild bet": "เดิมพัน wild",
+    "dragon wild": "มังกร wild",
+    "tiger wild": "เสือ wild",
+    "super wild": "super wild",
+    "pair bet": "เดิมพันคู่",
+    "dragon pair": "คู่มังกร",
+    "tiger pair": "คู่เสือ",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "วิธีการเล่น",
+            "content": [
+                "Dragon Tiger Wild มาพร้อมกับโบนัส <b>WILD CARD</b> ล่าสุด! คว้าโอกาสในการชนะรางวัลใหญ่ขึ้นถึง <b>127x!</b> คุณเพียงแค่ต้องเดาการ์ดที่สูงที่สุดและ wild card เพื่อรับรางวัลที่ใหญ่กว่า! <b>LET’S GET WILD!!!</b>"
+            ]
+        },
+        "slide-2": {
+            "title": "วิธีการเล่น",
+            "content": [
+                "เกมนี้เล่นด้วยการ์ด 3 ใบ การ์ดหลัก 2 ใบ (Dragon และ Tiger) <b>จะแข่งขันกันเพื่อดูว่าฝั่งใดมีค่าสูงสุด</b> การ์ด wild 1 ใบถูกดึงออกมาเพื่อสร้าง <b>ชุดผสม Bonus Wild</b>.",
+                "คุณสามารถเดิมพันในการเดิมพันหลัก: Dragon/Tiger หรือในการผสมการเดิมพัน wild: Dragon Wild, Dragon Pair หรือ Tiger Wild, Tiger Pair และ Super Wild."
+            ]
+        },
+        "slide-3": {
+            "title": "Bonus Wild",
+            "content": [
+                "Wild card มาที่นี่เพื่อสร้างชุดผสมโบนัสที่สามารถเพิ่มการชนะของคุณอย่างมากถึง <b>127x!</b>",
+                "เดิมพันในการผสมการเดิมพัน wild และคว้าโอกาสในการได้รับ <b>รางวัล BONUS WILD หลายเท่า!</b>"
+            ]
+        }
+    }
+}

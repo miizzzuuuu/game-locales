@@ -33,10 +33,9 @@ const ANIMATIONS_URLS: MiniHTPAnimationUrls = [
     'https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json',
 ];
 
-export const QUICK_HTP_CONFIG: Record<string, { animations: MiniHTPAnimationUrls; key: string }> = {
-    m23b: {
+export const QUICK_HTP_CONFIG: Record<string, { animations: MiniHTPAnimationUrls }> = {
+    p6b: {
         animations: ANIMATIONS_URLS,
-        key: 'm23b',
     },
 } as const;
 
@@ -48,12 +47,4 @@ export const getUrlAnimation = (slide: number, language: string) => {
     }
 
     return urls;
-};
-
-export const getQuickHTPPrefix = () => {
-    return QUICK_HTP_CONFIG[getPcode()]?.key;
-};
-
-export const checkIfQuickHTPExist = () => {
-    return !!QUICK_HTP_CONFIG[getPcode()];
 };

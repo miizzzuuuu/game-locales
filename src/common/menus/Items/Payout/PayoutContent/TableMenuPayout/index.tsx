@@ -3,7 +3,7 @@ import { Fragment } from 'react/jsx-runtime';
 import { useAppSelector } from '../../../../../../store/hooks';
 import { selectCurrency, selectShowCurrency } from '../../../../../../store/slice/playerSlice';
 import { PayoutData } from '../../../../../../types';
-import { getBasePcode } from '../../../../../utils/GameHelper';
+import { getPcode } from '../../../../../utils/GameHelper';
 import { formatCurrency, formatNumber } from '../../../../../utils/StringHelper';
 import styles from './styles.module.scss';
 
@@ -17,7 +17,7 @@ const TableMenuPayout = ({ data }: IProps) => {
     const currency = useAppSelector(selectCurrency);
     const showCurrency = useAppSelector(selectShowCurrency);
 
-    const basePcode = getBasePcode();
+    const pcode = getPcode();
 
     return (
         <div className={styles['"payout-table-container"']}>
@@ -41,7 +41,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                             <tr>
                                 <td>
                                     <span className="text-nowrap text-capitalize">
-                                        {t(`${basePcode}.${item.name}`, { ns: 'game' })}
+                                        {t(`${item.name}`, { ns: pcode })}
                                     </span>
                                 </td>
                                 <td className="text-center text-cyan text-nowrap">
@@ -66,7 +66,7 @@ const TableMenuPayout = ({ data }: IProps) => {
                                     <tr key={`${idx}-${idxChild}`} className={styles['sub-item']}>
                                         <td className={styles['bet-child']}>
                                             <span className="text-nowrap text-capitalize">
-                                                {t(`${basePcode}.${child.name}`, { ns: 'game' })}
+                                                {t(`${child.name}`, { ns: pcode })}
                                             </span>
                                         </td>
                                         <td className="text-center text-cyan"></td>

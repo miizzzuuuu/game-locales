@@ -6,7 +6,7 @@ import { handleErrorApi } from './common/utils/APIManager.ts';
 import { betHelper } from './common/utils/BetHelper.ts';
 import { setPcode } from './common/utils/GameHelper.ts';
 import { DragonTigerBBet } from './game/utils/DragonTigerBBet.ts';
-import './services/i18next/index.ts';
+import i18next from './services/i18next/index.ts';
 import StoreProvider from './store/StoreProvider.tsx';
 import './styles/main.scss';
 
@@ -34,6 +34,8 @@ const main = () => {
 
     setPcode(pcode);
     document.body.classList.add(pcode);
+
+    i18next.loadNamespaces(pcode);
 
     // modify for spesifik
     betHelper.game = new DragonTigerBBet();

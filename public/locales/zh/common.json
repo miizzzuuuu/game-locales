@@ -1,0 +1,127 @@
+{
+    "menu": "菜单",
+    "roadmap": "路单",
+    "lobby": "大厅",
+    "history": "历史",
+    "how-to-play": "玩法",
+    "payout-and-limit": "赔付和限额",
+    "promotion": "促销",
+    "settings": "设置",
+    "video": "视频",
+    "live-streaming-sound": "直播声音",
+    "background-music": "背景音乐",
+    "game-effects": "游戏效果",
+    "auto-rebet": "自动重下注",
+    "language": "语言",
+    "main-bet": "主注",
+    "limit-bet": "下注限额",
+    "payout": "赔付",
+    "side-bet": "副注",
+    "note": "备注",
+    "note-payout-and-limit": "副注不能超过主注金额的一半",
+    "high": "高",
+    "medium": "中",
+    "auto": "自动",
+    "today": "今天",
+    "previous": "之前",
+    "bet": "下注",
+    "win": "赢",
+    "period": "期",
+    "total": "总计",
+    "statistic": "统计",
+    "pattern": "圖案",
+    "no-transactions": "无交易",
+    "no-result": "无结果",
+    "no-results-yet": "尚无结果",
+    "hide": "隐藏",
+    "show": "显示",
+    "favorite": "收藏",
+    "cancel": "取消",
+    "rebet": "重下注",
+    "double": "加倍",
+    "mode": "模式",
+    "stop": "停止",
+    "total-bet": "总下注",
+    "you-win": "您赢了",
+    "bet-confirmed": "下注已确认",
+    "bet-accepted": "投注成功",
+    "bet-rejected": "投注被拒绝",
+    "bet-error": "下注错误",
+    "bet-closed": "投注已关闭",
+    "bet-error-n50": "已下 {{button}} 注，不能下 {{other}} 注",
+    "bet-error-max": "{{button}} 注最大 {{value, number}}",
+    "bet-error-min": "{{button}} 注最小 {{value, number}}",
+    "insuffix-balance": "余额不足",
+    "autobet-error-insufficient-balance": "自动下注失败，余额不足",
+    "doublebet-error-max-bet": "已达到最大下注限额",
+    "bet-void-n50": "请先下主注",
+    "winner": "赢家",
+    "payout-no-initial-bet": "赔付不包括初始下注。",
+    "payout-includes-initial-bet": "赔付包括初始下注。",
+    "game": "游戏",
+    "features": "功能",
+    "shuffling-cards": "洗牌",
+    "complete-how-to-play": "完整玩法",
+    "dont-show-again": "不再显示",
+    "streaming-error": "直播错误：无效的直播URL",
+    "no-promotion": "目前没有活动",
+    "disclaimer": "免责声明",
+
+    "feature-explanations": {
+        "general": {
+            "title": "一般",
+            "paragraph-1": "要参与游戏，您必须有足够的余额/资金来支付您的赌注。您当前的余额可以在屏幕左下角查看。",
+            "paragraph-2": "总赌注指示器显示您为当前轮次所下赌注的总额。",
+            "paragraph-3": "显示桌面上允许的最小和最大赌注，这些赌注可能随时更改。此外，还显示当前周期的唯一代码和您正在玩的游戏名称。",
+            "paragraph-4": "计时器指示下注的剩余时间。计时器结束后，投注关闭，不再接受任何赌注。投注结束后，如果您的赌注被接受参与游戏轮次，您将收到“赌注已确认”的通知；否则，您将看到“并非所有赌注都被接受”或“赌注被拒绝”。",
+            "paragraph-5": "筹码显示允许您选择您希望下注的每个筹码的价值。您可以通过点击屏幕底部的筹码（位于撤销、加倍和重下注按钮附近）来选择筹码价值，以查看所有可用的筹码价值。只有与您当前余额兼容的筹码价值可以被选择。"
+        },
+        "menu": {
+            "title": "菜单",
+            "description": "额外的按钮，帮助玩家在游戏中。",
+            "paragraph-1": "撤销按钮会移除您在桌面上放置的最后一个筹码。",
+            "paragraph-2": "将您放置的筹码的总价值翻倍。确保您的账户余额足以支付翻倍的赌注。",
+            "paragraph-3": "允许您在桌面上重复与上一轮相同的赌注。",
+            "paragraph-4": "汉堡菜单提供对游戏中重要菜单和功能的访问。",
+            "paragraph-5": "隐藏您在桌面上放置的筹码。",
+            "paragraph-6": "显示正在进行的游戏的统计数据。",
+            "paragraph-7": "显示或隐藏路图/游戏统计。",
+            "paragraph-8": "用于保存和使用每位玩家的最爱赌注。"
+        },
+        "settings": {
+            "title": "设置",
+            "description": "根据用户需求和偏好定制功能的附加选项。",
+            "video": {
+                "title": "视频",
+                "description": "描述：配置是否启用直播流并调整流媒体分辨率。",
+                "default": "默认：已开启，中等分辨率。"
+            },
+            "live-streaming-audio": {
+                "title": "直播音频",
+                "description": "描述：控制直播音频设置。",
+                "default": "默认：已开启。"
+            },
+            "background-music": {
+                "title": "背景音乐",
+                "description": "描述：控制背景音乐设置。",
+                "default": "默认：已开启。"
+            },
+            "game-effects": {
+                "title": "游戏音效",
+                "description": "描述：控制游戏音效设置。",
+                "default": "默认：已开启。"
+            },
+            "auto-bet": {
+                "title": "自动投注",
+                "description": "描述：根据前一次投注控制自动投注功能。",
+                "default": "默认：已关闭。"
+            },
+            "language": {
+                "title": "语言",
+                "description": "描述：控制游戏语言设置。",
+                "default": "默认：与最近选择的语言匹配。"
+            },
+            "disclaimer-settings": "您的偏好设置将被保存，但自动投注设置除外，该设置将重置为默认值。"
+        }
+    }
+}
