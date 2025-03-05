@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { getQuickHTPPrefix } from '../../../../../game/components/QuickHowToPlayContent/helper';
+import { getBasePcode } from '../../../../utils/GameHelper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -9,7 +9,7 @@ interface IProps {
 const Content = ({ keySlide }: IProps) => {
     const { t } = useTranslation();
 
-    const contents = t(`quick-htp.${getQuickHTPPrefix()}.${keySlide}.content`, {
+    const contents = t(`${getBasePcode()}.quick-how-to-play.${keySlide}.content`, {
         returnObjects: true,
         ns: 'game',
     });

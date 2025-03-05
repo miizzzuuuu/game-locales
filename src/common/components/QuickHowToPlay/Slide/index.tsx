@@ -1,10 +1,6 @@
 import styles from './styles.module.scss';
 import { ModalItem } from '../ModalQuickHTP';
 
-export interface GraphicComponentProps {
-    isActive: boolean;
-}
-
 interface IProps extends ModalItem {
     index: number;
 }

@@ -1,5 +1,5 @@
 import Lottie, { ILottie } from '@lottielab/lottie-player/react';
-import { CSSProperties, useEffect, useRef } from 'react';
+import { CSSProperties, useRef } from 'react';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -9,20 +9,8 @@ interface IProps {
     className?: string;
 }
 
-const Graphic = ({ isActive, animationSrc, style, className }: IProps) => {
+const Graphic = ({ animationSrc, style, className }: IProps) => {
     const lottieRef = useRef<ILottie>(null);
-
-    useEffect(() => {
-        if (isActive) {
-            if (lottieRef.current) {
-                lottieRef.current.play();
-            }
-        } else {
-            if (lottieRef.current) {
-                lottieRef.current.stop();
-            }
-        }
-    }, [isActive]);
 
     return (
         <div className={styles.container}>

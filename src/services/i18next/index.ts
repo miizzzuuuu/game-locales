@@ -30,31 +30,18 @@ import thHTP from '../../locales/th/htp.json';
 import vnHTP from '../../locales/vn/htp.json';
 import zhHTP from '../../locales/zh/htp.json';
 
-// mini how to play
-import enQuickHTP from '../../locales/en/quick-htp.json';
-import hiQuickHTP from '../../locales/hi/quick-htp.json';
-import idQuickHTP from '../../locales/id/quick-htp.json';
-import koQuickHTP from '../../locales/ko/quick-htp.json';
-import ptBRQuickHTP from '../../locales/pt-BR/quick-htp.json';
-import thQuickHTP from '../../locales/th/quick-htp.json';
-import trQuickHTP from '../../locales/tr/quick-htp.json';
-import vnQuickHTP from '../../locales/vn/quick-htp.json';
-import zhQuickHTP from '../../locales/zh/quick-htp.json';
-
 const resources: Resource = {
     en: {
         common: enCommon,
         game: {
             p6: enP6,
             htp: enHTP,
-            'quick-htp': enQuickHTP,
         },
     },
     hi: {
         common: hiCommon,
         game: {
             p6: hiP6,
-            'quick-htp': hiQuickHTP,
         },
     },
     id: {
@@ -62,7 +49,6 @@ const resources: Resource = {
         game: {
             p6: idP6,
             htp: idHTP,
-            'quick-htp': idQuickHTP,
         },
     },
     ko: {
@@ -70,14 +56,12 @@ const resources: Resource = {
         game: {
             p6: koP6,
             htp: koHTP,
-            'quick-htp': koQuickHTP,
         },
     },
     'pt-BR': {
         common: ptBRCommon,
         game: {
             p6: ptBRP6,
-            'quick-htp': ptBRQuickHTP,
         },
     },
     th: {
@@ -85,14 +69,12 @@ const resources: Resource = {
         game: {
             p6: thP6,
             htp: thHTP,
-            'quick-htp': thQuickHTP,
         },
     },
     tr: {
         common: trCommon,
         game: {
             p6: trP6,
-            'quick-htp': trQuickHTP,
         },
     },
     vn: {
@@ -100,7 +82,6 @@ const resources: Resource = {
         game: {
             p6: vnP6,
             htp: vnHTP,
-            'quick-htp': vnQuickHTP,
         },
     },
     zh: {
@@ -108,7 +89,6 @@ const resources: Resource = {
         game: {
             p6: zhP6,
             htp: zhHTP,
-            'quick-htp': zhQuickHTP,
         },
     },
 };

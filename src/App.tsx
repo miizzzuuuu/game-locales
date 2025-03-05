@@ -14,7 +14,6 @@ import { useWindowResize } from './common/hooks/useWindowResize';
 import { FEATURES } from './common/utils/Features';
 import { sendMessageToParent } from './common/utils/FunctionHelper';
 import { finishLoading } from './common/utils/LoadingHelper';
-import { checkIfQuickHTPExist } from './game/components/QuickHowToPlayContent/helper';
 import { useAppDispatch, useAppSelector } from './store/hooks';
 import { selectShowMiniHowToPlay } from './store/slice/gameStateSlice';
 import { addBalance } from './store/slice/playerSlice';
@@ -22,7 +21,7 @@ import { setDeviceType, setOrientation } from './store/slice/windowSlice';
 import { MessageDataContainerToGame } from './types';
 
 const MiniHowToPlayComponents = () => {
-    return FEATURES.MINI_HOW_TO_PLAY && checkIfQuickHTPExist() ? <QuickHowToPlay /> : null;
+    return FEATURES.MINI_HOW_TO_PLAY ? <QuickHowToPlay /> : null;
 };
 
 function App() {

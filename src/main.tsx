@@ -4,7 +4,7 @@ import App from './App.tsx';
 import { makeServer } from './api/server/server.ts';
 import { handleErrorApi } from './common/utils/APIManager.ts';
 import { betHelper } from './common/utils/BetHelper.ts';
-import { setPcode } from './common/utils/GameHelper.ts';
+import { getPcode, setPcode } from './common/utils/GameHelper.ts';
 import { _24DBet } from './game/utils/_24DBet.ts';
 import './services/i18next/index.ts';
 import StoreProvider from './store/StoreProvider.tsx';
@@ -34,6 +34,8 @@ const main = () => {
 
     setPcode(pcode);
     document.body.classList.add(pcode);
+
+    console.log('after set pcode, now pcode is', getPcode());
 
     // modify for spesifik
     betHelper.game = new _24DBet();
