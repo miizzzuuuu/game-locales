@@ -3,7 +3,7 @@
 # Add
 
 git config alias.sba 'subtree add --prefix public/locales /
-ssh://git@gitdewa99.com:idnlive:8822/games-localize.git main --squash'
+ssh://git@gitdewa99.com:8822/idnlive/games-localize.git main --squash'
 
 git config alias.sba 'subtree add --prefix public/locales locales-repo main --squash'
 
