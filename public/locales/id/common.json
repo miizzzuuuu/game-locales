@@ -1,0 +1,126 @@
+{
+    "menu": "menu",
+    "roadmap": "pola",
+    "lobby": "lobi",
+    "history": "riwayat",
+    "how-to-play": "cara bermain",
+    "payout-and-limit": "pembayaran dan batasan",
+    "promotion": "promosi",
+    "settings": "pengaturan",
+    "video": "video",
+    "live-streaming-sound": "suara siaran langsung",
+    "background-music": "musik latar",
+    "game-effects": "efek permainan",
+    "auto-rebet": "taruhan ulang otomatis",
+    "language": "bahasa",
+    "main-bet": "taruhan utama",
+    "limit-bet": "batas taruhan",
+    "payout": "pembayaran",
+    "side-bet": "taruhan sampingan",
+    "note": "catatan",
+    "note-payout-and-limit": "Taruhan sampingan tidak boleh melebihi setengah dari jumlah taruhan utama",
+    "high": "tinggi",
+    "medium": "sedang",
+    "auto": "otomatis",
+    "today": "hari ini",
+    "previous": "sebelumnya",
+    "bet": "taruhan",
+    "win": "menang",
+    "period": "periode",
+    "total": "total",
+    "statistic": "statistik",
+    "no-transactions": "tidak ada transaksi",
+    "no-result": "tidak ada hasil",
+    "no-results-yet": "belum ada hasil",
+    "hide": "sembunyikan",
+    "show": "tampilkan",
+    "favorite": "favorit",
+    "cancel": "batal",
+    "rebet": "taruhan ulang",
+    "double": "gandakan",
+    "mode": "mode",
+    "stop": "berhenti",
+    "total-bet": "total taruhan",
+    "you-win": "anda menang",
+    "bet-confirmed": "taruhan dikonfirmasi",
+    "bet-accepted": "taruhan diterima",
+    "bet-rejected": "taruhan ditolak",
+    "bet-error": "kesalahan taruhan",
+    "bet-closed": "taruhan ditutup",
+    "bet-error-n50": "Sudah memasang taruhan {{button}}, tidak bisa memasang {{other}}",
+    "bet-error-max": "Taruhan {{button}} maksimal {{value, number}}",
+    "bet-error-min": "Taruhan {{button}} minimal {{value, number}}",
+    "insuffix-balance": "saldo tidak cukup",
+    "autobet-error-insufficient-balance": "taruhan otomatis gagal, saldo tidak cukup",
+    "doublebet-error-max-bet": "Batas taruhan maksimal tercapai",
+    "bet-void-n50": "Pasang taruhan utama terlebih dahulu",
+    "winner": "pemenang",
+    "payout-no-initial-bet": "Pembayaran tidak termasuk taruhan awal.",
+    "payout-includes-initial-bet": "Pembayaran termasuk taruhan awal.",
+    "game": "permainan",
+    "features": "fitur",
+    "shuffling-cards": "mengocok kartu",
+    "complete-how-to-play": "Panduan lengkap cara bermain",
+    "dont-show-again": "Jangan tampilkan lagi",
+    "streaming-error": "kesalahan streaming: url streaming tidak valid",
+    "no-promotion": "tidak ada promosi saat ini",
+    "disclaimer": "disclaimer",
+
+    "feature-explanations": {
+        "general": {
+            "title": "Umum",
+            "paragraph-1": "Untuk ikut serta dalam permainan, Anda harus memiliki saldo/dana yang mencukupi untuk menutupi taruhan Anda. Saldo Anda saat ini dapat dilihat di bagian kiri bawah layar anda.",
+            "paragraph-2": "Indikator TOTAL TARUHAN Menampilkan total jumlah taruhan yang Anda pasang untuk babak saat ini.",
+            "paragraph-3": "Menampilkan taruhan minimum dan maksimum yang diperbolehkan di atas meja dan dapat berubah kapan saja. Selain itu terdapat kode unik periode saat ini dan nama game yang sedang anda mainkan.",
+            "paragraph-4": "Timer akan memberitahukan waktu yang tersisa untuk memasang taruhan, setelah berakhir, taruhan di tutup dan tidak ada lagi taruhan yang diterima. Setelah waktu taruhan berakhir, Anda akan menerima konfirmasi \"taruhan dikonfirmasi\" jika taruhan Anda diterima untuk berpartisipasi dalam putaran permainan; jika tidak, Anda akan mendapatkan pemberitahuan \"Tidak semua taruhan diterima\" atau \"Taruhan ditolak\".",
+            "paragraph-5": "Tampilan chip memungkinkan Anda untuk memilih nilai dari setiap chip yang ingin dipertaruhkan. Anda dapat memilih nilai chip untuk taruhan dengan mengklik chip di bagian bawah layar, yang terletak dekat dengan tombol Batalkan, Gandakan, dan Pasang Lagi (Rebet), untuk melihat semua nilai chip yang tersedia. Hanya nilai chip yang dapat digunakan dengan saldo Anda saat ini yang dapat di pilih."
+        },
+        "menu": {
+            "title": "Menu",
+            "description": "Tombol tambahan untuk mempermudah pemain dalam permainan.",
+            "paragraph-1": "Tombol Batal akan menghapus satu chip yang sudah anda letakan sebelumnya di meja.",
+            "paragraph-2": "Menggandakan dua kali jumlah chip yang telah anda pasang. Pastikan saldo akun Anda mencukupi untuk menggandakan semua taruhan yang dipasang.",
+            "paragraph-3": "Memperbolehkan anda untuk mengulang taruhan yang sama seperti yang Anda pasang pada putaran sebelumnya di meja.",
+            "paragraph-4": "Menu Burger menyediakan menu menu penting dalam permainan untuk digunakan.",
+            "paragraph-5": "Menyamarkan tampilan chip yang telah anda pasang di meja.",
+            "paragraph-6": "Untuk memunculkan Statistic permainan yang sedang berlangsung.",
+            "paragraph-7": "Menampilkan atau menyembunyikan Roadmap/Statistik permainan.",
+            "paragraph-8": "Untuk menyimpan dan menggunakan taruhan favorit masing masing pemain."
+        },
+        "settings": {
+            "title": "Pengaturan",
+            "description": "Opsi tambahan untuk menyesuaikan fitur dengan kebutuhan dan preferensi pengguna.",
+            "video": {
+                "title": "Video",
+                "description": "Deskripsi: Pengaturan untuk menampilkan streaming atau tidak dan pengaturan resolusi streaming.",
+                "default": "Default: Toggle On, Resolusi Sedang."
+            },
+            "live-streaming-audio": {
+                "title": "Audio Streaming Langsung",
+                "description": "Deskripsi: Pengaturan suara dari siaran langsung studio.",
+                "default": "Default: Toggle On."
+            },
+            "background-music": {
+                "title": "Musik Latar",
+                "description": "Deskripsi: Pengaturan suara untuk Musik Latar.",
+                "default": "Default: Toggle On."
+            },
+            "game-effects": {
+                "title": "Efek Permainan",
+                "description": "Deskripsi: Pengaturan suara untuk Efek  Permainan.",
+                "default": "Default: Toggle On."
+            },
+            "auto-bet": {
+                "title": "Taruhan Otomatis",
+                "description": "Deskripsi: Pengaturan taruhan otomatis berdasarkan taruhan sebelumnya.",
+                "default": "Default: Toggle Off."
+            },
+            "language": {
+                "title": "Bahasa",
+                "description": "Deskripsi: Mengontrol pengaturan bahasa permainan.",
+                "default": "Default: Sesuai dengan bahasa yang dipilih terakhir."
+            },
+            "disclaimer-settings": "Preferensi pengaturan anda akan disimpan, kecuali pengaturan taruhan otomatis yang akan di reset ke default."
+        }
+    }
+}
