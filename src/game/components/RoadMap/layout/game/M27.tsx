@@ -19,6 +19,7 @@ import {
     Snake,
     Tiger,
 } from '../SVG/SVGShio';
+import { JSX } from 'react';
 
 export default class M27 extends BaseV2Roadmap {
     tianPrediction: ((props: any) => JSX.Element)[] | [] = [];

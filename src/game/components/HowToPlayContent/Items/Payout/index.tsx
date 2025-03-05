@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { Container } from '../../../../../common/components/HowToPlay/ui';
 import Loading from '../../../../../common/components/Loading';
 import { useFetchPayout } from '../../../../../common/hooks/useFetchPayout';
-import { Container } from '../../../../../common/menus/Items/HowToPlay/Components';
 import HowToPlayCardV2 from '../../../../../common/menus/Items/HowToPlay/HowToPlayCardV2';
 import PayoutNote from '../../../../../common/menus/Items/Payout/PayoutContent/PayoutNote';
 import TableMenuPayout from '../../../../../common/menus/Items/Payout/PayoutContent/TableMenuPayout';
