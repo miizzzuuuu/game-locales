@@ -1,0 +1,38 @@
+.table-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    container: table / inline-size;
+}
+
+.table {
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: #161623;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
+        background-color: #2b2d3d;
+        text-transform: capitalize;
+    }
+
+    th,
+    td {
+        padding: 0.8rem 0.6rem;
+        border: 0.06rem solid #4c4d66;
+    }
+}
+
+.card-column {
+    width: calc(50cqw / 3);
+}
+
+:global(.desktop) {
+    .table {
+        font-size: 1.4rem;
+    }
+
+    .card-column {
+        width: calc(46cqw / 3);
+    }
+}

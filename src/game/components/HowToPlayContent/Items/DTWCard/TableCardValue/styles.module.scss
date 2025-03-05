@@ -6,6 +6,7 @@
 }
 
 .table {
+    font-size: 1.1rem;
     width: 100%;
     background-color: #161623;
     border-collapse: separate;
@@ -25,17 +26,17 @@
     }
 
     tr:first-child td:first-child {
-        border-top-left-radius: 0.5rem;
+        border-top-left-radius: 0.4rem;
     }
     tr:first-child td:last-child {
-        border-top-right-radius: 0.5rem;
+        border-top-right-radius: 0.4rem;
     }
 
     tr:last-child td:first-child {
-        border-bottom-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.4rem;
     }
     tr:last-child td:last-child {
-        border-bottom-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.4rem;
     }
 
     tr:first-child td {
@@ -43,5 +44,11 @@
     }
     tr td:first-child {
         border-left-style: solid;
+    }
+}
+
+:global(.desktop) {
+    .table {
+        font-size: 1.4rem;
     }
 }

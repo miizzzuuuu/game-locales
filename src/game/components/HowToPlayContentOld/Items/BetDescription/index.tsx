@@ -4,7 +4,6 @@ import HowToPlayCard from '../../../../../common/menus/Items/HowToPlay/HowToPlay
 import MainBetTable from './MainBetTable';
 import Section from './Section';
 import SideBetTable from './SideBetTable';
-
 import styles from './styles.module.scss';
 
 const dataMainBet: string[] = ['dragon', 'tiger', 'tie'];

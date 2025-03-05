@@ -1,4 +1,5 @@
 import { MenuContentContainer } from '../../../common/menus/MenuContentContainer';
+import BetDescription from './Items/BetDescription';
 import DTWCard from './Items/DTWCard';
 import GeneralRules from './Items/GeneralRules';
 import Introduction from './Items/Introduction';
@@ -12,6 +13,7 @@ const HowToPlayContent = () => {
             <GeneralRules />
             <DTWCard />
             <WildBet />
+            <BetDescription />
             <Payout />
         </MenuContentContainer>
     );

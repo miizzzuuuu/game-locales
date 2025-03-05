@@ -34,62 +34,49 @@
         "tiger-pair": "This bet wins if the Tiger Card and Wild Card have the <b>same</b> value. (The Tiger Card doesn't need to win)"
     },
 
-    "bet-description-and-example": {
-        "title": "Bet Description and Examples",
-        "description": "Description",
-        "examples": "Examples",
-        "anything": "Any",
+    "bet-description": {
+        "title": "Bet Description",
+        "bet": "bet",
+        "description": "description",
+        "result": "result",
+        "any": "any",
         "main-bet": {
-            "title": "MAIN BET",
-            "heading": "MAIN BET",
-            "examples": "Examples",
-            "description": "Description",
-            "table": {
-                "dragon": {
-                    "title": "Dragon",
-                    "description": "Pays if the Dragon's card value is <b>higher than</b> the Tiger's."
-                },
-                "tiger": {
-                    "title": "Tiger",
-                    "description": "Pays if the Tiger's card value is <b>higher than</b> the Dragon's."
-                },
-                "tie": {
-                    "title": "Tie",
-                    "description": "Pays if both Dragon and Tiger cards have <b>the same value</b>."
-                }
+            "title": "main bet",
+            "dragon": {
+                "title": "Dragon",
+                "description": "Pays if the Dragon's card value is <b>higher than</b> the Tiger's."
+            },
+            "tiger": {
+                "title": "Tiger",
+                "description": "Pays if the Tiger's card value is <b>higher than</b> the Dragon's."
+            },
+            "tie": {
+                "title": "Tie",
+                "description": "Pays if both Dragon and Tiger cards have <b>the same value</b>."
             }
         },
         "side-bet": {
             "title": "SIDE BET",
-            "heading": "SIDE BET",
-            "examples": "Examples",
-            "description": "Description",
-            "table": {
-                "dragon-wild": {
-                    "title": "Dragon Wild",
-                    "description": "Pays if Dragon <b>wins</b> and the Dragon and Wild cards have the <b>same</b> value."
-                },
-                "tiger-wild": {
-                    "title": "Tiger Wild",
-                    "description": "Pays if Tiger <b>wins</b> and the Tiger and Wild cards have the <b>same</b> value."
-                },
-                "super-wild": {
-                    "title": "Super Wild",
-                    "description": "Pays if the Dragon, Tiger, and Wild cards all have <b>the same value</b>."
-                },
-                "dragon-pair": {
-                    "title": "Dragon Pair",
-                    "description": "Pays if the Dragon and Wild cards have the <b>same value</b>."
-                },
-                "tiger-pair": {
-                    "title": "Tiger Pair",
-                    "description": "Pays if the Tiger and Wild cards have the <b>same value</b>."
-                }
+            "dragon-wild": {
+                "title": "Dragon Wild",
+                "description": "Pays if Dragon <b>wins</b> and the Dragon and Wild cards have the <b>same</b> value."
+            },
+            "tiger-wild": {
+                "title": "Tiger Wild",
+                "description": "Pays if Tiger <b>wins</b> and the Tiger and Wild cards have the <b>same</b> value."
+            },
+            "super-wild": {
+                "title": "Super Wild",
+                "description": "Pays if the Dragon, Tiger, and Wild cards all have <b>the same value</b>."
+            },
+            "dragon-pair": {
+                "title": "Dragon Pair",
+                "description": "Pays if the Dragon and Wild cards have the <b>same value</b>."
+            },
+            "tiger-pair": {
+                "title": "Tiger Pair",
+                "description": "Pays if the Tiger and Wild cards have the <b>same value</b>."
             }
         }
-    },
-    "payout": {
-        "title": "Payout",
-        "bet-payout": "Bet Payout"
     }
 }

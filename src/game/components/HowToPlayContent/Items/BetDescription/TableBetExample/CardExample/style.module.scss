@@ -1,0 +1,37 @@
+.item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.name,
+.value {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.card {
+    font-size: 2rem;
+    width: 2rem;
+}
+
+:global(.desktop) {
+    .name,
+    .value {
+        font-size: 1.4rem;
+    }
+
+    .card {
+        font-size: 2.4rem;
+        width: 2.4rem;
+    }
+}
