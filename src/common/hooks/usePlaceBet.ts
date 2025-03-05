@@ -7,7 +7,7 @@ import { selectMax, selectMax50, selectMin, selectMin50 } from '../../store/slic
 import { setMessage } from '../../store/slice/gameStateSlice';
 import { selectBalance } from '../../store/slice/playerSlice';
 import { betHelper } from '../utils/BetHelper';
-import { getBasePcode } from '../utils/GameHelper';
+import { getPcode } from '../utils/GameHelper';
 
 interface Params {
     useLowerCase?: boolean | undefined;
@@ -41,14 +41,12 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
             if (oppositeBetKey && betAdd[oppositeBetKey] > 0) {
                 const opposite = oppositeBetKey.split('@')[0];
 
-                const buttonOpposite = t(
-                    `${getBasePcode()}.${useLowerCase ? opposite.toLowerCase() : opposite}`,
-                    { ns: 'game' },
-                );
-                const buttonName = t(
-                    `${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`,
-                    { ns: 'game' },
-                );
+                const buttonOpposite = t(`${useLowerCase ? opposite.toLowerCase() : opposite}`, {
+                    ns: getPcode(),
+                });
+                const buttonName = t(`${useLowerCase ? button.toLowerCase() : button}`, {
+                    ns: getPcode(),
+                });
 
                 const message = t('bet-error-n50', {
                     button: buttonOpposite,
@@ -88,8 +86,8 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const min = isGroup50 ? min50Bet : minBet;
         if (chipAfterBet < min) {
             const buttonName = isGroup50
-                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`, {
-                      ns: 'game',
+                ? t(`${useLowerCase ? button.toLowerCase() : button}`, {
+                      ns: getPcode(),
                   })
                 : button;
             const message = t('bet-error-min', {
@@ -111,8 +109,8 @@ function usePlaceBet({ useLowerCase = false, betIsOpen }: Params) {
         const max = isGroup50 ? max50Bet : maxBet;
         if (chipAfterBet > max) {
             const buttonName = isGroup50
-                ? t(`${getBasePcode()}.${useLowerCase ? button.toLowerCase() : button}`, {
-                      ns: 'game',
+                ? t(`${useLowerCase ? button.toLowerCase() : button}`, {
+                      ns: getPcode(),
                   })
                 : button;
             const message = t('bet-error-max', {

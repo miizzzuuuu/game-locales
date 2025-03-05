@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getBasePcode } from '../../../../../../common/utils/GameHelper';
+import { getPcode } from '../../../../../../common/utils/GameHelper';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
 
@@ -45,7 +45,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                     letterSpacing="0em"
                     style={{ textTransform: 'uppercase' }}
                 >
-                    {t(`${getBasePcode()}.small`, { ns: 'game' })}
+                    {t(`${getPcode()}.small`, { ns: 'game' })}
                 </text>
             </g>
             <rect
@@ -666,7 +666,7 @@ const SVGColRow = ({ className, style }: IProps) => {
                     letterSpacing="0em"
                     style={{ textTransform: 'uppercase' }}
                 >
-                    {t(`${getBasePcode()}.big`, { ns: 'game' })}
+                    {t(`${getPcode()}.big`, { ns: 'game' })}
                 </text>
             </g>
             <rect

@@ -92,7 +92,7 @@ function App() {
         };
     }, [dispatch]);
 
-    const timeoutRef = useRef<number>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
     const handleOverlayResize = useCallback(() => {
         setShowOverlayResize(true);

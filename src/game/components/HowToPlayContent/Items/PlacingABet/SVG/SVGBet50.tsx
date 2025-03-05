@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getBasePcode } from '../../../../../../common/utils/GameHelper';
+import { getPcode } from '../../../../../../common/utils/GameHelper';
 // import TextPayout from './TextPayout';
 
 type IProps = Pick<SVGProps<SVGSVGElement>, 'style' | 'className'>;
@@ -55,7 +55,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.small`, { ns: 'game' })}
+                {t(`${getPcode()}.small`, { ns: 'game' })}
             </text>
             <g filter="url(#filter0_dd_356_884)">
                 <g clipPath="url(#clip0_356_884)">
@@ -388,7 +388,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.big`, { ns: 'game' })}
+                {t(`${getPcode()}.big`, { ns: 'game' })}
             </text>
             <g opacity="0.3">
                 <g clipPath="url(#clip3_356_884)">
@@ -591,7 +591,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.odd`, { ns: 'game' })}
+                {t(`${getPcode()}.odd`, { ns: 'game' })}
             </text>
             <g filter="url(#filter1_dd_356_884)">
                 <g clipPath="url(#clip4_356_884)">
@@ -672,7 +672,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.even`, { ns: 'game' })}
+                {t(`${getPcode()}.even`, { ns: 'game' })}
             </text>
             <rect
                 x="100.522"
@@ -711,7 +711,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.red`, { ns: 'game' })}
+                {t(`${getPcode()}.red`, { ns: 'game' })}
             </text>
             <g filter="url(#filter2_dd_356_884)">
                 <g clipPath="url(#clip7_356_884)">
@@ -792,7 +792,7 @@ const SVGBet50 = ({ className, style }: IProps) => {
                 letterSpacing="0em"
                 style={{ textTransform: 'uppercase' }}
             >
-                {t(`${getBasePcode()}.black`, { ns: 'game' })}
+                {t(`${getPcode()}.black`, { ns: 'game' })}
             </text>
             <defs>
                 <filter

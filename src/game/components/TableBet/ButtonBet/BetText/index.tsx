@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getBasePcode } from '../../../../../common/utils/GameHelper';
+import { getPcode } from '../../../../../common/utils/GameHelper';
 import styles from './styles.module.scss';
 
 interface IProps {
@@ -12,7 +12,7 @@ const BetText = ({ label }: IProps) => {
 
     return (
         <div className={styles.container}>
-            <span className={styles.text}>{t(`${getBasePcode()}.${label}`, { ns: 'game' })}</span>
+            <span className={styles.text}>{t(`${label}`, { ns: getPcode() })}</span>
         </div>
     );
 };
