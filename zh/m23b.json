@@ -1,0 +1,47 @@
+{
+    "dragonpair": "龙对",
+    "tigerpair": "虎对",
+    "dragonwild": "龙 wild",
+    "tigerwild": "虎 wild",
+    "dragon": "龙",
+    "wild": "wild",
+    "superwild": "super wild",
+    "tie": "和",
+    "tiger": "虎",
+    "big": "大",
+    "small": "小",
+    "odd": "单",
+    "even": "双",
+    "red": "红",
+    "black": "黑",
+    "wild bet": "wild 投注",
+    "dragon wild": "龙 wild",
+    "tiger wild": "虎 wild",
+    "super wild": "super wild",
+    "pair bet": "对投注",
+    "dragon pair": "龙对",
+    "tiger pair": "虎对",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "玩法",
+            "content": [
+                "Dragon Tiger Wild 配备了最新的 <b>KARTU WILD</b> bonus！抓住机会赢得高达 <b>127x</b> 的更大奖励！您只需猜出最高牌和 wild 牌即可获得更大的奖励！<b>LET’S GET WILD!!!</b>"
+            ]
+        },
+        "slide-2": {
+            "title": "玩法",
+            "content": [
+                "本游戏使用 3 张牌进行。2 张主牌（Dragon 和 Tiger）<b>将比较哪一侧的价值最高</b>。1 张 wild 牌被抽出以形成 <b>Bonus Wild 组合</b>。",
+                "您可以投注主注：Dragon/Tiger。或投注 wild 组合：Dragon Wild、Dragon Pair 或 Tiger Wild、Tiger Pair 和 Super Wild。"
+            ]
+        },
+        "slide-3": {
+            "title": "Bonus Wild",
+            "content": [
+                "Kartu Wild 的存在是为了形成可以显著增加您的奖金支付的 bonus 组合，最高可达 <b>127x！</b>",
+                "在 wild 投注组合上下注，并抓住机会获得 <b>多重 BONUS WILD 奖励！</b>"
+            ]
+        }
+    }
+}

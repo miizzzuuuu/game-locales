@@ -1,0 +1,47 @@
+{
+    "dragonpair": "ड्रैगन जोड़ी",
+    "tigerpair": "टाइगर जोड़ी",
+    "dragonwild": "ड्रैगन wild",
+    "tigerwild": "टाइगर wild",
+    "dragon": "ड्रैगन",
+    "wild": "wild",
+    "superwild": "super wild",
+    "tie": "बराबरी",
+    "tiger": "टाइगर",
+    "big": "बड़ा",
+    "small": "छोटा",
+    "odd": "विषम",
+    "even": "सम",
+    "red": "लाल",
+    "black": "काला",
+    "wild bet": "wild दांव",
+    "dragon wild": "ड्रैगन wild",
+    "tiger wild": "टाइगर wild",
+    "super wild": "super wild",
+    "pair bet": "जोड़ी दांव",
+    "dragon pair": "ड्रैगन जोड़ी",
+    "tiger pair": "टाइगर जोड़ी",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "कैसे खेलें",
+            "content": [
+                "Dragon Tiger Wild नवीनतम <b>WILD CARD</b> बोनस के साथ आता है! <b>127x</b> तक बड़े पुरस्कार जीतने का अवसर पाएं! आपको बस उच्चतम कार्ड और wild कार्ड का अनुमान लगाना है बड़े पुरस्कारों के लिए! <b>LET’S GET WILD!!!</b>"
+            ]
+        },
+        "slide-2": {
+            "title": "कैसे खेलें",
+            "content": [
+                "यह खेल 3 कार्डों के साथ खेला जाता है। 2 मुख्य कार्ड (Dragon और Tiger) <b>यह देखने के लिए प्रतिस्पर्धा करेंगे कि किस पक्ष का मूल्य उच्चतम है</b>। 1 wild कार्ड <b>Bonus Wild संयोजन</b> बनाने के लिए निकाला जाता है।",
+                "आप मुख्य दांव पर दांव लगा सकते हैं: Dragon/Tiger। या wild दांव संयोजनों पर: Dragon Wild, Dragon Pair या Tiger Wild, Tiger Pair, और Super Wild।"
+            ]
+        },
+        "slide-3": {
+            "title": "Bonus Wild",
+            "content": [
+                "Wild कार्ड बोनस संयोजन बनाने के लिए है जो आपकी जीत को <b>127x</b> तक नाटकीय रूप से बढ़ा सकता है!",
+                "Wild दांव संयोजनों पर दांव लगाएं और <b>कई BONUS WILD पुरस्कारों</b> का अवसर प्राप्त करें!"
+            ]
+        }
+    }
+}
