@@ -1,0 +1,58 @@
+{
+    "1st Column": "Cột 1",
+    "2nd Column": "Cột 2",
+    "3rd Column": "Cột 3",
+    "4th Column": "Cột 4",
+    "5th Column": "Cột 5",
+    "6th Column": "Cột 6",
+    "1st Row": "Hàng 1",
+    "2nd Row": "Hàng 2",
+    "3rd Row": "Hàng 3",
+    "4th Row": "Hàng 4",
+    "1st Column,2nd Column": "Cột 1-2",
+    "2nd Column,3rd Column": "Cột 2-3",
+    "3rd Column,4th Column": "Cột 3-4",
+    "4th Column,5th Column": "Cột 4-5",
+    "5th Column,6th Column": "Cột 5-6",
+    "1st Row,2nd Row": "Hàng 1-2",
+    "3rd Row,4th Row": "Hàng 3-4",
+    "big": "lớn",
+    "small": "nhỏ",
+    "odd": "lẻ",
+    "even": "chẵn",
+    "red": "đỏ",
+    "black": "đen",
+    "one number": "Một Số",
+    "two numbers": "Hai Số",
+    "four numbers": "Bốn Số",
+    "single row": "Một Hàng",
+    "single column": "Một Cột",
+    "double row": "Hai Hàng",
+    "double column": "Hai Cột",
+    "side bet": "Cược Phụ",
+    "small/big": "nhỏ/lớn",
+    "odd/even": "lẻ/chẵn",
+    "red/black": "đỏ/đen",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "Cách Chơi",
+            "content": [
+                "Giành được tiền thưởng thanh toán tuyệt vời lên đến <b>500x Jackpot & Lucky Number!</b>",
+                "Chơi bằng cách đoán quả bóng sẽ xuất hiện trong lồng quay. Có 24 quả bóng được đánh số từ 1 đến 24 với màu đỏ và đen."
+            ]
+        },
+        "slide-2": {
+            "title": "Lucky Numbers",
+            "content": [
+                "Hệ thống chọn ngẫu nhiên từ 2 đến 12 số làm Lucky Numbers. Lucky Numbers có mức tăng thanh toán đáng kể so với thanh toán thông thường, từ <b>30x đến 95x</b> số tiền cược của bạn."
+            ]
+        },
+        "slide-3": {
+            "title": "Jackpot Number",
+            "content": [
+                "Hệ thống chọn ngẫu nhiên <b>1 số</b> làm Jackpot Number. Số này có thể làm tăng đáng kể thanh toán vượt qua Lucky Number Bonus, bắt đầu từ <b>100x đến 500x</b> số tiền cược của bạn."
+            ]
+        }
+    }
+}
