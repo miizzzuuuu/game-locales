@@ -1,0 +1,204 @@
+{
+    "introduction": {
+        "title": "pengenalan",
+        "content": "24D Jackpot merupakan permainan tradisional menebak angka yang dibuat menjadi modern sama seperti kebanyakan permainan kami yang sudah mendapatkan sentuhan tampilan yang lebih fresh dan juga tentunya dengan Bonus sistem yang sangat menggiurkan untuk anda memainkan permainan ini. Menangkan Bonus sampai x500 lipat melalui sistem Jackpot didalam game terbaru kami ini!!!"
+    },
+    "rules": {
+        "title": "peraturan",
+        "steps": [
+            "Permainan ini menggunakan 24 Bola yang terdiri dari angka 1 sampai 24 dengan warna merah dan hitam yang terdapat di dalam sebuah sangkar yang akan diputar setiap putaran permainan.",
+            "Permainan dimulai ketika dealer membuka waktu untuk bertaruh.",
+            "Sekarang Anda harus menempatkan taruhan Anda pada panel taruhan yang kami sediakan.",
+            "Semua taruhan di panel taruhan akan diterima secara otomatis ketika waktunya habis.",
+            "Setelah waktu taruhan berakhir, Dealer akan memutar Sangkar Bola untuk menentukan hasil permainan.",
+            "Hanya Taruhan 1 Angka saja yang berhak mengikuti sistem Bonus Lucky Number & Jackpot Number. Semua taruhan diluar taruhan 1 Angka akan dibayar normal sesuai dengan yang ada didalam tabel pembayaran.",
+            "Hasil untuk 1 putaran permainan hanyalah 1 angka yang terdiri dari angka 1 sampai 24 saja. dan jika bola tidak terposisikan dengan jelas maka \"no game\" status akan terjadi dan dealer akan memutar sangkar sekali lagi hingga hasilnya jelas."
+        ]
+    },
+    "placing-a-bet": {
+        "title": "Memasang Taruhan",
+        "single-bet": "Bertaruh pada 1 angka (Taruhan Tunggal).",
+        "split-bet": "Bertaruh pada 2 angka (Taruhan Split).",
+        "corner-bet": "Bertaruh pada 4 angka (Taruhan Pojok).",
+        "row-column-bets": "Taruhan Baris & Kolom.",
+        "50-50-bet": "Taruhan 50-50 (Kecil/Besar, Ganjil/Genap, Merah/Hitam)."
+    },
+    "bonus-system": {
+        "title": "Sistem Bonus",
+        "introduction": {
+            "heading": "PENGENALAN",
+            "content": "Di dalam setiap putaran permainan, sistem akan menentukan secara acak angka mana saja yang akan terpilih ke dalam kategori Lucky Number & Jackpot Number. Angka yang sudah terpilih menjadi Lucky Number maupun Jackpot Number secara otomatis pembayarannya akan meningkat secara drastis. Angka yang sudah terpilih menjadi Jackpot Number tidak akan terpilih lagi menjadi Lucky Number , dan begitu juga sebaliknya."
+        },
+        "lucky-numbers": {
+            "heading": "LUCKY NUMBER",
+            "content": "Disetiap putaran permainan sistem akan secara acak memilih {{minNumbers}} sampai {{maxNumbers}} angka yang akan menjadi Lucky Number. Untuk setiap Lucky Number yang terpilih maka pembayaran akan meningkat secara drastis diatas bayaran normal. Lucky Number bonus sekecil kecilnya akan mendapatkan {{minMultiplier}}x Taruhan anda dan bisa mencapai {{maxMultiplier}}x Taruhan anda."
+        },
+        "jackpot-number": {
+            "heading": "JACKPOT NUMBER",
+            "content": "Disetiap putaran permainan sistem juga akan secara acak memilih 1 angka saja yang akan menjadi Jackpot Number. Angka terpilih yang menjadi Jackpot Number maka pembayaran akan meningkat secara lebih drastis diatas pembayaran Lucky Number Bonus. Kesempatan menang Jackpot Number ini sekecil kecilnya adalah {{minJackpotMultiplier}}x Taruhan anda dan bisa mencapai {{maxJackpotMultiplier}}x Taruhan anda."
+        },
+        "how-to-get-bonuses": {
+            "heading": "CARA MENDAPATKAN BONUS",
+            "content": "Untuk mendapatkan bonus ini, Anda harus memasang taruhan pada nomor yang benar dan hasil permainan untuk putaran tersebut juga harus sesuai dengan nomor yang Anda pasang."
+        },
+        "example-1": {
+            "title": "Contoh 1: Menangkan Bonus Lucky Number",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai {{bet, number}} masing-masing.",
+            "result": "Lucky Number {{luckyNumbers}}.\nLucky Number Multiplier x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan = {{gameResult}}.",
+            "winnings": "Kemenangan Anda adalah sebagai berikut:\nTaruhan * Hadiah Lucky Number {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Contoh 2: Menangkan Bonus Jackpot Number",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai {{bet, number}} masing-masing.",
+            "result": "Lucky Number {{luckyNumbers}}.\nLucky Number Multiplier x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan = {{gameResult}}.",
+            "winnings": "Kemenangan Anda adalah sebagai berikut:\nTaruhan * Hadiah Jackpot = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Contoh 3: Menang Taruhan 1 Angka Normal",
+            "period": "Periode {{period}}",
+            "description": "Anda memasang angka {{numbers}} dengan nilai masing-masing {{bet, number}}.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nHasil permainan Angka = {{gameResult}}.",
+            "winnings": "Kemenangan anda sebagai berikut:\nTaruhan * Hadiah Normal = {{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
+    },
+    "bet-description-and-example": {
+        "title": "Deskripsi Taruhan dan Contoh",
+        "winning-conditions": "Kondisi Menang",
+        "bet": "TARUHAN",
+        "result": "HASIL",
+        "status": "STATUS",
+        "main-bet": {
+            "heading": "Taruhan Utama",
+            "single": {
+                "title": "Tunggal",
+                "description": "Bertaruh pada satu angka",
+                "winning-conditions": "Hasilnya sesuai dengan taruhan Anda",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "MENANG" },
+                    { "bet": "1", "result": "2", "status": "KALAH" }
+                ]
+            },
+            "split": {
+                "title": "Split",
+                "description": "Bertaruh pada dua angka yang berdekatan secara vertikal/horizontal",
+                "winning-conditions": "Hasilnya adalah salah satu dari dua angka yang Anda pasang",
+                "examples": [
+                    { "bet": "1,2", "result": "1", "status": "MENANG" },
+                    { "bet": "1,2", "result": "3", "status": "KALAH" }
+                ]
+            },
+            "corner": {
+                "title": "Corner",
+                "description": "Bertaruh pada empat angka yang bertemu di satu sudut",
+                "winning-conditions": "Hasilnya adalah salah satu dari empat angka yang Anda pasang",
+                "examples": [
+                    { "bet": "1,2,5,6", "result": "5", "status": "MENANG" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "KALAH" }
+                ]
+            },
+            "single-row": {
+                "title": "Baris Tunggal",
+                "description": "6 angka",
+                "winning-conditions": "Hasilnya ada di \"Baris Tunggal\" yang Anda pasang",
+                "examples": [
+                    { "bet": "Baris 1", "result": "5", "status": "MENANG" },
+                    { "bet": "Baris 1", "result": "6", "status": "KALAH" }
+                ]
+            },
+            "single-column": {
+                "title": "Kolom Tunggal",
+                "description": "4 angka",
+                "winning-conditions": "Hasilnya ada di \"Kolom Tunggal\" yang Anda pasang",
+                "examples": [
+                    { "bet": "Kolom 1", "result": "3", "status": "MENANG" },
+                    { "bet": "Kolom 1", "result": "7", "status": "KALAH" }
+                ]
+            },
+            "double-row": {
+                "title": "Dua Baris",
+                "description": "12 angka",
+                "winning-conditions": "Hasilnya ada di \"Dua Baris\" yang Anda pasang",
+                "examples": [
+                    { "bet": "Baris 1-2", "result": "14", "status": "MENANG" },
+                    { "bet": "Baris 1-2", "result": "24", "status": "KALAH" }
+                ]
+            },
+            "double-column": {
+                "title": "Dua Kolom",
+                "description": "12 angka",
+                "winning-conditions": "Hasilnya ada di \"Dua Kolom\" yang Anda pasang",
+                "examples": [
+                    { "bet": "Kolom 1-2", "result": "7", "status": "MENANG" },
+                    { "bet": "Kolom 1-2", "result": "19", "status": "KALAH" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "Taruhan 50-50",
+            "small": {
+                "title": "Kecil",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah dari 1 sampai 12",
+                "examples": [
+                    { "bet": "Kecil", "result": "2", "status": "MENANG" },
+                    { "bet": "Kecil", "result": "13", "status": "KALAH" }
+                ]
+            },
+            "big": {
+                "title": "Besar",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah dari 12 sampai 24",
+                "examples": [
+                    { "bet": "Besar", "result": "13", "status": "MENANG" },
+                    { "bet": "Besar", "result": "2", "status": "KALAH" }
+                ]
+            },
+            "odd": {
+                "title": "Ganjil",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah angka ganjil",
+                "examples": [
+                    { "bet": "Ganjil", "result": "13", "status": "MENANG" },
+                    { "bet": "Ganjil", "result": "12", "status": "KALAH" }
+                ]
+            },
+            "even": {
+                "title": "Genap",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah angka genap",
+                "examples": [
+                    { "bet": "Genap", "result": "12", "status": "MENANG" },
+                    { "bet": "Genap", "result": "13", "status": "KALAH" }
+                ]
+            },
+            "red": {
+                "title": "Merah",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah merah",
+                "examples": [
+                    { "bet": "Merah", "result": "10", "status": "MENANG" },
+                    { "bet": "Merah", "result": "14", "status": "KALAH" }
+                ]
+            },
+            "black": {
+                "title": "Hitam",
+                "description": "",
+                "winning-conditions": "Hasilnya adalah hitam",
+                "examples": [
+                    { "bet": "Hitam", "result": "12", "status": "MENANG" },
+                    { "bet": "Hitam", "result": "13", "status": "KALAH" }
+                ]
+            }
+        }
+    },
+    "payout": {
+        "title": "pembayaran",
+        "bet-payout": "pembayaran taruhan",
+        "bonus-payout": "pembayaran bonus",
+        "lucky-number-multiplier": "Pengali Lucky Number",
+        "jackpot-number-multiplier": "Pengali Jackpot Number",
+        "number-times": "{{value}}x"
+    }
+}

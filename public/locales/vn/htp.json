@@ -1,0 +1,204 @@
+{
+    "introduction": {
+        "title": "giới thiệu",
+        "content": "24D Jackpot là một trò chơi đoán số truyền thống đã được hiện đại hóa giống như hầu hết các trò chơi của chúng tôi đã nhận được giao diện mới và tất nhiên là với hệ thống tiền thưởng rất hấp dẫn để bạn chơi trò chơi này. Giành được tiền thưởng lên đến x500 thông qua hệ thống Jackpot trong trò chơi mới nhất của chúng tôi!!!"
+    },
+    "rules": {
+        "title": "quy tắc",
+        "steps": [
+            "Trò chơi này sử dụng 24 quả bóng bao gồm các số từ 1 đến 24 với các màu đỏ và đen được chứa trong một lồng sẽ quay mỗi vòng chơi.",
+            "Trò chơi bắt đầu khi người chia bài mở thời gian đặt cược.",
+            "Bây giờ bạn phải đặt cược trên bảng đặt cược mà chúng tôi cung cấp.",
+            "Tất cả các cược trên bảng đặt cược sẽ được tự động chấp nhận khi hết thời gian.",
+            "Sau khi thời gian đặt cược kết thúc, người chia bài sẽ quay lồng bóng để xác định kết quả trò chơi.",
+            "Chỉ các cược vào một số duy nhất mới đủ điều kiện cho hệ thống tiền thưởng Số may mắn & Số Jackpot. Tất cả các cược ngoài cược số duy nhất sẽ được thanh toán bình thường theo bảng thanh toán.",
+            "Kết quả cho một vòng chơi chỉ là một số từ 1 đến 24. Nếu bóng không được định vị rõ ràng, trạng thái \"không có trò chơi\" sẽ xảy ra và người chia bài sẽ quay lồng lại cho đến khi kết quả rõ ràng."
+        ]
+    },
+    "placing-a-bet": {
+        "title": "Đặt cược",
+        "single-bet": "Cược vào 1 số (Cược đơn).",
+        "split-bet": "Cược vào 2 số (Cược chia).",
+        "corner-bet": "Cược vào 4 số (Cược góc).",
+        "row-column-bets": "Cược hàng & cột.",
+        "50-50-bet": "Cược 50-50 (Nhỏ/Lớn, Lẻ/Chẵn, Đỏ/Đen)."
+    },
+    "bonus-system": {
+        "title": "Hệ Thống Thưởng",
+        "introduction": {
+            "heading": "GIỚI THIỆU",
+            "content": "Trong mỗi vòng chơi, hệ thống sẽ ngẫu nhiên xác định các số sẽ được chọn vào các danh mục Số May Mắn & Số Jackpot. Các số được chọn làm Số May Mắn hoặc Số Jackpot sẽ tự động tăng tiền thưởng lên rất nhiều. Các số được chọn làm Số Jackpot sẽ không còn được chọn làm Số May Mắn nữa và ngược lại."
+        },
+        "lucky-numbers": {
+            "heading": "SỐ MAY MẮN",
+            "content": "Trong mỗi vòng chơi, hệ thống sẽ ngẫu nhiên chọn {{minNumbers}} đến {{maxNumbers}} số sẽ trở thành Số May Mắn. Đối với mỗi Số May Mắn được chọn, tiền thưởng sẽ tăng đáng kể so với tiền thưởng thông thường. Tiền thưởng nhỏ nhất của Số May Mắn sẽ nhận được {{minMultiplier}}x cược của bạn và có thể lên đến {{maxMultiplier}}x cược của bạn."
+        },
+        "jackpot-number": {
+            "heading": "SỐ JACKPOT",
+            "content": "Trong mỗi vòng chơi, hệ thống cũng sẽ ngẫu nhiên chọn 1 số sẽ trở thành Số Jackpot. Số được chọn trở thành Số Jackpot và tiền thưởng sẽ tăng đáng kể hơn nhiều so với tiền thưởng của Số May Mắn. Cơ hội trúng thưởng Số Jackpot này thấp nhất là {{minJackpotMultiplier}}x cược của bạn và có thể lên đến {{maxJackpotMultiplier}}x cược của bạn."
+        },
+        "how-to-get-bonuses": {
+            "heading": "CÁCH NHẬN TIỀN THƯỞNG",
+            "content": "Để nhận tiền thưởng này, bạn phải đặt cược vào số đúng và kết quả của trò chơi trong vòng đó cũng phải khớp với số bạn đã đặt cược."
+        },
+        "example-1": {
+            "title": "Ví dụ 1: Thắng Tiền Thưởng Số May Mắn",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Số May Mắn = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Ví dụ 2: Thắng Tiền Thưởng Số Jackpot",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Jackpot = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Ví dụ 3: Thắng cược số bình thường 1 số",
+            "period": "Kỳ {{period}}",
+            "description": "Bạn đặt cược vào các số {{numbers}} với giá trị {{bet, number}} mỗi số.",
+            "result": "Số May Mắn = {{luckyNumbers}}.\nHệ số Nhân Số May Mắn = x{{luckyMultiplier}}.\nSố Jackpot = {{jackpotNumber}}.\nHệ số Nhân Số Jackpot = x{{jackpotMultiplier}}.\nKết quả trò chơi = {{gameResult}}.",
+            "winnings": "Tiền thắng cược của bạn như sau:\nCược * Giải Thưởng Thông Thường\n{{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
+    },
+    "bet-description-and-example": {
+        "title": "Mô tả và Ví dụ về Cược",
+        "winning-conditions": "Điều kiện Thắng",
+        "bet": "CƯỢC",
+        "result": "KẾT QUẢ",
+        "status": "TRẠNG THÁI",
+        "main-bet": {
+            "heading": "Cược Chính",
+            "single": {
+                "title": "Cược Đơn",
+                "description": "Cược vào một số",
+                "winning-conditions": "Kết quả khớp với cược của bạn",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "THẮNG" },
+                    { "bet": "1", "result": "2", "status": "THUA" }
+                ]
+            },
+            "split": {
+                "title": "Cược Đôi",
+                "description": "Cược vào hai số liền kề theo chiều dọc/ngang",
+                "winning-conditions": "Kết quả là một trong hai số bạn đã đặt cược",
+                "examples": [
+                    { "bet": "1,2", "result": "1", "status": "THẮNG" },
+                    { "bet": "1,2", "result": "3", "status": "THUA" }
+                ]
+            },
+            "corner": {
+                "title": "Cược Góc",
+                "description": "Cược vào bốn số gặp nhau ở một góc",
+                "winning-conditions": "Kết quả là một trong bốn số bạn đã đặt cược",
+                "examples": [
+                    { "bet": "1,2,5,6", "result": "5", "status": "THẮNG" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "THUA" }
+                ]
+            },
+            "single-row": {
+                "title": "Hàng Đơn",
+                "description": "6 số",
+                "winning-conditions": "Kết quả nằm trong \"Hàng Đơn\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Hàng 1", "result": "5", "status": "THẮNG" },
+                    { "bet": "Hàng 1", "result": "6", "status": "THUA" }
+                ]
+            },
+            "single-column": {
+                "title": "Cột Đơn",
+                "description": "4 số",
+                "winning-conditions": "Kết quả nằm trong \"Cột Đơn\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Cột 1", "result": "3", "status": "THẮNG" },
+                    { "bet": "Cột 1", "result": "7", "status": "THUA" }
+                ]
+            },
+            "double-row": {
+                "title": "Hàng Đôi",
+                "description": "12 số",
+                "winning-conditions": "Kết quả nằm trong \"Hàng Đôi\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Hàng 1-2", "result": "14", "status": "THẮNG" },
+                    { "bet": "Hàng 1-2", "result": "24", "status": "THUA" }
+                ]
+            },
+            "double-column": {
+                "title": "Cột Đôi",
+                "description": "12 số",
+                "winning-conditions": "Kết quả nằm trong \"Cột Đôi\" bạn đã đặt cược",
+                "examples": [
+                    { "bet": "Cột 1-2", "result": "7", "status": "THẮNG" },
+                    { "bet": "Cột 1-2", "result": "19", "status": "THUA" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "Cược 50-50",
+            "small": {
+                "title": "Nhỏ",
+                "description": "",
+                "winning-conditions": "Kết quả từ 1 đến 12",
+                "examples": [
+                    { "bet": "Nhỏ", "result": "2", "status": "THẮNG" },
+                    { "bet": "Nhỏ", "result": "13", "status": "THUA" }
+                ]
+            },
+            "big": {
+                "title": "Lớn",
+                "description": "",
+                "winning-conditions": "Kết quả từ 12 đến 24",
+                "examples": [
+                    { "bet": "Lớn", "result": "13", "status": "THẮNG" },
+                    { "bet": "Lớn", "result": "2", "status": "THUA" }
+                ]
+            },
+            "odd": {
+                "title": "Lẻ",
+                "description": "",
+                "winning-conditions": "Kết quả là số lẻ",
+                "examples": [
+                    { "bet": "Lẻ", "result": "13", "status": "THẮNG" },
+                    { "bet": "Lẻ", "result": "12", "status": "THUA" }
+                ]
+            },
+            "even": {
+                "title": "Chẵn",
+                "description": "",
+                "winning-conditions": "Kết quả là số chẵn",
+                "examples": [
+                    { "bet": "Chẵn", "result": "12", "status": "THẮNG" },
+                    { "bet": "Chẵn", "result": "13", "status": "THUA" }
+                ]
+            },
+            "red": {
+                "title": "Đỏ",
+                "description": "",
+                "winning-conditions": "Kết quả là màu đỏ",
+                "examples": [
+                    { "bet": "Đỏ", "result": "10", "status": "THẮNG" },
+                    { "bet": "Đỏ", "result": "14", "status": "THUA" }
+                ]
+            },
+            "black": {
+                "title": "Đen",
+                "description": "",
+                "winning-conditions": "Kết quả là màu đen",
+                "examples": [
+                    { "bet": "Đen", "result": "12", "status": "THẮNG" },
+                    { "bet": "Đen", "result": "13", "status": "THUA" }
+                ]
+            }
+        }
+    },
+    "payout": {
+        "title": "thanh toán",
+        "bet-payout": "thanh toán cược",
+        "bonus-payout": "thanh toán thưởng",
+        "lucky-number-multiplier": "Hệ số nhân số may mắn",
+        "jackpot-number-multiplier": "Hệ số nhân số jackpot",
+        "number-times": "{{value}} lần"
+    }
+}

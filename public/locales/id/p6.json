@@ -1,0 +1,58 @@
+{
+    "1st Column": "K.1",
+    "2nd Column": "K.2",
+    "3rd Column": "K.3",
+    "4th Column": "K.4",
+    "5th Column": "K.5",
+    "6th Column": "K.6",
+    "1st Row": "B.1",
+    "2nd Row": "B.2",
+    "3rd Row": "B.3",
+    "4th Row": "B.4",
+    "1st Column,2nd Column": "K.1-2",
+    "2nd Column,3rd Column": "K.2-3",
+    "3rd Column,4th Column": "K.3-4",
+    "4th Column,5th Column": "K.4-5",
+    "5th Column,6th Column": "K.5-6",
+    "1st Row,2nd Row": "B.1-2",
+    "3rd Row,4th Row": "B.3-4",
+    "big": "besar",
+    "small": "kecil",
+    "odd": "ganjil",
+    "even": "genap",
+    "red": "merah",
+    "black": "hitam",
+    "one number": "Satu Nomor",
+    "two numbers": "Dua Nomor",
+    "four numbers": "Empat Nomor",
+    "single row": "Baris Tunggal",
+    "single column": "Kolom Tunggal",
+    "double row": "Baris Ganda",
+    "double column": "Kolom Ganda",
+    "side bet": "Taruhan Sampingan",
+    "small/big": "kecil/besar",
+    "odd/even": "ganjil/genap",
+    "red/black": "merah/hitam",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "title": "Cara Bermain",
+            "content": [
+                "Menangkan bonus pembayaran fantastis hingga <b>500x Jackpot & Lucky Number!</b>",
+                "Mainkan dengan cara menebak bola yang akan muncul pada sangkar berputar. Terdapat 24 bola terdiri dari angka 1 hingga 24 dengan warna merah dan hitam."
+            ]
+        },
+        "slide-2": {
+            "title": "Lucky Numbers",
+            "content": [
+                "System secara acak memilih 2 hingga 12 angka sebagai Lucky Numbers. Lucky numbers memiliki peningkatan pembayaran drastis diatas bayaran normal, mulai dari <b>30x hingga 95x</b> nominal taruhan Anda."
+            ]
+        },
+        "slide-3": {
+            "title": "Jackpot Number",
+            "content": [
+                "System secara acak memilih <b>1 angka</b> sebagai Jackpot Number. Angka ini dapat meningkatkan pembayaran secara signifikan melebihi Lucky Number Bonus, dimulai dari <b>100x hingga 500x</b> taruhan Anda."
+            ]
+        }
+    }
+}

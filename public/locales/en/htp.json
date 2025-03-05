@@ -1,0 +1,204 @@
+{
+    "introduction": {
+        "title": "introduction",
+        "content": "24D Jackpot is a traditional number guessing game that has been modernized just like most of our games which have received a fresh look and, of course, with a very tempting bonus system for you to play this game. Win bonuses up to x500 through the Jackpot system in our latest game!!!"
+    },
+    "rules": {
+        "title": "rules",
+        "steps": [
+            "This game uses 24 balls consisting of numbers 1 to 24 with red and black colors contained in a cage that will be spun every round of the game.",
+            "The game starts when the dealer opens the betting time.",
+            "Now you have to place your bet on the betting panel we provide.",
+            "All bets on the betting panel will be automatically accepted when the time is up.",
+            "After the betting time ends, the dealer will spin the Ball Cage to determine the game result.",
+            "Only bets on a single number are eligible for the Lucky Number & Jackpot Number bonus system. All bets outside of single number bets will be paid normally according to the payout table.",
+            "The result for one game round is only one number consisting of numbers 1 to 24. If the ball is not clearly positioned, a \"no game\" status will occur, and the dealer will spin the cage again until the result is clear."
+        ]
+    },
+    "placing-a-bet": {
+        "title": "Placing A Bet",
+        "single-bet": "Bet on 1 number (Single Bet).",
+        "split-bet": "Bet on 2 numbers (Split Bet).",
+        "corner-bet": "Bet on 4 numbers (Corner Bet).",
+        "row-column-bets": "Row & Column Bets.",
+        "50-50-bet": "50-50 Bet (Small/Big, Odd/Even, Red/Black)."
+    },
+    "bonus-system": {
+        "title": "Bonus System",
+        "introduction": {
+            "heading": "INTRODUCTION",
+            "content": "In each round of the game, the system will randomly determine which numbers will be selected into the Lucky Number & Jackpot Number categories. Numbers that have been selected as Lucky Numbers or Jackpot Numbers will automatically have their payouts increased drastically. Numbers that have been selected as Jackpot Numbers will no longer be selected as Lucky Numbers, and vice versa."
+        },
+        "lucky-numbers": {
+            "heading": "LUCKY NUMBERS",
+            "content": "In each round of the game, the system will randomly select {{minNumbers}} to {{maxNumbers}} numbers which will become Lucky Numbers. For each Lucky Number selected, the payout will increase drastically above the normal payout. The smallest Lucky Number bonus will get {{minMultiplier}}x your bet and can reach {{maxMultiplier}}x your bet."
+        },
+        "jackpot-number": {
+            "heading": "JACKPOT NUMBER",
+            "content": "In each round of the game, the system will also randomly select 1 number which will be the Jackpot Number. The selected number becomes the Jackpot Number, and the payout will increase more drastically above the Lucky Number Bonus payout. The chance of winning this Jackpot Number is as small as {{minJackpotMultiplier}}x your bet and can reach {{maxJackpotMultiplier}}x your bet."
+        },
+        "how-to-get-bonuses": {
+            "heading": "HOW TO GET BONUSES",
+            "content": "To get this bonus, you have to place a bet on the right number and the result of the game for that round must also match the number you placed."
+        },
+        "example-1": {
+            "title": "Example 1: Win Lucky Number Bonus",
+            "period": "Period {{period}}",
+            "description": "You place a bet on the numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Lucky Number Prize = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "Example 2: Win Jackpot Number Bonus",
+            "period": "Period {{period}}",
+            "description": "You place a bet on the numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Jackpot Prize = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "Example 3: Win Normal 1 Number Bet",
+            "period": "Period {{period}}",
+            "description": "You placed a bet on numbers {{numbers}} with a value of {{bet, number}} each.",
+            "result": "Lucky Number = {{luckyNumbers}}.\nLucky Number Multiplier = x{{luckyMultiplier}}.\nJackpot Number = {{jackpotNumber}}.\nJackpot Number Multiplier = x{{jackpotMultiplier}}.\nGame result = {{gameResult}}.",
+            "winnings": "Your winnings are as follows:\nBet * Normal Prize = {{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
+    },
+    "bet-description-and-example": {
+        "title": "Bet Description and Example",
+        "winning-conditions": "Winning Conditions",
+        "bet": "BET",
+        "result": "RESULT",
+        "status": "STATUS",
+        "main-bet": {
+            "heading": "Main Bet",
+            "single": {
+                "title": "Single",
+                "description": "Bet on one number",
+                "winning-conditions": "The result matches your bet",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "WIN" },
+                    { "bet": "1", "result": "2", "status": "LOSE" }
+                ]
+            },
+            "split": {
+                "title": "Split",
+                "description": "Bet on two adjacent numbers vertically/horizontally",
+                "winning-conditions": "The result is 1 of the 2 adjacent numbers you bet",
+                "examples": [
+                    { "bet": "1,2", "result": "1", "status": "WIN" },
+                    { "bet": "1,2", "result": "3", "status": "LOSE" }
+                ]
+            },
+            "corner": {
+                "title": "Corner",
+                "description": "Bet on four numbers meeting in one corner",
+                "winning-conditions": "The result is 1 of the 4 numbers you bet",
+                "examples": [
+                    { "bet": "1,2,5,6", "result": "5", "status": "WIN" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "single-row": {
+                "title": "Single Row",
+                "description": "6 numbers",
+                "winning-conditions": "The result is in the \"Single Row\" you bet",
+                "examples": [
+                    { "bet": "Row 1", "result": "5", "status": "WIN" },
+                    { "bet": "Row 1", "result": "6", "status": "LOSE" }
+                ]
+            },
+            "single-column": {
+                "title": "Single Column",
+                "description": "4 numbers",
+                "winning-conditions": "The result is in the \"Single Column\" you bet",
+                "examples": [
+                    { "bet": "Column 1", "result": "3", "status": "WIN" },
+                    { "bet": "Column 1", "result": "7", "status": "LOSE" }
+                ]
+            },
+            "double-row": {
+                "title": "Double Row",
+                "description": "12 numbers",
+                "winning-conditions": "The result is in the \"Double Row\" you bet",
+                "examples": [
+                    { "bet": "Row 1-2", "result": "14", "status": "WIN" },
+                    { "bet": "Row 1-2", "result": "24", "status": "LOSE" }
+                ]
+            },
+            "double-column": {
+                "title": "Double Column",
+                "description": "12 numbers",
+                "winning-conditions": "The result is in the \"Double Column\" you bet",
+                "examples": [
+                    { "bet": "Column 1-2", "result": "7", "status": "WIN" },
+                    { "bet": "Column 1-2", "result": "19", "status": "LOSE" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "50-50 Bet",
+            "small": {
+                "title": "Small",
+                "description": "",
+                "winning-conditions": "The result is from 1 to 12",
+                "examples": [
+                    { "bet": "Small", "result": "2", "status": "WIN" },
+                    { "bet": "Small", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "big": {
+                "title": "Big",
+                "description": "",
+                "winning-conditions": "The result is from 12 to 24",
+                "examples": [
+                    { "bet": "Big", "result": "13", "status": "WIN" },
+                    { "bet": "Big", "result": "2", "status": "LOSE" }
+                ]
+            },
+            "odd": {
+                "title": "Odd",
+                "description": "",
+                "winning-conditions": "The result is an odd number",
+                "examples": [
+                    { "bet": "Odd", "result": "13", "status": "WIN" },
+                    { "bet": "Odd", "result": "12", "status": "LOSE" }
+                ]
+            },
+            "even": {
+                "title": "Even",
+                "description": "",
+                "winning-conditions": "The result is an even number",
+                "examples": [
+                    { "bet": "Even", "result": "12", "status": "WIN" },
+                    { "bet": "Even", "result": "13", "status": "LOSE" }
+                ]
+            },
+            "red": {
+                "title": "Red",
+                "description": "",
+                "winning-conditions": "The result is red",
+                "examples": [
+                    { "bet": "Red", "result": "10", "status": "WIN" },
+                    { "bet": "Red", "result": "14", "status": "LOSE" }
+                ]
+            },
+            "black": {
+                "title": "Black",
+                "description": "",
+                "winning-conditions": "The result is black",
+                "examples": [
+                    { "bet": "Black", "result": "12", "status": "WIN" },
+                    { "bet": "Black", "result": "13", "status": "LOSE" }
+                ]
+            }
+        }
+    },
+    "payout": {
+        "title": "payout",
+        "bet-payout": "bet payout",
+        "bonus-payout": "bonus payout",
+        "lucky-number-multiplier": "Lucky Number Multiplier",
+        "jackpot-number-multiplier": "Jackpot Number Multiplier",
+        "number-times": "x{{value}}"
+    }
+}
