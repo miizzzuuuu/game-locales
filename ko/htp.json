@@ -1,0 +1,204 @@
+{
+    "introduction": {
+        "title": "소개",
+        "content": "24D 잭팟은 대부분의 게임처럼 새롭게 단장된 전통적인 숫자 맞추기 게임으로 매우 매력적인 보너스 시스템으로 게임을 즐길 수 있습니다. 최신 게임에서 잭팟 시스템을 통해 최대 x500 배의 보너스를 획득하세요!!!"
+    },
+    "rules": {
+        "title": "규칙",
+        "steps": [
+            "이 게임은 빨간색과 검은색으로 구성된 1에서 24까지의 숫자가 포함된 24개의 공을 사용하며, 게임의 매 라운드마다 회전하는 케이지 안에 있습니다.",
+            "게임은 딜러가 베팅 시간을 열면 시작됩니다.",
+            "이제 제공된 베팅 패널에 베팅을 해야 합니다.",
+            "베팅 패널의 모든 베팅은 시간이 끝나면 자동으로 접수됩니다.",
+            "베팅 시간이 끝나면 딜러가 볼 케이지를 회전시켜 게임 결과를 결정합니다.",
+            "단일 숫자에 대한 베팅만 행운의 숫자 & 잭팟 숫자 보너스 시스템에 참여할 수 있습니다. 단일 숫자 베팅 외의 모든 베팅은 지급 표에 따라 정상적으로 지급됩니다.",
+            "한 게임 라운드의 결과는 1에서 24까지의 숫자 중 하나입니다. 공이 명확하게 위치하지 않은 경우 \"게임 없음\" 상태가 발생하며, 딜러가 결과가 명확해질 때까지 케이지를 다시 회전시킵니다."
+        ]
+    },
+    "placing-a-bet": {
+        "title": "베팅하기",
+        "single-bet": "숫자 1개에 베팅 (단일 베팅).",
+        "split-bet": "숫자 2개에 베팅 (스플릿 베팅).",
+        "corner-bet": "숫자 4개에 베팅 (코너 베팅).",
+        "row-column-bets": "행 & 열 베팅.",
+        "50-50-bet": "50-50 베팅 (작은/큰, 홀수/짝수, 빨간색/검은색)."
+    },
+    "bonus-system": {
+        "title": "보너스 시스템",
+        "introduction": {
+            "heading": "소개",
+            "content": "게임의 각 라운드에서 시스템은 행운의 숫자와 잭팟 숫자 범주에 포함될 숫자를 무작위로 결정합니다. 행운의 숫자 또는 잭팟 숫자로 선택된 숫자는 자동으로 지불금이 크게 증가합니다. 잭팟 숫자로 선택된 숫자는 더 이상 행운의 숫자로 선택되지 않으며 그 반대도 마찬가지입니다."
+        },
+        "lucky-numbers": {
+            "heading": "행운의 숫자",
+            "content": "게임의 각 라운드에서 시스템은 {{minNumbers}}에서 {{maxNumbers}}까지의 숫자를 무작위로 선택하여 행운의 숫자가 됩니다. 선택된 각 행운의 숫자에 대해 일반 지불금보다 지불금이 크게 증가합니다. 가장 작은 행운의 숫자 보너스는 베팅 금액의 {{minMultiplier}}배를 받고 최대 {{maxMultiplier}}배까지 도달할 수 있습니다."
+        },
+        "jackpot-number": {
+            "heading": "잭팟 숫자",
+            "content": "게임의 각 라운드에서 시스템은 잭팟 숫자가 될 숫자를 1개 무작위로 선택합니다. 선택된 숫자가 잭팟 숫자가 되며, 지불금은 행운의 숫자 보너스 지불금보다 더 크게 증가합니다. 이 잭팟 숫자의 당첨 확률은 최소 {{minJackpotMultiplier}}배에서 최대 {{maxJackpotMultiplier}}배까지 도달할 수 있습니다."
+        },
+        "how-to-get-bonuses": {
+            "heading": "보너스를 받는 방법",
+            "content": "이 보너스를 받으려면 정확한 숫자에 베팅을 하고 해당 라운드의 게임 결과가 베팅한 숫자와 일치해야 합니다."
+        },
+        "example-1": {
+            "title": "예시 1: 행운의 숫자 보너스 당첨",
+            "period": "{{period}} 기간",
+            "description": "숫자 {{numbers}}에 각각 {{bet, number}} 금액으로 베팅합니다.",
+            "result": "행운의 숫자 = {{luckyNumbers}}.\n행운의 숫자 배수 = x{{luckyMultiplier}}.\n잭팟 숫자 = {{jackpotNumber}}.\n잭팟 숫자 배수 = x{{jackpotMultiplier}}.\n게임 결과 = {{gameResult}}.",
+            "winnings": "당신의 당첨금은 다음과 같습니다:\n베팅 * 행운의 숫자 상금 = {{bet, number}} * {{luckyMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-2": {
+            "title": "예시 2: 잭팟 숫자 보너스 당첨",
+            "period": "{{period}} 기간",
+            "description": "숫자 {{numbers}}에 각각 {{bet, number}} 금액으로 베팅합니다.",
+            "result": "행운의 숫자 = {{luckyNumbers}}.\n행운의 숫자 배수 = x{{luckyMultiplier}}.\n잭팟 숫자 = {{jackpotNumber}}.\n잭팟 숫자 배수 = x{{jackpotMultiplier}}.\n게임 결과 = {{gameResult}}.",
+            "winnings": "당신의 당첨금은 다음과 같습니다:\n베팅 * 잭팟 상금 = {{bet, number}} * {{jackpotMultiplier}} = {{totalWinnings, number}}."
+        },
+        "example-3": {
+            "title": "예시 3: 일반 1 숫자 베팅 승리",
+            "period": "기간 {{period}}",
+            "description": "각 {{bet, number}}의 값으로 {{numbers}} 숫자에 베팅했습니다.",
+            "result": "행운의 숫자 = {{luckyNumbers}}.\n행운의 숫자 배수 = x{{luckyMultiplier}}.\n잭팟 숫자 = {{jackpotNumber}}.\n잭팟 숫자 배수 = x{{jackpotMultiplier}}.\n게임 결과 = {{gameResult}}.",
+            "winnings": "당신의 당첨금은 다음과 같습니다:\n베팅 * 일반 상금 = {{bet, number}} * 19 = {{totalWinnings, number}}."
+        }
+    },
+    "bet-description-and-example": {
+        "title": "베팅 설명 및 예시",
+        "winning-conditions": "승리 조건",
+        "bet": "베팅",
+        "result": "결과",
+        "status": "상태",
+        "main-bet": {
+            "heading": "메인 베팅",
+            "single": {
+                "title": "단일 베팅",
+                "description": "숫자 하나에 베팅",
+                "winning-conditions": "결과가 베팅한 숫자와 일치합니다",
+                "examples": [
+                    { "bet": "1", "result": "1", "status": "승리" },
+                    { "bet": "1", "result": "2", "status": "패배" }
+                ]
+            },
+            "split": {
+                "title": "스플릿",
+                "description": "수직/수평으로 인접한 두 숫자에 베팅",
+                "winning-conditions": "결과는 두 숫자 중 하나와 일치합니다",
+                "examples": [
+                    { "bet": "1,2", "result": "1", "status": "승리" },
+                    { "bet": "1,2", "result": "3", "status": "패배" }
+                ]
+            },
+            "corner": {
+                "title": "코너",
+                "description": "네 숫자가 모이는 코너에 베팅",
+                "winning-conditions": "결과가 네 숫자 중 하나와 일치합니다",
+                "examples": [
+                    { "bet": "1,2,5,6", "result": "5", "status": "승리" },
+                    { "bet": "1,2,5,6", "result": "13", "status": "패배" }
+                ]
+            },
+            "single-row": {
+                "title": "단일 행",
+                "description": "6개의 숫자",
+                "winning-conditions": "\"단일 행\"에서 베팅한 숫자가 결과와 일치합니다",
+                "examples": [
+                    { "bet": "행 1", "result": "5", "status": "승리" },
+                    { "bet": "행 1", "result": "6", "status": "패배" }
+                ]
+            },
+            "single-column": {
+                "title": "단일 열",
+                "description": "4개의 숫자",
+                "winning-conditions": "\"단일 열\"에서 베팅한 숫자가 결과와 일치합니다",
+                "examples": [
+                    { "bet": "열 1", "result": "3", "status": "승리" },
+                    { "bet": "열 1", "result": "7", "status": "패배" }
+                ]
+            },
+            "double-row": {
+                "title": "이중 행",
+                "description": "12개의 숫자",
+                "winning-conditions": "\"이중 행\"에서 베팅한 숫자가 결과와 일치합니다",
+                "examples": [
+                    { "bet": "행 1-2", "result": "14", "status": "승리" },
+                    { "bet": "행 1-2", "result": "24", "status": "패배" }
+                ]
+            },
+            "double-column": {
+                "title": "이중 열",
+                "description": "12개의 숫자",
+                "winning-conditions": "\"이중 열\"에서 베팅한 숫자가 결과와 일치합니다",
+                "examples": [
+                    { "bet": "열 1-2", "result": "7", "status": "승리" },
+                    { "bet": "열 1-2", "result": "19", "status": "패배" }
+                ]
+            }
+        },
+        "fifty-fifty-bet": {
+            "heading": "50-50 베팅",
+            "small": {
+                "title": "작음",
+                "description": "",
+                "winning-conditions": "결과가 1에서 12 사이입니다",
+                "examples": [
+                    { "bet": "작음", "result": "2", "status": "승리" },
+                    { "bet": "작음", "result": "13", "status": "패배" }
+                ]
+            },
+            "big": {
+                "title": "큼",
+                "description": "",
+                "winning-conditions": "결과가 12에서 24 사이입니다",
+                "examples": [
+                    { "bet": "큼", "result": "13", "status": "승리" },
+                    { "bet": "큼", "result": "2", "status": "패배" }
+                ]
+            },
+            "odd": {
+                "title": "홀수",
+                "description": "",
+                "winning-conditions": "결과가 홀수입니다",
+                "examples": [
+                    { "bet": "홀수", "result": "13", "status": "승리" },
+                    { "bet": "홀수", "result": "12", "status": "패배" }
+                ]
+            },
+            "even": {
+                "title": "짝수",
+                "description": "",
+                "winning-conditions": "결과가 짝수입니다",
+                "examples": [
+                    { "bet": "짝수", "result": "12", "status": "승리" },
+                    { "bet": "짝수", "result": "13", "status": "패배" }
+                ]
+            },
+            "red": {
+                "title": "빨강",
+                "description": "",
+                "winning-conditions": "결과가 빨강입니다",
+                "examples": [
+                    { "bet": "빨강", "result": "10", "status": "승리" },
+                    { "bet": "빨강", "result": "14", "status": "패배" }
+                ]
+            },
+            "black": {
+                "title": "검정",
+                "description": "",
+                "winning-conditions": "결과가 검정입니다",
+                "examples": [
+                    { "bet": "검정", "result": "12", "status": "승리" },
+                    { "bet": "검정", "result": "13", "status": "패배" }
+                ]
+            }
+        }
+    },
+    "payout": {
+        "title": "지불",
+        "bet-payout": "베팅 지불금",
+        "bonus-payout": "보너스 지불금",
+        "lucky-number-multiplier": "행운 번호 배수",
+        "jackpot-number-multiplier": "잭팟 번호 배수",
+        "number-times": "{{value}}배"
+    }
+}
