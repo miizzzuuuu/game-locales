@@ -24,12 +24,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
             "title": "How to Play",
             "content": [
                 "Dragon Tiger Wild comes with the latest <b>WILD CARD</b> bonus! Seize the opportunity to win bigger up to <b>127x!</b> You just need to guess the highest card and the wild card for bigger prizes! <b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
             "title": "How to Play",
             "content": [
                 "This game is played with 3 cards. 2 main cards (Dragon and Tiger) <b>will compete to see which side has the highest value</b>. 1 wild card is drawn to form a <b>Bonus Wild combination</b>.",
@@ -37,6 +39,7 @@
             ]
         },
         "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
             "title": "Bonus Wild",
             "content": [
                 "The wild card is here to form bonus combinations that can drastically increase your winnings up to <b>127x!</b>",
