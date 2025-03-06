@@ -111,7 +111,7 @@
                 "default": "Default : Toggle On."
             },
             "auto-bet": {
-                "title": "Auto Bet",
+                "title": "Auto Rebet",
                 "description": "Description : Controls the automatic betting automatic betting based on the previous wager.",
                 "default": "Default : Toggle Off."
             },
@@ -120,7 +120,7 @@
                 "description": "Description : Controls the language settings for the game.",
                 "default": "Default : Matches the last selected language."
             },
-            "disclaimer-settings": "Your preference settings will be saved, except for the Auto Bet setting, which will reset to default."
+            "disclaimer-settings": "Your preference settings will be saved, except for the Auto Rebet setting, which will reset to default."
         }
     }
 }

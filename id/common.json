@@ -96,7 +96,7 @@
                 "default": "Default: Toggle On, Resolusi Sedang."
             },
             "live-streaming-audio": {
-                "title": "Audio Streaming Langsung",
+                "title": "Suara Siaran Langsung",
                 "description": "Deskripsi: Pengaturan suara dari siaran langsung studio.",
                 "default": "Default: Toggle On."
             },
@@ -111,7 +111,7 @@
                 "default": "Default: Toggle On."
             },
             "auto-bet": {
-                "title": "Taruhan Otomatis",
+                "title": "Taruhan Ulang Otomatis",
                 "description": "Deskripsi: Pengaturan taruhan otomatis berdasarkan taruhan sebelumnya.",
                 "default": "Default: Toggle Off."
             },
@@ -120,7 +120,7 @@
                 "description": "Deskripsi: Mengontrol pengaturan bahasa permainan.",
                 "default": "Default: Sesuai dengan bahasa yang dipilih terakhir."
             },
-            "disclaimer-settings": "Preferensi pengaturan anda akan disimpan, kecuali pengaturan taruhan otomatis yang akan di reset ke default."
+            "disclaimer-settings": "Preferensi pengaturan anda akan disimpan, kecuali pengaturan taruhan ulang otomatis yang akan di reset ke default."
         }
     }
 }

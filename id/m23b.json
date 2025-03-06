@@ -108,7 +108,7 @@
                     "description": "Dibayar jika Pihak Naga menang dan juga nilai kartu Naga dan kartu Wild sama."
                 },
                 "tiger-wild": {
-                    "title": "Hariamau Wild",
+                    "title": "Harimau Wild",
                     "description": "Dibayar jika Pihak Harimau menang dan juga nilai kartu Harimau dan kartu Wild sama."
                 },
                 "super-wild": {
