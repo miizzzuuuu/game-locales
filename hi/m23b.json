@@ -24,23 +24,26 @@
 
     "quick-how-to-play": {
         "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
             "title": "कैसे खेलें",
             "content": [
-                "Dragon Tiger Wild नवीनतम <b>WILD CARD</b> बोनस के साथ आता है! <b>127x</b> तक बड़े पुरस्कार जीतने का अवसर पाएं! आपको बस उच्चतम कार्ड और wild कार्ड का अनुमान लगाना है बड़े पुरस्कारों के लिए! <b>LET’S GET WILD!!!</b>"
+                "Dragon Tiger Wild के साथ सबसे नया <b>WILD CARD</b> बोनस मिला! बड़ी जीत का मौका हासिल करें, जो <b>127x</b> तक जा सकता है! आपको बस सबसे ऊँची कार्ड और वाइल्ड कार्ड अनुमान लगाना है और बड़े पुरस्कार जीतें! <b>LET’S GET WILD!!!</b>"
             ]
         },
         "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
             "title": "कैसे खेलें",
             "content": [
-                "यह खेल 3 कार्डों के साथ खेला जाता है। 2 मुख्य कार्ड (Dragon और Tiger) <b>यह देखने के लिए प्रतिस्पर्धा करेंगे कि किस पक्ष का मूल्य उच्चतम है</b>। 1 wild कार्ड <b>Bonus Wild संयोजन</b> बनाने के लिए निकाला जाता है।",
-                "आप मुख्य दांव पर दांव लगा सकते हैं: Dragon/Tiger। या wild दांव संयोजनों पर: Dragon Wild, Dragon Pair या Tiger Wild, Tiger Pair, और Super Wild।"
+                "यह खेल 3 कार्ड से खेला जाता है। 2 मुख्य कार्ड (Dragon और Tiger) <b>सबसे ऊँचे मूल्य की प्रतिस्पर्धा करेंगे</b>। 1 wild card खींची जाती है जो <b>Bonus Wild संयोजन</b> बनाती है।",
+                "आप मुख्य बेट (Dragon/Tiger) या wild bet संयोजन (Dragon Wild, Dragon Pair, Tiger Wild, Tiger Pair, और Super Wild) पर शर्त लगा सकते हैं।"
             ]
         },
         "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
             "title": "Bonus Wild",
             "content": [
-                "Wild कार्ड बोनस संयोजन बनाने के लिए है जो आपकी जीत को <b>127x</b> तक नाटकीय रूप से बढ़ा सकता है!",
-                "Wild दांव संयोजनों पर दांव लगाएं और <b>कई BONUS WILD पुरस्कारों</b> का अवसर प्राप्त करें!"
+                "wild card आपके लिए बोनस संयोजन बनाती है जो आपकी जीत को <b>127x</b> तक बढ़ा सकती है!",
+                "wild bet संयोजन पर शर्त लगाएं और <b>बहुल BONUS WILD पुरस्कार</b> का मौका पाएं!"
             ]
         }
     }
