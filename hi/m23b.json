@@ -20,31 +20,5 @@
     "super wild": "super wild",
     "pair bet": "जोड़ी दांव",
     "dragon pair": "ड्रैगन जोड़ी",
-    "tiger pair": "टाइगर जोड़ी",
-
-    "quick-how-to-play": {
-        "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
-            "title": "कैसे खेलें",
-            "content": [
-                "Dragon Tiger Wild के साथ सबसे नया <b>WILD CARD</b> बोनस मिला! बड़ी जीत का मौका हासिल करें, जो <b>127x</b> तक जा सकता है! आपको बस सबसे ऊँची कार्ड और वाइल्ड कार्ड अनुमान लगाना है और बड़े पुरस्कार जीतें! <b>LET’S GET WILD!!!</b>"
-            ]
-        },
-        "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
-            "title": "कैसे खेलें",
-            "content": [
-                "यह खेल 3 कार्ड से खेला जाता है। 2 मुख्य कार्ड (Dragon और Tiger) <b>सबसे ऊँचे मूल्य की प्रतिस्पर्धा करेंगे</b>। 1 wild card खींची जाती है जो <b>Bonus Wild संयोजन</b> बनाती है।",
-                "आप मुख्य बेट (Dragon/Tiger) या wild bet संयोजन (Dragon Wild, Dragon Pair, Tiger Wild, Tiger Pair, और Super Wild) पर शर्त लगा सकते हैं।"
-            ]
-        },
-        "slide-3": {
-            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
-            "title": "Bonus Wild",
-            "content": [
-                "wild card आपके लिए बोनस संयोजन बनाती है जो आपकी जीत को <b>127x</b> तक बढ़ा सकती है!",
-                "wild bet संयोजन पर शर्त लगाएं और <b>बहुल BONUS WILD पुरस्कार</b> का मौका पाएं!"
-            ]
-        }
-    }
+    "tiger pair": "टाइगर जोड़ी"
 }
