@@ -36,6 +36,7 @@
 
     "quick-how-to-play": {
         "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/7B7qpyGRgm3m7L.json",
             "title": "How to Play",
             "content": [
                 "Win fantastic payout bonuses up to <b>500x Jackpot & Lucky Number!</b>",
@@ -43,12 +44,14 @@
             ]
         },
         "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/FNJoyNcwuSu8P3.json",
             "title": "Lucky Numbers",
             "content": [
                 "The system randomly selects 2 to 12 numbers as Lucky Numbers. Lucky Numbers have a drastic increase in payout above the normal payout, ranging from <b>30x to 95x</b> your bet amount."
             ]
         },
         "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/gcj2eacK47zTE0.json",
             "title": "Jackpot Number",
             "content": [
                 "The system randomly selects <b>1 number</b> as the Jackpot Number. This number can significantly increase the payout beyond the Lucky Number Bonus, starting from <b>100x to 500x</b> your bet."
