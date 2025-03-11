@@ -4,10 +4,10 @@
     "tie": "Seri",
     "playerbonus": "Bonus Player",
     "bankerbonus": "Bonus Banker",
-    "playerpair": "Pasangan Player",
-    "bankerpair": "Pasangan Banker",
-    "perfectpair": "Pasangan Sempurna",
-    "mixedpair": "Pasangan Campuran",
+    "playerpair": "Pair Player",
+    "bankerpair": "Pair Banker",
+    "perfectpair": "Pair Sempurna",
+    "mixedpair": "Pair Campuran",
     "small": "Kecil",
     "big": "Besar",
 
@@ -23,10 +23,10 @@
     "win by 5 points": "Menang dengan 5 poin",
     "win by 4 points": "Menang dengan 4 poin",
 
-    "player pair": "Pasangan Player",
-    "banker pair": "Pasangan Banker",
-    "perfect pair": "Pasangan Sempurna",
-    "mixed pair": "Pasangan Campuran",
+    "player pair": "Pair Player",
+    "banker pair": "Pair Banker",
+    "perfect pair": "Pair Sempurna",
+    "mixed pair": "Pair Campuran",
 
     "side bet": "Taruhan Samping",
 
