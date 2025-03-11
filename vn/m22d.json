@@ -1,0 +1,44 @@
+{
+    "player": "Người chơi",
+    "banker": "Nhà cái",
+    "tie": "Hòa",
+    "playerbonus": "Thưởng Người chơi",
+    "bankerbonus": "Thưởng Nhà cái",
+    "playerpair": "Cặp Người chơi",
+    "bankerpair": "Cặp Nhà cái",
+    "perfectpair": "Cặp Hoàn hảo",
+    "mixedpair": "Cặp Lẫn",
+    "small": "Nhỏ",
+    "big": "Lớn",
+
+    "player bonus": "Thưởng Người chơi",
+    "banker bonus": "Thưởng Nhà cái",
+
+    "natural win": "Thắng Tự nhiên",
+    "natural tie": "Hòa Tự nhiên",
+    "win by 9 points": "Thắng 9 điểm",
+    "win by 8 points": "Thắng 8 điểm",
+    "win by 7 points": "Thắng 7 điểm",
+    "win by 6 points": "Thắng 6 điểm",
+    "win by 5 points": "Thắng 5 điểm",
+    "win by 4 points": "Thắng 4 điểm",
+
+    "player pair": "Cặp Người chơi",
+    "banker pair": "Cặp Nhà cái",
+    "perfect pair": "Cặp Hoàn hảo",
+    "mixed pair": "Cặp Lẫn",
+
+    "side bet": "Cược Phụ",
+
+    "tie on": "Hòa tại",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}

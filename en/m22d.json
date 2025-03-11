@@ -1,0 +1,44 @@
+{
+    "player": "Player",
+    "banker": "Banker",
+    "tie": "Tie",
+    "playerbonus": "Player Bonus",
+    "bankerbonus": "Banker Bonus",
+    "playerpair": "Player Pair",
+    "bankerpair": "Banker Pair",
+    "perfectpair": "Perfect Pair",
+    "mixedpair": "Mixed Pair",
+    "small": "Small",
+    "big": "Big",
+
+    "player bonus": "Player Bonus",
+    "banker bonus": "Banker Bonus",
+
+    "natural win": "Natural Win",
+    "natural tie": "Natural Tie",
+    "win by 9 points": "Win by 9 points",
+    "win by 8 points": "Win by 8 points",
+    "win by 7 points": "Win by 7 points",
+    "win by 6 points": "Win by 6 points",
+    "win by 5 points": "Win by 5 points",
+    "win by 4 points": "Win by 4 points",
+
+    "player pair": "Player Pair",
+    "banker pair": "Banker Pair",
+    "perfect pair": "Perfect Pair",
+    "mixed pair": "Mixed Pair",
+
+    "side bet": "Side Bet",
+
+    "tie on": "Tie",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}

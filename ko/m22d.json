@@ -1,0 +1,44 @@
+{
+    "player": "플레이어",
+    "banker": "뱅커",
+    "tie": "무승부",
+    "playerbonus": "플레이어 보너스",
+    "bankerbonus": "뱅커 보너스",
+    "playerpair": "플레이어 페어",
+    "bankerpair": "뱅커 페어",
+    "perfectpair": "완벽한 페어",
+    "mixedpair": "혼합 페어",
+    "small": "스몰",
+    "big": "빅",
+
+    "player bonus": "플레이어 보너스",
+    "banker bonus": "뱅커 보너스",
+
+    "natural win": "내추럴 윈",
+    "natural tie": "내추럴 무승부",
+    "win by 9 points": "9점 차 승리",
+    "win by 8 points": "8점 차 승리",
+    "win by 7 points": "7점 차 승리",
+    "win by 6 points": "6점 차 승리",
+    "win by 5 points": "5점 차 승리",
+    "win by 4 points": "4점 차 승리",
+
+    "player pair": "플레이어 페어",
+    "banker pair": "뱅커 페어",
+    "perfect pair": "완벽한 페어",
+    "mixed pair": "혼합 페어",
+
+    "side bet": "사이드 베팅",
+
+    "tie on": "무승부 발생",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}

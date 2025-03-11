@@ -1,0 +1,44 @@
+{
+    "player": "Player",
+    "banker": "Banker",
+    "tie": "Seri",
+    "playerbonus": "Bonus Player",
+    "bankerbonus": "Bonus Banker",
+    "playerpair": "Pasangan Player",
+    "bankerpair": "Pasangan Banker",
+    "perfectpair": "Pasangan Sempurna",
+    "mixedpair": "Pasangan Campuran",
+    "small": "Kecil",
+    "big": "Besar",
+
+    "player bonus": "Bonus Player",
+    "banker bonus": "Bonus Banker",
+
+    "natural win": "Kemenangan Alami",
+    "natural tie": "Seri Alami",
+    "win by 9 points": "Menang dengan 9 poin",
+    "win by 8 points": "Menang dengan 8 poin",
+    "win by 7 points": "Menang dengan 7 poin",
+    "win by 6 points": "Menang dengan 6 poin",
+    "win by 5 points": "Menang dengan 5 poin",
+    "win by 4 points": "Menang dengan 4 poin",
+
+    "player pair": "Pasangan Player",
+    "banker pair": "Pasangan Banker",
+    "perfect pair": "Pasangan Sempurna",
+    "mixed pair": "Pasangan Campuran",
+
+    "side bet": "Taruhan Samping",
+
+    "tie on": "Seri pada",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}
