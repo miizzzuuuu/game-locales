@@ -1,0 +1,44 @@
+{
+    "player": "Jogador",
+    "banker": "Banco",
+    "tie": "Empate",
+    "playerbonus": "Bônus do Jogador",
+    "bankerbonus": "Bônus do Banco",
+    "playerpair": "Par do Jogador",
+    "bankerpair": "Par do Banco",
+    "perfectpair": "Par Perfeito",
+    "mixedpair": "Par Misto",
+    "small": "Pequeno",
+    "big": "Grande",
+
+    "player bonus": "Bônus do Jogador",
+    "banker bonus": "Bônus do Banco",
+
+    "natural win": "Vitória Natural",
+    "natural tie": "Empate Natural",
+    "win by 9 points": "Vitória por 9 pontos",
+    "win by 8 points": "Vitória por 8 pontos",
+    "win by 7 points": "Vitória por 7 pontos",
+    "win by 6 points": "Vitória por 6 pontos",
+    "win by 5 points": "Vitória por 5 pontos",
+    "win by 4 points": "Vitória por 4 pontos",
+
+    "player pair": "Par do Jogador",
+    "banker pair": "Par do Banco",
+    "perfect pair": "Par Perfeito",
+    "mixed pair": "Par Misto",
+
+    "side bet": "Aposta Lateral",
+
+    "tie on": "Empate em",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}

@@ -1,0 +1,44 @@
+{
+    "player": "प्लेयर",
+    "banker": "बैंकर",
+    "tie": "टाई",
+    "playerbonus": "प्लेयर बोनस",
+    "bankerbonus": "बैंकर बोनस",
+    "playerpair": "प्लेयर पेयर",
+    "bankerpair": "बैंकर पेयर",
+    "perfectpair": "परफेक्ट पेयर",
+    "mixedpair": "मिक्स्ड पेयर",
+    "small": "स्मॉल",
+    "big": "बिग",
+
+    "player bonus": "प्लेयर बोनस",
+    "banker bonus": "बैंकर बोनस",
+
+    "natural win": "नेचुरल विन",
+    "natural tie": "नेचुरल टाई",
+    "win by 9 points": "9 पॉइंट्स से जीत",
+    "win by 8 points": "8 पॉइंट्स से जीत",
+    "win by 7 points": "7 पॉइंट्स से जीत",
+    "win by 6 points": "6 पॉइंट्स से जीत",
+    "win by 5 points": "5 पॉइंट्स से जीत",
+    "win by 4 points": "4 पॉइंट्स से जीत",
+
+    "player pair": "प्लेयर पेयर",
+    "banker pair": "बैंकर पेयर",
+    "perfect pair": "परफेक्ट पेयर",
+    "mixed pair": "मिक्स्ड पेयर",
+
+    "side bet": "साइड बेट",
+
+    "tie on": "टाई ऑन",
+    "0": "०",
+    "1": "१",
+    "2": "२",
+    "3": "३",
+    "4": "४",
+    "5": "५",
+    "6": "६",
+    "7": "७",
+    "8": "८",
+    "9": "९"
+}

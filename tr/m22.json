@@ -1,0 +1,44 @@
+{
+    "player": "Oyuncu",
+    "banker": "Bankacı",
+    "tie": "Beraberlik",
+    "playerbonus": "Oyuncu Bonusu",
+    "bankerbonus": "Bankacı Bonusu",
+    "playerpair": "Oyuncu Çifti",
+    "bankerpair": "Bankacı Çifti",
+    "perfectpair": "Mükemmel Çift",
+    "mixedpair": "Karışık Çift",
+    "small": "Küçük",
+    "big": "Büyük",
+
+    "player bonus": "Oyuncu Bonusu",
+    "banker bonus": "Bankacı Bonusu",
+
+    "natural win": "Doğal Kazanç",
+    "natural tie": "Doğal Beraberlik",
+    "win by 9 points": "9 puan farkla kazan",
+    "win by 8 points": "8 puan farkla kazan",
+    "win by 7 points": "7 puan farkla kazan",
+    "win by 6 points": "6 puan farkla kazan",
+    "win by 5 points": "5 puan farkla kazan",
+    "win by 4 points": "4 puan farkla kazan",
+
+    "player pair": "Oyuncu Çifti",
+    "banker pair": "Bankacı Çifti",
+    "perfect pair": "Mükemmel Çift",
+    "mixed pair": "Karışık Çift",
+
+    "side bet": "Yan Bahis",
+
+    "tie on": "Beraberlikte",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}
