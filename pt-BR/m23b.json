@@ -1,24 +1,133 @@
 {
-    "dragonpair": "par de dragão",
-    "tigerpair": "par de tigre",
-    "dragonwild": "dragão wild",
-    "tigerwild": "tigre wild",
-    "dragon": "dragão",
-    "wild": "wild",
-    "superwild": "super wild",
-    "tie": "empate",
-    "tiger": "tigre",
-    "big": "grande",
-    "small": "pequeno",
-    "odd": "ímpar",
-    "even": "par",
-    "red": "vermelho",
-    "black": "preto",
-    "wild bet": "aposta wild",
-    "dragon wild": "dragão wild",
-    "tiger wild": "tigre wild",
-    "super wild": "super wild",
-    "pair bet": "aposta de par",
-    "dragon pair": "par de dragão",
-    "tiger pair": "par de tigre"
+    "dragonpair": "Par de Dragão",
+    "tigerpair": "Par de Tigre",
+    "dragonwild": "Dragão Wild",
+    "tigerwild": "Tigre Wild",
+    "dragon": "Dragão",
+    "tiger": "Tigre",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "Empate",
+    "big": "Grande",
+    "small": "Pequeno",
+    "odd": "Ímpar",
+    "even": "Par",
+    "red": "Vermelho",
+    "black": "Preto",
+    "wild bet": "Aposta Wild",
+    "dragon wild": "Dragão Wild",
+    "tiger wild": "Tigre Wild",
+    "super wild": "Super Wild",
+    "pair bet": "Aposta de Par",
+    "dragon pair": "Par de Dragão",
+    "tiger pair": "Par de Tigre",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "Como Jogar",
+            "content": [
+                "Dragon Tiger Wild apresenta um novo recurso emocionante: <b>CARTA WILD</b>! Desbloqueie um potencial de ganhos de até <b>127x</b>! Preveja a carta mais alta e combinações Wild para ganhar recompensas espetaculares! VAMOS FICAR WILD!!!"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "Como Jogar",
+            "content": [
+                "O jogo é jogado com três cartas: 2 cartas principais (Dragão e Tigre) <b>competindo pelo maior valor</b>, e 1 carta Wild para formar combinações de bônus.",
+                "Opções de apostas: Apostas Principais (Dragão/Tigre/Empate) ou Apostas Wild (Par de Dragão, Par de Tigre, Dragão Wild, Tigre Wild, Super Wild)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Bônus Wild",
+            "content": [
+                "A carta Wild aumenta os ganhos em até <b>127x</b> através de combinações especiais!",
+                "Faça apostas em combinações Wild e ganhe <b>BÔNUS MULTIPLICADOS!</b>"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Introdução",
+            "paragraph-1": "Dragon Tiger Wild é o mais novo jogo da IDNLIVE EUROPE, oferecendo ainda mais emoção com a adição de uma carta Wild. Este jogo proporciona uma nova experiência para os entusiastas de Dragon Tiger, com um potencial de ganhos de até 127x! VAMOS FICAR WILD!!!",
+            "game-objective": "Objetivo do Jogo",
+            "paragraph-2": "O objetivo deste jogo é prever a carta mais alta entre Dragão e Tigre, utilizando a carta Wild para criar combinações de bônus e ganhar prêmios ainda maiores."
+        },
+        "general-rules": {
+            "title": "Regras Gerais",
+            "steps": [
+                "O jogo é conduzido por um dealer.",
+                "O jogo usa 8 baralhos de cartas em um sapato.",
+                "No início de cada novo sapato, o dealer revelará uma carta para determinar quantas cartas serão queimadas ou descartadas. Um máximo de 10 cartas pode ser queimado.",
+                "Após o término do tempo de apostas, o dealer sorteia uma carta como a carta Wild, depois distribui uma carta para Dragão e uma para Tigre.",
+                "O lado com o maior valor de carta vence. O maior valor é K, que equivale a 13.",
+                "Se o resultado for empate, as apostas em Dragão e Tigre são reembolsadas pela metade. A aposta em Empate vence apenas se Dragão e Tigre tiverem o mesmo valor.",
+                "Em apostas 50-50 como Dragão/Tigre, você só pode escolher um lado por rodada. Se apostar em Dragão, não pode apostar em Tigre na mesma rodada."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Carta Wild no Dragon Tiger",
+            "content": "Dragon Tiger Wild usa um baralho padrão de 52 cartas, sem curingas. Os valores das cartas usados no jogo são os seguintes:",
+            "card": "Carta",
+            "value": "Valor"
+        },
+        "wild-bet": {
+            "title": "Apostas Wild",
+            "description": "Como mencionado na introdução, Dragon Tiger Wild introduz novos elementos de jogo e bônus emocionantes. Aqui está como funciona:",
+            "description-2": "A carta Wild determina os ganhos com pagamentos maiores do que as apostas regulares. Existem 5 tipos de Apostas Wild:",
+
+            "dragon-wild": "Esta aposta paga se a carta do Dragão vencer e tiver o mesmo valor que a carta Wild.",
+            "tiger-wild": "Esta aposta paga se a carta do Tigre vencer e tiver o mesmo valor que a carta Wild.",
+            "super-wild": "Esta aposta paga se todas as três cartas—Wild, Dragão e Tigre—tiverem o mesmo valor.",
+            "dragon-pair": "Esta aposta paga se a carta do Dragão e a carta Wild tiverem o mesmo valor (a carta do Dragão não precisa vencer).",
+            "tiger-pair": "Esta aposta paga se a carta do Tigre e a carta Wild tiverem o mesmo valor (a carta do Tigre não precisa vencer)."
+        },
+        "bet-description": {
+            "title": "Descrição das Apostas",
+            "bet": "Aposta",
+            "description": "Descrição",
+            "result": "Resultado",
+            "any": "Qualquer",
+            "main-bet": {
+                "title": "Apostas Principais",
+                "dragon": {
+                    "title": "Dragão",
+                    "description": "Paga se o valor da carta do Dragão for maior que o da carta do Tigre."
+                },
+                "tiger": {
+                    "title": "Tigre",
+                    "description": "Paga se o valor da carta do Tigre for maior que o da carta do Dragão."
+                },
+                "tie": {
+                    "title": "Empate",
+                    "description": "Paga se as cartas do Dragão e do Tigre tiverem o mesmo valor."
+                }
+            },
+            "side-bet": {
+                "title": "Apostas Secundárias",
+                "dragon-wild": {
+                    "title": "Dragão Wild",
+                    "description": "Paga se o lado do Dragão vencer e tanto a carta do Dragão quanto a Wild tiverem o mesmo valor."
+                },
+                "tiger-wild": {
+                    "title": "Tigre Wild",
+                    "description": "Paga se o lado do Tigre vencer e tanto a carta do Tigre quanto a Wild tiverem o mesmo valor."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Paga se as cartas Wild, Dragão e Tigre tiverem o mesmo valor."
+                },
+                "dragon-pair": {
+                    "title": "Par de Dragão",
+                    "description": "Paga se a carta do Dragão e a Wild tiverem o mesmo valor."
+                },
+                "tiger-pair": {
+                    "title": "Par de Tigre",
+                    "description": "Paga se a carta do Tigre e a Wild tiverem o mesmo valor."
+                }
+            }
+        }
+    }
 }

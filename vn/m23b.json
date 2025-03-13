@@ -1,24 +1,133 @@
 {
-    "dragonpair": "đôi rồng",
-    "tigerpair": "đôi hổ",
-    "dragonwild": "rồng wild",
-    "tigerwild": "hổ wild",
-    "dragon": "rồng",
-    "wild": "wild",
-    "superwild": "super wild",
-    "tie": "hòa",
-    "tiger": "hổ",
-    "big": "lớn",
-    "small": "nhỏ",
-    "odd": "lẻ",
-    "even": "chẵn",
-    "red": "đỏ",
-    "black": "đen",
-    "wild bet": "cược wild",
-    "dragon wild": "rồng wild",
-    "tiger wild": "hổ wild",
-    "super wild": "super wild",
-    "pair bet": "cược đôi",
-    "dragon pair": "đôi rồng",
-    "tiger pair": "đôi hổ"
+    "dragonpair": "Cặp Rồng",
+    "tigerpair": "Cặp Hổ",
+    "dragonwild": "Rồng Wild",
+    "tigerwild": "Hổ Wild",
+    "dragon": "Rồng",
+    "tiger": "Hổ",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "Hòa",
+    "big": "Lớn",
+    "small": "Nhỏ",
+    "odd": "Lẻ",
+    "even": "Chẵn",
+    "red": "Đỏ",
+    "black": "Đen",
+    "wild bet": "Cược Wild",
+    "dragon wild": "Rồng Wild",
+    "tiger wild": "Hổ Wild",
+    "super wild": "Super Wild",
+    "pair bet": "Cược Cặp",
+    "dragon pair": "Cặp Rồng",
+    "tiger pair": "Cặp Hổ",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "Cách Chơi",
+            "content": [
+                "Dragon Tiger Wild mang đến một tính năng mới thú vị với <b>Lá bài WILD</b>! Mở khóa tiềm năng thắng lớn lên đến <b>127x</b>! Dự đoán lá bài cao nhất và các kết hợp Wild để nhận phần thưởng lớn! HÃY CÙNG WILD!!!"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "Cách Chơi",
+            "content": [
+                "Trò chơi sử dụng ba lá bài: 2 lá bài chính (Rồng và Hổ) <b>so sánh giá trị cao nhất</b>, và 1 lá bài Wild để tạo thành các kết hợp thưởng.",
+                "Các tùy chọn cược: Cược chính (Rồng/Hổ/Hòa) hoặc cược Wild (Cặp Rồng, Cặp Hổ, Rồng Wild, Hổ Wild, Super Wild)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Thưởng Wild",
+            "content": [
+                "Lá bài Wild giúp tăng thưởng lên đến <b>127x</b> thông qua các kết hợp đặc biệt!",
+                "Đặt cược vào các kết hợp Wild và nhận <b>PHẦN THƯỞNG NHÂN ĐÔI!</b>"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Giới Thiệu",
+            "paragraph-1": "Dragon Tiger Wild là trò chơi mới nhất từ IDNLIVE EUROPE, mang đến sự hấp dẫn hơn với việc bổ sung lá bài Wild. Trò chơi này mang đến trải nghiệm mới mẻ cho những người yêu thích Dragon Tiger, với tiềm năng thắng lớn lên đến 127x! HÃY CÙNG WILD!!!",
+            "game-objective": "Mục Tiêu Trò Chơi",
+            "paragraph-2": "Mục tiêu của trò chơi là dự đoán lá bài cao nhất giữa Rồng và Hổ, đồng thời sử dụng lá bài Wild để tạo ra các kết hợp thưởng Wild nhằm nhận phần thưởng lớn hơn."
+        },
+        "general-rules": {
+            "title": "Luật Chung",
+            "steps": [
+                "Trò chơi được điều hành bởi một nhà cái.",
+                "Trò chơi sử dụng 8 bộ bài trong một ván.",
+                "Khi bắt đầu mỗi ván mới, nhà cái sẽ lật một lá bài để xác định số lá bài sẽ bị loại bỏ. Tối đa 10 lá bài có thể bị loại.",
+                "Sau khi thời gian đặt cược kết thúc, nhà cái rút một lá bài làm lá bài Wild, sau đó chia một lá bài cho Rồng và một lá bài cho Hổ.",
+                "Bên có lá bài cao hơn sẽ thắng. Giá trị cao nhất là K, tương đương 13.",
+                "Nếu kết quả hòa, cược Rồng và Hổ sẽ được hoàn trả một nửa. Cược Hòa chỉ thắng nếu Rồng và Hổ có cùng giá trị.",
+                "Trong các cược 50-50 như Rồng/Hổ, bạn chỉ có thể chọn một bên mỗi vòng. Nếu bạn đặt cược vào Rồng, bạn không thể đặt cược vào Hổ trong cùng một vòng."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Lá Bài Wild trong Dragon Tiger",
+            "content": "Dragon Tiger Wild sử dụng bộ bài tiêu chuẩn 52 lá, không có joker. Giá trị các lá bài trong trò chơi như sau:",
+            "card": "Lá Bài",
+            "value": "Giá Trị"
+        },
+        "wild-bet": {
+            "title": "Cược Wild",
+            "description": "Như đã đề cập trong phần giới thiệu, Dragon Tiger Wild mang đến các yếu tố chơi mới và phần thưởng thú vị. Dưới đây là cách thức hoạt động:",
+            "description-2": "Lá bài Wild quyết định phần thưởng với tỷ lệ trả thưởng cao hơn so với cược thông thường. Có 5 loại cược Wild:",
+
+            "dragon-wild": "Cược này thắng nếu lá bài Rồng thắng và có cùng giá trị với lá bài Wild.",
+            "tiger-wild": "Cược này thắng nếu lá bài Hổ thắng và có cùng giá trị với lá bài Wild.",
+            "super-wild": "Cược này thắng nếu cả ba lá bài—Wild, Rồng và Hổ—có cùng giá trị.",
+            "dragon-pair": "Cược này thắng nếu lá bài Rồng và lá bài Wild có cùng giá trị (lá bài Rồng không cần phải thắng).",
+            "tiger-pair": "Cược này thắng nếu lá bài Hổ và lá bài Wild có cùng giá trị (lá bài Hổ không cần phải thắng)."
+        },
+        "bet-description": {
+            "title": "Mô Tả Cược",
+            "bet": "Cược",
+            "description": "Mô Tả",
+            "result": "Kết Quả",
+            "any": "Bất Kỳ",
+            "main-bet": {
+                "title": "Cược Chính",
+                "dragon": {
+                    "title": "Rồng",
+                    "description": "Thắng nếu giá trị lá bài Rồng cao hơn lá bài Hổ."
+                },
+                "tiger": {
+                    "title": "Hổ",
+                    "description": "Thắng nếu giá trị lá bài Hổ cao hơn lá bài Rồng."
+                },
+                "tie": {
+                    "title": "Hòa",
+                    "description": "Thắng nếu lá bài Rồng và Hổ có cùng giá trị."
+                }
+            },
+            "side-bet": {
+                "title": "Cược Phụ",
+                "dragon-wild": {
+                    "title": "Rồng Wild",
+                    "description": "Thắng nếu bên Rồng thắng và cả lá bài Rồng và Wild có cùng giá trị."
+                },
+                "tiger-wild": {
+                    "title": "Hổ Wild",
+                    "description": "Thắng nếu bên Hổ thắng và cả lá bài Hổ và Wild có cùng giá trị."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Thắng nếu cả ba lá bài—Wild, Rồng và Hổ—có cùng giá trị."
+                },
+                "dragon-pair": {
+                    "title": "Cặp Rồng",
+                    "description": "Thắng nếu lá bài Rồng và Wild có cùng giá trị."
+                },
+                "tiger-pair": {
+                    "title": "Cặp Hổ",
+                    "description": "Thắng nếu lá bài Hổ và Wild có cùng giá trị."
+                }
+            }
+        }
+    }
 }

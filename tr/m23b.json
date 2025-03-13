@@ -1,24 +1,133 @@
 {
-    "dragonpair": "ejderha çifti",
-    "tigerpair": "kaplan çifti",
-    "dragonwild": "ejderha wild",
-    "tigerwild": "kaplan wild",
-    "dragon": "ejderha",
-    "wild": "wild",
-    "superwild": "super wild",
-    "tie": "beraberlik",
-    "tiger": "kaplan",
-    "big": "büyük",
-    "small": "küçük",
-    "odd": "tek",
-    "even": "çift",
-    "red": "kırmızı",
-    "black": "siyah",
-    "wild bet": "wild bahis",
-    "dragon wild": "ejderha wild",
-    "tiger wild": "kaplan wild",
-    "super wild": "super wild",
-    "pair bet": "çift bahis",
-    "dragon pair": "ejderha çifti",
-    "tiger pair": "kaplan çifti"
+    "dragonpair": "Ejderha Çifti",
+    "tigerpair": "Kaplan Çifti",
+    "dragonwild": "Ejderha Wild",
+    "tigerwild": "Kaplan Wild",
+    "dragon": "Ejderha",
+    "tiger": "Kaplan",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "Beraberlik",
+    "big": "Büyük",
+    "small": "Küçük",
+    "odd": "Tek",
+    "even": "Çift",
+    "red": "Kırmızı",
+    "black": "Siyah",
+    "wild bet": "Wild Bahis",
+    "dragon wild": "Ejderha Wild",
+    "tiger wild": "Kaplan Wild",
+    "super wild": "Super Wild",
+    "pair bet": "Çift Bahis",
+    "dragon pair": "Ejderha Çifti",
+    "tiger pair": "Kaplan Çifti",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "Nasıl Oynanır",
+            "content": [
+                "Dragon Tiger Wild, heyecan verici yeni bir <b>WILD KART</b> özelliği sunuyor! <b>127x</b>'e kadar kazanma potansiyelini açın! En yüksek kartı ve Wild kombinasyonlarını tahmin ederek muhteşem ödüller kazanın! HADİ WILD OLALIM!!!"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "Nasıl Oynanır",
+            "content": [
+                "Oyun üç kartla oynanır: 2 ana kart (Ejderha ve Kaplan) <b>en yüksek değer için yarışır</b>, ve 1 Wild kart bonus kombinasyonlar oluşturur.",
+                "Bahis seçenekleri: Ana Bahisler (Ejderha/Kaplan/Beraberlik) veya Wild Bahisler (Ejderha Çifti, Kaplan Çifti, Ejderha Wild, Kaplan Wild, Super Wild)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Wild Bonusu",
+            "content": [
+                "Wild kart, özel kombinasyonlarla kazançları <b>127x</b>'e kadar artırır!",
+                "Wild kombinasyonlarına bahis yapın ve <b>KATLANMIŞ BONUSLAR</b> kazanın!"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Giriş",
+            "paragraph-1": "Dragon Tiger Wild, IDNLIVE EUROPE'ün en yeni oyunudur ve Wild kart eklenerek daha da heyecanlı hale gelmiştir. Bu oyun, Dragon Tiger tutkunları için 127x'e kadar kazanma potansiyeliyle yepyeni bir deneyim sunuyor! HADİ WILD OLALIM!!!",
+            "game-objective": "Oyunun Amacı",
+            "paragraph-2": "Bu oyunun amacı, Ejderha ve Kaplan arasındaki en yüksek kartı tahmin etmek ve daha büyük ödüller için Wild kartını kullanarak Bonus Wild kombinasyonları oluşturmaktır."
+        },
+        "general-rules": {
+            "title": "Genel Kurallar",
+            "steps": [
+                "Oyun bir krupiye tarafından yönetilir.",
+                "Oyun, bir destede 8 deste kart kullanır.",
+                "Her yeni destede, krupiye kaç kartın yakılacağını belirlemek için bir kart açar. En fazla 10 kart yakılabilir.",
+                "Bahis süresi bittikten sonra, krupiye bir Wild kart çeker ve ardından Ejderha ve Kaplan'a birer kart dağıtır.",
+                "En yüksek kart değerine sahip olan taraf kazanır. En yüksek değer K'dir ve 13'e eşittir.",
+                "Sonuç berabere çıkarsa, Ejderha ve Kaplan bahisleri yarı yarıya iade edilir. Beraberlik bahsi yalnızca Ejderha ve Kaplan aynı değere sahipse kazanır.",
+                "Ejderha/Kaplan gibi 50-50 bahislerde, her turda yalnızca bir taraf seçebilirsiniz. Ejderha'ya bahis yaptıysanız, aynı turda Kaplan'a bahis yapamazsınız."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Dragon Tiger Wild Kartı",
+            "content": "Dragon Tiger Wild, joker olmadan standart 52 kartlık bir desteyi kullanır. Oyunda kullanılan kart değerleri şu şekildedir:",
+            "card": "Kart",
+            "value": "Değer"
+        },
+        "wild-bet": {
+            "title": "Wild Bahisleri",
+            "description": "Girişte belirtildiği gibi, Dragon Tiger Wild yeni oyun öğeleri ve heyecan verici bonuslar sunar. İşte nasıl çalıştığı:",
+            "description-2": "Wild kart, normal bahislerden daha yüksek ödemelerle kazançları belirler. 5 tür Wild Bahis vardır:",
+
+            "dragon-wild": "Bu bahis, Ejderha kartı kazanır ve Wild kartıyla aynı değere sahipse ödenir.",
+            "tiger-wild": "Bu bahis, Kaplan kartı kazanır ve Wild kartıyla aynı değere sahipse ödenir.",
+            "super-wild": "Bu bahis, Wild kartı, Ejderha kartı ve Kaplan kartı üçü de aynı değere sahipse ödenir.",
+            "dragon-pair": "Bu bahis, Ejderha kartı ve Wild kartı aynı değere sahipse ödenir (Ejderha kartının kazanması gerekmez).",
+            "tiger-pair": "Bu bahis, Kaplan kartı ve Wild kartı aynı değere sahipse ödenir (Kaplan kartının kazanması gerekmez)."
+        },
+        "bet-description": {
+            "title": "Bahis Açıklaması",
+            "bet": "Bahis",
+            "description": "Açıklama",
+            "result": "Sonuç",
+            "any": "Herhangi",
+            "main-bet": {
+                "title": "Ana Bahisler",
+                "dragon": {
+                    "title": "Ejderha",
+                    "description": "Ejderha kartının değeri Kaplan kartından yüksekse ödenir."
+                },
+                "tiger": {
+                    "title": "Kaplan",
+                    "description": "Kaplan kartının değeri Ejderha kartından yüksekse ödenir."
+                },
+                "tie": {
+                    "title": "Beraberlik",
+                    "description": "Ejderha ve Kaplan kartları aynı değere sahipse ödenir."
+                }
+            },
+            "side-bet": {
+                "title": "Yan Bahisler",
+                "dragon-wild": {
+                    "title": "Ejderha Wild",
+                    "description": "Ejderha tarafı kazanır ve Ejderha kartı ile Wild kartı aynı değere sahipse ödenir."
+                },
+                "tiger-wild": {
+                    "title": "Kaplan Wild",
+                    "description": "Kaplan tarafı kazanır ve Kaplan kartı ile Wild kartı aynı değere sahipse ödenir."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Wild kartı, Ejderha kartı ve Kaplan kartı üçü de aynı değere sahipse ödenir."
+                },
+                "dragon-pair": {
+                    "title": "Ejderha Çifti",
+                    "description": "Ejderha kartı ve Wild kartı aynı değere sahipse ödenir."
+                },
+                "tiger-pair": {
+                    "title": "Kaplan Çifti",
+                    "description": "Kaplan kartı ve Wild kartı aynı değere sahipse ödenir."
+                }
+            }
+        }
+    }
 }

@@ -1,24 +1,133 @@
 {
     "dragonpair": "龙对",
     "tigerpair": "虎对",
-    "dragonwild": "龙 wild",
-    "tigerwild": "虎 wild",
+    "dragonwild": "龙 Wild",
+    "tigerwild": "虎 Wild",
     "dragon": "龙",
-    "wild": "wild",
-    "superwild": "super wild",
-    "tie": "和",
     "tiger": "虎",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "和局",
     "big": "大",
     "small": "小",
     "odd": "单",
     "even": "双",
     "red": "红",
     "black": "黑",
-    "wild bet": "wild 投注",
-    "dragon wild": "龙 wild",
-    "tiger wild": "虎 wild",
-    "super wild": "super wild",
-    "pair bet": "对投注",
+    "wild bet": "Wild 投注",
+    "dragon wild": "龙 Wild",
+    "tiger wild": "虎 Wild",
+    "super wild": "Super Wild",
+    "pair bet": "对子投注",
     "dragon pair": "龙对",
-    "tiger pair": "虎对"
+    "tiger pair": "虎对",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "如何玩",
+            "content": [
+                "Dragon Tiger Wild 引入了令人兴奋的新功能 <b>WILD 牌</b>！解锁高达 <b>127倍</b> 的赢奖潜力！预测最高牌和 Wild 组合，赢取丰厚奖励！让我们一起 WILD 吧！！！"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "如何玩",
+            "content": [
+                "游戏使用三张牌：2 张主牌（龙和虎）<b>竞争最高值</b>，以及 1 张 Wild 牌来形成奖励组合。",
+                "投注选项：主投注（龙/虎/和局）或 Wild 投注（龙对、虎对、龙 Wild、虎 Wild、Super Wild）。"
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Wild 奖励",
+            "content": [
+                "Wild 牌通过特殊组合将奖金提升至最高 <b>127倍</b>！",
+                "投注 Wild 组合，赢取 <b>翻倍奖金！</b>"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "介绍",
+            "paragraph-1": "Dragon Tiger Wild 是 IDNLIVE EUROPE 的最新游戏，通过加入 Wild 牌带来更多刺激。这款游戏为 Dragon Tiger 爱好者提供了全新的体验，赢奖潜力高达 127 倍！让我们一起 WILD 吧！！！",
+            "game-objective": "游戏目标",
+            "paragraph-2": "本游戏的目标是预测龙和虎之间的最高牌，同时利用 Wild 牌创建奖励 Wild 组合以获得更大的奖金。"
+        },
+        "general-rules": {
+            "title": "通用规则",
+            "steps": [
+                "游戏由庄家进行。",
+                "游戏使用 8 副牌。",
+                "每局开始时，庄家会翻开一张牌以确定要烧掉的牌数。最多可烧掉 10 张牌。",
+                "投注时间结束后，庄家会抽一张 Wild 牌，然后分别发一张牌给龙和虎。",
+                "牌值最高的一方获胜。最高值为 K，等于 13。",
+                "如果结果为和局，龙和虎的投注将退还一半。和局投注仅在龙和虎牌值相同时获胜。",
+                "在 50-50 投注（如龙/虎）中，每轮只能选择一方。如果你投注龙，则同一轮不能投注虎。"
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Dragon Tiger Wild 牌",
+            "content": "Dragon Tiger Wild 使用标准的 52 张牌，不含小丑。游戏中使用的牌值如下：",
+            "card": "牌",
+            "value": "值"
+        },
+        "wild-bet": {
+            "title": "Wild 投注",
+            "description": "如介绍中所述，Dragon Tiger Wild 引入了新的游戏元素和令人兴奋的奖励。其运作方式如下：",
+            "description-2": "Wild 牌决定了比普通投注更高的奖金。Wild 投注有 5 种类型：",
+
+            "dragon-wild": "如果龙牌获胜且与 Wild 牌值相同，此投注获胜。",
+            "tiger-wild": "如果虎牌获胜且与 Wild 牌值相同，此投注获胜。",
+            "super-wild": "如果 Wild 牌、龙牌和虎牌三者的值相同，此投注获胜。",
+            "dragon-pair": "如果龙牌和 Wild 牌值相同，此投注获胜（龙牌不必获胜）。",
+            "tiger-pair": "如果虎牌和 Wild 牌值相同，此投注获胜（虎牌不必获胜）。"
+        },
+        "bet-description": {
+            "title": "投注说明",
+            "bet": "投注",
+            "description": "说明",
+            "result": "结果",
+            "any": "任意",
+            "main-bet": {
+                "title": "主投注",
+                "dragon": {
+                    "title": "龙",
+                    "description": "如果龙牌值高于虎牌值，则获胜。"
+                },
+                "tiger": {
+                    "title": "虎",
+                    "description": "如果虎牌值高于龙牌值，则获胜。"
+                },
+                "tie": {
+                    "title": "和局",
+                    "description": "如果龙牌和虎牌值相同，则获胜。"
+                }
+            },
+            "side-bet": {
+                "title": "侧投注",
+                "dragon-wild": {
+                    "title": "龙 Wild",
+                    "description": "如果龙方获胜且龙牌和 Wild 牌值相同，则获胜。"
+                },
+                "tiger-wild": {
+                    "title": "虎 Wild",
+                    "description": "如果虎方获胜且虎牌和 Wild 牌值相同，则获胜。"
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "如果 Wild 牌、龙牌和虎牌三者的值相同，则获胜。"
+                },
+                "dragon-pair": {
+                    "title": "龙对",
+                    "description": "如果龙牌和 Wild 牌值相同，则获胜。"
+                },
+                "tiger-pair": {
+                    "title": "虎对",
+                    "description": "如果虎牌和 Wild 牌值相同，则获胜。"
+                }
+            }
+        }
+    }
 }

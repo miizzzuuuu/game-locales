@@ -1,24 +1,133 @@
 {
     "dragonpair": "드래곤 페어",
     "tigerpair": "타이거 페어",
-    "dragonwild": "드래곤 wild",
-    "tigerwild": "타이거 wild",
+    "dragonwild": "드래곤 Wild",
+    "tigerwild": "타이거 Wild",
     "dragon": "드래곤",
-    "wild": "wild",
-    "superwild": "super wild",
-    "tie": "타이",
     "tiger": "타이거",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "무승부",
     "big": "큰",
     "small": "작은",
-    "odd": "홀",
-    "even": "짝",
-    "red": "빨간",
-    "black": "검은",
-    "wild bet": "wild 베팅",
-    "dragon wild": "드래곤 wild",
-    "tiger wild": "타이거 wild",
-    "super wild": "super wild",
+    "odd": "홀수",
+    "even": "짝수",
+    "red": "빨간색",
+    "black": "검은색",
+    "wild bet": "Wild 베팅",
+    "dragon wild": "드래곤 Wild",
+    "tiger wild": "타이거 Wild",
+    "super wild": "Super Wild",
     "pair bet": "페어 베팅",
     "dragon pair": "드래곤 페어",
-    "tiger pair": "타이거 페어"
+    "tiger pair": "타이거 페어",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "게임 방법",
+            "content": [
+                "Dragon Tiger Wild는 <b>WILD 카드</b>를 통해 더욱 흥미로운 새로운 기능을 제공합니다! 최대 <b>127배</b>의 승리 가능성을 열어보세요! 최고의 카드와 Wild 조합을 예측하여 큰 상금을 받으세요! 함께 Wild해져 보세요!!!"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "게임 방법",
+            "content": [
+                "이 게임은 세 장의 카드로 진행됩니다: 2장의 메인 카드 (드래곤과 타이거) <b>가장 높은 값을 가진 카드를 경쟁</b>, 그리고 1장의 Wild 카드로 보너스 조합을 만듭니다.",
+                "베팅 옵션: 메인 베팅 (드래곤/타이거/무승부) 또는 Wild 베팅 (드래곤 페어, 타이거 페어, 드래곤 Wild, 타이거 Wild, Super Wild)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Wild 보너스",
+            "content": [
+                "Wild 카드는 특별한 조합을 통해 최대 <b>127배</b>의 상금을 증가시킵니다!",
+                "Wild 조합에 베팅하고 <b>곱절의 보너스</b>를 받으세요!"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "소개",
+            "paragraph-1": "Dragon Tiger Wild는 IDNLIVE EUROPE의 최신 게임으로, Wild 카드를 추가하여 더욱 흥미진진한 게임을 제공합니다. 이 게임은 Dragon Tiger 애호가들을 위한 새로운 경험을 제공하며, 최대 127배의 승리 가능성을 제공합니다! 함께 Wild해져 보세요!!!",
+            "game-objective": "게임 목표",
+            "paragraph-2": "이 게임의 목표는 드래곤과 타이거 중 가장 높은 카드를 예측하고, Wild 카드를 활용하여 더 큰 상금을 위한 보너스 Wild 조합을 만드는 것입니다."
+        },
+        "general-rules": {
+            "title": "일반 규칙",
+            "steps": [
+                "이 게임은 딜러가 진행합니다.",
+                "이 게임은 한 슈에 8덱의 카드를 사용합니다.",
+                "각 새 슈가 시작될 때, 딜러는 한 장의 카드를 공개하여 버릴 카드의 수를 결정합니다. 최대 10장의 카드를 버릴 수 있습니다.",
+                "베팅 시간이 끝나면, 딜러는 Wild 카드 한 장을 뽑은 후 드래곤과 타이거에 각각 한 장의 카드를 나눠줍니다.",
+                "가장 높은 카드 값을 가진 쪽이 승리합니다. 가장 높은 값은 K이며, 이는 13에 해당합니다.",
+                "결과가 무승부일 경우, 드래곤과 타이거 베팅은 절반만 환급됩니다. 무승부 베팅은 드래곤과 타이거가 같은 값을 가질 때만 승리합니다.",
+                "드래곤/타이거와 같은 50-50 베팅에서는 한 라운드당 한 쪽만 선택할 수 있습니다. 드래곤에 베팅했다면, 같은 라운드에서 타이거에 베팅할 수 없습니다."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Dragon Tiger Wild 카드",
+            "content": "Dragon Tiger Wild는 조커 없이 표준 52장의 카드를 사용합니다. 게임에서 사용되는 카드 값은 다음과 같습니다:",
+            "card": "카드",
+            "value": "값"
+        },
+        "wild-bet": {
+            "title": "Wild 베팅",
+            "description": "소개에서 언급했듯이, Dragon Tiger Wild는 새로운 게임 플레이 요소와 흥미로운 보너스를 제공합니다. 작동 방식은 다음과 같습니다:",
+            "description-2": "Wild 카드는 일반 베팅보다 높은 지급률로 상금을 결정합니다. Wild 베팅에는 5가지 유형이 있습니다:",
+
+            "dragon-wild": "이 베팅은 드래곤 카드가 승리하고 Wild 카드와 같은 값을 가질 때 지급됩니다.",
+            "tiger-wild": "이 베팅은 타이거 카드가 승리하고 Wild 카드와 같은 값을 가질 때 지급됩니다.",
+            "super-wild": "이 베팅은 Wild 카드, 드래곤 카드, 타이거 카드 모두가 같은 값을 가질 때 지급됩니다.",
+            "dragon-pair": "이 베팅은 드래곤 카드와 Wild 카드가 같은 값을 가질 때 지급됩니다 (드래곤 카드가 승리할 필요는 없습니다).",
+            "tiger-pair": "이 베팅은 타이거 카드와 Wild 카드가 같은 값을 가질 때 지급됩니다 (타이거 카드가 승리할 필요는 없습니다)."
+        },
+        "bet-description": {
+            "title": "베팅 설명",
+            "bet": "베팅",
+            "description": "설명",
+            "result": "결과",
+            "any": "어떤",
+            "main-bet": {
+                "title": "메인 베팅",
+                "dragon": {
+                    "title": "드래곤",
+                    "description": "드래곤 카드 값이 타이거 카드 값보다 높을 경우 지급됩니다."
+                },
+                "tiger": {
+                    "title": "타이거",
+                    "description": "타이거 카드 값이 드래곤 카드 값보다 높을 경우 지급됩니다."
+                },
+                "tie": {
+                    "title": "무승부",
+                    "description": "드래곤과 타이거 카드 값이 같을 경우 지급됩니다."
+                }
+            },
+            "side-bet": {
+                "title": "사이드 베팅",
+                "dragon-wild": {
+                    "title": "드래곤 Wild",
+                    "description": "드래곤 측이 승리하고 드래곤 카드와 Wild 카드가 같은 값을 가질 경우 지급됩니다."
+                },
+                "tiger-wild": {
+                    "title": "타이거 Wild",
+                    "description": "타이거 측이 승리하고 타이거 카드와 Wild 카드가 같은 값을 가질 경우 지급됩니다."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Wild 카드, 드래곤 카드, 타이거 카드 모두가 같은 값을 가질 경우 지급됩니다."
+                },
+                "dragon-pair": {
+                    "title": "드래곤 페어",
+                    "description": "드래곤 카드와 Wild 카드가 같은 값을 가질 경우 지급됩니다."
+                },
+                "tiger-pair": {
+                    "title": "타이거 페어",
+                    "description": "타이거 카드와 Wild 카드가 같은 값을 가질 경우 지급됩니다."
+                }
+            }
+        }
+    }
 }
