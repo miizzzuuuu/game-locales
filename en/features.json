@@ -1,0 +1,58 @@
+{
+    "general": {
+        "title": "General",
+        "paragraph-1": "To participate in the game, you must have sufficient balance/funds to cover your bets. Your current balance can be viewed at the bottom left of your screen.",
+        "paragraph-2": "The TOTAL BET indicator displays the total amount of bets you have placed for the current round.",
+        "paragraph-3": "Displays the minimum and maximum bets allowed at the table, which can change at any time. Additionally, it shows the unique code for the current session and the name of the game you are playing.",
+        "paragraph-4": "The timer will indicate the remaining time to place bets. Once it ends, betting is closed, and no further bets are accepted. After the betting time ends, you will receive a \"Bet accepted\" confirmation if your bet is accepted for participation in the game round; otherwise, you will receive a \"Bet rejected\" notification.",
+        "paragraph-5": "The Chip Display allows you to select the value of each chip you wish to bet. You can choose the chip value for your bet by clicking on the chip at the bottom of the screen or on the right side of the screen, located near the Cancel, Double, and Rebet buttons, to view all available chip values."
+    },
+    "menu": {
+        "title": "Menu",
+        "description": "Additional buttons to facilitate player convenience during the game.",
+        "paragraph-1": "The Cancel button will remove one chip that you have previously placed on the table.",
+        "paragraph-2": "Doubles the amount of chips you have placed. Ensure your account balance is sufficient to double all placed bets.",
+        "paragraph-3": "Allows you to repeat the same bet as you placed in the previous round at the table.",
+        "paragraph-4": "The Burger Menu provides important in-game menus for use.",
+        "paragraph-5": "Hides the display of chips you have placed on the table.",
+        "paragraph-6": "Displays the statistics of the ongoing game.",
+        "paragraph-7": "Allows you to save and use your favorite bets.",
+        "paragraph-8": "Shows or hides the Roadmap / Game Statistics."
+    },
+    "settings": {
+        "title": "Settings",
+        "description": "Additional options to customize features according to user needs and preferences.",
+        "video": {
+            "title": "Video",
+            "description": "Description: Settings to display streaming or not and streaming resolution settings.",
+            "default": "Default: Toggle On, Medium Resolution."
+        },
+        "live-streaming-audio": {
+            "title": "Live Streaming Audio",
+            "description": "Description: Settings for the audio from the live studio stream.",
+            "default": "Default: Toggle On."
+        },
+        "background-music": {
+            "title": "Background Music",
+            "description": "Description: Settings for the Background Music audio.",
+            "default": "Default: Toggle On."
+        },
+        "game-effects": {
+            "title": "Game Effects",
+            "description": "Description: Settings for the Game Effects audio.",
+            "default": "Default: Toggle On."
+        },
+        "auto-bet": {
+            "title": "Auto Rebet",
+            "description": "Description: On/Off settings for Auto Rebet based on previous bets.",
+            "default": "Default: Toggle Off."
+        },
+        "language": {
+            "title": "Language",
+            "description": "Description: Settings to select the language to be used.",
+            "default": "Default: According to the last language you set."
+        },
+        "disclaimer": "Disclaimer",
+        "disclaimer-settings": "Your settings preferences will be saved, except for the auto-bet settings, which will be reset to default."
+    }
+}

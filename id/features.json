@@ -39,12 +39,12 @@
         },
         "game-effects": {
             "title": "Efek Permainan",
-            "description": "Deskripsi : Pengaturan suara untuk Efek  Permainan.",
+            "description": "Deskripsi : Pengaturan suara untuk Efek Permainan.",
             "default": "Default : Toggle On."
         },
         "auto-bet": {
             "title": "Taruhan Ulang Otomatis",
-            "description": "Pengaturan On/Off untuk Taruhan Ulang Otomatis berdasarkan taruhan sebelumnya.",
+            "description": "Deskripsi : Pengaturan On/Off untuk Taruhan Ulang Otomatis berdasarkan taruhan sebelumnya.",
             "default": "Default : Toggle Off."
         },
         "language": {

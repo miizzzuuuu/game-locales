@@ -1,0 +1,58 @@
+{
+    "general": {
+        "title": "Geral",
+        "paragraph-1": "Para participar do jogo, você deve ter saldo/fundos suficientes para cobrir suas apostas. Seu saldo atual pode ser visualizado na parte inferior esquerda da tela.",
+        "paragraph-2": "O indicador TOTAL DE APOSTAS exibe o valor total das apostas que você fez para a rodada atual.",
+        "paragraph-3": "Exibe os valores mínimo e máximo de apostas permitidos na mesa, que podem ser alterados a qualquer momento. Além disso, é exibido o código único do período atual e o nome do jogo que você está jogando.",
+        "paragraph-4": "O temporizador informa o tempo restante para realizar apostas. Após o término, as apostas são encerradas e nenhuma nova aposta será aceita. Após o término do tempo de apostas, você receberá uma confirmação de \"Aposta aceita\" se sua aposta for aceita para participar da rodada; caso contrário, você receberá uma notificação de \"Aposta recusada\".",
+        "paragraph-5": "A exibição de fichas permite que você selecione o valor de cada ficha que deseja apostar. Você pode escolher o valor da ficha para a aposta clicando na ficha na parte inferior da tela ou no lado direito da tela, próximo aos botões Cancelar, Dobrar e Reapostar (Rebet), para visualizar todos os valores de fichas disponíveis."
+    },
+    "menu": {
+        "title": "Menu",
+        "description": "Botões adicionais para facilitar a experiência do jogador durante o jogo.",
+        "paragraph-1": "O botão Cancelar remove uma ficha que você já colocou na mesa.",
+        "paragraph-2": "Dobra o valor das fichas que você apostou. Certifique-se de que seu saldo seja suficiente para dobrar todas as apostas realizadas.",
+        "paragraph-3": "Permite que você repita a mesma aposta feita na rodada anterior na mesa.",
+        "paragraph-4": "O Menu Hambúrguer fornece acesso a menus importantes durante o jogo.",
+        "paragraph-5": "Oculta a exibição das fichas que você apostou na mesa.",
+        "paragraph-6": "Exibe as estatísticas do jogo em andamento.",
+        "paragraph-7": "Permite salvar e utilizar apostas favoritas de cada jogador.",
+        "paragraph-8": "Exibe ou oculta o Roadmap / Estatísticas do jogo."
+    },
+    "settings": {
+        "title": "Configurações",
+        "description": "Opções adicionais para personalizar as funcionalidades de acordo com as necessidades e preferências do usuário.",
+        "video": {
+            "title": "Vídeo",
+            "description": "Descrição: Configurações para exibir ou não a transmissão ao vivo e ajustar a resolução da transmissão.",
+            "default": "Padrão: Ativado, Resolução Média."
+        },
+        "live-streaming-audio": {
+            "title": "Áudio da Transmissão ao Vivo",
+            "description": "Descrição: Configurações de áudio da transmissão ao vivo do estúdio.",
+            "default": "Padrão: Ativado."
+        },
+        "background-music": {
+            "title": "Música de Fundo",
+            "description": "Descrição: Configurações de áudio para a Música de Fundo.",
+            "default": "Padrão: Ativado."
+        },
+        "game-effects": {
+            "title": "Efeitos Sonoros do Jogo",
+            "description": "Descrição: Configurações de áudio para os Efeitos Sonoros do Jogo.",
+            "default": "Padrão: Ativado."
+        },
+        "auto-bet": {
+            "title": "Aposta Automática",
+            "description": "Descrição: Configurações para ativar/desativar a Aposta Automática com base na aposta anterior.",
+            "default": "Padrão: Desativado."
+        },
+        "language": {
+            "title": "Idioma",
+            "description": "Descrição: Configurações para selecionar o idioma a ser utilizado.",
+            "default": "Padrão: De acordo com o último idioma configurado."
+        },
+        "disclaimer": "Aviso Legal",
+        "disclaimer-settings": "Suas preferências de configuração serão salvas, exceto as configurações de aposta automática, que serão redefinidas para o padrão."
+    }
+}

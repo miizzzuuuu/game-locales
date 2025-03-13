@@ -1,0 +1,58 @@
+{
+    "general": {
+        "title": "Tổng quan",
+        "paragraph-1": "Để tham gia trò chơi, bạn phải có đủ số dư/tiền để đặt cược. Số dư hiện tại của bạn có thể được xem ở phía dưới bên trái màn hình.",
+        "paragraph-2": "Chỉ báo TỔNG CƯỢC hiển thị tổng số tiền cược bạn đã đặt cho vòng hiện tại.",
+        "paragraph-3": "Hiển thị mức cược tối thiểu và tối đa được cho phép tại bàn, có thể thay đổi bất cứ lúc nào. Ngoài ra, nó hiển thị mã duy nhất cho phiên hiện tại và tên trò chơi bạn đang chơi.",
+        "paragraph-4": "Bộ đếm thời gian sẽ hiển thị thời gian còn lại để đặt cược. Khi kết thúc, cược sẽ đóng và không chấp nhận thêm cược. Sau khi thời gian đặt cược kết thúc, bạn sẽ nhận được thông báo \"Cược được chấp nhận\" nếu cược của bạn được chấp nhận để tham gia vào vòng chơi; nếu không, bạn sẽ nhận được thông báo \"Cược bị từ chối\".",
+        "paragraph-5": "Hiển thị Chip cho phép bạn chọn giá trị của mỗi chip bạn muốn đặt cược. Bạn có thể chọn giá trị chip cho cược của mình bằng cách nhấp vào chip ở phía dưới màn hình hoặc ở phía bên phải màn hình, nằm gần các nút Hủy, Gấp đôi và Đặt lại (Rebet), để xem tất cả các giá trị chip có sẵn."
+    },
+    "menu": {
+        "title": "Menu",
+        "description": "Các nút bổ sung để tạo thuận tiện cho người chơi trong trò chơi.",
+        "paragraph-1": "Nút Hủy sẽ xóa một chip mà bạn đã đặt trước đó trên bàn.",
+        "paragraph-2": "Gấp đôi số lượng chip bạn đã đặt. Đảm bảo số dư tài khoản của bạn đủ để gấp đôi tất cả các cược đã đặt.",
+        "paragraph-3": "Cho phép bạn lặp lại cược giống như cược bạn đã đặt ở vòng trước trên bàn.",
+        "paragraph-4": "Menu Burger cung cấp các menu quan trọng trong trò chơi để sử dụng.",
+        "paragraph-5": "Ẩn hiển thị các chip bạn đã đặt trên bàn.",
+        "paragraph-6": "Hiển thị thống kê của trò chơi đang diễn ra.",
+        "paragraph-7": "Cho phép bạn lưu và sử dụng các cược yêu thích của mình.",
+        "paragraph-8": "Hiển thị hoặc ẩn Roadmap / Thống kê trò chơi."
+    },
+    "settings": {
+        "title": "Cài đặt",
+        "description": "Các tùy chọn bổ sung để tùy chỉnh các tính năng theo nhu cầu và sở thích của người dùng.",
+        "video": {
+            "title": "Video",
+            "description": "Mô tả: Cài đặt để hiển thị phát trực tuyến hoặc không và cài đặt độ phân giải phát trực tuyến.",
+            "default": "Mặc định: Bật, Độ phân giải Trung bình."
+        },
+        "live-streaming-audio": {
+            "title": "Âm thanh Phát trực tiếp",
+            "description": "Mô tả: Cài đặt âm thanh từ phát trực tiếp studio.",
+            "default": "Mặc định: Bật."
+        },
+        "background-music": {
+            "title": "Nhạc nền",
+            "description": "Mô tả: Cài đặt âm thanh cho Nhạc nền.",
+            "default": "Mặc định: Bật."
+        },
+        "game-effects": {
+            "title": "Hiệu ứng Trò chơi",
+            "description": "Mô tả: Cài đặt âm thanh cho Hiệu ứng Trò chơi.",
+            "default": "Mặc định: Bật."
+        },
+        "auto-bet": {
+            "title": "Tự động Đặt lại",
+            "description": "Mô tả: Cài đặt Bật/Tắt cho Tự động Đặt lại dựa trên các cược trước đó.",
+            "default": "Mặc định: Tắt."
+        },
+        "language": {
+            "title": "Ngôn ngữ",
+            "description": "Mô tả: Cài đặt để chọn ngôn ngữ sẽ sử dụng.",
+            "default": "Mặc định: Theo ngôn ngữ bạn đã đặt lần cuối."
+        },
+        "disclaimer": "Tuyên bố miễn trừ trách nhiệm",
+        "disclaimer-settings": "Các tùy chọn cài đặt của bạn sẽ được lưu, ngoại trừ cài đặt tự động đặt cược sẽ được đặt lại về mặc định."
+    }
+}

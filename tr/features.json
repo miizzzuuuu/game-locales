@@ -1,0 +1,58 @@
+{
+    "general": {
+        "title": "Genel",
+        "paragraph-1": "Oyuna katılmak için bahislerinizi karşılayacak yeterli bakiyeniz/fonunuz olmalıdır. Mevcut bakiyeniz ekranınızın sol alt kısmında görüntülenebilir.",
+        "paragraph-2": "TOTAL BET göstergesi, mevcut tur için yaptığınız toplam bahis miktarını gösterir.",
+        "paragraph-3": "Masada izin verilen minimum ve maksimum bahisleri gösterir ve herhangi bir zamanda değişebilir. Ayrıca, mevcut oturumun benzersiz kodunu ve oynadığınız oyunun adını gösterir.",
+        "paragraph-4": "Zamanlayıcı, bahis yapmak için kalan süreyi gösterecektir. Süre dolduğunda bahisler kapanır ve daha fazla bahis kabul edilmez. Bahis süresi bittikten sonra, bahsiniz oyun turuna katılmak için kabul edilirse \"Bahis kabul edildi\" onayını alırsınız; aksi takdirde \"Bahis reddedildi\" bildirimi alırsınız.",
+        "paragraph-5": "Chip Ekranı, bahis yapmak istediğiniz her bir chipin değerini seçmenizi sağlar. Ekranın alt kısmında veya sağ tarafında bulunan chip'e tıklayarak bahis için chip değerini seçebilirsiniz. Bu, İptal, Çiftle ve Tekrar Bahis (Rebet) düğmelerinin yakınında bulunur ve tüm mevcut chip değerlerini görüntülemenizi sağlar."
+    },
+    "menu": {
+        "title": "Menü",
+        "description": "Oyunda oyuncuların kolaylığı için ek düğmeler.",
+        "paragraph-1": "İptal düğmesi, daha önce masaya yerleştirdiğiniz bir chip'i kaldırır.",
+        "paragraph-2": "Yerleştirdiğiniz chip miktarını iki katına çıkarır. Tüm yerleştirilen bahisleri iki katına çıkarmak için hesap bakiyenizin yeterli olduğundan emin olun.",
+        "paragraph-3": "Önceki turda masaya yerleştirdiğiniz bahsin aynısını tekrarlamanıza izin verir.",
+        "paragraph-4": "Burger Menüsü, oyun içinde kullanılmak üzere önemli menüler sağlar.",
+        "paragraph-5": "Masaya yerleştirdiğiniz chip'lerin görüntüsünü gizler.",
+        "paragraph-6": "Devam eden oyunun istatistiklerini gösterir.",
+        "paragraph-7": "Her oyuncunun favori bahislerini kaydetmesine ve kullanmasına izin verir.",
+        "paragraph-8": "Yol Haritası / Oyun İstatistiklerini gösterir veya gizler."
+    },
+    "settings": {
+        "title": "Ayarlar",
+        "description": "Kullanıcı ihtiyaçları ve tercihlerine göre özellikleri özelleştirmek için ek seçenekler.",
+        "video": {
+            "title": "Video",
+            "description": "Açıklama: Akışı gösterme veya göstermeme ve akış çözünürlüğü ayarları.",
+            "default": "Varsayılan: Açık, Orta Çözünürlük."
+        },
+        "live-streaming-audio": {
+            "title": "Canlı Yayın Ses",
+            "description": "Açıklama: Canlı stüdyo yayınının ses ayarları.",
+            "default": "Varsayılan: Açık."
+        },
+        "background-music": {
+            "title": "Arka Plan Müziği",
+            "description": "Açıklama: Arka Plan Müziği için ses ayarları.",
+            "default": "Varsayılan: Açık."
+        },
+        "game-effects": {
+            "title": "Oyun Efektleri",
+            "description": "Açıklama: Oyun Efektleri için ses ayarları.",
+            "default": "Varsayılan: Açık."
+        },
+        "auto-bet": {
+            "title": "Otomatik Tekrar Bahis",
+            "description": "Açıklama: Önceki bahislere dayalı Otomatik Tekrar Bahis açma/kapama ayarları.",
+            "default": "Varsayılan: Kapalı."
+        },
+        "language": {
+            "title": "Dil",
+            "description": "Açıklama: Kullanılacak dili seçme ayarları.",
+            "default": "Varsayılan: Son ayarladığınız dile göre."
+        },
+        "disclaimer": "Sorumluluk Reddi",
+        "disclaimer-settings": "Otomatik bahis ayarları hariç, ayar tercihleriniz kaydedilecektir."
+    }
+}
