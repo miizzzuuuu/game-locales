@@ -1,0 +1,133 @@
+{
+    "dragonpair": "Pasangan Naga",
+    "tigerpair": "Pasangan Harimau",
+    "dragonwild": "Naga Wild",
+    "tigerwild": "Harimau Wild",
+    "dragon": "Naga",
+    "tiger": "Harimau",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "Seri",
+    "big": "Besar",
+    "small": "Kecil",
+    "odd": "Ganjil",
+    "even": "Genap",
+    "red": "Merah",
+    "black": "Hitam",
+    "wild bet": "Pertaruhan Wild",
+    "dragon wild": "Naga Wild",
+    "tiger wild": "Harimau Wild",
+    "super wild": "Super Wild",
+    "pair bet": "Pertaruhan Pasangan",
+    "dragon pair": "Pasangan Naga",
+    "tiger pair": "Pasangan Harimau",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Dragon Tiger Wild menampilkan ciri baru yang menarik: <b>KAD WILD</b>! Buka potensi kemenangan sehingga <b>127x</b>! Ramalkan kad tertinggi dan kombinasi Wild untuk meraih ganjaran hebat! JOM JADI WILD!!!"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Permainan ini dimainkan dengan tiga kad: 2 kad utama (Naga dan Harimau) <b>bersaing untuk nilai tertinggi</b>, dan 1 kad Wild untuk membentuk kombinasi bonus.",
+                "Pilihan pertaruhan: Pertaruhan Utama (Naga/Harimau/Seri) atau Pertaruhan Wild (Pasangan Naga, Pasangan Harimau, Naga Wild, Harimau Wild, Super Wild)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Bonus Wild",
+            "content": [
+                "Kad Wild meningkatkan kemenangan sehingga <b>127x</b> melalui kombinasi khas!",
+                "Letakkan pertaruhan pada kombinasi Wild dan menangi <b>BONUS BERGANDA!</b>"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Pengenalan",
+            "paragraph-1": "Dragon Tiger Wild adalah permainan terbaru dari IDNLIVE EUROPE, menawarkan lebih banyak keseronokan dengan penambahan kad Wild. Permainan ini memberikan pengalaman baru bagi peminat Dragon Tiger, dengan potensi kemenangan sehingga 127x! JOM JADI WILD!!!",
+            "game-objective": "Objektif Permainan",
+            "paragraph-2": "Objektif permainan ini adalah untuk meramalkan kad tertinggi antara Naga dan Harimau sambil menggunakan kad Wild untuk mencipta kombinasi bonus Wild bagi ganjaran yang lebih besar."
+        },
+        "general-rules": {
+            "title": "Peraturan Umum",
+            "steps": [
+                "Permainan ini dikendalikan oleh seorang dealer.",
+                "Permainan ini menggunakan 8 dek kad dalam satu shoe.",
+                "Pada permulaan setiap shoe baru, dealer akan mendedahkan satu kad untuk menentukan berapa banyak kad yang akan dibakar atau dibuang. Maksimum 10 kad boleh dibakar.",
+                "Selepas masa pertaruhan tamat, dealer akan mengeluarkan satu kad sebagai kad Wild, kemudian mengagihkan satu kad kepada Naga dan satu kad kepada Harimau.",
+                "Pihak yang mempunyai nilai kad tertinggi akan menang. Nilai tertinggi ialah K, yang bersamaan dengan 13.",
+                "Jika keputusan seri, pertaruhan Naga dan Harimau akan dikembalikan separuh. Pertaruhan Seri hanya menang jika Naga dan Harimau mempunyai nilai yang sama.",
+                "Dalam pertaruhan 50-50 seperti Naga/Harimau, anda hanya boleh memilih satu pihak setiap pusingan. Jika anda bertaruh pada Naga, anda tidak boleh bertaruh pada Harimau dalam pusingan yang sama."
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Kad Wild dalam Dragon Tiger",
+            "content": "Dragon Tiger Wild menggunakan dek kad standard 52 kad, tanpa joker. Nilai kad yang digunakan dalam permainan adalah seperti berikut:",
+            "card": "Kad",
+            "value": "Nilai"
+        },
+        "wild-bet": {
+            "title": "Pertaruhan Wild",
+            "description": "Seperti yang dinyatakan dalam pengenalan, Dragon Tiger Wild memperkenalkan elemen permainan baru dan bonus yang menarik. Berikut adalah cara ia berfungsi:",
+            "description-2": "Kad Wild menentukan kemenangan dengan pembayaran yang lebih tinggi daripada pertaruhan biasa. Terdapat 5 jenis Pertaruhan Wild:",
+
+            "dragon-wild": "Pertaruhan ini membayar jika kad Naga menang dan mempunyai nilai yang sama dengan kad Wild.",
+            "tiger-wild": "Pertaruhan ini membayar jika kad Harimau menang dan mempunyai nilai yang sama dengan kad Wild.",
+            "super-wild": "Pertaruhan ini membayar jika ketiga-tiga kad—Wild, Naga, dan Harimau—mempunyai nilai yang sama.",
+            "dragon-pair": "Pertaruhan ini membayar jika kad Naga dan kad Wild mempunyai nilai yang sama (kad Naga tidak perlu menang).",
+            "tiger-pair": "Pertaruhan ini membayar jika kad Harimau dan kad Wild mempunyai nilai yang sama (kad Harimau tidak perlu menang)."
+        },
+        "bet-description": {
+            "title": "Penerangan Pertaruhan",
+            "bet": "Pertaruhan",
+            "description": "Penerangan",
+            "result": "Keputusan",
+            "any": "Mana-mana",
+            "main-bet": {
+                "title": "Pertaruhan Utama",
+                "dragon": {
+                    "title": "Naga",
+                    "description": "Membayar jika nilai kad Naga lebih tinggi daripada kad Harimau."
+                },
+                "tiger": {
+                    "title": "Harimau",
+                    "description": "Membayar jika nilai kad Harimau lebih tinggi daripada kad Naga."
+                },
+                "tie": {
+                    "title": "Seri",
+                    "description": "Membayar jika kad Naga dan Harimau mempunyai nilai yang sama."
+                }
+            },
+            "side-bet": {
+                "title": "Pertaruhan Sampingan",
+                "dragon-wild": {
+                    "title": "Naga Wild",
+                    "description": "Membayar jika pihak Naga menang dan kedua-dua kad Naga dan Wild mempunyai nilai yang sama."
+                },
+                "tiger-wild": {
+                    "title": "Harimau Wild",
+                    "description": "Membayar jika pihak Harimau menang dan kedua-dua kad Harimau dan Wild mempunyai nilai yang sama."
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Membayar jika ketiga-tiga kad—Wild, Naga, dan Harimau—mempunyai nilai yang sama."
+                },
+                "dragon-pair": {
+                    "title": "Pasangan Naga",
+                    "description": "Membayar jika kad Naga dan Wild mempunyai nilai yang sama."
+                },
+                "tiger-pair": {
+                    "title": "Pasangan Harimau",
+                    "description": "Membayar jika kad Harimau dan Wild mempunyai nilai yang sama."
+                }
+            }
+        }
+    }
+}

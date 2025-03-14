@@ -1,0 +1,133 @@
+{
+    "dragonpair": "ドラゴンペア",
+    "tigerpair": "タイガーペア",
+    "dragonwild": "ドラゴン Wild",
+    "tigerwild": "タイガー Wild",
+    "dragon": "ドラゴン",
+    "tiger": "タイガー",
+    "wild": "Wild",
+    "superwild": "Super Wild",
+    "tie": "引き分け",
+    "big": "大",
+    "small": "小",
+    "odd": "奇数",
+    "even": "偶数",
+    "red": "赤",
+    "black": "黒",
+    "wild bet": "Wild ベット",
+    "dragon wild": "ドラゴン Wild",
+    "tiger wild": "タイガー Wild",
+    "super wild": "Super Wild",
+    "pair bet": "ペアベット",
+    "dragon pair": "ドラゴンペア",
+    "tiger pair": "タイガーペア",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/E3LKnqriEikdTg.json",
+            "title": "遊び方",
+            "content": [
+                "Dragon Tiger Wild は、新しいエキサイティングな <b>WILD カード</b> 機能を搭載！最大 <b>127倍</b> の勝利の可能性を開放！最高のカードと Wild の組み合わせを予測して、豪華な報酬を獲得しましょう！さあ、WILD になろう！！！"
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/CHwzKob4zhYvaz.json",
+            "title": "遊び方",
+            "content": [
+                "このゲームは3枚のカードでプレイされます：2枚のメインカード（ドラゴンとタイガー）が <b>最高値を競い</b>、1枚の Wild カードがボーナスの組み合わせを形成します。",
+                "ベットオプション：メインベット（ドラゴン/タイガー/引き分け）または Wild ベット（ドラゴンペア、タイガーペア、ドラゴン Wild、タイガー Wild、Super Wild）。"
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/EGpvJG8vtu5F9n.json",
+            "title": "Wild ボーナス",
+            "content": [
+                "Wild カードは、特別な組み合わせを通じて賞金を最大 <b>127倍</b> に増やします！",
+                "Wild の組み合わせにベットして、<b>倍増ボーナス</b> を獲得しましょう！"
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "紹介",
+            "paragraph-1": "Dragon Tiger Wild は、IDNLIVE EUROPE の最新ゲームで、Wild カードを追加することでさらにエキサイティングになりました。このゲームは、Dragon Tiger ファンに最大127倍の勝利の可能性を提供する新しい体験を提供します！さあ、WILD になろう！！！",
+            "game-objective": "ゲームの目的",
+            "paragraph-2": "このゲームの目的は、ドラゴンとタイガーの間で最高のカードを予測し、Wild カードを利用してボーナスの Wild 組み合わせを作成し、さらに大きな報酬を獲得することです。"
+        },
+        "general-rules": {
+            "title": "一般的なルール",
+            "steps": [
+                "このゲームはディーラーによって進行されます。",
+                "このゲームでは、1つのシューに8デッキのカードを使用します。",
+                "各新しいシューの開始時に、ディーラーは1枚のカードを公開し、何枚のカードをバーン（廃棄）するかを決定します。最大10枚のカードをバーンできます。",
+                "ベット時間が終了すると、ディーラーは Wild カードを1枚引き、その後ドラゴンとタイガーにそれぞれ1枚ずつカードを配ります。",
+                "最高のカード値を持つ側が勝利します。最高値はKで、13に相当します。",
+                "結果が引き分けの場合、ドラゴンとタイガーのベットは半額返還されます。引き分けベットは、ドラゴンとタイガーが同じ値の場合にのみ勝利します。",
+                "ドラゴン/タイガーのような50-50ベットでは、1ラウンドにつき1つの側しか選択できません。ドラゴンにベットした場合、同じラウンドでタイガーにベットすることはできません。"
+            ]
+        },
+        "dragon-tiger-wild-card": {
+            "title": "Dragon Tiger Wild カード",
+            "content": "Dragon Tiger Wild は、ジョーカーなしの標準52枚のカードデッキを使用します。ゲームで使用されるカードの値は次のとおりです：",
+            "card": "カード",
+            "value": "値"
+        },
+        "wild-bet": {
+            "title": "Wild ベット",
+            "description": "紹介で述べたように、Dragon Tiger Wild は新しいゲームプレイ要素とエキサイティングなボーナスを導入しています。その仕組みは次のとおりです：",
+            "description-2": "Wild カードは、通常のベットよりも高い配当で賞金を決定します。Wild ベットには5種類あります：",
+
+            "dragon-wild": "このベットは、ドラゴンカードが勝利し、Wild カードと同じ値である場合に配当されます。",
+            "tiger-wild": "このベットは、タイガーカードが勝利し、Wild カードと同じ値である場合に配当されます。",
+            "super-wild": "このベットは、Wild カード、ドラゴンカード、タイガーカードのすべてが同じ値である場合に配当されます。",
+            "dragon-pair": "このベットは、ドラゴンカードと Wild カードが同じ値である場合に配当されます（ドラゴンカードが勝利する必要はありません）。",
+            "tiger-pair": "このベットは、タイガーカードと Wild カードが同じ値である場合に配当されます（タイガーカードが勝利する必要はありません）。"
+        },
+        "bet-description": {
+            "title": "ベットの説明",
+            "bet": "ベット",
+            "description": "説明",
+            "result": "結果",
+            "any": "任意",
+            "main-bet": {
+                "title": "メインベット",
+                "dragon": {
+                    "title": "ドラゴン",
+                    "description": "ドラゴンカードの値がタイガーカードよりも高い場合に配当されます。"
+                },
+                "tiger": {
+                    "title": "タイガー",
+                    "description": "タイガーカードの値がドラゴンカードよりも高い場合に配当されます。"
+                },
+                "tie": {
+                    "title": "引き分け",
+                    "description": "ドラゴンカードとタイガーカードが同じ値の場合に配当されます。"
+                }
+            },
+            "side-bet": {
+                "title": "サイドベット",
+                "dragon-wild": {
+                    "title": "ドラゴン Wild",
+                    "description": "ドラゴン側が勝利し、ドラゴンカードと Wild カードが同じ値である場合に配当されます。"
+                },
+                "tiger-wild": {
+                    "title": "タイガー Wild",
+                    "description": "タイガー側が勝利し、タイガーカードと Wild カードが同じ値である場合に配当されます。"
+                },
+                "super-wild": {
+                    "title": "Super Wild",
+                    "description": "Wild カード、ドラゴンカード、タイガーカードのすべてが同じ値である場合に配当されます。"
+                },
+                "dragon-pair": {
+                    "title": "ドラゴンペア",
+                    "description": "ドラゴンカードと Wild カードが同じ値である場合に配当されます。"
+                },
+                "tiger-pair": {
+                    "title": "タイガーペア",
+                    "description": "タイガーカードと Wild カードが同じ値である場合に配当されます。"
+                }
+            }
+        }
+    }
+}
