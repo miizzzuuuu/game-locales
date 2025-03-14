@@ -1,0 +1,58 @@
+{
+    "general": {
+        "title": "Umum",
+        "paragraph-1": "Untuk menyertai permainan, anda perlu mempunyai baki/dana yang mencukupi untuk menampung pertaruhan anda. Baki semasa anda boleh dilihat di bahagian kiri bawah skrin anda.",
+        "paragraph-2": "Penunjuk JUMLAH TARUHAN menunjukkan jumlah keseluruhan taruhan yang anda letakkan untuk pusingan semasa.",
+        "paragraph-3": "Menunjukkan had minimum dan maksimum taruhan yang dibenarkan di atas meja dan boleh berubah pada bila-bila masa. Selain itu, terdapat kod unik untuk sesi semasa dan nama permainan yang sedang anda mainkan.",
+        "paragraph-4": "Pemasa akan memberitahu anda masa yang tinggal untuk meletakkan taruhan. Selepas tamat, taruhan akan ditutup dan tiada lagi taruhan akan diterima. Selepas tempoh taruhan tamat, anda akan menerima pengesahan \"Taruhan Diterima\" jika taruhan anda diterima untuk menyertai pusingan permainan; jika tidak, anda akan menerima notifikasi \"Taruhan Ditolak\".",
+        "paragraph-5": "Paparan Cip membolehkan anda memilih nilai setiap cip yang ingin dipertaruhkan. Anda boleh memilih nilai cip untuk taruhan dengan mengklik cip di bahagian bawah skrin atau di bahagian kanan skrin, yang terletak berhampiran dengan butang Batal, Gandakan, dan Pasang Semula (Rebet), untuk melihat semua nilai cip yang tersedia."
+    },
+    "menu": {
+        "title": "Menu",
+        "description": "Butang tambahan untuk memudahkan pemain dalam permainan.",
+        "paragraph-1": "Butang Batal akan membatalkan satu cip yang telah anda letakkan sebelumnya di atas meja.",
+        "paragraph-2": "Menggandakan jumlah cip yang telah anda pasang. Pastikan baki akaun anda mencukupi untuk menggandakan semua taruhan yang dipasang.",
+        "paragraph-3": "Membolehkan anda mengulangi taruhan yang sama seperti yang anda pasang pada pusingan sebelumnya di atas meja.",
+        "paragraph-4": "Menu Burger menyediakan menu-menu penting dalam permainan untuk digunakan.",
+        "paragraph-5": "Menyembunyikan paparan cip yang telah anda pasang di atas meja.",
+        "paragraph-6": "Untuk memaparkan Statistik permainan yang sedang berlangsung.",
+        "paragraph-7": "Untuk menyimpan dan menggunakan taruhan kegemaran setiap pemain.",
+        "paragraph-8": "Menunjukkan atau menyembunyikan Roadmap / Statistik permainan."
+    },
+    "settings": {
+        "title": "Tetapan",
+        "description": "Pilihan tambahan untuk menyesuaikan ciri-ciri dengan keperluan dan keutamaan pengguna.",
+        "video": {
+            "title": "Video",
+            "description": "Deskripsi : Tetapan untuk memaparkan strim atau tidak dan tetapan resolusi strim.",
+            "default": "Lalai : Togol Hidup, Resolusi Sederhana."
+        },
+        "live-streaming-audio": {
+            "title": "Audio Siaran Langsung",
+            "description": "Deskripsi : Tetapan audio untuk siaran langsung studio.",
+            "default": "Lalai : Togol Hidup."
+        },
+        "background-music": {
+            "title": "Muzik Latar",
+            "description": "Deskripsi : Tetapan audio untuk Muzik Latar.",
+            "default": "Lalai : Togol Hidup."
+        },
+        "game-effects": {
+            "title": "Kesan Permainan",
+            "description": "Deskripsi : Tetapan audio untuk Kesan Permainan.",
+            "default": "Lalai : Togol Hidup."
+        },
+        "auto-bet": {
+            "title": "Taruhan Automatik",
+            "description": "Deskripsi : Tetapan Hidup/Matikan untuk Taruhan Automatik berdasarkan taruhan sebelumnya.",
+            "default": "Lalai : Togol Mati."
+        },
+        "language": {
+            "title": "Bahasa",
+            "description": "Deskripsi : Tetapan untuk memilih bahasa yang akan digunakan.",
+            "default": "Lalai : Mengikut bahasa terakhir yang anda tetapkan."
+        },
+        "disclaimer": "Penafian",
+        "disclaimer-settings": "Keutamaan tetapan anda akan disimpan, kecuali tetapan taruhan automatik yang akan diset semula kepada lalai."
+    }
+}
