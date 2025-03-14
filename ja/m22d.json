@@ -1,0 +1,44 @@
+{
+    "player": "プレイヤー",
+    "banker": "バンカー",
+    "tie": "タイ",
+    "playerbonus": "プレイヤーボーナス",
+    "bankerbonus": "バンカーボーナス",
+    "playerpair": "プレイヤーペア",
+    "bankerpair": "バンカーペア",
+    "perfectpair": "パーフェクトペア",
+    "mixedpair": "ミックスペア",
+    "small": "スモール",
+    "big": "ビッグ",
+
+    "player bonus": "プレイヤーボーナス",
+    "banker bonus": "バンカーボーナス",
+
+    "natural win": "ナチュラルウィン",
+    "natural tie": "ナチュラルタイ",
+    "win by 9 points": "9ポイントで勝利",
+    "win by 8 points": "8ポイントで勝利",
+    "win by 7 points": "7ポイントで勝利",
+    "win by 6 points": "6ポイントで勝利",
+    "win by 5 points": "5ポイントで勝利",
+    "win by 4 points": "4ポイントで勝利",
+
+    "player pair": "プレイヤーペア",
+    "banker pair": "バンカーペア",
+    "perfect pair": "パーフェクトペア",
+    "mixed pair": "ミックスペア",
+
+    "side bet": "サイドベット",
+
+    "tie on": "タイ",
+    "0": "0",
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "9": "9"
+}
