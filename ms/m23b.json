@@ -60,7 +60,7 @@
             "steps": [
                 "Permainan ini dikendalikan oleh seorang dealer.",
                 "Permainan ini menggunakan 8 dek kad dalam satu shoe.",
-                "Pada permulaan setiap shoe baru, dealer akan mendedahkan satu kad untuk menentukan berapa banyak kad yang akan dibakar atau dibuang. Maksimum 10 kad boleh dibakar.",
+                "Pada permulaan setiap shoe baru, dealer akan mendedahkan satu kad untuk menentukan berapa banyak kad yang akan dibakar atau dibuang. Maksimum 11 kad boleh dibakar.",
                 "Selepas masa pertaruhan tamat, dealer akan mengeluarkan satu kad sebagai kad Wild, kemudian mengagihkan satu kad kepada Naga dan satu kad kepada Harimau.",
                 "Pihak yang mempunyai nilai kad tertinggi akan menang. Nilai tertinggi ialah K, yang bersamaan dengan 13.",
                 "Jika keputusan seri, pertaruhan Naga dan Harimau akan dikembalikan separuh. Pertaruhan Seri hanya menang jika Naga dan Harimau mempunyai nilai yang sama.",

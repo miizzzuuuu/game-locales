@@ -60,7 +60,7 @@
             "steps": [
                 "Oyun bir krupiye tarafından yönetilir.",
                 "Oyun, bir destede 8 deste kart kullanır.",
-                "Her yeni destede, krupiye kaç kartın yakılacağını belirlemek için bir kart açar. En fazla 10 kart yakılabilir.",
+                "Her yeni destede, krupiye kaç kartın yakılacağını belirlemek için bir kart açar. En fazla 11 kart yakılabilir.",
                 "Bahis süresi bittikten sonra, krupiye bir Wild kart çeker ve ardından Ejderha ve Kaplan'a birer kart dağıtır.",
                 "En yüksek kart değerine sahip olan taraf kazanır. En yüksek değer K'dir ve 13'e eşittir.",
                 "Sonuç berabere çıkarsa, Ejderha ve Kaplan bahisleri yarı yarıya iade edilir. Beraberlik bahsi yalnızca Ejderha ve Kaplan aynı değere sahipse kazanır.",

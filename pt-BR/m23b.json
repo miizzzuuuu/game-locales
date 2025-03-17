@@ -60,7 +60,7 @@
             "steps": [
                 "O jogo é conduzido por um dealer.",
                 "O jogo usa 8 baralhos de cartas em um sapato.",
-                "No início de cada novo sapato, o dealer revelará uma carta para determinar quantas cartas serão queimadas ou descartadas. Um máximo de 10 cartas pode ser queimado.",
+                "No início de cada novo sapato, o dealer revelará uma carta para determinar quantas cartas serão queimadas ou descartadas. Um máximo de 11 cartas pode ser queimado.",
                 "Após o término do tempo de apostas, o dealer sorteia uma carta como a carta Wild, depois distribui uma carta para Dragão e uma para Tigre.",
                 "O lado com o maior valor de carta vence. O maior valor é K, que equivale a 13.",
                 "Se o resultado for empate, as apostas em Dragão e Tigre são reembolsadas pela metade. A aposta em Empate vence apenas se Dragão e Tigre tiverem o mesmo valor.",

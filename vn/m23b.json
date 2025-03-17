@@ -60,7 +60,7 @@
             "steps": [
                 "Trò chơi được điều hành bởi một nhà cái.",
                 "Trò chơi sử dụng 8 bộ bài trong một ván.",
-                "Khi bắt đầu mỗi ván mới, nhà cái sẽ lật một lá bài để xác định số lá bài sẽ bị loại bỏ. Tối đa 10 lá bài có thể bị loại.",
+                "Khi bắt đầu mỗi ván mới, nhà cái sẽ lật một lá bài để xác định số lá bài sẽ bị loại bỏ. Tối đa 11 lá bài có thể bị loại.",
                 "Sau khi thời gian đặt cược kết thúc, nhà cái rút một lá bài làm lá bài Wild, sau đó chia một lá bài cho Rồng và một lá bài cho Hổ.",
                 "Bên có lá bài cao hơn sẽ thắng. Giá trị cao nhất là K, tương đương 13.",
                 "Nếu kết quả hòa, cược Rồng và Hổ sẽ được hoàn trả một nửa. Cược Hòa chỉ thắng nếu Rồng và Hổ có cùng giá trị.",

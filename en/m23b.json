@@ -60,7 +60,7 @@
             "steps": [
                 "The game is conducted by a dealer.",
                 "The game uses 8 decks of cards in one shoe.",
-                "At the start of each new shoe, the dealer will reveal one card to determine how many cards will be burned or discarded. A maximum of 10 cards may be burned.",
+                "At the start of each new shoe, the dealer will reveal one card to determine how many cards will be burned or discarded. A maximum of 11 cards may be burned.",
                 "After the betting time ends, the dealer draws one card as the Wild Card, then deals one card each to Dragon and Tiger.",
                 "The side with the highest card value wins. The highest value is K, which equals 13.",
                 "If the result is a tie, Dragon and Tiger bets are refunded by half. The Tie bet wins only if Dragon and Tiger have the same value.",
