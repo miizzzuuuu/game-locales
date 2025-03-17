@@ -64,5 +64,15 @@
                 "Pemenangnya adalah <b>tangan yang total poinnya mendekati 9</b>. Jika total poin sama antara Pemain dan Bankir, hasilnya adalah seri."
             ]
         }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Pengenalan",
+            "paragraph-1": "Baccarat yang dikenal sebagai Punto Banco, adalah salah satu permainan kartu tertua dan terpopuler di kasino di seluruh dunia, terutama di kalangan penjudi ulung dan di Asia. Baccarat sangat dominan di Macau.",
+            "paragraph-2": "Meski tampak serius dan elegan, permainan ini sebenarnya sederhana. Anda hanya perlu bertaruh pada pihak yang akan menang atau seri.",
+            "game-objective": "Tujuan Permainan",
+            "paragraph-3": "Tujuan permainan Baccarat adalah menebak pihak dengan nilai kartu tertinggi atau paling mendekati angka 9 (Pemain, Bankir atau Seri)."
+        }
     }
 }
