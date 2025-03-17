@@ -63,5 +63,7 @@
     "complete-how-to-play": "완전한 게임 방법",
     "dont-show-again": "다시 표시하지 않음",
     "streaming-error": "스트리밍 오류: 잘못된 스트리밍 URL",
-    "no-promotion": "현재 이벤트 없음"
+    "no-promotion": "현재 이벤트 없음",
+    "more-bet": "베팅 확장",
+    "less-bet": "베팅 축소"
 }

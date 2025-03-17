@@ -63,5 +63,7 @@
     "complete-how-to-play": "como jogar completo",
     "dont-show-again": "não mostrar novamente",
     "streaming-error": "erro de streaming: URL de streaming inválida",
-    "no-promotion": "nenhum evento no momento"
+    "no-promotion": "nenhum evento no momento",
+    "more-bet": "Expandir Apostas",
+    "less-bet": "Recolher Apostas"
 }

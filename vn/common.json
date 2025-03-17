@@ -63,5 +63,7 @@
     "complete-how-to-play": "Hướng dẫn chơi đầy đủ",
     "dont-show-again": "Không hiển thị lại",
     "streaming-error": "lỗi phát trực tuyến: url phát không hợp lệ",
-    "no-promotion": "không có sự kiện lúc này"
+    "no-promotion": "không có sự kiện lúc này",
+    "more-bet": "Mở rộng cược",
+    "less-bet": "Thu gọn cược"
 }

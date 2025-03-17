@@ -63,5 +63,7 @@
     "complete-how-to-play": "完整玩法",
     "dont-show-again": "不再显示",
     "streaming-error": "直播错误：无效的直播URL",
-    "no-promotion": "目前没有活动"
+    "no-promotion": "目前没有活动",
+    "more-bet": "展开投注",
+    "less-bet": "折叠投注"
 }

@@ -63,5 +63,7 @@
     "complete-how-to-play": "遊び方の説明完了",
     "dont-show-again": "再表示しない",
     "streaming-error": "ストリーミングエラー：無効なストリーミングURL",
-    "no-promotion": "現在、イベントはありません"
+    "no-promotion": "現在、イベントはありません",
+    "more-bet": "ベットを展開",
+    "less-bet": "ベットを折りたたむ"
 }

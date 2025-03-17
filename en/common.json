@@ -63,5 +63,7 @@
     "complete-how-to-play": "Complete how to play",
     "dont-show-again": "Don't show again",
     "streaming-error": "streaming error: invalid streaming url",
-    "no-promotion": "no events at this time"
+    "no-promotion": "no events at this time",
+    "more-bet": "more bet",
+    "less-bet": "less bet"
 }
