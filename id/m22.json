@@ -1,18 +1,18 @@
 {
-    "player": "Player",
-    "banker": "Banker",
+    "player": "Pemain",
+    "banker": "Bankir",
     "tie": "Seri",
-    "playerbonus": "Bonus Player",
-    "bankerbonus": "Bonus Banker",
-    "playerpair": "Pair Player",
-    "bankerpair": "Pair Banker",
+    "playerbonus": "Bonus Pemain",
+    "bankerbonus": "Bonus Bankir",
+    "playerpair": "Pair Pemain",
+    "bankerpair": "Pair Bankir",
     "perfectpair": "Pair Sempurna",
     "mixedpair": "Pair Campuran",
     "small": "Kecil",
     "big": "Besar",
 
-    "player bonus": "Bonus Player",
-    "banker bonus": "Bonus Banker",
+    "player bonus": "Bonus Pemain",
+    "banker bonus": "Bonus Bankir",
 
     "natural win": "Kemenangan Alami",
     "natural tie": "Seri Alami",
@@ -23,8 +23,8 @@
     "win by 5 points": "Menang dengan 5 poin",
     "win by 4 points": "Menang dengan 4 poin",
 
-    "player pair": "Pair Player",
-    "banker pair": "Pair Banker",
+    "player pair": "Pair Pemain",
+    "banker pair": "Pair Bankir",
     "perfect pair": "Pair Sempurna",
     "mixed pair": "Pair Campuran",
 
@@ -47,7 +47,7 @@
             "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
             "title": "Cara Bermain",
             "content": [
-                "Baccarat adalah permainan di mana Anda menebak hasil dari tangan yang akan menang: Player, Banker, atau Seri(Tie) yang akan memiliki nilai total <b>lebih dekat ke angka 9</b>."
+                "Baccarat adalah permainan di mana Anda menebak hasil dari tangan yang akan menang: Pemain, Bankir, atau Seri(Tie) yang akan memiliki nilai total <b>lebih dekat ke angka 9</b>."
             ]
         },
         "slide-2": {
@@ -61,7 +61,7 @@
             "animation": "https://cdn.lottielab.com/l/9BwkB8jSAJsmDW.json",
             "title": "Perhitungan",
             "content": [
-                "Pemenangnya adalah <b>tangan yang total poinnya mendekati 9</b>. Jika total poin sama antara Player dan Banker, hasilnya adalah seri."
+                "Pemenangnya adalah <b>tangan yang total poinnya mendekati 9</b>. Jika total poin sama antara Pemain dan Bankir, hasilnya adalah seri."
             ]
         }
     }
