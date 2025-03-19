@@ -87,6 +87,43 @@
                 "Jika hasilnya <b>seri natural</b>, yaitu seri dengan <b>empat kartu</b> dibagikan, maka taruhan Player Bonus dan Banker Bonus akan dikembalikan.",
                 "Dalam <b>Taruhan 50-50</b> seperti <b>Pemain/Bankir</b> atau <b>Besar/Kecil</b>, Anda hanya dapat memilih satu sisi per ronde. Sebagai contoh jika sudah bertaruh pada <b>Pemain</b>, Anda tidak bisa bertaruh pada <b>Bankir</b> di ronde yang sama."
             ]
+        },
+        "baccarat-cards": {
+            "title": "Kartu Baccarat",
+            "card": "Kartu",
+            "value": "Nilai",
+
+            "paragraph-1": "Baccarat menggunakan satu set kartu standar yang terdiri dari 52 kartu, tanpa joker. Berikut nilai kartu yang digunakan dalam permainan:",
+
+            "header-1": "Perhitungan Poin",
+            "paragraph-2": "Semua kartu di Baccarat hanya dilihat dari angka terakhirnya. Nilai tertinggi adalah 9. Jika hasil penjumlahan nilai dari 2 kartu adalah 2 digit angka, maka yang menjadi hasil total nilai adalah angka pada digit kedua.",
+
+            "header-2": "Kartu Natural dan Non-Natural",
+            "subheader-1": "Kartu Natural",
+            "paragraph-3": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai 8 atau 9, maka dianggap sebagai Kartu Natural dan tidak ada penambahan kartu lagi untuk kedua belah pihak.",
+
+            "subheader-2": "Kartu Non-Natural",
+            "paragraph-4": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai 0-7, maka dianggap sebagai Kartu Non-Natural dan kartu tambahan akan diberikan.",
+            "paragraph-5": "Aturan kartu ketiga akan dijelaskan lebih lanjut di bagian berikutnya.",
+
+            "header-3": "Peraturan Kartu Ketiga",
+            "paragraph-6": "Aturan Kartu Ketiga untuk Pemain tergantung pada nilai dua kartu pemain.",
+            "paragraph-7": "Aturan kartu ketiga untuk Bankir tergantung pada nilai dua kartu bankir dan nilai kartu ketiga pemain.",
+
+            "player-table": {
+                "player-two-card-value": "Nilai Dua Kartu Pemain",
+                "action": "aksi",
+                "player-draws-third-card": "Pemain Menerima Kartu Ketiga",
+                "player-stands": "Pemain Bertahan (Tidak Ada Penambahan Kartu",
+                "no-additional-card": "Tidak Ada Penambahan Kartu"
+            },
+
+            "banker-table": {
+                "banker-two-card-value": "Dua Kartu Bankir",
+                "player-third-card-value": "Kartu Ketiga Pemain",
+                "draw": "D(Draw) = Bankir Menerima Kartu Ketiga",
+                "stand": "S(Stand) = Bankir Bertahan dengan Dua Kartu"
+            }
         }
     }
 }
