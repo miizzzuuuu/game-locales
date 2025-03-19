@@ -124,6 +124,33 @@
                 "draw": "D(Draw) = Bankir Menerima Kartu Ketiga",
                 "stand": "S(Stand) = Bankir Bertahan dengan Dua Kartu"
             }
+        },
+        "dragon-bonus": {
+            "title": "Bonus Dragon",
+            "paragraph-1": "Dragon Bonus hadir sebagai taruhan tambahan dalam Baccarat untuk menambah sensasi permainan dengan hadiah yang lebih besar dari taruhan biasa. Berikut aturan sederhananya:",
+            "how-to-bet": {
+                "heading": "Taruhan dan Cara Bertaruh",
+                "list": [
+                    "Dragon Bonus terbagi menjadi Pemain Bonus dan Bankir Bonus",
+                    "Sebagai syarat utama, anda harus memasang taruhan utama (Pemain, Bankir, atau Seri)",
+                    "Setelah itu barulah anda dapat memasang taruhan pada Pemain Bonus atau Bankir Bonus"
+                ]
+            },
+            "winning-rules": {
+                "heading": "Penentuan Kemenangan",
+                "list": [
+                    "Sama dengan aturan taruhan utama, untuk menang, maka nilai taruhan bonus harus lebih besar dari lawan.",
+                    "Dragon Bonus memiliki sistem pembayaran yang unik. Besarnya selisih kemenangan menentukan jumlah bayaran.",
+                    "Semakin besar selisih kemenangan, semakin besar pembayaran kemenangan."
+                ]
+            },
+            "additional-rules": {
+                "heading": "Aturan Tambahan",
+                "list": [
+                    "Hasil permainan adalah Menang dengan Natural dan Seri memiliki aturan khusus yang mempengaruhi pembayaran.",
+                    "Info aturan khusus akan dijelaskan pada bagian berikutnya."
+                ]
+            }
         }
     }
 }
