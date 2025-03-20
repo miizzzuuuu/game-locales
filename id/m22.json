@@ -151,6 +151,70 @@
                     "Info aturan khusus akan dijelaskan pada bagian berikutnya."
                 ]
             }
+        },
+        "bet-description": {
+            "title": "Deskripsi Taruhan",
+            "bet": "taruhan",
+            "description": "deskripsi",
+            "result": "hasil",
+            "any": "apapun",
+            "main-bet": {
+                "title": "Taruhan Utama",
+                "player": {
+                    "title": "Pemain",
+                    "description": "Dibayar jika nilai Pemain lebih besar dari nilai Bankir"
+                },
+                "banker": {
+                    "title": "Bankir",
+                    "description": "Dibayar jika nilai Bankir lebih besar dari nilai Pemain"
+                },
+                "tie": {
+                    "title": "Seri",
+                    "description": "Dibayar jika kartu Pemain dan Bankir punya nilai yang sama"
+                }
+            },
+            "side-bet": {
+                "title": "Taruhan Sampingan",
+                "playerpair": {
+                    "title": "Pair Pemain",
+                    "description": "Dibayar jika dua kartu pertama Pemain adalah pasangan"
+                },
+                "bankerpair": {
+                    "title": "Pair Bankir",
+                    "description": "Dibayar jika dua kartu pertama Bankir adalah pasangan"
+                },
+                "perfectpair": {
+                    "title": "Pair Sempurna",
+                    "description": [
+                        "Dibayar jika hanya salah satu dari pihak Pemain dan Bankir mendapatkan kartu identik",
+                        "Dibayar jika kedua pihak Pemain dan Bankir mendapatkan kartu identik"
+                    ]
+                },
+                "mixedpair": {
+                    "title": "Pair Campuran",
+                    "description": "Dibayar jika dua kartu pertama dari salah satu pihak Pemain atau Bankir adalah pasangan"
+                },
+                "playerbonus": {
+                    "title": "Bonus Pemain",
+                    "description": "Dibayar jika pihak Pemain menang dengan Natural 8 atau 9, atau setidaknya menang dengan selisih 4 nilai"
+                },
+                "bankerbonus": {
+                    "title": "Bonus Bankir",
+                    "description": "Dibayar jika pihak Bankir menang dengan Natural 8 atau 9, atau setidaknya menang dengan selisih 4 nilai"
+                },
+                "tieon": {
+                    "title": "Seri pada (0-9)",
+                    "description": "Dibayar jika hasil permainan adalah Seri dengan nilai 0-9"
+                },
+                "small": {
+                    "title": "Kecil",
+                    "description": "Dibayar jika dalam satu putaran permainan dealer hanya mengeluarkan 4 buah kartu saja"
+                },
+                "big": {
+                    "title": "Besar",
+                    "description": "Dibayar jika dalam satu putaran permainan dealer  mengeluarkan lebih dari 4 buah kartu"
+                }
+            }
         }
     }
 }
