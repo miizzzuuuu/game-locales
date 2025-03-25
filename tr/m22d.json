@@ -40,5 +40,181 @@
     "6": "6",
     "7": "7",
     "8": "8",
-    "9": "9"
+    "9": "9",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "title": "Nasıl Oynanır",
+            "content": [
+                "Baccarat, kazanan eli tahmin ettiğiniz bir oyundur: Oyuncu, Banker veya Berabere, hangi tarafın toplam değeri <b>9'a en yakın</b> olacak."
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "title": "Nasıl Oynanır",
+            "content": [
+                "Kartların değerleri numaralarına göre belirlenir, <b>yüz kartları (J, Q, K) 0</b> değerindedir ve <b>As 1</b> değerindedir. Kartların toplam değeri 9'u aşarsa, sadece son rakam dikkate alınır (örneğin, 15, 5 olur)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/9BwkB8jSAJsmDW.json",
+            "title": "Hesaplama",
+            "content": [
+                "Kazanan, <b>9'a en yakın toplam puana sahip</b> olan eldir. Eğer Oyuncu ve Banker'in toplam puanları aynı ise, sonuç berabere olur."
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Giriş",
+            "paragraph-1": "Baccarat, Punto Banco olarak da bilinir, dünya çapındaki casinolarda en eski ve en popüler kart oyunlarından biridir, özellikle yüksek bahisçiler ve Asya'da. Baccarat, Makao'da özellikle baskındır.",
+            "paragraph-2": "Ciddi ve şık görünse de, aslında oldukça basit bir oyundur. Sadece kazanan tarafı veya beraberliği tahmin etmeniz gerekiyor.",
+            "game-objective": "Oyunun Amacı",
+            "paragraph-3": "Baccarat'ın amacı, en yüksek kart değerine sahip olan veya 9'a en yakın değere sahip olan tarafı tahmin etmektir (Oyuncu, Banker veya Berabere)."
+        },
+        "general-rules": {
+            "title": "Genel Kurallar",
+            "steps": [
+                "Oyun, krupiye tarafından yönetilir.",
+                "Oyun, bir destede 8 deste kart kullanır.",
+                "Her yeni deste başladığında, krupiye kaç kartın yakılacağını veya atılacağını belirlemek için bir kart çeker. En fazla 11 kart atılabilir.",
+                "Bahis süresi bittikten sonra, krupiye Oyuncu ve Banker'e ikişer kart dağıtır.",
+                "En yüksek kart değerine sahip el kazanır.",
+                "Eğer sonuç <b>berabere</b> ise, Oyuncu ve Banker'e yapılan bahisler iade edilir. Berabere bahisleri sadece Oyuncu ve Banker'in değerleri aynı olduğunda kazanır.",
+                "Eğer sonuç <b>doğal olmayan berabere</b> ise, yani <b>dörtten fazla kart</b> dağıtıldığında, Oyuncu Bonusu ve Banker Bonusu bahisleri kaybedilir.",
+                "Eğer sonuç <b>doğal berabere</b> ise, yani <b>dört kart</b> dağıtıldığında, Oyuncu Bonusu ve Banker Bonusu bahisleri iade edilir.",
+                "<b>50-50 bahislerinde</b> (örneğin, <b>Oyuncu/Banker</b> veya <b>Büyük/Küçük</b>), her turda sadece bir taraf seçebilirsiniz. Örneğin, <b>Oyuncu</b>'ya bahis yaptıysanız, aynı turda <b>Banker</b>'e bahis yapamazsınız."
+            ]
+        },
+        "baccarat-cards": {
+            "title": "Baccarat Kartları",
+            "card": "Kart",
+            "value": "Değer",
+
+            "paragraph-1": "Baccarat, joker olmadan 52 kartlık standart bir desteyi kullanır. Oyunda kullanılan kart değerleri şu şekildedir:",
+
+            "header-1": "Puan Hesaplama",
+            "paragraph-2": "Baccarat'taki tüm kartlar sadece son rakamlarına göre değerlendirilir. En yüksek değer 9'dur. Eğer iki kartın toplamı iki haneli bir sayı ise, toplam değer ikinci hanedir (örneğin, 15, 5 olur).",
+
+            "header-2": "Doğal ve Doğal Olmayan Kartlar",
+            "subheader-1": "Doğal Kartlar",
+            "paragraph-3": "Eğer Oyuncu veya Banker'in ilk iki kartının toplam değeri <b>8</b> veya <b>9</b> ise, <b>Doğal Kart</b> olarak kabul edilir ve her iki taraf için de başka kart çekilmez.",
+
+            "subheader-2": "Doğal Olmayan Kartlar",
+            "paragraph-4": "Eğer Oyuncu veya Banker'in ilk iki kartının toplam değeri <b>0-7</b> ise, <b>Doğal Olmayan Kart</b> olarak kabul edilir ve üçüncü bir kart çekilir.",
+            "paragraph-5": "Üçüncü kart kuralları bir sonraki bölümde açıklanacaktır.",
+
+            "header-3": "Üçüncü Kart Kuralları",
+            "paragraph-6": "Oyuncu için üçüncü kart kuralları, <b>Oyuncu'nun iki kartının değerine</b> bağlıdır.",
+            "paragraph-7": "Banker için üçüncü kart kuralları, <b>Banker'in iki kartının değerine</b> ve <b>Oyuncu'nun üçüncü kartının değerine</b> bağlıdır.",
+
+            "player-table": {
+                "player-two-card-value": "<b>Oyuncu'nun İki Kartının Değeri</b>",
+                "action": "<b>Eylem</b>",
+                "player-draws-third-card": "Oyuncu Üçüncü Kartı Çeker",
+                "player-stands": "Oyuncu Kart Çekmez",
+                "no-additional-card": "Ek Kart Yok"
+            },
+
+            "banker-table": {
+                "banker-two-card-value": "<b>Banker'in İki Kartının Değeri</b>",
+                "player-third-card-value": "<b>Oyuncu'nun Üçüncü Kartının Değeri</b>",
+                "draw": "<b>D(Draw) = Banker Üçüncü Kartı Çeker</b>",
+                "stand": "<b>S(Stand) = Banker İki Kartla Kalır</b>"
+            }
+        },
+        "dragon-bonus": {
+            "title": "Ejderha Bonusu",
+            "paragraph-1": "Ejderha Bonusu, Baccarat'ta normal bahislerden daha büyük ödüller sunarak oyuna heyecan katan ek bir bahistir. İşte basit kurallar:",
+            "how-to-bet": {
+                "heading": "Bahis ve Bahis Yapma",
+                "list": [
+                    "Ejderha Bonusu, <b>Oyuncu Bonusu</b> ve <b>Banker Bonusu</b> olarak ikiye ayrılır.",
+                    "Ana şart olarak, önce ana bahsi yapmanız gerekiyor (<b>Oyuncu, Banker,</b> veya <b>Berabere</b>).",
+                    "Daha sonra <b>Oyuncu Bonusu</b> veya <b>Banker Bonusu</b>'na bahis yapabilirsiniz."
+                ]
+            },
+            "winning-rules": {
+                "heading": "Kazanma Kuralları",
+                "list": [
+                    "Ana bahis kurallarına benzer şekilde, kazanmak için bonus bahsin değeri rakibinkinden yüksek olmalıdır.",
+                    "Ejderha Bonusu'nun benzersiz bir ödeme sistemi vardır. Kazanma farkı, ödeme miktarını belirler.",
+                    "Kazanma farkı ne kadar büyükse, ödeme o kadar yüksek olur."
+                ]
+            },
+            "additional-rules": {
+                "heading": "Ek Kurallar",
+                "list": [
+                    "Oyun sonucu <b>Doğal Kazanma</b> ve <b>Berabere</b> olduğunda, ödemeyi etkileyen özel kurallar vardır.",
+                    "Özel kurallar hakkında bilgi bir sonraki bölümde açıklanacaktır."
+                ]
+            }
+        },
+        "bet-description": {
+            "title": "Bahis Açıklaması",
+            "bet": "Bahis",
+            "description": "Açıklama",
+            "result": "Sonuç",
+            "any": "herhangi",
+            "main-bet": {
+                "title": "Ana Bahis",
+                "player": {
+                    "title": "Oyuncu",
+                    "description": "Eğer Oyuncu'nun değeri <b>Banker'den yüksek</b> ise ödenir"
+                },
+                "banker": {
+                    "title": "Banker",
+                    "description": "Eğer Banker'in değeri <b>Oyuncu'dan yüksek</b> ise ödenir"
+                },
+                "tie": {
+                    "title": "Berabere",
+                    "description": "Eğer Oyuncu ve Banker'in değerleri <b>aynı</b> ise ödenir"
+                }
+            },
+            "side-bet": {
+                "title": "Yan Bahis",
+                "playerpair": {
+                    "title": "Oyuncu Çifti",
+                    "description": "Eğer Oyuncu'nun ilk iki kartı <b>çift</b> ise ödenir"
+                },
+                "bankerpair": {
+                    "title": "Banker Çifti",
+                    "description": "Eğer Banker'in ilk iki kartı <b>çift</b> ise ödenir"
+                },
+                "perfectpair": {
+                    "title": "Mükemmel Çift",
+                    "description": [
+                        "Eğer Oyuncu veya Banker'den sadece biri <b>aynı kartları</b> alırsa ödenir",
+                        "Eğer hem Oyuncu hem de Banker <b>aynı kartları</b> alırsa ödenir"
+                    ]
+                },
+                "mixedpair": {
+                    "title": "Karışık Çift",
+                    "description": "Eğer Oyuncu veya Banker'den birinin ilk iki kartı <b>çift</b> ise ödenir"
+                },
+                "playerbonus": {
+                    "title": "Oyuncu Bonusu",
+                    "description": "Eğer Oyuncu <b>Doğal 8 veya 9</b> ile kazanırsa veya en az <b>4 puan farkla</b> kazanırsa ödenir"
+                },
+                "bankerbonus": {
+                    "title": "Banker Bonusu",
+                    "description": "Eğer Banker <b>Doğal 8 veya 9</b> ile kazanırsa veya en az <b>4 puan farkla</b> kazanırsa ödenir"
+                },
+                "tieon": {
+                    "title": "Berabere (0-9)",
+                    "description": "Eğer oyun sonucu <b>Berabere</b> ve değer <b>0-9</b> ise ödenir"
+                },
+                "small": {
+                    "title": "Küçük",
+                    "description": "Eğer krupiye bir turda sadece <b>4 kart</b> dağıtırsa ödenir"
+                },
+                "big": {
+                    "title": "Büyük",
+                    "description": "Eğer krupiye bir turda <b>4'ten fazla kart</b> dağıtırsa ödenir"
+                }
+            }
+        }
+    }
 }

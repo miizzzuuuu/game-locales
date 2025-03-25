@@ -40,5 +40,181 @@
     "6": "6",
     "7": "7",
     "8": "8",
-    "9": "9"
+    "9": "9",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "title": "Como Jogar",
+            "content": [
+                "Bacará é um jogo onde você prevê o resultado da mão vencedora: Jogador, Banco ou Empate, que terá o valor total <b>mais próximo de 9</b>."
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "title": "Como Jogar",
+            "content": [
+                "As cartas têm valores com base em seus números, com <b>cartas de figura (J, Q, K) valendo 0</b> e <b>Ás valendo 1</b>. Se o valor total das cartas exceder 9, apenas o último dígito é contado (por exemplo, 15 se torna 5)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/9BwkB8jSAJsmDW.json",
+            "title": "Cálculo",
+            "content": [
+                "O vencedor é a <b>mão com o total de pontos mais próximo de 9</b>. Se o total de pontos for o mesmo entre o Jogador e o Banco, o resultado é um empate."
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Introdução",
+            "paragraph-1": "Bacará, também conhecido como Punto Banco, é um dos jogos de cartas mais antigos e populares em cassinos ao redor do mundo, especialmente entre apostadores de alto valor e na Ásia. O Bacará é particularmente dominante em Macau.",
+            "paragraph-2": "Embora pareça sério e elegante, o jogo é na verdade muito simples. Você só precisa apostar no lado que vencerá ou no empate.",
+            "game-objective": "Objetivo do Jogo",
+            "paragraph-3": "O objetivo do Bacará é prever qual lado terá o maior valor de cartas ou estará mais próximo de 9 (Jogador, Banco ou Empate)."
+        },
+        "general-rules": {
+            "title": "Regras Gerais",
+            "steps": [
+                "O jogo será conduzido pelo dealer.",
+                "O jogo usa 8 baralhos em um sapato.",
+                "No início de cada novo sapato, o dealer retira uma carta para determinar quantas cartas serão queimadas ou descartadas. Um máximo de 11 cartas pode ser descartado.",
+                "Após o término do tempo de apostas, o dealer distribui duas cartas para o Jogador e o Banco.",
+                "A mão com o maior valor de cartas vence.",
+                "Se o resultado for <b>empate</b>, as apostas no Jogador e no Banco são devolvidas. As apostas de empate só ganham se o Jogador e o Banco tiverem o mesmo valor.",
+                "Se o resultado for um <b>empate não natural</b>, ou seja, um empate com <b>mais de quatro cartas</b> distribuídas, as apostas de Bônus do Jogador e Bônus do Banco perdem.",
+                "Se o resultado for um <b>empate natural</b>, ou seja, um empate com <b>quatro cartas</b> distribuídas, as apostas de Bônus do Jogador e Bônus do Banco são devolvidas.",
+                "Em <b>apostas 50-50</b> (como <b>Jogador/Banco</b> ou <b>Grande/Pequeno</b>), você só pode escolher um lado por rodada. Por exemplo, se você apostou no <b>Jogador</b>, não pode apostar no <b>Banco</b> na mesma rodada."
+            ]
+        },
+        "baccarat-cards": {
+            "title": "Cartas do Bacará",
+            "card": "Carta",
+            "value": "Valor",
+
+            "paragraph-1": "O Bacará usa um baralho padrão de 52 cartas, sem curingas. Os valores das cartas usados no jogo são os seguintes:",
+
+            "header-1": "Cálculo de Pontos",
+            "paragraph-2": "Todas as cartas no Bacará são contadas apenas pelo último dígito. O valor mais alto é 9. Se a soma de duas cartas for um número de dois dígitos, o valor total é o segundo dígito (por exemplo, 15 se torna 5).",
+
+            "header-2": "Cartas Naturais e Não Naturais",
+            "subheader-1": "Cartas Naturais",
+            "paragraph-3": "Se a soma das duas primeiras cartas do Jogador ou do Banco for <b>8</b> ou <b>9</b>, é considerada uma <b>Carta Natural</b> e nenhuma carta adicional será distribuída para ambos os lados.",
+
+            "subheader-2": "Cartas Não Naturais",
+            "paragraph-4": "Se a soma das duas primeiras cartas do Jogador ou do Banco for <b>0-7</b>, é considerada uma <b>Carta Não Natural</b> e uma terceira carta será distribuída.",
+            "paragraph-5": "As regras da terceira carta serão explicadas em detalhes na próxima seção.",
+
+            "header-3": "Regras da Terceira Carta",
+            "paragraph-6": "As regras da terceira carta para o Jogador dependem do <b>valor das duas cartas do Jogador</b>.",
+            "paragraph-7": "As regras da terceira carta para o Banco dependem do <b>valor das duas cartas do Banco</b> e do <b>valor da terceira carta do Jogador</b>.",
+
+            "player-table": {
+                "player-two-card-value": "<b>Valor das Duas Cartas do Jogador</b>",
+                "action": "<b>Ação</b>",
+                "player-draws-third-card": "Jogador recebe a terceira carta",
+                "player-stands": "Jogador fica (sem carta adicional)",
+                "no-additional-card": "Sem carta adicional"
+            },
+
+            "banker-table": {
+                "banker-two-card-value": "<b>Valor das Duas Cartas do Banco</b>",
+                "player-third-card-value": "<b>Valor da Terceira Carta do Jogador</b>",
+                "draw": "<b>D(Draw) = Banco recebe a terceira carta</b>",
+                "stand": "<b>S(Stand) = Banco fica com duas cartas</b>"
+            }
+        },
+        "dragon-bonus": {
+            "title": "Bônus Dragão",
+            "paragraph-1": "O Bônus Dragão é uma aposta adicional no Bacará que adiciona emoção ao jogo com pagamentos maiores do que as apostas regulares. Aqui estão as regras simples:",
+            "how-to-bet": {
+                "heading": "Apostas e Como Apostar",
+                "list": [
+                    "O Bônus Dragão é dividido em <b>Bônus do Jogador</b> e <b>Bônus do Banco</b>.",
+                    "Como condição principal, você deve fazer uma aposta principal primeiro (<b>Jogador, Banco,</b> ou <b>Empate</b>).",
+                    "Depois disso, você pode apostar no <b>Bônus do Jogador</b> ou no <b>Bônus do Banco</b>."
+                ]
+            },
+            "winning-rules": {
+                "heading": "Determinação da Vitória",
+                "list": [
+                    "Semelhante às regras da aposta principal, para ganhar, o valor da aposta de bônus deve ser maior que o do oponente.",
+                    "O Bônus Dragão tem um sistema de pagamento único. A margem de vitória determina o valor do pagamento.",
+                    "Quanto maior a margem de vitória, maior o pagamento."
+                ]
+            },
+            "additional-rules": {
+                "heading": "Regras Adicionais",
+                "list": [
+                    "O resultado do jogo é <b>Vitória Natural</b> e <b>Empate</b> tem regras especiais que afetam o pagamento.",
+                    "Informações sobre regras especiais serão explicadas na próxima seção."
+                ]
+            }
+        },
+        "bet-description": {
+            "title": "Descrição da Aposta",
+            "bet": "Aposta",
+            "description": "Descrição",
+            "result": "Resultado",
+            "any": "qualquer",
+            "main-bet": {
+                "title": "Aposta Principal",
+                "player": {
+                    "title": "Jogador",
+                    "description": "Paga se o valor do Jogador for <b>maior que</b> o valor do Banco"
+                },
+                "banker": {
+                    "title": "Banco",
+                    "description": "Paga se o valor do Banco for <b>maior que</b> o valor do Jogador"
+                },
+                "tie": {
+                    "title": "Empate",
+                    "description": "Paga se o Jogador e o Banco tiverem o <b>mesmo valor</b>"
+                }
+            },
+            "side-bet": {
+                "title": "Apostas Secundárias",
+                "playerpair": {
+                    "title": "Par do Jogador",
+                    "description": "Paga se as duas primeiras cartas do Jogador forem um <b>par</b>"
+                },
+                "bankerpair": {
+                    "title": "Par do Banco",
+                    "description": "Paga se as duas primeiras cartas do Banco forem um <b>par</b>"
+                },
+                "perfectpair": {
+                    "title": "Par Perfeito",
+                    "description": [
+                        "Paga se apenas um dos lados (Jogador ou Banco) receber <b>cartas idênticas</b>",
+                        "Paga se ambos os lados (Jogador e Banco) receberem <b>cartas idênticas</b>"
+                    ]
+                },
+                "mixedpair": {
+                    "title": "Par Misto",
+                    "description": "Paga se as duas primeiras cartas de um dos lados (Jogador ou Banco) forem um <b>par</b>"
+                },
+                "playerbonus": {
+                    "title": "Bônus do Jogador",
+                    "description": "Paga se o Jogador vencer com <b>Natural 8 ou 9</b> ou vencer com uma <b>diferença de pelo menos 4 pontos</b>"
+                },
+                "bankerbonus": {
+                    "title": "Bônus do Banco",
+                    "description": "Paga se o Banco vencer com <b>Natural 8 ou 9</b> ou vencer com uma <b>diferença de pelo menos 4 pontos</b>"
+                },
+                "tieon": {
+                    "title": "Empate em (0-9)",
+                    "description": "Paga se o resultado do jogo for <b>Empate</b> com um valor de <b>0-9</b>"
+                },
+                "small": {
+                    "title": "Pequeno",
+                    "description": "Paga se o dealer distribuir apenas <b>4 cartas</b> em uma rodada"
+                },
+                "big": {
+                    "title": "Grande",
+                    "description": "Paga se o dealer distribuir <b>mais de 4 cartas</b> em uma rodada"
+                }
+            }
+        }
+    }
 }
