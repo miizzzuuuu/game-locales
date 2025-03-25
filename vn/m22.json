@@ -40,5 +40,181 @@
     "6": "6",
     "7": "7",
     "8": "8",
-    "9": "9"
+    "9": "9",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "title": "Cách Chơi",
+            "content": [
+                "Baccarat là trò chơi mà bạn dự đoán kết quả của ván bài: Người Chơi, Nhà Cái, hoặc Hòa, bên nào có tổng giá trị <b>gần nhất với 9</b>."
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "title": "Cách Chơi",
+            "content": [
+                "Các lá bài có giá trị dựa trên số của chúng, với <b>các lá bài hình (J, Q, K) có giá trị là 0</b> và <b>Át có giá trị là 1</b>. Nếu tổng giá trị của các lá bài vượt quá 9, chỉ chữ số cuối cùng được tính (ví dụ: 15 trở thành 5)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/9BwkB8jSAJsmDW.json",
+            "title": "Tính Toán",
+            "content": [
+                "Người chiến thắng là <b>bên có tổng điểm gần nhất với 9</b>. Nếu tổng điểm của Người Chơi và Nhà Cái bằng nhau, kết quả là hòa."
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Giới Thiệu",
+            "paragraph-1": "Baccarat, còn được gọi là Punto Banco, là một trong những trò chơi bài lâu đời và phổ biến nhất tại các sòng bạc trên toàn thế giới, đặc biệt là trong giới cao thủ và tại châu Á. Baccarat đặc biệt thống trị tại Macau.",
+            "paragraph-2": "Mặc dù trông có vẻ nghiêm túc và sang trọng, trò chơi này thực sự rất đơn giản. Bạn chỉ cần đặt cược vào bên sẽ thắng hoặc hòa.",
+            "game-objective": "Mục Tiêu Trò Chơi",
+            "paragraph-3": "Mục tiêu của Baccarat là dự đoán bên nào có giá trị bài cao nhất hoặc gần nhất với 9 (Người Chơi, Nhà Cái hoặc Hòa)."
+        },
+        "general-rules": {
+            "title": "Quy Tắc Chung",
+            "steps": [
+                "Trò chơi sẽ được hướng dẫn bởi Dealer.",
+                "Trò chơi sử dụng 8 bộ bài trong một shoe.",
+                "Khi bắt đầu mỗi shoe mới, Dealer sẽ rút một lá bài để xác định số lá bài sẽ bị burn hoặc bỏ đi. Tối đa 11 lá bài có thể bị bỏ đi.",
+                "Sau khi thời gian đặt cược kết thúc, Dealer sẽ chia hai lá bài cho Người Chơi và Nhà Cái.",
+                "Bên có giá trị bài cao nhất sẽ thắng.",
+                "Nếu kết quả là <b>hòa</b>, các cược đặt vào Người Chơi và Nhà Cái sẽ được hoàn lại. Cược hòa chỉ thắng nếu Người Chơi và Nhà Cái có cùng giá trị.",
+                "Nếu kết quả là <b>hòa không tự nhiên</b>, tức là hòa với <b>hơn bốn lá bài</b> được chia, thì cược Người Chơi Bonus và Nhà Cái Bonus sẽ thua.",
+                "Nếu kết quả là <b>hòa tự nhiên</b>, tức là hòa với <b>bốn lá bài</b> được chia, thì cược Người Chơi Bonus và Nhà Cái Bonus sẽ được hoàn lại.",
+                "Trong các <b>cược 50-50</b> như <b>Người Chơi/Nhà Cái</b> hoặc <b>Lớn/Nhỏ</b>, bạn chỉ có thể chọn một bên mỗi vòng. Ví dụ, nếu bạn đã đặt cược vào <b>Người Chơi</b>, bạn không thể đặt cược vào <b>Nhà Cái</b> trong cùng một vòng."
+            ]
+        },
+        "baccarat-cards": {
+            "title": "Bài Baccarat",
+            "card": "Lá Bài",
+            "value": "Giá Trị",
+
+            "paragraph-1": "Baccarat sử dụng bộ bài tiêu chuẩn gồm 52 lá, không có joker. Giá trị của các lá bài được sử dụng trong trò chơi như sau:",
+
+            "header-1": "Tính Điểm",
+            "paragraph-2": "Tất cả các lá bài trong Baccarat chỉ được tính theo chữ số cuối cùng. Giá trị cao nhất là 9. Nếu tổng giá trị của 2 lá bài là một số có hai chữ số, thì tổng giá trị là chữ số thứ hai.",
+
+            "header-2": "Bài Tự Nhiên và Không Tự Nhiên",
+            "subheader-1": "Bài Tự Nhiên",
+            "paragraph-3": "Nếu tổng giá trị của 2 lá bài đầu tiên của Người Chơi hoặc Nhà Cái là <b>8</b> hoặc <b>9</b>, thì được coi là <b>Bài Tự Nhiên</b> và không có lá bài nào được rút thêm cho cả hai bên.",
+
+            "subheader-2": "Bài Không Tự Nhiên",
+            "paragraph-4": "Nếu tổng giá trị của 2 lá bài đầu tiên của Người Chơi hoặc Nhà Cái là <b>0-7</b>, thì được coi là <b>Bài Không Tự Nhiên</b> và một lá bài thứ ba sẽ được rút.",
+            "paragraph-5": "Quy tắc rút lá bài thứ ba sẽ được giải thích chi tiết hơn trong phần tiếp theo.",
+
+            "header-3": "Quy Tắc Rút Lá Bài Thứ Ba",
+            "paragraph-6": "Quy tắc rút lá bài thứ ba cho Người Chơi phụ thuộc vào <b>giá trị của hai lá bài của Người Chơi</b>.",
+            "paragraph-7": "Quy tắc rút lá bài thứ ba cho Nhà Cái phụ thuộc vào <b>giá trị của hai lá bài của Nhà Cái</b> và <b>giá trị của lá bài thứ ba của Người Chơi</b>.",
+
+            "player-table": {
+                "player-two-card-value": "<b>Giá Trị Hai Lá Bài của Người Chơi</b>",
+                "action": "<b>Hành Động</b>",
+                "player-draws-third-card": "Người Chơi Rút Lá Bài Thứ Ba",
+                "player-stands": "Người Chơi Giữ Bài (Không Rút Thêm)",
+                "no-additional-card": "Không Rút Thêm Lá Bài"
+            },
+
+            "banker-table": {
+                "banker-two-card-value": "<b>Giá Trị Hai Lá Bài của Nhà Cái</b>",
+                "player-third-card-value": "<b>Giá Trị Lá Bài Thứ Ba của Người Chơi</b>",
+                "draw": "<b>D(Draw) = Nhà Cái Rút Lá Bài Thứ Ba</b>",
+                "stand": "<b>S(Stand) = Nhà Cái Giữ Bài với Hai Lá Bài</b>"
+            }
+        },
+        "dragon-bonus": {
+            "title": "Thưởng Rồng",
+            "paragraph-1": "Thưởng Rồng là một loại cược phụ trong Baccarat nhằm tăng thêm sự hấp dẫn cho trò chơi với phần thưởng lớn hơn so với cược thông thường. Dưới đây là các quy tắc đơn giản:",
+            "how-to-bet": {
+                "heading": "Cược và Cách Đặt Cược",
+                "list": [
+                    "Thưởng Rồng được chia thành <b>Thưởng Người Chơi</b> và <b>Thưởng Nhà Cái</b>.",
+                    "Điều kiện chính là bạn phải đặt cược chính trước (<b>Người Chơi, Nhà Cái,</b> hoặc <b>Hòa</b>).",
+                    "Sau đó, bạn mới có thể đặt cược vào <b>Thưởng Người Chơi</b> hoặc <b>Thưởng Nhà Cái</b>."
+                ]
+            },
+            "winning-rules": {
+                "heading": "Xác Định Chiến Thắng",
+                "list": [
+                    "Tương tự như quy tắc cược chính, để thắng, giá trị cược thưởng phải cao hơn đối thủ.",
+                    "Thưởng Rồng có hệ thống thanh toán độc đáo. Khoảng cách chiến thắng quyết định số tiền thanh toán.",
+                    "Khoảng cách chiến thắng càng lớn, phần thưởng càng cao."
+                ]
+            },
+            "additional-rules": {
+                "heading": "Quy Tắc Bổ Sung",
+                "list": [
+                    "Kết quả trò chơi là <b>Thắng Tự Nhiên</b> và <b>Hòa</b> có các quy tắc đặc biệt ảnh hưởng đến thanh toán.",
+                    "Thông tin về quy tắc đặc biệt sẽ được giải thích trong phần tiếp theo."
+                ]
+            }
+        },
+        "bet-description": {
+            "title": "Mô Tả Cược",
+            "bet": "Cược",
+            "description": "Mô Tả",
+            "result": "Kết Quả",
+            "any": "bất kỳ",
+            "main-bet": {
+                "title": "Cược Chính",
+                "player": {
+                    "title": "Người Chơi",
+                    "description": "Trả thưởng nếu giá trị của Người Chơi <b>lớn hơn</b> giá trị của Nhà Cái"
+                },
+                "banker": {
+                    "title": "Nhà Cái",
+                    "description": "Trả thưởng nếu giá trị của Nhà Cái <b>lớn hơn</b> giá trị của Người Chơi"
+                },
+                "tie": {
+                    "title": "Hòa",
+                    "description": "Trả thưởng nếu Người Chơi và Nhà Cái có <b>cùng giá trị</b>"
+                }
+            },
+            "side-bet": {
+                "title": "Cược Phụ",
+                "playerpair": {
+                    "title": "Đôi Người Chơi",
+                    "description": "Trả thưởng nếu hai lá bài đầu tiên của Người Chơi là một <b>đôi</b>"
+                },
+                "bankerpair": {
+                    "title": "Đôi Nhà Cái",
+                    "description": "Trả thưởng nếu hai lá bài đầu tiên của Nhà Cái là một <b>đôi</b>"
+                },
+                "perfectpair": {
+                    "title": "Đôi Hoàn Hảo",
+                    "description": [
+                        "Trả thưởng nếu chỉ một trong hai bên Người Chơi hoặc Nhà Cái có <b>lá bài giống nhau</b>.",
+                        "Trả thưởng nếu cả hai bên Người Chơi và Nhà Cái có <b>lá bài giống nhau</b>."
+                    ]
+                },
+                "mixedpair": {
+                    "title": "Đôi Hỗn Hợp",
+                    "description": "Trả thưởng nếu hai lá bài đầu tiên của một trong hai bên Người Chơi hoặc Nhà Cái là một <b>đôi</b>"
+                },
+                "playerbonus": {
+                    "title": "Thưởng Người Chơi",
+                    "description": "Trả thưởng nếu Người Chơi thắng với <b>Tự Nhiên 8 hoặc 9</b>, hoặc ít nhất thắng với <b>khoảng cách 4 điểm</b>"
+                },
+                "bankerbonus": {
+                    "title": "Thưởng Nhà Cái",
+                    "description": "Trả thưởng nếu Nhà Cái thắng với <b>Tự Nhiên 8 hoặc 9</b>, hoặc ít nhất thắng với <b>khoảng cách 4 điểm</b>"
+                },
+                "tieon": {
+                    "title": "Hòa trên (0-9)",
+                    "description": "Trả thưởng nếu kết quả trò chơi là <b>Hòa</b> với giá trị <b>0-9</b>"
+                },
+                "small": {
+                    "title": "Nhỏ",
+                    "description": "Trả thưởng nếu trong một vòng, Dealer chỉ chia <b>4 lá bài</b>"
+                },
+                "big": {
+                    "title": "Lớn",
+                    "description": "Trả thưởng nếu trong một vòng, Dealer chia <b>hơn 4 lá bài</b>"
+                }
+            }
+        }
+    }
 }

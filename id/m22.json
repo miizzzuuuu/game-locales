@@ -14,21 +14,21 @@
     "player bonus": "Bonus Pemain",
     "banker bonus": "Bonus Bankir",
 
-    "natural win": "Kemenangan Alami",
-    "natural tie": "Seri Alami",
-    "win by 9 points": "Menang dengan 9 poin",
-    "win by 8 points": "Menang dengan 8 poin",
-    "win by 7 points": "Menang dengan 7 poin",
-    "win by 6 points": "Menang dengan 6 poin",
-    "win by 5 points": "Menang dengan 5 poin",
-    "win by 4 points": "Menang dengan 4 poin",
+    "natural win": "Kemenangan Natural",
+    "natural tie": "Seri Natural",
+    "win by 9 points": "Menang 9 poin",
+    "win by 8 points": "Menang 8 poin",
+    "win by 7 points": "Menang 7 poin",
+    "win by 6 points": "Menang 6 poin",
+    "win by 5 points": "Menang 5 poin",
+    "win by 4 points": "Menang 4 poin",
 
     "player pair": "Pair Pemain",
     "banker pair": "Pair Bankir",
     "perfect pair": "Pair Sempurna",
     "mixed pair": "Pair Campuran",
 
-    "side bet": "Taruhan Samping",
+    "side bet": "Taruhan Sampingan",
 
     "tie on": "Seri pada",
     "0": "0",
@@ -54,7 +54,7 @@
             "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
             "title": "Cara Bermain",
             "content": [
-                "Kartu memiliki nilai berdasarkan angka mereka, dengan <b>kartu wajah(J, Q, K) bernilai 0</b> dan <b>kartu AS bernilai 1</b>. Jika total nilai kartu melebihi 9, hanya digit terakhir yang dihitung (misalnya, 15 menjadi 5)."
+                "Kartu memiliki nilai berdasarkan angka mereka, dengan <b>kartu wajah (J,Q,K) bernilai 0</b> dan <b>kartu AS bernilai 1</b>. Jika total nilai kartu melebihi 9, hanya digit terakhir yang dihitung (misalnya, 15 menjadi 5)."
             ]
         },
         "slide-3": {
@@ -100,119 +100,119 @@
 
             "header-2": "Kartu Natural dan Non-Natural",
             "subheader-1": "Kartu Natural",
-            "paragraph-3": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai 8 atau 9, maka dianggap sebagai Kartu Natural dan tidak ada penambahan kartu lagi untuk kedua belah pihak.",
+            "paragraph-3": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai <b>8</b> atau <b>9</b>, maka dianggap sebagai <b>Kartu Natural</b> dan tidak ada penambahan kartu lagi untuk kedua belah pihak.",
 
             "subheader-2": "Kartu Non-Natural",
-            "paragraph-4": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai 0-7, maka dianggap sebagai Kartu Non-Natural dan kartu tambahan akan diberikan.",
+            "paragraph-4": "Jika jumlah nilai 2 kartu awal Pemain atau Bankir memiliki nilai <b>0-7</b>, maka dianggap sebagai <b>Kartu Non-Natural</b> dan kartu tambahan akan diberikan.",
             "paragraph-5": "Aturan kartu ketiga akan dijelaskan lebih lanjut di bagian berikutnya.",
 
             "header-3": "Peraturan Kartu Ketiga",
-            "paragraph-6": "Aturan Kartu Ketiga untuk Pemain tergantung pada nilai dua kartu pemain.",
-            "paragraph-7": "Aturan kartu ketiga untuk Bankir tergantung pada nilai dua kartu bankir dan nilai kartu ketiga pemain.",
+            "paragraph-6": "Aturan Kartu Ketiga untuk Pemain tergantung pada <b>nilai dua kartu pemain</b>.",
+            "paragraph-7": "Aturan kartu ketiga untuk Bankir tergantung pada <b>nilai dua kartu bankir</b> dan <b>nilai kartu ketiga pemain</b>.",
 
             "player-table": {
-                "player-two-card-value": "Nilai Dua Kartu Pemain",
-                "action": "aksi",
+                "player-two-card-value": "<b>Nilai Dua Kartu Pemain</b>",
+                "action": "<b>Aksi</b>",
                 "player-draws-third-card": "Pemain Menerima Kartu Ketiga",
                 "player-stands": "Pemain Bertahan (Tidak Ada Penambahan Kartu)",
                 "no-additional-card": "Tidak Ada Penambahan Kartu"
             },
 
             "banker-table": {
-                "banker-two-card-value": "Dua Kartu Bankir",
-                "player-third-card-value": "Kartu Ketiga Pemain",
-                "draw": "D(Draw) = Bankir Menerima Kartu Ketiga",
-                "stand": "S(Stand) = Bankir Bertahan dengan Dua Kartu"
+                "banker-two-card-value": "<b>Nilai Dua Kartu Bankir</b>",
+                "player-third-card-value": "<b>Nilai Kartu Ketiga Pemain</b>",
+                "draw": "<b>D(Draw) = Bankir Menerima Kartu Ketiga</b>",
+                "stand": "<b>S(Stand) = Bankir Bertahan dengan Dua Kartu</b>"
             }
         },
         "dragon-bonus": {
             "title": "Bonus Dragon",
-            "paragraph-1": "Dragon Bonus hadir sebagai taruhan tambahan dalam Baccarat untuk menambah sensasi permainan dengan hadiah yang lebih besar dari taruhan biasa. Berikut aturan sederhananya:",
+            "paragraph-1": "Bonus Dragon hadir sebagai taruhan tambahan dalam Baccarat untuk menambah sensasi permainan dengan hadiah yang lebih besar dari taruhan biasa. Berikut aturan sederhananya:",
             "how-to-bet": {
                 "heading": "Taruhan dan Cara Bertaruh",
                 "list": [
-                    "Dragon Bonus terbagi menjadi Pemain Bonus dan Bankir Bonus",
-                    "Sebagai syarat utama, anda harus memasang taruhan utama (Pemain, Bankir, atau Seri)",
-                    "Setelah itu barulah anda dapat memasang taruhan pada Pemain Bonus atau Bankir Bonus"
+                    "Bonus Dragon terbagi menjadi <b>Bonus Pemain</b> dan <b>Bonus Bankir</b>",
+                    "Sebagai syarat utama, anda harus memasang taruhan utama dahulu (<b>Pemain, Bankir,</b> atau <b>Seri</b>)",
+                    "Setelah itu barulah anda dapat memasang taruhan pada <b>Bonus Pemain</b> atau <b>Bonus Bankir</b>"
                 ]
             },
             "winning-rules": {
                 "heading": "Penentuan Kemenangan",
                 "list": [
                     "Sama dengan aturan taruhan utama, untuk menang, maka nilai taruhan bonus harus lebih besar dari lawan.",
-                    "Dragon Bonus memiliki sistem pembayaran yang unik. Besarnya selisih kemenangan menentukan jumlah bayaran.",
+                    "Bonus Dragon memiliki sistem pembayaran yang unik. Besarnya selisih kemenangan menentukan jumlah bayaran.",
                     "Semakin besar selisih kemenangan, semakin besar pembayaran kemenangan."
                 ]
             },
             "additional-rules": {
                 "heading": "Aturan Tambahan",
                 "list": [
-                    "Hasil permainan adalah Menang dengan Natural dan Seri memiliki aturan khusus yang mempengaruhi pembayaran.",
+                    "Hasil permainan adalah <b>Menang dengan Natural</b> dan <b>Seri</b> memiliki aturan khusus yang mempengaruhi pembayaran.",
                     "Info aturan khusus akan dijelaskan pada bagian berikutnya."
                 ]
             }
         },
         "bet-description": {
             "title": "Deskripsi Taruhan",
-            "bet": "taruhan",
-            "description": "deskripsi",
-            "result": "hasil",
+            "bet": "Taruhan",
+            "description": "Deskripsi",
+            "result": "Hasil",
             "any": "apapun",
             "main-bet": {
                 "title": "Taruhan Utama",
                 "player": {
                     "title": "Pemain",
-                    "description": "Dibayar jika nilai Pemain lebih besar dari nilai Bankir"
+                    "description": "Dibayar jika nilai Pemain <b>lebih besar dari</b> nilai Bankir"
                 },
                 "banker": {
                     "title": "Bankir",
-                    "description": "Dibayar jika nilai Bankir lebih besar dari nilai Pemain"
+                    "description": "Dibayar jika nilai Bankir <b>lebih besar dari</b> nilai Pemain"
                 },
                 "tie": {
                     "title": "Seri",
-                    "description": "Dibayar jika kartu Pemain dan Bankir punya nilai yang sama"
+                    "description": "Dibayar jika kartu Pemain dan Bankir punya <b>nilai yang sama</b>"
                 }
             },
             "side-bet": {
                 "title": "Taruhan Sampingan",
                 "playerpair": {
                     "title": "Pair Pemain",
-                    "description": "Dibayar jika dua kartu pertama Pemain adalah pasangan"
+                    "description": "Dibayar jika dua kartu pertama Pemain adalah <b>pasangan</b>"
                 },
                 "bankerpair": {
                     "title": "Pair Bankir",
-                    "description": "Dibayar jika dua kartu pertama Bankir adalah pasangan"
+                    "description": "Dibayar jika dua kartu pertama Bankir adalah <b>pasangan</b>"
                 },
                 "perfectpair": {
                     "title": "Pair Sempurna",
                     "description": [
-                        "Dibayar jika hanya salah satu dari pihak Pemain dan Bankir mendapatkan kartu identik",
-                        "Dibayar jika kedua pihak Pemain dan Bankir mendapatkan kartu identik"
+                        "Dibayar jika hanya salah satu dari pihak Pemain dan Bankir mendapatkan kartu <b>identik</b>",
+                        "Dibayar jika kedua pihak Pemain dan Bankir mendapatkan kartu <b>identik</b>"
                     ]
                 },
                 "mixedpair": {
                     "title": "Pair Campuran",
-                    "description": "Dibayar jika dua kartu pertama dari salah satu pihak Pemain atau Bankir adalah pasangan"
+                    "description": "Dibayar jika dua kartu pertama dari salah satu pihak Pemain atau Bankir adalah <b>pasangan</b>"
                 },
                 "playerbonus": {
                     "title": "Bonus Pemain",
-                    "description": "Dibayar jika pihak Pemain menang dengan Natural 8 atau 9, atau setidaknya menang dengan selisih 4 nilai"
+                    "description": "Dibayar jika pihak Pemain menang dengan <b>Natural 8 atau 9</b>, atau setidaknya menang dengan <b>selisih 4 nilai</b>"
                 },
                 "bankerbonus": {
                     "title": "Bonus Bankir",
-                    "description": "Dibayar jika pihak Bankir menang dengan Natural 8 atau 9, atau setidaknya menang dengan selisih 4 nilai"
+                    "description": "Dibayar jika pihak Bankir menang dengan <b>Natural 8 atau 9</b>, atau setidaknya menang dengan <b>selisih 4 nilai</b>"
                 },
                 "tieon": {
                     "title": "Seri pada (0-9)",
-                    "description": "Dibayar jika hasil permainan adalah Seri dengan nilai 0-9"
+                    "description": "Dibayar jika hasil permainan adalah <b>Seri</b> dengan nilai <b>0-9</b>"
                 },
                 "small": {
                     "title": "Kecil",
-                    "description": "Dibayar jika dalam satu putaran permainan dealer hanya mengeluarkan 4 buah kartu saja"
+                    "description": "Dibayar jika dalam satu putaran permainan dealer hanya mengeluarkan <b>4 buah kartu saja</b>"
                 },
                 "big": {
                     "title": "Besar",
-                    "description": "Dibayar jika dalam satu putaran permainan dealer mengeluarkan lebih dari 4 buah kartu"
+                    "description": "Dibayar jika dalam satu putaran permainan dealer mengeluarkan <b>lebih dari 4 buah kartu</b>"
                 }
             }
         }

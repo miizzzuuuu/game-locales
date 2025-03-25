@@ -40,5 +40,181 @@
     "6": "6",
     "7": "7",
     "8": "8",
-    "9": "9"
+    "9": "9",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Baccarat adalah permainan di mana anda meramalkan tangan yang akan menang: Pemain, Banker, atau Seri, yang mempunyai jumlah nilai <b>paling hampir dengan 9</b>."
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Kad mempunyai nilai berdasarkan nombor mereka, dengan <b>kad muka (J, Q, K) bernilai 0</b> dan <b>As bernilai 1</b>. Jika jumlah nilai kad melebihi 9, hanya digit terakhir yang dikira (contohnya, 15 menjadi 5)."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/9BwkB8jSAJsmDW.json",
+            "title": "Pengiraan",
+            "content": [
+                "Pemenang adalah tangan yang mempunyai <b>jumlah mata paling hampir dengan 9</b>. Jika jumlah mata Pemain dan Banker sama, hasilnya adalah seri."
+            ]
+        }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Pengenalan",
+            "paragraph-1": "Baccarat, juga dikenali sebagai Punto Banco, adalah salah satu permainan kad tertua dan paling popular di kasino di seluruh dunia, terutamanya dalam kalangan penjudi tinggi dan di Asia. Baccarat sangat dominan di Macau.",
+            "paragraph-2": "Walaupun kelihatan serius dan elegan, permainan ini sebenarnya sangat mudah. Anda hanya perlu bertaruh pada pihak yang akan menang atau seri.",
+            "game-objective": "Objektif Permainan",
+            "paragraph-3": "Objektif permainan Baccarat adalah untuk meramalkan pihak yang mempunyai nilai kad tertinggi atau paling hampir dengan 9 (Pemain, Banker, atau Seri)."
+        },
+        "general-rules": {
+            "title": "Peraturan Umum",
+            "steps": [
+                "Permainan akan dikendalikan oleh dealer.",
+                "Permainan ini menggunakan 8 dek kad dalam satu shoe.",
+                "Pada permulaan setiap shoe baru, dealer akan mengeluarkan satu kad untuk menentukan berapa banyak kad yang akan dibakar atau dibuang. Maksimum 11 kad boleh dibuang.",
+                "Selepas masa pertaruhan tamat, dealer akan mengagihkan dua kad kepada Pemain dan Banker.",
+                "Tangan dengan nilai kad tertinggi menang.",
+                "Jika keputusan adalah <b>seri</b>, pertaruhan pada Pemain dan Banker akan dikembalikan. Pertaruhan seri hanya menang jika nilai Pemain dan Banker sama.",
+                "Jika keputusan adalah <b>seri bukan semula jadi</b>, iaitu seri dengan <b>lebih daripada empat kad</b> diagihkan, pertaruhan Bonus Pemain dan Bonus Banker akan kalah.",
+                "Jika keputusan adalah <b>seri semula jadi</b>, iaitu seri dengan <b>empat kad</b> diagihkan, pertaruhan Bonus Pemain dan Bonus Banker akan dikembalikan.",
+                "Dalam <b>pertaruhan 50-50</b> (seperti <b>Pemain/Banker</b> atau <b>Besar/Kecil</b>), anda hanya boleh memilih satu pihak setiap pusingan. Contohnya, jika anda telah bertaruh pada <b>Pemain</b>, anda tidak boleh bertaruh pada <b>Banker</b> dalam pusingan yang sama."
+            ]
+        },
+        "baccarat-cards": {
+            "title": "Kad Baccarat",
+            "card": "Kad",
+            "value": "Nilai",
+
+            "paragraph-1": "Baccarat menggunakan dek standard 52 kad, tanpa joker. Nilai kad yang digunakan dalam permainan adalah seperti berikut:",
+
+            "header-1": "Pengiraan Mata",
+            "paragraph-2": "Semua kad dalam Baccarat hanya dikira berdasarkan digit terakhir. Nilai tertinggi adalah 9. Jika jumlah dua kad adalah nombor dua digit, jumlah nilai adalah digit kedua (contohnya, 15 menjadi 5).",
+
+            "header-2": "Kad Semula Jadi dan Bukan Semula Jadi",
+            "subheader-1": "Kad Semula Jadi",
+            "paragraph-3": "Jika jumlah nilai dua kad pertama Pemain atau Banker adalah <b>8</b> atau <b>9</b>, ia dianggap sebagai <b>Kad Semula Jadi</b> dan tiada kad tambahan akan diberikan kepada kedua-dua pihak.",
+
+            "subheader-2": "Kad Bukan Semula Jadi",
+            "paragraph-4": "Jika jumlah nilai dua kad pertama Pemain atau Banker adalah <b>0-7</b>, ia dianggap sebagai <b>Kad Bukan Semula Jadi</b> dan kad tambahan akan diberikan.",
+            "paragraph-5": "Peraturan kad ketiga akan dijelaskan dengan lebih terperinci dalam bahagian seterusnya.",
+
+            "header-3": "Peraturan Kad Ketiga",
+            "paragraph-6": "Peraturan kad ketiga untuk Pemain bergantung pada <b>nilai dua kad Pemain</b>.",
+            "paragraph-7": "Peraturan kad ketiga untuk Banker bergantung pada <b>nilai dua kad Banker</b> dan <b>nilai kad ketiga Pemain</b>.",
+
+            "player-table": {
+                "player-two-card-value": "<b>Nilai Dua Kad Pemain</b>",
+                "action": "<b>Tindakan</b>",
+                "player-draws-third-card": "Pemain menarik kad ketiga",
+                "player-stands": "Pemain berdiri (tiada kad tambahan)",
+                "no-additional-card": "Tiada kad tambahan"
+            },
+
+            "banker-table": {
+                "banker-two-card-value": "<b>Nilai Dua Kad Banker</b>",
+                "player-third-card-value": "<b>Nilai Kad Ketiga Pemain</b>",
+                "draw": "<b>D(Draw) = Banker menarik kad ketiga</b>",
+                "stand": "<b>S(Stand) = Banker berdiri dengan dua kad</b>"
+            }
+        },
+        "dragon-bonus": {
+            "title": "Bonus Naga",
+            "paragraph-1": "Bonus Naga adalah pertaruhan tambahan dalam Baccarat yang menambah keseronokan permainan dengan pembayaran yang lebih besar daripada pertaruhan biasa. Berikut adalah peraturan mudah:",
+            "how-to-bet": {
+                "heading": "Pertaruhan dan Cara Bertaruh",
+                "list": [
+                    "Bonus Naga dibahagikan kepada <b>Bonus Pemain</b> dan <b>Bonus Banker</b>.",
+                    "Sebagai syarat utama, anda mesti membuat pertaruhan utama terlebih dahulu (<b>Pemain, Banker,</b> atau <b>Seri</b>).",
+                    "Selepas itu, anda boleh bertaruh pada <b>Bonus Pemain</b> atau <b>Bonus Banker</b>."
+                ]
+            },
+            "winning-rules": {
+                "heading": "Penentuan Kemenangan",
+                "list": [
+                    "Sama seperti peraturan pertaruhan utama, untuk menang, nilai pertaruhan bonus mestilah lebih tinggi daripada lawan.",
+                    "Bonus Naga mempunyai sistem pembayaran yang unik. Margin kemenangan menentukan jumlah pembayaran.",
+                    "Semakin besar margin kemenangan, semakin besar pembayaran."
+                ]
+            },
+            "additional-rules": {
+                "heading": "Peraturan Tambahan",
+                "list": [
+                    "Keputusan permainan adalah <b>Kemenangan Semula Jadi</b> dan <b>Seri</b> mempunyai peraturan khas yang mempengaruhi pembayaran.",
+                    "Maklumat mengenai peraturan khas akan dijelaskan dalam bahagian seterusnya."
+                ]
+            }
+        },
+        "bet-description": {
+            "title": "Penerangan Pertaruhan",
+            "bet": "Pertaruhan",
+            "description": "Penerangan",
+            "result": "Keputusan",
+            "any": "apa-apa",
+            "main-bet": {
+                "title": "Pertaruhan Utama",
+                "player": {
+                    "title": "Pemain",
+                    "description": "Dibayar jika nilai Pemain <b>lebih besar daripada</b> nilai Banker"
+                },
+                "banker": {
+                    "title": "Banker",
+                    "description": "Dibayar jika nilai Banker <b>lebih besar daripada</b> nilai Pemain"
+                },
+                "tie": {
+                    "title": "Seri",
+                    "description": "Dibayar jika Pemain dan Banker mempunyai <b>nilai yang sama</b>"
+                }
+            },
+            "side-bet": {
+                "title": "Pertaruhan Sampingan",
+                "playerpair": {
+                    "title": "Pasangan Pemain",
+                    "description": "Dibayar jika dua kad pertama Pemain adalah <b>pasangan</b>"
+                },
+                "bankerpair": {
+                    "title": "Pasangan Banker",
+                    "description": "Dibayar jika dua kad pertama Banker adalah <b>pasangan</b>"
+                },
+                "perfectpair": {
+                    "title": "Pasangan Sempurna",
+                    "description": [
+                        "Dibayar jika hanya satu pihak (Pemain atau Banker) mendapat <b>kad yang sama</b>",
+                        "Dibayar jika kedua-dua pihak (Pemain dan Banker) mendapat <b>kad yang sama</b>"
+                    ]
+                },
+                "mixedpair": {
+                    "title": "Pasangan Campuran",
+                    "description": "Dibayar jika dua kad pertama salah satu pihak (Pemain atau Banker) adalah <b>pasangan</b>"
+                },
+                "playerbonus": {
+                    "title": "Bonus Pemain",
+                    "description": "Dibayar jika Pemain menang dengan <b>Semula Jadi 8 atau 9</b> atau menang dengan <b>perbezaan sekurang-kurangnya 4 mata</b>"
+                },
+                "bankerbonus": {
+                    "title": "Bonus Banker",
+                    "description": "Dibayar jika Banker menang dengan <b>Semula Jadi 8 atau 9</b> atau menang dengan <b>perbezaan sekurang-kurangnya 4 mata</b>"
+                },
+                "tieon": {
+                    "title": "Seri pada (0-9)",
+                    "description": "Dibayar jika keputusan permainan adalah <b>Seri</b> dengan nilai <b>0-9</b>"
+                },
+                "small": {
+                    "title": "Kecil",
+                    "description": "Dibayar jika dealer hanya mengagihkan <b>4 kad</b> dalam satu pusingan"
+                },
+                "big": {
+                    "title": "Besar",
+                    "description": "Dibayar jika dealer mengagihkan <b>lebih daripada 4 kad</b> dalam satu pusingan"
+                }
+            }
+        }
+    }
 }
