@@ -51,7 +51,7 @@
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/7xx4mYnwHyvQyz.json",
             "title": "How to Play",
             "content": [
                 "Cards have values based on their numbers, with <b>face cards (J, Q, K) valued at 0</b> and <b>Aces valued at 1</b>. If the total card value exceeds 9, only the last digit is counted (e.g., 15 becomes 5)."
