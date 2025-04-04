@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/49f3i649vMqRJH.json",
             "title": "게임 방법",
             "content": [
                 "바카라는 플레이어, 뱅커 또는 타이 중 어느 쪽이 <b>9에 가장 가까운 값</b>을 가지는지 예측하는 게임입니다."
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/8RP9a5vF3u3jPU.json",
             "title": "게임 방법",
             "content": [
                 "카드의 값은 숫자에 따라 결정되며, <b>얼굴 카드 (J, Q, K)는 0</b>으로, <b>에이스는 1</b>로 계산됩니다. 카드 값의 합이 9를 초과하면 마지막 자릿수만 계산됩니다 (예: 15는 5로 계산)."

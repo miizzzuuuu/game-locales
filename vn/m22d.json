@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/3gSQRDZYx3uzJr.json",
             "title": "Cách Chơi",
             "content": [
                 "Baccarat là trò chơi mà bạn dự đoán kết quả của ván bài: Người Chơi, Nhà Cái, hoặc Hòa, bên nào có tổng giá trị <b>gần nhất với 9</b>."
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/3TBBqXJZU8tApu.json",
             "title": "Cách Chơi",
             "content": [
                 "Các lá bài có giá trị dựa trên số của chúng, với <b>các lá bài hình (J, Q, K) có giá trị là 0</b> và <b>Át có giá trị là 1</b>. Nếu tổng giá trị của các lá bài vượt quá 9, chỉ chữ số cuối cùng được tính (ví dụ: 15 trở thành 5)."
