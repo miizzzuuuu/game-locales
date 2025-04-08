@@ -111,16 +111,17 @@
             "paragraph-7": "Aturan kartu ketiga untuk Bankir tergantung pada <b>nilai dua kartu bankir</b> dan <b>nilai kartu ketiga pemain</b>.",
 
             "player-table": {
-                "player-two-card-value": "<b>Nilai Dua Kartu Pemain</b>",
-                "action": "<b>Aksi</b>",
+                "player-two-card-value": "Nilai Dua Kartu Pemain",
+                "action": "Aksi",
                 "player-draws-third-card": "Pemain Menerima Kartu Ketiga",
                 "player-stands": "Pemain Bertahan (Tidak Ada Penambahan Kartu)",
                 "no-additional-card": "Tidak Ada Penambahan Kartu"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>Nilai Dua Kartu Bankir</b>",
-                "player-third-card-value": "<b>Nilai Kartu Ketiga Pemain</b>",
+                "banker-two-card-value": "Nilai Dua Kartu Bankir",
+                "player-third-card-value": "Nilai Kartu Ketiga Pemain",
+                "no-third-card": "Tidak Ada Kartu Ketiga",
                 "draw": "<b>D(Draw) = Bankir Menerima Kartu Ketiga</b>",
                 "stand": "<b>S(Stand) = Bankir Bertahan dengan Dua Kartu</b>"
             }
