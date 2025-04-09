@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/9TMSgJaD2iuudf.json",
             "title": "วิธีเล่น",
             "content": [
                 "บาคาร่าเป็นเกมที่คุณทายผลของมือที่ชนะ: ผู้เล่น, แบงก์เกอร์, หรือ เสมอ โดยฝ่ายที่มีมูลค่ารวม <b>ใกล้เคียงกับ 9</b> มากที่สุดจะเป็นผู้ชนะ"
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/8jkrn9SCAmz3iY.json",
             "title": "วิธีเล่น",
             "content": [
                 "ไพ่แต่ละใบมีค่าตามหมายเลข โดย <b>ไพ่รูปหน้า (J, Q, K) มีค่าเป็น 0</b> และ <b>ไพ่ Ace มีค่าเป็น 1</b> หากผลรวมของไพ่เกิน 9 จะนับเฉพาะหลักหน่วยเท่านั้น (เช่น 15 จะกลายเป็น 5)"

@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/EACdCcfTFddYmM.json",
             "title": "如何玩",
             "content": [
                 "百家乐是一种游戏，您需要预测哪一方会获胜：玩家、庄家或和局，哪一方的总点数<b>最接近9</b>。"
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/Ch7MGjj9YoR1Yw.json",
             "title": "如何玩",
             "content": [
                 "卡牌的值根据其数字决定，<b>花牌（J、Q、K）的值为0</b>，<b>A的值为1</b>。如果卡牌的总值超过9，则只计算最后一位数字（例如，15变为5）。"

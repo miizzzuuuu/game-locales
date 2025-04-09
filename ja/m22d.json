@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/7WyBt7zDXEGK4r.json",
             "title": "遊び方",
             "content": [
                 "バカラは、プレイヤー、バンカー、またはタイのどちらが勝つかを予想するゲームです。勝つ手は、合計値が<b>9に最も近い</b>方です。"
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/5arPNS5KRQutXC.json",
             "title": "遊び方",
             "content": [
                 "カードの値は数字に基づいて決まります。<b>絵札（J、Q、K）は0</b>、<b>エースは1</b>です。カードの合計値が9を超える場合、最後の桁のみがカウントされます（例：15は5になります）。"

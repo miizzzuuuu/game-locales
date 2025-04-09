@@ -44,14 +44,14 @@
 
     "quick-how-to-play": {
         "slide-1": {
-            "animation": "https://cdn.lottielab.com/l/4PYEhx4Tt5zD7U.json",
+            "animation": "https://cdn.lottielab.com/l/6vXB65vgrrFmLC.json",
             "title": "Cara Bermain",
             "content": [
                 "Baccarat adalah permainan di mana anda meramalkan tangan yang akan menang: Pemain, Banker, atau Seri, yang mempunyai jumlah nilai <b>paling hampir dengan 9</b>."
             ]
         },
         "slide-2": {
-            "animation": "https://cdn.lottielab.com/l/AD8ddDsfge8Dx5.json",
+            "animation": "https://cdn.lottielab.com/l/DPzy8oWJbe5SHe.json",
             "title": "Cara Bermain",
             "content": [
                 "Kad mempunyai nilai berdasarkan nombor mereka, dengan <b>kad muka (J, Q, K) bernilai 0</b> dan <b>As bernilai 1</b>. Jika jumlah nilai kad melebihi 9, hanya digit terakhir yang dikira (contohnya, 15 menjadi 5)."
