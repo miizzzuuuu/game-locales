@@ -39,5 +39,29 @@
     "column-3": "kolom 3",
 
     "race-track-error-min": "batas minimal per 1 nomor adalah {{value}}",
-    "race-track-error-max": "taruhan {{button}} mencapai batas maksimal"
+    "race-track-error-max": "taruhan {{button}} mencapai batas maksimal",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/5tMvT3H8Qte3R5.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Permainan dimana <b>1 bola kecil dilemparkan ke dalam Roda berputar</b> yang memiliki 37 slot dengan nomor dari 0 hingga 36."
+            ]
+        },
+        "slide-2": {
+            "animation": "",
+            "title": "Cara Bermain",
+            "content": [
+                "Anda dapat bertaruh pada <b> satu nomor, rentang nomor, warna atau ganjil/genap</b>. Setelah Anda memasang taruhan, Roda akan diputar dan 1 bola dilemparkan."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/9mfmeP1Ur5UGbd.json",
+            "title": "Cara Bermain",
+            "content": [
+                "<b>Bola akan berhenti disalah satu slot</b>, dan taruhan yang sesuai dengan hasil tersebut akan menang."
+            ]
+        }
+    }
 }
