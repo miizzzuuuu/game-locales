@@ -1,0 +1,43 @@
+{
+    "3rd Row": "2:1",
+    "2nd Row": "2:1",
+    "1st Row": "2:1",
+
+    "1st 12": "12 đầu",
+    "2nd 12": "12 giữa",
+    "3rd 12": "12 cuối",
+
+    "1 to 18": "1-18",
+    "19 to 36": "19-36",
+
+    "single": "đơn",
+    "split": "chia",
+    "street": "dãy",
+    "corner": "góc",
+    "six line / double street": "sáu hàng / hai dãy",
+    "trio": "bộ ba",
+    "dozen": "tá",
+    "column": "cột",
+    "1-18": "1-18",
+    "19-36": "19-36",
+    "side bet": "cược bên",
+    "big": "lớn",
+    "small": "nhỏ",
+    "odd": "lẻ",
+    "even": "chẵn",
+    "red": "đỏ",
+    "black": "đen",
+
+    "hot-cold": "hot/cold",
+    "advanced": "nâng cao",
+    "last-round": "vòng cuối",
+    "1-st-12": "12 đầu",
+    "2-nd-12": "12 thứ hai",
+    "3-rd-12": "12 thứ ba",
+    "column-1": "cột 1",
+    "column-2": "cột 2",
+    "column-3": "cột 3",
+
+    "race-track-error-min": "giới hạn tối thiểu cho mỗi 1 số là {{value}}",
+    "race-track-error-max": "cược {{button}} đã đạt giới hạn tối đa"
+}

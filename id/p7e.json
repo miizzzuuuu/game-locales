@@ -1,0 +1,43 @@
+{
+    "3rd Row": "2:1",
+    "2nd Row": "2:1",
+    "1st Row": "2:1",
+
+    "1st 12": "12 Pertama",
+    "2nd 12": "12 Kedua",
+    "3rd 12": "12 Ketiga",
+
+    "1 to 18": "1-18",
+    "19 to 36": "19-36",
+
+    "single": "single",
+    "split": "split",
+    "street": "street",
+    "corner": "corner",
+    "six line / double street": "six line / double street",
+    "trio": "trio",
+    "dozen": "dozen",
+    "column": "column",
+    "1-18": "1-18",
+    "19-36": "19-36",
+    "side bet": "taruhan sampingan",
+    "big": "besar",
+    "small": "kecil",
+    "odd": "ganjil",
+    "even": "genap",
+    "red": "merah",
+    "black": "hitam",
+
+    "hot-cold": "hot/cold",
+    "advanced": "lanjutan",
+    "last-round": "putaran Terakhir",
+    "1-st-12": "12 pertama",
+    "2-nd-12": "12 kedua",
+    "3-rd-12": "12 ketiga",
+    "column-1": "kolom 1",
+    "column-2": "kolom 2",
+    "column-3": "kolom 3",
+
+    "race-track-error-min": "batas minimal per 1 nomor adalah {{value}}",
+    "race-track-error-max": "taruhan {{button}} mencapai batas maksimal"
+}

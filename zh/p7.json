@@ -1,0 +1,43 @@
+{
+    "3rd Row": "2:1",
+    "2nd Row": "2:1",
+    "1st Row": "2:1",
+
+    "1st 12": "前12",
+    "2nd 12": "中12",
+    "3rd 12": "后12",
+
+    "1 to 18": "1-18",
+    "19 to 36": "19-36",
+
+    "single": "单注",
+    "split": "分注",
+    "street": "街注",
+    "corner": "角注",
+    "six line / double street": "六线/双街注",
+    "trio": "三注",
+    "dozen": "打注",
+    "column": "列注",
+    "1-18": "1-18",
+    "19-36": "19-36",
+    "side bet": "边注",
+    "big": "大",
+    "small": "小",
+    "odd": "单",
+    "even": "双",
+    "red": "红",
+    "black": "黑",
+
+    "hot-cold": "hot/cold",
+    "advanced": "高级",
+    "last-round": "最后一轮",
+    "1-st-12": "第一个 12",
+    "2-nd-12": "第二个 12",
+    "3-rd-12": "第三个 12",
+    "column-1": "第 1 列",
+    "column-2": "第 2 列",
+    "column-3": "第 3 列",
+
+    "race-track-error-min": "每1个号码的最低限额为{{value}}",
+    "race-track-error-max": "投注{{button}}已达到最大限额"
+}
