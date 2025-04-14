@@ -111,16 +111,17 @@
             "paragraph-7": "Quy tắc rút lá bài thứ ba cho Nhà Cái phụ thuộc vào <b>giá trị của hai lá bài của Nhà Cái</b> và <b>giá trị của lá bài thứ ba của Người Chơi</b>.",
 
             "player-table": {
-                "player-two-card-value": "<b>Giá Trị Hai Lá Bài của Người Chơi</b>",
-                "action": "<b>Hành Động</b>",
+                "player-two-card-value": "Giá Trị Hai Lá Bài của Người Chơi",
+                "action": "Hành Động",
                 "player-draws-third-card": "Người Chơi Rút Lá Bài Thứ Ba",
                 "player-stands": "Người Chơi Giữ Bài (Không Rút Thêm)",
                 "no-additional-card": "Không Rút Thêm Lá Bài"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>Giá Trị Hai Lá Bài của Nhà Cái</b>",
-                "player-third-card-value": "<b>Giá Trị Lá Bài Thứ Ba của Người Chơi</b>",
+                "banker-two-card-value": "Giá Trị Hai Lá Bài của Nhà Cái",
+                "player-third-card-value": "Giá Trị Lá Bài Thứ Ba của Người Chơi",
+                "no-third-card": "Không Có Lá Thứ Ba",
                 "draw": "<b>D(Draw) = Nhà Cái Rút Lá Bài Thứ Ba</b>",
                 "stand": "<b>S(Stand) = Nhà Cái Giữ Bài với Hai Lá Bài</b>"
             }

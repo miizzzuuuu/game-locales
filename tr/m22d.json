@@ -111,16 +111,17 @@
             "paragraph-7": "Banker için üçüncü kart kuralları, <b>Banker'in iki kartının değerine</b> ve <b>Oyuncu'nun üçüncü kartının değerine</b> bağlıdır.",
 
             "player-table": {
-                "player-two-card-value": "<b>Oyuncu'nun İki Kartının Değeri</b>",
-                "action": "<b>Eylem</b>",
+                "player-two-card-value": "Oyuncu'nun İki Kartının Değeri",
+                "action": "Eylem",
                 "player-draws-third-card": "Oyuncu Üçüncü Kartı Çeker",
                 "player-stands": "Oyuncu Kart Çekmez",
                 "no-additional-card": "Ek Kart Yok"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>Banker'in İki Kartının Değeri</b>",
-                "player-third-card-value": "<b>Oyuncu'nun Üçüncü Kartının Değeri</b>",
+                "banker-two-card-value": "Banker'in İki Kartının Değeri",
+                "player-third-card-value": "Oyuncu'nun Üçüncü Kartının Değeri",
+                "no-third-card": "Üçüncü Kart Yok",
                 "draw": "<b>D(Draw) = Banker Üçüncü Kartı Çeker</b>",
                 "stand": "<b>S(Stand) = Banker İki Kartla Kalır</b>"
             }

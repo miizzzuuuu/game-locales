@@ -111,16 +111,17 @@
             "paragraph-7": "뱅커의 세 번째 카드 규칙은 <b>뱅커의 두 카드 값</b>과 <b>플레이어의 세 번째 카드 값</b>에 따라 결정됩니다.",
 
             "player-table": {
-                "player-two-card-value": "<b>플레이어의 두 카드 값</b>",
-                "action": "<b>행동</b>",
+                "player-two-card-value": "플레이어의 두 카드 값",
+                "action": "행동",
                 "player-draws-third-card": "플레이어가 세 번째 카드를 받음",
                 "player-stands": "플레이어가 카드를 받지 않음",
                 "no-additional-card": "추가 카드 없음"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>뱅커의 두 카드 값</b>",
-                "player-third-card-value": "<b>플레이어의 세 번째 카드 값</b>",
+                "banker-two-card-value": "뱅커의 두 카드 값",
+                "player-third-card-value": "플레이어의 세 번째 카드 값",
+                "no-third-card": "세 번째 카드 없음",
                 "draw": "<b>D(Draw) = 뱅커가 세 번째 카드를 받음</b>",
                 "stand": "<b>S(Stand) = 뱅커가 두 카드로 유지</b>"
             }

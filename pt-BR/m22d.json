@@ -111,16 +111,17 @@
             "paragraph-7": "As regras da terceira carta para o Banco dependem do <b>valor das duas cartas do Banco</b> e do <b>valor da terceira carta do Jogador</b>.",
 
             "player-table": {
-                "player-two-card-value": "<b>Valor das Duas Cartas do Jogador</b>",
-                "action": "<b>Ação</b>",
+                "player-two-card-value": "Valor das Duas Cartas do Jogador",
+                "action": "Ação",
                 "player-draws-third-card": "Jogador recebe a terceira carta",
                 "player-stands": "Jogador fica (sem carta adicional)",
                 "no-additional-card": "Sem carta adicional"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>Valor das Duas Cartas do Banco</b>",
-                "player-third-card-value": "<b>Valor da Terceira Carta do Jogador</b>",
+                "banker-two-card-value": "Valor das Duas Cartas do Banco",
+                "player-third-card-value": "Valor da Terceira Carta do Jogador",
+                "no-third-card": "Sem Terceira Carta",
                 "draw": "<b>D(Draw) = Banco recebe a terceira carta</b>",
                 "stand": "<b>S(Stand) = Banco fica com duas cartas</b>"
             }

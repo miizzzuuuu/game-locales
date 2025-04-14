@@ -111,16 +111,17 @@
             "paragraph-7": "The third card rule for the Banker depends on the <b>value of the Banker's two cards</b> and the <b>value of the Player's third card</b>.",
 
             "player-table": {
-                "player-two-card-value": "<b>Player's Two-Card Value</b>",
-                "action": "<b>Action</b>",
+                "player-two-card-value": "Player's Two-Card Value",
+                "action": "Action",
                 "player-draws-third-card": "Player Draws a Third Card",
                 "player-stands": "Player Stands (No Additional Card)",
                 "no-additional-card": "No Additional Card"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>Banker's Two-Card Value</b>",
-                "player-third-card-value": "<b>Player's Third Card Value</b>",
+                "banker-two-card-value": "Banker's Two-Card Value",
+                "player-third-card-value": "Player's Third Card Value",
+                "no-third-card": "No Third Card",
                 "draw": "<b>D(Draw) = Banker Draws a Third Card</b>",
                 "stand": "<b>S(Stand) = Banker Stands with Two Cards</b>"
             }

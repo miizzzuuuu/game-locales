@@ -111,16 +111,17 @@
             "paragraph-7": "バンカーの3枚目のカードのルールは、<b>バンカーの2枚のカードの値</b>と<b>プレイヤーの3枚目のカードの値</b>に依存します。",
 
             "player-table": {
-                "player-two-card-value": "<b>プレイヤーの2枚のカードの値</b>",
-                "action": "<b>アクション</b>",
+                "player-two-card-value": "プレイヤーの2枚のカードの値",
+                "action": "アクション",
                 "player-draws-third-card": "プレイヤーが3枚目のカードを引く",
                 "player-stands": "プレイヤーがスタンドする（追加カードなし）",
                 "no-additional-card": "追加カードなし"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>バンカーの2枚のカードの値</b>",
-                "player-third-card-value": "<b>プレイヤーの3枚目のカードの値</b>",
+                "banker-two-card-value": "バンカーの2枚のカードの値",
+                "player-third-card-value": "プレイヤーの3枚目のカードの値",
+                "no-third-card": "サードカードなし",
                 "draw": "<b>D(Draw) = バンカーが3枚目のカードを引く</b>",
                 "stand": "<b>S(Stand) = バンカーが2枚のカードでスタンドする</b>"
             }

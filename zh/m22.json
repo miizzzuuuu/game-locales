@@ -111,16 +111,17 @@
             "paragraph-7": "庄家的第三张牌规则取决于<b>庄家两张牌的值</b>和<b>玩家的第三张牌的值</b>。",
 
             "player-table": {
-                "player-two-card-value": "<b>玩家两张牌的值</b>",
-                "action": "<b>动作</b>",
+                "player-two-card-value": "玩家两张牌的值",
+                "action": "动作",
                 "player-draws-third-card": "玩家抽第三张牌",
                 "player-stands": "玩家停牌（不抽牌）",
                 "no-additional-card": "不抽牌"
             },
 
             "banker-table": {
-                "banker-two-card-value": "<b>庄家两张牌的值</b>",
-                "player-third-card-value": "<b>玩家第三张牌的值</b>",
+                "banker-two-card-value": "庄家两张牌的值",
+                "player-third-card-value": "玩家第三张牌的值",
+                "no-third-card": "无第三张牌",
                 "draw": "<b>D(Draw) = 庄家抽第三张牌</b>",
                 "stand": "<b>S(Stand) = 庄家停牌</b>"
             }
