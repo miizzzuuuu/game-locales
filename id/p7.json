@@ -107,10 +107,6 @@
                 "six line / double street": {
                     "title": "Enam Nomor",
                     "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 6 nomor</b> yang dipasang"
-                },
-                "trio": {
-                    "title": "Trio",
-                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 3 nomor</b> yang dipasang"
                 }
             },
             "outside-bets": {
