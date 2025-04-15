@@ -63,5 +63,25 @@
                 "<b>Bola akan berhenti disalah satu slot</b>, dan taruhan yang sesuai dengan hasil tersebut akan menang."
             ]
         }
+    },
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Pengenalan",
+            "paragraph-1": "Roulette adalah permainan klasik dari kata Perancis yang berarti roda kecil yang menggunakan satu bola kecil dan roda roulette. Jadi untuk memenangkan permainan sederhana ini, Anda hanya perlu menebak di nomor berapa bola akan mendarat.",
+            "game-objective": "Tujuan Permainan",
+            "paragraph-2": "Tujuan permainan Roulette adalah menebak dimana bola akan mendarat dan memenangkan taruhan sesuai dengan hasil putaran roda."
+        },
+        "general-rules": {
+            "title": "Peraturan Umum",
+            "steps": [
+                "Permainan akan dipandu oleh Dealer.",
+                "Permainan ini menggunakan 1 bola yang dilempar ke dalam roda berputar dengan <b>37 slot nomor (0–36)</b>.",
+                "Permainan dimulai saat Dealer membuka waktu bertaruh, dan semua taruhan otomatis diterima ketika waktu habis.",
+                "Dealer akan memutar roda roulette untuk menentukan hasil permainan.",
+                "Jika bola berhenti di posisi yang tidak jelas, maka statusnya \"<b>No Game</b>\". Dealer akan memutar ulang roda hingga hasilnya valid.",
+                "Dalam <b>Taruhan 50-50</b> seperti <b>1-18/19-36</b>, <b>Merah/Hitam</b>, <b>Ganjil/Genap</b>, Anda hanya dapat memilih satu sisi per ronde. Sebagai contoh jika sudah bertaruh pada Merah, Anda tidak bisa bertaruh pada Hitam di ronde yang sama."
+            ]
+        }
     }
 }
