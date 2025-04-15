@@ -2,14 +2,11 @@
     "3rd Row": "2:1",
     "2nd Row": "2:1",
     "1st Row": "2:1",
-
     "1st 12": "1st 12",
     "2nd 12": "2nd 12",
     "3rd 12": "3rd 12",
-
     "1 to 18": "1-18",
     "19 to 36": "19-36",
-
     "single": "straight up",
     "split": "split",
     "street": "street",
@@ -27,7 +24,6 @@
     "even": "even",
     "red": "red",
     "black": "black",
-
     "hot-cold": "hot/cold",
     "advanced": "advanced",
     "last-round": "last round",
@@ -37,7 +33,6 @@
     "column-1": "column 1",
     "column-2": "column 2",
     "column-3": "column 3",
-
     "race-track-error-min": "the minimum limit per 1 number is {{value}}",
     "race-track-error-max": "bet {{button}} has reached the maximum limit"
 }
