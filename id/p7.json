@@ -1,12 +1,12 @@
 {
-    "3rd Row": "2:1",
-    "2nd Row": "2:1",
-    "1st Row": "2:1",
+    "3rd Row": "2 to 1",
+    "2nd Row": "2 to 1",
+    "1st Row": "2 to 1",
+    "1 to 18": "1 to 18",
+    "19 to 36": "19 to 36",
     "1st 12": "12 Pertama",
     "2nd 12": "12 Kedua",
     "3rd 12": "12 Ketiga",
-    "1 to 18": "1-18",
-    "19 to 36": "19-36",
     "single": "Satu Nomor",
     "split": "Dua Nomor",
     "street": "Tiga Nomor",
@@ -15,8 +15,8 @@
     "trio": "Trio",
     "dozen": "Dua Belas",
     "column": "Kolom",
-    "1-18": "1-18",
-    "19-36": "19-36",
+    "1-18": "1 to 18",
+    "19-36": "19 to 36",
     "side bet": "Taruhan Samping",
     "big": "Besar",
     "small": "Kecil",
@@ -60,6 +60,9 @@
         }
     },
 
+    "inside-bets": "Taruhan Dalam",
+    "outside-bets": "Taruhan Luar",
+
     "how-to-play": {
         "introduction": {
             "title": "Pengenalan",
@@ -77,6 +80,73 @@
                 "Jika bola berhenti di posisi yang tidak jelas, maka statusnya \"<b>No Game</b>\". Dealer akan memutar ulang roda hingga hasilnya valid.",
                 "Dalam <b>Taruhan 50-50</b> seperti <b>1-18/19-36</b>, <b>Merah/Hitam</b>, <b>Ganjil/Genap</b>, Anda hanya dapat memilih satu sisi per ronde. Sebagai contoh jika sudah bertaruh pada Merah, Anda tidak bisa bertaruh pada Hitam di ronde yang sama."
             ]
+        },
+        "bet-description": {
+            "title": "Deskripsi Taruhan",
+            "bet": "Taruhan",
+            "description": "Deskripsi",
+            "bet-on": "Taruhan Pada",
+            "result": "Hasil",
+            "inside-bets": {
+                "single": {
+                    "title": "Satu Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan nomor</b> yang dipasang"
+                },
+                "split": {
+                    "title": "Dua Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 2 nomor</b> yang dipasang"
+                },
+                "street": {
+                    "title": "Tiga Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 3 nomor</b> yang dipasang"
+                },
+                "corner": {
+                    "title": "Empat Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 4 nomor</b> yang dipasang"
+                },
+                "six line / double street": {
+                    "title": "Enam Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 6 nomor</b> yang dipasang"
+                },
+                "trio": {
+                    "title": "Trio",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 3 nomor</b> yang dipasang"
+                }
+            },
+            "outside-bets": {
+                "column": {
+                    "title": "Kolom",
+                    "description": "Dibayar jika hasilnya <b>berada pada kolom</b> yang dipasang"
+                },
+                "dozen": {
+                    "title": "Dua Belas",
+                    "description": "Dibayar jika hasilnya <b>berada dalam kelompok 12 nomor</b> yang dipasang"
+                },
+                "red": {
+                    "title": "Merah",
+                    "description": "Dibayar jika hasilnya <b>nomor berwarna merah</b>"
+                },
+                "black": {
+                    "title": "Hitam",
+                    "description": "Dibayar jika hasilnya <b>nomor berwarna hitam</b>"
+                },
+                "odd": {
+                    "title": "Ganjil",
+                    "description": "Dibayar jika hasilnya <b>nomor ganjil</b>"
+                },
+                "even": {
+                    "title": "Genap",
+                    "description": "Dibayar jika hasilnya <b>nomor genap</b>"
+                },
+                "1-18": {
+                    "title": "1-18",
+                    "description": "Dibayar jika hasilnya <b>berada dalam rentang 1-18</b>"
+                },
+                "19-36": {
+                    "title": "19-36",
+                    "description": "Dibayar jika hasilnya <b>berada dalam rentang 19-36</b>"
+                }
+            }
         }
     }
 }
