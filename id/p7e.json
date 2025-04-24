@@ -30,5 +30,270 @@
     "column-2": "Kolom 2",
     "column-3": "Kolom 3",
     "race-track-error-min": "Batas minimum per 1 nomor adalah {{value}}",
-    "race-track-error-max": "Taruhan {{button}} telah mencapai batas maksimum"
+    "race-track-error-max": "Taruhan {{button}} telah mencapai batas maksimum",
+
+    "quick-how-to-play": {
+        "slide-1": {
+            "animation": "https://cdn.lottielab.com/l/6gdkXEfJcjRo1p.json",
+            "title": "Cara Bermain",
+            "content": [
+                "Putar roda Roulette menuju kemenangan, nikmati keseruan Bonus Nomor Keberuntungan dan Tendangan Penalti hingga <b>3000x!</b>.",
+                "Soccer Roulette dimainkan dengan cara bertaruh pada nomor dimana bola kecil akan mendarat di roda roulette yang memiliki 37 slot berwarna dan berangka 0 hingga 36."
+            ]
+        },
+        "slide-2": {
+            "animation": "https://cdn.lottielab.com/l/4UHXjuyryCzq5G.json",
+            "title": "Nomor Keberuntungan",
+            "content": [
+                "System secara acak memilih 2 hingga 8 nomor sebagai Nomor Keberuntungan.",
+                "Nomor Keberuntungan memiliki <b>peningkatan pembayaran sesuai dengan warna jersey di atas</b>, mulai dari 1x hingga 3x nominal taruhan anda."
+            ]
+        },
+        "slide-3": {
+            "animation": "https://cdn.lottielab.com/l/3bD612oh91BP7k.json",
+            "title": "Tendangan Penalti",
+            "content": [
+                "Nomor nomor yang terpilih sebagai Nomor Keberuntungan akan maju ke babak bonus kedua yaitu Tendangan Penalti yang akan meningkatkan pembayaran secara drastis mulai dari <b>50x hingga 1200x</b>."
+            ]
+        }
+    },
+
+    "inside-bets": "Taruhan Dalam",
+    "outside-bets": "Taruhan Luar",
+
+    "how-to-play": {
+        "introduction": {
+            "title": "Pengenalan",
+            "paragraph-1": "Kita semua setuju bahwa Sepak Bola dan Roulette adalah dua permainan yang paling digemari. Jadi, mengapa tidak menggabungkan keduanya!!",
+            "paragraph-2": "IDNLIVE EROPA mempersembahkan \"SOCCER ROULETTE!\".",
+            "paragraph-3": "Putar roda roulette dan raih kemenangan spektakuler, nikmati Bonus Tendangan Penalti yang menegangkan!",
+            "paragraph-4": "Panggung telah disiapkan untuk pertaruhan epik di lapangan sepak bola. Ayo berburu Bonus Nomor Keberuntungan!",
+            "game-objective": "Tujuan Permainan",
+            "paragraph-5": "Tujuan permainan Soccer Roulette adalah menebak dimana bola akan mendarat dan memenangkan taruhan sesuai dengan hasil putaran roda."
+        },
+        "general-rules": {
+            "title": "Peraturan Umum",
+            "steps": [
+                "Permainan akan dipandu oleh Dealer.",
+                "Permainan ini menggunakan 1 bola yang dilempar ke dalam roda berputar dengan 37 slot nomor (0–36).",
+                "Permainan dimulai saat Dealer membuka waktu bertaruh, dan semua taruhan otomatis diterima ketika waktu habis.",
+                "Dealer akan memutar roda roulette untuk menentukan hasil permainan.",
+                "Bonus Nomor Keberuntungan dan Bonus Tendangan Penalti hanya berlaku untuk tipe Taruhan 1 nomor (Straight Up), semua tipe taruhan lainnya dibayar sesuai tabel pembayaran normal.",
+                "Bonus Bola Emas adalah Bonus Spesial yang dapat muncul secara acak dengan pembayaran yang tinggi.",
+                "Jika bola berhenti di posisi yang tidak jelas, maka statusnya \"No Game\". Dealer akan memutar ulang roda hingga hasilnya valid.",
+                "Dalam Taruhan 50-50 seperti 1 to 18/19 to 36, Merah/Hitam, Ganjil/Genap, Anda hanya dapat memilih satu sisi per ronde. Sebagai contoh jika sudah bertaruh pada Merah, Anda tidak bisa bertaruh pada Hitam di ronde yang sama."
+            ]
+        },
+        "bet-types": {
+            "title": "Tipe Taruhan",
+            "paragraph-1": "Pemain dapat memasang taruhan pada satu nomor atau rentang nomor dengan <b>pembayaran yang berbeda</b>.",
+            "paragraph-2": "Taruhan di area nomor dan garis disebut <b>Taruhan Dalam</b>, sedangkan taruhan lainnya di luar area nomor disebut <b>Taruhan Luar</b>.",
+            "inside-bets": {
+                "single": {
+                    "title": "Taruhan 1 Nomor (Straight Up)",
+                    "description": "Memasang chip pada <b>satu nomor</b> di panel taruhan <b>(0-36)</b>."
+                },
+                "split": {
+                    "title": "Taruhan 2 Nomor (Split)",
+                    "description": "Memasang chip antara <b>dua nomor bersebelahan</b> di panel taruhan <b>(horizontal / vertikal)</b>."
+                },
+                "street": {
+                    "title": "Taruhan 3 Nomor (Street)",
+                    "description": "Memasang chip di ujung garis untuk mencakup <b>tiga nomor berurutan</b>."
+                },
+                "corner": {
+                    "title": "Taruhan 4 Nomor (Corner)",
+                    "description": "Memasang chip pada <b>empat nomor yang bertemu di satu sudut</b>."
+                },
+                "six line / double street": {
+                    "title": "Taruhan 6 Nomor (Six Line)",
+                    "description": "Memasang chip di persimpangan dua kolom untuk mencakup <b>enam nomor berurutan</b>."
+                }
+            },
+            "outside-bets": {
+                "column": {
+                    "title": "Taruhan Kolom (Column) ",
+                    "description": "Memasang chip pada salah satu kotak <b>\"2 to 1\"</b> di ujung kolom untuk mencakup <b>12 nomor</b> dalam kolom tersebut <b>(0 tidak termasuk)</b>"
+                },
+                "dozen": {
+                    "title": "Taruhan Lusin (Dozen)",
+                    "description": "Memasang chip pada kotak <b>\"1st 12\", \"2nd 12\", atau \"3rd 12\"</b> untuk mencakup <b>12 nomor</b> dalam grup tersebut."
+                },
+                "1 to 18/19 to 36": {
+                    "title": "Taruhan 1 to 18 / 19 to 36",
+                    "description": "Memasang chip pada kotak <b>1 to 18</b> untuk rentang nomor kecil atau <b>19 to 36</b> untuk rentang nomor besar. <b>(0 tidak termasuk)</b>."
+                },
+                "odd/even": {
+                    "title": "Taruhan Ganjil/Genap",
+                    "description": "Memasang chip pada kotak <b>Ganjil atau Genap</b> untuk mencakup <b>18 nomor</b> ganjil atau genap. <b>(0 tidak termasuk)</b>."
+                },
+                "red/black": {
+                    "title": "Taruhan Merah/Hitam",
+                    "description": "Memasang chip pada kotak <b>Merah atau Hitam</b> untuk mencakup <b>18 nomor</b> sesuai warna yang dipilih. <b>(0 tidak termasuk)</b>."
+                }
+            }
+        },
+        "racetrack-bets": {
+            "title": "Taruhan Racetrack",
+            "paragraph-1": "<b>Taruhan Racetrack</b> memudahkan anda memasang taruhan pada kelompok nomor secara bersamaan. Mode ini mencerminkan susunan nomor pada roda roulette sehingga memudahkan anda dalam menentukan pilihan.",
+            "paragraph-2": "Pada perangkat mobile, gunakan tombol <b>Mode</b> untuk mengaktifkan atau menonaktifkan tampilan <b>Racetrack</b>. Sementara itu, pada versi desktop, fitur ini tersedia secara bawaan.",
+            "bets": {
+                "tiers": {
+                    "title": "TIERS DU CYLINDRE (TIERS)",
+                    "description-1": "Taruhan Tiers mencakup 12 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 6 kali lipat dari nilai taruhan.",
+                    "description-2": "6 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 5 dan 8 (Split)",
+                        "1 Chip pada nomor 10 dan 11 (Split)",
+                        "1 Chip pada nomor 13 dan 16 (Split)",
+                        "1 Chip pada nomor 23 dan 24 (Split)",
+                        "1 Chip pada nomor 27 dan 30 (Split)",
+                        "1 Chip pada nomor 33 dan 36 (Split)"
+                    ]
+                },
+                "orph": {
+                    "title": "ORPHELINS A CHEVAL (ORPH.)",
+                    "description-1": "Taruhan Orph. mencakup 8 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 5 kali lipat dari nilai taruhan.",
+                    "description-2": "5 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 1 (Single/Straight)",
+                        "1 Chip pada nomor 6 dan 9 (Split)",
+                        "1 Chip pada nomor 14 dan 17 (Split)",
+                        "1 Chip pada nomor 17 dan 20 (Split)",
+                        "1 Chip pada nomor 31 dan 34 (Split)"
+                    ]
+                },
+                "voisins": {
+                    "title": "VOISINS DU ZÉRO (VOISINS)",
+                    "description-1": "Taruhan Voisins mencakup 17 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 9 kali lipat dari nilai taruhan.",
+                    "description-2": "9 chip dipasang sebagai berikut:",
+                    "list": [
+                        "2 Chip pada nomor 0, 2 dan 3 (Trio/Basket)",
+                        "1 Chip pada nomor 4 dan 7 (Split)",
+                        "1 Chip pada nomor 12 dan 15 (Split)",
+                        "1 Chip pada nomor 18 dan 21 (Split)",
+                        "1 Chip pada nomor 19 dan 22 (Split)",
+                        "2 Chip pada nomor 25, 26, 28, 29 (Corner)",
+                        "1 Chip pada nomor 32 dan 35 (Split)"
+                    ]
+                },
+                "zero": {
+                    "title": "JEU ZERO (ZÉRO)",
+                    "description-1": "Taruhan Zero mencakup 7 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 4 kali lipat dari nilai taruhan.",
+                    "description-2": "4 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 0 dan 3 (Split)",
+                        "1 Chip pada nomor 12 dan 15 (Split)",
+                        "1 Chip pada nomor 26 (Single/Straight)",
+                        "1 Chip pada nomor 32 dan 35 (Split)"
+                    ]
+                }
+            },
+            "side-by-side": {
+                "title": "Taruhan Bersebelahan",
+                "description-1": "Taruhan ini mencakup nomor utama yang dipilih beserta nomor di kiri dan kanan pada roda roulette. Fitur ini hanya tersedia dalam mode Taruhan Racetrack. Gunakan tombol -/+ untuk memilih jumlah nomor tambahan (1-9 nomor per sisi).",
+                "example": "Contoh",
+                "description-2": "Jika anda memilih nomor 17 dengan 2 nomor bersebelahan, maka taruhan mencakup:",
+                "list": ["Nomor utama 17", "Dua nomor di kiri 2, 25", "Dua nomor di kanan 34, 6"],
+                "description-3": "Total 5 nomor akan dipertaruhkan sekaligus."
+            }
+        },
+        "bonus-system": {
+            "title": "Sistem Bonus",
+            "paragraph-1": "Hadir dengan sistem bonus spektakuler! Anda bahkan berkesempatan memenangkan perkalian hingga 3000x!! Bonus ini hanya berlaku pada tipe taruhan 1 nomor.",
+            "paragraph-2": "Simak cara mendapatkannya di bawah ini:",
+            "lucky-number": {
+                "title": "Nomor Keberuntungan (Tahap 1)",
+                "description-1": "Pada setiap ronde Soccer Roulette akan dipilih 2 hingga 8 Nomor Keberuntungan secara acak. Nomor-nomor ini akan ditandai dengan Jersey berwarna (Hijau, Biru, Merah). Warna jersey menentukan nominal perkalian di tahap ini.",
+                "subtitle": "Multiplier Warna Jersey (M1)"
+            },
+            "penalty": {
+                "title": "Tendangan Penalti (Tahap 2)",
+                "description-1": "Setelah nomor Keberuntungan terpilih, kini saatnya Tendangan Penalti, dimana perkalian dapat meningkat drastis!",
+                "description-2": "Terdapat 5 titik gol, masing-masing dengan perkalian berbeda. Bola akan ditendang ke salah satu titik untuk menentukan perkalian tambahan.",
+                "description-3": "Hasil tendangan penalti akan mengalikan semua nomor keberuntungan, meningkatkan peluang kemenangan besar hingga 1200x!",
+                "subtitle": "Multiplier Tendangan Penalti (M2)"
+            },
+            "golden-ball": {
+                "title": "Bola Emas (Jackpot)",
+                "description-1": "Di momen yang langka, Bola Emas dapat muncul dalam Tendangan Penalti. Membawa kejutan luar biasa!! Di dalam tahap Bola Emas ini terdapat perkalian emas yang nilainya jauh lebih tinggi dari biasanya yang akan meningkatkan peluang kemenangan besar hingga 3000x!",
+                "subtitle": "Multiplier Bola Emas (M2 Golden Ball)"
+            },
+            "winning-calculation": {
+                "title": "Perhitungan Kemenangan",
+                "description-1": "Setelah animasi nomor Keberuntungan dan Tendangan Penalti selesai, langkah terakhir adalah menunggu hasil putaran roulette. Jika nomor hasil roulette cocok dengan salah nomor keberuntungan anda, maka anda akan memenangkan Bonus dengan perhitungan sebagai berikut :",
+                "subtitle": "Contoh Perhitungan",
+                "example-1": "Anda bertaruh 5.000 pada masing-masing nomor 7, 10, 11, 13, dan 21.",
+                "example-2": "Kemudian di tahap 1 sistem memilih nomor 7, 11, dan 13 sebagai nomor keberuntungan dengan perkalian sebagai berikut :",
+                "example-3": "Tahap berikutnya dimulai. Bola ditendang ke gawang dengan hasil Tendangan Penalti adalah 400x.",
+                "example-4": "Semua perkalian pada nomor Keberuntungan anda akan dikalikan dengan 400x.",
+                "example-5": "Bola kemudian dijatuhkan ke roda roulette, dan hasilnya adalah nomor 13.",
+                "example-6": "Karena anda bertaruh pada nomor 13, maka anda menang! Berikut perhitungan total kemenangan anda.",
+                "example-7": "= Taruhan x Multiplier Warna Jersey x Multiplier Tendangan Penalti<br/>= Taruhan x M1 x M2<br/>= 5.000 x 3 x 400<br/>= 6.000.000"
+            }
+        },
+        "bet-description": {
+            "title": "Deskripsi Taruhan",
+            "bet": "Taruhan",
+            "description": "Deskripsi",
+            "bet-on": "Taruhan Pada",
+            "result": "Hasil",
+            "inside-bets": {
+                "single": {
+                    "title": "Satu Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan nomor</b> yang dipasang"
+                },
+                "split": {
+                    "title": "Dua Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 2 nomor</b> yang dipasang"
+                },
+                "street": {
+                    "title": "Tiga Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 3 nomor</b> yang dipasang"
+                },
+                "corner": {
+                    "title": "Empat Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 4 nomor</b> yang dipasang"
+                },
+                "six line / double street": {
+                    "title": "Enam Nomor",
+                    "description": "Dibayar jika hasilnya <b>sesuai dengan salah satu dari 6 nomor</b> yang dipasang"
+                }
+            },
+            "outside-bets": {
+                "column": {
+                    "title": "Kolom",
+                    "description": "Dibayar jika hasilnya <b>berada pada kolom</b> yang dipasang"
+                },
+                "dozen": {
+                    "title": "Dua Belas",
+                    "description": "Dibayar jika hasilnya <b>berada dalam kelompok 12 nomor</b> yang dipasang"
+                },
+                "red": {
+                    "title": "Merah",
+                    "description": "Dibayar jika hasilnya <b>nomor berwarna merah</b>"
+                },
+                "black": {
+                    "title": "Hitam",
+                    "description": "Dibayar jika hasilnya <b>nomor berwarna hitam</b>"
+                },
+                "odd": {
+                    "title": "Ganjil",
+                    "description": "Dibayar jika hasilnya <b>nomor ganjil</b>"
+                },
+                "even": {
+                    "title": "Genap",
+                    "description": "Dibayar jika hasilnya <b>nomor genap</b>"
+                },
+                "1-18": {
+                    "title": "1-18",
+                    "description": "Dibayar jika hasilnya <b>berada dalam rentang 1-18</b>"
+                },
+                "19-36": {
+                    "title": "19-36",
+                    "description": "Dibayar jika hasilnya <b>berada dalam rentang 19-36</b>"
+                }
+            }
+        }
+    }
 }
