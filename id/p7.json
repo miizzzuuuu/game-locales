@@ -134,8 +134,6 @@
             "title": "Taruhan Racetrack",
             "paragraph-1": "<b>Taruhan Racetrack</b> memudahkan anda memasang taruhan pada kelompok nomor secara bersamaan. Mode ini mencerminkan susunan nomor pada roda roulette sehingga memudahkan anda dalam menentukan pilihan.",
             "paragraph-2": "Pada perangkat mobile, gunakan tombol <b>Mode</b> untuk mengaktifkan atau menonaktifkan tampilan <b>Racetrack</b>. Sementara itu, pada versi desktop, fitur ini tersedia secara bawaan.",
-            "header-1": "Taruhan Bersebelahan",
-            "paragraph-3": "Taruhan ini mencakup nomor utama yang dipilih beserta nomor di kiri dan kanan pada roda roulette. Fitur ini hanya tersedia dalam mode Taruhan Racetrack. Gunakan tombol -/+ untuk memilih jumlah nomor tambahan <b>(1-9 nomor per sisi)</b>.",
             "bets": {
                 "tiers": {
                     "title": "TIERS DU CYLINDRE (TIERS)",
