@@ -81,6 +81,55 @@
                 "Dalam <b>Taruhan 50-50</b> seperti <b>1-18/19-36</b>, <b>Merah/Hitam</b>, <b>Ganjil/Genap</b>, Anda hanya dapat memilih satu sisi per ronde. Sebagai contoh jika sudah bertaruh pada Merah, Anda tidak bisa bertaruh pada Hitam di ronde yang sama."
             ]
         },
+        "bet-types": {
+            "title": "Tipe Taruhan",
+            "paragraph-1": "Pemain dapat memasang taruhan pada satu nomor atau rentang nomor dengan <b>pembayaran yang berbeda</b>.",
+            "paragraph-2": "Taruhan di area nomor dan garis disebut <b>Taruhan Dalam</b>, sedangkan taruhan lainnya di luar area nomor disebut <b>Taruhan Luar</b>.",
+            "inside-bets": {
+                "single": {
+                    "title": "Taruhan 1 Nomor (Straight Up)",
+                    "description": "Memasang chip pada <b>satu nomor</b> di panel taruhan <b>(0-36)</b>."
+                },
+                "split": {
+                    "title": "Taruhan 2 Nomor (Split)",
+                    "description": "Memasang chip antara <b>dua nomor bersebelahan</b> di panel taruhan <b>(horizontal / vertikal)</b>."
+                },
+                "street": {
+                    "title": "Taruhan 3 Nomor (Street)",
+                    "description": "Memasang chip di ujung garis untuk mencakup <b>tiga nomor berurutan</b>."
+                },
+                "corner": {
+                    "title": "Taruhan 4 Nomor (Corner)",
+                    "description": "Memasang chip pada <b>empat nomor yang bertemu di satu sudut</b>."
+                },
+                "six line / double street": {
+                    "title": "Taruhan 6 Nomor (Six Line)",
+                    "description": "Memasang chip di persimpangan dua kolom untuk mencakup <b>enam nomor berurutan</b>."
+                }
+            },
+            "outside-bets": {
+                "column": {
+                    "title": "Taruhan Kolom (Column) ",
+                    "description": "Memasang chip pada salah satu kotak <b>\"2 to 1\"</b> di ujung kolom untuk mencakup <b>12 nomor</b> dalam kolom tersebut <b>(0 tidak termasuk)</b>"
+                },
+                "dozen": {
+                    "title": "Taruhan Lusin (Dozen)",
+                    "description": "Memasang chip pada kotak <b>\"1st 12\", \"2nd 12\", atau \"3rd 12\"</b> untuk mencakup <b>12 nomor</b> dalam grup tersebut."
+                },
+                "1 to 18/19 to 36": {
+                    "title": "Taruhan 1 to 18 / 19 to 36",
+                    "description": "Memasang chip pada kotak <b>1 to 18</b> untuk rentang nomor kecil atau <b>19 to 36</b> untuk rentang nomor besar. <b>(0 tidak termasuk)</b>."
+                },
+                "odd/even": {
+                    "title": "Taruhan Ganjil/Genap",
+                    "description": "Memasang chip pada kotak <b>Ganjil atau Genap</b> untuk mencakup <b>18 nomor</b> ganjil atau genap. <b>(0 tidak termasuk)</b>."
+                },
+                "red/black": {
+                    "title": "Taruhan Merah/Hitam",
+                    "description": "Memasang chip pada kotak <b>Merah atau Hitam</b> untuk mencakup <b>18 nomor</b> sesuai warna yang dipilih. <b>(0 tidak termasuk)</b>."
+                }
+            }
+        },
         "bet-description": {
             "title": "Deskripsi Taruhan",
             "bet": "Taruhan",
