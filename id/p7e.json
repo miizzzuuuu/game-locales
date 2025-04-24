@@ -294,6 +294,11 @@
                     "description": "Dibayar jika hasilnya <b>berada dalam rentang 19-36</b>"
                 }
             }
+        },
+        "payout-bonus": {
+            "title": "Tabel Multiplier",
+            "normal": "Normal",
+            "golden": "Bola Emas"
         }
     }
 }
