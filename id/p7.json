@@ -45,7 +45,7 @@
             ]
         },
         "slide-2": {
-            "animation": "",
+            "animation": "https://cdn.lottielab.com/l/4voRPZc2VWgNCJ.json",
             "title": "Cara Bermain",
             "content": [
                 "Anda dapat bertaruh pada <b> satu nomor, rentang nomor, warna atau ganjil/genap</b>. Setelah Anda memasang taruhan, Roda akan diputar dan 1 bola dilemparkan."
@@ -128,6 +128,73 @@
                     "title": "Taruhan Merah/Hitam",
                     "description": "Memasang chip pada kotak <b>Merah atau Hitam</b> untuk mencakup <b>18 nomor</b> sesuai warna yang dipilih. <b>(0 tidak termasuk)</b>."
                 }
+            }
+        },
+        "racetrack-bets": {
+            "title": "Taruhan Racetrack",
+            "paragraph-1": "<b>Taruhan Racetrack</b> memudahkan anda memasang taruhan pada kelompok nomor secara bersamaan. Mode ini mencerminkan susunan nomor pada roda roulette sehingga memudahkan anda dalam menentukan pilihan.",
+            "paragraph-2": "Pada perangkat mobile, gunakan tombol <b>Mode</b> untuk mengaktifkan atau menonaktifkan tampilan <b>Racetrack</b>. Sementara itu, pada versi desktop, fitur ini tersedia secara bawaan.",
+            "header-1": "Taruhan Bersebelahan",
+            "paragraph-3": "Taruhan ini mencakup nomor utama yang dipilih beserta nomor di kiri dan kanan pada roda roulette. Fitur ini hanya tersedia dalam mode Taruhan Racetrack. Gunakan tombol -/+ untuk memilih jumlah nomor tambahan <b>(1-9 nomor per sisi)</b>.",
+            "bets": {
+                "tiers": {
+                    "title": "TIERS DU CYLINDRE (TIERS)",
+                    "description-1": "Taruhan Tiers mencakup 12 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 6 kali lipat dari nilai taruhan.",
+                    "description-2": "6 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 5 dan 8 (Split)",
+                        "1 Chip pada nomor 10 dan 11 (Split)",
+                        "1 Chip pada nomor 13 dan 16 (Split)",
+                        "1 Chip pada nomor 23 dan 24 (Split)",
+                        "1 Chip pada nomor 27 dan 30 (Split)",
+                        "1 Chip pada nomor 33 dan 36 (Split)"
+                    ]
+                },
+                "orph": {
+                    "title": "ORPHELINS A CHEVAL (ORPH.)",
+                    "description-1": "Taruhan Orph. mencakup 8 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 5 kali lipat dari nilai taruhan.",
+                    "description-2": "5 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 1 (Single/Straight)",
+                        "1 Chip pada nomor 6 dan 9 (Split)",
+                        "1 Chip pada nomor 14 dan 17 (Split)",
+                        "1 Chip pada nomor 17 dan 20 (Split)",
+                        "1 Chip pada nomor 31 dan 34 (Split)"
+                    ]
+                },
+                "voisins": {
+                    "title": "VOISINS DU ZÉRO (VOISINS)",
+                    "description-1": "Taruhan Voisins mencakup 17 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 9 kali lipat dari nilai taruhan.",
+                    "description-2": "9 chip dipasang sebagai berikut:",
+                    "list": [
+                        "2 Chip pada nomor 0, 2 dan 3 (Trio/Basket)",
+                        "1 Chip pada nomor 4 dan 7 (Split)",
+                        "1 Chip pada nomor 12 dan 15 (Split)",
+                        "1 Chip pada nomor 18 dan 21 (Split)",
+                        "1 Chip pada nomor 19 dan 22 (Split)",
+                        "2 Chip pada nomor 25, 26, 28, 29 (Corner)",
+                        "1 Chip pada nomor 32 dan 35 (Split)"
+                    ]
+                },
+                "zero": {
+                    "title": "JEU ZERO (ZÉRO)",
+                    "description-1": "Taruhan Zero mencakup 7 nomor pada roda roulette. Untuk memasang taruhan ini, pemain harus memiliki chip sebanyak 4 kali lipat dari nilai taruhan.",
+                    "description-2": "4 chip dipasang sebagai berikut:",
+                    "list": [
+                        "1 Chip pada nomor 0 dan 3 (Split)",
+                        "1 Chip pada nomor 12 dan 15 (Split)",
+                        "1 Chip pada nomor 26 (Single/Straight)",
+                        "1 Chip pada nomor 32 dan 35 (Split)"
+                    ]
+                }
+            },
+            "side-by-side": {
+                "title": "Taruhan Bersebelahan",
+                "description-1": "Taruhan ini mencakup nomor utama yang dipilih beserta nomor di kiri dan kanan pada roda roulette. Fitur ini hanya tersedia dalam mode Taruhan Racetrack. Gunakan tombol -/+ untuk memilih jumlah nomor tambahan (1-9 nomor per sisi).",
+                "example": "Contoh",
+                "description-2": "Jika anda memilih nomor 17 dengan 2 nomor bersebelahan, maka taruhan mencakup:",
+                "list": ["Nomor utama 17", "Dua nomor di kiri 2, 25", "Dua nomor di kanan 34, 6"],
+                "description-3": "Total 5 nomor akan dipertaruhkan sekaligus."
             }
         },
         "bet-description": {
