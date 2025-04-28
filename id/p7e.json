@@ -223,13 +223,13 @@
                 "title": "Perhitungan Kemenangan",
                 "description-1": "Setelah animasi nomor Keberuntungan dan Tendangan Penalti selesai, langkah terakhir adalah menunggu hasil putaran roulette. Jika nomor hasil roulette cocok dengan salah nomor keberuntungan anda, maka anda akan memenangkan Bonus dengan perhitungan sebagai berikut :",
                 "subtitle": "Contoh Perhitungan",
-                "example-1": "Anda bertaruh 5.000 pada masing-masing nomor 7, 10, 11, 13, dan 21.",
+                "example-1": "Anda bertaruh {{bet, number}} pada masing-masing nomor 7, 10, 11, 13, dan 21.",
                 "example-2": "Kemudian di tahap 1 sistem memilih nomor 7, 11, dan 13 sebagai nomor keberuntungan dengan perkalian sebagai berikut :",
                 "example-3": "Tahap berikutnya dimulai. Bola ditendang ke gawang dengan hasil Tendangan Penalti adalah 400x.",
                 "example-4": "Semua perkalian pada nomor Keberuntungan anda akan dikalikan dengan 400x.",
                 "example-5": "Bola kemudian dijatuhkan ke roda roulette, dan hasilnya adalah nomor 13.",
                 "example-6": "Karena anda bertaruh pada nomor 13, maka anda menang! Berikut perhitungan total kemenangan anda.",
-                "example-7": "= Taruhan x Multiplier Warna Jersey x Multiplier Tendangan Penalti<br/>= Taruhan x M1 x M2<br/>= 5.000 x 3 x 400<br/>= 6.000.000"
+                "example-7": "= Taruhan x Multiplier Warna Jersey x Multiplier Tendangan Penalti<br/>= Taruhan x M1 x M2<br/>= {{bet, number}} x {{m1, number}} x {{m2, number}}<br/>= {{win, number}}"
             }
         },
         "bet-description": {
