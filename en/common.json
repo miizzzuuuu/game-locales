@@ -65,5 +65,6 @@
     "streaming-error": "streaming error: invalid streaming url",
     "no-promotion": "no events at this time",
     "more-bet": "more bet",
-    "less-bet": "less bet"
+    "less-bet": "less bet",
+    "streaming-off": "video streaming is currently off."
 }

@@ -65,5 +65,6 @@
     "streaming-error": "ストリーミングエラー：無効なストリーミングURL",
     "no-promotion": "現在、イベントはありません",
     "more-bet": "ベットを展開",
-    "less-bet": "ベットを折りたたむ"
+    "less-bet": "ベットを折りたたむ",
+    "streaming-off": "現在、ビデオストリーミングはオフになっています"
 }

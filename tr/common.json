@@ -65,5 +65,6 @@
     "streaming-error": "yayın hatası: geçersiz yayın URL'si",
     "no-promotion": "şu anda etkinlik yok",
     "more-bet": "Bahisleri Genişlet",
-    "less-bet": "Bahisleri Daralt"
+    "less-bet": "Bahisleri Daralt",
+    "streaming-off": "video yayını şu anda kapalı"
 }

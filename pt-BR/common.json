@@ -65,5 +65,6 @@
     "streaming-error": "erro de streaming: URL de streaming inválida",
     "no-promotion": "nenhum evento no momento",
     "more-bet": "Expandir Apostas",
-    "less-bet": "Recolher Apostas"
+    "less-bet": "Recolher Apostas",
+    "streaming-off": "a transmissão de vídeo está desativada no momento"
 }

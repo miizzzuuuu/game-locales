@@ -65,5 +65,6 @@
     "streaming-error": "lỗi phát trực tuyến: url phát không hợp lệ",
     "no-promotion": "không có sự kiện lúc này",
     "more-bet": "Mở rộng cược",
-    "less-bet": "Thu gọn cược"
+    "less-bet": "Thu gọn cược",
+    "streaming-off": "hiện không có phát trực tuyến video"
 }

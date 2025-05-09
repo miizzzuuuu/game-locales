@@ -65,5 +65,6 @@
     "streaming-error": "kesalahan streaming: url streaming tidak valid",
     "no-promotion": "tidak ada promosi saat ini",
     "more-bet": "Perluas Taruhan",
-    "less-bet": "Ciutkan Taruhan"
+    "less-bet": "Ciutkan Taruhan",
+    "streaming-off": "siaran video sedang tidak aktif"
 }

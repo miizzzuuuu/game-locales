@@ -65,5 +65,6 @@
     "streaming-error": "直播错误：无效的直播URL",
     "no-promotion": "目前没有活动",
     "more-bet": "展开投注",
-    "less-bet": "折叠投注"
+    "less-bet": "折叠投注",
+    "streaming-off": "视频直播当前已关闭"
 }
